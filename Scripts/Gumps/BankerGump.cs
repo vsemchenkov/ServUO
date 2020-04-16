@@ -1,5 +1,4 @@
-﻿
-using Server;
+﻿using Server;
 using System;
 using Server.Accounting;
 using Server.Mobiles;
@@ -7,6 +6,7 @@ using System.Globalization;
 using Server.Engines.Shadowguard;
 using Server.Network;
 using Server.Items;
+using Server.Items.Bank;
 
 namespace Server.Gumps
 {
@@ -25,7 +25,7 @@ namespace Server.Gumps
 
         public void AddGumpLayout()
         {
-            AddBackground(0, 0, 420, 344, 9300);
+            AddBackground(0, 0, 420, 460, 9500);
 
             AddHtmlLocalized(0, 10, 420, 16, 1113302, "#1156076", 1, false, false); // Bank Actions
 
@@ -86,6 +86,40 @@ namespace Server.Gumps
             AddHtmlLocalized(60, 175, 300, 16, 1156069, TextColor, false, false); // Withdraw Gold from Secure Account
             AddButton(20, 175, 4005, 4006, 6, GumpButtonType.Reply, 0);
             AddTooltip(1156075); // Transfers gold from the secure account to the bank; capped at 100,0,000 gold.
+
+            //Gump Element Guide - Value Position
+            //AddBackground(X, Y, Width, Heigth, GumpID);
+            //AddAlphaRegion(X, Y, Width, Heigth);
+            //AddImage(X, Y, GumpID);
+            //AddImageTiled(X, Y, Width, Heigth, GumpID);
+            //AddLabel(X, Y, Hue, "Text");
+            //AddLabelCropped(X, Y, Width, Heigth, Hue, "Text");
+            //AddTextEntry(X, Y, Width, Heigth, Hue, ReplyID, "Text", Textbox.Size);
+            //AddHtml(X, Y, Width, Heigth, "Text", Background(true/False), ScrollBar(True/False));
+            //AddItem(X, Y, GumpID, Hue);
+            //AddButton(X, Y, GumpID(Not Pressed), GumpID(Pressed), ReplyID, GumpButtonType.Reply(Page), Param);
+            //AddRadio(X, Y, GumpID(Not Pressed), GumpID(Pressed), InitialState(True/False), ReplyID);
+            //AddCheck(X, Y, GumpID(Not Pressed), GumpID(Pressed), InitialState(True/False), ReplyID);
+
+            AddImage(5, 200, 1520);
+            // Issue a checks
+            AddHtmlLocalized(170, 295, 420, 16, 3000285, "#1156076", 1, false, false); // Bank checks
+            // 1kk check
+            AddButton(20, 320, 2151, 2153, 8, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(60, 327, 300, 16, 3000286, "1kk check", TextColor, false,
+                false); // Withdraw Gold from Secure Account
+            // 500k check
+            AddButton(20, 350, 2151, 2153, 9, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(60, 357, 300, 16, 3000287, "500k check", TextColor, false,
+                false); // Withdraw Gold from Secure Account
+            // 200k check
+            AddButton(20, 380, 2151, 2153, 10, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(60, 387, 300, 16, 3000288, "200k check", TextColor, false,
+                false); // Withdraw Gold from Secure Account
+            // 100k check
+            AddButton(20, 410, 2151, 2153, 11, GumpButtonType.Reply, 0);
+            AddHtmlLocalized(60, 417, 300, 16, 3000289, "100k check", TextColor, false,
+                false); // Withdraw Gold from Secure Account
         }
 
         public override void OnResponse(NetState state, RelayInfo info)
@@ -116,7 +150,6 @@ namespace Server.Gumps
                                                 1155867); // The amount entered is invalid. Verify that there are sufficient funds to complete this transaction.
                                         else
                                         {
-
                                             Item[] gold, checks;
                                             var balance = Banker.GetBalance(from, out gold, out checks);
                                             Gold Golds = new Gold();
@@ -126,27 +159,28 @@ namespace Server.Gumps
                                             Console.WriteLine(golds);
 
 
-                                                        if (balance < v)
-                                                        {
-                                                            from.SendLocalizedMessage(3000285);
-                                                        }
+                                            if (balance < v)
+                                            {
+                                                from.SendLocalizedMessage(3000285);
+                                            }
 
-                                                        Banker.Deposit(from, v, true);
+                                            Banker.Deposit(from, v, true);
 
 
-                                                        for (var i = 0; v > 0 && i < golds.Count; ++i)
-                                                        {
-                                                            if (golds[i].Amount <= v)
-                                                            {
-                                                                v -= golds[i].Amount;
-                                                                golds[i].Delete();
-                                                            }
-                                                            else
-                                                            {
-                                                                golds[i].Amount -= v;
-                                                                v = 0;
-                                                            }
-                                                        }
+                                            for (var i = 0; v > 0 && i < golds.Count; ++i)
+                                            {
+                                                if (golds[i].Amount <= v)
+                                                {
+                                                    v -= golds[i].Amount;
+                                                    golds[i].Delete();
+                                                }
+                                                else
+                                                {
+                                                    golds[i].Amount -= v;
+                                                    v = 0;
+                                                }
+                                            }
+
                                             from.SendLocalizedMessage(1153188); // Transaction successful:
                                         }
 
@@ -194,8 +228,6 @@ namespace Server.Gumps
                                             gold.Amount = v;
 
                                             backpack.AddItem(gold);
-
-
 
 
                                             from.SendLocalizedMessage(1153188); // Transaction successful:
@@ -307,6 +339,82 @@ namespace Server.Gumps
                     User.SendGump(new NewCurrencyHelpGump());
                     Refresh();
                     break;
+                // 1kk check
+                case 8:
+                    if (Banker.GetBalance(User) >= 1000000)
+                    {
+                        Banker.Withdraw(User, 1000000, true);
+
+                        Item backpack = User.FindItemOnLayer(Layer.Backpack);
+                        Check1kk check1kk = new Check1kk();
+                        check1kk.Amount = 1;
+                        backpack.AddItem(check1kk);
+
+                        User.SendMessage("Вы получили чек.");
+                    }
+                    else
+                    {
+                        User.SendMessage("Вам не хватает gold.");
+                    }
+                    Refresh();
+                    break;
+                // 500k check
+                case 9:
+                    if (Banker.GetBalance(User) >= 500000)
+                    {
+                        Banker.Withdraw(User, 500000, true);
+
+                        Item backpack = User.FindItemOnLayer(Layer.Backpack);
+                        Check500k check500k = new Check500k();
+                        check500k.Amount = 1;
+                        backpack.AddItem(check500k);
+
+                        User.SendMessage("Вы получили чек.");
+                    }
+                    else
+                    {
+                        User.SendMessage("Вам не хватает gold.");
+                    }
+                    Refresh();
+                    break;
+                // 200k check
+                case 10:
+                    if (Banker.GetBalance(User) >= 200000)
+                    {
+                        Banker.Withdraw(User, 200000, true);
+
+                        Item backpack = User.FindItemOnLayer(Layer.Backpack);
+                        Check200k check200k = new Check200k();
+                        check200k.Amount = 1;
+                        backpack.AddItem(check200k);
+
+                        User.SendMessage("Вы получили чек.");
+                    }
+                    else
+                    {
+                        User.SendMessage("Вам не хватает gold.");
+                    }
+                    Refresh();
+                    break;
+                // 100k check
+                case 11:
+                    if (Banker.GetBalance(User) >= 100000)
+                    {
+                        Banker.Withdraw(User, 100000, true);
+
+                        Item backpack = User.FindItemOnLayer(Layer.Backpack);
+                        Check100k check100k = new Check100k();
+                        check100k.Amount = 1;
+                        backpack.AddItem(check100k);
+
+                        User.SendMessage("Вы получили чек.");
+                    }
+                    else
+                    {
+                        User.SendMessage("Вам не хватает gold.");
+                    }
+                    Refresh();
+                    break;
             }
         }
 
@@ -339,4 +447,3 @@ namespace Server.Gumps
         }
     }
 }
-

@@ -1,0 +1,21 @@
+Server Crash Report
+===================
+
+ServUO Version 0.5, Build 7411.25933
+Operating System: Unix 19.4.0.0
+.NET Framework: 4.0.30319.42000
+Time: 16.04.2020 22:37:35
+Mobiles: 405
+Items: 7072
+Exception:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Server.Items.Bank.Check1kk.OnDoubleClick (Server.Mobile from) [0x0000c] in <a5dd6c8327b84e89a69cacd9f4d0d3a3>:0 
+  at Server.Mobile.Use (Server.Item item) [0x00187] in <d54a82704ea44121b2a3496f29baa50e>:0 
+  at Server.Network.PacketHandlers.UseReq (Server.Network.NetState state, Server.Network.PacketReader pvSrc) [0x000a1] in <d54a82704ea44121b2a3496f29baa50e>:0 
+  at Server.Network.MessagePump.HandleReceive (Server.Network.NetState ns) [0x00240] in <d54a82704ea44121b2a3496f29baa50e>:0 
+  at Server.Network.MessagePump.Slice () [0x00057] in <d54a82704ea44121b2a3496f29baa50e>:0 
+  at Server.Core.Main (System.String[] args) [0x006e6] in <d54a82704ea44121b2a3496f29baa50e>:0 
+
+Clients:
+- Count: 1
++ 192.168.1.21: (account = admin) (mobile = 0x75 'white')

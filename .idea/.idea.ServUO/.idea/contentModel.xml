@@ -1296,6 +1296,9 @@
             <e p="TOTGreaterArtifacts.cs" t="Include" />
             <e p="TOTLesserArtifacts.cs" t="Include" />
           </e>
+          <e p="Bank" t="Include">
+            <e p="Check.cs" t="Include" />
+          </e>
           <e p="Books" t="Include">
             <e p="BaseBook.cs" t="Include" />
             <e p="BaseJournal.cs" t="Include" />

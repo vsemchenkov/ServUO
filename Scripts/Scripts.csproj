@@ -472,6 +472,7 @@
     <Compile Include="Items\Artifacts\Decorative\MedusasFloorTileAddon.cs" />
     <Compile Include="Items\Artifacts\Equipment\Glasses\LegendaryMapmakersGlasses.cs" />
     <Compile Include="Items\Artifacts\Equipment\Weapons\TheRedeemer.cs" />
+    <Compile Include="Items\Bank\Check.cs" />
     <Compile Include="Items\Consumables\2019HolidayGiftToken.cs" />
     <Compile Include="Items\Consumables\AnniversaryPromotionalToken.cs" />
     <Compile Include="Items\Consumables\CommissionPlayerVendorDeed.cs" />

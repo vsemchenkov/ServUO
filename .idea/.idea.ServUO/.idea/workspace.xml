@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af0b22d-c7e0-4922-aecd-c8f1b5b71c18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" afterDir="false" />
@@ -33,25 +35,11 @@
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/HitchingPost.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/PetLeash.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/ReadMe.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/ShrinkCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/ShrinkConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Shrink System/ShrinkItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/ShrinkConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/ConfigParser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/Interfaces.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/Misc.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/Replace.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/findMobs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Utilities/wipemobs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/XantosInfo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scripts.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,15 +51,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Items/Resource/AbyssalCloth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server/ObjectPropertyList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/FireCasino/CasinoGumps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Cannon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Multis/Deeds.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Server/Utility.cs" />
         <option value="$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" />
         <option value="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" />
       </list>
     </option>
@@ -161,7 +154,8 @@
       <updated>1587036589513</updated>
       <workItem from="1587036599117" duration="3365000" />
       <workItem from="1587042033663" duration="6133000" />
-      <workItem from="1587054081919" duration="1426000" />
+      <workItem from="1587054081919" duration="3612000" />
+      <workItem from="1587060933402" duration="11325000" />
     </task>
     <servers />
   </component>
@@ -191,10 +185,29 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1587036756652" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587057446280">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587077324209">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587057446280" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.987@0.23.1680.987" timestamp="1587044063710" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587077324209" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.987@0.23.1680.987" timestamp="1587076690662" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs</url>
+          <line>206</line>
+          <properties documentPath="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" initialLine="203">
+            <startOffsets>
+              <option value="10850" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10851" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
