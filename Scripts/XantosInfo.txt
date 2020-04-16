@@ -1,0 +1,20 @@
+Xantos Shrink System and the Utilities folder both go into your -Custom Folder
+
+ShrinkConfig - goes into the Data Folder
+
+Folder 
+/Shrink system, 
+Hitching post
+Pet leash
+Shrink commands
+Shrinkconfig
+Shrink item
+
+/Utilities
+Configparser
+Find mobs
+Interfaces
+Mics
+Replace
+wipemobs
+File shrinkconfig

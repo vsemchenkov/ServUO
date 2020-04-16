@@ -122,8 +122,7 @@ namespace Server.Gumps
                                             Gold Golds = new Gold();
                                             var golds = from.Backpack.FindItemsByType<Gold>(true);
 
-                                            Console.WriteLine(golds.Count);
-                                            Console.WriteLine(golds);
+                                            Console.WriteLine(Banker.GetBalance(from));
 
 
                                                         if (balance < v)

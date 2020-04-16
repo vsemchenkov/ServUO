@@ -31,8 +31,8 @@ namespace Server.Items
         {
         }
 
-        public override double DefaultWeight => 0.02 / 3;
-		
+        public override double DefaultWeight => 0.01 / 25;
+
         public override int GetDropSound()
         {
             if (Amount <= 1)
