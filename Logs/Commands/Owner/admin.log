@@ -1,0 +1,140 @@
+16.04.2020 11:35:25: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'go magincia'
+16.04.2020 11:35:49: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'gmbody '
+16.04.2020 11:35:51: 192.168.1.21: Owner 0x75 "White" ('admin') is assuming a GM body
+16.04.2020 11:36:25: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add banker'
+16.04.2020 11:36:28: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2107, 20) in Trammel: "banker"
+16.04.2020 11:36:28: 192.168.1.21: Serials: 0x76; 
+16.04.2020 11:36:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'freeze '
+16.04.2020 11:38:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add gold 65000'
+16.04.2020 11:38:03: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2105, 20) in Trammel: "gold" "65000"
+16.04.2020 11:38:03: 192.168.1.21: Serials: 0x40000A4F; 
+16.04.2020 11:40:11: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add gold 65000'
+16.04.2020 11:40:12: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2104, 20) in Trammel: "gold" "65000"
+16.04.2020 11:40:12: 192.168.1.21: Serials: 0x40000A50; 
+16.04.2020 11:45:09: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'go magincia'
+16.04.2020 11:45:13: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'm tele'
+16.04.2020 11:45:36: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add banker'
+16.04.2020 11:45:46: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall stone'
+16.04.2020 11:45:50: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3753, 2106, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:50: 192.168.1.21: Serials: 0x40000A2A; 
+16.04.2020 11:45:51: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3753, 2105, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:51: 192.168.1.21: Serials: 0x40000A2B; 
+16.04.2020 11:45:52: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3755, 2105, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:52: 192.168.1.21: Serials: 0x40000A2C; 
+16.04.2020 11:45:54: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3755, 2106, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:54: 192.168.1.21: Serials: 0x40000A2D; 
+16.04.2020 11:45:56: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3753, 2107, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:56: 192.168.1.21: Serials: 0x40000A2E; 
+16.04.2020 11:45:57: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2107, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:57: 192.168.1.21: Serials: 0x40000A2F; 
+16.04.2020 11:45:58: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3755, 2107, 20) in Trammel: "AcidWall"
+16.04.2020 11:45:58: 192.168.1.21: Serials: 0x40000A30; 
+16.04.2020 11:46:08: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'remove '
+16.04.2020 11:46:10: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2C (AcidWall)
+16.04.2020 11:46:12: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'remove '
+16.04.2020 11:46:12: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2D (AcidWall)
+16.04.2020 11:46:17: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'area remove'
+16.04.2020 11:46:21: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A30 (AcidWall)
+16.04.2020 11:46:21: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2F (AcidWall)
+16.04.2020 11:46:21: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2E (AcidWall)
+16.04.2020 11:46:21: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2B (AcidWall)
+16.04.2020 11:46:21: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40000A2A (AcidWall)
+16.04.2020 11:46:26: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:46:43: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:43: 192.168.1.21: Serials: 0x40001CA4; 
+16.04.2020 11:46:44: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2106, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:44: 192.168.1.21: Serials: 0x40001CA5; 
+16.04.2020 11:46:46: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2104, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:46: 192.168.1.21: Serials: 0x40001CA6; 
+16.04.2020 11:46:47: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2105, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:47: 192.168.1.21: Serials: 0x40001CA7; 
+16.04.2020 11:46:51: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2103, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:51: 192.168.1.21: Serials: 0x40001CA8; 
+16.04.2020 11:46:52: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2101, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:52: 192.168.1.21: Serials: 0x40001CA9; 
+16.04.2020 11:46:53: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3754, 2102, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:46:53: 192.168.1.21: Serials: 0x40001CAA; 
+16.04.2020 11:46:59: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:47:05: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3755, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:05: 192.168.1.21: Serials: 0x40001CAB; 
+16.04.2020 11:47:06: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:06: 192.168.1.21: Serials: 0x40001CAC; 
+16.04.2020 11:47:07: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3757, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:07: 192.168.1.21: Serials: 0x40001CAD; 
+16.04.2020 11:47:08: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3758, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:08: 192.168.1.21: Serials: 0x40001CAE; 
+16.04.2020 11:47:09: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3759, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:09: 192.168.1.21: Serials: 0x40001CAF; 
+16.04.2020 11:47:10: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3760, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:10: 192.168.1.21: Serials: 0x40001CB0; 
+16.04.2020 11:47:12: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:47:20: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3755, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:20: 192.168.1.21: Serials: 0x40001CB1; 
+16.04.2020 11:47:21: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:21: 192.168.1.21: Serials: 0x40001CB2; 
+16.04.2020 11:47:22: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3757, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:22: 192.168.1.21: Serials: 0x40001CB3; 
+16.04.2020 11:47:23: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3758, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:23: 192.168.1.21: Serials: 0x40001CB4; 
+16.04.2020 11:47:23: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3759, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:23: 192.168.1.21: Serials: 0x40001CB5; 
+16.04.2020 11:47:25: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3760, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:25: 192.168.1.21: Serials: 0x40001CB6; 
+16.04.2020 11:47:27: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2101, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:47:27: 192.168.1.21: Serials: 0x40001CB7; 
+16.04.2020 11:47:30: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:47:36: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2102, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:36: 192.168.1.21: Serials: 0x40001CB8; 
+16.04.2020 11:47:37: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2103, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:37: 192.168.1.21: Serials: 0x40001CB9; 
+16.04.2020 11:47:37: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2104, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:37: 192.168.1.21: Serials: 0x40001CBA; 
+16.04.2020 11:47:38: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2105, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:38: 192.168.1.21: Serials: 0x40001CBB; 
+16.04.2020 11:47:39: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2106, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:39: 192.168.1.21: Serials: 0x40001CBC; 
+16.04.2020 11:47:40: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:40: 192.168.1.21: Serials: 0x40001CBD; 
+16.04.2020 11:47:43: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:47:48: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:48: 192.168.1.21: Serials: 0x40001CBE; 
+16.04.2020 11:47:49: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:49: 192.168.1.21: Serials: 0x40001CBF; 
+16.04.2020 11:47:50: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:50: 192.168.1.21: Serials: 0x40001CC0; 
+16.04.2020 11:47:54: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3762, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:47:54: 192.168.1.21: Serials: 0x40001CC1; 
+16.04.2020 11:47:58: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:48:03: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1East"
+16.04.2020 11:48:03: 192.168.1.21: Serials: 0x40001CC2; 
+16.04.2020 11:48:04: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add wall'
+16.04.2020 11:48:12: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3761, 2107, 20) in Trammel: "SAShadowWall1South"
+16.04.2020 11:48:12: 192.168.1.21: Serials: 0x40001CC3; 
+16.04.2020 11:48:15: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'remove '
+16.04.2020 11:48:17: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40001CA9 (SAShadowWall1East)
+16.04.2020 11:48:18: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'remove '
+16.04.2020 11:48:19: 192.168.1.21: Owner 0x75 "white" ('admin') deleting 0x40001CC1 (SAShadowWall1East)
+16.04.2020 11:48:22: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add banker'
+16.04.2020 11:48:23: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2104, 20) in Trammel: "banker"
+16.04.2020 11:48:23: 192.168.1.21: Serials: 0x196; 
+16.04.2020 11:48:28: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'save '
+16.04.2020 11:48:31: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'gmbody '
+16.04.2020 11:48:32: 192.168.1.21: Owner 0x75 "white" ('admin') is assuming a GM body
+16.04.2020 11:48:41: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'save '
+16.04.2020 11:49:30: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add gold 65000'
+16.04.2020 11:49:31: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3757, 2104, 20) in Trammel: "gold" "65000"
+16.04.2020 11:49:31: 192.168.1.21: Serials: 0x40001CD2; 
+16.04.2020 11:55:43: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'save '
+16.04.2020 11:56:19: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add gold 5000'
+16.04.2020 11:56:21: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2104, 20) in Trammel: "gold" "5000"
+16.04.2020 11:56:21: 192.168.1.21: Serials: 0x40000609; 
+16.04.2020 11:56:42: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add backpack'
+16.04.2020 11:56:43: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2104, 20) in Trammel: "backpack"
+16.04.2020 11:56:43: 192.168.1.21: Serials: 0x4000060B; 
+16.04.2020 11:56:51: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add gold 6500'
+16.04.2020 11:56:52: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3756, 2104, 21) in Trammel: "gold" "6500"
+16.04.2020 11:56:52: 192.168.1.21: Serials: 0x4000060C; 
+16.04.2020 11:57:19: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'add backpack'
+16.04.2020 11:57:21: 192.168.1.21: Owner 0x75 "white" ('admin') building at (3757, 2104, 20) in Trammel: "backpack"
+16.04.2020 11:57:21: 192.168.1.21: Serials: 0x4000060E; 
+16.04.2020 11:59:19: 192.168.1.21: Owner 0x75 "white" ('admin') used command 'save '
