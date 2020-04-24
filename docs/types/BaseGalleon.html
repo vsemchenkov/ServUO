@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseGalleon</title>
+      <style type="text/css">
+      body { background-color: white; font-family: Tahoma; color: #000000; }
+      a, a:visited { color: #000000; }
+      a:active, a:hover { color: #808080; }
+      </style>
+   </head>
+   <body>
+      <h4><a href="../namespaces/Server.Multis.html">Back to Server.Multis</a></h4>
+      <h2>BaseGalleon : <!-- DBG-1 --><a href="BaseBoat.html">BaseBoat</a>, <!-- DBG-2.2 --><a href="IHued.html">IHued</a>, <!-- DBG-2.2 --><a href="ISerializable.html">ISerializable</a>, <!-- DBG-2.2 --><a href="ISpawnable.html">ISpawnable</a>, <!-- DBG-2.1 --><a href="IComparable.html">IComparable</a>, <!-- DBG-2.2 --><a href="IMount.html">IMount</a>, <!-- DBG-2.1 --><a href="IComparable-T-.html">IComparable</a>&lt;<a href="Item.html">Item</a>&gt;, <!-- DBG-2.1 --><a href="IComparable-T-.html">IComparable</a>&lt;<a href="IEntity.html">IEntity</a>&gt;, <!-- DBG-2.2 --><a href="IPoint2D.html">IPoint2D</a>, <!-- DBG-2.2 --><a href="IPoint3D.html">IPoint3D</a>, <!-- DBG-2.2 --><a href="IEntity.html">IEntity</a></h2>
+<h4>Nested Types: <!-- DBG-4 --><a href="(Anonymous-Type)-AddAddon-c__AnonStoreyA.html">(Anonymous-Type)-AddAddon-c__AnonStoreyA</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-CanAddAddon-c__AnonStorey9.html">(Anonymous-Type)-CanAddAddon-c__AnonStorey9</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-Contains-c__AnonStorey5.html">(Anonymous-Type)-Contains-c__AnonStorey5</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-Deserialize-c__AnonStoreyB.html">(Anonymous-Type)-Deserialize-c__AnonStoreyB</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-Deserialize-c__AnonStoreyC.html">(Anonymous-Type)-Deserialize-c__AnonStoreyC</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-Deserialize-c__AnonStoreyD.html">(Anonymous-Type)-Deserialize-c__AnonStoreyD</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-Deserialize-c__AnonStoreyE.html">(Anonymous-Type)-Deserialize-c__AnonStoreyE</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-GetComponents-c__Iterator0.html">(Anonymous-Type)-GetComponents-c__Iterator0</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-IsHold-c__AnonStorey2.html">(Anonymous-Type)-IsHold-c__AnonStorey2</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-IsMainHold-c__AnonStorey1.html">(Anonymous-Type)-IsMainHold-c__AnonStorey1</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-IsWeaponPad-c__AnonStorey4.html">(Anonymous-Type)-IsWeaponPad-c__AnonStorey4</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-IsWheel-c__AnonStorey3.html">(Anonymous-Type)-IsWheel-c__AnonStorey3</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-OnDryDock-c__AnonStorey7.html">(Anonymous-Type)-OnDryDock-c__AnonStorey7</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-SetFacingComponents-c__AnonStorey8.html">(Anonymous-Type)-SetFacingComponents-c__AnonStorey8</a>, <!-- DBG-4 --><a href="(Anonymous-Type)-TryAddCannon-c__AnonStorey6.html">(Anonymous-Type)-TryAddCannon-c__AnonStorey6</a></h4>
+      (<span style="color: blue;">static</span>) <span style="color: blue;">int</span>[][] CannonIDs( <span style="color: blue;">get</span>; )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">int</span>[] ShipAddonTiles( <span style="color: blue;">get</span>; )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <AddFixtures>m__3( <!-- DBG-0 --><a href="MultiTileEntry.html">MultiTileEntry</a> e )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <OnAfterDelete>m__4( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <OnAfterDelete>m__5( <!-- DBG-0 --><a href="Item.html">Item</a> a )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <PaintComponents>m__8( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <SetFacingComponents>m__7( <!-- DBG-0 --><a href="MultiTileEntry.html">MultiTileEntry</a> e )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_GalleonHold>m__1( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Pole>m__2( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Wheel>m__0( <!-- DBG-0 --><a href="Item.html">Item</a> f )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> CheckForBoat( <!-- DBG-0 --><a href="IPoint3D.html">IPoint3D</a> p, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> caster )<br />
+      (<span style="color: blue;">static</span>) <!-- DBG-0 --><a href="BaseGalleon.html">BaseGalleon</a> FindGalleonAt( <!-- DBG-0 --><a href="IPoint2D.html">IPoint2D</a> pnt, <!-- DBG-0 --><a href="Map.html">Map</a> map )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> IsNearDocks( <!-- DBG-0 --><a href="BaseBoat.html">BaseBoat</a> boat )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> IsNearDocks( <!-- DBG-0 --><a href="BaseBoat.html">BaseBoat</a> boat, <span style="color: blue;">int</span> range )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> IsNearLand( <!-- DBG-0 --><a href="BaseBoat.html">BaseBoat</a> boat )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> IsNearLand( <!-- DBG-0 --><a href="BaseBoat.html">BaseBoat</a> boat, <span style="color: blue;">int</span> range )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> IsNearLandOrDocks( <!-- DBG-0 --><a href="BaseBoat.html">BaseBoat</a> boat )<br />
+      (<span style="color: blue;">ctor</span>) BaseGalleon( <!-- DBG-0 --><a href="Direction.html">Direction</a> direction )<br />
+      (<span style="color: blue;">ctor</span>) BaseGalleon( <!-- DBG-0 --><a href="Serial.html">Serial</a> serial )<br />
+      <span style="color: blue;">Dictionary</span>&lt;<a href="Item.html">Item</a>,<a href="DeckItem.html">DeckItem</a>&gt; Addons( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">int</span> BaseBoatHue( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">double</span> CannonDamageMod( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span>[][] CannonTileIDs( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">List</span>&lt;<a href="Item.html">Item</a>&gt; Cannons( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">int</span> CaptiveOffset( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> CapturedCaptain( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">int</span>[][] FillerIDs( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">List</span>&lt;<a href="Item.html">Item</a>&gt; Fixtures( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <!-- DBG-0 --><a href="GalleonHold.html">GalleonHold</a> GalleonHold( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="Mobile.html">Mobile</a> GalleonPilot( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">bool</span> HasPaint( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span>[][] HoldIDs( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span>[][] HoldItemIDs( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> IsClassicBoat( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> LabelNumber( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> MaxAddons( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> MaxCannons( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="BindingPole.html">BindingPole</a> Pole( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="SecurityEntry.html">SecurityEntry</a> SecurityEntry( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <!-- DBG-0 --><a href="ShipWheel.html">ShipWheel</a> Wheel( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> WheelDistance( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span>[][] WheelItemIDs( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">void</span> <OnDryDock>m__6( <!-- DBG-0 --><a href="Item.html">Item</a> c )<br />
+      <span style="color: blue;">void</span> AddAddon( <!-- DBG-0 --><a href="Item.html">Item</a> addon )<br />
+      <span style="color: blue;">void</span> AddCannon( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">void</span> AddFillerItem( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AddFixture( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">void</span> AddFixtures( <span style="color: blue;">bool</span> fromConstruct )<br />
+      <span style="color: blue;">void</span> AddGalleonPilot( <!-- DBG-0 --><a href="Direction.html">Direction</a> direction )<br />
+      <span style="color: blue;">void</span> AddHoldItem( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AddMainHold( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AddMooringLine( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AddWeaponPad( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AddWheel( <span style="color: blue;">int</span> id, <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y, <span style="color: blue;">int</span> z )<br />
+      <span style="color: blue;">void</span> AutoAddCannons( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> captain )<br />
+      <span style="color: blue;">bool</span> CanAddAddon( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> p )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> CanCommand( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> m )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> CanMoveOver( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> entity )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> CheckAddon( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">virtual</span> <!-- DBG-0 --><a href="DryDockResult.html">DryDockResult</a> CheckDryDock( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> dockmaster )<br />
+      <span style="color: blue;">void</span> CheckPaintDecay()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> Contains( <span style="color: blue;">int</span> x, <span style="color: blue;">int</span> y )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br />
+      <span style="color: blue;">void</span> DistributeRune( <!-- DBG-0 --><a href="Item.html">Item</a> rune, <span style="color: blue;">bool</span> bankbox )<br />
+      <span style="color: blue;">virtual</span> <!-- DBG-0 --><a href="ShipPosition.html">ShipPosition</a> GetCannonPosition( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pnt )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">IEnumerable</span>&lt;<a href="IEntity.html">IEntity</a>&gt; GetComponents()<br />
+      <span style="color: blue;">int</span> GetIndex( <span style="color: blue;">int</span>[][] list, <span style="color: blue;">int</span> check )<br />
+      <span style="color: blue;">virtual</span> <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetMarkedLocation()<br />
+      <span style="color: blue;">virtual</span> TimeSpan GetMovementInterval( <span style="color: blue;">bool</span> fast, <span style="color: blue;">bool</span> drifting, <span style="color: blue;">out</span> <span style="color: blue;">int</span> clientSpeed )<br />
+      <!-- DBG-0 --><a href="Point3D.html">Point3D</a> GetRecallOffset()<br />
+      <!-- DBG-0 --><a href="SecurityLevel.html">SecurityLevel</a> GetSecurityLevel( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">int</span> GetValueForDirection( <!-- DBG-0 --><a href="Direction.html">Direction</a> direction )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> HasAccess( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">void</span> InvalidateGalleon()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> IsComponentItem( <!-- DBG-0 --><a href="IEntity.html">IEntity</a> entity )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> IsExcludedTile( <!-- DBG-0 --><a href="StaticTile.html">StaticTile</a> tile )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> IsExcludedTile( <!-- DBG-0 --><a href="StaticTile.html">StaticTile</a>[] tiles )<br />
+      <span style="color: blue;">bool</span> IsHold( <span style="color: blue;">int</span> id )<br />
+      <span style="color: blue;">bool</span> IsMainHold( <span style="color: blue;">int</span> id )<br />
+      <span style="color: blue;">bool</span> IsMastTile( <!-- DBG-0 --><a href="StaticTile.html">StaticTile</a> tile )<br />
+      <span style="color: blue;">bool</span> IsPublic()<br />
+      <span style="color: blue;">bool</span> IsValidCannonSpot( <span style="color: blue;">ref</span> <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pnt, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">bool</span> IsWeaponPad( <span style="color: blue;">int</span> id )<br />
+      <span style="color: blue;">bool</span> IsWheel( <span style="color: blue;">int</span> id )<br />
+      <span style="color: blue;">void</span> MarkRunes()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnAfterDelete()<br />
+      <span style="color: blue;">void</span> OnChop( <!-- DBG-0 --><a href="BaseAddon.html">BaseAddon</a> addon, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnDryDock( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnLocationChange( <!-- DBG-0 --><a href="Point3D.html">Point3D</a> old )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnMapChange()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnPlacement( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">void</span> PaintComponents()<br />
+      <span style="color: blue;">void</span> RemoveAddon( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">void</span> RemoveCannon( <!-- DBG-0 --><a href="Item.html">Item</a> cannon )<br />
+      <span style="color: blue;">void</span> RemoveFixture( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">bool</span> RemovePaint()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> SetFacingComponents( <!-- DBG-0 --><a href="Direction.html">Direction</a> newDirection, <!-- DBG-0 --><a href="Direction.html">Direction</a> oldDirection, <span style="color: blue;">bool</span> ignoreLastDirection )<br />
+      <span style="color: blue;">bool</span> TryAddCannon( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pnt, <!-- DBG-0 --><a href="ShipCannonDeed.html">ShipCannonDeed</a> deed, <span style="color: blue;">bool</span> force )<br />
+      <span style="color: blue;">bool</span> TryAddCannon( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <!-- DBG-0 --><a href="Point3D.html">Point3D</a> pnt, <!-- DBG-0 --><a href="IShipCannon.html">IShipCannon</a> cannon, <!-- DBG-0 --><a href="ShipCannonDeed.html">ShipCannonDeed</a> deed )<br />
+      <span style="color: blue;">bool</span> TryMarkRune( <!-- DBG-0 --><a href="RecallRune.html">RecallRune</a> rune, <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from )<br />
+      <span style="color: blue;">bool</span> TryPaintBoat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <span style="color: blue;">int</span> baseHue )<br />
+      <span style="color: blue;">bool</span> TryPermanentPaintBoat( <!-- DBG-0 --><a href="Mobile.html">Mobile</a> from, <span style="color: blue;">int</span> hue )<br />
+      <span style="color: blue;">void</span> UpdateCannonID( <!-- DBG-0 --><a href="Item.html">Item</a> cannon )<br />
+      <span style="color: blue;">void</span> UpdateCannonIDs()<br />
+   </body>
+</html>

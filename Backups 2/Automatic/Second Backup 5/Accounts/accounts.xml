@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<accounts count="1">
+	<account>
+		<username>admin</username>
+		<newCryptPassword>DD-94-70-95-28-BB-1C-83-D0-8F-30-88-D4-04-3F-47-42-89-1F-4F</newCryptPassword>
+		<accessLevel>Owner</accessLevel>
+		<created>2020-04-13T18:38:38.952499Z</created>
+		<lastLogin>2020-04-14T14:17:55.40582Z</lastLogin>
+		<totalGameTime>PT6H43M47.354415S</totalGameTime>
+		<chars>
+			<char index="0">117</char>
+		</chars>
+		<addressList count="1">
+			<ip>192.168.1.21</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+		<sovereigns>0</sovereigns>
+	</account>
+</accounts>

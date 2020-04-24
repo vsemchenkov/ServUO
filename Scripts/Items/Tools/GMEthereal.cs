@@ -9,7 +9,7 @@ namespace Server.Mobiles
     public class GMEthereal : EtherealMount
     {
 		public override int FollowerSlots { get { return 0; } }
-		
+
         private static readonly EtherealInfo[] EthyItemTypes = new EtherealInfo[]
         {
             new EtherealInfo(0x20DD, 0x3EAA), //Horse
@@ -29,12 +29,24 @@ namespace Server.Mobiles
             new EtherealInfo(11669, 16016), //Chimera
             new EtherealInfo(11670, 16017), //CuSidhe
             new EtherealInfo(8417, 16069), //PolarBear
-            new EtherealInfo(0x46f8, 0x3EC6)
+            new EtherealInfo(0x46f8, 0x3EC6), // Boura
+            new EtherealInfo(0x9ED5, 16076), // Windrunner
+            new EtherealInfo(0xA010, 16078), // Serpentaine Dragon
+            new EtherealInfo(0x3FFD, 0x3EC9), // Hell Hound
+            new EtherealInfo(0x9E35, 0x3ECB), // Laren
+            new EtherealInfo(0x2D95, 0x3E90), // Reptalon
+            new EtherealInfo(0x9DD6, 0x3ECA), // Tarantula
+            new EtherealInfo(0x9844, 0x3EC8), // Tigr
+            new EtherealInfo(0x25CE, 0x3E9B), // Unicorn old
+            new EtherealInfo(0xA554, 0x3ED2), // War Board
+            new EtherealInfo(0xA335, 0x3ED1), // Coconut krab
+            new EtherealInfo(0xA0C0, 0x3ECF), // Eowmu
+            new EtherealInfo(0xA138, 0x3ED0), // Skeletal cat
         };
         private EtherealTypes m_EthyType;
         [Constructable]
         public GMEthereal()
-            : this(EtherealTypes.Horse)
+            : this(EtherealTypes.SerpentineDragon)
         {
         }
 
@@ -71,9 +83,20 @@ namespace Server.Mobiles
             Chimera,
             CuSidhe,
             PolarBear,
-            Boura
+            Boura,
+            WindRunner,
+            SerpentineDragon,
+            HellHound,
+            Laren,
+            Reptalon,
+            Tarantula,
+            Tiger,
+            Unicornold,
+            warboard,
+            coconutkrab,
+            eowmu,
         }
-		
+
         [CommandProperty(AccessLevel.Counselor)]
         public EtherealTypes EthyType
         {
@@ -91,8 +114,8 @@ namespace Server.Mobiles
                 NonTransparentMountedID = TransparentMountedID;
                 StatueID = EthyItemTypes[(int)value].RegularID;
             }
-        }    
-        
+        }
+
         public override void OnDoubleClick(Mobile from)
         {
             if (from.IsStaff())
@@ -115,7 +138,7 @@ namespace Server.Mobiles
             }
             else
             {
-                from.SendMessage("This item is to only be used by staff members."); 
+                from.SendMessage("This item is to only be used by staff members.");
                 Delete();
             }
         }
@@ -131,7 +154,7 @@ namespace Server.Mobiles
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-            EthyType = (EtherealTypes)reader.ReadInt();           
+            EthyType = (EtherealTypes)reader.ReadInt();
         }
 
         public struct EtherealInfo

@@ -23,6 +23,7 @@ namespace Server.Commands
         private class GMmeTarget : Target
         {
             private static Mobile m_Mobile;
+
             public GMmeTarget()
                 : base(-1, false, TargetFlags.None)
             {
@@ -32,14 +33,14 @@ namespace Server.Commands
             {
                 if (targeted is Mobile)
                 {
-                    Mobile targ = (Mobile)targeted;
+                    Mobile targ = (Mobile) targeted;
                     if (from != targ)
                         from.SendMessage("You may only set your own body to GM style.");
 
                     else
                     {
                         m_Mobile = from;
-                        
+
                         if (Config.Get("Staff.Staffbody", true))
                         {
                             m_Mobile.BodyValue = 987;
@@ -48,12 +49,24 @@ namespace Server.Commands
                             {
                                 switch (m_Mobile.AccessLevel)
                                 {
-                                    case AccessLevel.Owner:m_Mobile.Hue = Config.Get("Staff.Owner", 1001); break;
-                                    case AccessLevel.Developer:m_Mobile.Hue = Config.Get("Staff.Developer", 1001); break;
-                                    case AccessLevel.Administrator: m_Mobile.Hue = Config.Get("Staff.Administrator", 1001); break;
-                                    case AccessLevel.Seer: m_Mobile.Hue = Config.Get("Staff.Seer", 467); break;
-                                    case AccessLevel.GameMaster: m_Mobile.Hue = Config.Get("Staff.GameMaster", 39); break;
-                                    case AccessLevel.Counselor: m_Mobile.Hue = Config.Get("Staff.Counselor", 3); break;
+                                    case AccessLevel.Owner:
+                                        m_Mobile.Hue = Config.Get("Staff.Owner", 1001);
+                                        break;
+                                    case AccessLevel.Developer:
+                                        m_Mobile.Hue = Config.Get("Staff.Developer", 1001);
+                                        break;
+                                    case AccessLevel.Administrator:
+                                        m_Mobile.Hue = Config.Get("Staff.Administrator", 1001);
+                                        break;
+                                    case AccessLevel.Seer:
+                                        m_Mobile.Hue = Config.Get("Staff.Seer", 467);
+                                        break;
+                                    case AccessLevel.GameMaster:
+                                        m_Mobile.Hue = Config.Get("Staff.GameMaster", 39);
+                                        break;
+                                    case AccessLevel.Counselor:
+                                        m_Mobile.Hue = Config.Get("Staff.Counselor", 3);
+                                        break;
                                 }
                             }
                         }
@@ -64,7 +77,8 @@ namespace Server.Commands
                         if (Config.Get("Staff.CutFacialHair", true))
                             m_Mobile.FacialHairItemID = 0;
 
-                        CommandLogging.WriteLine(from, "{0} {1} is assuming a GM body", from.AccessLevel, CommandLogging.Format(from));
+                        CommandLogging.WriteLine(from, "{0} {1} is assuming a GM body", from.AccessLevel,
+                            CommandLogging.Format(from));
 
                         Container pack = from.Backpack;
 
@@ -72,11 +86,14 @@ namespace Server.Commands
 
                         foreach (Item item in from.Items)
                         {
-                            if (item.Layer != Layer.Bank && item.Layer != Layer.Hair && item.Layer != Layer.FacialHair && item.Layer != Layer.Mount && item.Layer != Layer.Backpack)
+                            if (item.Layer != Layer.Bank && item.Layer != Layer.Hair &&
+                                item.Layer != Layer.FacialHair && item.Layer != Layer.Mount &&
+                                item.Layer != Layer.Backpack)
                             {
                                 ItemsToDelete.Add(item);
                             }
                         }
+
                         foreach (Item item in ItemsToDelete)
                             item.Delete();
 
@@ -101,7 +118,7 @@ namespace Server.Commands
                         from.Fame = 0;
                         from.Karma = 0;
                         from.Kills = 0;
-                        from.Hidden = true;
+                        from.Hidden = false;
                         from.Blessed = true;
                         from.Hits = from.HitsMax;
                         from.Mana = from.ManaMax;
@@ -113,7 +130,9 @@ namespace Server.Commands
 
                             PackItem(new GMHidingStone());
                             PackItem(new GMEthereal());
-                            PackItem(new StaffOrb());                           
+                            PackItem(new StaffOrb());
+                            PackItem(new HousePlacementTool());
+
 
                             from.RawStr = 100;
                             from.RawDex = 100;
@@ -134,27 +153,73 @@ namespace Server.Commands
                             {
                                 switch (m_Mobile.AccessLevel)
                                 {
-                                    case AccessLevel.Owner: color = Config.Get("Staff.Owner", 1001); break;
-                                    case AccessLevel.Developer: color = Config.Get("Staff.Developer", 1001); break;
-                                    case AccessLevel.Administrator: color = Config.Get("Staff.Administrator", 1001); break;
-                                    case AccessLevel.Seer: color = Config.Get("Staff.Seer", 467); break;
-                                    case AccessLevel.GameMaster: color = Config.Get("Staff.GameMaster", 39); break;
-                                    case AccessLevel.Counselor: color = Config.Get("Staff.Counselor", 3); break;
+                                    case AccessLevel.Owner:
+                                        color = Config.Get("Staff.Owner", 1001);
+                                        break;
+                                    case AccessLevel.Developer:
+                                        color = Config.Get("Staff.Developer", 1001);
+                                        break;
+                                    case AccessLevel.Administrator:
+                                        color = Config.Get("Staff.Administrator", 1001);
+                                        break;
+                                    case AccessLevel.Seer:
+                                        color = Config.Get("Staff.Seer", 467);
+                                        break;
+                                    case AccessLevel.GameMaster:
+                                        color = Config.Get("Staff.GameMaster", 39);
+                                        break;
+                                    case AccessLevel.Counselor:
+                                        color = Config.Get("Staff.Counselor", 3);
+                                        break;
                                 }
                             }
 
                             if (from.IsStaff() && from.AccessLevel <= AccessLevel.Spawner)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
                             else if (from.AccessLevel == AccessLevel.GameMaster)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
+
                             if (from.AccessLevel == AccessLevel.Seer)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
+
                             if (from.AccessLevel == AccessLevel.Administrator)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
+
                             if (from.AccessLevel == AccessLevel.Developer)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
+
                             if (from.AccessLevel >= AccessLevel.CoOwner)
+                            {
                                 EquipItem(new FurBoots(color));
+                                EquipItem(new GMRobe());
+                                EquipItem(new GMStaff());
+                                EquipItem(new GMShield());
+                            }
                         }
                     }
                 }

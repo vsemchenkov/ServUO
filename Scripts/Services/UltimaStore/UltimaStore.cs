@@ -10,6 +10,7 @@ using Server.Engines.VendorSearching;
 using Server.Gumps;
 using Server.Network;
 using Server.Engines.Points;
+using Server.Items.Bank;
 using Server.Multis;
 
 namespace Server.Engines.UOStore
@@ -101,7 +102,7 @@ namespace Server.Engines.UOStore
 
             Register<AbyssalHairDye>(1149822, 1156676, 0, 0x9C7A, 0, 400, cat);
             Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071439 }, 1156676, 0, 0x9C78, 0, 400, cat, ConstructHairDye); // Lemon Lime
-            Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071470 }, 1156676, 0, 0x9C6D, 0, 400, cat, ConstructHairDye); // Yew Brown 
+            Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071470 }, 1156676, 0, 0x9C6D, 0, 400, cat, ConstructHairDye); // Yew Brown
             Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071471 }, 1156676, 0, 0x9C6E, 0, 400, cat, ConstructHairDye); // Bloodwood Red
             Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071438 }, 1156676, 0, 0x9C6F, 0, 400, cat, ConstructHairDye); // Vivid Blue
             Register<SpecialHairDye>(new TextDefinition[] { 1071387, 1071469 }, 1156676, 0, 0x9C71, 0, 400, cat, ConstructHairDye); // Ash Blonde
@@ -164,7 +165,7 @@ namespace Server.Engines.UOStore
             Register<HaochisPigment>(new TextDefinition[] { 1071249, 1023856 }, 1156671, 0, 0x9C7F, 0, 400, cat, ConstructHaochisPigment); // Emerald
             Register<HaochisPigment>(new TextDefinition[] { 1071249, 1115467 }, 1156671, 0, 0x9C82, 0, 400, cat, ConstructHaochisPigment); // Smoky Gold
             Register<HaochisPigment>(new TextDefinition[] { 1071249, 1115468 }, 1156671, 0, 0x9C7E, 0, 400, cat, ConstructHaochisPigment); // Ghost's Grey
-            Register<HaochisPigment>(new TextDefinition[] { 1071249, 1115471 }, 1156671, 0, 0x9C84, 0, 400, cat, ConstructHaochisPigment); // Ocean Blue   
+            Register<HaochisPigment>(new TextDefinition[] { 1071249, 1115471 }, 1156671, 0, 0x9C84, 0, 400, cat, ConstructHaochisPigment); // Ocean Blue
 
             Register<SmugglersEdge>(1071499, 1156664, 0, 0x9C63, 0, 400, cat);
             Register<UndertakersStaff>(1071498, 1156663, 0x13F8, 0, 0, 500, cat);
@@ -300,14 +301,16 @@ namespace Server.Engines.UOStore
 
             // misc
             cat = StoreCategory.Misc;
+            Register<Check1kk>(1061184, 1061184, 0x14f1, 0, 0x0494, 1900, cat);
+
             Register<SoulstoneToken>(1158404, 1158405, 0x2A93, 0, 2598, 1000, cat, ConstructSoulstone);
             Register<BagOfBulkOrderCovers>(1071116, 1157603, 0, 0x9CC6, 0, 200, cat, ConstructBOBCoverOne);
 
-            //TODO: UndeadWeddingBundle, TotemOfChromaticFortune, 
+            //TODO: UndeadWeddingBundle, TotemOfChromaticFortune,
 
             Register<PetBrandingIron>(1157314, 1157372, 0, 0x9CC3, 0, 600, cat);
             Register<ImprovedRockHammer>(1157177, 1157306, 0, 0x9CBB, 0, 1000, cat);
-            Register<PetBondingPotion>(1152921, 1156678, 0, 0x9CBC, 0, 500, cat); 
+            Register<PetBondingPotion>(1152921, 1156678, 0, 0x9CBC, 0, 500, cat);
 
             Register<ForgedMetalOfArtifacts>(new TextDefinition[] { 1149868, 1156686 }, 1156674, 0, 0x9C65, 0, 1000, cat, ConstructForgedMetal);
             Register<ForgedMetalOfArtifacts>(new TextDefinition[] { 1149868, 1156687 }, 1156675, 0, 0x9C65, 0, 600, cat, ConstructForgedMetal);
@@ -683,7 +686,7 @@ namespace Server.Engines.UOStore
         {
             switch (sort)
             {
-                case SortBy.Name: 
+                case SortBy.Name:
                         list.Sort((a, b) => String.CompareOrdinal(GetStringName(a.Name), GetStringName(b.Name)));
                     break;
                 case SortBy.PriceLower:
@@ -764,11 +767,11 @@ namespace Server.Engines.UOStore
         {
             var cart = GetCart(m);
             var total = GetSubTotal(cart);
-            
+
             if (cart == null || cart.Count == 0 || total == 0)
             {
                 // Purchase failed due to your cart being empty.
-                m.SendLocalizedMessage(1156842); 
+                m.SendLocalizedMessage(1156842);
             }
             else if (total > GetCurrency(m, true))
             {
@@ -828,7 +831,7 @@ namespace Server.Engines.UOStore
                 if (fail)
                 {
                     // Failed to process one of your items. Please check your cart and try again.
-                    m.SendLocalizedMessage(1156853); 
+                    m.SendLocalizedMessage(1156853);
                 }
             }
         }

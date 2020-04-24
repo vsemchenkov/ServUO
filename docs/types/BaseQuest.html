@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>RunUO Documentation - Class Overview - BaseQuest</title>
+      <style type="text/css">
+      body { background-color: white; font-family: Tahoma; color: #000000; }
+      a, a:visited { color: #000000; }
+      a:active, a:hover { color: #808080; }
+      </style>
+   </head>
+   <body>
+      <h4><a href="../namespaces/Server.Engines.Quests.html">Back to Server.Engines.Quests</a></h4>
+      <h2>BaseQuest</h2>
+<h4>Derived Types: <!-- DBG-3 --><a href="EscortToWrongEntrance.html">EscortToWrongEntrance</a>, <!-- DBG-3 --><a href="ProfessionalBountyQuest.html">ProfessionalBountyQuest</a>, <!-- DBG-3 --><a href="ProfessionalFisherQuest.html">ProfessionalFisherQuest</a></h4>
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Completed>m__0( <!-- DBG-0 --><a href="BaseObjective.html">BaseObjective</a> obj )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Completed>m__1( <!-- DBG-0 --><a href="BaseObjective.html">BaseObjective</a> obj )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Failed>m__2( <!-- DBG-0 --><a href="BaseObjective.html">BaseObjective</a> obj )<br />
+      (<span style="color: blue;">static</span>) <span style="color: blue;">bool</span> <get_Failed>m__3( <!-- DBG-0 --><a href="BaseObjective.html">BaseObjective</a> obj )<br />
+      (<span style="color: blue;">ctor</span>) BaseQuest()<br />
+      <span style="color: blue;">int</span> AcceptSound( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> AllObjectives( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> CanRefuseReward( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="QuestChain.html">QuestChain</a> ChainID( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">object</span> Complete( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> CompleteMessage( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> CompleteSound( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> Completed( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">object</span> Description( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> DoneOnce( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> Failed( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">object</span> FailedMsg( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> ForceRemember( <span style="color: blue;">get</span>; )<br />
+      Type NextQuest( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">List</span>&lt;<a href="BaseObjective.html">BaseObjective</a>&gt; Objectives( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="PlayerMobile.html">PlayerMobile</a> Owner( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">object</span> Quester( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      Type QuesterType( <span style="color: blue;">get</span>; <span style="color: blue;">set</span>; )<br />
+      <span style="color: blue;">object</span> Refuse( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> ResignSound( <span style="color: blue;">get</span>; )<br />
+      TimeSpan RestartDelay( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">List</span>&lt;<a href="BaseReward.html">BaseReward</a>&gt; Rewards( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> ShowDescription( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">bool</span> ShowRewards( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="BaseQuestItem.html">BaseQuestItem</a> StartingItem( <span style="color: blue;">get</span>; )<br />
+      <!-- DBG-0 --><a href="MondainQuester.html">MondainQuester</a> StartingMobile( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">object</span> Title( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">object</span> Uncomplete( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">int</span> UpdateSound( <span style="color: blue;">get</span>; )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> AddObjective( <!-- DBG-0 --><a href="BaseObjective.html">BaseObjective</a> objective )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> AddReward( <!-- DBG-0 --><a href="BaseReward.html">BaseReward</a> reward )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> CanOffer()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> Deserialize( <!-- DBG-0 --><a href="GenericReader.html">GenericReader</a> reader )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> GiveRewards()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> InProgress()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnAccept()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnCompleted()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnObjectiveUpdate( <!-- DBG-0 --><a href="Item.html">Item</a> item )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnRefuse()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> OnResign( <span style="color: blue;">bool</span> resignChain )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> RefuseRewards()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> RemoveQuest()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> RemoveQuest( <span style="color: blue;">bool</span> removeChain )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> RenderDescription( <!-- DBG-0 --><a href="MondainQuestGump.html">MondainQuestGump</a> g, <span style="color: blue;">bool</span> offer )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">bool</span> RenderObjective( <!-- DBG-0 --><a href="MondainQuestGump.html">MondainQuestGump</a> g, <span style="color: blue;">bool</span> offer )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> Serialize( <!-- DBG-0 --><a href="GenericWriter.html">GenericWriter</a> writer )<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> Slice()<br />
+      <span style="color: blue;">void</span> StartTimer()<br />
+      <span style="color: blue;">void</span> StopTimer()<br />
+      <span style="color: blue;">virtual</span> <span style="color: blue;">void</span> UpdateChain()<br />
+   </body>
+</html>

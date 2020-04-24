@@ -30,6 +30,7 @@ namespace Server.Mobiles
 
         protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
 
+
         public static int GetBalance(Mobile m)
         {
             double balance = 0;

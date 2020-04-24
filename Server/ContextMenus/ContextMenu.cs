@@ -82,7 +82,7 @@ namespace Server.ContextMenus
 		/// <summary>
 		///     Returns true if this ContextMenu requires packet version 2.
 		/// </summary>
-		public bool RequiresNewPacket => Entries.Any(t => t.Number < 3000000 || t.Number > 3032767); 
+		public bool RequiresNewPacket => Entries.Any(t => t.Number < 3000000 || t.Number > 3032767);
 
 		public void Dispose()
 		{
@@ -164,7 +164,7 @@ namespace Server.ContextMenus
 		}
 
 		/// <summary>
-		/// Returns the proper index of Enhanced Client Context Menu when sent from the icon on 
+		/// Returns the proper index of Enhanced Client Context Menu when sent from the icon on
 		/// the vendors status bar. Only known are Bank, Bulk Order Info and Bribe
 		/// </summary>
 		/// <param name="index">pre-described index sent by client. Must be 0x64 or higher</param>
@@ -238,9 +238,9 @@ namespace Server.ContextMenus
 				case 0x0396:
 					number = 1115022;
 					break;   // Open Titles Menu
-				case 0x0393:
-					number = 1049594;
-					break;   // Loyalty Rating
+                case 0x0393:
+                    number = 1049594;
+                    break;   // Loyalty Rating
 				case 0x0134:
 					number = 3006157;
 					break;   // Cancel Protection
@@ -256,7 +256,7 @@ namespace Server.ContextMenus
 				case 0x0334:
 					number = 3006168;
 					break;   // Siege Bless Item
-			}
+            }
 
 			if (index >= 0x64)
 			{

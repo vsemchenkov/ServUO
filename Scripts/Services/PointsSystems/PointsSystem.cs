@@ -18,11 +18,14 @@ namespace Server.Engines.Points
     {
         None = -1,
 
+
+
         QueensLoyalty,
         VoidPool,
         DespiseCrystals,
         ShameCrystals,
         CasinoData,
+
 
         //City Trading
         CityTrading,
@@ -31,7 +34,7 @@ namespace Server.Engines.Points
         Moonglow,
         Britain,
         Jhelom,
-        Yew, 
+        Yew,
         Minoc,
         Trinsic,
         SkaraBrae,
@@ -45,6 +48,7 @@ namespace Server.Engines.Points
         TreasuresOfKotlCity,
         PVPArena,
 
+
         Khaldun,
         Doom,
         SorcerersDungeon,
@@ -54,6 +58,8 @@ namespace Server.Engines.Points
         TOT,
         VAS,
         FellowshipData,
+        PvMPoints,
+        PvPPoints
     }
 
     public abstract class PointsSystem
@@ -86,6 +92,17 @@ namespace Server.Engines.Points
 
         public virtual void ProcessKill(Mobile victim, Mobile damager)
         {
+
+        }
+
+        public virtual void ProcessKillPlayerDeath(Mobile victim, Mobile damager)
+        {
+
+        }
+
+        public virtual void ProcessKillPlayerMurder(Mobile victim, Mobile damager)
+        {
+
         }
 
         public virtual void ProcessQuest(Mobile from, Type quest)
@@ -130,14 +147,29 @@ namespace Server.Engines.Points
         {
             PointsEntry entry = GetEntry(pm);
 
-            if(entry != null)
+            if (entry != null)
+            {
                 entry.Points = points;
+                pm.SendMessage($"У вас {PvMPoints.ToString()} PvM Points");
+                pm.SendMessage($"У вас {PvPPoints.ToString()} PvP Points");
+            }
+        }
+
+        public void SetPointsBC(PlayerMobile pm, double points)
+        {
+            PointsEntry entry = GetEntry(pm);
+
+            if (entry != null)
+            {
+                entry.Points = points;
+                pm.SendLocalizedMessage(1113719);
+            }
         }
 
         public virtual void SendMessage(PlayerMobile from, double old, double points, bool quest)
         {
             if (quest)
-                from.SendLocalizedMessage(1113719, ((int)points).ToString(), 0x26); //You have received ~1_val~ loyalty points as a reward for completing the quest. 
+                from.SendLocalizedMessage(1113719, ((int)points).ToString(), 0x26); //You have received ~1_val~ loyalty points as a reward for completing the quest.
             else
                 from.SendLocalizedMessage(1115920, String.Format("{0}\t{1}", Name.ToString(), ((int)points).ToString()));  // Your loyalty to ~1_GROUP~ has increased by ~2_AMOUNT~;Original
         }
@@ -206,7 +238,7 @@ namespace Server.Engines.Points
 
             if (entry == null && (create || AutoAdd))
                 entry = AddEntry(pm);
-				
+
 			return entry;
 		}
 
@@ -234,7 +266,7 @@ namespace Server.Engines.Points
         {
             return new PointsEntry(pm);
         }
-        
+
         public int Version { get; set; }
 
         public virtual void Serialize(GenericWriter writer)
@@ -266,12 +298,12 @@ namespace Server.Engines.Points
 	                    {
 	                        PlayerMobile player = reader.ReadMobile() as PlayerMobile;
 	                        PointsEntry entry = GetSystemEntry(player);
-	
+
 	                        if (Version > 0)
 	                            entry.Deserialize(reader);
 	                        else
 	                            entry.Points = reader.ReadDouble();
-	
+
 	                        if (player != null)
 	                        {
 	                            if (!PlayerTable.Contains(entry))
@@ -360,6 +392,10 @@ namespace Server.Engines.Points
         public static TreasuresOfTokuno TreasuresOfTokuno { get; set; }
         public static VirtueArtifactsSystem VirtueArtifacts { get; set; }
         public static FellowshipData FellowshipData { get; set; }
+        public static PvMPoints PvMPoints { get; set; }
+
+        public static PvPPoints PvPPoints { get; set; }
+
 
         public static void Configure()
         {
@@ -367,6 +403,8 @@ namespace Server.Engines.Points
             EventSink.WorldLoad += OnLoad;
             EventSink.QuestComplete += CompleteQuest;
             EventSink.OnKilledBy += OnKilledBy;
+            EventSink.PlayerDeath += OnKilledByPlayerDeath;
+            // EventSink.PlayerMurdered += OnKilledByPlayerMurder;
 
             Systems = new List<PointsSystem>();
 
@@ -390,7 +428,31 @@ namespace Server.Engines.Points
             TreasuresOfTokuno = new TreasuresOfTokuno();
             VirtueArtifacts = new VirtueArtifactsSystem();
             FellowshipData = new FellowshipData();
+
+            PvMPoints = new PvMPoints();
+            PvPPoints = new PvPPoints();
+
         }
+
+        public static void OnKilledByPlayerDeath(PlayerDeathEventArgs e)
+        {
+            OnKilledBy(e.Mobile, e.Killer);
+        }
+
+        public static void OnKilledByPlayerDeath(Mobile victim, Mobile damager)
+        {
+            Systems.ForEach(s => s.ProcessKillPlayerDeath(victim, damager));
+        }
+        //
+        // public static void OnKilledByPlayerMurder(PlayerMurderedEventArgs e)
+        // {
+        //     OnKilledBy(e.Victim, e.Murderer);
+        // }
+        //
+        // public static void OnKilledByPlayerMurder(Mobile victim, Mobile damager)
+        // {
+        //     Systems.ForEach(s => s.ProcessKillPlayerMurder(victim, damager));
+        // }
 
         public static void OnKilledBy(OnKilledByEventArgs e)
         {
@@ -445,14 +507,14 @@ namespace Server.Engines.Points
 
             return base.GetHashCode();
         }
-		
+
 		public virtual void Serialize(GenericWriter writer)
 		{
 			writer.Write(0);
 			writer.Write(Player);
 			writer.Write(Points);
 		}
-		
+
 		public virtual void Deserialize(GenericReader reader)
 		{
 			int version = reader.ReadInt();

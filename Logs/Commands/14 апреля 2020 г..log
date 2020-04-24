@@ -1,0 +1,588 @@
+##############################
+Log started on 14.04.2020 8:46:16
+
+14.04.2020 8:49:30: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'move '
+14.04.2020 8:49:34: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x75 "White" ('admin') to (3755, 2098, 20)
+14.04.2020 8:49:37: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'move '
+14.04.2020 8:49:43: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x40014D06 (MaginciaPlotStone) to (3755, 2099, 20)
+14.04.2020 8:49:47: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'move '
+14.04.2020 8:49:49: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x40014D06 (MaginciaPlotStone) to (3760, 2091, 20)
+14.04.2020 8:50:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 8:50:16: 192.168.1.21: Owner 0x75 "White" ('admin') viewing equipment of 0x75 "White" ('admin')
+14.04.2020 8:50:30: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 8:50:31: 192.168.1.21: Owner 0x75 "White" ('admin') viewing equipment of 0x75 "White" ('admin')
+14.04.2020 8:50:42: 192.168.1.21: Owner 0x75 "White" ('admin') moving equipment item 0x4001542A (GMEthereal) of 0x75 "White" ('admin')
+14.04.2020 8:50:43: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x4001542A (GMEthereal) to (3754, 2102, 20)
+14.04.2020 8:50:58: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 8:51:25: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'Movable' of 0x4001542A (GMEthereal) to 'True'
+14.04.2020 8:51:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 8:51:43: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 8:51:47: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 8:51:47: 192.168.1.21: Owner 0x75 "White" ('admin') viewing equipment of 0x75 "White" ('admin')
+14.04.2020 8:52:04: 192.168.1.21: Owner 0x75 "White" ('admin') opening properties for equipment item 0x40000F50 (DeathShroud) of 0x75 "White" ('admin')
+14.04.2020 8:52:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'who '
+14.04.2020 8:52:28: 192.168.1.21: Owner 0x75 "White" ('admin') telling 0x75 "White" ('admin') "Hello" 
+14.04.2020 8:52:35: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x75 "White" ('admin') to (3755, 2096, 20)
+14.04.2020 8:52:42: 192.168.1.21: Owner 0x75 "White" ('admin') opening properties gump of 0x75 "White" ('admin') 
+14.04.2020 8:53:00: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'gmbody '
+14.04.2020 8:53:02: 192.168.1.21: Owner 0x75 "White" ('admin') is assuming a GM body
+14.04.2020 8:53:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set invis'
+14.04.2020 8:53:30: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set invisible'
+14.04.2020 8:53:34: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+##############################
+Log started on 14.04.2020 10:52:47
+
+14.04.2020 10:53:08: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 10:53:10: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2097, 20) in Trammel: "balron"
+14.04.2020 10:53:10: 192.168.1.21: Serials: 0xCE; 
+##############################
+Log started on 14.04.2020 10:58:02
+
+14.04.2020 10:58:17: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 10:58:18: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2097, 20) in Trammel: "balron"
+14.04.2020 10:58:18: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 10:58:27: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 10:58:27: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2097, 20) in Trammel: "balron"
+14.04.2020 10:58:27: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 10:58:33: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 10:58:35: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Slayer" (no account)
+14.04.2020 10:58:36: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 10:58:37: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Slayer" (no account)
+##############################
+Log started on 14.04.2020 10:59:25
+
+14.04.2020 10:59:43: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 10:59:49: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 10:59:50: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2097, 20) in Trammel: "balron"
+14.04.2020 10:59:50: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 10:59:59: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:00:00: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Slayer" (no account)
+##############################
+Log started on 14.04.2020 11:00:42
+
+14.04.2020 11:01:00: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:01:01: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2096, 20) in Trammel: "balron"
+14.04.2020 11:01:01: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:01:08: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:01:08: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2097, 20) in Trammel: "balron"
+14.04.2020 11:01:08: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 11:01:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:01:15: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Collector of Souls" (no account)
+14.04.2020 11:01:16: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:01:17: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Slayer" (no account)
+##############################
+Log started on 14.04.2020 11:02:11
+
+14.04.2020 11:02:25: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:02:26: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2096, 20) in Trammel: "balron"
+14.04.2020 11:02:26: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:02:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:02:34: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Collector of Souls" (no account)
+14.04.2020 11:02:35: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:02:40: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:02:41: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2097, 20) in Trammel: "balron"
+14.04.2020 11:02:41: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 11:02:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:02:45: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2098, 20) in Trammel: "balron"
+14.04.2020 11:02:45: 192.168.1.21: Serials: 0x463; 
+14.04.2020 11:02:49: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:02:51: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Collector of Souls" (no account)
+14.04.2020 11:02:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:02:52: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x463 "the Slayer" (no account)
+##############################
+Log started on 14.04.2020 11:05:23
+
+14.04.2020 11:05:36: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:05:37: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2097, 20) in Trammel: "balron"
+14.04.2020 11:05:37: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:05:48: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:05:49: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2097, 20) in Trammel: "balron"
+14.04.2020 11:05:49: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 11:05:53: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:05:54: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3756, 2098, 20) in Trammel: "balron"
+14.04.2020 11:05:54: 192.168.1.21: Serials: 0x463; 
+14.04.2020 11:06:00: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:06:00: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3757, 2094, 20) in Trammel: "balron"
+14.04.2020 11:06:00: 192.168.1.21: Serials: 0x477; 
+14.04.2020 11:06:20: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:06:21: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x477 "the Lord of the Abyss" (no account)
+14.04.2020 11:06:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:06:23: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Collector of Souls" (no account)
+14.04.2020 11:06:24: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:06:25: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x463 "the Collector of Souls" (no account)
+14.04.2020 11:06:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:06:26: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Collector of Souls" (no account)
+14.04.2020 11:08:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:08:19: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2096, 20) in Trammel: "balron"
+14.04.2020 11:08:19: 192.168.1.21: Serials: 0x478; 
+14.04.2020 11:08:25: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:08:25: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2097, 20) in Trammel: "balron"
+14.04.2020 11:08:25: 192.168.1.21: Serials: 0x47B; 
+14.04.2020 11:08:31: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:08:32: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x478 "the Collector of Souls" (no account)
+14.04.2020 11:08:34: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:08:34: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x47B "the Lord of the Abyss" (no account)
+14.04.2020 11:09:24: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'move '
+14.04.2020 11:09:26: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x75 "White" ('admin') to (3748, 2099, 23)
+14.04.2020 11:09:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'viewequip '
+14.04.2020 11:09:53: 192.168.1.21: Owner 0x75 "White" ('admin') viewing equipment of 0x75 "White" ('admin')
+14.04.2020 11:09:59: 192.168.1.21: Owner 0x75 "White" ('admin') moving equipment item 0x40000C4C (Backpack) of 0x75 "White" ('admin')
+14.04.2020 11:10:01: 192.168.1.21: Owner 0x75 "White" ('admin') moving 0x40000C4C (Backpack) to (3754, 2105, 20)
+14.04.2020 11:10:13: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set movable true'
+14.04.2020 11:10:15: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'movable' of 0x40000C4C (Backpack) to 'True'
+14.04.2020 11:10:40: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add bug'
+14.04.2020 11:10:48: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2100, 20) in Trammel: "FreshGreenLadyBug"
+14.04.2020 11:10:48: 192.168.1.21: Serials: 0x40000C7F; 
+14.04.2020 11:11:03: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2100, 20) in Trammel: "LargeGlowingLadyBug"
+14.04.2020 11:11:03: 192.168.1.21: Serials: 0x40000C81; 
+14.04.2020 11:11:09: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:11:10: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000C7F (FreshGreenLadyBug)
+14.04.2020 11:11:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:11:12: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000C81 (LargeGlowingLadyBug)
+14.04.2020 11:11:23: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add dr'
+14.04.2020 11:11:33: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2102, 20) in Trammel: "BaneDragon"
+14.04.2020 11:11:33: 192.168.1.21: Serials: 0x47C; 
+14.04.2020 11:12:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xbb4'
+14.04.2020 11:12:27: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '2996'
+14.04.2020 11:12:31: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xbbc'
+14.04.2020 11:12:32: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '3004'
+14.04.2020 11:12:43: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xbbcb'
+14.04.2020 11:12:44: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '48075'
+14.04.2020 11:12:48: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44c'
+14.04.2020 11:12:49: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1100'
+14.04.2020 11:13:00: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44b'
+14.04.2020 11:13:01: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1099'
+14.04.2020 11:13:05: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44b'
+14.04.2020 11:13:06: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x40000F50 (DeathShroud) to '1099'
+##############################
+Log started on 14.04.2020 11:23:22
+
+14.04.2020 11:23:42: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:23:44: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "balron"
+14.04.2020 11:23:44: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:23:55: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:23:57: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Slayer" (no account)
+##############################
+Log started on 14.04.2020 11:24:32
+
+14.04.2020 11:24:47: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:24:49: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "balron"
+14.04.2020 11:24:49: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:24:56: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:24:57: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2103, 20) in Trammel: "balron"
+14.04.2020 11:24:57: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 11:25:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:25:01: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2101, 20) in Trammel: "balron"
+14.04.2020 11:25:01: 192.168.1.21: Serials: 0x463; 
+14.04.2020 11:25:09: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:25:11: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x463 "the Collector of Souls" (no account)
+14.04.2020 11:25:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:25:13: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Collector of Souls" (no account)
+14.04.2020 11:25:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:25:15: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Collector of Souls" (no account)
+##############################
+Log started on 14.04.2020 11:25:59
+
+14.04.2020 11:26:11: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:26:15: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:26:17: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2104, 20) in Trammel: "balron"
+14.04.2020 11:26:17: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 11:26:23: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:26:23: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2106, 20) in Trammel: "balron"
+14.04.2020 11:26:23: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 11:26:28: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:26:28: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3757, 2103, 20) in Trammel: "balron"
+14.04.2020 11:26:28: 192.168.1.21: Serials: 0x463; 
+14.04.2020 11:26:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:26:33: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2108, 20) in Trammel: "balron"
+14.04.2020 11:26:33: 192.168.1.21: Serials: 0x477; 
+14.04.2020 11:26:50: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:26:51: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x463 "the Lord of the Abyss" (no account)
+14.04.2020 11:26:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:26:53: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2096, 20) in Trammel: "balron"
+14.04.2020 11:26:53: 192.168.1.21: Serials: 0x478; 
+14.04.2020 11:27:03: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:27:05: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x477 "the Lord of the Abyss" (no account)
+14.04.2020 11:27:06: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:27:07: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "the Slayer" (no account)
+14.04.2020 11:27:08: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:27:09: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x478 "the Slayer" (no account)
+14.04.2020 11:27:10: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:27:10: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCE "the Collector of Souls" (no account)
+14.04.2020 11:27:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'go sea'
+14.04.2020 11:27:37: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'region '
+14.04.2020 11:27:50: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 11:27:55: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 11:28:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add 3237'
+14.04.2020 11:28:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add 0x3237'
+14.04.2020 11:28:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 11:28:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add itemid 3237'
+14.04.2020 11:29:49: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'helpinfo '
+14.04.2020 11:30:54: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack 3237'
+14.04.2020 11:30:57: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "3237"
+14.04.2020 11:31:02: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack 3237'
+14.04.2020 11:31:03: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "3237"
+14.04.2020 11:32:37: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack sandals'
+14.04.2020 11:32:38: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "sandals"
+14.04.2020 11:32:38: 192.168.1.21: Serials: 0x400010E6; 
+14.04.2020 11:32:53: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack 0x3237'
+14.04.2020 11:32:56: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "0x3237"
+14.04.2020 11:33:10: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack good 3237'
+14.04.2020 11:33:14: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "good" "3237"
+14.04.2020 11:33:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack good 0x3237'
+14.04.2020 11:33:23: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "good" "0x3237"
+14.04.2020 11:33:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack 0x3237 san'
+14.04.2020 11:33:33: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "0x3237" "san"
+14.04.2020 11:33:43: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'addtopack 3237 name'
+14.04.2020 11:33:44: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2105, 20) in Trammel: "3237" "name"
+14.04.2020 11:34:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'GetSkill '
+14.04.2020 11:34:31: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'getskill magery'
+14.04.2020 11:34:47: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'hwinfo '
+14.04.2020 11:34:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'hwinfo '
+14.04.2020 11:35:02: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'hwinfo '
+14.04.2020 11:35:30: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Region '
+14.04.2020 11:35:53: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'ShaveHair '
+14.04.2020 11:35:55: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'HairItemID' of 0x75 "White" ('admin') to '0'
+14.04.2020 11:36:05: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Tile '
+14.04.2020 11:36:16: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Toggle '
+14.04.2020 11:36:23: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Toggle '
+14.04.2020 11:36:48: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Echo '
+14.04.2020 11:36:57: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'echo hello'
+14.04.2020 11:37:08: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Get '
+14.04.2020 11:37:15: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'GetType '
+14.04.2020 11:37:19: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get hue'
+14.04.2020 11:37:41: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'Stats '
+14.04.2020 11:37:55: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'WhoList '
+14.04.2020 11:38:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'm '
+14.04.2020 11:38:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'where '
+14.04.2020 11:38:21: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'go trammel'
+14.04.2020 11:39:06: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0'
+14.04.2020 11:39:07: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '0'
+14.04.2020 11:39:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0bb4'
+14.04.2020 11:39:28: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xbbc'
+14.04.2020 11:39:29: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '3004'
+14.04.2020 11:39:31: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xbbb'
+14.04.2020 11:39:32: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '3003'
+14.04.2020 11:39:36: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0xccc'
+14.04.2020 11:39:37: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '3276'
+14.04.2020 11:39:42: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44e'
+14.04.2020 11:39:43: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1102'
+14.04.2020 11:39:45: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44a'
+14.04.2020 11:39:46: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1098'
+14.04.2020 11:39:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x430'
+14.04.2020 11:39:52: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1072'
+14.04.2020 11:39:57: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44f'
+14.04.2020 11:39:58: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1103'
+14.04.2020 11:40:04: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x435'
+14.04.2020 11:40:05: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1077'
+14.04.2020 11:40:09: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x436'
+14.04.2020 11:40:10: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1078'
+14.04.2020 11:40:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x437'
+14.04.2020 11:40:13: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1079'
+14.04.2020 11:40:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x438'
+14.04.2020 11:40:15: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1080'
+14.04.2020 11:40:17: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x439'
+14.04.2020 11:40:18: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1081'
+14.04.2020 11:40:21: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x43a'
+14.04.2020 11:40:21: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1082'
+14.04.2020 11:40:23: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x43b'
+14.04.2020 11:40:23: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1083'
+14.04.2020 11:40:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x43c'
+14.04.2020 11:40:27: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1084'
+14.04.2020 11:40:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x43e'
+14.04.2020 11:40:30: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1086'
+14.04.2020 11:40:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x43f'
+14.04.2020 11:40:33: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1087'
+14.04.2020 11:40:39: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x440'
+14.04.2020 11:40:40: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1088'
+14.04.2020 11:40:41: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x441'
+14.04.2020 11:40:42: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1089'
+14.04.2020 11:40:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x442'
+14.04.2020 11:40:45: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x47C "Bane Dragon" (no account) to '1090'
+14.04.2020 11:40:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x442'
+14.04.2020 11:40:53: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x75 "White" ('admin') to '1090'
+14.04.2020 11:41:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x442'
+14.04.2020 11:41:02: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x40000F50 (DeathShroud) to '1090'
+14.04.2020 11:41:04: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x442'
+14.04.2020 11:41:04: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x40000C4C (Backpack) to '1090'
+14.04.2020 11:41:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'save '
+14.04.2020 11:41:41: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:41:43: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2111, 20) in Trammel: "balron"
+14.04.2020 11:41:43: 192.168.1.21: Serials: 0x4AC; 
+14.04.2020 11:41:47: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:41:48: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2103, 20) in Trammel: "balron"
+14.04.2020 11:41:48: 192.168.1.21: Serials: 0x4AD; 
+14.04.2020 11:41:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:41:52: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3759, 2107, 20) in Trammel: "balron"
+14.04.2020 11:41:52: 192.168.1.21: Serials: 0x4AE; 
+14.04.2020 11:42:00: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:42:00: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3756, 2111, 20) in Trammel: "balron"
+14.04.2020 11:42:00: 192.168.1.21: Serials: 0x4AF; 
+14.04.2020 11:42:05: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:42:05: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "balron"
+14.04.2020 11:42:05: 192.168.1.21: Serials: 0x4B0; 
+##############################
+Log started on 14.04.2020 11:42:51
+
+14.04.2020 11:43:07: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:43:09: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2105, 20) in Trammel: "balron"
+14.04.2020 11:43:09: 192.168.1.21: Serials: 0x4A7; 
+14.04.2020 11:43:13: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:43:14: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2101, 20) in Trammel: "balron"
+14.04.2020 11:43:14: 192.168.1.21: Serials: 0x4A8; 
+14.04.2020 11:43:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 11:43:19: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3756, 2101, 20) in Trammel: "balron"
+14.04.2020 11:43:19: 192.168.1.21: Serials: 0x4A9; 
+14.04.2020 11:43:24: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:43:26: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x4A7 "the Collector of Souls" (no account)
+14.04.2020 11:43:27: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:43:27: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x4A8 "the Collector of Souls" (no account)
+14.04.2020 11:43:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 11:43:29: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x4A9 "the Collector of Souls" (no account)
+##############################
+Log started on 14.04.2020 14:04:01
+
+14.04.2020 14:09:41: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set race'
+14.04.2020 14:09:46: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set race elf'
+14.04.2020 14:09:50: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'race' of 0x75 "White" ('admin') to 'Elf'
+14.04.2020 14:11:39: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race'
+14.04.2020 14:11:41: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2109, 20) in Trammel: "race"
+14.04.2020 14:11:46: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race elf'
+14.04.2020 14:11:47: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2111, 20) in Trammel: "race" "elf"
+14.04.2020 14:11:53: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race elf'
+14.04.2020 14:11:55: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2115, 20) in Trammel: "race" "elf"
+14.04.2020 14:12:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race elf'
+14.04.2020 14:12:06: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race human'
+14.04.2020 14:12:07: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2115, 20) in Trammel: "race" "human"
+14.04.2020 14:12:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race human'
+14.04.2020 14:12:15: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2115, 20) in Trammel: "race" "human"
+14.04.2020 14:12:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add sex woman'
+14.04.2020 14:12:43: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2111, 20) in Trammel: "Sextant"
+14.04.2020 14:12:43: 192.168.1.21: Serials: 0x40000C69; 
+14.04.2020 14:12:45: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 14:12:47: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000C69 (Sextant)
+14.04.2020 14:12:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race elf'
+14.04.2020 14:12:52: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2111, 20) in Trammel: "race" "elf"
+14.04.2020 14:12:59: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race'
+14.04.2020 14:13:00: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2111, 20) in Trammel: "race"
+14.04.2020 14:13:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race Elf'
+14.04.2020 14:13:28: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2115, 20) in Trammel: "race" "Elf"
+##############################
+Log started on 14.04.2020 14:14:38
+
+##############################
+Log started on 14.04.2020 14:17:47
+
+14.04.2020 14:18:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add rece'
+14.04.2020 14:18:08: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race'
+14.04.2020 14:18:10: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2109, 20) in Trammel: "race"
+14.04.2020 14:18:13: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:18:17: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2109, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:18:17: 192.168.1.21: Serials: 0x40000C69; 
+14.04.2020 14:18:26: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2108, 20) in Trammel: "RaceChangeToken"
+14.04.2020 14:18:26: 192.168.1.21: Serials: 0x40000C6E; 
+14.04.2020 14:19:56: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set unmount'
+14.04.2020 14:21:56: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race'
+14.04.2020 14:22:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race ch'
+14.04.2020 14:22:05: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:22:10: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2110, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:22:10: 192.168.1.21: Serials: 0x40000C72; 
+14.04.2020 14:22:24: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2110, 20) in Trammel: "RaceChangeToken"
+14.04.2020 14:22:24: 192.168.1.21: Serials: 0x40000C73; 
+14.04.2020 14:22:46: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set unmounted'
+14.04.2020 14:22:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set unmounted true'
+14.04.2020 14:23:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set dismount'
+14.04.2020 14:23:59: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 14:24:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set mounted false'
+14.04.2020 14:25:07: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'kill '
+14.04.2020 14:25:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'kill '
+14.04.2020 14:25:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'kill '
+14.04.2020 14:25:21: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'kill '
+14.04.2020 14:25:28: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add balron'
+14.04.2020 14:25:29: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2106, 20) in Trammel: "balron"
+14.04.2020 14:25:29: 192.168.1.21: Serials: 0xCE; 
+14.04.2020 14:26:57: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add kne'
+14.04.2020 14:27:19: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3748, 2109, 20) in Trammel: "ButcherKnife"
+14.04.2020 14:27:19: 192.168.1.21: Serials: 0x40000CF6; 
+14.04.2020 14:27:40: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'kill '
+14.04.2020 14:27:42: 192.168.1.21: Owner 0x75 "White" ('admin') killing 0xCE "the Lord of the Abyss" (no account)
+14.04.2020 14:28:16: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add sex'
+14.04.2020 14:28:22: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2108, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:28:22: 192.168.1.21: Serials: 0x40000E05; 
+14.04.2020 14:28:42: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2108, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:28:42: 192.168.1.21: Serials: 0x40000E06; 
+14.04.2020 14:28:57: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add sex[remove'
+14.04.2020 14:29:03: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 14:29:05: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E02 (Corpse)
+14.04.2020 14:29:06: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 14:29:07: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000CF4 (Corpse)
+14.04.2020 14:29:09: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 14:29:09: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000C86 (Corpse)
+14.04.2020 14:39:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 14:40:10: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set body 401'
+14.04.2020 14:40:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set body 0x401'
+14.04.2020 14:40:34: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get bodyvalue'
+14.04.2020 14:42:40: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add raced'
+14.04.2020 14:43:06: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2106, 20) in Trammel: "RaceChangeToken"
+14.04.2020 14:43:06: 192.168.1.21: Serials: 0x40000E08; 
+14.04.2020 14:43:11: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:43:17: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:43:20: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2105, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:20: 192.168.1.21: Serials: 0x40000E0B; 
+14.04.2020 14:43:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:43:32: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2105, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:32: 192.168.1.21: Serials: 0x40000E0C; 
+14.04.2020 14:43:32: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2103, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:32: 192.168.1.21: Serials: 0x40000E0D; 
+14.04.2020 14:43:33: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3754, 2103, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:33: 192.168.1.21: Serials: 0x40000E10; 
+14.04.2020 14:43:34: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2103, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:34: 192.168.1.21: Serials: 0x40000E11; 
+14.04.2020 14:43:34: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2102, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:34: 192.168.1.21: Serials: 0x40000E12; 
+14.04.2020 14:43:35: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2103, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:35: 192.168.1.21: Serials: 0x40000E13; 
+14.04.2020 14:43:37: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2102, 20) in Trammel: "RaceChangeDeed"
+14.04.2020 14:43:37: 192.168.1.21: Serials: 0x40000E1C; 
+14.04.2020 14:44:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:44:32: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2107, 20) in Trammel: "RaceChangeToken"
+14.04.2020 14:44:32: 192.168.1.21: Serials: 0x40000E1D; 
+14.04.2020 14:45:39: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racech'
+14.04.2020 14:45:42: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2106, 20) in Trammel: "RaceChangeToken"
+14.04.2020 14:45:42: 192.168.1.21: Serials: 0x40000E1E; 
+14.04.2020 14:47:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add sex'
+14.04.2020 14:47:41: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2106, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:41: 192.168.1.21: Serials: 0x40000E1F; 
+14.04.2020 14:47:42: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2105, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:42: 192.168.1.21: Serials: 0x40000E20; 
+14.04.2020 14:47:43: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2107, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:43: 192.168.1.21: Serials: 0x40000E21; 
+14.04.2020 14:47:44: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2107, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:44: 192.168.1.21: Serials: 0x40000E24; 
+14.04.2020 14:47:45: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2107, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:45: 192.168.1.21: Serials: 0x40000E25; 
+14.04.2020 14:47:46: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3750, 2105, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:46: 192.168.1.21: Serials: 0x40000E26; 
+14.04.2020 14:47:47: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2106, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:47: 192.168.1.21: Serials: 0x40000E28; 
+14.04.2020 14:47:48: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2106, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:48: 192.168.1.21: Serials: 0x40000E2A; 
+14.04.2020 14:47:49: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2105, 20) in Trammel: "SexChangeDeed"
+14.04.2020 14:47:49: 192.168.1.21: Serials: 0x40000E2B; 
+14.04.2020 14:53:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get bodyvalue'
+14.04.2020 14:54:11: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get bodyvalue'
+14.04.2020 15:03:21: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get famale'
+14.04.2020 15:03:29: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'get male'
+14.04.2020 15:33:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race'
+14.04.2020 15:33:40: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "race"
+14.04.2020 15:33:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race white'
+14.04.2020 15:33:45: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "race" "white"
+14.04.2020 15:33:51: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add race Elf'
+14.04.2020 15:33:53: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2104, 20) in Trammel: "race" "Elf"
+14.04.2020 15:34:40: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racec'
+14.04.2020 15:37:10: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add crab'
+14.04.2020 15:37:15: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add cra'
+14.04.2020 15:37:24: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3756, 2091, 20) in Trammel: "CoconutCrab"
+14.04.2020 15:37:24: 192.168.1.21: Serials: 0xCF; 
+14.04.2020 15:37:50: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:37:52: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E24 (SexChangeDeed)
+14.04.2020 15:38:03: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'tile remove'
+14.04.2020 15:38:06: 192.168.1.21: Owner 0x75 "White" ('admin') building from (3748, 2103, 20) to (3751, 2109, 20) in Trammel: "remove"
+14.04.2020 15:38:16: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'area remove'
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E28 (SexChangeDeed)
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E26 (SexChangeDeed)
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E25 (SexChangeDeed)
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E21 (SexChangeDeed)
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E20 (SexChangeDeed)
+14.04.2020 15:38:20: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E1F (SexChangeDeed)
+14.04.2020 15:38:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'area remove'
+14.04.2020 15:38:27: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E12 (RaceChangeDeed)
+14.04.2020 15:38:27: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E10 (RaceChangeDeed)
+14.04.2020 15:39:17: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x44b'
+14.04.2020 15:39:19: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0xCF "Coconut Crab" (no account) to '1099'
+14.04.2020 15:39:44: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x54b'
+14.04.2020 15:39:45: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0xCF "Coconut Crab" (no account) to '1355'
+14.04.2020 15:40:12: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x5cd'
+14.04.2020 15:40:14: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0xCF "Coconut Crab" (no account) to '1485'
+14.04.2020 15:40:19: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x5dc'
+14.04.2020 15:40:20: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0xCF "Coconut Crab" (no account) to '1500'
+14.04.2020 15:40:27: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x5dc'
+14.04.2020 15:40:27: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x75 "White" ('admin') to '1500'
+14.04.2020 15:40:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add due'
+14.04.2020 15:40:53: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2112, 20) in Trammel: "BlackDyeTub"
+14.04.2020 15:40:53: 192.168.1.21: Serials: 0x40000E2D; 
+14.04.2020 15:41:28: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x5dc'
+14.04.2020 15:41:30: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x40000E2D (BlackDyeTub) to '1500'
+14.04.2020 15:41:56: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add tub'
+14.04.2020 15:41:57: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3753, 2109, 20) in Trammel: "tub"
+14.04.2020 15:41:57: 192.168.1.21: Serials: 0x40000FEA; 
+14.04.2020 15:42:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add tu'
+14.04.2020 15:42:09: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3752, 2107, 20) in Trammel: "DyeTub"
+14.04.2020 15:42:09: 192.168.1.21: Serials: 0x40000FFE; 
+14.04.2020 15:42:18: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x5dc'
+14.04.2020 15:42:19: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x40000FFE (DyeTub) to '1500'
+14.04.2020 15:43:16: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hair 0x5dc'
+14.04.2020 15:43:22: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set haircolor'
+14.04.2020 15:43:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'props '
+14.04.2020 15:44:02: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set facialhairhue 0x5cd'
+14.04.2020 15:44:04: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'facialhairhue' of 0x75 "White" ('admin') to '1485'
+14.04.2020 15:44:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hairhue 0x5dc'
+14.04.2020 15:44:33: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hairhue' of 0x75 "White" ('admin') to '1500'
+14.04.2020 15:44:42: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:44:43: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000FEA (Tub)
+14.04.2020 15:45:07: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add eowmu'
+14.04.2020 15:45:09: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2097, 20) in Trammel: "eowmu"
+14.04.2020 15:45:09: 192.168.1.21: Serials: 0x4A8; 
+14.04.2020 15:45:54: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:45:56: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0xCF "Coconut Crab" (no account)
+14.04.2020 15:46:37: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68b'
+14.04.2020 15:46:38: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1675'
+14.04.2020 15:46:49: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x687'
+14.04.2020 15:46:50: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1671'
+14.04.2020 15:46:53: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68a'
+14.04.2020 15:46:54: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1674'
+14.04.2020 15:47:05: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68c'
+14.04.2020 15:47:07: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1676'
+14.04.2020 15:47:10: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68d'
+14.04.2020 15:47:11: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1677'
+14.04.2020 15:47:14: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68e'
+14.04.2020 15:47:15: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1678'
+14.04.2020 15:47:20: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x68f'
+14.04.2020 15:47:21: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '1679'
+14.04.2020 15:52:17: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add home'
+14.04.2020 15:52:22: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3755, 2100, 20) in Trammel: "HearthOfHomeFireDeed"
+14.04.2020 15:52:22: 192.168.1.21: Serials: 0x40001004; 
+14.04.2020 15:52:38: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:52:40: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40001004 (HearthOfHomeFireDeed)
+14.04.2020 15:59:13: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'save '
+14.04.2020 15:59:50: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:59:52: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000C9A (DeathRobe)
+14.04.2020 15:59:54: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:59:54: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000FFE (DyeTub)
+14.04.2020 15:59:56: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'remove '
+14.04.2020 15:59:56: 192.168.1.21: Owner 0x75 "White" ('admin') deleting 0x40000E2D (BlackDyeTub)
+15.04.2020 10:07:54: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 453'
+15.04.2020 10:07:55: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x75 "White" ('admin') to '453'
+15.04.2020 10:17:54: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racec'
+15.04.2020 10:17:57: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3751, 2109, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:17:57: 192.168.1.21: Serials: 0x40001461; 
+15.04.2020 10:19:01: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racec'
+15.04.2020 10:19:04: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2111, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:19:04: 192.168.1.21: Serials: 0x40001463; 
+15.04.2020 10:22:57: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'add racec'
+15.04.2020 10:22:59: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3748, 2112, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:22:59: 192.168.1.21: Serials: 0x40001466; 
+15.04.2020 10:22:59: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3747, 2111, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:22:59: 192.168.1.21: Serials: 0x4000146A; 
+15.04.2020 10:23:00: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3747, 2110, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:23:00: 192.168.1.21: Serials: 0x4000146C; 
+15.04.2020 10:23:01: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3747, 2114, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:23:01: 192.168.1.21: Serials: 0x40001474; 
+15.04.2020 10:23:02: 192.168.1.21: Owner 0x75 "White" ('admin') building at (3749, 2112, 20) in Trammel: "RaceChangeToken"
+15.04.2020 10:23:02: 192.168.1.21: Serials: 0x4000147A; 
+15.04.2020 10:35:32: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x33'
+15.04.2020 10:35:34: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x75 "White" ('admin') to '51'
+15.04.2020 10:37:26: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x33'
+15.04.2020 10:37:28: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x4A8 "Eowmu" (no account) to '51'
+15.04.2020 10:38:52: 192.168.1.21: Owner 0x75 "White" ('admin') used command 'set hue 0x0'
+15.04.2020 10:38:53: 192.168.1.21: Owner 0x75 "White" ('admin') set property 'hue' of 0x75 "White" ('admin') to '0'

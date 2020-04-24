@@ -1,0 +1,1342 @@
+##############################
+Log started on 22.04.2020 12:08:09
+
+22.04.2020 12:09:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go felucca'
+22.04.2020 12:09:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:09:20: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'False'
+22.04.2020 12:09:22: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'True'
+22.04.2020 12:09:24: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'False'
+22.04.2020 12:09:29: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Squelched' of 0x198 "test" ('test') to 'True'
+22.04.2020 12:09:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:09:50: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Squelched' of 0x198 "test" ('test') to 'False'
+22.04.2020 12:10:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 12:10:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:10:54: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+22.04.2020 12:11:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 12:16:57
+
+22.04.2020 12:17:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 12:17:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 12:18:08: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '0'
+22.04.2020 12:18:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:18:29: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'False'
+22.04.2020 12:19:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 12:19:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:19:41: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+##############################
+Log started on 22.04.2020 12:21:22
+
+22.04.2020 12:21:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:22:02: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'False'
+##############################
+Log started on 22.04.2020 12:26:14
+
+22.04.2020 12:26:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:27:03: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Blessed' of 0x198 "test" ('test') to 'False'
+22.04.2020 12:28:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 12:28:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'resurrect '
+22.04.2020 12:28:38: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+22.04.2020 12:28:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'teleport '
+22.04.2020 12:29:30: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'resurrect '
+22.04.2020 12:29:32: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+22.04.2020 12:29:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add backpack'
+22.04.2020 12:29:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 950, -40) in Felucca: "backpack"
+22.04.2020 12:29:58: 192.168.1.64: Serials: 0x4000062D; 
+22.04.2020 12:30:02: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 12:30:04: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000606 (Backpack)
+22.04.2020 12:30:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 12:30:29: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000629 (Corpse)
+22.04.2020 12:30:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 12:31:11: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '1000'
+22.04.2020 12:31:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'resurrect '
+22.04.2020 12:31:45: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+22.04.2020 13:02:35: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'resurrect '
+22.04.2020 13:02:37: 192.168.1.64: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test')
+22.04.2020 13:04:11: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:06:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:08:02: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add beacon'
+22.04.2020 13:08:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5244, 953, -40) in Felucca: "beacon"
+22.04.2020 13:08:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add beacon'
+22.04.2020 13:08:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5244, 953, -40) in Felucca: "beacon"
+22.04.2020 13:09:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 13:22:55
+
+22.04.2020 13:23:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'viewequip '
+22.04.2020 13:23:35: 192.168.1.64: Owner 0x197 "GM" ('admin') viewing equipment of 0x197 "GM" ('admin')
+22.04.2020 13:23:41: 192.168.1.64: Owner 0x197 "GM" ('admin') moving equipment item 0x40001A77 (Backpack) of 0x197 "GM" ('admin')
+22.04.2020 13:23:43: 192.168.1.64: Owner 0x197 "GM" ('admin') moving 0x40001A77 (Backpack) to (5245, 950, -40)
+22.04.2020 13:23:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:23:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 951, -40) in Felucca: "gmrobe"
+22.04.2020 13:24:05: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:24:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 951, -40) in Felucca: "gmrobe"
+22.04.2020 13:24:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe 0x44c'
+22.04.2020 13:24:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 951, -40) in Felucca: "gmrobe" "0x44c"
+##############################
+Log started on 22.04.2020 13:25:41
+
+22.04.2020 13:25:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:25:59: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 954, -40) in Felucca: "gmrobe"
+22.04.2020 13:27:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe 0x44c'
+22.04.2020 13:27:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 952, -40) in Felucca: "gmrobe" "0x44c"
+##############################
+Log started on 22.04.2020 13:29:55
+
+22.04.2020 13:30:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:30:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 951, -40) in Felucca: "gmrobe"
+22.04.2020 13:30:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:30:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 952, -40) in Felucca: "gmrobe"
+22.04.2020 13:30:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 13:32:05
+
+22.04.2020 13:32:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:32:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 953, -40) in Felucca: "gmrobe"
+22.04.2020 13:32:27: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add hood'
+22.04.2020 13:32:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 954, -40) in Felucca: "HoodedShroudOfShadows"
+22.04.2020 13:32:31: 192.168.1.64: Serials: 0x40000607; 
+##############################
+Log started on 22.04.2020 13:34:14
+
+22.04.2020 13:34:27: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:34:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 953, -40) in Felucca: "gmrobe"
+22.04.2020 13:34:28: 192.168.1.64: Serials: 0x40000607; 
+##############################
+Log started on 22.04.2020 13:37:10
+
+22.04.2020 13:37:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:37:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 952, -40) in Felucca: "gmrobe"
+##############################
+Log started on 22.04.2020 13:38:38
+
+22.04.2020 13:39:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmbore'
+22.04.2020 13:39:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmrobe'
+22.04.2020 13:39:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 951, -40) in Felucca: "gmrobe"
+22.04.2020 13:39:16: 192.168.1.64: Serials: 0x40000607; 
+22.04.2020 13:39:24: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 13:39:27: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001C76 (HoodedShroudOfShadows)
+##############################
+Log started on 22.04.2020 13:42:26
+
+22.04.2020 13:43:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 13:43:10: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 13:47:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 13:51:02
+
+22.04.2020 13:51:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 13:51:30: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 13:51:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:51:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:52:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:52:25: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:52:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:52:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:53:10: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 13:53:33: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'TransparentMountedID' of 0x4000060C (GMEthereal) to '16076'
+22.04.2020 14:21:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:22:08: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'NonTransparentMountedID' of 0x4000060C (GMEthereal) to '16070'
+##############################
+Log started on 22.04.2020 14:24:06
+
+22.04.2020 14:24:25: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:24:26: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:24:30: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 14:24:32: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 14:25:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add polarb'
+22.04.2020 14:25:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 955, -40) in Felucca: "RideablePolarBear"
+22.04.2020 14:25:23: 192.168.1.64: Serials: 0x40000616; 
+22.04.2020 14:26:20: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add housre'
+22.04.2020 14:26:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add horse'
+22.04.2020 14:26:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 956, -40) in Felucca: "horse"
+22.04.2020 14:26:27: 192.168.1.64: Serials: 0x199; 
+22.04.2020 14:26:32: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add llama'
+22.04.2020 14:26:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 955, -40) in Felucca: "llama"
+22.04.2020 14:26:33: 192.168.1.64: Serials: 0x19A; 
+22.04.2020 14:26:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ostard'
+22.04.2020 14:26:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ostard'
+22.04.2020 14:26:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 954, -40) in Felucca: "DesertOstard"
+22.04.2020 14:26:55: 192.168.1.64: Serials: 0x19B; 
+22.04.2020 14:26:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ostard'
+22.04.2020 14:27:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 955, -40) in Felucca: "ForestOstard"
+22.04.2020 14:27:00: 192.168.1.64: Serials: 0x19C; 
+22.04.2020 14:27:02: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ostard'
+22.04.2020 14:27:05: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 956, -40) in Felucca: "FrenziedOstard"
+22.04.2020 14:27:05: 192.168.1.64: Serials: 0x19D; 
+22.04.2020 14:27:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ridebac'
+22.04.2020 14:27:32: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ridgeback'
+22.04.2020 14:27:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 956, -40) in Felucca: "ridgeback"
+22.04.2020 14:27:34: 192.168.1.64: Serials: 0x19E; 
+22.04.2020 14:27:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add unicorn'
+22.04.2020 14:27:45: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 956, -40) in Felucca: "unicorn"
+22.04.2020 14:27:45: 192.168.1.64: Serials: 0x19F; 
+22.04.2020 14:27:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add beetle'
+22.04.2020 14:28:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 956, -40) in Felucca: "beetle"
+22.04.2020 14:28:00: 192.168.1.64: Serials: 0x1A0; 
+22.04.2020 14:28:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add kirin'
+22.04.2020 14:28:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 956, -40) in Felucca: "kirin"
+22.04.2020 14:28:39: 192.168.1.64: Serials: 0x1A1; 
+22.04.2020 14:28:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add swamp'
+22.04.2020 14:28:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 956, -40) in Felucca: "SwampDragon"
+22.04.2020 14:28:55: 192.168.1.64: Serials: 0x1A3; 
+22.04.2020 14:29:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add skeletalhorse'
+22.04.2020 14:29:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 955, -39) in Felucca: "SkeletalMount"
+22.04.2020 14:29:33: 192.168.1.64: Serials: 0x1A4; 
+22.04.2020 14:30:01: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add hiryn'
+22.04.2020 14:30:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add hiryu'
+22.04.2020 14:30:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5248, 956, -40) in Felucca: "hiryu"
+22.04.2020 14:30:10: 192.168.1.64: Serials: 0x1A5; 
+22.04.2020 14:30:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add changer'
+22.04.2020 14:30:48: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add charger'
+22.04.2020 14:30:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 954, -40) in Felucca: "ChargerOfTheFallen"
+22.04.2020 14:30:51: 192.168.1.64: Serials: 0x400019CA; 
+22.04.2020 14:31:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add seahorse'
+22.04.2020 14:31:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 956, -40) in Felucca: "seahorse"
+22.04.2020 14:31:10: 192.168.1.64: Serials: 0x1A6; 
+22.04.2020 14:31:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add chimera'
+22.04.2020 14:31:40: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add chimera'
+22.04.2020 14:32:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add cusidhe'
+22.04.2020 14:32:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5248, 956, -40) in Felucca: "cusidhe"
+22.04.2020 14:32:15: 192.168.1.64: Serials: 0x1A7; 
+22.04.2020 14:32:32: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add polarbearm'
+22.04.2020 14:32:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5249, 954, -40) in Felucca: "PolarBearStatue"
+22.04.2020 14:32:43: 192.168.1.64: Serials: 0x400019E5; 
+22.04.2020 14:33:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add boura'
+22.04.2020 14:33:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 955, -40) in Felucca: "BouraPelt"
+22.04.2020 14:33:53: 192.168.1.64: Serials: 0x400019E8; 
+22.04.2020 14:33:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add boura'
+22.04.2020 14:34:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 955, -39) in Felucca: "BouraSkin"
+22.04.2020 14:34:00: 192.168.1.64: Serials: 0x400019EB; 
+22.04.2020 14:34:02: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add boura'
+22.04.2020 14:34:07: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 954, -40) in Felucca: "EtherealBoura"
+22.04.2020 14:34:07: 192.168.1.64: Serials: 0x400019EE; 
+22.04.2020 14:34:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:35:03: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'NonTransparentMountedID' of 0x4000060C (GMEthereal) to '11669'
+22.04.2020 14:35:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:31: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1A5 "a hiryu" (no account)
+22.04.2020 14:35:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:33: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400019CA (ChargerOfTheFallen)
+22.04.2020 14:35:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:34: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400019EB (BouraSkin)
+22.04.2020 14:35:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:36: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400019E8 (BouraPelt)
+22.04.2020 14:35:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:38: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400019C7 (Corpse)
+22.04.2020 14:35:39: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:39: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009ED (Corpse)
+22.04.2020 14:35:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'speedboost '
+22.04.2020 14:35:50: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:52: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1A6 "a sea horse" (no account)
+22.04.2020 14:35:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:53: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19C "a forest ostard" (no account)
+22.04.2020 14:35:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:57: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1A4 "a skeletal steed" (no account)
+22.04.2020 14:35:59: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:35:59: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19B "a desert ostard" (no account)
+22.04.2020 14:36:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:36:07: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "a ridgeback" (no account)
+22.04.2020 14:36:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:36:17: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x199 "a horse" (no account)
+22.04.2020 14:36:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:36:20: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1A7 "a cu sidhe" (no account)
+22.04.2020 14:36:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:36:21: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19A "a llama" (no account)
+##############################
+Log started on 22.04.2020 14:38:04
+
+22.04.2020 14:38:24: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:38:26: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:38:39: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 14:38:40: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+##############################
+Log started on 22.04.2020 14:43:46
+
+22.04.2020 14:44:03: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:44:04: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:44:07: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 14:44:09: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 14:44:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add windrunner'
+22.04.2020 14:44:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 953, -40) in Felucca: "windrunner"
+22.04.2020 14:44:38: 192.168.1.64: Serials: 0x199; 
+22.04.2020 14:44:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:44:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 14:45:44
+
+22.04.2020 14:45:59: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:46:01: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:46:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 14:46:06: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 14:46:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:46:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:46:51: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 14:49:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get hue'
+22.04.2020 14:49:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 22.04.2020 14:52:04
+
+22.04.2020 14:52:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:52:18: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:52:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add gmstaff'
+22.04.2020 14:52:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 951, -40) in Felucca: "gmstaff"
+22.04.2020 14:52:24: 192.168.1.64: Serials: 0x40000616; 
+##############################
+Log started on 22.04.2020 14:53:52
+
+22.04.2020 14:54:00: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add [remove'
+22.04.2020 14:54:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:54:06: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Windrunner" (no account)
+22.04.2020 14:54:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:54:10: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000625 (BalakaisShamanStaff)
+22.04.2020 14:54:11: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 14:54:11: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x4000061C (ArcaneShield)
+22.04.2020 14:54:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 14:54:17: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 14:55:02: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 14:55:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'admin '
+22.04.2020 15:09:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+22.04.2020 15:09:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5249, 952, -40) in Felucca: "banker"
+22.04.2020 15:09:55: 192.168.1.64: Serials: 0x199; 
+##############################
+Log started on 22.04.2020 15:12:05
+
+22.04.2020 15:12:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+22.04.2020 15:12:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5244, 954, -40) in Felucca: "banker"
+22.04.2020 15:12:15: 192.168.1.64: Serials: 0x199; 
+22.04.2020 15:12:20: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'walkto '
+22.04.2020 15:13:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'walkto '
+22.04.2020 15:14:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add walkrunner'
+22.04.2020 15:14:50: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add wider'
+22.04.2020 15:15:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 15:15:24: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'ActiveSpeed' of 0x199 "Alcina" (no account) to '10'
+22.04.2020 15:15:35: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'walkto '
+22.04.2020 15:15:48: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:15:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5246, 956, -40) in Felucca: "orc"
+22.04.2020 15:15:49: 192.168.1.64: Serials: 0x19A; 
+22.04.2020 15:15:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'walkto '
+22.04.2020 15:16:27: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:16:29: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x199 "Alcina" (no account)
+22.04.2020 15:16:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 15:17:05: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'MaximumDamage' of 0x40000615 (GMStaff) to '100'
+22.04.2020 15:17:11: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'MinimumDamage' of 0x40000615 (GMStaff) to '1000'
+22.04.2020 15:17:56: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 15:18:17: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:18:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 958, -40) in Felucca: "orc"
+22.04.2020 15:18:18: 192.168.1.64: Serials: 0x19B; 
+22.04.2020 15:18:20: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:18:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5250, 957, -40) in Felucca: "orc"
+22.04.2020 15:18:21: 192.168.1.64: Serials: 0x19C; 
+22.04.2020 15:18:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:18:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5247, 959, -40) in Felucca: "orc"
+22.04.2020 15:18:23: 192.168.1.64: Serials: 0x19D; 
+22.04.2020 15:19:07: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 15:19:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'set movable true'
+22.04.2020 15:19:23: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'movable' of 0x400009DE (Corpse) to 'True'
+22.04.2020 15:19:40: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:19:42: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009ED (Corpse)
+22.04.2020 15:19:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:19:43: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009FF (Corpse)
+22.04.2020 15:19:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:19:49: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009DE (Corpse)
+22.04.2020 15:20:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'unhide '
+22.04.2020 15:20:16: 192.168.1.64: Owner 0x197 "GM" ('admin') unhiding 0x197 "GM" ('admin')
+22.04.2020 15:20:24: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+22.04.2020 15:20:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5244, 953, -40) in Felucca: "banker"
+22.04.2020 15:20:26: 192.168.1.64: Serials: 0x19E; 
+22.04.2020 15:20:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'hide '
+22.04.2020 15:20:30: 192.168.1.64: Owner 0x197 "GM" ('admin') hiding 0x19E "Derry" (no account)
+22.04.2020 15:20:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'unhide '
+22.04.2020 15:20:40: 192.168.1.64: Owner 0x197 "GM" ('admin') unhiding 0x19E "Derry" (no account)
+22.04.2020 15:20:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:20:48: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x19E "Derry" (no account)
+22.04.2020 15:21:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 15:22:04: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'EaterDamage' of ... to '1000'
+22.04.2020 15:22:12: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:22:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5243, 954, -40) in Felucca: "orc"
+22.04.2020 15:22:13: 192.168.1.64: Serials: 0x19F; 
+22.04.2020 15:22:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 15:22:39: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 15:23:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add orc'
+22.04.2020 15:23:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5245, 950, -40) in Felucca: "orc"
+22.04.2020 15:23:30: 192.168.1.64: Serials: 0x1A0; 
+22.04.2020 15:25:05: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 15:25:06: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400019A2 (Corpse)
+22.04.2020 15:25:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenases'
+22.04.2020 15:25:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenasec'
+22.04.2020 15:25:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenaces'
+22.04.2020 15:25:20: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenacces'
+22.04.2020 15:25:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenaccess'
+22.04.2020 15:25:25: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go greenacess'
+22.04.2020 15:26:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'docgen '
+##############################
+Log started on 22.04.2020 15:32:48
+
+##############################
+Log started on 22.04.2020 15:45:56
+
+22.04.2020 15:46:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 15:46:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 15:46:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add heg'
+22.04.2020 15:47:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaur'
+22.04.2020 15:47:12: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurh'
+22.04.2020 15:47:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurherge'
+22.04.2020 15:47:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge movable false'
+22.04.2020 15:47:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1150, 0) in Trammel: "minotaurhedge" "movable" "false"
+22.04.2020 15:48:03: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge [movable false]'
+22.04.2020 15:48:05: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1150, 0) in Trammel: "minotaurhedge" "[movable" "false]"
+22.04.2020 15:48:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge'
+22.04.2020 15:48:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6019, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 15:48:11: 192.168.1.64: Serials: 0x40000609; 
+22.04.2020 15:50:25: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge hue=0x44c'
+22.04.2020 15:50:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6020, 1146, 0) in Trammel: "minotaurhedge" "hue=0x44c"
+22.04.2020 15:50:32: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge hue 0x44c'
+22.04.2020 15:50:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1147, 0) in Trammel: "minotaurhedge" "hue" "0x44c"
+22.04.2020 15:50:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge movable'
+22.04.2020 15:50:45: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1147, 0) in Trammel: "minotaurhedge" "movable"
+22.04.2020 15:51:03: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge'
+22.04.2020 15:51:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6020, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 15:51:26: 192.168.1.64: Serials: 0x4000060C; 
+22.04.2020 15:51:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm minotaurhedge'
+22.04.2020 15:52:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge movable false'
+22.04.2020 15:52:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1150, 0) in Trammel: "minotaurhedge" "movable" "false"
+22.04.2020 15:52:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1150, 0) in Trammel: "minotaurhedge" "movable" "false"
+22.04.2020 15:52:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6022, 1150, 0) in Trammel: "minotaurhedge" "movable" "false"
+22.04.2020 15:52:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1150, 0) in Trammel: "minotaurhedge" "movable" "false"
+22.04.2020 15:52:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 15:52:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 15:52:25: 192.168.1.64: Serials: 0x40000611; 
+22.04.2020 15:52:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 15:52:28: 192.168.1.64: Serials: 0x40000612; 
+22.04.2020 15:52:39: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:12:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get movable'
+##############################
+Log started on 22.04.2020 16:13:06
+
+22.04.2020 16:13:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:15:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:16:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add minotaurhedge'
+22.04.2020 16:16:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:16:06: 192.168.1.64: Serials: 0x40000615; 
+22.04.2020 16:16:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get movable'
+22.04.2020 16:16:48: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 16:17:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1119, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:26: 192.168.1.64: Serials: 0x40000616; 
+22.04.2020 16:17:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1120, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:27: 192.168.1.64: Serials: 0x4000061B; 
+22.04.2020 16:17:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1121, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:28: 192.168.1.64: Serials: 0x4000061C; 
+22.04.2020 16:17:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1122, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:28: 192.168.1.64: Serials: 0x4000061D; 
+22.04.2020 16:17:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1123, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:29: 192.168.1.64: Serials: 0x4000061E; 
+22.04.2020 16:17:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1124, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:31: 192.168.1.64: Serials: 0x4000061F; 
+22.04.2020 16:17:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1125, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:31: 192.168.1.64: Serials: 0x40000620; 
+22.04.2020 16:17:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1126, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:32: 192.168.1.64: Serials: 0x40000622; 
+22.04.2020 16:17:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1127, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:33: 192.168.1.64: Serials: 0x40000623; 
+22.04.2020 16:17:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:17:34: 192.168.1.64: Serials: 0x40000624; 
+22.04.2020 16:17:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:17:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:18:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:18:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 16:18:27: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 16:18:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:29: 192.168.1.64: Serials: 0x40000625; 
+22.04.2020 16:18:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1119, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:31: 192.168.1.64: Serials: 0x40000626; 
+22.04.2020 16:18:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1120, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:31: 192.168.1.64: Serials: 0x40000627; 
+22.04.2020 16:18:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1121, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:32: 192.168.1.64: Serials: 0x40000628; 
+22.04.2020 16:18:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1122, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:33: 192.168.1.64: Serials: 0x40000629; 
+22.04.2020 16:18:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1123, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:34: 192.168.1.64: Serials: 0x4000062A; 
+22.04.2020 16:18:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1124, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:34: 192.168.1.64: Serials: 0x4000062B; 
+22.04.2020 16:18:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1125, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:35: 192.168.1.64: Serials: 0x4000062C; 
+22.04.2020 16:18:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1126, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:36: 192.168.1.64: Serials: 0x4000062E; 
+22.04.2020 16:18:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1127, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:37: 192.168.1.64: Serials: 0x4000062F; 
+22.04.2020 16:18:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:18:38: 192.168.1.64: Serials: 0x40000630; 
+22.04.2020 16:21:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:09: 192.168.1.64: Serials: 0x40000631; 
+22.04.2020 16:21:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6029, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:10: 192.168.1.64: Serials: 0x40000632; 
+22.04.2020 16:21:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:11: 192.168.1.64: Serials: 0x40000633; 
+22.04.2020 16:21:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6031, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:11: 192.168.1.64: Serials: 0x40000634; 
+22.04.2020 16:21:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:12: 192.168.1.64: Serials: 0x40000635; 
+22.04.2020 16:21:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1129, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:46: 192.168.1.64: Serials: 0x40000636; 
+22.04.2020 16:21:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1130, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:46: 192.168.1.64: Serials: 0x4000073B; 
+22.04.2020 16:21:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1131, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:47: 192.168.1.64: Serials: 0x400007E4; 
+22.04.2020 16:21:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1132, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:48: 192.168.1.64: Serials: 0x40000841; 
+22.04.2020 16:21:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1133, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:48: 192.168.1.64: Serials: 0x40000971; 
+22.04.2020 16:21:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1134, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:49: 192.168.1.64: Serials: 0x40000981; 
+22.04.2020 16:21:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1135, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:50: 192.168.1.64: Serials: 0x40000983; 
+22.04.2020 16:21:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1136, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:50: 192.168.1.64: Serials: 0x40000986; 
+22.04.2020 16:21:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1137, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:51: 192.168.1.64: Serials: 0x40000988; 
+22.04.2020 16:21:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:52: 192.168.1.64: Serials: 0x40000989; 
+22.04.2020 16:21:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1139, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:53: 192.168.1.64: Serials: 0x4000098B; 
+22.04.2020 16:21:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1140, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:53: 192.168.1.64: Serials: 0x4000099E; 
+22.04.2020 16:21:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1141, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:54: 192.168.1.64: Serials: 0x400009A1; 
+22.04.2020 16:21:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1142, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:56: 192.168.1.64: Serials: 0x400009A4; 
+22.04.2020 16:21:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1143, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:56: 192.168.1.64: Serials: 0x400009A8; 
+22.04.2020 16:21:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:21:58: 192.168.1.64: Serials: 0x400009AD; 
+22.04.2020 16:22:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6031, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:13: 192.168.1.64: Serials: 0x400009B4; 
+22.04.2020 16:22:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:14: 192.168.1.64: Serials: 0x400009B6; 
+22.04.2020 16:22:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6029, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:15: 192.168.1.64: Serials: 0x400009B9; 
+22.04.2020 16:22:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:17: 192.168.1.64: Serials: 0x400009BB; 
+22.04.2020 16:22:40: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1145, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:40: 192.168.1.64: Serials: 0x400009BC; 
+22.04.2020 16:22:41: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1146, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:41: 192.168.1.64: Serials: 0x400009BE; 
+22.04.2020 16:22:42: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1147, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:42: 192.168.1.64: Serials: 0x400009C4; 
+22.04.2020 16:22:42: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1148, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:42: 192.168.1.64: Serials: 0x400009C8; 
+22.04.2020 16:22:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1149, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:43: 192.168.1.64: Serials: 0x400009CC; 
+22.04.2020 16:22:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:46: 192.168.1.64: Serials: 0x400009D1; 
+22.04.2020 16:22:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:47: 192.168.1.64: Serials: 0x400009D4; 
+22.04.2020 16:22:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:48: 192.168.1.64: Serials: 0x400009D7; 
+22.04.2020 16:22:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6025, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:50: 192.168.1.64: Serials: 0x400009D9; 
+22.04.2020 16:22:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6024, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:51: 192.168.1.64: Serials: 0x400009DA; 
+22.04.2020 16:22:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6023, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:52: 192.168.1.64: Serials: 0x400009DC; 
+22.04.2020 16:22:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6022, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:22:53: 192.168.1.64: Serials: 0x400009DD; 
+22.04.2020 16:23:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:23:18: 192.168.1.64: Serials: 0x400009DE; 
+22.04.2020 16:23:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6025, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:23:19: 192.168.1.64: Serials: 0x400009DF; 
+22.04.2020 16:23:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6024, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:23:20: 192.168.1.64: Serials: 0x400009E0; 
+22.04.2020 16:23:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6023, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:23:29: 192.168.1.64: Serials: 0x400009E1; 
+22.04.2020 16:23:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6022, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:23:30: 192.168.1.64: Serials: 0x400009E2; 
+22.04.2020 16:23:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:23:38: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009D9 (MinotaurHedge)
+22.04.2020 16:23:41: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:23:42: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009DA (MinotaurHedge)
+22.04.2020 16:23:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:23:44: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009DC (MinotaurHedge)
+22.04.2020 16:23:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:23:47: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009D7 (MinotaurHedge)
+22.04.2020 16:24:12: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 16:24:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6025, 1149, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:24:14: 192.168.1.64: Serials: 0x400009E3; 
+22.04.2020 16:24:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1150, 6) in Trammel: "minotaurhedge"
+22.04.2020 16:24:15: 192.168.1.64: Serials: 0x400009E4; 
+22.04.2020 16:24:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1151, 6) in Trammel: "minotaurhedge"
+22.04.2020 16:24:16: 192.168.1.64: Serials: 0x400009E5; 
+22.04.2020 16:24:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:24:20: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009E4 (MinotaurHedge)
+22.04.2020 16:24:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:24:21: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009E5 (MinotaurHedge)
+22.04.2020 16:24:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:24:23: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009E3 (MinotaurHedge)
+22.04.2020 16:24:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:24:27: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009DE (MinotaurHedge)
+22.04.2020 16:24:30: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 16:24:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:24:31: 192.168.1.64: Serials: 0x400009E6; 
+22.04.2020 16:24:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:24:32: 192.168.1.64: Serials: 0x400009E7; 
+22.04.2020 16:25:02: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6019, 1150, 6) in Trammel: "minotaurhedge"
+22.04.2020 16:25:02: 192.168.1.64: Serials: 0x400009E8; 
+22.04.2020 16:25:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:25:07: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009E8 (MinotaurHedge)
+22.04.2020 16:25:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:25:09: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000612 (MinotaurHedge)
+22.04.2020 16:25:10: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:25:10: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000609 (MinotaurHedge)
+22.04.2020 16:25:12: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:25:12: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x4000060C (MinotaurHedge)
+22.04.2020 16:25:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 16:25:14: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000611 (MinotaurHedge)
+22.04.2020 16:25:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 16:25:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:25:21: 192.168.1.64: Serials: 0x400009E9; 
+22.04.2020 16:25:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6020, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:25:22: 192.168.1.64: Serials: 0x400009EA; 
+22.04.2020 16:25:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6019, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:25:23: 192.168.1.64: Serials: 0x400009EB; 
+22.04.2020 16:25:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:25:24: 192.168.1.64: Serials: 0x400009EC; 
+22.04.2020 16:25:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'save '
+22.04.2020 16:26:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:51: 192.168.1.64: Serials: 0x400009ED; 
+22.04.2020 16:26:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6017, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:52: 192.168.1.64: Serials: 0x400009EE; 
+22.04.2020 16:26:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6016, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:53: 192.168.1.64: Serials: 0x400009EF; 
+22.04.2020 16:26:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6015, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:54: 192.168.1.64: Serials: 0x400009F0; 
+22.04.2020 16:26:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6014, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:56: 192.168.1.64: Serials: 0x400009F1; 
+22.04.2020 16:26:57: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6013, 1151, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:26:57: 192.168.1.64: Serials: 0x400009F2; 
+22.04.2020 16:27:02: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6013, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:02: 192.168.1.64: Serials: 0x400009F3; 
+22.04.2020 16:27:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6012, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:04: 192.168.1.64: Serials: 0x400009F4; 
+22.04.2020 16:27:05: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1150, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:05: 192.168.1.64: Serials: 0x400009F7; 
+22.04.2020 16:27:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1149, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:43: 192.168.1.64: Serials: 0x400009F8; 
+22.04.2020 16:27:44: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1147, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:44: 192.168.1.64: Serials: 0x400009F9; 
+22.04.2020 16:27:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1148, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:46: 192.168.1.64: Serials: 0x400009FA; 
+22.04.2020 16:27:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1146, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:47: 192.168.1.64: Serials: 0x400009FB; 
+22.04.2020 16:27:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1145, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:48: 192.168.1.64: Serials: 0x400009FC; 
+22.04.2020 16:27:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1145, 6) in Trammel: "minotaurhedge"
+22.04.2020 16:27:49: 192.168.1.64: Serials: 0x400009FD; 
+22.04.2020 16:27:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 16:27:51: 192.168.1.64: Serials: 0x400009FE; 
+22.04.2020 17:26:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1143, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:26:55: 192.168.1.64: Serials: 0x400009FF; 
+22.04.2020 17:26:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1145, 12) in Trammel: "minotaurhedge"
+22.04.2020 17:26:58: 192.168.1.64: Serials: 0x40000A2A; 
+22.04.2020 17:27:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:27:05: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000A2A (MinotaurHedge)
+22.04.2020 17:27:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:27:07: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009FD (MinotaurHedge)
+22.04.2020 17:27:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:27:09: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400009FF (MinotaurHedge)
+22.04.2020 17:27:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 17:27:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:16: 192.168.1.64: Serials: 0x40000A2B; 
+22.04.2020 17:27:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6010, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:18: 192.168.1.64: Serials: 0x40000A2C; 
+22.04.2020 17:27:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:19: 192.168.1.64: Serials: 0x40000A2D; 
+22.04.2020 17:27:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1144, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:21: 192.168.1.64: Serials: 0x40000A2E; 
+22.04.2020 17:27:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6006, 1143, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:48: 192.168.1.64: Serials: 0x40000A2F; 
+22.04.2020 17:27:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1143, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:49: 192.168.1.64: Serials: 0x40000A30; 
+22.04.2020 17:27:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1142, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:50: 192.168.1.64: Serials: 0x40001946; 
+22.04.2020 17:27:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1141, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:51: 192.168.1.64: Serials: 0x40001948; 
+22.04.2020 17:27:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1140, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:52: 192.168.1.64: Serials: 0x4000194A; 
+22.04.2020 17:27:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:53: 192.168.1.64: Serials: 0x4000194D; 
+22.04.2020 17:27:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1139, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:54: 192.168.1.64: Serials: 0x4000194F; 
+22.04.2020 17:27:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1137, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:55: 192.168.1.64: Serials: 0x40001952; 
+22.04.2020 17:27:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1136, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:56: 192.168.1.64: Serials: 0x40001955; 
+22.04.2020 17:27:57: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1135, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:57: 192.168.1.64: Serials: 0x40001957; 
+22.04.2020 17:27:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1134, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:58: 192.168.1.64: Serials: 0x40001959; 
+22.04.2020 17:27:59: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1133, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:27:59: 192.168.1.64: Serials: 0x4000195C; 
+22.04.2020 17:28:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1133, 6) in Trammel: "minotaurhedge"
+22.04.2020 17:28:00: 192.168.1.64: Serials: 0x4000195F; 
+22.04.2020 17:28:01: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1132, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:01: 192.168.1.64: Serials: 0x40001962; 
+22.04.2020 17:28:02: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1131, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:02: 192.168.1.64: Serials: 0x40001964; 
+22.04.2020 17:28:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1130, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:04: 192.168.1.64: Serials: 0x40001983; 
+22.04.2020 17:28:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1129, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:06: 192.168.1.64: Serials: 0x40001986; 
+22.04.2020 17:28:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6010, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:09: 192.168.1.64: Serials: 0x40001989; 
+22.04.2020 17:28:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:10: 192.168.1.64: Serials: 0x4000198C; 
+22.04.2020 17:28:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:12: 192.168.1.64: Serials: 0x4000198F; 
+22.04.2020 17:28:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1128, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:13: 192.168.1.64: Serials: 0x40001992; 
+22.04.2020 17:28:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:43: 192.168.1.64: Serials: 0x40001995; 
+22.04.2020 17:28:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:46: 192.168.1.64: Serials: 0x40001998; 
+22.04.2020 17:28:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6010, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:48: 192.168.1.64: Serials: 0x4000199B; 
+22.04.2020 17:28:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:28:49: 192.168.1.64: Serials: 0x4000199E; 
+22.04.2020 17:30:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:30:51: 192.168.1.64: Serials: 0x400019A0; 
+22.04.2020 17:30:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6029, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:30:52: 192.168.1.64: Serials: 0x400019A2; 
+22.04.2020 17:30:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:30:53: 192.168.1.64: Serials: 0x400019A5; 
+22.04.2020 17:30:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6031, 1138, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:30:54: 192.168.1.64: Serials: 0x400019A7; 
+22.04.2020 17:33:00: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 17:33:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:15: 192.168.1.64: Serials: 0x400019A9; 
+22.04.2020 17:33:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6029, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:16: 192.168.1.64: Serials: 0x400019AC; 
+22.04.2020 17:33:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:18: 192.168.1.64: Serials: 0x400019AF; 
+22.04.2020 17:33:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6031, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:18: 192.168.1.64: Serials: 0x400019B2; 
+22.04.2020 17:33:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:19: 192.168.1.64: Serials: 0x400019B4; 
+22.04.2020 17:33:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6033, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:20: 192.168.1.64: Serials: 0x400019B6; 
+22.04.2020 17:33:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6034, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:21: 192.168.1.64: Serials: 0x400019B9; 
+22.04.2020 17:33:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6035, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:21: 192.168.1.64: Serials: 0x400019BC; 
+22.04.2020 17:33:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6036, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:22: 192.168.1.64: Serials: 0x400019BF; 
+22.04.2020 17:33:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6037, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:23: 192.168.1.64: Serials: 0x400019C1; 
+22.04.2020 17:33:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6038, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:23: 192.168.1.64: Serials: 0x400019C4; 
+22.04.2020 17:33:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6039, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:24: 192.168.1.64: Serials: 0x400019C7; 
+22.04.2020 17:33:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6040, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:25: 192.168.1.64: Serials: 0x400019CA; 
+22.04.2020 17:33:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6041, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:25: 192.168.1.64: Serials: 0x400019CD; 
+22.04.2020 17:33:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6042, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:26: 192.168.1.64: Serials: 0x400019D0; 
+22.04.2020 17:33:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6043, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:29: 192.168.1.64: Serials: 0x400019D2; 
+22.04.2020 17:33:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6044, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:30: 192.168.1.64: Serials: 0x400019D5; 
+22.04.2020 17:33:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6045, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:30: 192.168.1.64: Serials: 0x400019D7; 
+22.04.2020 17:33:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6046, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:31: 192.168.1.64: Serials: 0x400019DA; 
+22.04.2020 17:33:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6047, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:32: 192.168.1.64: Serials: 0x400019DC; 
+22.04.2020 17:33:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6048, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:32: 192.168.1.64: Serials: 0x400019DF; 
+22.04.2020 17:33:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6049, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:33: 192.168.1.64: Serials: 0x400019E2; 
+22.04.2020 17:33:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6050, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:35: 192.168.1.64: Serials: 0x400019E5; 
+22.04.2020 17:33:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6051, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:35: 192.168.1.64: Serials: 0x400019E8; 
+22.04.2020 17:33:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:33:36: 192.168.1.64: Serials: 0x400019EB; 
+22.04.2020 17:34:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6010, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:34:58: 192.168.1.64: Serials: 0x400019EE; 
+22.04.2020 17:34:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:34:58: 192.168.1.64: Serials: 0x400019F1; 
+22.04.2020 17:34:59: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:34:59: 192.168.1.64: Serials: 0x400019F4; 
+22.04.2020 17:35:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:00: 192.168.1.64: Serials: 0x400019F7; 
+22.04.2020 17:35:01: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6006, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:01: 192.168.1.64: Serials: 0x400019FA; 
+22.04.2020 17:35:02: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6005, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:02: 192.168.1.64: Serials: 0x400019FD; 
+22.04.2020 17:35:03: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6004, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:03: 192.168.1.64: Serials: 0x40001A00; 
+22.04.2020 17:35:03: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6003, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:03: 192.168.1.64: Serials: 0x40001A02; 
+22.04.2020 17:35:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6002, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:04: 192.168.1.64: Serials: 0x40001A05; 
+22.04.2020 17:35:07: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6001, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:07: 192.168.1.64: Serials: 0x40001A08; 
+22.04.2020 17:35:07: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6000, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:07: 192.168.1.64: Serials: 0x40001A0B; 
+22.04.2020 17:35:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5999, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:09: 192.168.1.64: Serials: 0x40001A0E; 
+22.04.2020 17:35:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5998, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:09: 192.168.1.64: Serials: 0x40001A10; 
+22.04.2020 17:35:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5997, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:10: 192.168.1.64: Serials: 0x40001A13; 
+22.04.2020 17:35:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5996, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:11: 192.168.1.64: Serials: 0x40001A16; 
+22.04.2020 17:35:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5995, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:12: 192.168.1.64: Serials: 0x40001A19; 
+22.04.2020 17:35:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5994, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:12: 192.168.1.64: Serials: 0x40001A1C; 
+22.04.2020 17:35:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5993, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:13: 192.168.1.64: Serials: 0x40001A1F; 
+22.04.2020 17:35:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5992, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:14: 192.168.1.64: Serials: 0x40001A21; 
+22.04.2020 17:35:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5991, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:17: 192.168.1.64: Serials: 0x40001A24; 
+22.04.2020 17:35:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5989, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:18: 192.168.1.64: Serials: 0x40001A26; 
+22.04.2020 17:35:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5990, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:19: 192.168.1.64: Serials: 0x40001A29; 
+22.04.2020 17:35:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5988, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:20: 192.168.1.64: Serials: 0x40001A2B; 
+22.04.2020 17:35:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5986, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:21: 192.168.1.64: Serials: 0x40001A2E; 
+22.04.2020 17:35:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5987, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:22: 192.168.1.64: Serials: 0x40001A30; 
+22.04.2020 17:35:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5985, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:24: 192.168.1.64: Serials: 0x40001A33; 
+22.04.2020 17:35:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:25: 192.168.1.64: Serials: 0x40001A35; 
+22.04.2020 17:35:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5983, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:26: 192.168.1.64: Serials: 0x40001A38; 
+22.04.2020 17:35:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5982, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:27: 192.168.1.64: Serials: 0x40001A3B; 
+22.04.2020 17:35:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5981, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:28: 192.168.1.64: Serials: 0x40001A3E; 
+22.04.2020 17:35:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5980, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:29: 192.168.1.64: Serials: 0x40001A41; 
+22.04.2020 17:35:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5979, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:30: 192.168.1.64: Serials: 0x40001A44; 
+22.04.2020 17:35:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5978, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:30: 192.168.1.64: Serials: 0x40001A46; 
+22.04.2020 17:35:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5977, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:32: 192.168.1.64: Serials: 0x40001A49; 
+22.04.2020 17:35:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5976, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:33: 192.168.1.64: Serials: 0x40001A4C; 
+22.04.2020 17:35:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:34: 192.168.1.64: Serials: 0x40001A4F; 
+22.04.2020 17:35:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1118, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:35:35: 192.168.1.64: Serials: 0x40001A52; 
+22.04.2020 17:36:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1117, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:18: 192.168.1.64: Serials: 0x40001A55; 
+22.04.2020 17:36:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1116, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:19: 192.168.1.64: Serials: 0x40001A57; 
+22.04.2020 17:36:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1115, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:20: 192.168.1.64: Serials: 0x40001A5A; 
+22.04.2020 17:36:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1114, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:21: 192.168.1.64: Serials: 0x40001A5C; 
+22.04.2020 17:36:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:22: 192.168.1.64: Serials: 0x40001A5E; 
+22.04.2020 17:36:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1112, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:23: 192.168.1.64: Serials: 0x40001A61; 
+22.04.2020 17:36:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1111, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:23: 192.168.1.64: Serials: 0x40001A64; 
+22.04.2020 17:36:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1110, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:24: 192.168.1.64: Serials: 0x40001A66; 
+22.04.2020 17:36:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1109, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:25: 192.168.1.64: Serials: 0x40001A68; 
+22.04.2020 17:36:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1108, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:26: 192.168.1.64: Serials: 0x40001A6A; 
+22.04.2020 17:36:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1107, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:26: 192.168.1.64: Serials: 0x40001A6D; 
+22.04.2020 17:36:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1105, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:27: 192.168.1.64: Serials: 0x40001A6F; 
+22.04.2020 17:36:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1106, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:28: 192.168.1.64: Serials: 0x40001A71; 
+22.04.2020 17:36:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1104, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:31: 192.168.1.64: Serials: 0x40001A74; 
+22.04.2020 17:36:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1103, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:49: 192.168.1.64: Serials: 0x40001A77; 
+22.04.2020 17:36:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:50: 192.168.1.64: Serials: 0x40001A79; 
+22.04.2020 17:36:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1101, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:51: 192.168.1.64: Serials: 0x40001A7B; 
+22.04.2020 17:36:52: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1099, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:52: 192.168.1.64: Serials: 0x40001A7D; 
+22.04.2020 17:36:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1100, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:53: 192.168.1.64: Serials: 0x40001A80; 
+22.04.2020 17:36:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1098, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:54: 192.168.1.64: Serials: 0x40001A83; 
+22.04.2020 17:36:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1097, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:54: 192.168.1.64: Serials: 0x40001A85; 
+22.04.2020 17:36:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6052, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:36:55: 192.168.1.64: Serials: 0x40001A87; 
+22.04.2020 17:37:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6051, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:11: 192.168.1.64: Serials: 0x40001A8A; 
+22.04.2020 17:37:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6050, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:12: 192.168.1.64: Serials: 0x40001A8C; 
+22.04.2020 17:37:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6049, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:13: 192.168.1.64: Serials: 0x40001A8E; 
+22.04.2020 17:37:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6048, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:14: 192.168.1.64: Serials: 0x40001A91; 
+22.04.2020 17:37:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6047, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:15: 192.168.1.64: Serials: 0x40001A94; 
+22.04.2020 17:37:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6046, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:15: 192.168.1.64: Serials: 0x40001A96; 
+22.04.2020 17:37:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6045, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:16: 192.168.1.64: Serials: 0x40001A99; 
+22.04.2020 17:37:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6044, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:17: 192.168.1.64: Serials: 0x40001A9C; 
+22.04.2020 17:37:18: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6043, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:18: 192.168.1.64: Serials: 0x40001A9E; 
+22.04.2020 17:37:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6042, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:19: 192.168.1.64: Serials: 0x40001AA1; 
+22.04.2020 17:37:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6041, 1097, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:20: 192.168.1.64: Serials: 0x40001AA4; 
+22.04.2020 17:37:25: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:37:26: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001AA4 (MinotaurHedge)
+22.04.2020 17:37:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 17:37:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6042, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:36: 192.168.1.64: Serials: 0x40001AA7; 
+22.04.2020 17:37:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6041, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:37: 192.168.1.64: Serials: 0x40001AAA; 
+22.04.2020 17:37:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6040, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:38: 192.168.1.64: Serials: 0x40001AAD; 
+22.04.2020 17:37:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6039, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:39: 192.168.1.64: Serials: 0x40001AB0; 
+22.04.2020 17:37:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6039, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:47: 192.168.1.64: Serials: 0x40001AB3; 
+22.04.2020 17:37:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6038, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:48: 192.168.1.64: Serials: 0x40001AB6; 
+22.04.2020 17:37:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6037, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:49: 192.168.1.64: Serials: 0x40001AD2; 
+22.04.2020 17:37:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6036, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:37:50: 192.168.1.64: Serials: 0x40001AD5; 
+22.04.2020 17:38:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6035, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:28: 192.168.1.64: Serials: 0x40001AD7; 
+22.04.2020 17:38:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6036, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:29: 192.168.1.64: Serials: 0x40001ADA; 
+22.04.2020 17:38:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6034, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:31: 192.168.1.64: Serials: 0x40001ADD; 
+22.04.2020 17:38:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6033, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:32: 192.168.1.64: Serials: 0x40001ADF; 
+22.04.2020 17:38:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6033, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:36: 192.168.1.64: Serials: 0x40001AE2; 
+22.04.2020 17:38:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6032, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:37: 192.168.1.64: Serials: 0x40001AE5; 
+22.04.2020 17:38:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6031, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:38: 192.168.1.64: Serials: 0x40001AE7; 
+22.04.2020 17:38:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:39: 192.168.1.64: Serials: 0x40001AEA; 
+22.04.2020 17:38:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6029, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:43: 192.168.1.64: Serials: 0x40001AED; 
+22.04.2020 17:38:44: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6030, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:44: 192.168.1.64: Serials: 0x40001AEF; 
+22.04.2020 17:38:45: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6028, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:45: 192.168.1.64: Serials: 0x40001AF2; 
+22.04.2020 17:38:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:46: 192.168.1.64: Serials: 0x40001AF5; 
+22.04.2020 17:38:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1091, 6) in Trammel: "minotaurhedge"
+22.04.2020 17:38:49: 192.168.1.64: Serials: 0x40001AF8; 
+22.04.2020 17:38:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6027, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:50: 192.168.1.64: Serials: 0x40001AFA; 
+22.04.2020 17:38:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:38:53: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001AF8 (MinotaurHedge)
+22.04.2020 17:38:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm add minotaurhedge'
+22.04.2020 17:38:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6026, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:56: 192.168.1.64: Serials: 0x40001AFD; 
+22.04.2020 17:38:57: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6025, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:57: 192.168.1.64: Serials: 0x40001B00; 
+22.04.2020 17:38:58: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6024, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:38:58: 192.168.1.64: Serials: 0x40001B02; 
+22.04.2020 17:39:05: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6023, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:05: 192.168.1.64: Serials: 0x40001B04; 
+22.04.2020 17:39:07: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6024, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:07: 192.168.1.64: Serials: 0x40001B07; 
+22.04.2020 17:39:08: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6022, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:08: 192.168.1.64: Serials: 0x40001B09; 
+22.04.2020 17:39:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:09: 192.168.1.64: Serials: 0x40001B0E; 
+22.04.2020 17:39:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6021, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:35: 192.168.1.64: Serials: 0x40001B11; 
+22.04.2020 17:39:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6020, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:37: 192.168.1.64: Serials: 0x40001B14; 
+22.04.2020 17:39:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6019, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:38: 192.168.1.64: Serials: 0x40001B16; 
+22.04.2020 17:39:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:38: 192.168.1.64: Serials: 0x40001C22; 
+22.04.2020 17:39:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6017, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:39: 192.168.1.64: Serials: 0x40001C29; 
+22.04.2020 17:39:40: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6015, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:40: 192.168.1.64: Serials: 0x40001C31; 
+22.04.2020 17:39:41: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6016, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:41: 192.168.1.64: Serials: 0x40001C39; 
+22.04.2020 17:39:41: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6014, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:41: 192.168.1.64: Serials: 0x40001C46; 
+22.04.2020 17:39:42: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6013, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:42: 192.168.1.64: Serials: 0x40001C49; 
+22.04.2020 17:39:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6012, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:43: 192.168.1.64: Serials: 0x40001C52; 
+22.04.2020 17:39:44: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1088, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:39:44: 192.168.1.64: Serials: 0x40001C55; 
+22.04.2020 17:40:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6011, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:06: 192.168.1.64: Serials: 0x40001C5C; 
+22.04.2020 17:40:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6010, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:06: 192.168.1.64: Serials: 0x40001C60; 
+22.04.2020 17:40:07: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6009, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:07: 192.168.1.64: Serials: 0x40001C62; 
+22.04.2020 17:40:08: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1089, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:08: 192.168.1.64: Serials: 0x40001C66; 
+22.04.2020 17:40:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6008, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:09: 192.168.1.64: Serials: 0x40001C70; 
+22.04.2020 17:40:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6007, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:10: 192.168.1.64: Serials: 0x40001C76; 
+22.04.2020 17:40:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6006, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:11: 192.168.1.64: Serials: 0x40001C7C; 
+22.04.2020 17:40:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6005, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:12: 192.168.1.64: Serials: 0x40001C81; 
+22.04.2020 17:40:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6005, 1090, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:13: 192.168.1.64: Serials: 0x40001C84; 
+22.04.2020 17:40:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6004, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:15: 192.168.1.64: Serials: 0x40001C8B; 
+22.04.2020 17:40:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6003, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:15: 192.168.1.64: Serials: 0x40001C94; 
+22.04.2020 17:40:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6002, 1091, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:17: 192.168.1.64: Serials: 0x40001C96; 
+22.04.2020 17:40:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6002, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:21: 192.168.1.64: Serials: 0x40001C9B; 
+22.04.2020 17:40:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6001, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:22: 192.168.1.64: Serials: 0x40001CA0; 
+22.04.2020 17:40:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6000, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:22: 192.168.1.64: Serials: 0x40001CA2; 
+22.04.2020 17:40:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5999, 1092, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:23: 192.168.1.64: Serials: 0x40001CA9; 
+22.04.2020 17:40:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5999, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:24: 192.168.1.64: Serials: 0x40001CC1; 
+22.04.2020 17:40:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5998, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:25: 192.168.1.64: Serials: 0x40001CD1; 
+22.04.2020 17:40:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5997, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:26: 192.168.1.64: Serials: 0x40001CD2; 
+22.04.2020 17:40:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5996, 1093, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:27: 192.168.1.64: Serials: 0x40001CD3; 
+22.04.2020 17:40:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5996, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:28: 192.168.1.64: Serials: 0x40001CD4; 
+22.04.2020 17:40:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5995, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:29: 192.168.1.64: Serials: 0x40001CD5; 
+22.04.2020 17:40:30: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5994, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:30: 192.168.1.64: Serials: 0x40001CD6; 
+22.04.2020 17:40:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5993, 1094, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:31: 192.168.1.64: Serials: 0x40001CD7; 
+22.04.2020 17:40:35: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5993, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:35: 192.168.1.64: Serials: 0x40001CD8; 
+22.04.2020 17:40:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5992, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:36: 192.168.1.64: Serials: 0x40001CD9; 
+22.04.2020 17:40:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5991, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:37: 192.168.1.64: Serials: 0x40001CDA; 
+22.04.2020 17:40:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5990, 1095, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:40:39: 192.168.1.64: Serials: 0x40001CDB; 
+22.04.2020 17:41:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5990, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:09: 192.168.1.64: Serials: 0x40001CDC; 
+22.04.2020 17:41:10: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5989, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:10: 192.168.1.64: Serials: 0x40001CDD; 
+22.04.2020 17:41:11: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5988, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:11: 192.168.1.64: Serials: 0x40001CDE; 
+22.04.2020 17:41:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5987, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:13: 192.168.1.64: Serials: 0x40001CDF; 
+22.04.2020 17:41:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5985, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:14: 192.168.1.64: Serials: 0x40001CE0; 
+22.04.2020 17:41:14: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5986, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:14: 192.168.1.64: Serials: 0x40001CE1; 
+22.04.2020 17:41:15: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5983, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:15: 192.168.1.64: Serials: 0x40001CE2; 
+22.04.2020 17:41:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5983, 1096, 6) in Trammel: "minotaurhedge"
+22.04.2020 17:41:17: 192.168.1.64: Serials: 0x40001CE3; 
+22.04.2020 17:41:19: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:19: 192.168.1.64: Serials: 0x40001CE4; 
+22.04.2020 17:41:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5982, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:20: 192.168.1.64: Serials: 0x40001CE5; 
+22.04.2020 17:41:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5981, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:21: 192.168.1.64: Serials: 0x40001CE6; 
+22.04.2020 17:41:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5980, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:22: 192.168.1.64: Serials: 0x40001CE7; 
+22.04.2020 17:41:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5979, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:23: 192.168.1.64: Serials: 0x40001CE8; 
+22.04.2020 17:41:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5978, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:23: 192.168.1.64: Serials: 0x40001CE9; 
+22.04.2020 17:41:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5977, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:24: 192.168.1.64: Serials: 0x40001CEA; 
+22.04.2020 17:41:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5976, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:25: 192.168.1.64: Serials: 0x40001CEB; 
+22.04.2020 17:41:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:41:26: 192.168.1.64: Serials: 0x40001CEC; 
+22.04.2020 17:42:01: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5973, 1117, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:01: 192.168.1.64: Serials: 0x40001CED; 
+22.04.2020 17:42:02: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1117, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:02: 192.168.1.64: Serials: 0x40001CEE; 
+22.04.2020 17:42:03: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1116, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:03: 192.168.1.64: Serials: 0x40001CEF; 
+22.04.2020 17:42:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1115, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:04: 192.168.1.64: Serials: 0x40001CF0; 
+22.04.2020 17:42:05: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1114, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:05: 192.168.1.64: Serials: 0x40001CF1; 
+22.04.2020 17:42:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:06: 192.168.1.64: Serials: 0x40001CF2; 
+22.04.2020 17:42:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:20: 192.168.1.64: Serials: 0x40001CF3; 
+22.04.2020 17:42:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5976, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:21: 192.168.1.64: Serials: 0x40001CF4; 
+22.04.2020 17:42:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5977, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:22: 192.168.1.64: Serials: 0x40001CF5; 
+22.04.2020 17:42:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5978, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:23: 192.168.1.64: Serials: 0x40001CF6; 
+22.04.2020 17:42:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5979, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:23: 192.168.1.64: Serials: 0x40001CF7; 
+22.04.2020 17:42:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5980, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:24: 192.168.1.64: Serials: 0x40001CF8; 
+22.04.2020 17:42:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5981, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:25: 192.168.1.64: Serials: 0x40001CF9; 
+22.04.2020 17:42:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5982, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:25: 192.168.1.64: Serials: 0x40001CFA; 
+22.04.2020 17:42:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5983, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:28: 192.168.1.64: Serials: 0x40001CFB; 
+22.04.2020 17:42:28: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1113, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:28: 192.168.1.64: Serials: 0x40001CFC; 
+22.04.2020 17:42:42: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1112, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:42: 192.168.1.64: Serials: 0x40001CFD; 
+22.04.2020 17:42:43: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1111, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:43: 192.168.1.64: Serials: 0x40001CFE; 
+22.04.2020 17:42:44: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1109, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:44: 192.168.1.64: Serials: 0x40001CFF; 
+22.04.2020 17:42:45: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1109, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:45: 192.168.1.64: Serials: 0x40001D00; 
+22.04.2020 17:42:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1110, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:46: 192.168.1.64: Serials: 0x40001D01; 
+22.04.2020 17:42:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1108, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:47: 192.168.1.64: Serials: 0x40001D02; 
+22.04.2020 17:42:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1107, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:47: 192.168.1.64: Serials: 0x40001D03; 
+22.04.2020 17:42:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1105, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:48: 192.168.1.64: Serials: 0x40001D04; 
+22.04.2020 17:42:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1106, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:49: 192.168.1.64: Serials: 0x40001D05; 
+22.04.2020 17:42:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1104, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:50: 192.168.1.64: Serials: 0x40001D06; 
+22.04.2020 17:42:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1103, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:42:51: 192.168.1.64: Serials: 0x40001D07; 
+22.04.2020 17:43:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5984, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:13: 192.168.1.64: Serials: 0x40001D08; 
+22.04.2020 17:43:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5983, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:16: 192.168.1.64: Serials: 0x40001D09; 
+22.04.2020 17:43:17: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5982, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:17: 192.168.1.64: Serials: 0x40001D0A; 
+22.04.2020 17:43:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5981, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:20: 192.168.1.64: Serials: 0x40001D0B; 
+22.04.2020 17:43:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5980, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:21: 192.168.1.64: Serials: 0x40001D0C; 
+22.04.2020 17:43:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5979, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:22: 192.168.1.64: Serials: 0x40001D0D; 
+22.04.2020 17:43:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5978, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:23: 192.168.1.64: Serials: 0x40001D0E; 
+22.04.2020 17:43:23: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5977, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:23: 192.168.1.64: Serials: 0x40001D0F; 
+22.04.2020 17:43:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5976, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:24: 192.168.1.64: Serials: 0x40001D10; 
+22.04.2020 17:43:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:26: 192.168.1.64: Serials: 0x40001D11; 
+22.04.2020 17:43:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1097, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:31: 192.168.1.64: Serials: 0x40001D12; 
+22.04.2020 17:43:31: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1098, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:31: 192.168.1.64: Serials: 0x40001D13; 
+22.04.2020 17:43:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1099, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:32: 192.168.1.64: Serials: 0x40001D14; 
+22.04.2020 17:43:33: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1100, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:33: 192.168.1.64: Serials: 0x40001D15; 
+22.04.2020 17:43:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5975, 1101, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:34: 192.168.1.64: Serials: 0x40001D16; 
+22.04.2020 17:43:44: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1102, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:44: 192.168.1.64: Serials: 0x40001D17; 
+22.04.2020 17:43:45: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1101, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:45: 192.168.1.64: Serials: 0x40001D18; 
+22.04.2020 17:43:46: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1100, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:46: 192.168.1.64: Serials: 0x40001D19; 
+22.04.2020 17:43:47: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1099, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:47: 192.168.1.64: Serials: 0x40001D1A; 
+22.04.2020 17:43:48: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1098, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:48: 192.168.1.64: Serials: 0x40001D1B; 
+22.04.2020 17:43:49: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5973, 1097, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:49: 192.168.1.64: Serials: 0x40001D1C; 
+22.04.2020 17:43:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1097, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:50: 192.168.1.64: Serials: 0x40001D1D; 
+22.04.2020 17:43:51: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5974, 1096, 0) in Trammel: "minotaurhedge"
+22.04.2020 17:43:51: 192.168.1.64: Serials: 0x40001D1E; 
+22.04.2020 17:43:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:43:56: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D1C (MinotaurHedge)
+22.04.2020 17:44:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:44:25: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D16 (MinotaurHedge)
+22.04.2020 17:44:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:44:26: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D15 (MinotaurHedge)
+22.04.2020 17:44:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:44:28: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D14 (MinotaurHedge)
+22.04.2020 17:44:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:44:30: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D13 (MinotaurHedge)
+22.04.2020 17:44:31: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 17:44:31: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40001D12 (MinotaurHedge)
+22.04.2020 17:44:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 17:44:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+22.04.2020 17:44:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+22.04.2020 17:44:59: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+##############################
+Log started on 22.04.2020 18:04:04
+
+22.04.2020 18:04:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 18:06:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add squi'
+22.04.2020 18:06:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6018, 1135, 0) in Trammel: "Squirrel"
+22.04.2020 18:06:21: 192.168.1.64: Serials: 0x199; 
+22.04.2020 18:06:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add shrin'
+22.04.2020 18:06:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6014, 1141, 0) in Trammel: "ShrineMantra"
+22.04.2020 18:06:54: 192.168.1.64: Serials: 0x400001F6; 
+22.04.2020 18:07:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6015, 1141, 0) in Trammel: "ShrineOfSingularity"
+22.04.2020 18:07:04: 192.168.1.64: Serials: 0x40000606; 
+22.04.2020 18:07:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add shrin'
+22.04.2020 18:07:09: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6016, 1141, 0) in Trammel: "ShrineOfWisdomAddon"
+22.04.2020 18:07:09: 192.168.1.64: Serials: 0x40000607; 
+22.04.2020 18:07:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 18:07:20: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000606 (ShrineOfSingularity)
+22.04.2020 18:07:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 18:07:23: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x400001F6 (ShrineMantra)
+22.04.2020 18:07:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 18:07:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 18:07:46: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000609 (ShrineOfWisdomComponent)
+22.04.2020 18:07:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 18:07:47: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x199 "a squirrel" (no account)
+22.04.2020 18:08:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add travel'
+22.04.2020 18:08:55: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6019, 1139, 0) in Trammel: "TravelStone"
+22.04.2020 18:08:55: 192.168.1.64: Serials: 0x40000612; 
+22.04.2020 18:10:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm tele'
+22.04.2020 18:11:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+22.04.2020 18:12:50: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go market'
+##############################
+Log started on 22.04.2020 18:26:18
+
+22.04.2020 18:26:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add travel'
+22.04.2020 18:26:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (6017, 1120, 0) in Trammel: "IlshenarTravelMap"
+22.04.2020 18:26:53: 192.168.1.64: Serials: 0x40000607; 
+22.04.2020 18:27:59: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add travel'
+22.04.2020 18:28:32: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (1204, 1125, -25) in Ilshenar: "DimensionalTravel"
+22.04.2020 18:28:32: 192.168.1.64: Serials: 0x40000608; 
+22.04.2020 18:28:39: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 18:28:41: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40000608 (DimensionalTravel)
+22.04.2020 18:28:44: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go shame'
+22.04.2020 18:29:32: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add felucca'
+22.04.2020 18:29:36: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5411, 91, 10) in Felucca: "FeluccaTravelMap"
+22.04.2020 18:29:36: 192.168.1.64: Serials: 0x40000609; 
+22.04.2020 18:32:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add felucca'
+22.04.2020 18:32:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4037, 462, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:32:56: 192.168.1.64: Serials: 0x4000060C; 
+22.04.2020 18:33:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4036, 464, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:12: 192.168.1.64: Serials: 0x40000611; 
+22.04.2020 18:33:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add felucca'
+22.04.2020 18:33:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4036, 464, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:22: 192.168.1.64: Serials: 0x40000613; 
+22.04.2020 18:33:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4037, 463, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:24: 192.168.1.64: Serials: 0x40000614; 
+22.04.2020 18:33:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4038, 464, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:24: 192.168.1.64: Serials: 0x40000619; 
+22.04.2020 18:33:24: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4037, 465, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:24: 192.168.1.64: Serials: 0x4000061A; 
+22.04.2020 18:33:25: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4036, 465, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:25: 192.168.1.64: Serials: 0x400009D7; 
+22.04.2020 18:33:26: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (4037, 464, 3) in Felucca: "FeluccaTravelMapPiece"
+22.04.2020 18:33:26: 192.168.1.64: Serials: 0x400009D9; 
+22.04.2020 18:44:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+22.04.2020 18:44:35: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+22.04.2020 18:47:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'createworld '
+22.04.2020 18:47:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'moongen '
+22.04.2020 18:47:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'doorgen '
+22.04.2020 18:47:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'signgen '
+22.04.2020 18:47:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'telgen '
+22.04.2020 18:48:17: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'decorate '
+22.04.2020 18:48:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'decorateml '
+22.04.2020 18:48:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'arisengenerate '
+22.04.2020 18:48:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gentok '
+22.04.2020 18:48:18: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gensutek '
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'XmlLoad Spawns/GravewaterLake.xml'
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'genwinchassembly '
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gensorcerersplate '
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'decoratesa '
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gennewmagincia '
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'XmlLoad Spawns/Eodon.xml'
+22.04.2020 18:48:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'decoratetol '
+22.04.2020 19:57:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necrob'
+22.04.2020 19:58:08: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5214, 2323, 31) in Felucca: "Necromancer"
+22.04.2020 19:58:08: 192.168.1.64: Serials: 0x4B0; 
+22.04.2020 19:58:11: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necrob'
+22.04.2020 19:58:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necro'
+22.04.2020 19:58:22: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5213, 2326, 31) in Felucca: "NecromancerSpellbook"
+22.04.2020 19:58:22: 192.168.1.64: Serials: 0x40016E40; 
+22.04.2020 19:58:24: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necro'
+22.04.2020 19:58:27: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5214, 2325, 31) in Felucca: "NecromancersPhylactery"
+22.04.2020 19:58:27: 192.168.1.64: Serials: 0x40016E41; 
+22.04.2020 19:58:50: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 19:58:51: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x4B0 "Dannik" (no account)
+22.04.2020 19:58:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necro'
+22.04.2020 19:59:06: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5214, 2324, 32) in Felucca: "CompleteNecromancerSpellbook"
+22.04.2020 19:59:06: 192.168.1.64: Serials: 0x40016E42; 
+22.04.2020 20:00:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add necro'
+22.04.2020 20:00:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5211, 2322, 32) in Felucca: "Necromancer"
+22.04.2020 20:00:56: 192.168.1.64: Serials: 0x4B1; 
+22.04.2020 20:00:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'kill '
+22.04.2020 20:01:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get invul'
+22.04.2020 20:01:35: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get invulnarable'
+22.04.2020 20:01:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get mortal'
+22.04.2020 20:01:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+22.04.2020 20:02:13: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'Controlled' of 0x4B1 "Manning" (no account) to 'True'
+22.04.2020 20:02:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'hide '
+22.04.2020 20:02:36: 192.168.1.64: Owner 0x197 "GM" ('admin') hiding 0x4B1 "Manning" (no account)
+22.04.2020 20:02:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'unhide '
+22.04.2020 20:02:44: 192.168.1.64: Owner 0x197 "GM" ('admin') unhiding 0x4B1 "Manning" (no account)
+22.04.2020 20:02:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 20:02:51: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x4B1 "Manning" (no account)
+22.04.2020 20:02:56: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+22.04.2020 20:02:58: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40016E40 (NecromancerSpellbook)
+22.04.2020 20:45:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:45:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:45:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:45:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:17: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:46:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:47:03: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:47:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm tele'
+22.04.2020 20:48:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm tele'
+22.04.2020 20:50:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'move '
+22.04.2020 20:50:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+22.04.2020 20:50:39: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+22.04.2020 20:50:53: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 1756 200'
+22.04.2020 20:50:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 1756 100'
+22.04.2020 20:51:00: 192.168.1.64: Owner 0x197 "GM" ('admin') moving 0x197 "GM" ('admin') to (1760, 89, -28)
+22.04.2020 20:54:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go trammel'
+22.04.2020 20:54:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 1585 1785'
+22.04.2020 20:54:56: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 5185 1785'
+22.04.2020 20:55:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:55:09: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+22.04.2020 20:55:19: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'where '
+22.04.2020 20:55:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go terathan keep'
+22.04.2020 20:55:43: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go terathan keep'
+22.04.2020 20:56:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 5404 3099'
+22.04.2020 20:57:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go 5426 3120'
+22.04.2020 20:58:00: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go terathan keep'
+22.04.2020 20:58:12: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go terathan keep'
+22.04.2020 20:59:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go terathan keep'
+22.04.2020 20:59:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go Terathan Keep'

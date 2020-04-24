@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<accounts count="2">
+	<account>
+		<username>admin</username>
+		<newCryptPassword>DD-94-70-95-28-BB-1C-83-D0-8F-30-88-D4-04-3F-47-42-89-1F-4F</newCryptPassword>
+		<accessLevel>Owner</accessLevel>
+		<created>2020-04-16T11:44:48.96341Z</created>
+		<lastLogin>2020-04-21T08:02:38.187772Z</lastLogin>
+		<totalGameTime>PT11H16M35.019483S</totalGameTime>
+		<chars>
+			<char index="0">117</char>
+			<char index="1">407</char>
+		</chars>
+		<addressList count="2">
+			<ip>192.168.1.21</ip>
+			<ip>192.168.1.64</ip>
+		</addressList>
+		<totalCurrency>0.00089999999999999976</totalCurrency>
+		<sovereigns>0</sovereigns>
+	</account>
+	<account>
+		<username>test</username>
+		<newCryptPassword>51-AB-B9-63-60-78-DE-FB-F8-88-D8-45-7A-7C-76-F8-5C-8F-11-4C</newCryptPassword>
+		<created>2020-04-20T16:01:48.478707Z</created>
+		<lastLogin>2020-04-21T08:03:34.288698Z</lastLogin>
+		<totalGameTime>PT4H44M32.764264S</totalGameTime>
+		<chars>
+			<char index="0">408</char>
+		</chars>
+		<addressList count="1">
+			<ip>192.168.1.64</ip>
+		</addressList>
+		<totalCurrency>0</totalCurrency>
+		<sovereigns>0</sovereigns>
+	</account>
+</accounts>

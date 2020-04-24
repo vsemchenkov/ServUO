@@ -306,9 +306,9 @@ namespace Server
 		private readonly TimeSpan m_Duration;
 		private readonly DateTime m_Added;
 
-		public StatType Type => m_Type; 
-		public string Name => m_Name; 
-		public int Offset => m_Offset; 
+		public StatType Type => m_Type;
+		public string Name => m_Name;
+		public int Offset => m_Offset;
 
 		public bool HasElapsed()
 		{
@@ -341,10 +341,10 @@ namespace Server
 		private readonly Mobile m_Damager;
 		private DateTime m_LastDamage;
 
-		public Mobile Damager => m_Damager; 
+		public Mobile Damager => m_Damager;
 		public int DamageGiven { get; set; }
 		public DateTime LastDamage { get { return m_LastDamage; } set { m_LastDamage = value; } }
-		public bool HasExpired => (DateTime.UtcNow > (m_LastDamage + m_ExpireDelay)); 
+		public bool HasExpired => (DateTime.UtcNow > (m_LastDamage + m_ExpireDelay));
 		public List<DamageEntry> Responsible { get; set; }
 
 		private static TimeSpan m_ExpireDelay = TimeSpan.FromMinutes(2.0);
@@ -558,7 +558,7 @@ namespace Server
 			throw new ArgumentException();
 		}
 		#endregion
-		
+
 		private static bool m_DragEffects = true;
 
 		public static bool DragEffects { get { return m_DragEffects; } set { m_DragEffects = value; } }
@@ -778,7 +778,7 @@ namespace Server
 
 		private const int WarmodeCatchCount = 4;
 		// Allow four warmode changes in 0.5 seconds, any more will be delay for two seconds
-        
+
 		[CommandProperty(AccessLevel.Decorator)]
 		public Race Race
 		{
@@ -817,12 +817,12 @@ namespace Server
         [CommandProperty(AccessLevel.GameMaster)]
         public bool PublicHouseContent { get; set; }
 
-        public DFAlgorithm DFA { get; set; } 
+        public DFAlgorithm DFA { get; set; }
 
         protected virtual void OnRaceChange(Race oldRace)
 		{ }
 
-		public virtual double RacialSkillBonus => 0; 
+		public virtual double RacialSkillBonus => 0;
 
         public virtual double GetRacialSkillBonus(SkillName skill)
         {
@@ -839,18 +839,18 @@ namespace Server
         protected List<string> m_SlayerVulnerabilities = new List<string>();
         protected bool m_SpecialSlayerMechanics = false;
 
-        public List<String> SlayerVulnerabilities => m_SlayerVulnerabilities; 
+        public List<String> SlayerVulnerabilities => m_SlayerVulnerabilities;
 
         [CommandProperty(AccessLevel.Decorator)]
-        public bool SpecialSlayerMechanics => m_SpecialSlayerMechanics; 
+        public bool SpecialSlayerMechanics => m_SpecialSlayerMechanics;
 
-		public int[] Resistances => m_Resistances; 
+		public int[] Resistances => m_Resistances;
 
-		public virtual int BasePhysicalResistance => 0; 
-		public virtual int BaseFireResistance => 0; 
-		public virtual int BaseColdResistance => 0; 
+		public virtual int BasePhysicalResistance => 0;
+		public virtual int BaseFireResistance => 0;
+		public virtual int BaseColdResistance => 0;
 		public virtual int BasePoisonResistance => 0;
-		public virtual int BaseEnergyResistance => 0; 
+		public virtual int BaseEnergyResistance => 0;
 
 		public virtual void ComputeLightLevels(out int global, out int personal)
 		{
@@ -872,19 +872,19 @@ namespace Server
 		{ }
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual int PhysicalResistance => GetResistance(ResistanceType.Physical); 
+		public virtual int PhysicalResistance => GetResistance(ResistanceType.Physical);
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual int FireResistance => GetResistance(ResistanceType.Fire); 
+		public virtual int FireResistance => GetResistance(ResistanceType.Fire);
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual int ColdResistance => GetResistance(ResistanceType.Cold); 
+		public virtual int ColdResistance => GetResistance(ResistanceType.Cold);
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual int PoisonResistance => GetResistance(ResistanceType.Poison); 
+		public virtual int PoisonResistance => GetResistance(ResistanceType.Poison);
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual int EnergyResistance => GetResistance(ResistanceType.Energy); 
+		public virtual int EnergyResistance => GetResistance(ResistanceType.Energy);
 
 		public virtual void UpdateResistances()
 		{
@@ -1094,9 +1094,13 @@ namespace Server
 		}
 
 		public virtual string ApplyNameSuffix(string suffix)
-		{
-			return suffix;
-		}
+         		{
+         			return suffix;
+         		}
+        public virtual string ApplyNamePostSuffix(string postsuffix)
+        {
+            return postsuffix;
+        }
 
         public virtual void AddNameProperties(ObjectPropertyList list)
         {
@@ -1110,15 +1114,17 @@ namespace Server
             string prefix = ""; // still needs to be defined due to cliloc. Only defined in PlayerMobile. BaseCreature and BaseVendor require the suffix for the title and use the same cliloc.
 
             string suffix = "";
+            string postsuffix = "";
 
             if (PropertyTitle && Title != null && Title.Length > 0)
             {
                 suffix = Title;
-            }          
+            }
 
+            postsuffix = ApplyNamePostSuffix(postsuffix);
             suffix = ApplyNameSuffix(suffix);
 
-            list.Add(1050045, "{0} \t{1}\t {2}", prefix, name, suffix); // ~1_PREFIX~~2_NAME~~3_SUFFIX~           
+            list.Add(1050045, "{0} \t{1}\t {2}\t {3}", prefix, name, suffix, postsuffix); // ~1_PREFIX~~2_NAME~~3_SUFFIX~~4_POSTSUFFIX~
         }
 
 		public virtual void GetProperties(ObjectPropertyList list)
@@ -1213,13 +1219,13 @@ namespace Server
 			UpdateAggrExpire();
 		}
 
-		public List<Mobile> Stabled => m_Stabled; 
+		public List<Mobile> Stabled => m_Stabled;
 
 		[CommandProperty(AccessLevel.Counselor, AccessLevel.GameMaster)]
 		public VirtueInfo Virtues { get { return m_Virtues; } set { } }
 
 		public object Party { get { return m_Party; } set { m_Party = value; } }
-		public List<SkillMod> SkillMods => m_SkillMods; 
+		public List<SkillMod> SkillMods => m_SkillMods;
 
 		/// <summary>
 		///     Overridable. Virtual event invoked when <paramref name="skill" /> changes in some way.
@@ -1523,7 +1529,7 @@ namespace Server
 		[CommandProperty(AccessLevel.Decorator)]
 		public int BAC { get { return m_BAC; } set { m_BAC = value; } }
 
-		public virtual int DefaultBloodHue => 0; 
+		public virtual int DefaultBloodHue => 0;
 
 		public virtual bool HasBlood { get { return Alive && BloodHue >= 0 && !Body.IsGhost && !Body.IsEquipment; } }
 
@@ -1832,9 +1838,9 @@ namespace Server
 
 		public virtual bool RegenThroughPoison { get { return m_GlobalRegenThroughPoison; } }
 
-		public virtual bool CanRegenHits => Alive && (RegenThroughPoison || !Poisoned); 
-		public virtual bool CanRegenStam => Alive; 
-		public virtual bool CanRegenMana => Alive; 
+		public virtual bool CanRegenHits => Alive && (RegenThroughPoison || !Poisoned);
+		public virtual bool CanRegenStam => Alive;
+		public virtual bool CanRegenMana => Alive;
 
 		#region Timers
 		private class ManaTimer : Timer
@@ -2077,13 +2083,13 @@ namespace Server
 		[CommandProperty(AccessLevel.GameMaster)]
 		public long NextSkillTime { get { return m_NextSkillTime; } set { m_NextSkillTime = value; } }
 
-		public List<AggressorInfo> Aggressors => m_Aggressors; 
+		public List<AggressorInfo> Aggressors => m_Aggressors;
 
-		public List<AggressorInfo> Aggressed => m_Aggressed; 
+		public List<AggressorInfo> Aggressed => m_Aggressed;
 
 		private int m_ChangingCombatant;
 
-		public bool ChangingCombatant => (m_ChangingCombatant > 0); 
+		public bool ChangingCombatant => (m_ChangingCombatant > 0);
 
 		public virtual void Attack(IDamageable e)
 		{
@@ -2102,7 +2108,7 @@ namespace Server
 		{
 			return (Utility.InUpdateRange(this, e.Location) && CanSee(e) && InLOS(e));
 		}
-		
+
 		[CommandProperty(AccessLevel.GameMaster)]
 		public bool GuardImmune { get; set; }
 
@@ -2408,13 +2414,13 @@ namespace Server
 		}
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public int TotalGold => GetTotal(TotalType.Gold); 
+		public int TotalGold => GetTotal(TotalType.Gold);
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public int TotalItems => GetTotal(TotalType.Items); 
+		public int TotalItems => GetTotal(TotalType.Items);
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public int TotalWeight => GetTotal(TotalType.Weight); 
+		public int TotalWeight => GetTotal(TotalType.Weight);
 
 		[CommandProperty(AccessLevel.GameMaster)]
 		public int TithingPoints
@@ -3393,7 +3399,7 @@ namespace Server
 			return true;
 		}
 
-		public virtual bool IsDeadBondedPet => false; 
+		public virtual bool IsDeadBondedPet => false;
 
 		/// <summary>
 		///     Overridable. Event invoked when a Mobile <paramref name="m" /> moves over this Mobile.
@@ -3597,7 +3603,7 @@ namespace Server
 
 		private bool m_Deleted;
 
-		public bool Deleted => m_Deleted; 
+		public bool Deleted => m_Deleted;
 
 		[CommandProperty(AccessLevel.GameMaster)]
 		public int VirtualArmor
@@ -3615,7 +3621,7 @@ namespace Server
 		}
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public virtual double ArmorRating => 0.0; 
+		public virtual double ArmorRating => 0.0;
 
 		public void DropHolding()
 		{
@@ -3721,7 +3727,7 @@ namespace Server
 		///     Overridable. Returns true if the player is alive, false if otherwise. By default, this is computed by: <c>!Deleted &amp;&amp; (!Player || !Body.IsGhost)</c>
 		/// </summary>
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual bool Alive => !m_Deleted && (!m_Player || !m_Body.IsGhost); 
+		public virtual bool Alive => !m_Deleted && (!m_Player || !m_Body.IsGhost);
 
 		public virtual bool CheckSpellCast(ISpell spell)
 		{
@@ -3851,7 +3857,7 @@ namespace Server
 			return item.OnInventoryDeath(this);
 		}
 
-		public virtual bool RetainPackLocsOnDeath => true; 
+		public virtual bool RetainPackLocsOnDeath => true;
 
 		public virtual void Kill()
 		{
@@ -5165,7 +5171,7 @@ namespace Server
 
 		private List<DamageEntry> m_DamageEntries;
 
-		public List<DamageEntry> DamageEntries => m_DamageEntries; 
+		public List<DamageEntry> DamageEntries => m_DamageEntries;
 
 		public static Mobile GetDamagerFrom(DamageEntry de)
 		{
@@ -5395,7 +5401,7 @@ namespace Server
 		/// </summary>
 		public virtual void OnDamage(int amount, Mobile from, bool willKill)
 		{ }
-		
+
 		public virtual bool CanBeDamaged()
 		{
 			return !m_Blessed;
@@ -5446,7 +5452,7 @@ namespace Server
 				DisruptiveAction();
 
 				Paralyzed = false;
-				
+
 				IMount m = Mount;
 
 				if (m != null && informMount)
@@ -5459,7 +5465,7 @@ namespace Server
 						newHits +=absorbed;
 					}
 				}
-				
+
 				SendDamagePacket(from, amount);
 				OnDamage(amount, from, newHits < 0);
 
@@ -6096,7 +6102,7 @@ namespace Server
 			}
 		}
 
-		public virtual bool ShouldCheckStatTimers => true; 
+		public virtual bool ShouldCheckStatTimers => true;
 
 		public virtual void CheckStatTimers()
 		{
@@ -6204,9 +6210,9 @@ namespace Server
 		[CommandProperty(AccessLevel.GameMaster)]
 		public DateTime CreationTime => m_CreationTime;
 
-		int ISerializable.TypeReference => m_TypeRef; 
+		int ISerializable.TypeReference => m_TypeRef;
 
-		int ISerializable.SerialIdentity => m_Serial; 
+		int ISerializable.SerialIdentity => m_Serial;
 
 		public virtual void Serialize(GenericWriter writer)
 		{
@@ -6531,7 +6537,7 @@ namespace Server
 			Map = Map.Internal;
 		}
 
-		public List<Item> Items => m_Items; 
+		public List<Item> Items => m_Items;
 
 		/// <summary>
 		///     Overridable. Virtual event invoked when <paramref name="item" /> is <see cref="AddItem">added</see> from the Mobile, such as when it is equiped.
@@ -6581,7 +6587,7 @@ namespace Server
 		public virtual void OnSubItemBounceCleared(Item item)
 		{ }
 
-		public virtual int MaxWeight => int.MaxValue; 
+		public virtual int MaxWeight => int.MaxValue;
 
 		public virtual void Obtained(Item item)
 		{
@@ -6720,8 +6726,8 @@ namespace Server
                     if (state.Mobile.CanSee(this))
                     {
                         state.Mobile.ProcessDelta();
-                        
-                        p = Packet.Acquire(new NewMobileAnimation(this, type, action, Utility.Random(0, 60)));                          
+
+                        p = Packet.Acquire(new NewMobileAnimation(this, type, action, Utility.Random(0, 60)));
 
                         state.Send(p);
                     }
@@ -7453,7 +7459,7 @@ namespace Server
 		/// </summary>
 		public virtual void OnSpeech(SpeechEventArgs e)
 		{ }
-		
+
 		public void SendEverything()
 		{
 			NetState ns = m_NetState;
@@ -7880,7 +7886,7 @@ namespace Server
 		/// <summary>
 		///     Gets a list of all <see cref="StatMod">StatMod's</see> currently active for the Mobile.
 		/// </summary>
-		public List<StatMod> StatMods => m_StatMods; 
+		public List<StatMod> StatMods => m_StatMods;
 
 		public bool RemoveStatMod(string name)
 		{
@@ -8354,7 +8360,7 @@ namespace Server
 		///     </c>
 		/// </summary>
 		[CommandProperty(AccessLevel.GameMaster)]
-		public virtual int HitsMax => 50 + (Str / 2); 
+		public virtual int HitsMax => 50 + (Str / 2);
 
 		/// <summary>
 		///     Gets or sets the current stamina of the Mobile. This value ranges from 0 to <see cref="StamMax" />, inclusive.
@@ -8418,7 +8424,7 @@ namespace Server
 		///     </c>
 		/// </summary>
 		[CommandProperty(AccessLevel.GameMaster)]
-		public virtual int StamMax => Dex; 
+		public virtual int StamMax => Dex;
 
 		/// <summary>
 		///     Gets or sets the current stamina of the Mobile. This value ranges from 0 to <see cref="ManaMax" />, inclusive.
@@ -8488,12 +8494,12 @@ namespace Server
 		///     </c>
 		/// </summary>
 		[CommandProperty(AccessLevel.GameMaster)]
-		public virtual int ManaMax => Int; 
+		public virtual int ManaMax => Int;
 		#endregion
 
 		public virtual int Luck => 0;
 
-        public virtual int HuedItemID => (m_Female ? 0x2107 : 0x2106); 
+        public virtual int HuedItemID => (m_Female ? 0x2107 : 0x2106);
 
 		private int m_HueMod = -1;
 
@@ -9241,7 +9247,7 @@ namespace Server
 		{ }
 
 		#region Poison/Curing
-		public Timer PoisonTimer => m_PoisonTimer; 
+		public Timer PoisonTimer => m_PoisonTimer;
 
 		[CommandProperty(AccessLevel.GameMaster)]
 		public Poison Poison
@@ -9491,10 +9497,10 @@ namespace Server
 		{ }
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public bool Poisoned => (m_Poison != null); 
+		public bool Poisoned => (m_Poison != null);
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public bool IsBodyMod => (m_BodyMod.BodyID != 0); 
+		public bool IsBodyMod => (m_BodyMod.BodyID != 0);
 
 		[CommandProperty(AccessLevel.Decorator)]
 		public Body BodyMod
@@ -9591,7 +9597,7 @@ namespace Server
 		public int BodyValue { get { return Body.BodyID; } set { Body = value; } }
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public Serial Serial => m_Serial; 
+		public Serial Serial => m_Serial;
 
 		[CommandProperty(AccessLevel.Counselor, AccessLevel.Decorator)]
 		public Point3D Location { get { return m_Location; } set { SetLocation(value, true); } }
@@ -9762,7 +9768,7 @@ namespace Server
 
 			Point3D oldLocation = m_Location;
 			Map oldMap = m_Map;
-			
+
 			if (oldMap != null)
 			{
 				oldMap.OnLeave(this);
@@ -9826,7 +9832,7 @@ namespace Server
 				m_Region.OnLocationChanged(this, oldLocation);
 			}
 		}
-		
+
 		public virtual void SetLocation(Point3D newLocation, bool isTeleport)
 		{
 			if (m_Deleted)
@@ -9891,7 +9897,7 @@ namespace Server
 
 					eable.Free();
 
-					Packet hbpPacket = Packet.Acquire(new HealthbarPoison(this)), 
+					Packet hbpPacket = Packet.Acquire(new HealthbarPoison(this)),
 						   hbyPacket = Packet.Acquire(new HealthbarYellow(this));
 
 					Packet hbpKRPacket = Packet.Acquire(new HealthbarPoisonEC(this)),
@@ -10309,7 +10315,7 @@ namespace Server
 			}
 		}
 
-		public virtual bool KeepsItemsOnDeath => IsStaff(); 
+		public virtual bool KeepsItemsOnDeath => IsStaff();
 
 		public Item FindItemOnLayer(Layer layer)
 		{
@@ -11592,7 +11598,7 @@ namespace Server
 		}
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public virtual bool Murderer => m_Kills >= 5; 
+		public virtual bool Murderer => m_Kills >= 5;
 
 		public bool CheckAlive()
 		{
@@ -12193,7 +12199,7 @@ namespace Server
 		}
 
 		[CommandProperty(AccessLevel.Decorator)]
-		public bool Mounted => (Mount != null); 
+		public bool Mounted => (Mount != null);
 
 		private QuestArrow m_QuestArrow;
 
@@ -12216,10 +12222,10 @@ namespace Server
 
 		private static readonly string[] m_GuildTypes = new[] {"", " (Chaos)", " (Order)"};
 
-		public virtual bool CanTarget => true; 
-		public virtual bool ClickTitle => true; 
+		public virtual bool CanTarget => true;
+		public virtual bool ClickTitle => true;
 
-		public virtual bool PropertyTitle => m_OldPropertyTitles ? ClickTitle : true; 
+		public virtual bool PropertyTitle => m_OldPropertyTitles ? ClickTitle : true;
 
 		private static bool m_DisableHiddenSelfClick = true;
 		private static bool m_AsciiClickMessage = true;
@@ -12231,8 +12237,8 @@ namespace Server
 		public static bool GuildClickMessage { get { return m_GuildClickMessage; } set { m_GuildClickMessage = value; } }
 		public static bool OldPropertyTitles { get { return m_OldPropertyTitles; } set { m_OldPropertyTitles = value; } }
 
-		public virtual bool ShowFameTitle => true; 
-		public virtual bool ShowAccessTitle => false; 
+		public virtual bool ShowFameTitle => true;
+		public virtual bool ShowAccessTitle => false;
 
 		public bool CheckSkill(SkillName skill, double minSkill, double maxSkill)
 		{
@@ -12292,15 +12298,15 @@ namespace Server
 		}
 
 		#region Armor
-		public Item ShieldArmor => FindItemOnLayer(Layer.TwoHanded); 
+		public Item ShieldArmor => FindItemOnLayer(Layer.TwoHanded);
 
 		public Item NeckArmor => FindItemOnLayer(Layer.Neck);
 
-		public Item HandArmor => FindItemOnLayer(Layer.Gloves); 
+		public Item HandArmor => FindItemOnLayer(Layer.Gloves);
 
-		public Item HeadArmor => FindItemOnLayer(Layer.Helm); 
+		public Item HeadArmor => FindItemOnLayer(Layer.Helm);
 
-		public Item ArmsArmor => FindItemOnLayer(Layer.Arms); 
+		public Item ArmsArmor => FindItemOnLayer(Layer.Arms);
 
 		public Item LegsArmor
 		{
@@ -12437,10 +12443,10 @@ namespace Server
 		public bool CanHearGhosts { get { return m_CanHearGhosts || IsStaff(); } set { m_CanHearGhosts = value; } }
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public int RawStatTotal => RawStr + RawDex + RawInt; 
+		public int RawStatTotal => RawStr + RawDex + RawInt;
 
 		[CommandProperty(AccessLevel.GameMaster)]
-		public int StatTotal => Str + Dex + Int; 
+		public int StatTotal => Str + Dex + Int;
 
 		public long NextSpellTime { get; set; }
 
@@ -12457,4 +12463,3 @@ namespace Server
 		{ }
 	}
 }
-    

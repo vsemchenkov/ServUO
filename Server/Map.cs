@@ -4,10 +4,10 @@
  * Date: 20th August, 2015
  * Author: Vorspire
  * Testing: Punkte
- * 
+ *
  * Test Methods: Stealth; 250+ clients connected, all moving randomly.
  * Test Results: 35ms average latency (ping) under load.
- * 
+ *
  * Notes:
  * Until these updates become main-stream, they will remain differentiated
  * by their preprocessor directives. When they are deemed stable enough,
@@ -16,10 +16,10 @@
 
 /*
  * Map_AllUpdates
- * 
+ *
  * When defined, enables all updates listed below regardless of whether their
  * preprocessor directives are defined.
- * 
+ *
  * This can be used to compile your server with all of the updates enabled by
  * adding a single preprocessor directive definition to your build solution.
  */
@@ -27,15 +27,15 @@
 
 /*
  *	Map_NewEnumerables
- *	
+ *
  *	When defined, enables a major update to the IPooledEnumerables factory.
- *	
- *	This update removes the need for enumerator instantiation and replaces 
+ *
+ *	This update removes the need for enumerator instantiation and replaces
  *	them with simple, yet powerful Linq queries.
- *	
+ *
  *	In addition, the PooledEnumerable class is replaced with a compatible,
- *	single generic class template and takes advantage of the nature of 
- *	nested static context to ensure that a buffer pool is available for 
+ *	single generic class template and takes advantage of the nature of
+ *	nested static context to ensure that a buffer pool is available for
  *	each type of PooledEnumerable<T> result, where result is T.
  *	This update generally increases performance and reduces overall player
  *	connection latency.
@@ -44,16 +44,16 @@
 
 /*
  * UseMaxRange
- * 
+ *
  * When defined, enables a minor update that forces Get*InRange methods to
  * use Core.GlobalMaxUpdateRange, when no range is specified.
- * 
+ *
  * By default, a constant range of 18 is used however, Core.GlobalMaxUpdateRange
  * is usually greater than that with a default value of 24.
- * 
+ *
  * This update will allow things such as Effects to be displayed to more players,
  * as well as increasing the range of player sight.
- * 
+ *
  * The benefits of this update appeal to players who choose to increase the
  * dimensions of their game window beyond the client's limits.
  * (This can also be beneficial for shards that mainly target the Enhanced client)
@@ -62,31 +62,31 @@
 
 /*
  * Map_PoolFixColumn
- * 
+ *
  * When defined, enables aminor update that attempts to improve the performance
  * of Item stack fixing.
- * 
+ *
  * Item stack fixing is a feature that corrects the Z level of items that
  * are stacked on a single tile.
- * 
+ *
  * This update also uses linq to increase performance.
  */
 #define Map_PoolFixColumn
 
 /*
  * Map_InternalProtection
- * 
+ *
  * When defined, enables a minor update that protects the Internal Map from
  * potential name changes and ensures that Maps can be correctly parsed by
  * ID or Name without conflicts.
- * 
+ *
  * In some cases where the AllMaps list is modified after all Maps have been
  * defined, the Map names may be cached and that cache will become stale.
  * This update removes the caching and uses Linq to improve performance.
- * 
+ *
  * If you have issues with Map parsing where the Map returns null or an
  * unexpected Map instance, try enabling this update.
- * 
+ *
  * If your shard implements any kind of feature that modifies (adds or removes)
  * the AllMaps list, then you should enable this update.
  * If this update is not enabled in the case of the above context, issues can
@@ -400,19 +400,19 @@ namespace Server
 
 		private static readonly Map[] m_Maps = new Map[0x100];
 
-		public static Map[] Maps => m_Maps; 
+		public static Map[] Maps => m_Maps;
 
-		public static Map Felucca => m_Maps[0]; 
-		public static Map Trammel => m_Maps[1]; 
-		public static Map Ilshenar => m_Maps[2]; 
-		public static Map Malas => m_Maps[3]; 
-		public static Map Tokuno => m_Maps[4]; 
-		public static Map TerMur => m_Maps[5]; 
-		public static Map Internal => m_Maps[0x7F]; 
+		public static Map Felucca => m_Maps[0];
+		public static Map Trammel => m_Maps[1];
+		public static Map Ilshenar => m_Maps[2];
+		public static Map Malas => m_Maps[3];
+		public static Map Tokuno => m_Maps[4];
+		public static Map TerMur => m_Maps[5];
+		public static Map Internal => m_Maps[0x7F];
 
 		private static readonly List<Map> m_AllMaps = new List<Map>();
 
-		public static List<Map> AllMaps => m_AllMaps; 
+		public static List<Map> AllMaps => m_AllMaps;
 
 		private readonly int m_MapID;
 		private readonly int m_MapIndex;
@@ -918,7 +918,7 @@ namespace Server
 				{
 					return false;
 				}
-				
+
 				if (surface && !impassable && z == (t.Z + id.CalcHeight))
 				{
 					hasSurface = true;
@@ -943,7 +943,7 @@ namespace Server
 					{
 						return false;
 					}
-					
+
 					if (surface && !impassable && !item.Movable && z == (item.Z + id.CalcHeight))
 					{
 						hasSurface = true;
@@ -1166,7 +1166,7 @@ namespace Server
 
                 if (CanSpawnMobile(new Point2D(x, y), center.Z))
                     return new Point3D(x, y, center.Z);
-                
+
 				if (CanSpawnMobile(new Point2D(x, y), z))
                     return new Point3D(x, y, z);
             }
@@ -1878,13 +1878,13 @@ namespace Server
 
 		public int MapID => m_MapID;
 
-		public int MapIndex => m_MapIndex; 
+		public int MapIndex => m_MapIndex;
 
-		public int Width => m_Width; 
+		public int Width => m_Width;
 
-		public int Height => m_Height; 
+		public int Height => m_Height;
 
-		public Dictionary<string, Region> Regions => m_Regions; 
+		public Dictionary<string, Region> Regions => m_Regions;
 
 		public void RegisterRegion(Region reg)
 		{
@@ -1921,7 +1921,7 @@ namespace Server
 
 		public MapRules Rules { get; set; }
 
-		public Sector InvalidSector => m_InvalidSector; 
+		public Sector InvalidSector => m_InvalidSector;
 
 		public string Name { get; set; }
 
@@ -2077,8 +2077,8 @@ namespace Server
 				public void Reset()
 				{ }
 
-				object IEnumerator.Current => null; 
-				public K Current => default(K); 
+				object IEnumerator.Current => null;
+				public K Current => default(K);
 
 				public bool MoveNext()
 				{
@@ -2236,9 +2236,9 @@ namespace Server
 				m_Bounds = bounds;
 			}
 
-			public NetState Current => m_CurrentList[m_CurrentIndex]; 
+			public NetState Current => m_CurrentList[m_CurrentIndex];
 
-			object IEnumerator.Current => m_CurrentList[m_CurrentIndex]; 
+			object IEnumerator.Current => m_CurrentList[m_CurrentIndex];
 
 			void IDisposable.Dispose()
 			{ }
@@ -2359,9 +2359,9 @@ namespace Server
 				m_Bounds = bounds;
 			}
 
-			public IEntity Current => (IEntity)m_CurrentList[m_CurrentIndex]; 
+			public IEntity Current => (IEntity)m_CurrentList[m_CurrentIndex];
 
-			object IEnumerator.Current => m_CurrentList[m_CurrentIndex]; 
+			object IEnumerator.Current => m_CurrentList[m_CurrentIndex];
 
 			void IDisposable.Dispose()
 			{ }
@@ -2518,9 +2518,9 @@ namespace Server
 				m_Bounds = bounds;
 			}
 
-			public Item Current => m_CurrentList[m_CurrentIndex]; 
+			public Item Current => m_CurrentList[m_CurrentIndex];
 
-			object IEnumerator.Current => m_CurrentList[m_CurrentIndex]; 
+			object IEnumerator.Current => m_CurrentList[m_CurrentIndex];
 
 			void IDisposable.Dispose()
 			{ }
@@ -2640,9 +2640,9 @@ namespace Server
 				m_Bounds = bounds;
 			}
 
-			public Mobile Current => m_CurrentList[m_CurrentIndex]; 
+			public Mobile Current => m_CurrentList[m_CurrentIndex];
 
-			object IEnumerator.Current => m_CurrentList[m_CurrentIndex]; 
+			object IEnumerator.Current => m_CurrentList[m_CurrentIndex];
 
 			void IDisposable.Dispose()
 			{ }
@@ -2740,9 +2740,9 @@ namespace Server
 				m_Location = loc;
 			}
 
-			public StaticTile[] Current => m_Current; 
+			public StaticTile[] Current => m_Current;
 
-			object IEnumerator.Current => m_Current; 
+			object IEnumerator.Current => m_Current;
 
 			void IDisposable.Dispose()
 			{ }
@@ -2892,7 +2892,7 @@ namespace Server
 			{
 				return true;
 			}
-			
+
 			var xd = dest.m_X - org.m_X;
 			var yd = dest.m_Y - org.m_Y;
 			var zd = dest.m_Z - org.m_Z;
@@ -2912,7 +2912,7 @@ namespace Server
 
 			var rise = yd / sq3d;
 			var run = xd / sq3d;
-			
+
 			zslp = zd / sq3d;
 
 			var x = (double)org.m_X;
@@ -3122,7 +3122,7 @@ namespace Server
 			{
 				return true;
 			}
-			
+
 			if (dest is Item && from is Mobile && ((Item)dest).RootParent == from)
 			{
 				return true;

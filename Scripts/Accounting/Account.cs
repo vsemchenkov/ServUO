@@ -492,7 +492,7 @@ namespace Server.Accounting
 		public DateTime Created { get; set; }
 
 		[CommandProperty(AccessLevel.Administrator)]
-		public TimeSpan Age => DateTime.UtcNow - Created; 
+		public TimeSpan Age => DateTime.UtcNow - Created;
 
 		/// <summary>
 		///     Gets or sets the date and time when this account was last accessed.
@@ -583,13 +583,13 @@ namespace Server.Accounting
 		///     not supported by the client.
 		/// </summary>
 		[CommandProperty(AccessLevel.Administrator)]
-		public int Limit => (Siege.SiegeShard ? Siege.CharacterSlots : 7); 
+		public int Limit => (Siege.SiegeShard ? Siege.CharacterSlots : 7);
 
 		/// <summary>
 		///     Gets the maxmimum amount of characters that this account can hold.
 		/// </summary>
 		[CommandProperty(AccessLevel.Administrator)]
-		public int Length => m_Mobiles.Length; 
+		public int Length => m_Mobiles.Length;
 
 		/// <summary>
 		///     Gets or sets the character at a specified index for this account.
@@ -706,7 +706,7 @@ namespace Server.Accounting
 					PlainPassword = null;
 					_MD5Password = null;
 					_SHA1Password = null;
-                    _SHA512Password = HashSHA512(Username + plainPassword); 
+                    _SHA512Password = HashSHA512(Username + plainPassword);
 				}
 					break;
 			}
@@ -1615,7 +1615,7 @@ namespace Server.Accounting
 		///     One Platinum represents the value of CurrencyThreshold in Gold.
 		/// </summary>
 		[CommandProperty(AccessLevel.Administrator)]
-		public int TotalPlat => (int)Math.Truncate(TotalCurrency); 
+		public int TotalPlat => (int)Math.Truncate(TotalCurrency);
 
 		/// <summary>
 		///     Attempts to deposit the given amount of Gold and Platinum into this account.
@@ -1918,7 +1918,7 @@ namespace Server.Accounting
         /// <summary>
         ///     Sovereigns which can be used at the shard owners disposal. On EA, they are used for curerncy with the Ultima Store
         /// </summary>
-        [CommandProperty(AccessLevel.Administrator, true)]
+        [CommandProperty(AccessLevel.Administrator)]
         public int Sovereigns { get; private set; }
 
         public void SetSovereigns(int amount)

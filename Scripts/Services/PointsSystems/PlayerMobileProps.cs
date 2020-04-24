@@ -235,6 +235,32 @@ namespace Server.Mobiles
             }
         }
 
+        [CommandProperty(AccessLevel.Administrator)]
+        public double PvMPoints
+        {
+            get
+            {
+                return (int)PointsSystem.PvMPoints.GetPoints(Player);
+            }
+            set
+            {
+                PointsSystem.PvMPoints.SetPoints(Player, value);
+            }
+        }
+
+        [CommandProperty(AccessLevel.Administrator)]
+        public double PvPPoints
+        {
+            get
+            {
+                return (int)PointsSystem.PvPPoints.GetPoints(Player);
+            }
+            set
+            {
+                PointsSystem.PvPPoints.SetPoints(Player, value);
+            }
+        }
+
         private CityLoyaltyProps _CityLoyaltyProps;
 
         [CommandProperty(AccessLevel.GameMaster)]

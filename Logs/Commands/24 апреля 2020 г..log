@@ -1,0 +1,206 @@
+##############################
+Log started on 24.04.2020 9:51:20
+
+##############################
+Log started on 24.04.2020 9:53:36
+
+##############################
+Log started on 24.04.2020 9:54:45
+
+##############################
+Log started on 24.04.2020 10:00:17
+
+##############################
+Log started on 24.04.2020 10:01:36
+
+##############################
+Log started on 24.04.2020 10:04:32
+
+##############################
+Log started on 24.04.2020 10:05:44
+
+##############################
+Log started on 24.04.2020 10:06:27
+
+##############################
+Log started on 24.04.2020 10:08:02
+
+##############################
+Log started on 24.04.2020 10:12:16
+
+##############################
+Log started on 24.04.2020 10:13:04
+
+##############################
+Log started on 24.04.2020 10:15:27
+
+##############################
+Log started on 24.04.2020 10:17:55
+
+##############################
+Log started on 24.04.2020 10:18:55
+
+24.04.2020 10:19:15: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:19:31: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '999'
+24.04.2020 10:23:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:23:56: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '674'
+24.04.2020 10:24:21: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '420'
+24.04.2020 10:24:37: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '315'
+24.04.2020 10:25:17: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '225'
+24.04.2020 10:25:33: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '150'
+24.04.2020 10:25:50: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '90'
+24.04.2020 10:25:59: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '45'
+24.04.2020 10:26:10: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '15'
+24.04.2020 10:26:22: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '1'
+24.04.2020 10:26:32: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PvPPoints' of ... to '0'
+24.04.2020 10:27:04: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:27:39: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'ToggleMiningGem' of 0x197 "GM" ('admin') to 'True'
+24.04.2020 10:32:03: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add wyvern'
+24.04.2020 10:32:04: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (1443, 1699, 0) in Felucca: "wyvern"
+24.04.2020 10:32:05: 192.168.1.64: Serials: 0x1F8; 
+24.04.2020 10:32:07: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 10:32:09: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1F8 "a wyvern" (no account)
+24.04.2020 10:32:17: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+##############################
+Log started on 24.04.2020 10:36:56
+
+24.04.2020 10:37:33: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+24.04.2020 10:37:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+24.04.2020 10:37:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (1436, 1572, 30) in Felucca: "banker"
+24.04.2020 10:37:56: 192.168.1.64: Serials: 0x1F8; 
+24.04.2020 10:38:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 10:38:10: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1F8 "Bert" (no account)
+24.04.2020 10:38:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'walkto '
+24.04.2020 10:40:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'go britain'
+24.04.2020 10:41:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'm tele'
+24.04.2020 10:42:22: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:47:13: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:48:31: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add etheral'
+24.04.2020 10:48:42: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5454, 547, 60) in Felucca: "EtherealAncientHellHound"
+24.04.2020 10:48:42: 192.168.1.64: Serials: 0x40002015; 
+24.04.2020 10:54:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:55:54: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5454, 548, 60) in Felucca: "EtherealCuSidhe"
+24.04.2020 10:55:54: 192.168.1.64: Serials: 0x40002021; 
+24.04.2020 10:56:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 10:56:09: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40002021 (EtherealCuSidhe)
+24.04.2020 10:56:14: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add ethera'
+24.04.2020 10:56:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5455, 548, 60) in Felucca: "EtherealLasher"
+24.04.2020 10:56:37: 192.168.1.64: Serials: 0x40002023; 
+24.04.2020 10:57:06: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:58:29: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5455, 549, 60) in Felucca: "EtherealReptalon"
+24.04.2020 10:58:29: 192.168.1.64: Serials: 0x40002025; 
+24.04.2020 10:58:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 10:59:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5456, 547, 60) in Felucca: "EtherealRetouchingTool"
+24.04.2020 10:59:37: 192.168.1.64: Serials: 0x40002027; 
+24.04.2020 11:00:34: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5456, 548, 60) in Felucca: "EtherealSoulbinder"
+24.04.2020 11:00:34: 192.168.1.64: Serials: 0x40002029; 
+24.04.2020 11:00:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5456, 547, 60) in Felucca: "EtherealSoulcleanser"
+24.04.2020 11:00:53: 192.168.1.64: Serials: 0x4000202B; 
+24.04.2020 11:01:21: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5457, 547, 60) in Felucca: "EtherealTarantula"
+24.04.2020 11:01:21: 192.168.1.64: Serials: 0x4000202C; 
+24.04.2020 11:01:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:01:37: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x4000202B (EtherealSoulcleanser)
+24.04.2020 11:01:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:01:39: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x40002023 (EtherealLasher)
+24.04.2020 11:01:45: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:02:38: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5458, 546, 60) in Felucca: "EtherealTiger"
+24.04.2020 11:02:38: 192.168.1.64: Serials: 0x40002031; 
+24.04.2020 11:02:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:03:39: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5457, 547, 60) in Felucca: "EtherealSand"
+24.04.2020 11:03:39: 192.168.1.64: Serials: 0x40002033; 
+24.04.2020 11:03:56: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5458, 546, 60) in Felucca: "EtherealUnicorn"
+24.04.2020 11:03:56: 192.168.1.64: Serials: 0x40002035; 
+24.04.2020 11:04:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:05:00: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5458, 546, 60) in Felucca: "EtherealVoyageScroll"
+24.04.2020 11:05:00: 192.168.1.64: Serials: 0x40002037; 
+24.04.2020 11:05:16: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5457, 546, 60) in Felucca: "EtherealWarBoar"
+24.04.2020 11:05:16: 192.168.1.64: Serials: 0x40002038; 
+24.04.2020 11:05:24: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:06:13: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5457, 546, 60) in Felucca: "EtherealWarrior"
+24.04.2020 11:06:13: 192.168.1.64: Serials: 0x1F9; 
+24.04.2020 11:06:20: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5456, 547, 60) in Felucca: "EtherealWarriorCostume"
+24.04.2020 11:06:20: 192.168.1.64: Serials: 0x40002045; 
+24.04.2020 11:06:42: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:06:44: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1F9 "Jesurian" (no account)
+24.04.2020 11:06:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add dragon'
+24.04.2020 11:06:53: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5457, 546, 60) in Felucca: "dragon"
+24.04.2020 11:06:53: 192.168.1.64: Serials: 0x205; 
+24.04.2020 11:06:58: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:07:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:07:48: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'TransparentMountedID' of 0x40002038 (EtherealWarBoar) to '12'
+24.04.2020 11:08:08: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:08:23: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'TransparentMountedID' of 0x400024D4 (GMEthereal) to '12'
+24.04.2020 11:08:34: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:08:35: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x205 "a dragon" (no account)
+24.04.2020 11:08:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+24.04.2020 11:08:56: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+24.04.2020 11:15:40: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add cocun'
+24.04.2020 11:16:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'dismount '
+24.04.2020 11:16:30: 192.168.1.64: Owner 0x197 "GM" ('admin') dismounting 0x197 "GM" ('admin')
+24.04.2020 11:17:10: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:17:38: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:18:12: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'ItemID' of 0x483 "Coconut Crab" (no account) to '16083'
+24.04.2020 11:18:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:19:46: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:21:20: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:21:23: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:21:23: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x484 "Eowmu" (no account)
+24.04.2020 11:21:29: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:21:57: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:22:26: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:22:48: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add tarantu'
+24.04.2020 11:22:50: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (5454, 549, 60) in Felucca: "EtherealTarantula"
+24.04.2020 11:22:50: 192.168.1.64: Serials: 0x40002087; 
+24.04.2020 11:22:52: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:22:55: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x485 "Skeletal Cat" (no account)
+24.04.2020 11:23:07: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'dismount '
+24.04.2020 11:23:09: 192.168.1.64: Owner 0x197 "GM" ('admin') dismounting 0x197 "GM" ('admin')
+24.04.2020 11:23:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:23:17: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x483 "Coconut Crab" (no account)
+##############################
+Log started on 24.04.2020 11:24:32
+
+24.04.2020 11:24:54: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'gmbody '
+24.04.2020 11:24:55: 192.168.1.64: Owner 0x197 "GM" ('admin') is assuming a GM body
+24.04.2020 11:25:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get hue'
+24.04.2020 11:25:27: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'get hue 0x455'
+24.04.2020 11:25:37: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 11:25:49: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'viewequip '
+24.04.2020 11:25:50: 192.168.1.64: Owner 0x197 "GM" ('admin') viewing equipment of 0x197 "GM" ('admin')
+24.04.2020 11:26:01: 192.168.1.64: Owner 0x197 "GM" ('admin') opening properties for equipment item 0x40001FAE (GMEthereal) of 0x197 "GM" ('admin')
+24.04.2020 11:26:13: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'StatueHue' of 0x40001FAE (GMEthereal) to '1109'
+24.04.2020 11:26:27: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'TransparentMountedHue' of 0x40001FAE (GMEthereal) to '1109'
+24.04.2020 11:41:10: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+24.04.2020 11:41:12: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (1428, 1696, 0) in Felucca: "banker"
+24.04.2020 11:41:12: 192.168.1.64: Serials: 0x1F8; 
+24.04.2020 11:41:16: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'remove '
+24.04.2020 11:41:18: 192.168.1.64: Owner 0x197 "GM" ('admin') deleting 0x1F8 "Quillan" (no account)
+24.04.2020 11:41:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'tele '
+24.04.2020 11:41:28: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+24.04.2020 11:41:36: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'add banker'
+24.04.2020 11:41:37: 192.168.1.64: Owner 0x197 "GM" ('admin') building at (1431, 1686, 0) in Felucca: "banker"
+24.04.2020 11:41:37: 192.168.1.64: Serials: 0x4AF; 
+24.04.2020 11:45:55: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'save '
+##############################
+Log started on 24.04.2020 11:48:29
+
+##############################
+Log started on 24.04.2020 11:51:57
+
+##############################
+Log started on 24.04.2020 11:56:43
+
+##############################
+Log started on 24.04.2020 12:18:06
+
+24.04.2020 12:18:47: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 12:19:08: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PlayerLevel' of 0x197 "GM" ('admin') to '2'
+24.04.2020 12:19:16: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PlayerLevel' of 0x197 "GM" ('admin') to '12'
+##############################
+Log started on 24.04.2020 12:23:07
+
+##############################
+Log started on 24.04.2020 12:26:10
+
+24.04.2020 12:26:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
+24.04.2020 12:26:37: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PlayerLevel' of 0x197 "GM" ('admin') to '10'

@@ -103,22 +103,22 @@ namespace Server.Gumps
 
             AddImage(5, 200, 1520);
             // Issue a checks
-            AddHtmlLocalized(170, 295, 420, 16, 3000285, "#1156076", 1, false, false); // Bank checks
+            AddHtmlLocalized(170, 295, 420, 16, 1061048, "#1156076", 1, false, false); // Bank checks
             // 1kk check
             AddButton(20, 320, 2151, 2153, 8, GumpButtonType.Reply, 0);
-            AddHtmlLocalized(60, 327, 300, 16, 3000286, "1kk check", TextColor, false,
+            AddHtmlLocalized(60, 327, 300, 16, 1061184, "1kk check", TextColor, false,
                 false); // Withdraw Gold from Secure Account
             // 500k check
             AddButton(20, 350, 2151, 2153, 9, GumpButtonType.Reply, 0);
-            AddHtmlLocalized(60, 357, 300, 16, 3000287, "500k check", TextColor, false,
+            AddHtmlLocalized(60, 357, 300, 16, 1061185, "500k check", TextColor, false,
                 false); // Withdraw Gold from Secure Account
             // 200k check
             AddButton(20, 380, 2151, 2153, 10, GumpButtonType.Reply, 0);
-            AddHtmlLocalized(60, 387, 300, 16, 3000288, "200k check", TextColor, false,
+            AddHtmlLocalized(60, 387, 300, 16, 1061186, "200k check", TextColor, false,
                 false); // Withdraw Gold from Secure Account
             // 100k check
             AddButton(20, 410, 2151, 2153, 11, GumpButtonType.Reply, 0);
-            AddHtmlLocalized(60, 417, 300, 16, 3000289, "100k check", TextColor, false,
+            AddHtmlLocalized(60, 417, 300, 16, 1061187, "100k check", TextColor, false,
                 false); // Withdraw Gold from Secure Account
         }
 
@@ -155,6 +155,8 @@ namespace Server.Gumps
                                             Gold Golds = new Gold();
                                             var golds = from.Backpack.FindItemsByType<Gold>(true);
 
+
+
                                             Console.WriteLine(golds.Count);
                                             Console.WriteLine(golds);
 
@@ -165,7 +167,7 @@ namespace Server.Gumps
                                             }
 
                                             Banker.Deposit(from, v, true);
-
+                                            // ((PlayerMobile) from).AccountSovereigns;
 
                                             for (var i = 0; v > 0 && i < golds.Count; ++i)
                                             {

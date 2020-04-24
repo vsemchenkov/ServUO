@@ -1,0 +1,24 @@
+# 22.04.2020 19:58:08
+Offending Mobile: Server.Mobiles.Necromancer [0x4B0 "Dannik"]
+Offending Item: 0x40016E39 "Shoes" [Server.Items.Shoes]
+Equipped Item: 0x40016E35 "Shoes" [Server.Items.Shoes]
+Layer: Shoes
+
+# 22.04.2020 19:58:08
+Offending Mobile: Server.Mobiles.Necromancer [0x4B0 "Dannik"]
+Offending Item: 0x40016E3B "FancyShirt" [Server.Items.FancyShirt]
+Equipped Item: 0x40016E34 "Shirt" [Server.Items.Shirt]
+Layer: Shirt
+
+# 22.04.2020 20:00:56
+Offending Mobile: Server.Mobiles.Necromancer [0x4B1 "Manning"]
+Offending Item: 0x40016E48 "Shoes" [Server.Items.Shoes]
+Equipped Item: 0x40016E44 "Shoes" [Server.Items.Shoes]
+Layer: Shoes
+
+# 22.04.2020 20:00:56
+Offending Mobile: Server.Mobiles.Necromancer [0x4B1 "Manning"]
+Offending Item: 0x40016E4A "FancyShirt" [Server.Items.FancyShirt]
+Equipped Item: 0x40016E43 "Shirt" [Server.Items.Shirt]
+Layer: Shirt
+

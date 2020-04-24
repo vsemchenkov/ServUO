@@ -36,14 +36,42 @@
     <RootNamespace>Server</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MessageFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Jigar.CustomFramework.1.0.8\lib\netstandard1.6\MessageFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessageFramework.BAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Jigar.CustomFramework.1.0.8\lib\netstandard1.6\MessageFramework.BAL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessageFramework.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Jigar.CustomFramework.1.0.8\lib\netstandard1.6\MessageFramework.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessageFramework.DAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Jigar.CustomFramework.1.0.8\lib\netstandard1.6\MessageFramework.DAL.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MessageFramework.Model, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Jigar.CustomFramework.1.0.8\lib\netstandard1.6\MessageFramework.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\System.Xml.Linq.3.5.21022.801\lib\net20\System.Xml.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abilities\ColdWind.cs" />
@@ -254,6 +282,7 @@
     <Compile Include="Commands\VisibilityList.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Commands\WalkTo.cs" />
 	  <Compile Include="Commands\WhatIsIt.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -560,6 +589,7 @@
     <Compile Include="Items\Functional\CylinderTrapTrainingKit.cs" />
     <Compile Include="Items\Functional\SliderTrapTrainingKit.cs" />
     <Compile Include="Items\Functional\StrangeContraption.cs" />
+    <Compile Include="Items\GMItem\GMRobe.cs" />
     <Compile Include="Items\Internal\ItemSockets\SearingWeapon.cs" />
     <Compile Include="Items\Quest\RewardBooks.cs" />
     <Compile Include="Items\Resource\FocusingGemOfVirtueBane.cs" />
@@ -721,6 +751,16 @@
     <Compile Include="Items\Resource\PolishedMeteorite.cs" />
     <Compile Include="Items\StoreBought\MysticalPolymorphTotem.cs" />
     <Compile Include="Items\Tools\WhiteLeatherDyeTub.cs" />
+    <Compile Include="Items\Travel\GuildTravelStone.cs" />
+    <Compile Include="Items\Travel\Traveler\FeluccaTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\IlshenarTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\MalasTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\ShardTravelGump.cs" />
+    <Compile Include="Items\Travel\Traveler\TerMurTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\TokunoTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\TrammelTravelMap.cs" />
+    <Compile Include="Items\Travel\Traveler\TravelHelpers.cs" />
+    <Compile Include="Items\Travel\TravelStone.cs" />
     <Compile Include="Misc\Aggression.cs" />
     <Compile Include="Misc\ArchivedSaves.cs" />
     <Compile Include="Misc\Replacer.cs" />
@@ -746,6 +786,8 @@
     <Compile Include="Mobiles\NPCs\Mannequin\Property\SlayerAttribute.cs" />
     <Compile Include="Mobiles\NPCs\Mannequin\Property\WeaponAttributeProperty.cs" />
     <Compile Include="Services\Expansions\High Seas\Multis\GalleonItem.cs" />
+    <Compile Include="Services\PointsSystems\PvMPoints.cs" />
+    <Compile Include="Services\PointsSystems\PvPPoints.cs" />
     <Compile Include="Services\Seasonal Events\ForsakenFoes\Mobile\MiningCooperativeMerchant.cs" />
     <Compile Include="Mobiles\NPCs\CommissionPlayerVendor.cs" />
     <Compile Include="Multis\ContestHouses.cs" />
@@ -9700,6 +9742,8 @@
     <Compile Include="Services\Seasonal Events\TreasuresOfTokuno\TreasuresOfTokuno.cs" />
     <Compile Include="Services\Seasonal Events\TreasuresOfTokuno\TreasuresOfTokunoPersistence.cs" />
     <Compile Include="Services\Spawner\SpawnObject.cs" />
+    <Compile Include="Services\Status\StatusPlayer.cs" />
+    <Compile Include="Services\Status\StatusPlayerGump.cs" />
     <Compile Include="Services\Tomb of Kings\Arisen Invasion\ArisenController.cs" />
     <Compile Include="Services\Tomb of Kings\Chambers\Chamber.cs" />
     <Compile Include="Services\Tomb of Kings\Chambers\ChamberBarrier.cs" />
@@ -11503,7 +11547,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Services\TreasureMaps\desktop.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Custom" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.targets" />
   <ProjectExtensions>

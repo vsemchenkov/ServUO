@@ -46,6 +46,9 @@ namespace Server.Engines.Points
                 y += 45;
             }
 
+            AddHtmlLocalized(50, 245, 150, 20, 1061055, pm.PointSystems.PvMPoints.ToString(), 0, false, false); // PvM Points:
+            AddHtmlLocalized(50, 265, 150, 20, 1061051, pm.PointSystems.PvPPoints.ToString(), 0, false, false); // PvP Points:
+
             AddHtmlLocalized(50, 285, 150, 20, 1115129, pm.Fame.ToString(), 0, false, false); // Fame: ~1_AMT~
             AddHtmlLocalized(50, 305, 150, 20, 1115130, pm.Karma.ToString(), 0, false, false); // Karma: ~1_AMT~}
 
