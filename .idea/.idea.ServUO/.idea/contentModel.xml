@@ -144,7 +144,6 @@
           <e p="SimpleContextMenuEntry.cs" t="Include" />
           <e p="TeachEntry.cs" t="Include" />
         </e>
-        <e p="Custom" t="Include" />
         <e p="Gumps" t="Include">
           <e p="AddCustomizableMessageGump.cs" t="Include" />
           <e p="AddDoorGump.cs" t="Include" />
@@ -4173,6 +4172,27 @@
           <e p="PreviewHouse.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
+        <e p="OrbRemoteServer" t="Include">
+          <e p="ExportMobiles.txt" t="Include" />
+          <e p="MetalDoors.cs" t="Include" />
+          <e p="OrbServer.cs" t="Include" />
+          <e p="SEDoors.cs" t="Include" />
+          <e p="UOArchitect" t="Include">
+            <e p="BaseOrbToolRequest.cs" t="Include" />
+            <e p="BoundingBoxEx.cs" t="Include" />
+            <e p="BuildDesignRequest.cs" t="Include" />
+            <e p="BuildDesignTarget Backup.txt" t="Include" />
+            <e p="BuildDesignTarget.cs" t="Include" />
+            <e p="ClientCommands.cs" t="Include" />
+            <e p="DeleteItemsCommand.cs" t="Include" />
+            <e p="ExtractItemsRequest.cs" t="Include" />
+            <e p="GetLocationRequest.cs" t="Include" />
+            <e p="MobileSaver.cs" t="Include" />
+            <e p="MoveItemsCommand.cs" t="Include" />
+            <e p="SelectItemsRequest.cs" t="Include" />
+            <e p="UOAR_ObjectTarget.cs" t="Include" />
+          </e>
+        </e>
         <e p="Output" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
         <e p="Quests" t="Include">

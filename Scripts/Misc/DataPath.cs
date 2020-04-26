@@ -43,7 +43,7 @@ namespace Server.Misc
 		}
 
         /* The following is a list of files which a required for proper execution:
-        * 
+        *
         * Multi.idx
         * Multi.mul
         * VerData.mul
@@ -63,15 +63,15 @@ namespace Server.Misc
 			{
 				Console.WriteLine("Enter the Ultima Online directory:");
 	            Console.Write("> ");
-	
-	            Core.DataDirectories.Add(Console.ReadLine());
+
+	            Core.DataDirectories.Add("./uo");
 			}
-	
+
 			foreach (var path in Core.DataDirectories)
 			{
 				Files.SetMulPath(path);
 			}
-		
+
 			Utility.PushColor(ConsoleColor.DarkYellow);
 			Console.WriteLine("DataPath: " + Core.DataDirectories[0]);
 			Utility.PopColor();

@@ -2,44 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af0b22d-c7e0-4922-aecd-c8f1b5b71c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/Chat/26 апреля 2020 г..log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/Commands/26 апреля 2020 г..log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ultima1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/16 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/16 апреля 2020 г..log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/Server.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Server.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Assemblies.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Assemblies.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/General.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/General.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Commands/16 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/16 апреля 2020 г..log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scripts.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServUO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ServUO.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ultima.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Ultima.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +28,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Cannon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Misc/DataPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/OrbRemoteServer/UOArchitect/MobileSaver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Multis/Deeds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/FireCasino/CasinoGumps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Multis/HousePlacement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Multis/Houses.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Resource/AbyssalCloth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server/ObjectPropertyList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Services/FireCasino/CasinoGumps.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Cannon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Server/ScriptCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Multis/Deeds.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -66,6 +49,8 @@
         <option value="$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" />
         <option value="$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" />
         <option value="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" />
+        <option value="$PROJECT_DIR$/Scripts/OrbRemoteServer/UOArchitect/MobileSaver.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" />
       </list>
     </option>
   </component>
@@ -156,6 +141,7 @@
       <workItem from="1587042033663" duration="6133000" />
       <workItem from="1587054081919" duration="3612000" />
       <workItem from="1587060933402" duration="11325000" />
+      <workItem from="1587866685433" duration="632000" />
     </task>
     <servers />
   </component>
