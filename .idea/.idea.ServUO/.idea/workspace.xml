@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af0b22d-c7e0-4922-aecd-c8f1b5b71c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Logs/Chat/26 апреля 2020 г..log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/Commands/26 апреля 2020 г..log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ultima1.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/Server.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Config/Server.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Assemblies.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Assemblies.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/General.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/General.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ServUO.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ServUO.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ultima.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Ultima.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +128,7 @@
       <workItem from="1587042033663" duration="6133000" />
       <workItem from="1587054081919" duration="3612000" />
       <workItem from="1587060933402" duration="11325000" />
-      <workItem from="1587866685433" duration="632000" />
+      <workItem from="1587866685433" duration="1110000" />
     </task>
     <servers />
   </component>
