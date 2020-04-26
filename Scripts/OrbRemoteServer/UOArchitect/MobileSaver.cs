@@ -87,19 +87,19 @@ namespace Server
 			ConversionTable.Add( typeof( Actor ) );
 			ConversionTable.Add( typeof( Artist ) );
 			ConversionTable.Add( typeof( Banker ) );
-			ConversionTable.Add( typeof( BrideGroom ) );
-			ConversionTable.Add( typeof( EscortableMage ) );
+			// ConversionTable.Add( typeof( BrideGroom ) );
+			// ConversionTable.Add( typeof( EscortableMage ) );
 			ConversionTable.Add( typeof( Gypsy ) );
 			ConversionTable.Add( typeof( HarborMaster ) );
-			ConversionTable.Add( typeof( Merchant ) );
-			ConversionTable.Add( typeof( Messenger ) );
+			// ConversionTable.Add( typeof( Merchant ) );
+			// ConversionTable.Add( typeof( Messenger ) );
 			ConversionTable.Add( typeof( Minter ) );
 			ConversionTable.Add( typeof( Ninja ) );
-			ConversionTable.Add( typeof( Noble ) );
-			ConversionTable.Add( typeof( Peasant ) );
+			// ConversionTable.Add( typeof( Noble ) );
+			// ConversionTable.Add( typeof( Peasant ) );
 			ConversionTable.Add( typeof( Samurai ) );
 			ConversionTable.Add( typeof( Sculptor ) );
-			ConversionTable.Add( typeof( SeekerOfAdventure ) );
+			// ConversionTable.Add( typeof( SeekerOfAdventure ) );
 			ConversionTable.Add( typeof( TownCrier ) );
 			// Guards
 			ConversionTable.Add( typeof( ArcherGuard ) );
@@ -107,7 +107,7 @@ namespace Server
 			// Healers
 			ConversionTable.Add( typeof( EvilHealer ) );
 			ConversionTable.Add( typeof( EvilWanderingHealer ) );
-			ConversionTable.Add( typeof( FortuneTeller ) );
+			// ConversionTable.Add( typeof( FortuneTeller ) );
 			ConversionTable.Add( typeof( Healer ) );
 			ConversionTable.Add( typeof( PricedHealer ) );
 			ConversionTable.Add( typeof( WanderingHealer ) );
@@ -175,10 +175,10 @@ namespace Server
 			ConversionTable.Add( typeof( SwampDragon ) );
 			ConversionTable.Add( typeof( Unicorn ) );
 			// Animals Mounts War Horses
-			ConversionTable.Add( typeof( CoMWarHorse ) );
-			ConversionTable.Add( typeof( MinaxWarHorse ) );
-			ConversionTable.Add( typeof( SLWarHorse ) );
-			ConversionTable.Add( typeof( TBWarHorse ) );
+			// ConversionTable.Add( typeof( CoMWarHorse ) );
+			// ConversionTable.Add( typeof( MinaxWarHorse ) );
+			// ConversionTable.Add( typeof( SLWarHorse ) );
+			// ConversionTable.Add( typeof( TBWarHorse ) );
 			// Animals Reptiles
 			ConversionTable.Add( typeof( Alligator ) );
 			ConversionTable.Add( typeof( GiantSerpent ) );
@@ -202,16 +202,16 @@ namespace Server
 			ConversionTable.Add( typeof( Dog ) );
 			ConversionTable.Add( typeof( Rat ) );
 			#endregion
-			
+
 			#region Special
 			ConversionTable.Add( typeof( Barracoon ) );
-			ConversionTable.Add( typeof( ChaosGuard ) );
+			// ConversionTable.Add( typeof( ChaosGuard ) );
 			ConversionTable.Add( typeof( Harrower ) );
 			ConversionTable.Add( typeof( HarrowerTentacles ) );
 			ConversionTable.Add( typeof( LordOaks ) );
 			ConversionTable.Add( typeof( Mephitis ) );
 			ConversionTable.Add( typeof( Neira ) );
-			ConversionTable.Add( typeof( OrderGuard ) );
+			// ConversionTable.Add( typeof( OrderGuard ) );
 			ConversionTable.Add( typeof( Rikktor ) );
 			ConversionTable.Add( typeof( Semidar ) );
 			ConversionTable.Add( typeof( Serado ) );
@@ -342,7 +342,7 @@ namespace Server
 				return null;
 
 			Spawner spawner = new Spawner();
-			spawner.SpawnNames.Add( t.ToString() );
+			// spawner.SpawnNames.Add( t.ToString() );
 			spawner.Running = true;
 			spawner.HomeRange = 0;
 			spawner.WalkingRange = 4;
