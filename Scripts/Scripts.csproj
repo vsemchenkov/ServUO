@@ -785,6 +785,21 @@
     <Compile Include="Mobiles\NPCs\Mannequin\Property\SkillBonusAttribute.cs" />
     <Compile Include="Mobiles\NPCs\Mannequin\Property\SlayerAttribute.cs" />
     <Compile Include="Mobiles\NPCs\Mannequin\Property\WeaponAttributeProperty.cs" />
+    <Compile Include="OrbRemoteServer\MetalDoors.cs" />
+    <Compile Include="OrbRemoteServer\OrbServer.cs" />
+    <Compile Include="OrbRemoteServer\SEDoors.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\BaseOrbToolRequest.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\BoundingBoxEx.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\BuildDesignRequest.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\BuildDesignTarget.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\ClientCommands.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\DeleteItemsCommand.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\ExtractItemsRequest.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\GetLocationRequest.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\MobileSaver.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\MoveItemsCommand.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\SelectItemsRequest.cs" />
+    <Compile Include="OrbRemoteServer\UOArchitect\UOAR_ObjectTarget.cs" />
     <Compile Include="Services\Expansions\High Seas\Multis\GalleonItem.cs" />
     <Compile Include="Services\PointsSystems\PvMPoints.cs" />
     <Compile Include="Services\PointsSystems\PvPPoints.cs" />
@@ -11530,6 +11545,8 @@
     <Compile Include="VendorInfo\VendorInventory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="OrbRemoteServer\ExportMobiles.txt" />
+    <Content Include="OrbRemoteServer\UOArchitect\BuildDesignTarget Backup.txt" />
     <Content Include="Services\LootGeneration\RunicReforging\ReadMe.txt" />
     <Content Include="Services\New Magincia\ReadMe.txt" />
     <Content Include="Services\Revamped Dungeons\DespiseRevamped\Read Me.txt" />
@@ -11549,9 +11566,6 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Services\TreasureMaps\desktop.ini" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Custom" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.targets" />
   <ProjectExtensions>
