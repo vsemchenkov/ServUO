@@ -11,19 +11,22 @@ using Server.Network;
 namespace Server.Regions
 {
     public class DamagingRegion : MondainRegion
-    { 
+    {
 		private Dictionary<Mobile, Timer> m_Table;
 
-		public Dictionary<Mobile, Timer> Table => m_Table; 
+		public Dictionary<Mobile, Timer> Table => m_Table;
 
-		public virtual int EnterMessage => 0; 
-		public virtual int EnterSound => 0; 
+		public virtual int EnterMessage => 0;
+		public virtual int EnterSound => 0;
 
-		public virtual TimeSpan DamageInterval => TimeSpan.FromSeconds(1); 
+		public virtual TimeSpan DamageInterval => TimeSpan.FromSeconds(1);
 
         public DamagingRegion(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
 		{ }
+
+
+
 
         public override void OnEnter(Mobile m)
         {
@@ -74,7 +77,7 @@ namespace Server.Regions
 			{
 				m_Table = new Dictionary<Mobile, Timer>();
 			}
-				
+
 			Timer t;
 
 			if (m_Table.TryGetValue(m, out t) && t != null)
@@ -146,10 +149,10 @@ namespace Server.Regions
     }
 
     public class CrystalField : DamagingRegion
-    {		
+    {
 		public override int EnterMessage => 1072396; // An electric wind chills your blood, making it difficult to traverse the cave unharmed.
 
-		public override int EnterSound => 0x22F; 
+		public override int EnterSound => 0x22F;
 
         public CrystalField(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -158,13 +161,13 @@ namespace Server.Regions
 		protected override void OnDamage(Mobile m)
         {
 			base.OnDamage(m);
-			
+
             AOS.Damage(m, Utility.Random(2, 6), 0, 0, 100, 0, 0);
         }
     }
 
     public class IcyRiver : DamagingRegion
-    { 
+    {
         public IcyRiver(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
 		{ }
@@ -185,8 +188,8 @@ namespace Server.Regions
     }
 
     public class PoisonedSemetery : DamagingRegion
-    { 
-		public override TimeSpan DamageInterval => TimeSpan.FromSeconds(5); 
+    {
+		public override TimeSpan DamageInterval => TimeSpan.FromSeconds(5);
 
         public PoisonedSemetery(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -195,7 +198,7 @@ namespace Server.Regions
 		protected override void OnDamage(Mobile m)
         {
 			base.OnDamage(m);
-			
+
             m.FixedParticles(0x36B0, 1, 14, 0x26BB, 0x3F, 0x7, EffectLayer.Waist);
             m.PlaySound(0x229);
 
@@ -204,8 +207,8 @@ namespace Server.Regions
     }
 
     public class PoisonedTree : DamagingRegion
-    { 
-		public override TimeSpan DamageInterval => TimeSpan.FromSeconds(1); 
+    {
+		public override TimeSpan DamageInterval => TimeSpan.FromSeconds(1);
 
         public PoisonedTree(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -214,34 +217,34 @@ namespace Server.Regions
 		protected override void OnDamage(Mobile m)
         {
 			base.OnDamage(m);
-			
+
             m.FixedEffect(0x374A, 1, 17);
             m.PlaySound(0x1E1);
             m.LocalOverheadMessage(MessageType.Regular, 0x21, 1074165); // You feel dizzy from a lack of clear air
-				
+
 			var mod = (int)(m.Str * 0.1);
-				
+
             if (mod > 10)
 			{
                 mod = 10;
 			}
-					
+
             m.AddStatMod(new StatMod(StatType.Str, "Poisoned Tree Str", mod * -1, TimeSpan.FromSeconds(1)));
-			
+
             mod = (int)(m.Int * 0.1);
-			
+
             if (mod > 10)
 			{
                 mod = 10;
 			}
-				
+
             m.AddStatMod(new StatMod(StatType.Int, "Poisoned Tree Int", mod * -1, TimeSpan.FromSeconds(1)));
         }
     }
 
     public class ParoxysmusBossEntry : DamagingRegion
     {
-        public override TimeSpan DamageInterval => TimeSpan.FromSeconds(2); 
+        public override TimeSpan DamageInterval => TimeSpan.FromSeconds(2);
 
         public ParoxysmusBossEntry(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -274,7 +277,7 @@ namespace Server.Regions
 
     public class AcidRiver : DamagingRegion
     {
-        public override TimeSpan DamageInterval => TimeSpan.FromSeconds(2); 
+        public override TimeSpan DamageInterval => TimeSpan.FromSeconds(2);
 
         public AcidRiver(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -321,7 +324,7 @@ namespace Server.Regions
 
     public class TheLostCityEntry : DamagingRegion
     {
-        public override TimeSpan DamageInterval => TimeSpan.FromMilliseconds(500); 
+        public override TimeSpan DamageInterval => TimeSpan.FromMilliseconds(500);
 
         public TheLostCityEntry(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -337,7 +340,7 @@ namespace Server.Regions
             m.FixedParticles(0x36B0, 1, 14, 0x26BB, 0x3F, 0x7, EffectLayer.Waist);
             m.PlaySound(0x229);
 
-            var damage = Utility.RandomMinMax(10, 20);                
+            var damage = Utility.RandomMinMax(10, 20);
 
             AOS.Damage(m, damage, 0, 0, 0, 100, 0);
         }

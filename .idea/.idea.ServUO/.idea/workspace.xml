@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af0b22d-c7e0-4922-aecd-c8f1b5b71c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Logs/Chat/27 апреля 2020 г..log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Logs/Commands/27 апреля 2020 г..log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/Regions/ArenaRegion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scripts/Services/GMtool/GMTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/CustomRegion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/RegionBounds.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/RegionControl.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/RegionControlGump.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/RemoveAreaGump.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/Custom Regions/RestrictGump.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scripts/Regions/PvPArenaRegion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" afterDir="false" />
@@ -15,25 +17,28 @@
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/PointsSystem/Persistence.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.tdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/PointsSystem/Persistence.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.tdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/PointsSystem/Persistence.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Regions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Regions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Chat/27 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/27 апреля 2020 г..log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/General.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/General.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Commands/27 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/27 апреля 2020 г..log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.bin" afterDir="false" />
@@ -41,12 +46,12 @@
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saves/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/PointsSystem/Persistence.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Regions/DamagingRegion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Regions/DamagingRegion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Scripts.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/obj/Release/Scripts.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/obj/Release/Scripts.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ultima/obj/Release/Ultima.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Ultima/obj/Release/Ultima.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,9 +64,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Scripts/OrbRemoteServer/UOArchitect/MobileSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Misc/DataPath.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Regions/MondainRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/GuardedRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Multis/Deeds.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Regions/NoHousingRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/HouseRegion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Misc/Siege.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/FireCasino/CasinoGumps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/GreenAcres.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Multis/HousePlacement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -69,19 +77,28 @@
     <setting file="file://$PROJECT_DIR$/Scripts/Multis/Houses.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/DamagingRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/[ServUO.com]-GMTool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Regions/DungeonRegion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Server/Map.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/HouseRaffleRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/TownRegion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Multis/BaseHouse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/BaseRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Resource/AbyssalCloth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server/ObjectPropertyList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Server/Mobile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/Revamped Dungeons/Covetous Void Spawn/VoidPoolController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Cannon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Misc/MapDefinitions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Bank/Check.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Regions/PvPArenaRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/GMtool/GMTool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server/ScriptCompiler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/ArenaRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Mobiles/MobileInterfaces.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Mobiles/PlayerMobile.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -94,8 +111,12 @@
         <option value="$PROJECT_DIR$/Scripts/Misc/DataPath.cs" />
         <option value="$PROJECT_DIR$/Scripts/Services/GMtool/GMTool.cs" />
         <option value="$PROJECT_DIR$/Scripts/Regions/ArenaRegion.cs" />
-        <option value="$PROJECT_DIR$/Data/Regions.xml" />
         <option value="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" />
+        <option value="$PROJECT_DIR$/Data/Regions.xml" />
+        <option value="$PROJECT_DIR$/Scripts/Mobiles/PlayerMobile.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Regions/DamagingRegion.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Misc/MapDefinitions.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Regions/PvPArenaRegion.cs" />
       </list>
     </option>
   </component>
@@ -188,7 +209,8 @@
       <workItem from="1587060933402" duration="11325000" />
       <workItem from="1587866685433" duration="1110000" />
       <workItem from="1588001746826" duration="3384000" />
-      <workItem from="1588007984916" duration="3007000" />
+      <workItem from="1588007984916" duration="9730000" />
+      <workItem from="1588023139392" duration="3262000" />
     </task>
     <servers />
   </component>
@@ -222,10 +244,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="505" y="248" key="run.anything.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588007840024" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1587077324209">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1588025217747">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1587077324209" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1588025217747" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1680.987@0.23.1680.987" timestamp="1587076690662" />
   </component>
   <component name="XDebuggerManager">

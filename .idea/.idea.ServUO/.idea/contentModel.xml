@@ -4379,6 +4379,14 @@
         <e p="Regions" t="Include">
           <e p="ArenaRegion.cs" t="Include" />
           <e p="BaseRegion.cs" t="Include" />
+          <e p="Custom Regions" t="Include">
+            <e p="CustomRegion.cs" t="Include" />
+            <e p="RegionBounds.cs" t="Include" />
+            <e p="RegionControl.cs" t="Include" />
+            <e p="RegionControlGump.cs" t="Include" />
+            <e p="RemoveAreaGump.cs" t="Include" />
+            <e p="RestrictGump.cs" t="Include" />
+          </e>
           <e p="DamagingRegion.cs" t="Include" />
           <e p="DungeonRegion.cs" t="Include" />
           <e p="GreenAcres.cs" t="Include" />
@@ -4388,6 +4396,7 @@
           <e p="Jail.cs" t="Include" />
           <e p="MondainRegion.cs" t="Include" />
           <e p="NoHousingRegion.cs" t="Include" />
+          <e p="PvPArenaRegion.cs" t="Include" />
           <e p="Spawning" t="Include">
             <e p="SpawnDefinition.cs" t="Include" />
             <e p="SpawnEntry.cs" t="Include" />

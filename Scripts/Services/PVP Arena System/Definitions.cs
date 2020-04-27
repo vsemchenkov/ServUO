@@ -130,7 +130,7 @@ namespace Server.Engines.ArenaSystem
                 new Point3D(6100, 3721, 25),
                 new Rectangle2D[]
                 {
-                    new Rectangle2D(6070, 3713, 27, 16)
+                    // new Rectangle2D(6070, 3713, 27, 16)
                 },
                 new Rectangle2D[]
                 {
