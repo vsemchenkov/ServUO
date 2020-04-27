@@ -1005,6 +1005,14 @@
     </region>
   </Facet>
   <Facet name="Trammel">
+
+    <region type="ArenaRegion" priority="50" name="Arena">
+      <rect x="6060" y="3674" width="247" height="225" />
+      <go x="6103" y="3721" z="25" />
+      <entrance x="6103" y="3721" />
+    </region>
+
+
     <region type="DungeonRegion" priority="50" name="Khaldun">
       <rect x="5381" y="1284" width="247" height="225" />
       <go x="5571" y="1302" z="0" />

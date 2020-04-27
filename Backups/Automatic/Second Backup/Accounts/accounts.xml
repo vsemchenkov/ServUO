@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<accounts count="2">
+<accounts count="3">
 	<account>
 		<username>admin</username>
 		<newCryptPassword>DD-94-70-95-28-BB-1C-83-D0-8F-30-88-D4-04-3F-47-42-89-1F-4F</newCryptPassword>
 		<accessLevel>Owner</accessLevel>
 		<created>2020-04-16T11:44:48.96341Z</created>
-		<lastLogin>2020-04-23T18:29:26.532393Z</lastLogin>
-		<totalGameTime>P1DT2H47M25.308204S</totalGameTime>
+		<lastLogin>2020-04-27T17:45:48.30836Z</lastLogin>
+		<totalGameTime>P1DT4H51M46.280524S</totalGameTime>
 		<chars>
 			<char index="0">117</char>
 			<char index="1">407</char>
 		</chars>
-		<addressList count="2">
+		<addressList count="3">
 			<ip>192.168.1.21</ip>
 			<ip>192.168.1.64</ip>
+			<ip>192.168.202.129</ip>
 		</addressList>
 		<totalCurrency>0.00090200999999999986</totalCurrency>
 		<sovereigns>5800</sovereigns>
@@ -23,12 +24,13 @@
 		<newCryptPassword>51-AB-B9-63-60-78-DE-FB-F8-88-D8-45-7A-7C-76-F8-5C-8F-11-4C</newCryptPassword>
 		<created>2020-04-20T16:01:48.478707Z</created>
 		<lastLogin>2020-04-23T18:29:36.371226Z</lastLogin>
-		<totalGameTime>PT8H56M40.891567S</totalGameTime>
+		<totalGameTime>PT9H54.3274S</totalGameTime>
 		<chars>
 			<char index="0">408</char>
 		</chars>
-		<addressList count="1">
+		<addressList count="2">
 			<ip>192.168.1.64</ip>
+			<ip>192.168.202.129</ip>
 		</addressList>
 		<totalCurrency>0</totalCurrency>
 		<sovereigns>0</sovereigns>
@@ -36,9 +38,10 @@
 	<account>
 		<username>test1</username>
 		<newCryptPassword>51-AB-B9-63-60-78-DE-FB-F8-88-D8-45-7A-7C-76-F8-5C-8F-11-4C</newCryptPassword>
+		<flags>2</flags>
 		<created>2020-04-20T16:01:48.478707Z</created>
-		<lastLogin>2020-04-23T18:29:36.371226Z</lastLogin>
-		<totalGameTime>PT8H56M40.891567S</totalGameTime>
+		<lastLogin>2020-04-27T18:30:10.349279Z</lastLogin>
+		<totalGameTime>PT9H2M13.076165S</totalGameTime>
 		<chars>
 			<char index="0">408</char>
 		</chars>

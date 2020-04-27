@@ -3031,3 +3031,904 @@
 24.04.2020 12:19:16: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PlayerLevel' of 0x197 "GM" ('admin') to '12'
 24.04.2020 12:26:21: 192.168.1.64: Owner 0x197 "GM" ('admin') used command 'props '
 24.04.2020 12:26:37: 192.168.1.64: Owner 0x197 "GM" ('admin') set property 'PlayerLevel' of 0x197 "GM" ('admin') to '10'
+27.04.2020 15:34:40: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go arena'
+27.04.2020 15:48:23: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go 6059 3759'
+27.04.2020 15:56:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 15:58:57: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:00:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:02:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:03:57: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:05:03: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:08:43: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:08:49: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'viewequip '
+27.04.2020 16:08:51: 192.168.1.21: Owner 0x197 "GM" ('admin') viewing equipment of 0x197 "GM" ('admin')
+27.04.2020 16:10:08: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:10:16: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 16:10:47: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go 6059 3759'
+27.04.2020 16:11:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add custom'
+27.04.2020 16:11:37: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6064, 3724, 20) in Felucca: "CustomHairstylist"
+27.04.2020 16:11:38: 192.168.1.21: Serials: 0x1F8; 
+27.04.2020 16:11:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:11:58: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x1F8 "Norris" (no account)
+27.04.2020 16:12:03: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6064, 3724, 20) in Felucca: "CustomizableRoundedDoorMat"
+27.04.2020 16:12:03: 192.168.1.21: Serials: 0x400023D9; 
+27.04.2020 16:12:13: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:12:14: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x400023D9 (CustomizableRoundedDoorMat)
+27.04.2020 16:12:17: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6064, 3724, 20) in Felucca: "CustomizableSquaredDoorMatDeed"
+27.04.2020 16:12:17: 192.168.1.21: Serials: 0x400023DB; 
+27.04.2020 16:17:20: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:18:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:02: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3727, 21) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:02: 192.168.1.21: Serials: 0x400023E3; 
+27.04.2020 16:18:05: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:05: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3725, 16) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:05: 192.168.1.21: Serials: 0x400023E5; 
+27.04.2020 16:18:07: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:08: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3726, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:08: 192.168.1.21: Serials: 0x400023E7; 
+27.04.2020 16:18:10: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:12: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3724, 16) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:12: 192.168.1.21: Serials: 0x400023EB; 
+27.04.2020 16:18:16: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:17: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3722, 17) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:17: 192.168.1.21: Serials: 0x400023F2; 
+27.04.2020 16:18:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:19: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3723, 17) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:19: 192.168.1.21: Serials: 0x400023F3; 
+27.04.2020 16:18:21: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:21: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3721, 16) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:21: 192.168.1.21: Serials: 0x400023F4; 
+27.04.2020 16:18:23: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:24: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3719, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:24: 192.168.1.21: Serials: 0x400023F5; 
+27.04.2020 16:18:27: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:28: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3720, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:28: 192.168.1.21: Serials: 0x400023F6; 
+27.04.2020 16:18:30: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:30: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6060, 3718, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:30: 192.168.1.21: Serials: 0x400023F7; 
+27.04.2020 16:18:32: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:33: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6060, 3718, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:33: 192.168.1.21: Serials: 0x400023F8; 
+27.04.2020 16:18:35: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:35: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3718, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:35: 192.168.1.21: Serials: 0x400023F9; 
+27.04.2020 16:18:40: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:18:41: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x400023F8 (Sandals)
+27.04.2020 16:18:42: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:18:43: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x400023F7 (Sandals)
+27.04.2020 16:18:47: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:48: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3716, 16) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:48: 192.168.1.21: Serials: 0x400023FA; 
+27.04.2020 16:18:51: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:18:52: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3717, 16) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:18:52: 192.168.1.21: Serials: 0x400023FB; 
+27.04.2020 16:19:45: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'get hue'
+27.04.2020 16:19:49: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'get hue'
+27.04.2020 16:19:52: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:20:05: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:20:10: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:20:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:20:43: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 16:20:59: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:03: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6086, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:03: 192.168.1.21: Serials: 0x400023FC; 
+27.04.2020 16:21:06: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:06: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6087, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:06: 192.168.1.21: Serials: 0x400023FD; 
+27.04.2020 16:21:08: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:08: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6088, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:08: 192.168.1.21: Serials: 0x400023FE; 
+27.04.2020 16:21:11: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:11: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6089, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:11: 192.168.1.21: Serials: 0x400023FF; 
+27.04.2020 16:21:14: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:15: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6090, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:15: 192.168.1.21: Serials: 0x40002402; 
+27.04.2020 16:21:17: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:17: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6091, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:17: 192.168.1.21: Serials: 0x40002403; 
+27.04.2020 16:21:18: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:19: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6092, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:19: 192.168.1.21: Serials: 0x40002404; 
+27.04.2020 16:21:20: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:21: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6093, 3674, 15) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:21: 192.168.1.21: Serials: 0x40002405; 
+27.04.2020 16:21:22: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:22: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6094, 3674, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:22: 192.168.1.21: Serials: 0x40002406; 
+27.04.2020 16:21:24: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:25: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6095, 3674, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:25: 192.168.1.21: Serials: 0x40002407; 
+27.04.2020 16:21:27: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:27: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6096, 3674, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:27: 192.168.1.21: Serials: 0x40002408; 
+27.04.2020 16:21:29: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:29: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6097, 3674, 22) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:29: 192.168.1.21: Serials: 0x40002409; 
+27.04.2020 16:21:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:33: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6098, 3674, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:33: 192.168.1.21: Serials: 0x4000240A; 
+27.04.2020 16:21:35: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:35: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6099, 3674, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:35: 192.168.1.21: Serials: 0x4000240B; 
+27.04.2020 16:21:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:21:49: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3674, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:21:49: 192.168.1.21: Serials: 0x4000240C; 
+27.04.2020 16:22:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:03: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6102, 3673, 28) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:03: 192.168.1.21: Serials: 0x4000240D; 
+27.04.2020 16:22:10: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:12: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3674, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:12: 192.168.1.21: Serials: 0x4000240E; 
+27.04.2020 16:22:20: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:21: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3675, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:21: 192.168.1.21: Serials: 0x4000240F; 
+27.04.2020 16:22:42: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:43: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3676, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:43: 192.168.1.21: Serials: 0x40002410; 
+27.04.2020 16:22:49: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:50: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3677, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:50: 192.168.1.21: Serials: 0x40002411; 
+27.04.2020 16:22:58: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:22:58: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3678, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:22:58: 192.168.1.21: Serials: 0x40002412; 
+27.04.2020 16:23:05: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:07: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3679, 19) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:07: 192.168.1.21: Serials: 0x40002413; 
+27.04.2020 16:23:13: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:15: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3680, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:15: 192.168.1.21: Serials: 0x40002414; 
+27.04.2020 16:23:17: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:17: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3681, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:17: 192.168.1.21: Serials: 0x40002415; 
+27.04.2020 16:23:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:20: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3682, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:20: 192.168.1.21: Serials: 0x40002416; 
+27.04.2020 16:23:22: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:22: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3683, 23) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:22: 192.168.1.21: Serials: 0x4000241C; 
+27.04.2020 16:23:24: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:24: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3684, 23) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:24: 192.168.1.21: Serials: 0x4000241D; 
+27.04.2020 16:23:26: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:31: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3685, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:31: 192.168.1.21: Serials: 0x4000241E; 
+27.04.2020 16:23:33: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:34: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3686, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:34: 192.168.1.21: Serials: 0x4000241F; 
+27.04.2020 16:23:37: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:23:37: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3687, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:23:37: 192.168.1.21: Serials: 0x40002422; 
+27.04.2020 16:23:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:23:49: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6101, 3687, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:23:49: 192.168.1.21: Serials: 0x40002423; 
+27.04.2020 16:23:51: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:23:52: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6102, 3687, 22) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:23:52: 192.168.1.21: Serials: 0x40002424; 
+27.04.2020 16:23:54: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:23:54: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6103, 3687, 23) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:23:54: 192.168.1.21: Serials: 0x40002425; 
+27.04.2020 16:23:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:23:56: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6104, 3687, 18) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:23:56: 192.168.1.21: Serials: 0x40002426; 
+27.04.2020 16:23:58: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:23:58: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6105, 3687, 17) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:23:58: 192.168.1.21: Serials: 0x40002427; 
+27.04.2020 16:24:00: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:05: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6107, 3688, 17) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:05: 192.168.1.21: Serials: 0x40002428; 
+27.04.2020 16:24:15: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:15: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6106, 3687, 25) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:15: 192.168.1.21: Serials: 0x40002429; 
+27.04.2020 16:24:18: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:19: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6107, 3687, 25) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:19: 192.168.1.21: Serials: 0x4000242A; 
+27.04.2020 16:24:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:31: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6108, 3687, 25) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:31: 192.168.1.21: Serials: 0x4000242B; 
+27.04.2020 16:24:38: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:40: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6109, 3687, 25) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:40: 192.168.1.21: Serials: 0x4000242C; 
+27.04.2020 16:24:45: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:45: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6110, 3687, 32) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:45: 192.168.1.21: Serials: 0x4000242D; 
+27.04.2020 16:24:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:48: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6111, 3687, 31) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:48: 192.168.1.21: Serials: 0x4000242F; 
+27.04.2020 16:24:55: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:24:55: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6112, 3687, 31) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:24:55: 192.168.1.21: Serials: 0x40002431; 
+27.04.2020 16:25:03: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:25:04: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6113, 3687, 31) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:25:04: 192.168.1.21: Serials: 0x40002433; 
+27.04.2020 16:25:59: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:26:00: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x40002428 (Sandals)
+27.04.2020 16:27:57: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddd'
+27.04.2020 16:27:59: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6094, 3690, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddd"
+27.04.2020 16:27:59: 192.168.1.21: Serials: 0x40002437; 
+27.04.2020 16:28:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:28:02: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6096, 3690, 20) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:28:02: 192.168.1.21: Serials: 0x40002438; 
+27.04.2020 16:30:09: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:30:11: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x40002437 (Sandals)
+27.04.2020 16:30:27: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 16:30:29: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x4000329E (Teleporter) (inBag=False; amount=1)
+27.04.2020 16:30:29: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x4000329E (Teleporter) creating 0x4000243A (Teleporter)
+27.04.2020 16:31:03: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'move '
+27.04.2020 16:31:06: 192.168.1.21: Owner 0x197 "GM" ('admin') moving 0x4000240D (Sandals) to (6089, 3687, 20)
+27.04.2020 16:31:14: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'set movable true'
+27.04.2020 16:31:16: 192.168.1.21: Owner 0x197 "GM" ('admin') set property 'movable' of 0x4000240D (Sandals) to 'True'
+27.04.2020 16:31:25: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 16:32:29: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:36:51: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:36:54: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x4000240D (Sandals)
+27.04.2020 16:37:07: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:39:46: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:48:42: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:48:53: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'viewequip '
+27.04.2020 16:50:06: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:51:15: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:52:27: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 16:52:34: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 16:52:38: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x4000240D (Sandals) (inBag=False; amount=1)
+27.04.2020 16:52:38: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x4000240D (Sandals) creating 0x40001FC1 (Sandals)
+27.04.2020 16:52:41: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:52:42: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x4000240D (Sandals)
+27.04.2020 16:52:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:52:45: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x40001FC1 (Sandals)
+27.04.2020 16:52:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:52:55: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 16:53:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 16:53:05: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:53:08: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:53:14: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 16:53:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:53:25: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go trammel'
+27.04.2020 16:53:36: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 16:54:18: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 16:54:20: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x400033E1 (Teleporter) (inBag=False; amount=1)
+27.04.2020 16:54:20: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x400033E1 (Teleporter) creating 0x40001FCF (Teleporter)
+27.04.2020 16:54:43: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:54:44: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6064, 3728, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:54:44: 192.168.1.21: Serials: 0x40001FD1; 
+27.04.2020 16:54:54: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:54:56: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3727, 21) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:54:56: 192.168.1.21: Serials: 0x40001FD3; 
+27.04.2020 16:54:59: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:54:59: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3725, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:54:59: 192.168.1.21: Serials: 0x40001FD5; 
+27.04.2020 16:55:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:03: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3726, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:03: 192.168.1.21: Serials: 0x40001FD7; 
+27.04.2020 16:55:07: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:07: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3724, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:07: 192.168.1.21: Serials: 0x40001FD9; 
+27.04.2020 16:55:09: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:09: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3723, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:09: 192.168.1.21: Serials: 0x40001FDB; 
+27.04.2020 16:55:12: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:13: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3721, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:13: 192.168.1.21: Serials: 0x40001FDD; 
+27.04.2020 16:55:16: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:16: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3722, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:16: 192.168.1.21: Serials: 0x40001FDF; 
+27.04.2020 16:55:18: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:18: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3720, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:18: 192.168.1.21: Serials: 0x40001FE1; 
+27.04.2020 16:55:21: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:21: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3719, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:21: 192.168.1.21: Serials: 0x40001FE2; 
+27.04.2020 16:55:24: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:24: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3718, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:24: 192.168.1.21: Serials: 0x40001FE4; 
+27.04.2020 16:55:26: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:26: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3717, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:26: 192.168.1.21: Serials: 0x40001FE6; 
+27.04.2020 16:55:29: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:55:29: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3716, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:55:29: 192.168.1.21: Serials: 0x40001FE8; 
+27.04.2020 16:55:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:55:49: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x40001FD1 (Sandals)
+27.04.2020 16:56:40: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:42: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6086, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:42: 192.168.1.21: Serials: 0x40001FEA; 
+27.04.2020 16:56:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:45: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6087, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:45: 192.168.1.21: Serials: 0x40001FED; 
+27.04.2020 16:56:46: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:47: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6088, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:47: 192.168.1.21: Serials: 0x40001FF1; 
+27.04.2020 16:56:49: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:49: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6089, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:49: 192.168.1.21: Serials: 0x40001FF3; 
+27.04.2020 16:56:51: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:51: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6090, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:51: 192.168.1.21: Serials: 0x40001FFB; 
+27.04.2020 16:56:53: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:53: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6091, 3674, 18) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:53: 192.168.1.21: Serials: 0x40002001; 
+27.04.2020 16:56:54: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:55: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6092, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:55: 192.168.1.21: Serials: 0x40002002; 
+27.04.2020 16:56:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:56: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6093, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:56: 192.168.1.21: Serials: 0x40002005; 
+27.04.2020 16:56:58: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:56:58: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6094, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:56:58: 192.168.1.21: Serials: 0x40002009; 
+27.04.2020 16:57:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:01: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6095, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:01: 192.168.1.21: Serials: 0x4000200D; 
+27.04.2020 16:57:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:03: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6096, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:03: 192.168.1.21: Serials: 0x40002011; 
+27.04.2020 16:57:04: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:05: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6097, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:05: 192.168.1.21: Serials: 0x40002015; 
+27.04.2020 16:57:06: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:07: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6098, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:07: 192.168.1.21: Serials: 0x40002021; 
+27.04.2020 16:57:09: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:09: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6099, 3674, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:09: 192.168.1.21: Serials: 0x40002023; 
+27.04.2020 16:57:26: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:57:29: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3675, 24) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:57:29: 192.168.1.21: Serials: 0x40002025; 
+27.04.2020 16:57:41: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 16:57:42: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6102, 3680, 41) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 16:57:42: 192.168.1.21: Serials: 0x40002027; 
+27.04.2020 16:57:45: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:57:47: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3676, 24) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:57:47: 192.168.1.21: Serials: 0x40002029; 
+27.04.2020 16:57:50: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 16:57:51: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x40002027 (Sandals)
+27.04.2020 16:57:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:57:56: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3676, 24) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:57:56: 192.168.1.21: Serials: 0x4000202B; 
+27.04.2020 16:58:00: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:58:01: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3676, 24) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:58:01: 192.168.1.21: Serials: 0x4000202C; 
+27.04.2020 16:58:32: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:58:34: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3677, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:58:34: 192.168.1.21: Serials: 0x40002031; 
+27.04.2020 16:58:41: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:58:43: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3678, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:58:43: 192.168.1.21: Serials: 0x40002033; 
+27.04.2020 16:58:52: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:58:52: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3679, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:58:52: 192.168.1.21: Serials: 0x40002035; 
+27.04.2020 16:58:58: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:58:59: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6101, 3680, 22) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:58:59: 192.168.1.21: Serials: 0x40002037; 
+27.04.2020 16:59:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:01: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3680, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:01: 192.168.1.21: Serials: 0x40002038; 
+27.04.2020 16:59:03: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:04: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3681, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:04: 192.168.1.21: Serials: 0x4000203B; 
+27.04.2020 16:59:05: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:06: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3682, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:06: 192.168.1.21: Serials: 0x4000203D; 
+27.04.2020 16:59:08: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:08: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3683, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:08: 192.168.1.21: Serials: 0x4000203E; 
+27.04.2020 16:59:10: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:10: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3684, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:10: 192.168.1.21: Serials: 0x4000203F; 
+27.04.2020 16:59:12: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:12: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3685, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:12: 192.168.1.21: Serials: 0x40002045; 
+27.04.2020 16:59:14: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:14: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3686, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:14: 192.168.1.21: Serials: 0x40002046; 
+27.04.2020 16:59:17: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:17: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3687, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:17: 192.168.1.21: Serials: 0x40002049; 
+27.04.2020 16:59:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 16:59:20: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 16:59:20: 192.168.1.21: Serials: 0x40002051; 
+27.04.2020 17:00:39: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:45: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6100, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:45: 192.168.1.21: Serials: 0x40002053; 
+27.04.2020 17:00:49: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:49: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6101, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:49: 192.168.1.21: Serials: 0x40002057; 
+27.04.2020 17:00:51: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:51: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6102, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:51: 192.168.1.21: Serials: 0x40002059; 
+27.04.2020 17:00:53: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:53: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6103, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:53: 192.168.1.21: Serials: 0x4000205B; 
+27.04.2020 17:00:55: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:55: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6104, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:55: 192.168.1.21: Serials: 0x4000205D; 
+27.04.2020 17:00:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:57: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6105, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:57: 192.168.1.21: Serials: 0x4000205F; 
+27.04.2020 17:00:58: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:00:59: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6106, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:00:59: 192.168.1.21: Serials: 0x40002060; 
+27.04.2020 17:01:00: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:01:00: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6107, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:01:00: 192.168.1.21: Serials: 0x40002063; 
+27.04.2020 17:01:12: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:01:12: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6108, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:01:12: 192.168.1.21: Serials: 0x40002065; 
+27.04.2020 17:01:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:01:22: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6109, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:01:22: 192.168.1.21: Serials: 0x40002067; 
+27.04.2020 17:01:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:01:33: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6110, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:01:33: 192.168.1.21: Serials: 0x40002068; 
+27.04.2020 17:01:41: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:01:43: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6111, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:01:43: 192.168.1.21: Serials: 0x4000206B; 
+27.04.2020 17:01:55: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:03:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:03:04: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6111, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:03:04: 192.168.1.21: Serials: 0x4000206D; 
+27.04.2020 17:03:12: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:03:14: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6112, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:03:14: 192.168.1.21: Serials: 0x4000206F; 
+27.04.2020 17:03:23: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:03:45: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:03:47: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003392 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:03:47: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003392 (Teleporter) creating 0x40002071 (Teleporter)
+27.04.2020 17:04:06: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:04:08: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003393 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:04:08: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003393 (Teleporter) creating 0x40002073 (Teleporter)
+27.04.2020 17:04:09: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:04:11: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003393 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:04:11: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003393 (Teleporter) creating 0x4000207D (Teleporter)
+27.04.2020 17:04:34: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:04:35: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003378 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:04:35: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003378 (Teleporter) creating 0x40002083 (Teleporter)
+27.04.2020 17:05:10: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:13:36: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go [gmtool'
+27.04.2020 17:13:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:14:47: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:15:50: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:16:09: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dismount '
+27.04.2020 17:16:11: 192.168.1.21: Owner 0x197 "GM" ('admin') dismounting 0x197 "GM" ('admin')
+27.04.2020 17:17:59: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:20:33: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:22:46: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:24:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:24:30: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 17:24:36: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 17:24:36: 192.168.1.21: Owner 0x197 "GM" ('admin') deleting 0x4000240D (Sandals)
+27.04.2020 17:24:40: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:24:48: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:24:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:24:58: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x4000324F (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:24:58: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x4000324F (Teleporter) creating 0x40001FCD (Teleporter)
+27.04.2020 17:25:23: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:25:24: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003250 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:25:24: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003250 (Teleporter) creating 0x40001FCF (Teleporter)
+27.04.2020 17:25:27: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:25:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:25:33: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40001FCF (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:25:33: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40001FCF (Teleporter) creating 0x40001FD1 (Teleporter)
+27.04.2020 17:26:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:26:02: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003236 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:26:02: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003236 (Teleporter) creating 0x40001FD3 (Teleporter)
+27.04.2020 17:26:16: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:26:18: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003235 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:26:18: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003235 (Teleporter) creating 0x40001FD5 (Teleporter)
+27.04.2020 17:26:31: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:26:33: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40001FD5 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:26:33: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40001FD5 (Teleporter) creating 0x40001FD7 (Teleporter)
+27.04.2020 17:27:01: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'go trammel'
+27.04.2020 17:27:06: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:27:08: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x400033E1 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:27:08: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x400033E1 (Teleporter) creating 0x40001FD9 (Teleporter)
+27.04.2020 17:27:19: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:27:20: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003392 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:27:20: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003392 (Teleporter) creating 0x40001FDB (Teleporter)
+27.04.2020 17:27:50: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:27:52: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003393 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:27:52: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003393 (Teleporter) creating 0x40001FDD (Teleporter)
+27.04.2020 17:27:56: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:27:57: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003393 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:27:57: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003393 (Teleporter) creating 0x40001FDF (Teleporter)
+27.04.2020 17:28:23: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:28:24: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003378 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:28:24: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003378 (Teleporter) creating 0x40001FE1 (Teleporter)
+27.04.2020 17:28:26: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:28:29: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:28:30: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003378 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:28:30: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003378 (Teleporter) creating 0x40001FE2 (Teleporter)
+27.04.2020 17:28:32: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:28:34: 192.168.1.21: Owner 0x197 "GM" ('admin') duping 0x40003378 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:28:34: 192.168.1.21: Owner 0x197 "GM" ('admin') duped 0x40003378 (Teleporter) creating 0x40001FE4 (Teleporter)
+27.04.2020 17:32:02: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'Get Hue ItemID BodyValue Location '
+27.04.2020 17:32:12: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandal set movable false itemid 0x4ddb'
+27.04.2020 17:32:38: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:40: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3727, 21) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:40: 192.168.1.21: Serials: 0x40001FE6; 
+27.04.2020 17:32:44: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:44: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3725, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:44: 192.168.1.21: Serials: 0x40001FE8; 
+27.04.2020 17:32:47: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:47: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3726, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:47: 192.168.1.21: Serials: 0x40001FEA; 
+27.04.2020 17:32:50: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:51: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3724, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:51: 192.168.1.21: Serials: 0x40001FED; 
+27.04.2020 17:32:52: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:53: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3723, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:53: 192.168.1.21: Serials: 0x40001FF1; 
+27.04.2020 17:32:54: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:55: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3721, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:55: 192.168.1.21: Serials: 0x40001FF3; 
+27.04.2020 17:32:57: 192.168.1.21: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:32:59: 192.168.1.21: Owner 0x197 "GM" ('admin') building at (6059, 3721, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:32:59: 192.168.1.21: Serials: 0x40001FFB; 
+27.04.2020 17:35:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals movable false itemid 0x4ddb'
+27.04.2020 17:35:18: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3722, 17) in Trammel: "sandals" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:35:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals movable false itemid 0x4ddb'
+27.04.2020 17:35:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3719, 15) in Trammel: "sandals" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:35:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:35:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Get Hue ItemID BodyValue Location '
+27.04.2020 17:35:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Get Hue ItemID BodyValue Location '
+27.04.2020 17:35:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:36:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals movable false itemid 0x4ddb'
+27.04.2020 17:36:07: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3720, 15) in Trammel: "sandals" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x44d'
+27.04.2020 17:36:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:29: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3722, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:29: 192.168.202.129: Serials: 0x4000245E; 
+27.04.2020 17:36:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3719, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:34: 192.168.202.129: Serials: 0x40002460; 
+27.04.2020 17:36:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3720, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:36: 192.168.202.129: Serials: 0x40002462; 
+27.04.2020 17:36:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:39: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6060, 3718, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:39: 192.168.202.129: Serials: 0x40002464; 
+27.04.2020 17:36:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:42: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3718, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:42: 192.168.202.129: Serials: 0x4000246C; 
+27.04.2020 17:36:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:36:48: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3717, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:36:48: 192.168.202.129: Serials: 0x4000247B; 
+27.04.2020 17:36:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:37:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:34: 192.168.202.129: Serials: 0x4000247D; 
+27.04.2020 17:37:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:36: 192.168.202.129: Serials: 0x40002481; 
+27.04.2020 17:37:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:38: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:38: 192.168.202.129: Serials: 0x40002483; 
+27.04.2020 17:37:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:40: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6089, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:40: 192.168.202.129: Serials: 0x40002488; 
+27.04.2020 17:37:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6090, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:41: 192.168.202.129: Serials: 0x40002489; 
+27.04.2020 17:37:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:43: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6091, 3674, 18) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:43: 192.168.202.129: Serials: 0x4000248C; 
+27.04.2020 17:37:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:45: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6092, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:45: 192.168.202.129: Serials: 0x4000248E; 
+27.04.2020 17:37:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:47: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6093, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:47: 192.168.202.129: Serials: 0x40002490; 
+27.04.2020 17:37:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:49: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6094, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:49: 192.168.202.129: Serials: 0x40002492; 
+27.04.2020 17:37:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:51: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6095, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:51: 192.168.202.129: Serials: 0x40002494; 
+27.04.2020 17:37:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:53: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6096, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:53: 192.168.202.129: Serials: 0x40002496; 
+27.04.2020 17:37:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:55: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6097, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:55: 192.168.202.129: Serials: 0x4000249B; 
+27.04.2020 17:37:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:57: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6098, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:57: 192.168.202.129: Serials: 0x400024A3; 
+27.04.2020 17:37:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:37:59: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3674, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:37:59: 192.168.202.129: Serials: 0x400024A5; 
+27.04.2020 17:38:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:12: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3675, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:12: 192.168.202.129: Serials: 0x400024A8; 
+27.04.2020 17:38:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:15: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3676, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:15: 192.168.202.129: Serials: 0x400024AB; 
+27.04.2020 17:38:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:17: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3677, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:17: 192.168.202.129: Serials: 0x400024AD; 
+27.04.2020 17:38:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:20: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3678, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:20: 192.168.202.129: Serials: 0x400024AE; 
+27.04.2020 17:38:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3679, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:23: 192.168.202.129: Serials: 0x400024B0; 
+27.04.2020 17:38:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3680, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:25: 192.168.202.129: Serials: 0x400024B2; 
+27.04.2020 17:38:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:30: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3681, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:30: 192.168.202.129: Serials: 0x400024B6; 
+27.04.2020 17:38:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:32: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3682, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:32: 192.168.202.129: Serials: 0x400024B7; 
+27.04.2020 17:38:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3683, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:34: 192.168.202.129: Serials: 0x400024BC; 
+27.04.2020 17:38:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3684, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:36: 192.168.202.129: Serials: 0x400024C0; 
+27.04.2020 17:38:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:57: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3685, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:57: 192.168.202.129: Serials: 0x400024C2; 
+27.04.2020 17:38:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:38:59: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3686, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:38:59: 192.168.202.129: Serials: 0x400024C7; 
+27.04.2020 17:39:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:39:01: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3687, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:39:01: 192.168.202.129: Serials: 0x400024C8; 
+27.04.2020 17:39:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:39:04: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:39:04: 192.168.202.129: Serials: 0x400024CD; 
+27.04.2020 17:39:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:10: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6100, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:10: 192.168.202.129: Serials: 0x400024CE; 
+27.04.2020 17:39:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:12: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6101, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:12: 192.168.202.129: Serials: 0x400024D0; 
+27.04.2020 17:39:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:14: 192.168.202.129: Serials: 0x400024D3; 
+27.04.2020 17:39:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:15: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6103, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:15: 192.168.202.129: Serials: 0x400024D4; 
+27.04.2020 17:39:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:17: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6104, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:17: 192.168.202.129: Serials: 0x400024D5; 
+27.04.2020 17:39:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:19: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6105, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:19: 192.168.202.129: Serials: 0x400024D9; 
+27.04.2020 17:39:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:21: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6106, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:21: 192.168.202.129: Serials: 0x400024DF; 
+27.04.2020 17:39:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6107, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:23: 192.168.202.129: Serials: 0x400024E1; 
+27.04.2020 17:39:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6108, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:36: 192.168.202.129: Serials: 0x400024E3; 
+27.04.2020 17:39:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:39:51: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6109, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:39:51: 192.168.202.129: Serials: 0x400024E8; 
+27.04.2020 17:39:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:40:01: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6110, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:40:01: 192.168.202.129: Serials: 0x400024EA; 
+27.04.2020 17:40:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:40:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6111, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:40:14: 192.168.202.129: Serials: 0x400024EB; 
+27.04.2020 17:40:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:40:29: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6112, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:40:29: 192.168.202.129: Serials: 0x400024EC; 
+27.04.2020 17:40:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:40:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6113, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:40:36: 192.168.202.129: Serials: 0x400024F2; 
+27.04.2020 17:41:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+27.04.2020 17:41:45: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x40003393 (Teleporter) (inBag=False; amount=1)
+27.04.2020 17:41:45: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x40003393 (Teleporter) creating 0x4000258E (Teleporter)
+27.04.2020 17:43:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:43:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:44:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:44:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:45:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 17:46:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:02: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3722, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:02: 192.168.202.129: Serials: 0x40002557; 
+27.04.2020 17:46:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:05: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3719, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:05: 192.168.202.129: Serials: 0x40002558; 
+27.04.2020 17:46:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:07: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3720, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:07: 192.168.202.129: Serials: 0x40002559; 
+27.04.2020 17:46:09: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:10: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3718, 15) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:10: 192.168.202.129: Serials: 0x4000255A; 
+27.04.2020 17:46:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:11: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3717, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:11: 192.168.202.129: Serials: 0x4000255B; 
+27.04.2020 17:46:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3716, 16) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:14: 192.168.202.129: Serials: 0x4000255C; 
+27.04.2020 17:46:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:17: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3715, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:17: 192.168.202.129: Serials: 0x4000255D; 
+27.04.2020 17:46:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:21: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3714, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:21: 192.168.202.129: Serials: 0x4000255E; 
+27.04.2020 17:46:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 17:46:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:46:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6059, 3728, 18) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:46:41: 192.168.202.129: Serials: 0x4000255F; 
+27.04.2020 17:46:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:47:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:47:56: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:47:56: 192.168.202.129: Serials: 0x40002562; 
+27.04.2020 17:47:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:47:58: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:47:58: 192.168.202.129: Serials: 0x40002563; 
+27.04.2020 17:48:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:00: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:00: 192.168.202.129: Serials: 0x40002564; 
+27.04.2020 17:48:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:02: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6089, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:02: 192.168.202.129: Serials: 0x40002566; 
+27.04.2020 17:48:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6090, 3674, 17) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:03: 192.168.202.129: Serials: 0x40002567; 
+27.04.2020 17:48:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:05: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6091, 3674, 18) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:05: 192.168.202.129: Serials: 0x40002568; 
+27.04.2020 17:48:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:07: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6092, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:07: 192.168.202.129: Serials: 0x40002569; 
+27.04.2020 17:48:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:09: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6093, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:09: 192.168.202.129: Serials: 0x4000256B; 
+27.04.2020 17:48:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:10: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6094, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:10: 192.168.202.129: Serials: 0x4000256C; 
+27.04.2020 17:48:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:12: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6095, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:12: 192.168.202.129: Serials: 0x4000256D; 
+27.04.2020 17:48:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:40: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6096, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:40: 192.168.202.129: Serials: 0x4000256E; 
+27.04.2020 17:48:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:42: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6097, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:42: 192.168.202.129: Serials: 0x40002570; 
+27.04.2020 17:48:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6098, 3674, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:44: 192.168.202.129: Serials: 0x40002571; 
+27.04.2020 17:48:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:48:46: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3674, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:48:46: 192.168.202.129: Serials: 0x40002572; 
+27.04.2020 17:48:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:48:53: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3675, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:48:53: 192.168.202.129: Serials: 0x40002573; 
+27.04.2020 17:48:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:48:56: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3676, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:48:56: 192.168.202.129: Serials: 0x40002574; 
+27.04.2020 17:48:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:48:59: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3677, 19) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:48:59: 192.168.202.129: Serials: 0x40002575; 
+27.04.2020 17:49:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3678, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:03: 192.168.202.129: Serials: 0x40002576; 
+27.04.2020 17:49:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:06: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3679, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:06: 192.168.202.129: Serials: 0x40002577; 
+27.04.2020 17:49:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:09: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3680, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:09: 192.168.202.129: Serials: 0x40002578; 
+27.04.2020 17:49:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:11: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3681, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:11: 192.168.202.129: Serials: 0x40002579; 
+27.04.2020 17:49:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3682, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:14: 192.168.202.129: Serials: 0x4000257A; 
+27.04.2020 17:49:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3683, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:16: 192.168.202.129: Serials: 0x4000257B; 
+27.04.2020 17:49:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:17: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3684, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:17: 192.168.202.129: Serials: 0x4000257C; 
+27.04.2020 17:49:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:19: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3685, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:19: 192.168.202.129: Serials: 0x4000257D; 
+27.04.2020 17:49:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:21: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3686, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:21: 192.168.202.129: Serials: 0x4000257F; 
+27.04.2020 17:49:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3687, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:23: 192.168.202.129: Serials: 0x40002581; 
+27.04.2020 17:49:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4ddb'
+27.04.2020 17:49:59: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4ddb"
+27.04.2020 17:49:59: 192.168.202.129: Serials: 0x40002583; 
+27.04.2020 17:50:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:12: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6100, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:12: 192.168.202.129: Serials: 0x40002585; 
+27.04.2020 17:50:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:15: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6101, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:15: 192.168.202.129: Serials: 0x40002586; 
+27.04.2020 17:50:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:16: 192.168.202.129: Serials: 0x40002587; 
+27.04.2020 17:50:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:18: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6103, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:18: 192.168.202.129: Serials: 0x40002588; 
+27.04.2020 17:50:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:20: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6104, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:20: 192.168.202.129: Serials: 0x40002589; 
+27.04.2020 17:50:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:21: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6105, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:21: 192.168.202.129: Serials: 0x4000258A; 
+27.04.2020 17:50:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6106, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:23: 192.168.202.129: Serials: 0x4000258B; 
+27.04.2020 17:50:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6107, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:25: 192.168.202.129: Serials: 0x4000258C; 
+27.04.2020 17:50:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:37: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6108, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:37: 192.168.202.129: Serials: 0x4000258D; 
+27.04.2020 17:50:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:50:53: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6109, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:50:53: 192.168.202.129: Serials: 0x4000258E; 
+27.04.2020 17:51:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:51:20: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6110, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:51:20: 192.168.202.129: Serials: 0x4000258F; 
+27.04.2020 17:51:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:51:29: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6111, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:51:29: 192.168.202.129: Serials: 0x40002590; 
+27.04.2020 17:51:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:51:38: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6112, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:51:38: 192.168.202.129: Serials: 0x40002591; 
+27.04.2020 17:51:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x4dda'
+27.04.2020 17:51:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6113, 3688, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x4dda"
+27.04.2020 17:51:44: 192.168.202.129: Serials: 0x40002592; 
+27.04.2020 17:51:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 17:52:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+27.04.2020 17:54:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+27.04.2020 18:29:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+27.04.2020 18:29:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set kills 10'
+27.04.2020 18:29:20: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'kills' of 0x198 "test" ('test1') to '10'
+27.04.2020 18:30:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+27.04.2020 18:31:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 18:34:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+27.04.2020 18:34:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 18:42:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 18:57:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go trammel'
+27.04.2020 18:57:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 18:57:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+27.04.2020 18:57:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+27.04.2020 18:58:10: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (1460, 850, 0)
+27.04.2020 18:58:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set kills 15'
+27.04.2020 18:58:40: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'kills' of 0x198 "test" ('test1') to '15'
+27.04.2020 18:58:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go britain'
+27.04.2020 18:58:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+27.04.2020 18:59:03: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (1494, 1630, 10)
+27.04.2020 18:59:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add wyvern'
+27.04.2020 18:59:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1485, 1630, 20) in Trammel: "wyvern"
+27.04.2020 18:59:25: 192.168.202.129: Serials: 0x4AD; 
+27.04.2020 19:00:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go felucca'
+27.04.2020 19:00:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+27.04.2020 19:00:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go 6059 3679'
+27.04.2020 19:00:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 19:00:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 19:01:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:06:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:08:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+27.04.2020 19:08:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:08:09: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:08:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 19:08:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+27.04.2020 19:08:56: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (6090, 3685, 20)
+27.04.2020 19:09:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add regent'
+27.04.2020 19:09:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6091, 3685, 20) in Trammel: "BagOfAllReagents"
+27.04.2020 19:09:36: 192.168.202.129: Serials: 0x40001F96; 
+27.04.2020 19:11:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+27.04.2020 19:11:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+27.04.2020 19:11:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:11:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+27.04.2020 19:11:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 19:11:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+27.04.2020 19:11:48: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (6097, 3697, 20)

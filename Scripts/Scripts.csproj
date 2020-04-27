@@ -800,7 +800,9 @@
     <Compile Include="OrbRemoteServer\UOArchitect\MoveItemsCommand.cs" />
     <Compile Include="OrbRemoteServer\UOArchitect\SelectItemsRequest.cs" />
     <Compile Include="OrbRemoteServer\UOArchitect\UOAR_ObjectTarget.cs" />
+    <Compile Include="Regions\ArenaRegion.cs" />
     <Compile Include="Services\Expansions\High Seas\Multis\GalleonItem.cs" />
+    <Compile Include="Services\GMtool\GMTool.cs" />
     <Compile Include="Services\PointsSystems\PvMPoints.cs" />
     <Compile Include="Services\PointsSystems\PvPPoints.cs" />
     <Compile Include="Services\Seasonal Events\ForsakenFoes\Mobile\MiningCooperativeMerchant.cs" />

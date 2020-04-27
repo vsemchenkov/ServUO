@@ -4377,6 +4377,7 @@
           </e>
         </e>
         <e p="Regions" t="Include">
+          <e p="ArenaRegion.cs" t="Include" />
           <e p="BaseRegion.cs" t="Include" />
           <e p="DamagingRegion.cs" t="Include" />
           <e p="DungeonRegion.cs" t="Include" />
@@ -5064,6 +5065,9 @@
             <e p="GiftGiving.cs" t="Include" />
             <e p="HolidayGiftBox2018.cs" t="Include" />
             <e p="Winter2004.cs" t="Include" />
+          </e>
+          <e p="GMtool" t="Include">
+            <e p="GMTool.cs" t="Include" />
           </e>
           <e p="Guilds" t="Include">
             <e p="Guild.cs" t="Include" />
