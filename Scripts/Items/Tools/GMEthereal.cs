@@ -46,7 +46,7 @@ namespace Server.Mobiles
         private EtherealTypes m_EthyType;
         [Constructable]
         public GMEthereal()
-            : this(EtherealTypes.SerpentineDragon)
+            : this(EtherealTypes.Tarantula)
         {
         }
 

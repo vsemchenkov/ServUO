@@ -5,8 +5,8 @@
 		<newCryptPassword>DD-94-70-95-28-BB-1C-83-D0-8F-30-88-D4-04-3F-47-42-89-1F-4F</newCryptPassword>
 		<accessLevel>Owner</accessLevel>
 		<created>2020-04-16T11:44:48.96341Z</created>
-		<lastLogin>2020-04-27T21:20:27.3725Z</lastLogin>
-		<totalGameTime>P1DT5H42M21.908325S</totalGameTime>
+		<lastLogin>2020-04-28T16:58:44.924349Z</lastLogin>
+		<totalGameTime>P1DT11H47M13.20378S</totalGameTime>
 		<chars>
 			<char index="0">117</char>
 			<char index="1">407</char>
@@ -16,7 +16,7 @@
 			<ip>192.168.1.64</ip>
 			<ip>192.168.202.129</ip>
 		</addressList>
-		<totalCurrency>0.00090200999999999986</totalCurrency>
+		<totalCurrency>0.00091400999999999993</totalCurrency>
 		<sovereigns>5800</sovereigns>
 	</account>
 	<account>
@@ -24,7 +24,7 @@
 		<newCryptPassword>51-AB-B9-63-60-78-DE-FB-F8-88-D8-45-7A-7C-76-F8-5C-8F-11-4C</newCryptPassword>
 		<created>2020-04-20T16:01:48.478707Z</created>
 		<lastLogin>2020-04-23T18:29:36.371226Z</lastLogin>
-		<totalGameTime>PT9H43M5.318857S</totalGameTime>
+		<totalGameTime>PT12H53M12.877629S</totalGameTime>
 		<chars>
 			<char index="0">408</char>
 		</chars>
@@ -40,15 +40,15 @@
 		<newCryptPassword>51-AB-B9-63-60-78-DE-FB-F8-88-D8-45-7A-7C-76-F8-5C-8F-11-4C</newCryptPassword>
 		<flags>2</flags>
 		<created>2020-04-20T16:01:48.478707Z</created>
-		<lastLogin>2020-04-27T21:20:38.136385Z</lastLogin>
-		<totalGameTime>PT9H44M24.067691S</totalGameTime>
+		<lastLogin>2020-04-28T17:02:31.862206Z</lastLogin>
+		<totalGameTime>PT14H37M52.658881S</totalGameTime>
 		<chars>
 			<char index="0">408</char>
 		</chars>
 		<addressList count="1">
 			<ip>192.168.1.64</ip>
 		</addressList>
-		<totalCurrency>0</totalCurrency>
+		<totalCurrency>9.9999999999541645E-10</totalCurrency>
 		<sovereigns>0</sovereigns>
 	</account>
 </accounts>

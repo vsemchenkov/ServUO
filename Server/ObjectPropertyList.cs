@@ -3,18 +3,20 @@ using System;
 using System.IO;
 using System.Text;
 
+
 using Server.Network;
 #endregion
 
 namespace Server
 {
 	public sealed class ObjectPropertyList : Packet
-	{
+    {
+        public int Enabled = 1;
         private int m_Hash;
         private int m_Strings;
 
         public IEntity Entity { get; }
-        public int Hash => 0x40000000 + m_Hash; 
+        public int Hash => 0x40000000 + m_Hash;
 
         public int Header { get; set; }
         public string HeaderArgs { get; set; }

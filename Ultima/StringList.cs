@@ -14,8 +14,9 @@ namespace Ultima
 
 		public List<StringEntry> Entries { get; set; }
 		public string Language { get; private set; }
+        public object Table { get; set; }
 
-		private Dictionary<int, string> m_StringTable;
+        private Dictionary<int, string> m_StringTable;
 		private Dictionary<int, StringEntry> m_EntryTable;
 
 		private static byte[] m_Buffer = new byte[1024];

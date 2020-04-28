@@ -62,14 +62,37 @@ namespace Server.Gumps
             	AddLabel(232, 62, 1259, "Re");
 
 
-                // Dismount
-                AddButton(0, 62, 1592, 1593, 39, GumpButtonType.Reply, 0);
-                AddLabel(5, 64, 1259, "Dismount");
 
-                // Dupe
-                AddButton(0, 87, 1592, 1593, 38, GumpButtonType.Reply, 0);
-                AddLabel(5, 89, 1259, "Dupe");
+                // Can't walk
+                AddButton(0, 62, 1592, 1593, 40, GumpButtonType.Reply, 0);
+                AddLabel(5, 64, 1259, "Can't walk");
+                // Can walk
+                AddButton(0, 87, 1592, 1593, 41, GumpButtonType.Reply, 0);
+                AddLabel(5, 89, 1259, "Can walk");
+                // Jailed
+                AddButton(0, 112, 1592, 1593, 42, GumpButtonType.Reply, 0);
+                AddLabel(5, 114, 1259, "Jailed");
+                // Unjailed
+                AddButton(0, 137, 1592, 1593, 43, GumpButtonType.Reply, 0);
+                AddLabel(5, 139, 1259, "Unjailed");
+                // Dismount 62 64
+                AddButton(0, 162, 1592, 1593, 39, GumpButtonType.Reply, 0);
+                AddLabel(5, 164, 1259, "Dismount");
 
+                // What is it
+                AddButton(0, 197, 1592, 1593, 45, GumpButtonType.Reply, 0);
+                AddLabel(5, 199, 1259, "Whatisit");
+
+                // Dupe 87 89
+                AddButton(0, 222, 1592, 1593, 38, GumpButtonType.Reply, 0);
+                AddLabel(5, 224, 1259, "Dupe");
+
+                // XMLFind
+                AddButton(0, 257, 1592, 1593, 44, GumpButtonType.Reply, 0);
+                AddLabel(5, 259, 1259, "Find");
+                // Where
+                AddButton(0, 282, 1592, 1593, 45, GumpButtonType.Reply, 0);
+                AddLabel(5, 284, 1259, "Where");
 
             }
 			if ( from.AccessLevel >= AccessLevel.GameMaster)
@@ -429,6 +452,38 @@ namespace Server.Gumps
                     from.SendMessage(2125, "Dismount? (ESC to cansel)");
                     from.SendGump(new IceGMTool(from));
                     break;
+                case 40:
+                    CommandSystem.Handle(from, String.Format("{0}set cantwalk true", prefix));
+                    from.SendMessage(2125, "Don't can walk? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 41:
+                    CommandSystem.Handle(from, String.Format("{0}set cantwalk false", prefix));
+                    from.SendMessage(2125, "Can walk? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 42:
+                    CommandSystem.Handle(from, String.Format("{0}jail", prefix));
+                    from.SendMessage(2125, "Jailed? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 43:
+                    CommandSystem.Handle(from, String.Format("{0}unjail", prefix));
+                    from.SendMessage(2125, "Unjailed? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 44:
+                    CommandSystem.Handle(from, String.Format("{0}xmlfind", prefix));
+                    from.SendMessage(2125, "Unjailed? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 45:
+                    CommandSystem.Handle(from, String.Format("{0}whatisit", prefix));
+                    from.SendMessage(2125, "Unjailed? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+
+
 
             }
         }

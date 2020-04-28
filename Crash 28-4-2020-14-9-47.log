@@ -1,0 +1,24 @@
+Server Crash Report
+===================
+
+ServUO Version 0.5, Build 7423.26291
+Operating System: Unix 19.4.0.0
+.NET Framework: 4.0.30319.42000
+Time: 28.04.2020 14:09:47
+Mobiles: 1153
+Items: 91177
+Exception:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Xanthos.JailSystem.Jail.ListJailWords_OnCommand (Server.Commands.CommandEventArgs e) [0x00000] in <019568d0e2eb48428140d794c6791813>:0 
+  at Server.Commands.CommandSystem.Handle (Server.Mobile from, System.String text, Server.Network.MessageType type) [0x000bd] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+  at Server.Mobile.DoSpeech (System.String text, System.Int32[] keywords, Server.Network.MessageType type, System.Int32 hue) [0x0000b] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+  at Server.Mobiles.PlayerMobile.DoSpeech (System.String text, System.Int32[] keywords, Server.Network.MessageType type, System.Int32 hue) [0x000bf] in <019568d0e2eb48428140d794c6791813>:0 
+  at Server.Network.PacketHandlers.UnicodeSpeech (Server.Network.NetState state, Server.Network.PacketReader pvSrc) [0x00161] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+  at Server.Network.MessagePump.HandleReceive (Server.Network.NetState ns) [0x00240] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+  at Server.Network.MessagePump.Slice () [0x00057] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+  at Server.Core.Main (System.String[] args) [0x006e6] in <2b5638e5b29d4bc5a660de3466d44ee0>:0 
+
+Clients:
+- Count: 2
++ 192.168.202.129: (account = admin) (mobile = 0x197 'GM')
++ 192.168.202.129: (account = test) (mobile = 0x198 'test')

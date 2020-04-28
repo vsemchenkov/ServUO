@@ -4297,3 +4297,905 @@
 28.04.2020 0:11:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
 28.04.2020 0:12:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
 28.04.2020 0:14:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 8:56:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmbody '
+28.04.2020 8:56:24: 192.168.202.129: Owner 0x197 "GM" ('admin') is assuming a GM body
+28.04.2020 8:56:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add saint'
+28.04.2020 8:56:47: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3721, 20) in Trammel: "SaintNicholasBag"
+28.04.2020 8:56:47: 192.168.202.129: Serials: 0x40002132; 
+28.04.2020 8:56:58: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3720, 20) in Trammel: "SaintNicholas"
+28.04.2020 8:56:58: 192.168.202.129: Serials: 0x1F8; 
+28.04.2020 8:57:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add smallcandy'
+28.04.2020 8:57:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3721, 20) in Trammel: "SmallCandyApple"
+28.04.2020 8:57:41: 192.168.202.129: Serials: 0x4000213D; 
+28.04.2020 8:57:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3721, 20) in Trammel: "SmallCandyApple"
+28.04.2020 8:57:44: 192.168.202.129: Serials: 0x4000213E; 
+28.04.2020 8:57:45: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3721, 20) in Trammel: "SmallCandyApple"
+28.04.2020 8:57:45: 192.168.202.129: Serials: 0x4000213F; 
+28.04.2020 8:57:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add smallcandy'
+28.04.2020 8:57:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add smallcandy'
+28.04.2020 8:58:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3721, 20) in Trammel: "SmallCandyApple"
+28.04.2020 8:58:03: 192.168.202.129: Serials: 0x40002140; 
+28.04.2020 8:58:04: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3721, 20) in Trammel: "SmallCandyApple"
+28.04.2020 8:58:04: 192.168.202.129: Serials: 0x40002144; 
+28.04.2020 8:58:26: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3721, 20) in Trammel: "SmallCandyCane"
+28.04.2020 8:58:26: 192.168.202.129: Serials: 0x40002148; 
+28.04.2020 8:58:27: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3721, 20) in Trammel: "SmallCandyCane"
+28.04.2020 8:58:27: 192.168.202.129: Serials: 0x4000214B; 
+28.04.2020 8:58:28: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6089, 3721, 20) in Trammel: "SmallCandyCane"
+28.04.2020 8:58:28: 192.168.202.129: Serials: 0x4000214C; 
+28.04.2020 8:58:30: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3721, 20) in Trammel: "SmallCandyCane"
+28.04.2020 8:58:30: 192.168.202.129: Serials: 0x4000214D; 
+28.04.2020 8:58:31: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3722, 20) in Trammel: "SmallCandyCane"
+28.04.2020 8:58:31: 192.168.202.129: Serials: 0x4000214E; 
+28.04.2020 8:59:01: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3721, 20) in Trammel: "GingerBreadCookie"
+28.04.2020 8:59:01: 192.168.202.129: Serials: 0x40002151; 
+28.04.2020 8:59:02: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6088, 3721, 20) in Trammel: "GingerBreadCookie"
+28.04.2020 8:59:02: 192.168.202.129: Serials: 0x40002152; 
+28.04.2020 8:59:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3721, 20) in Trammel: "GingerBreadCookie"
+28.04.2020 8:59:03: 192.168.202.129: Serials: 0x40002153; 
+28.04.2020 8:59:04: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6087, 3722, 20) in Trammel: "GingerBreadCookie"
+28.04.2020 8:59:04: 192.168.202.129: Serials: 0x40002154; 
+28.04.2020 8:59:04: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6089, 3722, 20) in Trammel: "GingerBreadCookie"
+28.04.2020 8:59:04: 192.168.202.129: Serials: 0x40002155; 
+28.04.2020 8:59:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add san'
+28.04.2020 9:00:08: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6085, 3718, 20) in Trammel: "SantaStatue"
+28.04.2020 9:00:08: 192.168.202.129: Serials: 0x40002157; 
+28.04.2020 9:00:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add mrs'
+28.04.2020 9:00:37: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6085, 3720, 20) in Trammel: "MrsClaus1"
+28.04.2020 9:00:37: 192.168.202.129: Serials: 0x1F9; 
+28.04.2020 9:01:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add deerpoo'
+28.04.2020 9:01:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add deerpoop 50'
+28.04.2020 9:01:49: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3718, 20) in Trammel: "deerpoop" "50"
+28.04.2020 9:01:49: 192.168.202.129: Serials: 0x4000216B; 
+28.04.2020 9:02:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:02:31: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x1F9 "Mrs. Claus" (no account)
+28.04.2020 9:02:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:02:33: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x1F8 "SaintNicholas" (no account)
+28.04.2020 9:23:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmbody '
+28.04.2020 9:23:44: 192.168.202.129: Owner 0x197 "GM" ('admin') is assuming a GM body
+28.04.2020 9:23:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add skelet'
+28.04.2020 9:23:54: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6084, 3720, 20) in Trammel: "HangingSkeleton"
+28.04.2020 9:23:54: 192.168.202.129: Serials: 0x40002132; 
+28.04.2020 9:23:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add skelet'
+28.04.2020 9:24:04: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6083, 3721, 20) in Trammel: "SkeletalCat"
+28.04.2020 9:24:04: 192.168.202.129: Serials: 0x1F8; 
+28.04.2020 9:24:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'shrink '
+28.04.2020 9:24:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'shrink '
+28.04.2020 9:25:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add tarant'
+28.04.2020 9:25:09: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6085, 3720, 20) in Trammel: "EtherealTarantula"
+28.04.2020 9:25:09: 192.168.202.129: Serials: 0x40002139; 
+28.04.2020 9:25:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add cocun'
+28.04.2020 9:26:08: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3720, 20) in Trammel: "JackRabbit"
+28.04.2020 9:26:08: 192.168.202.129: Serials: 0x1F9; 
+28.04.2020 9:26:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add cocun'
+28.04.2020 9:26:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:26:19: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x1F9 "a jack rabbit" (no account)
+28.04.2020 9:26:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add crab'
+28.04.2020 9:26:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add cra'
+28.04.2020 9:26:45: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6086, 3721, 20) in Trammel: "CoconutCrab"
+28.04.2020 9:26:45: 192.168.202.129: Serials: 0x205; 
+28.04.2020 9:26:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'shrink '
+28.04.2020 9:27:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'shrink '
+28.04.2020 9:31:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:31:58: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002132 (HangingSkeleton)
+28.04.2020 9:32:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 9:32:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add market'
+28.04.2020 9:32:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go pvparena'
+28.04.2020 9:32:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 9:33:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go britainbank'
+28.04.2020 9:33:09: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go britain bank'
+28.04.2020 9:33:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go britain'
+28.04.2020 9:33:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 9:33:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 9:33:43: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x400001F8 (AddonComponent) (inBag=False; amount=1)
+28.04.2020 9:33:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 9:33:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 9:33:51: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x400001FA (AddonComponent) (inBag=False; amount=1)
+28.04.2020 9:34:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:34:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 9:34:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:34:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:35:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set sandals set movable true itemid 3081'
+28.04.2020 9:35:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set sandals set movable true itemid 3081'
+28.04.2020 9:35:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 3081'
+28.04.2020 9:35:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1696, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "3081"
+28.04.2020 9:35:44: 192.168.202.129: Serials: 0x40002141; 
+28.04.2020 9:35:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3081'
+28.04.2020 9:35:52: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1696, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3081"
+28.04.2020 9:35:52: 192.168.202.129: Serials: 0x40002144; 
+28.04.2020 9:35:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3082'
+28.04.2020 9:35:56: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1426, 1696, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3082"
+28.04.2020 9:35:56: 192.168.202.129: Serials: 0x40002148; 
+28.04.2020 9:35:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3083'
+28.04.2020 9:35:59: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1425, 1696, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3083"
+28.04.2020 9:35:59: 192.168.202.129: Serials: 0x4000214B; 
+28.04.2020 9:36:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3084'
+28.04.2020 9:36:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1697, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3084"
+28.04.2020 9:36:03: 192.168.202.129: Serials: 0x4000214C; 
+28.04.2020 9:36:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:36:07: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000214C (Sandals)
+28.04.2020 9:36:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:36:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:36:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:36:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307e'
+28.04.2020 9:36:43: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1697, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307e"
+28.04.2020 9:36:43: 192.168.202.129: Serials: 0x4000214D; 
+28.04.2020 9:36:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307f'
+28.04.2020 9:36:46: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1426, 1697, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307f"
+28.04.2020 9:36:46: 192.168.202.129: Serials: 0x4000214E; 
+28.04.2020 9:36:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3080'
+28.04.2020 9:36:52: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1425, 1697, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3080"
+28.04.2020 9:36:52: 192.168.202.129: Serials: 0x40002151; 
+28.04.2020 9:37:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307d'
+28.04.2020 9:37:09: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1698, 0) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307d"
+28.04.2020 9:37:09: 192.168.202.129: Serials: 0x40002152; 
+28.04.2020 9:37:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307c'
+28.04.2020 9:37:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1425, 1701, 3) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307c"
+28.04.2020 9:37:34: 192.168.202.129: Serials: 0x40002153; 
+28.04.2020 9:37:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307b'
+28.04.2020 9:37:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1423, 1704, 9) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307b"
+28.04.2020 9:37:44: 192.168.202.129: Serials: 0x40002154; 
+28.04.2020 9:38:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add pack'
+28.04.2020 9:38:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1427, 1698, 0) in Trammel: "Backpack"
+28.04.2020 9:38:36: 192.168.202.129: Serials: 0x40002155; 
+28.04.2020 9:39:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 9:40:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:41:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add arcane'
+28.04.2020 9:41:13: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6097, 3698, 20) in Trammel: "ArcaneCircleDeed"
+28.04.2020 9:41:13: 192.168.202.129: Serials: 0x40002157; 
+28.04.2020 9:41:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:31: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002153 (Sandals)
+28.04.2020 9:41:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:33: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000214E (Sandals)
+28.04.2020 9:41:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:34: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002148 (Sandals)
+28.04.2020 9:41:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:37: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002151 (Sandals)
+28.04.2020 9:41:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:39: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000214B (Sandals)
+28.04.2020 9:41:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:41: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002152 (Sandals)
+28.04.2020 9:41:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:43: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002154 (Sandals)
+28.04.2020 9:41:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:45: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000214D (Sandals)
+28.04.2020 9:41:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:41:47: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002144 (Sandals)
+28.04.2020 9:41:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 9:41:56: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x400033E1 (Teleporter) (inBag=False; amount=1)
+28.04.2020 9:41:56: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400033E1 (Teleporter) creating 0x4000232F (Teleporter)
+28.04.2020 9:42:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe 8'
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x4000232F (Teleporter) (inBag=False; amount=8)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002331 (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002336 (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002339 (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000233D (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000233F (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002342 (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002344 (Teleporter)
+28.04.2020 9:42:13: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002346 (Teleporter)
+28.04.2020 9:42:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:42:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go market'
+28.04.2020 9:42:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 9:43:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:44:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set pointdest 6019, 1118, 0'
+28.04.2020 9:44:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set pointdest 6019,1118,0'
+28.04.2020 9:45:14: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'PointDest' of 0x4000232F (Teleporter) to '(6019, 1118, 0)'
+28.04.2020 9:45:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:45:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:45:38: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002001 (Backpack)
+28.04.2020 9:45:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 9:45:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe 8'
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x4000232F (Teleporter) (inBag=False; amount=8)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000234C (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000234E (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002358 (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000235A (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000235C (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000235E (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x4000235F (Teleporter)
+28.04.2020 9:45:59: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000232F (Teleporter) creating 0x40002367 (Teleporter)
+28.04.2020 9:46:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:46:02: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000232F (Teleporter)
+28.04.2020 9:46:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 9:46:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307b'
+28.04.2020 9:47:00: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6104, 3694, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307b"
+28.04.2020 9:47:00: 192.168.202.129: Serials: 0x4000236D; 
+28.04.2020 9:47:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307c'
+28.04.2020 9:47:06: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6103, 3694, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307c"
+28.04.2020 9:47:06: 192.168.202.129: Serials: 0x40002371; 
+28.04.2020 9:47:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307d'
+28.04.2020 9:47:10: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3694, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307d"
+28.04.2020 9:47:10: 192.168.202.129: Serials: 0x40002377; 
+28.04.2020 9:47:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307e'
+28.04.2020 9:47:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6104, 3693, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307e"
+28.04.2020 9:47:14: 192.168.202.129: Serials: 0x40002379; 
+28.04.2020 9:47:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x307f'
+28.04.2020 9:47:18: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6103, 3693, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x307f"
+28.04.2020 9:47:18: 192.168.202.129: Serials: 0x4000237A; 
+28.04.2020 9:47:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3080'
+28.04.2020 9:47:27: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3693, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3080"
+28.04.2020 9:47:27: 192.168.202.129: Serials: 0x4000237F; 
+28.04.2020 9:47:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3081'
+28.04.2020 9:47:30: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6104, 3692, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3081"
+28.04.2020 9:47:30: 192.168.202.129: Serials: 0x40002381; 
+28.04.2020 9:47:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3082'
+28.04.2020 9:47:33: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6103, 3692, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3082"
+28.04.2020 9:47:33: 192.168.202.129: Serials: 0x40002383; 
+28.04.2020 9:47:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3082'
+28.04.2020 9:47:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3083'
+28.04.2020 9:47:40: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3692, 20) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3083"
+28.04.2020 9:47:40: 192.168.202.129: Serials: 0x40002387; 
+28.04.2020 9:47:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 9:48:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 9:48:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:48:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:49:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go market'
+28.04.2020 9:49:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add [remove'
+28.04.2020 9:49:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:49:47: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000234C (Teleporter)
+28.04.2020 9:49:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:49:49: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000234E (Teleporter)
+28.04.2020 9:49:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'addtopack '
+28.04.2020 9:50:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:10: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002358 (Teleporter)
+28.04.2020 9:50:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:11: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000235A (Teleporter)
+28.04.2020 9:50:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:15: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000235C (Teleporter)
+28.04.2020 9:50:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:17: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000235E (Teleporter)
+28.04.2020 9:50:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:18: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000235F (Teleporter)
+28.04.2020 9:50:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:20: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002367 (Teleporter)
+28.04.2020 9:50:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 9:50:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:37: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000237A (Sandals)
+28.04.2020 9:50:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:38: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002383 (Sandals)
+28.04.2020 9:50:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:41: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002387 (Sandals)
+28.04.2020 9:50:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmbody '
+28.04.2020 9:50:49: 192.168.202.129: Owner 0x197 "GM" ('admin') is assuming a GM body
+28.04.2020 9:50:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmbody '
+28.04.2020 9:50:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:56: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000237F (Sandals)
+28.04.2020 9:50:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:50:58: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002381 (Sandals)
+28.04.2020 9:51:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:51:00: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002379 (Sandals)
+28.04.2020 9:51:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:51:02: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000236D (Sandals)
+28.04.2020 9:51:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:51:04: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002371 (Sandals)
+28.04.2020 9:51:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:51:06: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002377 (Sandals)
+28.04.2020 9:51:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 9:51:19: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x400033E1 (Teleporter) (inBag=False; amount=1)
+28.04.2020 9:51:19: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400033E1 (Teleporter) creating 0x400023DB (Teleporter)
+28.04.2020 9:51:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set pointdest 6019,1118,0'
+28.04.2020 9:51:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:52:47: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'PointDest' of 0x400023DB (Teleporter) to '(6019, 1118, 0)'
+28.04.2020 9:53:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe 8'
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x400023DB (Teleporter) (inBag=False; amount=8)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x400023DD (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x400023DF (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x400023E1 (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x400023F7 (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x400023F8 (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x40002535 (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x40002536 (Teleporter)
+28.04.2020 9:53:11: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x400023DB (Teleporter) creating 0x40002537 (Teleporter)
+28.04.2020 9:53:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 9:54:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable true itemid 0x3083'
+28.04.2020 9:54:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6102, 3691, 21) in Trammel: "sandals" "set" "movable" "true" "itemid" "0x3083"
+28.04.2020 9:54:41: 192.168.202.129: Serials: 0x40002538; 
+28.04.2020 9:54:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 9:54:54: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002538 (Sandals)
+28.04.2020 9:55:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x3083'
+28.04.2020 9:55:08: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023DB (Teleporter) to '12419'
+28.04.2020 9:55:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x3082'
+28.04.2020 9:55:12: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023F8 (Teleporter) to '12418'
+28.04.2020 9:55:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x3081'
+28.04.2020 9:55:17: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023E1 (Teleporter) to '12417'
+28.04.2020 9:55:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x3080'
+28.04.2020 9:55:20: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023DD (Teleporter) to '12416'
+28.04.2020 9:59:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x3082'
+28.04.2020 9:59:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307e'
+28.04.2020 9:59:44: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x40002537 (Teleporter) to '12414'
+28.04.2020 9:59:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307e'
+28.04.2020 9:59:46: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x40002536 (Teleporter) to '12414'
+28.04.2020 9:59:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307f'
+28.04.2020 9:59:51: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x40002537 (Teleporter) to '12415'
+28.04.2020 10:00:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307d'
+28.04.2020 10:00:02: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023F7 (Teleporter) to '12413'
+28.04.2020 10:00:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307d'
+28.04.2020 10:00:05: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x40002535 (Teleporter) to '12413'
+28.04.2020 10:00:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307c'
+28.04.2020 10:00:17: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023DF (Teleporter) to '12412'
+28.04.2020 10:00:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set itemid 0x307b'
+28.04.2020 10:00:23: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'itemid' of 0x400023F7 (Teleporter) to '12411'
+28.04.2020 10:00:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 10:00:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 10:01:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:22: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023DB (Teleporter) to 'True'
+28.04.2020 10:01:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:25: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023F8 (Teleporter) to 'True'
+28.04.2020 10:01:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:27: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023E1 (Teleporter) to 'True'
+28.04.2020 10:01:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:29: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x40002536 (Teleporter) to 'True'
+28.04.2020 10:01:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:30: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x40002537 (Teleporter) to 'True'
+28.04.2020 10:01:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:33: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023DD (Teleporter) to 'True'
+28.04.2020 10:01:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:35: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x40002535 (Teleporter) to 'True'
+28.04.2020 10:01:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:37: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023DF (Teleporter) to 'True'
+28.04.2020 10:01:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set visible true'
+28.04.2020 10:01:39: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'visible' of 0x400023F7 (Teleporter) to 'True'
+28.04.2020 10:11:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 10:11:30: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'SoundID' of 0x400023DF (Teleporter) to '265'
+28.04.2020 10:11:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:46: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DF (Teleporter) to '265'
+28.04.2020 10:11:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:50: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002535 (Teleporter) to '265'
+28.04.2020 10:11:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:52: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023F7 (Teleporter) to '265'
+28.04.2020 10:11:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:54: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002536 (Teleporter) to '265'
+28.04.2020 10:11:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:56: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002537 (Teleporter) to '265'
+28.04.2020 10:11:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:11:59: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DD (Teleporter) to '265'
+28.04.2020 10:12:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:12:01: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DB (Teleporter) to '265'
+28.04.2020 10:12:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:12:03: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023F8 (Teleporter) to '265'
+28.04.2020 10:12:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x109'
+28.04.2020 10:12:06: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023E1 (Teleporter) to '265'
+28.04.2020 10:12:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 10:12:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 10:13:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:11: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DF (Teleporter) to '264'
+28.04.2020 10:13:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:13: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002535 (Teleporter) to '264'
+28.04.2020 10:13:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:16: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023F7 (Teleporter) to '264'
+28.04.2020 10:13:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:18: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002536 (Teleporter) to '264'
+28.04.2020 10:13:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:20: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x40002537 (Teleporter) to '264'
+28.04.2020 10:13:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:21: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DD (Teleporter) to '264'
+28.04.2020 10:13:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:24: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023DB (Teleporter) to '264'
+28.04.2020 10:13:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:26: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023F8 (Teleporter) to '264'
+28.04.2020 10:13:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set soundid 0x108'
+28.04.2020 10:13:28: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'soundid' of 0x400023E1 (Teleporter) to '264'
+28.04.2020 10:13:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go arena'
+28.04.2020 10:14:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 10:15:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add dragon_rust'
+28.04.2020 10:16:40: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6095, 3698, 20) in Trammel: "SkeletalDragon"
+28.04.2020 10:16:40: 192.168.202.129: Serials: 0x4B1; 
+28.04.2020 10:16:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add rust'
+28.04.2020 10:17:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 10:18:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 10:18:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'kill '
+28.04.2020 10:19:00: 192.168.202.129: Owner 0x197 "GM" ('admin') killing 0x4B1 "a skeletal dragon" (no account)
+28.04.2020 10:20:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 10:25:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add crystal'
+28.04.2020 10:26:09: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3709, 20) in Trammel: "CrystalElemental"
+28.04.2020 10:26:09: 192.168.202.129: Serials: 0x4B2; 
+28.04.2020 10:26:48: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3706, 20) in Trammel: "MountedPixieWhiteDeed"
+28.04.2020 10:26:48: 192.168.202.129: Serials: 0x40002603; 
+28.04.2020 10:27:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3706, 20) in Trammel: "HorseStatue"
+28.04.2020 10:27:16: 192.168.202.129: Serials: 0x40002609; 
+28.04.2020 10:27:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'kill '
+28.04.2020 10:27:31: 192.168.202.129: Owner 0x197 "GM" ('admin') killing 0x4B2 "a crystal elemental" (no account)
+28.04.2020 10:27:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 10:27:39: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000260F (Corpse)
+28.04.2020 10:27:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 10:27:41: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002609 (HorseStatue)
+28.04.2020 11:39:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 11:39:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 11:40:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add auction'
+28.04.2020 11:40:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add auction'
+28.04.2020 11:40:19: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3709, 20) in Trammel: "auction"
+28.04.2020 11:40:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add auctio'
+28.04.2020 11:40:26: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6099, 3710, 20) in Trammel: "Auctioner"
+28.04.2020 11:40:26: 192.168.202.129: Serials: 0x1F8; 
+28.04.2020 11:40:38: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6098, 3707, 20) in Trammel: "AuctionSafeDeed"
+28.04.2020 11:40:38: 192.168.202.129: Serials: 0x4000269F; 
+28.04.2020 11:42:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'myauction '
+28.04.2020 12:20:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 12:21:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 12:21:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 12:21:11: 192.168.202.129: Owner 0x197 "GM" ('admin') going to 0x198 "test" ('test1'), Location (1462, 839, 0), Map Felucca
+28.04.2020 12:21:16: 192.168.202.129: Owner 0x197 "GM" ('admin') Opening Skills gump of 0x198 "test" ('test1') 
+28.04.2020 12:21:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 12:21:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 12:21:51: 192.168.202.129: Owner 0x197 "GM" ('admin') going to 0x198 "test" ('test1'), Location (1715, 1064, 0), Map Trammel
+28.04.2020 12:23:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jail'
+28.04.2020 12:23:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailt'
+28.04.2020 12:24:02: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1720, 1065, 0) in Trammel: "JailTeleporter"
+28.04.2020 12:24:02: 192.168.202.129: Serials: 0x40002698; 
+28.04.2020 12:25:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailr'
+28.04.2020 12:25:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1717, 1066, 0) in Trammel: "JailSlaveDriver"
+28.04.2020 12:25:25: 192.168.202.129: Serials: 0x1F8; 
+28.04.2020 12:26:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailrock'
+28.04.2020 12:26:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1716, 1066, 0) in Trammel: "jailrock"
+28.04.2020 12:26:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailrock'
+28.04.2020 12:26:31: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1713, 1068, 8) in Trammel: "jailrock"
+28.04.2020 12:26:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailrock'
+28.04.2020 12:26:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1713, 1066, 8) in Trammel: "jailrock"
+28.04.2020 12:26:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailrock'
+28.04.2020 12:26:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1713, 1067, 8) in Trammel: "jailrock"
+28.04.2020 12:26:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailrock'
+28.04.2020 12:26:38: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1713, 1068, 8) in Trammel: "jailrock"
+28.04.2020 12:27:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'unjail '
+28.04.2020 12:28:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 12:28:41: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002698 (JailTeleporter)
+28.04.2020 12:28:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 12:28:54: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (1715, 1065, 0)
+28.04.2020 12:28:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 12:29:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 12:29:09: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'unjail '
+28.04.2020 12:30:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go 3770 1308'
+28.04.2020 12:33:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 12:33:52: 192.168.202.129: Owner 0x197 "GM" ('admin') moving 0x198 "test" ('test1') to (3769, 1307, 0)
+28.04.2020 12:33:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 12:34:25: 192.168.202.129: Owner 0x197 "GM" ('admin') going to 0x198 "test" ('test1'), Location (1715, 1064, 0), Map Trammel
+28.04.2020 13:16:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:17:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jailt'
+28.04.2020 13:17:32: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1717, 1064, 0) in Trammel: "JailTeleporter"
+28.04.2020 13:17:32: 192.168.202.129: Serials: 0x400026F6; 
+28.04.2020 13:21:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set amount 65000'
+28.04.2020 13:21:38: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'amount' of 0x400026BB (JailRock) to '65000'
+28.04.2020 13:25:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 13:25:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 13:27:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 13:28:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:30:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:31:17: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'UsesRemaining' of 0x400026AA (JailHammer) to '10000'
+28.04.2020 13:31:37: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'UsesRemaining' of 0x400026AA (JailHammer) to '100000'
+28.04.2020 13:33:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:33:41: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'UsesRemaining' of 0x400026AA (JailHammer) to '100'
+28.04.2020 13:34:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 13:34:51: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x400026AA (JailHammer)
+28.04.2020 13:35:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 13:35:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 13:37:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:37:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:38:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:39:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:39:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:40:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:41:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:54:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 13:55:17: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'UsesRemaining' of 0x40001F96 (JailHammer) to '0'
+28.04.2020 13:58:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add slave'
+28.04.2020 13:58:43: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1715, 1064, 0) in Trammel: "JailSlaveDriver"
+28.04.2020 13:58:43: 192.168.202.129: Serials: 0x4AD; 
+28.04.2020 13:59:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 13:59:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail 1000'
+28.04.2020 14:00:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 14:06:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 14:07:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add jai'
+28.04.2020 14:07:28: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1717, 1067, 0) in Trammel: "JailSlaveDriver"
+28.04.2020 14:07:28: 192.168.202.129: Serials: 0x1F9; 
+28.04.2020 14:08:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 14:08:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 14:25:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 14:26:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 14:26:06: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x1F8 "Averill" (no account)
+28.04.2020 14:30:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'initauction '
+28.04.2020 14:30:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add auction'
+28.04.2020 14:30:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add auctionc'
+28.04.2020 14:30:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go market'
+28.04.2020 14:31:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 14:31:02: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000062F (MinotaurHedge)
+28.04.2020 14:31:09: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'initauction '
+28.04.2020 14:31:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 15:10:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 15:10:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 15:10:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 15:10:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 15:11:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 15:11:09: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40001F91 (AuctionControl)
+28.04.2020 15:11:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 15:11:17: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40001F93 (AuctionControl)
+28.04.2020 15:11:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 15:11:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'myauction '
+28.04.2020 15:12:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auction '
+28.04.2020 15:15:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auction '
+28.04.2020 15:15:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 15:15:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 15:16:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'dupe '
+28.04.2020 15:16:01: 192.168.202.129: Owner 0x197 "GM" ('admin') duping 0x4000062E (MinotaurHedge) (inBag=False; amount=1)
+28.04.2020 15:16:01: 192.168.202.129: Owner 0x197 "GM" ('admin') duped 0x4000062E (MinotaurHedge) creating 0x40001F9B (MinotaurHedge)
+28.04.2020 15:16:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 15:16:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auction '
+28.04.2020 15:17:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'myauction '
+28.04.2020 15:18:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 15:18:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'unjail '
+28.04.2020 15:18:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'unjail '
+28.04.2020 15:18:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 15:19:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'myauction '
+28.04.2020 15:19:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'myauction '
+28.04.2020 15:20:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'bank '
+28.04.2020 15:20:09: 192.168.202.129: Owner 0x197 "GM" ('admin') opening bank box of 0x197 "GM" ('admin')
+28.04.2020 15:20:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auction '
+28.04.2020 15:22:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 15:22:40: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'Squelched' of 0x198 "test" ('test1') to 'True'
+28.04.2020 15:22:50: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'Squelched' of 0x198 "test" ('test1') to 'False'
+28.04.2020 15:25:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add aucti'
+28.04.2020 15:25:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6014, 1129, 0) in Trammel: "Auctioner"
+28.04.2020 15:25:36: 192.168.202.129: Serials: 0x1F8; 
+28.04.2020 15:26:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add banker'
+28.04.2020 15:26:26: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6013, 1132, 0) in Trammel: "banker"
+28.04.2020 15:26:26: 192.168.202.129: Serials: 0x1F9; 
+28.04.2020 15:26:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add gold 65000'
+28.04.2020 15:26:34: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6013, 1132, 0) in Trammel: "gold" "65000"
+28.04.2020 15:26:34: 192.168.202.129: Serials: 0x40001FBD; 
+28.04.2020 15:27:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'addtopack gold 65000'
+28.04.2020 15:27:48: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6014, 1130, 0) in Trammel: "gold" "65000"
+28.04.2020 15:27:48: 192.168.202.129: Serials: 0x40001FBF; 
+28.04.2020 15:57:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set canmove false'
+28.04.2020 15:57:21: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'canmove' of 0x1F8 "Winston" (no account) to 'False'
+28.04.2020 15:57:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set canmove false'
+28.04.2020 15:57:24: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'canmove' of 0x1F9 "Marylou" (no account) to 'False'
+28.04.2020 15:57:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 16:03:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 16:17:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add mobiles'
+28.04.2020 16:18:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 16:18:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add mobilestatuette'
+28.04.2020 16:18:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6022, 1129, 0) in Trammel: "mobilestatuette"
+28.04.2020 16:18:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add mobilestatuette'
+28.04.2020 16:18:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6024, 1129, 0) in Trammel: "mobilestatuette"
+28.04.2020 16:28:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:28:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:29:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'initauction '
+28.04.2020 16:29:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:29:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:30:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go felucca'
+28.04.2020 16:30:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go britain'
+28.04.2020 16:30:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm tele'
+28.04.2020 16:44:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:44:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add woodenw'
+28.04.2020 16:45:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add set itemid 0xa7'
+28.04.2020 16:45:31: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1643, 30) in Felucca: "set" "itemid" "0xa7"
+28.04.2020 16:45:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add custo'
+28.04.2020 16:45:50: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1642, 30) in Felucca: "CustomizableWallSign"
+28.04.2020 16:45:50: 192.168.202.129: Serials: 0x400022F0; 
+28.04.2020 16:46:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add custo'
+28.04.2020 16:46:10: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1643, 30) in Felucca: "CustomizableRoundedDoorMat"
+28.04.2020 16:46:10: 192.168.202.129: Serials: 0x400022F2; 
+28.04.2020 16:46:13: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1642, 30) in Felucca: "CustomizableRoundedDoorMat"
+28.04.2020 16:46:13: 192.168.202.129: Serials: 0x400022F4; 
+28.04.2020 16:46:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1384, 1642, 30) in Felucca: "CustomHairstylist"
+28.04.2020 16:46:41: 192.168.202.129: Serials: 0x4AE; 
+28.04.2020 16:46:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add custobuy'
+28.04.2020 16:48:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 16:48:35: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4AE "Carita" (no account)
+28.04.2020 16:48:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:49:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false'
+28.04.2020 16:49:17: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1643, 30) in Felucca: "sandals" "set" "movable" "false"
+28.04.2020 16:49:17: 192.168.202.129: Serials: 0x4000230B; 
+28.04.2020 16:49:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid'
+28.04.2020 16:49:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 16:49:41: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x4000230B (Sandals)
+28.04.2020 16:49:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0xa7'
+28.04.2020 16:49:49: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1643, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0xa7"
+28.04.2020 16:49:49: 192.168.202.129: Serials: 0x4000230D; 
+28.04.2020 16:49:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0xa7'
+28.04.2020 16:49:51: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1642, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0xa7"
+28.04.2020 16:49:51: 192.168.202.129: Serials: 0x4000230F; 
+28.04.2020 16:50:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid'
+28.04.2020 16:50:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0xa7'
+28.04.2020 16:50:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:50:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 16:51:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:51:15: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1383, 1663, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:51:15: 192.168.202.129: Serials: 0x40002311; 
+28.04.2020 16:51:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:51:19: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1382, 1663, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:51:19: 192.168.202.129: Serials: 0x40002313; 
+28.04.2020 16:51:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:51:37: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1379, 1665, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:51:37: 192.168.202.129: Serials: 0x40002315; 
+28.04.2020 16:51:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:51:42: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1664, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:51:42: 192.168.202.129: Serials: 0x40002317; 
+28.04.2020 16:51:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:51:44: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1665, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:51:44: 192.168.202.129: Serials: 0x4000232B; 
+28.04.2020 16:51:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:51:48: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1666, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:51:48: 192.168.202.129: Serials: 0x4000232F; 
+28.04.2020 16:51:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:51:51: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1667, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:51:51: 192.168.202.129: Serials: 0x40002331; 
+28.04.2020 16:52:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:11: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1361, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:11: 192.168.202.129: Serials: 0x40002336; 
+28.04.2020 16:52:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1362, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:14: 192.168.202.129: Serials: 0x40002339; 
+28.04.2020 16:52:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1363, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:16: 192.168.202.129: Serials: 0x4000233D; 
+28.04.2020 16:52:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:18: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1364, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:18: 192.168.202.129: Serials: 0x4000233F; 
+28.04.2020 16:52:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:20: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1365, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:20: 192.168.202.129: Serials: 0x40002342; 
+28.04.2020 16:52:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:22: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1366, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:22: 192.168.202.129: Serials: 0x40002344; 
+28.04.2020 16:52:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:23: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1367, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:24: 192.168.202.129: Serials: 0x40002346; 
+28.04.2020 16:52:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:26: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1368, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:26: 192.168.202.129: Serials: 0x4000234C; 
+28.04.2020 16:52:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:28: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1369, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:28: 192.168.202.129: Serials: 0x4000234E; 
+28.04.2020 16:52:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:30: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1370, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:30: 192.168.202.129: Serials: 0x40002358; 
+28.04.2020 16:52:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:33: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1371, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:33: 192.168.202.129: Serials: 0x4000235A; 
+28.04.2020 16:52:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:35: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1372, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:35: 192.168.202.129: Serials: 0x4000235C; 
+28.04.2020 16:52:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:38: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1373, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:38: 192.168.202.129: Serials: 0x4000235E; 
+28.04.2020 16:52:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:40: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1374, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:40: 192.168.202.129: Serials: 0x4000235F; 
+28.04.2020 16:52:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:42: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1375, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:42: 192.168.202.129: Serials: 0x40002367; 
+28.04.2020 16:52:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:50: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1376, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:50: 192.168.202.129: Serials: 0x4000236D; 
+28.04.2020 16:52:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:54: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1377, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:54: 192.168.202.129: Serials: 0x40002371; 
+28.04.2020 16:52:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:52:56: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1378, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:52:56: 192.168.202.129: Serials: 0x40002377; 
+28.04.2020 16:53:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:53:00: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1379, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:53:00: 192.168.202.129: Serials: 0x40002379; 
+28.04.2020 16:53:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:53:03: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1380, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:53:03: 192.168.202.129: Serials: 0x4000237A; 
+28.04.2020 16:53:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x836'
+28.04.2020 16:53:07: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x836"
+28.04.2020 16:53:07: 192.168.202.129: Serials: 0x4000237F; 
+28.04.2020 16:53:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:53:13: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1670, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:53:13: 192.168.202.129: Serials: 0x40002381; 
+28.04.2020 16:53:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:53:26: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1671, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:53:26: 192.168.202.129: Serials: 0x40002383; 
+28.04.2020 16:53:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:53:33: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1668, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:53:33: 192.168.202.129: Serials: 0x40002387; 
+28.04.2020 16:53:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x837'
+28.04.2020 16:53:37: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (1381, 1669, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x837"
+28.04.2020 16:53:37: 192.168.202.129: Serials: 0x40002399; 
+28.04.2020 16:53:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 16:53:52: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40002315 (Sandals)
+28.04.2020 16:54:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:54:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:55:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 16:55:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'area add sandals set movable false itemid 0x77'
+28.04.2020 16:56:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'area add sandals'
+28.04.2020 16:56:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'area sandals'
+28.04.2020 16:56:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile add sandals'
+28.04.2020 16:56:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile add sandals set movable false itemid 0x77'
+28.04.2020 16:56:46: 192.168.202.129: Owner 0x197 "GM" ('admin') building from (1382, 1664, 30) to (1394, 1678, 30) in Felucca: "add" "sandals" "set" "movable" "false" "itemid" "0x77"
+28.04.2020 16:57:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile sandals set movable false itemid 077'
+28.04.2020 16:57:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile sandals set movable false itemid 0x77'
+28.04.2020 16:57:36: 192.168.202.129: Owner 0x197 "GM" ('admin') building from (1382, 1664, 30) to (1394, 1678, 30) in Felucca: "sandals" "set" "movable" "false" "itemid" "0x77"
+28.04.2020 16:57:36: 192.168.202.129: Serials: 0x40002538; 0x40002539; 0x4000253A; 0x4000253B; 0x4000253C; 0x4000253D; 0x4000253E; 0x4000253F; 0x40002540; 0x40002541; 0x40002542; 0x40002543; 0x40002544; 0x40002545; 0x40002546; 0x40002547; 0x40002548; 0x4000254A; 0x4000254B; 0x4000254C; 0x4000254D; 0x4000254E; 0x4000254F; 0x40002550; 0x40002551; 0x40002552; 0x40002553; 0x40002554; 0x40002555; 0x40002556; 0x40002560; 0x40002561; 0x40002565; 0x40002593; 0x40002594; 0x40002595; 0x40002596; 0x40002597; 0x40002598; 0x40002599; 0x4000259A; 0x400025A5; 0x400025A7; 0x400025A9; 0x400025AB; 0x400025AD; 0x400025AF; 0x400025B1; 0x400025B3; 0x400025B5; 0x400025B7; 0x400025B8; 0x400025BB; 0x400025BD; 0x400025BF; 0x400025C3; 0x400025C5; 0x400025C9; 0x400025CB; 0x400025CD; 0x400025CF; 0x400025D1; 0x400025D4; 0x400025D7; 0x400025D9; 0x400025DB; 0x400025DD; 0x400025DF; 0x400025E2; 0x400025E5; 0x400025E7; 0x400025E8; 0x400025E9; 0x400025EF; 0x400025F1; 0x400025F3; 0x400025F5; 0x400025F7; 0x400025FB; 0x400025FD; 0x400025FF; 0x40002601; 0x40002603; 0x40002605; 0x40002607; 0x40002609; 0x4000260A; 0x4000260D; 0x4000260F; 0x40002610; 0x40002613; 0x40002615; 0x40002617; 0x40002619; 0x4000261B; 0x4000261D; 0x40002621; 0x40002622; 0x40002625; 0x40002627; 0x4000262B; 0x4000262C; 0x4000262F; 0x40002633; 0x40002639; 0x4000263B; 0x4000263F; 0x40002641; 0x40002643; 0x40002647; 0x40002649; 0x4000264A; 0x4000264B; 0x4000264F; 0x40002651; 0x40002652; 0x40002653; 0x40002655; 0x40002659; 0x4000265B; 0x4000265D; 0x4000265F; 0x40002661; 0x40002665; 0x40002666; 0x4000266B; 0x4000266F; 0x40002670; 0x40002677; 0x40002679; 0x4000267B; 0x4000267F; 0x40002681; 0x40002683; 0x40002685; 0x40002686; 0x40002687; 0x4000268B; 0x4000268D; 0x40002693; 0x40002695; 0x40002698; 0x4000269B; 0x4000269D; 0x4000269F; 0x400026A1; 0x400026A3; 0x400026A5; 0x400026A7; 0x400026AA; 0x400026B8; 0x400026BB; 0x400026BD; 0x400026C3; 0x400026C6; 0x400026C8; 0x400026D0; 0x400026D4; 0x400026D5; 0x400026D6; 0x400026DC; 0x400026DE; 0x400026DF; 0x400026E4; 0x400026E6; 0x400026E9; 0x400026EE; 0x400026F0; 0x400026F4; 0x400026FC; 0x40002702; 0x40002705; 0x40002708; 0x40002712; 0x40002714; 0x40002718; 0x40002719; 0x4000271E; 0x4000271F; 0x40002722; 0x40002724; 0x4000272C; 0x4000272E; 0x40002730; 0x40002732; 0x40002734; 0x40002737; 0x40002739; 0x4000273C; 0x40002741; 0x40002745; 0x40002746; 0x40002749; 0x4000274B; 0x4000274F; 
+28.04.2020 16:57:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile remove'
+28.04.2020 16:57:54: 192.168.202.129: Owner 0x197 "GM" ('admin') building from (1384, 1674, 30) to (1394, 1678, 50) in Felucca: "remove"
+28.04.2020 16:57:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tile remove'
+28.04.2020 16:58:01: 192.168.202.129: Owner 0x197 "GM" ('admin') building from (1384, 1675, 50) to (1386, 1677, 50) in Felucca: "remove"
+28.04.2020 16:59:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:59:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:59:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:59:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 16:59:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 16:59:31: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40001F96 (AuctionControl)
+28.04.2020 16:59:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'initauction '
+28.04.2020 17:00:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 17:00:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 17:00:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 17:00:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'initauction '
+28.04.2020 17:02:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go test'
+28.04.2020 17:02:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go test1'
+28.04.2020 17:03:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 17:03:07: 192.168.202.129: Owner 0x197 "GM" ('admin') going to 0x198 "test" ('test1'), Location (1461, 846, 0), Map Felucca
+28.04.2020 17:03:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'bank '
+28.04.2020 17:03:13: 192.168.202.129: Owner 0x197 "GM" ('admin') opening bank box of 0x198 "test" ('test1')
+28.04.2020 17:03:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'bank '
+28.04.2020 17:03:23: 192.168.202.129: Owner 0x197 "GM" ('admin') opening bank box of 0x197 "GM" ('admin')
+28.04.2020 17:07:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go market'
+28.04.2020 20:47:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'auctionadmin '
+28.04.2020 20:57:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add elven'
+28.04.2020 20:58:07: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6015, 1132, 0) in Trammel: "MaleElvenRobe"
+28.04.2020 20:58:07: 192.168.202.129: Serials: 0x400025DD; 
+28.04.2020 20:59:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add wildst'
+28.04.2020 20:59:24: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6017, 1132, 0) in Trammel: "WildStaff"
+28.04.2020 20:59:24: 192.168.202.129: Serials: 0x400025DF; 
+28.04.2020 21:00:14: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6017, 1132, 0) in Trammel: "ElvenSpellblade"
+28.04.2020 21:00:14: 192.168.202.129: Serials: 0x400025E2; 
+28.04.2020 21:01:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail'
+28.04.2020 21:01:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 21:01:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 21:01:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get movable'
+28.04.2020 21:02:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get canwalk'
+28.04.2020 21:02:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get canwalk'
+28.04.2020 21:02:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 21:02:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 21:03:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 21:03:12: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'DisabledPvpWarning' of 0x198 "test" ('test1') to 'True'
+28.04.2020 21:03:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 21:03:26: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'DisabledPvpWarning' of 0x197 "GM" ('admin') to 'True'
+28.04.2020 21:03:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 21:04:53: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'CantWalk' of 0x197 "GM" ('admin') to 'True'
+28.04.2020 21:05:24: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'CantWalk' of 0x197 "GM" ('admin') to 'False'
+28.04.2020 21:05:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add spellbook'
+28.04.2020 21:05:39: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (5294, 1183, 0) in Trammel: "spellbook"
+28.04.2020 21:05:39: 192.168.202.129: Serials: 0x400025E8; 
+28.04.2020 21:05:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add spellboo'
+28.04.2020 21:05:57: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (5293, 1181, 0) in Trammel: "SpellbookEngraver"
+28.04.2020 21:05:57: 192.168.202.129: Serials: 0x400025E9; 
+28.04.2020 21:05:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add spellboo'
+28.04.2020 21:06:02: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (5293, 1182, 0) in Trammel: "HallowedSpellbook"
+28.04.2020 21:06:02: 192.168.202.129: Serials: 0x400025EF; 
+28.04.2020 21:06:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add spellboo'
+28.04.2020 21:06:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (5293, 1183, 0) in Trammel: "ClaininsSpellbook"
+28.04.2020 21:06:16: 192.168.202.129: Serials: 0x400025F1; 
+28.04.2020 21:06:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'addtopack reage'
+28.04.2020 21:06:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add reagen'
+28.04.2020 21:06:41: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (5294, 1182, 0) in Trammel: "BagOfAllReagents"
+28.04.2020 21:06:41: 192.168.202.129: Serials: 0x400025F3; 
+28.04.2020 21:07:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set canwalk true'
+28.04.2020 21:07:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 21:08:05: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set cantwalk true'
+28.04.2020 21:08:07: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'cantwalk' of 0x198 "test" ('test1') to 'True'
+28.04.2020 21:08:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+28.04.2020 21:08:56: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x400025E9 (SpellbookEngraver)
+28.04.2020 21:08:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 21:09:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Light 0'
+28.04.2020 21:09:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Light 0'
+28.04.2020 21:09:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Light 0'
+28.04.2020 21:09:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Light 0'
+28.04.2020 21:09:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+28.04.2020 21:09:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Get Hue ItemID BodyValue Location '
+28.04.2020 21:09:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+28.04.2020 21:09:28: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Get Hue ItemID BodyValue Location '
+28.04.2020 21:10:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 21:10:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 21:10:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 21:10:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 21:10:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 21:13:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail set'
+28.04.2020 21:22:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail[gmtool'
+28.04.2020 21:22:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 21:22:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 21:22:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 21:23:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 21:23:08: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 21:23:24: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 21:24:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'jail '
+28.04.2020 21:24:34: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'who '
+28.04.2020 21:24:37: 192.168.202.129: Owner 0x197 "GM" ('admin') going to 0x198 "test" ('test1'), Location (1715, 1064, 0), Map Trammel
+28.04.2020 21:25:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 21:25:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 21:26:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go name test'
+28.04.2020 21:26:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global '
+28.04.2020 21:26:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global name test'
+28.04.2020 21:26:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global name'
+28.04.2020 21:26:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface'
+28.04.2020 21:26:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface test'
+28.04.2020 21:27:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Go 1073741857'
+28.04.2020 21:27:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface quest'
+28.04.2020 21:27:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface boots'
+28.04.2020 21:27:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where itemid == 0x1'
+28.04.2020 21:28:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where name == test'
+28.04.2020 21:28:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where item == true'
+28.04.2020 21:28:26: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where'
+28.04.2020 21:28:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where 123'
+28.04.2020 21:29:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'online '
+28.04.2020 21:29:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'online '
+28.04.2020 21:29:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'online test'
+28.04.2020 21:31:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'region apptopack sandals'
+28.04.2020 21:31:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'region apptopack where'
+28.04.2020 21:31:19: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'region apptopack sandals where'
+28.04.2020 21:31:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 21:33:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set cantwalk true'
+28.04.2020 21:33:22: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'cantwalk' of 0x197 "GM" ('admin') to 'True'
+28.04.2020 21:33:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set cantwalk false'
+28.04.2020 21:33:28: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'cantwalk' of 0x197 "GM" ('admin') to 'False'
+28.04.2020 21:33:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail'
+28.04.2020 21:33:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail1'
+28.04.2020 21:33:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail 1'
+28.04.2020 21:33:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go jail 2'
+28.04.2020 21:34:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'go [xmlfind'
+28.04.2020 21:34:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 21:40:20: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'cantwalk' of 0x198 "test" ('test1') to 'True'
+28.04.2020 21:40:35: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'cantwalk' of 0x198 "test" ('test1') to 'False'
+28.04.2020 21:41:43: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Res'
+28.04.2020 21:41:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Kill'
+28.04.2020 21:41:51: 192.168.202.129: Owner 0x197 "GM" ('admin') killing 0x198 "test" ('test1')
+28.04.2020 21:41:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Res'
+28.04.2020 21:41:55: 192.168.202.129: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test1')
+28.04.2020 21:46:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Kill'
+28.04.2020 21:46:39: 192.168.202.129: Owner 0x197 "GM" ('admin') killing 0x198 "test" ('test1')
+28.04.2020 21:46:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Res'
+28.04.2020 21:46:59: 192.168.202.129: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test1')
+28.04.2020 21:51:55: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'viewequip '
+28.04.2020 21:51:58: 192.168.202.129: Owner 0x197 "GM" ('admin') viewing equipment of 0x198 "test" ('test1')
+28.04.2020 21:52:03: 192.168.202.129: Owner 0x197 "GM" ('admin') opening properties for equipment item 0x40001F88 (JailHammer) of 0x198 "test" ('test1')
+28.04.2020 21:52:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add an'
+28.04.2020 21:54:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where boots'
+28.04.2020 21:54:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'global interface where boots'
+28.04.2020 21:54:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 21:57:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Res'
+28.04.2020 21:57:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Kill'
+28.04.2020 21:57:14: 192.168.202.129: Owner 0x197 "GM" ('admin') killing 0x317 "Tyrannosaurus Rex" (no account)
+28.04.2020 21:58:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 22:02:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 22:03:10: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'CanSwim' of 0x197 "GM" ('admin') to 'True'
+28.04.2020 22:03:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+28.04.2020 22:03:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+28.04.2020 22:03:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set canswim false'
+28.04.2020 22:03:46: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'canswim' of 0x197 "GM" ('admin') to 'False'
+28.04.2020 22:04:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 22:05:54: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'AccountSovereigns' of 0x197 "GM" ('admin') to '580000'
+28.04.2020 22:07:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 22:07:57: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 22:08:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 22:08:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+28.04.2020 22:09:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+28.04.2020 22:20:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add travel'
+28.04.2020 22:21:16: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (308, 151, 100) in TerMur: "LifeOfATravellingMinstrel"
+28.04.2020 22:21:16: 192.168.202.129: Serials: 0x40002547; 
+28.04.2020 22:21:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add travel'
+28.04.2020 22:21:30: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (308, 150, 100) in TerMur: "ShardTravelMap"
+28.04.2020 22:21:30: 192.168.202.129: Serials: 0x40002548; 
+28.04.2020 22:21:58: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (308, 150, 100) in TerMur: "TravelStone"
+28.04.2020 22:21:58: 192.168.202.129: Serials: 0x4000254A; 
+28.04.2020 22:31:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '
+28.04.2020 22:32:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get serial'
+28.04.2020 22:32:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get serial'
+28.04.2020 22:32:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get serial'
+28.04.2020 22:33:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'get serial'
+28.04.2020 22:42:17: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'whatisit '
+28.04.2020 22:42:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'whatisit '
+28.04.2020 22:42:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'whatisit '
+28.04.2020 22:42:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'whatisit '
+28.04.2020 22:42:39: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'whatisit '
+28.04.2020 22:43:27: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'smartstat '
+28.04.2020 22:44:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind 0x197'
+28.04.2020 22:45:37: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind 0x197'
+28.04.2020 22:47:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind 0x197'
+28.04.2020 22:47:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind property'
+28.04.2020 22:47:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind Mobile'
+28.04.2020 22:49:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 22:49:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+28.04.2020 22:58:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'smartstat '

@@ -58,6 +58,54 @@
           <e p="Firewall.cs" t="Include" />
           <e p="IPLimiter.cs" t="Include" />
         </e>
+        <e p="Auction System" t="Include">
+          <e p="AuctionComparer.cs" t="Include" />
+          <e p="AuctionConfig.cs" t="Include" />
+          <e p="AuctionConfig.xml" t="Include" />
+          <e p="AuctionItem.cs" t="Include" />
+          <e p="AuctionLabelHue.cs" t="Include" />
+          <e p="AuctionLog.cs" t="Include" />
+          <e p="AuctionMessaging.cs" t="Include" />
+          <e p="AuctionScheduler.cs" t="Include" />
+          <e p="AuctionSearch.cs" t="Include" />
+          <e p="AuctionSystem.cs" t="Include" />
+          <e p="AuctionTarget.cs" t="Include" />
+          <e p="Bid.cs" t="Include" />
+          <e p="Commands.cs" t="Include" />
+          <e p="Delegates.cs" t="Include" />
+          <e p="Gumps" t="Include">
+            <e p="AuctionAdminGump.cs" t="Include" />
+            <e p="AuctionControlGump.cs" t="Include" />
+            <e p="AuctionDeliveryGump.cs" t="Include" />
+            <e p="AuctionGump.cs" t="Include" />
+            <e p="AuctionListing.cs" t="Include" />
+            <e p="AuctionMessageGump.cs" t="Include" />
+            <e p="AuctionNoticeGump.cs" t="Include" />
+            <e p="AuctionSearchGump.cs" t="Include" />
+            <e p="AuctionSortGump.cs" t="Include" />
+            <e p="AuctionViewGump.cs" t="Include" />
+            <e p="BidViewGump.cs" t="Include" />
+            <e p="CreatureDeliveryGump.cs" t="Include" />
+            <e p="DeleteSystemGump.cs" t="Include" />
+            <e p="MyAuctionGump.cs" t="Include" />
+            <e p="NewAuctionGump.cs" t="Include" />
+          </e>
+          <e p="Items" t="Include">
+            <e p="AuctionCheck.cs" t="Include" />
+            <e p="AuctionControl.cs" t="Include" />
+            <e p="AuctionGoldCheck.cs" t="Include" />
+            <e p="AuctionItemCheck.cs" t="Include" />
+            <e p="MobileStatuette.cs" t="Include" />
+            <e p="SavingsAccount.cs" t="Include" />
+            <e p="StaffCloak.cs" t="Include" />
+          </e>
+          <e p="Mobiles" t="Include">
+            <e p="Auctioner.cs" t="Include" />
+          </e>
+          <e p="Modified" t="Include" />
+          <e p="ReadMe.htm" t="Include" />
+          <e p="StringTable.cs" t="Include" />
+        </e>
         <e p="Commands" t="Include">
           <e p="AccountGoldCheck.cs" t="Include" />
           <e p="Add.cs" t="Include" />
@@ -3093,6 +3141,38 @@
             </e>
             <e p="TravelStone.cs" t="Include" />
           </e>
+          <e p="XantosShrink" t="Include">
+            <e p="Shrink System" t="Include">
+              <e p="HitchingPost.cs" t="Include" />
+              <e p="PetLeash.cs" t="Include" />
+              <e p="ReadMe.htm" t="Include" />
+              <e p="ShrinkCommand.cs" t="Include" />
+              <e p="ShrinkConfig.cs" t="Include" />
+              <e p="ShrinkItem.cs" t="Include" />
+            </e>
+            <e p="ShrinkConfig.xml" t="Include" />
+            <e p="Utilities" t="Include">
+              <e p="ConfigParser.cs" t="Include" />
+              <e p="findMobs.cs" t="Include" />
+              <e p="Interfaces.cs" t="Include" />
+              <e p="Misc.cs" t="Include" />
+              <e p="Replace.cs" t="Include" />
+              <e p="wipemobs.cs" t="Include" />
+            </e>
+            <e p="XantosInfo.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Jail System" t="Include">
+          <e p="JailBoots.cs" t="Include" />
+          <e p="JailCommand.cs" t="Include" />
+          <e p="JailConfig.cs" t="Include" />
+          <e p="JailConfig.xml" t="Include" />
+          <e p="JailHammer.cs" t="Include" />
+          <e p="JailRock.cs" t="Include" />
+          <e p="JailSlaveDriver.cs" t="Include" />
+          <e p="JailTeleporter.cs" t="Include" />
+          <e p="JailWords.txt" t="Include" />
+          <e p="ReadMe.htm" t="Include" />
         </e>
         <e p="Misc" t="Include">
           <e p="AccountPrompt.cs" t="Include" />

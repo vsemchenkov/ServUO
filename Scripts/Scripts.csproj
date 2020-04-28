@@ -103,6 +103,43 @@
     <Compile Include="Accounting\IPLimiter.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Auction System\AuctionComparer.cs" />
+    <Compile Include="Auction System\AuctionConfig.cs" />
+    <Compile Include="Auction System\AuctionItem.cs" />
+    <Compile Include="Auction System\AuctionLabelHue.cs" />
+    <Compile Include="Auction System\AuctionLog.cs" />
+    <Compile Include="Auction System\AuctionMessaging.cs" />
+    <Compile Include="Auction System\AuctionScheduler.cs" />
+    <Compile Include="Auction System\AuctionSearch.cs" />
+    <Compile Include="Auction System\AuctionSystem.cs" />
+    <Compile Include="Auction System\AuctionTarget.cs" />
+    <Compile Include="Auction System\Bid.cs" />
+    <Compile Include="Auction System\Commands.cs" />
+    <Compile Include="Auction System\Delegates.cs" />
+    <Compile Include="Auction System\Gumps\AuctionAdminGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionControlGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionDeliveryGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionListing.cs" />
+    <Compile Include="Auction System\Gumps\AuctionMessageGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionNoticeGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionSearchGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionSortGump.cs" />
+    <Compile Include="Auction System\Gumps\AuctionViewGump.cs" />
+    <Compile Include="Auction System\Gumps\BidViewGump.cs" />
+    <Compile Include="Auction System\Gumps\CreatureDeliveryGump.cs" />
+    <Compile Include="Auction System\Gumps\DeleteSystemGump.cs" />
+    <Compile Include="Auction System\Gumps\MyAuctionGump.cs" />
+    <Compile Include="Auction System\Gumps\NewAuctionGump.cs" />
+    <Compile Include="Auction System\Items\AuctionCheck.cs" />
+    <Compile Include="Auction System\Items\AuctionControl.cs" />
+    <Compile Include="Auction System\Items\AuctionGoldCheck.cs" />
+    <Compile Include="Auction System\Items\AuctionItemCheck.cs" />
+    <Compile Include="Auction System\Items\MobileStatuette.cs" />
+    <Compile Include="Auction System\Items\SavingsAccount.cs" />
+    <Compile Include="Auction System\Items\StaffCloak.cs" />
+    <Compile Include="Auction System\Mobiles\Auctioner.cs" />
+    <Compile Include="Auction System\StringTable.cs" />
     <Compile Include="Commands\AccountGoldCheck.cs" />
     <Compile Include="Commands\Add.cs">
       <SubType>Code</SubType>
@@ -761,6 +798,24 @@
     <Compile Include="Items\Travel\Traveler\TrammelTravelMap.cs" />
     <Compile Include="Items\Travel\Traveler\TravelHelpers.cs" />
     <Compile Include="Items\Travel\TravelStone.cs" />
+    <Compile Include="Items\XantosShrink\Shrink System\HitchingPost.cs" />
+    <Compile Include="Items\XantosShrink\Shrink System\PetLeash.cs" />
+    <Compile Include="Items\XantosShrink\Shrink System\ShrinkCommand.cs" />
+    <Compile Include="Items\XantosShrink\Shrink System\ShrinkConfig.cs" />
+    <Compile Include="Items\XantosShrink\Shrink System\ShrinkItem.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\ConfigParser.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\findMobs.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\Interfaces.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\Misc.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\Replace.cs" />
+    <Compile Include="Items\XantosShrink\Utilities\wipemobs.cs" />
+    <Compile Include="Jail System\JailBoots.cs" />
+    <Compile Include="Jail System\JailCommand.cs" />
+    <Compile Include="Jail System\JailConfig.cs" />
+    <Compile Include="Jail System\JailHammer.cs" />
+    <Compile Include="Jail System\JailRock.cs" />
+    <Compile Include="Jail System\JailSlaveDriver.cs" />
+    <Compile Include="Jail System\JailTeleporter.cs" />
     <Compile Include="Misc\Aggression.cs" />
     <Compile Include="Misc\ArchivedSaves.cs" />
     <Compile Include="Misc\Replacer.cs" />
@@ -11554,6 +11609,15 @@
     <Compile Include="VendorInfo\VendorInventory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Auction System\AuctionConfig.xml" />
+    <Content Include="Auction System\Readme.htm" />
+    <Content Include="Items\XantosShrink\.DS_Store" />
+    <Content Include="Items\XantosShrink\Shrink System\ReadMe.htm" />
+    <Content Include="Items\XantosShrink\ShrinkConfig.xml" />
+    <Content Include="Items\XantosShrink\XantosInfo.txt" />
+    <Content Include="Jail System\JailConfig.xml" />
+    <Content Include="Jail System\JailWords.txt" />
+    <Content Include="Jail System\Readme.htm" />
     <Content Include="OrbRemoteServer\ExportMobiles.txt" />
     <Content Include="OrbRemoteServer\UOArchitect\BuildDesignTarget Backup.txt" />
     <Content Include="Services\LootGeneration\RunicReforging\ReadMe.txt" />
@@ -11575,6 +11639,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Services\TreasureMaps\desktop.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Auction System\Modified" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.targets" />
   <ProjectExtensions>
