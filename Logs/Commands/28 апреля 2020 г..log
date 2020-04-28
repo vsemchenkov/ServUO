@@ -972,3 +972,8 @@ Log started on 28.04.2020 21:22:05
 28.04.2020 22:49:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
 28.04.2020 22:49:41: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
 28.04.2020 22:58:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'smartstat '
+##############################
+Log started on 28.04.2020 23:12:53
+
+28.04.2020 23:13:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 23:13:10: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'xmlfind '

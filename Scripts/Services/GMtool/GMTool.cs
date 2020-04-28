@@ -91,7 +91,7 @@ namespace Server.Gumps
                 AddButton(0, 257, 1592, 1593, 44, GumpButtonType.Reply, 0);
                 AddLabel(5, 259, 1259, "Find");
                 // Where
-                AddButton(0, 282, 1592, 1593, 45, GumpButtonType.Reply, 0);
+                AddButton(0, 282, 1592, 1593, 46, GumpButtonType.Reply, 0);
                 AddLabel(5, 284, 1259, "Where");
 
             }
@@ -474,12 +474,17 @@ namespace Server.Gumps
                     break;
                 case 44:
                     CommandSystem.Handle(from, String.Format("{0}xmlfind", prefix));
-                    from.SendMessage(2125, "Unjailed? (ESC to cansel)");
+                    from.LocalOverheadMessage(MessageType.Emote, 2125, true, "You XML Finder!");
                     from.SendGump(new IceGMTool(from));
                     break;
                 case 45:
                     CommandSystem.Handle(from, String.Format("{0}whatisit", prefix));
-                    from.SendMessage(2125, "Unjailed? (ESC to cansel)");
+                    from.SendMessage(2125, "What is it? (ESC to cansel)");
+                    from.SendGump(new IceGMTool(from));
+                    break;
+                case 46:
+                    CommandSystem.Handle(from, String.Format("{0}where", prefix));
+                    from.LocalOverheadMessage(MessageType.Emote, 2125, true, "Where you are!");
                     from.SendGump(new IceGMTool(from));
                     break;
 
