@@ -15,8 +15,18 @@ using Server.Misc;
 
 namespace Server.Regions
 {
+
     public class PvPArenaRegion : DungeonRegion
     {
+        private bool m_PvPPointsEnable = false;
+
+        public virtual bool PvPPointsEnable
+        {
+            get { return m_PvPPointsEnable; }
+            set { m_PvPPointsEnable = value; }
+        }
+
+
 
         public PvPArenaRegion(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
@@ -28,9 +38,15 @@ namespace Server.Regions
             global = LightCycle.DayLevel;
         }
 
+        public override void OnEnter(Mobile m)
+        {
+            Map.Rules = MapRules.FeluccaRules;
+            m.LocalOverheadMessage(MessageType.Emote, 2050, true, "Welcome to PvP Arena!");
+            m.LocalOverheadMessage(MessageType.Emote, 2050, true, "Сражение начинается!");
+        }
+
         public override bool OnBeginSpellCast(Mobile m, ISpell s)
         {
-            m.HarmfulCheck(m);
             if (m.IsPlayer())
             {
                 if (s is MarkSpell)

@@ -1335,3 +1335,92 @@ Log started on 27.04.2020 22:39:04
 27.04.2020 22:44:04: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x40001FC5 (SpellbookEngraver)
 27.04.2020 22:45:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
 27.04.2020 22:49:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
+##############################
+Log started on 27.04.2020 23:01:53
+
+##############################
+Log started on 27.04.2020 23:02:28
+
+##############################
+Log started on 27.04.2020 23:04:19
+
+27.04.2020 23:06:00: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:06:15: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 23:07:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 23:09:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add mark'
+27.04.2020 23:09:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add marks'
+27.04.2020 23:09:49: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6082, 3719, 20) in Trammel: "MarkScroll"
+27.04.2020 23:09:49: 192.168.202.129: Serials: 0x4000254C; 
+##############################
+Log started on 27.04.2020 23:14:19
+
+27.04.2020 23:16:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:16:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+##############################
+Log started on 27.04.2020 23:18:00
+
+27.04.2020 23:18:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:22: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:31: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:18:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+##############################
+Log started on 27.04.2020 23:23:19
+
+27.04.2020 23:23:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:23:32: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:23:36: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:23:38: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:23:44: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:23:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+##############################
+Log started on 27.04.2020 23:24:41
+
+27.04.2020 23:24:51: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:24:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:24:58: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:24:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:25:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:25:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+##############################
+Log started on 27.04.2020 23:26:36
+
+27.04.2020 23:26:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:26:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:27:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:27:18: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:29:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set hue 1283'
+27.04.2020 23:29:54: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'hue' of 0x40001FB4 (GMRobe) to '1283'
+##############################
+Log started on 27.04.2020 23:31:25
+
+27.04.2020 23:31:47: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:31:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:32:02: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:32:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:32:06: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:42:49: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 23:46:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:46:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:46:20: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+27.04.2020 23:51:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+27.04.2020 23:51:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'remove '
+27.04.2020 23:51:24: 192.168.202.129: Owner 0x197 "GM" ('admin') deleting 0x400023DB (CustomizableSquaredDoorMatDeed)
+27.04.2020 23:54:07: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+27.04.2020 23:54:21: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'pages '
+27.04.2020 23:54:25: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'pages '
+27.04.2020 23:54:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'm Tele'
+27.04.2020 23:54:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+27.04.2020 23:54:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+27.04.2020 23:54:52: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+27.04.2020 23:54:53: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+27.04.2020 23:54:54: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+27.04.2020 23:54:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'Light 0'
+27.04.2020 23:55:12: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'resurrect '
+27.04.2020 23:55:15: 192.168.202.129: Owner 0x197 "GM" ('admin') resurrecting 0x198 "test" ('test1')
+27.04.2020 23:56:04: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmbody '
+27.04.2020 23:56:07: 192.168.202.129: Owner 0x197 "GM" ('admin') is assuming a GM body

@@ -1,0 +1,29 @@
+##############################
+Log started on 28.04.2020 0:02:47
+
+28.04.2020 0:02:56: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:02:59: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:03:03: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:05:11: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 0:05:14: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'admin '
+28.04.2020 0:07:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 0:07:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:07:40: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:07:42: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:07:50: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 0:08:01: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'tele '
+28.04.2020 0:08:46: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'set mana 1000'
+28.04.2020 0:08:48: 192.168.202.129: Owner 0x197 "GM" ('admin') set property 'mana' of 0x198 "test" ('test1') to '1000'
+28.04.2020 0:09:29: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 0:09:33: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 0:09:35: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'where '
+28.04.2020 0:09:45: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'props '
+28.04.2020 0:10:16: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x1b7e'
+28.04.2020 0:10:19: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6096, 3712, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x1b7e"
+28.04.2020 0:10:19: 192.168.202.129: Serials: 0x40002149; 
+28.04.2020 0:10:23: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'add sandals set movable false itemid 0x1b7e'
+28.04.2020 0:10:25: 192.168.202.129: Owner 0x197 "GM" ('admin') building at (6096, 3713, 20) in Trammel: "sandals" "set" "movable" "false" "itemid" "0x1b7e"
+28.04.2020 0:10:25: 192.168.202.129: Serials: 0x4000214A; 
+28.04.2020 0:11:48: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'gmtool '
+28.04.2020 0:12:30: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'speedboost '
+28.04.2020 0:14:13: 192.168.202.129: Owner 0x197 "GM" ('admin') used command 'save '
