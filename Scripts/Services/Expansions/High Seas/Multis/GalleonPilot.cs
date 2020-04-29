@@ -1,11 +1,10 @@
-using Server;
-using System;
-using Server.Multis;
 using Server.ContextMenus;
-using System.Collections.Generic;
 using Server.Gumps;
-using Server.Targeting;
 using Server.Items;
+using Server.Multis;
+using Server.Targeting;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -75,7 +74,7 @@ namespace Server.Mobiles
 
         public virtual void InitOutfit()
         {
-            if (this.Map == Map.Tokuno)
+            if (Map == Map.Tokuno)
             {
                 if (Utility.Random(2) == 0)
                     SetWearable(new Kasa(GetRandomHue()));
@@ -271,8 +270,8 @@ namespace Server.Mobiles
 
         private class EmergencyRepairEntry : ContextMenuEntry
         {
-            private GalleonPilot m_Pilot;
-            private Mobile m_From;
+            private readonly GalleonPilot m_Pilot;
+            private readonly Mobile m_From;
 
             public EmergencyRepairEntry(GalleonPilot pilot, Mobile from)
                 : base(1116589, 5) // Emergency Repairs
@@ -302,8 +301,8 @@ namespace Server.Mobiles
 
         private class ShipRepairEntry : ContextMenuEntry
         {
-            private GalleonPilot m_Pilot;
-            private Mobile m_From;
+            private readonly GalleonPilot m_Pilot;
+            private readonly Mobile m_From;
 
             public ShipRepairEntry(GalleonPilot pilot, Mobile from)
                 : base(1116590, 5) // Permanent Repairs
@@ -328,8 +327,8 @@ namespace Server.Mobiles
 
         private class MoveTillermanEntry : ContextMenuEntry
         {
-            private GalleonPilot m_Pilot;
-            private Mobile m_From;
+            private readonly GalleonPilot m_Pilot;
+            private readonly Mobile m_From;
 
             public MoveTillermanEntry(GalleonPilot pilot, Mobile from)
                 : base(1116729, 5) // Move Tillerman
@@ -347,8 +346,8 @@ namespace Server.Mobiles
 
         private class RelocateTarget : Target
         {
-            private GalleonPilot m_Pilot;
-            private BaseGalleon m_Galleon;
+            private readonly GalleonPilot m_Pilot;
+            private readonly BaseGalleon m_Galleon;
 
             public RelocateTarget(GalleonPilot pilot, BaseGalleon galleon)
                 : base(12, false, TargetFlags.None)
@@ -412,8 +411,8 @@ namespace Server.Mobiles
 
         private class SecuritySettingsEntry : ContextMenuEntry
         {
-            private GalleonPilot m_Pilot;
-            private Mobile m_From;
+            private readonly GalleonPilot m_Pilot;
+            private readonly Mobile m_From;
 
             public SecuritySettingsEntry(GalleonPilot pilot, Mobile from)
                 : base(1149786, 5) // Security Settings
@@ -431,8 +430,8 @@ namespace Server.Mobiles
 
         private class ResetSecuritySettings : ContextMenuEntry
         {
-            private GalleonPilot m_Pilot;
-            private Mobile m_From;
+            private readonly GalleonPilot m_Pilot;
+            private readonly Mobile m_From;
 
             public ResetSecuritySettings(GalleonPilot pilot, Mobile from)
                 : base(1060700, 5) // Reset Security
@@ -488,7 +487,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(OriginalItems.Count);
             foreach (Item item in OriginalItems)

@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-
 using Server.Gumps;
 using Server.Mobiles;
 using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Guilds
 {
@@ -13,10 +12,6 @@ namespace Server.Guilds
         private class NameComparer : IComparer<PlayerMobile>
         {
             public static readonly IComparer<PlayerMobile> Instance = new NameComparer();
-
-            public NameComparer()
-            {
-            }
 
             public int Compare(PlayerMobile x, PlayerMobile y)
             {
@@ -34,10 +29,6 @@ namespace Server.Guilds
         private class LastOnComparer : IComparer<PlayerMobile>
         {
             public static readonly IComparer<PlayerMobile> Instance = new LastOnComparer();
-
-            public LastOnComparer()
-            {
-            }
 
             public int Compare(PlayerMobile x, PlayerMobile y)
             {
@@ -66,10 +57,6 @@ namespace Server.Guilds
         {
             public static readonly IComparer<PlayerMobile> Instance = new TitleComparer();
 
-            public TitleComparer()
-            {
-            }
-
             public int Compare(PlayerMobile x, PlayerMobile y)
             {
                 if (x == null && y == null)
@@ -86,10 +73,6 @@ namespace Server.Guilds
         private class RankComparer : IComparer<PlayerMobile>
         {
             public static readonly IComparer<PlayerMobile> Instance = new RankComparer();
-
-            public RankComparer()
-            {
-            }
 
             public int Compare(PlayerMobile x, PlayerMobile y)
             {
@@ -143,8 +126,8 @@ namespace Server.Guilds
         {
             TextDefinition[] defs = new TextDefinition[aryLength];
 
-            string name = String.Format("{0} {1}{2}", 
-                pm.Name, 
+            string name = String.Format("{0} {1}{2}",
+                pm.Name,
                 Engines.VvV.ViceVsVirtueSystem.IsVvV(pm) ? "VvV" : "",
                 (player.GuildFealty == pm && player.GuildFealty != guild.Leader) ? " *" : "");
 
@@ -155,7 +138,7 @@ namespace Server.Guilds
 
             defs[0] = name;
             defs[1] = pm.GuildRank.Name;
-            defs[2] = (pm.NetState != null) ? new TextDefinition(1063015) : new TextDefinition(pm.LastOnline.ToString("yyyy-MM-dd")); 
+            defs[2] = (pm.NetState != null) ? new TextDefinition(1063015) : new TextDefinition(pm.LastOnline.ToString("yyyy-MM-dd"));
             defs[3] = (pm.GuildTitle == null) ? "" : pm.GuildTitle;
 
             return defs;

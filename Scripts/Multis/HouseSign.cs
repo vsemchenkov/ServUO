@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Gumps;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Multis
 {
@@ -31,13 +31,7 @@ namespace Server.Multis
             return Name;
         }
 
-        public BaseHouse Owner
-        {
-            get
-            {
-                return m_Owner;
-            }
-        }
+        public BaseHouse Owner => m_Owner;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool RestrictDecay
@@ -54,13 +48,7 @@ namespace Server.Multis
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Mobile OriginalOwner
-        {
-            get
-            {
-                return m_OrgOwner;
-            }
-        }
+        public Mobile OriginalOwner => m_OrgOwner;
 
         public override void OnAfterDelete()
         {
@@ -75,17 +63,11 @@ namespace Server.Multis
             list.Add(1061638); // A House Sign
         }
 
-        public override bool ForceShowProperties => true; 
+        public override bool ForceShowProperties => true;
 
         private bool m_GettingProperties;
 
-        public bool GettingProperties
-        {
-            get
-            {
-                return m_GettingProperties;
-            }
-        }
+        public bool GettingProperties => m_GettingProperties;
 
         public override void GetProperties(ObjectPropertyList list)
         {
@@ -175,7 +157,7 @@ namespace Server.Multis
                     * another house or have another house transferred to you for the
                     * next 7 days.  Do you wish to claim this house?
                     */
-                    m.SendGump(new WarningGump(501036, 32512, 1049719, 32512, 420, 280, new WarningGumpCallback(ClaimGump_Callback), null));
+                    m.SendGump(new WarningGump(501036, 32512, 1049719, 32512, 420, 280, ClaimGump_Callback, null));
                 }
             }
 
@@ -256,7 +238,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(m_Owner);
             writer.Write(m_OrgOwner);
@@ -267,7 +249,7 @@ namespace Server.Multis
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

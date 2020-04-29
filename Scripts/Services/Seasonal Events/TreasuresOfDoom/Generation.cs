@@ -1,13 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Server;
-using Server.Items;
-using Server.Mobiles;
-using Server.Network;
 using Server.Engines.Points;
-using Server.Engines.TreasuresOfDoom;
+using Server.Items;
+using System;
 
 namespace Server.Engines.TreasuresOfDoom
 {
@@ -54,7 +47,7 @@ namespace Server.Engines.TreasuresOfDoom
 
         public static void CheckEnabled(bool timed = false)
         {
-            var doom = PointsSystem.TreasuresOfDoom;
+            DoomData doom = PointsSystem.TreasuresOfDoom;
 
             if (doom.Enabled && !doom.InSeason)
             {
@@ -138,7 +131,7 @@ namespace Server.Engines.TreasuresOfDoom
 
             if (Map.Malas.FindItem<DoomPlaque>(p) == null)
             {
-                var plaque = new DoomPlaque();
+                DoomPlaque plaque = new DoomPlaque();
                 plaque.MoveToWorld(p, Map.Malas);
             }
 
@@ -146,7 +139,7 @@ namespace Server.Engines.TreasuresOfDoom
 
             if (Map.Malas.FindItem<DoomSign>(p) == null)
             {
-                var plaque = new DoomSign();
+                DoomSign plaque = new DoomSign();
                 plaque.MoveToWorld(p, Map.Malas);
             }
 
@@ -154,7 +147,7 @@ namespace Server.Engines.TreasuresOfDoom
 
             if (Map.Malas.FindItem<Moongate>(p) == null)
             {
-                var moongate = new Moongate();
+                Moongate moongate = new Moongate();
                 moongate.ItemID = 0x4BCB;
                 moongate.Hue = 2676;
                 moongate.Dispellable = false;

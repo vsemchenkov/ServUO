@@ -1,7 +1,7 @@
-using System;
 using Server.Engines.Craft;
 using Server.Multis;
 using Server.Targeting;
+using System;
 
 namespace Server.Items
 {
@@ -9,7 +9,7 @@ namespace Server.Items
     public abstract class BaseAddonContainerDeed : Item, ICraftable
     {
         public abstract BaseAddonContainer Addon { get; }
-		
+
         private CraftResource m_Resource;
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -21,11 +21,11 @@ namespace Server.Items
             }
             set
             {
-                if (this.m_Resource != value)
+                if (m_Resource != value)
                 {
                     m_Resource = value;
-                    Hue = CraftResources.GetHue(this.m_Resource);
-					
+                    Hue = CraftResources.GetHue(m_Resource);
+
                     InvalidateProperties();
                 }
             }
@@ -58,7 +58,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     m_Resource = (CraftResource)reader.ReadInt();
@@ -78,8 +78,8 @@ namespace Server.Items
         {
             base.GetProperties(list);
 
-            if (!CraftResources.IsStandard(this.m_Resource))
-                list.Add(CraftResources.GetLocalizationNumber(this.m_Resource));
+            if (!CraftResources.IsStandard(m_Resource))
+                list.Add(CraftResources.GetLocalizationNumber(m_Resource));
         }
 
         #region ICraftable
@@ -119,15 +119,15 @@ namespace Server.Items
                 IPoint3D p = targeted as IPoint3D;
                 Map map = from.Map;
 
-                if (p == null || map == null || this.m_Deed.Deleted)
+                if (p == null || map == null || m_Deed.Deleted)
                     return;
 
-                if (this.m_Deed.IsChildOf(from.Backpack))
+                if (m_Deed.IsChildOf(from.Backpack))
                 {
-                    BaseAddonContainer addon = this.m_Deed.Addon;
-                    addon.Resource = this.m_Deed.Resource;
+                    BaseAddonContainer addon = m_Deed.Addon;
+                    addon.Resource = m_Deed.Resource;
 
-                    Server.Spells.SpellHelper.GetSurfaceTop(ref p);
+                    Spells.SpellHelper.GetSurfaceTop(ref p);
 
                     BaseHouse house = null;
 
@@ -148,8 +148,8 @@ namespace Server.Items
 
                     if (res == AddonFitResult.Valid)
                     {
-                        this.m_Deed.Delete();
-                        house.Addons[addon] = from;                        
+                        m_Deed.Delete();
+                        house.Addons[addon] = from;
 
                         if (addon is GardenShedAddon)
                         {

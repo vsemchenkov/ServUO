@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using Server.Items;
-using Server.Targeting;
 using Server.Engines.Quests;
 using Server.Engines.Quests.Hag;
+using Server.Items;
 using Server.Mobiles;
+using Server.Targeting;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Engines.Harvest
@@ -93,7 +93,7 @@ namespace Server.Engines.Harvest
             if (!CheckHarvest(from, tool))
                 return false;
 
-			EventSink.InvokeResourceHarvestAttempt(new ResourceHarvestAttemptEventArgs(from, tool, this));
+            EventSink.InvokeResourceHarvestAttempt(new ResourceHarvestAttemptEventArgs(from, tool, this));
             from.Target = new HarvestTarget(tool, this);
             return true;
         }
@@ -147,7 +147,7 @@ namespace Server.Engines.Harvest
 
             Type type = null;
 
-            if(CheckHarvestSkill(map, loc, from, resource, def))
+            if (CheckHarvestSkill(map, loc, from, resource, def))
             {
                 type = GetResourceType(from, tool, def, map, loc, resource);
 
@@ -214,20 +214,20 @@ namespace Server.Engines.Harvest
 
                         if (bonus != null && bonus.Type != null && skillBase >= bonus.ReqSkill)
                         {
-							if (bonus.RequiredMap == null || bonus.RequiredMap == from.Map)
-							{
-							    bonusItem = Construct(bonus.Type, from, tool);
+                            if (bonus.RequiredMap == null || bonus.RequiredMap == from.Map)
+                            {
+                                bonusItem = Construct(bonus.Type, from, tool);
                                 Caddellite.OnHarvest(from, tool, this, bonusItem);
 
-                                if (Give(from, bonusItem, true))	//Bonuses always allow placing at feet, even if pack is full irregrdless of def
-								{
+                                if (Give(from, bonusItem, true))    //Bonuses always allow placing at feet, even if pack is full irregrdless of def
+                                {
                                     bonus.SendSuccessTo(from);
-								}
-								else
-								{
+                                }
+                                else
+                                {
                                     bonusItem.Delete();
-								}
-							}
+                                }
+                            }
                         }
 
                         EventSink.InvokeResourceHarvestSuccess(new ResourceHarvestSuccessEventArgs(from, tool, item, bonusItem, this));
@@ -606,7 +606,7 @@ namespace Server.Engines.Harvest
 
                     if (tiles.Length > 0)
                     {
-                        foreach (var tile in tiles)
+                        foreach (StaticTile tile in tiles)
                         {
                             int id = (tile.ID & 0x3FFF) | 0x4000;
 
@@ -644,7 +644,7 @@ namespace Server.Engines.Harvest
                 {
                     StaticTile[] tiles = map.Tiles.GetStaticTiles(x, y, false);
 
-                    foreach (var tile in tiles)
+                    foreach (StaticTile tile in tiles)
                     {
                         int itemID = tile.ID;
 
@@ -686,7 +686,7 @@ namespace Server.Engines.Harvest
                 {
                     StaticTile[] tiles = map.Tiles.GetStaticTiles(x, y, false);
 
-                    foreach (var tile in tiles)
+                    foreach (StaticTile tile in tiles)
                     {
                         int itemID = tile.ID;
 
@@ -734,16 +734,12 @@ namespace Server
     [AttributeUsage(AttributeTargets.Class)]
     public class FurnitureAttribute : Attribute
     {
-        public FurnitureAttribute()
-        {
-        }        
-
         private static bool IsNotChoppables(Item item)
         {
             return _NotChoppables.Any(t => t == item.GetType());
         }
 
-        private static Type[] _NotChoppables = new Type[]
+        private static readonly Type[] _NotChoppables = new Type[]
         {
             typeof(CommodityDeedBox), typeof(ChinaCabinet), typeof(PieSafe), typeof(AcademicBookCase), typeof(JewelryBox),
             typeof(WoodenBookcase), typeof(Countertop), typeof(Mailbox)
@@ -755,11 +751,11 @@ namespace Server
             {
                 return false;
             }
-			
-			if (IsNotChoppables(item))
-			{
-				return false;
-			}
+
+            if (IsNotChoppables(item))
+            {
+                return false;
+            }
 
             if (item.GetType().IsDefined(typeof(FurnitureAttribute), false))
             {

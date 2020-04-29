@@ -1,7 +1,5 @@
-using System;
 
 using Server.Mobiles;
-using Server.Guilds;
 using Server.Multis;
 using Server.Network;
 
@@ -14,7 +12,7 @@ namespace Server.Gumps
 
     public class SetSecureLevelGump : Gump
     {
-        private ISecurable m_Info;
+        private readonly ISecurable m_Info;
 
         public SetSecureLevelGump(Mobile from, ISecurable info, BaseHouse house)
             : base(50, 50)
@@ -48,7 +46,7 @@ namespace Server.Gumps
             AddButton(10, 110, GetFirstID(SecureLevel.Friends), 4007, 3, GumpButtonType.Reply, 0);
             AddHtmlLocalized(45, 110, 150, 20, 1061279, GetColor(SecureLevel.Friends), false, false); // Friends
 
-            if (owner == from && from.Guild != null && ((PlayerMobile)from).GuildRank.Rank >= 1)
+            if (from != null && owner == from && from.Guild != null && ((PlayerMobile)from).GuildRank.Rank >= 1)
             {
                 AddButton(10, 130, GetFirstID(SecureLevel.Guild), 4007, 5, GumpButtonType.Reply, 0);
                 AddHtmlLocalized(45, 130, 150, 20, 1063455, GetColor(SecureLevel.Guild), false, false); // Guild Members
@@ -72,7 +70,7 @@ namespace Server.Gumps
         {
             SecureLevel level = m_Info.Level;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1:
                     level = SecureLevel.Owner;

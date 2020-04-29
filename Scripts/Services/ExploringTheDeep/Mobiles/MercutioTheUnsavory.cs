@@ -1,7 +1,7 @@
-using System;
-using Server.Items;
-using System.Collections.Generic;
 using Server.Engines.Quests;
+using Server.Items;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -68,12 +68,12 @@ namespace Server.Mobiles
             AddItem(item);
         }
 
-        public override bool ClickTitle { get { return false; } }
-        public override bool AlwaysMurderer { get { return true; } }
+        public override bool ClickTitle => false;
+        public override bool AlwaysMurderer => true;
 
         public override void OnDeath(Container c)
         {
-            List<DamageStore> rights = GetLootingRights();            
+            List<DamageStore> rights = GetLootingRights();
 
             foreach (Mobile m in rights.Select(x => x.m_Mobile).Distinct())
             {
@@ -83,8 +83,8 @@ namespace Server.Mobiles
 
                     if (pm.ExploringTheDeepQuest == ExploringTheDeepQuestChain.CollectTheComponent)
                     {
-						Item item = new MercutiosCutlass();
-						
+                        Item item = new MercutiosCutlass();
+
                         if (m.Backpack == null || !m.Backpack.TryDropItem(m, item, false))
                         {
                             m.BankBox.DropItem(item);
@@ -126,7 +126,7 @@ namespace Server.Mobiles
 
         public class InternalSelfDeleteTimer : Timer
         {
-            private MercutioTheUnsavory Mare;
+            private readonly MercutioTheUnsavory Mare;
 
             public InternalSelfDeleteTimer(Mobile p) : base(TimeSpan.FromMinutes(60))
             {
@@ -223,7 +223,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
         }
 

@@ -8,7 +8,7 @@ namespace Server.Items
     {
         private Parts m_key;
         private StorageLocker m_StorageLocker;
-        public override int LabelNumber { get { return 1023703; } } // barrel
+        public override int LabelNumber => 1023703;  // barrel
 
         [CommandProperty(AccessLevel.GameMaster)]
         public StorageLocker StorageLocker
@@ -114,7 +114,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); //version
+            writer.Write(1); //version
 
             writer.Write((int)m_key);
             writer.Write(m_StorageLocker);
@@ -134,13 +134,13 @@ namespace Server.Items
 
                         break;
                     }
-            }            
+            }
         }
     }
 
     public class WoodenToMetalBarrel : DamageableItem
     {
-        public override int LabelNumber { get { return 1023703; } } // barrel
+        public override int LabelNumber => 1023703;  // barrel
         private StorageLocker m_StorageLocker;
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -180,7 +180,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); //version
+            writer.Write(1); //version
 
             writer.Write(m_StorageLocker);
         }
@@ -204,7 +204,7 @@ namespace Server.Items
 
     public class MetalBarrel : Item
     {
-        public override int LabelNumber { get { return 1023703; } } // barrel
+        public override int LabelNumber => 1023703;  // barrel
 
         [Constructable]
         public MetalBarrel()
@@ -217,12 +217,12 @@ namespace Server.Items
         public MetalBarrel(Serial serial)
             : base(serial)
         {
-        }   
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -249,7 +249,7 @@ namespace Server.Items
 
         private class InternalTimer : Timer
         {
-            private Item m_Item;
+            private readonly Item m_Item;
             public InternalTimer(Item item) : base(TimeSpan.FromMinutes(30))
             {
                 m_Item = item;
@@ -265,7 +265,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -359,11 +359,11 @@ namespace Server.Items
 
     public class BarrelExplodeWrathTimer : Timer
     {
-        private Map n_Map;
-        private int n_X, n_Y;
-        private int n_MinDamage;
-        private int n_MaxDamage;
-        private Item n_SourceItem;
+        private readonly Map n_Map;
+        private readonly int n_X, n_Y;
+        private readonly int n_MinDamage;
+        private readonly int n_MaxDamage;
+        private readonly Item n_SourceItem;
 
         public BarrelExplodeWrathTimer(Map map, int x, int y, int mindamage, int maxdamage, Item sourceitem) : base(TimeSpan.FromSeconds(0))
         {
@@ -415,9 +415,9 @@ namespace Server.Items
                         m.FixedParticles(0x376A, 1, 3, 5052, EffectLayer.Waist);
                         m.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154447); // *The barrel explodes sending deadly debris hurdling in your direction!*
                         m.Damage(Utility.RandomMinMax(mindmg, maxdmg), m);
-                        Effects.PlaySound(g, g.Map, 0x307);                        
+                        Effects.PlaySound(g, g.Map, 0x307);
                     }
-                }                    
+                }
             }
             eable.Free();
 
@@ -464,11 +464,11 @@ namespace Server.Items
 
     public class BarrelPoisonWrathTimer : Timer
     {
-        private Map n_Map;
-        private int n_X, n_Y;
-        private int n_MinDamage;
-        private int n_MaxDamage;
-        private Item n_SourceItem;
+        private readonly Map n_Map;
+        private readonly int n_X, n_Y;
+        private readonly int n_MinDamage;
+        private readonly int n_MaxDamage;
+        private readonly Item n_SourceItem;
 
         public BarrelPoisonWrathTimer(Map map, int x, int y, int mindamage, int maxdamage, Item sourceitem) : base(TimeSpan.FromSeconds(0))
         {
@@ -519,7 +519,7 @@ namespace Server.Items
                 {
                     if (m.Alive && m is PlayerMobile && m.AccessLevel == AccessLevel.Player)
                     {
-                        m.DoHarmful(m); 
+                        m.DoHarmful(m);
                         m.Damage(Utility.RandomMinMax(mindmg, maxdmg), m);
                         m.PublicOverheadMessage(MessageType.Regular, 0x3B2, 1154446); // *Poisonous gas escapes from the ruptured barrel enveloping you in a noxious cloud!*
                         m.ApplyPoison(m, Poison.Deadly);

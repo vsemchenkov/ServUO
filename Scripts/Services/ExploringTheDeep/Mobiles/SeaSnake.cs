@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Server.Mobiles
+﻿namespace Server.Mobiles
 {
     [CorpseName("a sea snake corpse")]
     public class SeaSnake : BaseCreature
@@ -46,10 +44,10 @@ namespace Server.Mobiles
             AddLoot(LootPack.Gems, 2);
         }
 
-        public override bool DeathAdderCharmable => true; 
-        public override int Meat => 1; 
-        public override Poison PoisonImmune => Poison.Deadly; 
-        public override Poison HitPoison => Poison.Deadly; 
+        public override bool DeathAdderCharmable => true;
+        public override int Meat => 1;
+        public override Poison PoisonImmune => Poison.Deadly;
+        public override Poison HitPoison => Poison.Deadly;
 
         public SeaSnake(Serial serial)
             : base(serial)
@@ -59,7 +57,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

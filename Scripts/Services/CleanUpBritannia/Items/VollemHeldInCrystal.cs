@@ -1,12 +1,11 @@
-﻿using System;
-using Server.Gumps;
+﻿using Server.Gumps;
 using Server.Mobiles;
 
 namespace Server.Items
 {
     public class VollemHeldInCrystal : BaseImprisonedMobile
     {
-        public override int LabelNumber { get { return 1113629; } } // A Vollem Held in Crystal
+        public override int LabelNumber => 1113629;  // A Vollem Held in Crystal
 
         [Constructable]
         public VollemHeldInCrystal()
@@ -17,7 +16,7 @@ namespace Server.Items
             Weight = 1;
         }
 
-        public override BaseCreature Summon { get { return new VollemHeld(); } }
+        public override BaseCreature Summon => new VollemHeld();
 
         public override void OnDoubleClick(Mobile from)
         {
@@ -35,7 +34,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -61,7 +60,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

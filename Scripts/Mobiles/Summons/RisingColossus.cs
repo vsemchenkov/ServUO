@@ -6,8 +6,8 @@ namespace Server.Mobiles
     public class RisingColossus : BaseCreature
     {
         private int m_DispelDifficulty;
-        public override double DispelDifficulty => m_DispelDifficulty; 
-        public override double DispelFocus => 45.0; 
+        public override double DispelDifficulty => m_DispelDifficulty;
+        public override double DispelFocus => 45.0;
 
         [Constructable]
         public RisingColossus(Mobile m, double baseskill, double boostskill)
@@ -60,17 +60,17 @@ namespace Server.Mobiles
             return (m.Int + m.Skills[SkillName.Magery].Value) / Math.Max(GetDistanceToSqrt(m), 1.0);
         }
 
-        public override bool AlwaysMurderer => true;       
+        public override bool AlwaysMurderer => true;
 
-        public override bool BleedImmune => true; 
-		
-        public override Poison PoisonImmune => Poison.Lethal; 
+        public override bool BleedImmune => true;
+
+        public override Poison PoisonImmune => Poison.Lethal;
 
         public RisingColossus(Serial serial) : base(serial)
         {
         }
-		
-		public override int GetAttackSound()
+
+        public override int GetAttackSound()
         {
             return 0x627;
         }
@@ -83,9 +83,9 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((int)m_DispelDifficulty);
+            writer.Write(m_DispelDifficulty);
         }
 
         public override void Deserialize(GenericReader reader)

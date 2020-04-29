@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     public abstract class BasePoisonPotion : BasePotion
@@ -21,7 +19,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -33,7 +31,7 @@ namespace Server.Items
 
         public void DoPoison(Mobile from)
         {
-            from.ApplyPoison(from, this.Poison);
+            from.ApplyPoison(from, Poison);
         }
 
         public override void Drink(Mobile from)

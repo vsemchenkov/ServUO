@@ -51,9 +51,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Hides => 12; 
-		
-        public override HideType HideType => HideType.Spined; 
+        public override int Hides => 12;
+
+        public override HideType HideType => HideType.Spined;
 
         public override void GenerateLoot()
         {
@@ -69,7 +69,7 @@ namespace Server.Mobiles
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            var version = reader.ReadInt();
+            int version = reader.ReadInt();
         }
     }
 }

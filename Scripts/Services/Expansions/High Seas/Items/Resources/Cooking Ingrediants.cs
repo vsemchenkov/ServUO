@@ -1,12 +1,10 @@
-﻿using Server;
-using System;
-using Server.Targeting;
+﻿using Server.Targeting;
 
 namespace Server.Items
 {
     public class MentoSeasoning : Item
     {
-        public override int LabelNumber { get { return 1116299; } }
+        public override int LabelNumber => 1116299;
 
         [Constructable]
         public MentoSeasoning()
@@ -22,7 +20,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -34,7 +32,7 @@ namespace Server.Items
 
     public class SamuelsSecretSauce : Item
     {
-        public override int LabelNumber { get { return 1116338; } }
+        public override int LabelNumber => 1116338;
 
         [Constructable]
         public SamuelsSecretSauce() : base(2463)
@@ -49,7 +47,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -61,7 +59,7 @@ namespace Server.Items
 
     public class DarkTruffle : Item
     {
-        public override int LabelNumber { get { return 1116300; } }
+        public override int LabelNumber => 1116300;
 
         [Constructable]
         public DarkTruffle()
@@ -78,7 +76,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -90,7 +88,7 @@ namespace Server.Items
 
     public class FreshGinger : Item
     {
-        public override int LabelNumber { get { return 1031235; } }
+        public override int LabelNumber => 1031235;
 
         [Constructable]
         public FreshGinger()
@@ -106,7 +104,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -118,7 +116,7 @@ namespace Server.Items
 
     public class FishOilFlask : Item
     {
-        public override int LabelNumber { get { return 1150863; } }
+        public override int LabelNumber => 1150863;
 
         [Constructable]
         public FishOilFlask()
@@ -129,13 +127,13 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if(IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
                 from.Target = new InternalTarget(this);
         }
 
         private class InternalTarget : Target
         {
-            private FishOilFlask m_Flask;
+            private readonly FishOilFlask m_Flask;
 
             public InternalTarget(FishOilFlask flask) : base(-1, false, TargetFlags.None)
             {
@@ -166,7 +164,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

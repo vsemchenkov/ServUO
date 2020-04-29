@@ -1,17 +1,16 @@
-using Server;
-using System;
-using Server.Items;
 using Server.Engines.VoidPool;
+using Server.Items;
+using System;
 
- namespace Server.Mobiles
- {
-	public class CoraTheSorceress : BaseCreature, IElementalCreature, IAuraCreature
-	{
-        public ElementType ElementType { get { return ElementType.Chaos; } }
+namespace Server.Mobiles
+{
+    public class CoraTheSorceress : BaseCreature, IElementalCreature, IAuraCreature
+    {
+        public ElementType ElementType => ElementType.Chaos;
 
         public DateTime NextManaDrain { get; set; }
 
-        public TimeSpan ManaDrainInterval { get { return TimeSpan.FromSeconds(Utility.RandomMinMax(15, 120)); } }
+        public TimeSpan ManaDrainInterval => TimeSpan.FromSeconds(Utility.RandomMinMax(15, 120));
 
         [Constructable]
         public CoraTheSorceress() : base(AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.1)
@@ -60,9 +59,9 @@ using Server.Engines.VoidPool;
             SetAreaEffect(AreaEffect.AuraDamage);
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override bool ClickTitle { get { return false; } }
-        public override bool ShowFameTitle { get { return false; } }
+        public override bool AlwaysMurderer => true;
+        public override bool ClickTitle => false;
+        public override bool ShowFameTitle => false;
 
         public void AuraEffect(Mobile m)
         {
@@ -78,10 +77,10 @@ using Server.Engines.VoidPool;
             }
         }
 
-        public override bool TeleportsTo { get { return true; } }
-        public override TimeSpan TeleportDuration { get { return TimeSpan.FromSeconds(Utility.RandomMinMax(30, 60)); } }
-        public override double TeleportProb { get { return 1.0; } }
-        public override bool TeleportsPets { get { return true; } }
+        public override bool TeleportsTo => true;
+        public override TimeSpan TeleportDuration => TimeSpan.FromSeconds(Utility.RandomMinMax(30, 60));
+        public override double TeleportProb => 1.0;
+        public override bool TeleportsPets => true;
 
         public override int GetDeathSound() { return 0x316; }
 
@@ -120,29 +119,29 @@ using Server.Engines.VoidPool;
 
         private bool DoEffects(Direction d)
         {
-            int x = this.X;
-            int y = this.Y;
-            int z = this.Z;
+            int x = X;
+            int y = Y;
+            int z = Z;
             int range = 10;
             int offset = 8;
 
             switch (d)
             {
                 case Direction.North:
-                    x = this.X + Utility.RandomMinMax(-offset, offset);
-                    y = this.Y - range;
+                    x = X + Utility.RandomMinMax(-offset, offset);
+                    y = Y - range;
                     break;
                 case Direction.West:
-                    x = this.X - range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset); 
+                    x = X - range;
+                    y = Y + Utility.RandomMinMax(-offset, offset);
                     break;
                 case Direction.South:
-                    x = this.X + Utility.RandomMinMax(-offset, offset);
-                    y = this.Y + range;
+                    x = X + Utility.RandomMinMax(-offset, offset);
+                    y = Y + range;
                     break;
                 case Direction.East:
-                    x = this.X + range;
-                    y = this.Y + Utility.RandomMinMax(-offset, offset); 
+                    x = X + range;
+                    y = Y + Utility.RandomMinMax(-offset, offset);
                     break;
             }
 
@@ -156,10 +155,10 @@ using Server.Engines.VoidPool;
                     case Direction.East: x -= i; break;
                 }
 
-                z = this.Map.GetAverageZ(x, y);
+                z = Map.GetAverageZ(x, y);
                 Point3D p = new Point3D(x, y, z);
 
-                if (Server.Spells.SpellHelper.AdjustField(ref p, this.Map, 12, false))
+                if (Server.Spells.SpellHelper.AdjustField(ref p, Map, 12, false))
                 {
                     MovementPath path = new MovementPath(this, p);
 
@@ -177,15 +176,15 @@ using Server.Engines.VoidPool;
         private void DropCrack(MovementPath path)
         {
             int time = 10;
-            int x = this.X;
-            int y = this.Y;
+            int x = X;
+            int y = Y;
 
             for (int i = 0; i < path.Directions.Length; ++i)
             {
                 Movement.Movement.Offset(path.Directions[i], ref x, ref y);
-                IPoint3D p = new Point3D(x, y, this.Map.GetAverageZ(x, y)) as IPoint3D;
+                IPoint3D p = new Point3D(x, y, Map.GetAverageZ(x, y)) as IPoint3D;
 
-                Timer.DelayCall(TimeSpan.FromMilliseconds(time), new TimerStateCallback(ManaDrainEffects_Callback), new object[] { p, this.Map });
+                Timer.DelayCall(TimeSpan.FromMilliseconds(time), new TimerStateCallback(ManaDrainEffects_Callback), new object[] { p, Map });
 
                 time += 200;
             }
@@ -197,10 +196,10 @@ using Server.Engines.VoidPool;
             IPoint3D p = objs[0] as IPoint3D;
             Map map = objs[1] as Map;
 
-            var item = new ManaDrainItem(Utility.RandomList(6913, 6915, 6917, 6919), this);
+            ManaDrainItem item = new ManaDrainItem(Utility.RandomList(6913, 6915, 6917, 6919), this);
             Spells.SpellHelper.GetSurfaceTop(ref p);
 
-            item.MoveToWorld(new Point3D(p), this.Map);
+            item.MoveToWorld(new Point3D(p), Map);
         }
 
         private class ManaDrainItem : Item
@@ -236,10 +235,10 @@ using Server.Engines.VoidPool;
 
             public override void OnLocationChange(Point3D oldLocation)
             {
-                Static = new Static(this.ItemID + 1);
-                Static.MoveToWorld(this.Location, this.Map);
+                Static = new Static(ItemID + 1);
+                Static.MoveToWorld(Location, Map);
 
-                IPooledEnumerable eable = this.Map.GetMobilesInRange(this.Location, 0);
+                IPooledEnumerable eable = Map.GetMobilesInRange(Location, 0);
 
                 foreach (Mobile m in eable)
                 {
@@ -298,7 +297,7 @@ using Server.Engines.VoidPool;
             base.OnDeath(c);
 
             if (0.30 > Utility.RandomDouble())
-            {            
+            {
                 Mobile m = DemonKnight.FindRandomPlayer(this);
 
                 if (m != null)
@@ -324,7 +323,7 @@ using Server.Engines.VoidPool;
 
             if (Siege.SiegeShard && mob is PlayerMobile)
             {
-                int chance = Server.Engines.Despise.DespiseBoss.ArtifactChance + (int)Math.Min(10, ((PlayerMobile)mob).Luck / 180);
+                int chance = Server.Engines.Despise.DespiseBoss.ArtifactChance + Math.Min(10, ((PlayerMobile)mob).Luck / 180);
 
                 if (chance >= Utility.Random(100))
                 {
@@ -353,19 +352,19 @@ using Server.Engines.VoidPool;
 
         public CoraTheSorceress(Serial serial)
             : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
-		}
-	}
- }
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
+    }
+}

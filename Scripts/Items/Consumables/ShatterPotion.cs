@@ -1,16 +1,16 @@
+using Server.Network;
+using Server.Targeting;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Server.Network;
-using Server.Targeting;
 
 namespace Server.Items
 {
     public class ShatterPotion : BasePotion
     {
-        public override int LabelNumber { get { return 1115759; } } // Shatter Potion
+        public override int LabelNumber => 1115759;  // Shatter Potion
 
-        public override bool RequireFreeHand { get { return false; } }
+        public override bool RequireFreeHand => false;
 
         [Constructable]
         public ShatterPotion()
@@ -57,7 +57,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -66,7 +66,7 @@ namespace Server.Items
             int version = reader.ReadInt();
         }
 
-        private List<Mobile> m_Users = new List<Mobile>();
+        private readonly List<Mobile> m_Users = new List<Mobile>();
 
         public void Explode_Callback(object state)
         {
@@ -128,12 +128,12 @@ namespace Server.Items
                 {
                     List<BasePotion> potions = m.Backpack.FindItemsByType<BasePotion>();
                     potions[Utility.Random(potions.Count)].Consume();
-                }                
+                }
             }
         }
 
         #region Delay
-        private static Hashtable m_Delay = new Hashtable();
+        private static readonly Hashtable m_Delay = new Hashtable();
 
         public static void AddDelay(Mobile m)
         {
@@ -204,5 +204,5 @@ namespace Server.Items
                 }
             }
         }
-    }    
+    }
 }

@@ -1,9 +1,9 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
 using Server.Network;
 using Server.Services.Virtues;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Gumps
 {
@@ -25,7 +25,7 @@ namespace Server.Gumps
         private readonly double m_HitsScalar;
         private readonly ResurrectMessage m_Msg;
 
-        private Action<Mobile> m_Callback;
+        private readonly Action<Mobile> m_Callback;
 
         public ResurrectGump(Mobile owner)
             : this(owner, owner, ResurrectMessage.Generic, false)
@@ -209,7 +209,7 @@ namespace Server.Gumps
                 {
                     VirtueLevel level = VirtueHelper.GetLevel(m_Healer, VirtueName.Compassion);
 
-                    switch( level )
+                    switch (level)
                     {
                         case VirtueLevel.Seeker:
                             from.Hits = AOS.Scale(from.HitsMax, 20);

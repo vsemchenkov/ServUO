@@ -46,7 +46,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -58,8 +58,8 @@ namespace Server.Items
 
     public class LanternOfSouls : Lantern
     {
-		public override int LabelNumber => 1061618; // Lantern of Souls
-		
+        public override int LabelNumber => 1061618; // Lantern of Souls
+
         [Constructable]
         public LanternOfSouls()
         {
@@ -74,7 +74,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

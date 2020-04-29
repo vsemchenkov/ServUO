@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     public class LesserCurePotion : BaseCurePotion
@@ -9,8 +7,8 @@ namespace Server.Items
             new CureLevelInfo(Poison.Lesser, 1.00),
             new CureLevelInfo(Poison.Regular, 0.35),
             new CureLevelInfo(Poison.Greater, 0.15),
-			new CureLevelInfo(Poison.Deadly, 0.10),
-			new CureLevelInfo(Poison.Lethal, 0.05)
+            new CureLevelInfo(Poison.Deadly, 0.10),
+            new CureLevelInfo(Poison.Lethal, 0.05)
         };
         [Constructable]
         public LesserCurePotion()
@@ -23,18 +21,12 @@ namespace Server.Items
         {
         }
 
-        public override CureLevelInfo[] LevelInfo
-        {
-            get
-            {
-                return m_AosLevelInfo;
-            }
-        }
+        public override CureLevelInfo[] LevelInfo => m_AosLevelInfo;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

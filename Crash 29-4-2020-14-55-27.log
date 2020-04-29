@@ -1,0 +1,31 @@
+Server Crash Report
+===================
+
+ServUO Version 0.5, Build 7424.31624
+Operating System: Unix 19.4.0.0
+.NET Framework: 4.0.30319.42000
+Time: 29.04.2020 14:55:27
+Mobiles: 1154
+Items: 91186
+Exception:
+System.NullReferenceException: Object reference not set to an instance of an object
+  at Server.Items.BaseClothing.AddNameProperties (Server.ObjectPropertyList list) [0x00192] in <d526b68b6d3f4049b95f385daefcbf72>:0 
+  at Server.Item.GetProperties (Server.ObjectPropertyList list) [0x00000] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Item.get_PropertyList () [0x00017] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Item.InvalidateProperties () [0x00033] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Item.set_Map (Server.Map value) [0x000b3] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Item.AddItem (Server.Item item) [0x00150] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Items.Container.AddItem (Server.Item item) [0x00007] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Items.Container.DropItem (Server.Item dropped) [0x00007] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Commands.GMbody+GMmeTarget.EquipItem (Server.Item item, System.Boolean mustEquip) [0x00032] in <d526b68b6d3f4049b95f385daefcbf72>:0 
+  at Server.Commands.GMbody+GMmeTarget.EquipItem (Server.Item item) [0x00000] in <d526b68b6d3f4049b95f385daefcbf72>:0 
+  at Server.Commands.GMbody+GMmeTarget.OnTarget (Server.Mobile from, System.Object targeted) [0x005e3] in <d526b68b6d3f4049b95f385daefcbf72>:0 
+  at Server.Targeting.Target.Invoke (Server.Mobile from, System.Object targeted) [0x0030c] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Network.PacketHandlers.TargetResponse (Server.Network.NetState state, Server.Network.PacketReader pvSrc) [0x00237] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Network.MessagePump.HandleReceive (Server.Network.NetState ns) [0x00240] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Network.MessagePump.Slice () [0x00057] in <2944d464ea524402a592a535b841641b>:0 
+  at Server.Core.Main (System.String[] args) [0x006e6] in <2944d464ea524402a592a535b841641b>:0 
+
+Clients:
+- Count: 1
++ 192.168.202.129: (account = admin) (mobile = 0x197 'GM')

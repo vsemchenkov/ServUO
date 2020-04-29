@@ -1,15 +1,13 @@
-using System;
-using Server;
-using System.Collections.Generic;
 using Server.Items;
-using System.Linq;
 using Server.Mobiles;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Engines.TreasuresOfKotlCity
 {
     public class PowerCoreDockingStation : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return null; } }
+        public override BaseAddonDeed Deed => null;
 
         public static List<PowerCoreDockingStation> Stations { get; set; }
 
@@ -89,7 +87,7 @@ namespace Server.Engines.TreasuresOfKotlCity
             if (Stations == null)
                 Stations = new List<PowerCoreDockingStation>();
 
-            if(!Stations.Contains(this))
+            if (!Stations.Contains(this))
                 Stations.Add(this);
         }
 
@@ -99,12 +97,12 @@ namespace Server.Engines.TreasuresOfKotlCity
 
             if (Chest1 != null && !Chest1.Deleted)
             {
-                Chest1.MoveToWorld(new Point3D(this.X + 1, this.Y + 1, this.Z + 11), this.Map);
+                Chest1.MoveToWorld(new Point3D(X + 1, Y + 1, Z + 11), Map);
             }
 
             if (Chest2 != null && !Chest2.Deleted)
             {
-                Chest2.MoveToWorld(new Point3D(this.X, this.Y + 1, this.Z + 11), this.Map);
+                Chest2.MoveToWorld(new Point3D(X, Y + 1, Z + 11), Map);
             }
         }
 
@@ -113,10 +111,10 @@ namespace Server.Engines.TreasuresOfKotlCity
             base.OnMapChange();
 
             if (Chest1 != null)
-                Chest1.Map = this.Map;
+                Chest1.Map = Map;
 
             if (Chest2 != null)
-                Chest2.Map = this.Map;
+                Chest2.Map = Map;
         }
 
         public void Activate()
@@ -137,7 +135,7 @@ namespace Server.Engines.TreasuresOfKotlCity
                 }
             }
 
-            foreach (var comp in Components)
+            foreach (AddonComponent comp in Components)
             {
                 if (comp.ItemID == 40146)
                     comp.ItemID = 40147;
@@ -152,7 +150,7 @@ namespace Server.Engines.TreasuresOfKotlCity
 
         public void Deactivate()
         {
-            foreach (var comp in Components)
+            foreach (AddonComponent comp in Components)
             {
                 if (comp.ItemID == 40147)
                     comp.ItemID = 40146;

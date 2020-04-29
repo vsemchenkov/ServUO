@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a hare corpse")]
@@ -45,46 +43,28 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat
+        public override int Meat => 1;
+        public override int Hides => 1;
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
+        public override int GetAttackSound()
         {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.FruitsAndVegies;
-            }
-        }
-        public override int GetAttackSound() 
-        { 
-            return 0xC9; 
+            return 0xC9;
         }
 
-        public override int GetHurtSound() 
-        { 
-            return 0xCA; 
+        public override int GetHurtSound()
+        {
+            return 0xCA;
         }
 
-        public override int GetDeathSound() 
-        { 
-            return 0xCB; 
+        public override int GetDeathSound()
+        {
+            return 0xCB;
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

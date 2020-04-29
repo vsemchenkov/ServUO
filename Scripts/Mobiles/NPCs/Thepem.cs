@@ -1,14 +1,14 @@
-using System;
+using Server.Engines.BulkOrders;
 using Server.Items;
 using Server.Mobiles;
+using System;
 using System.Collections.Generic;
-using Server.Engines.BulkOrders;
 
 namespace Server.Engines.Quests
 {
     public class Thepem : MondainQuester, ITierQuester
     {
-        public TierQuestInfo TierInfo { get { return TierQuestInfo.Thepem; } }
+        public TierQuestInfo TierInfo => TierQuestInfo.Thepem;
 
         [Constructable]
         public Thepem()
@@ -23,16 +23,10 @@ namespace Server.Engines.Quests
         {
         }
 
-        public override Type[] Quests
-        {
-            get
-            {
-                return new Type[] { };
-            }
-        }
+        public override Type[] Quests => new Type[] { };
 
         #region Bulk Orders
-        public override BODType BODType { get { return BODType.Alchemy; } }
+        public override BODType BODType => BODType.Alchemy;
 
         public override bool IsValidBulkOrder(Item item)
         {
@@ -52,9 +46,9 @@ namespace Server.Engines.Quests
 
         #endregion
 
-        public override bool IsActiveVendor { get { return true; } }
+        public override bool IsActiveVendor => true;
 
-        protected override List<SBInfo> SBInfos { get { return m_SBInfos; } }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
 
         public override void InitSBInfo()
         {
@@ -81,7 +75,7 @@ namespace Server.Engines.Quests
             AddItem(new FemaleGargishClothArms(0x738));
         }
 
-        private static Type[][] m_PileTypes = new Type[][]
+        private static readonly Type[][] m_PileTypes = new Type[][]
             {
                 new Type[] {typeof(DullCopperIngot),  typeof(PileofInspectedDullCopperIngots) },
                 new Type[] {typeof(ShadowIronIngot),  typeof(PileofInspectedShadowIronIngots) },
@@ -152,7 +146,7 @@ namespace Server.Engines.Quests
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

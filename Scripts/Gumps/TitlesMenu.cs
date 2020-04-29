@@ -1,21 +1,19 @@
+using Server.ContextMenus;
+using Server.Engines.CannedEvil;
+using Server.Engines.CityLoyalty;
+using Server.Guilds;
+using Server.Misc;
+using Server.Mobiles;
+using Server.Spells.SkillMasteries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server;
-using Server.Mobiles;
-using Server.Misc;
-using Server.Engines.CannedEvil;
-using Server.Guilds;
-using Server.ContextMenus;
-using Server.Engines.CityLoyalty;
-using Server.Spells.SkillMasteries;
 
 namespace Server.Gumps
 {
     public class TitlesMenuEntry : ContextMenuEntry
     {
-        private PlayerMobile _From;
+        private readonly PlayerMobile _From;
 
         public TitlesMenuEntry(PlayerMobile from)
             : base(1115022, -1) // Open Titles Menu
@@ -30,7 +28,7 @@ namespace Server.Gumps
         }
     }
 
-    public enum  TitleType
+    public enum TitleType
     {
         None,
         PaperdollPrefix,
@@ -172,10 +170,10 @@ namespace Server.Gumps
                     });
                 }
             }
-            
+
             if (Category != TitleCategory.None)
             {
-                if(ShowingDescription)
+                if (ShowingDescription)
                     AddHtmlLocalized(215, 50, 315, 16, 1115025, 0xFFFF, false, false); // <CENTER>DESCRIPTION</CENTER>
                 else
                     AddHtmlLocalized(215, 50, 315, 16, 1044011, 0xFFFF, false, false); // <CENTER>SELECTIONS</CENTER>
@@ -400,7 +398,7 @@ namespace Server.Gumps
                         if (v > 800)
                             offset = 3;
                         else if (v > 300)
-                            offset = (int)(v / 300);
+                            offset = v / 300;
 
                         if (offset <= 0)
                             continue;
@@ -614,7 +612,7 @@ namespace Server.Gumps
                         if (title == 1154017)
                             continue;
 
-                        AddHtmlLocalized(260, 70 + (index * 22), 245, 16, (int)title, 0xFFFF, false, false);
+                        AddHtmlLocalized(260, 70 + (index * 22), 245, 16, title, 0xFFFF, false, false);
 
                         AddCallbackButton(225, 70 + (index * 22), 4005, 4007, i + 2550, GumpButtonType.Reply, 0, b =>
                         {
@@ -643,7 +641,7 @@ namespace Server.Gumps
 
                     if (title == 1154017 && CityLoyaltySystem.HasCustomTitle(User, out cust))
                         AddHtmlLocalized(275, 240, 245, 16, title, cust, 0xFFFF, false, false);
-                    else if(title != 1154017)
+                    else if (title != 1154017)
                         AddHtmlLocalized(275, 240, 160, 32, title, 0xFFFF, false, false);
 
                     AddHtmlLocalized(225, 275, 200, 16, 1115035, 0xFFFF, false, false); // Do you wish to apply this title?
@@ -706,7 +704,7 @@ namespace Server.Gumps
             }
 
             List<VeteranTitle> vetTitles = Titles.GetVeteranTitles(User);
-            
+
             if (vetTitles != null && vetTitles.Count > 0)
             {
                 AddHtml(55, y, 160, 16, Color("#FFFFFF", "Veterans"), false, false); // Rewards
@@ -813,7 +811,7 @@ namespace Server.Gumps
                         Refresh(false);
                     });
                 }
-            }  
+            }
             else if (Category == TitleCategory.RewardTitles && User.RewardTitles != null && User.RewardTitles.Count > 0)
             {
                 if (!ShowingDescription || TitleSelected == -1)
@@ -871,7 +869,7 @@ namespace Server.Gumps
                         if ((int)title == 1154017 && CityLoyaltySystem.HasCustomTitle(User, out cust))
                         {
                             AddHtmlLocalized(275, 240, 245, 16, 1154017, cust, 0xFFFF, false, false);
-                        } 
+                        }
                         else
                             AddHtmlLocalized(275, 240, 160, 32, (int)title, 0xFFFF, false, false);
                     }
@@ -917,7 +915,7 @@ namespace Server.Gumps
                         CheckPage(ref index, ref page);
                     }
                 }
-                else if(TitleSelected >= 0 && TitleSelected < vetTitles.Count)
+                else if (TitleSelected >= 0 && TitleSelected < vetTitles.Count)
                 {
                     VeteranTitle title = vetTitles[TitleSelected];
 
@@ -945,7 +943,7 @@ namespace Server.Gumps
             }
         }
 
-        public override void OnResponse(Server.Network.NetState state, RelayInfo info)
+        public override void OnResponse(Network.NetState state, RelayInfo info)
         {
             GumpButton button = ButtonCallbacks.Keys.FirstOrDefault(b => b.ButtonID == info.ButtonID);
 
@@ -1031,7 +1029,7 @@ namespace Server.Gumps
                 if (v > 800)
                     offset = 3;
                 else if (v > 300)
-                    offset = (int)(v / 300);
+                    offset = v / 300;
 
                 if (offset > 0)
                 {
@@ -1159,7 +1157,7 @@ namespace Server.Gumps
                 AddGumpLayout();
             }
 
-            User.CloseGump(this.GetType());
+            User.CloseGump(GetType());
             User.SendGump(this, false);
         }
 

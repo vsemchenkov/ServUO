@@ -1,4 +1,3 @@
-using System;
 using Server.HuePickers;
 using Server.Targeting;
 
@@ -10,7 +9,7 @@ namespace Server.Items
         public Dyes()
             : base(0xFA9)
         {
-            this.Weight = 3.0;
+            Weight = 3.0;
         }
 
         public Dyes(Serial serial)
@@ -21,18 +20,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
-            if (this.Weight == 0.0)
-                this.Weight = 3.0;
         }
 
         public override void OnDoubleClick(Mobile from)
@@ -59,7 +53,7 @@ namespace Server.Items
                         if (tub.CustomHuePicker == null)
                             from.SendHuePicker(new InternalPicker(tub));
                         else
-                            from.SendGump(new CustomHuePickerGump(from, tub.CustomHuePicker, new CustomHuePickerCallback(SetTubHue), tub));
+                            from.SendGump(new CustomHuePickerGump(from, tub.CustomHuePicker, SetTubHue, tub));
                     }
                     else if (tub is BlackDyeTub)
                     {
@@ -87,12 +81,12 @@ namespace Server.Items
                 public InternalPicker(DyeTub tub)
                     : base(tub.ItemID)
                 {
-                    this.m_Tub = tub;
+                    m_Tub = tub;
                 }
 
                 public override void OnResponse(int hue)
                 {
-                    this.m_Tub.DyedHue = hue;
+                    m_Tub.DyedHue = hue;
                 }
             }
         }

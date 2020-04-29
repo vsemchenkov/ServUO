@@ -1,12 +1,10 @@
-using System;
-using Server;
-using System.Collections.Generic;
-using System.Linq;
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
 using Server.Spells;
 using Server.Spells.Necromancy;
-using Server.Engines.CityLoyalty;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Engines.Blackthorn
 {
@@ -17,7 +15,7 @@ namespace Server.Engines.Blackthorn
             return _Specialties[Utility.Random(_Specialties.Length)];
         }
 
-        private static SkillName[] _Specialties =
+        private static readonly SkillName[] _Specialties =
         {
             SkillName.Swords,
             SkillName.Fencing,
@@ -40,10 +38,10 @@ namespace Server.Engines.Blackthorn
         private bool _Sampire;
         private DateTime _NextSpecial;
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override double HealChance { get { return AI == AIType.AI_Melee || AI == AIType.AI_Paladin ? 1.0 : 0.0; } }
-        public override double WeaponAbilityChance { get { return AI == AIType.AI_Melee || AI == AIType.AI_Paladin ? 0.4 : 0.1; } }
-        public override bool CanStealth { get { return _Specialty == SkillName.Ninjitsu; } }
+        public override bool AlwaysMurderer => true;
+        public override double HealChance => AI == AIType.AI_Melee || AI == AIType.AI_Paladin ? 1.0 : 0.0;
+        public override double WeaponAbilityChance => AI == AIType.AI_Melee || AI == AIType.AI_Paladin ? 0.4 : 0.1;
+        public override bool CanStealth => _Specialty == SkillName.Ninjitsu;
 
         public override WeaponAbility GetWeaponAbility()
         {
@@ -57,15 +55,15 @@ namespace Server.Engines.Blackthorn
             return null;
         }
 
-        public override bool UseSmartAI { get { return true; } }
-        public virtual bool CanDoSpecial { get { return SpellCaster; } }
+        public override bool UseSmartAI => true;
+        public virtual bool CanDoSpecial => SpellCaster;
 
-        public virtual double MinSkill { get { return 100.0; } }
-        public virtual double MaxSkill { get { return 120.0; } }
-        public virtual int MinResist { get { return 10; } }
-        public virtual int MaxResist { get { return 20; } }
+        public virtual double MinSkill => 100.0;
+        public virtual double MaxSkill => 120.0;
+        public virtual int MinResist => 10;
+        public virtual int MaxResist => 20;
 
-        public bool SpellCaster { get { return AI != AIType.AI_Melee && AI != AIType.AI_Ninja && AI != AIType.AI_Samurai && AI != AIType.AI_Paladin; } }
+        public bool SpellCaster => AI != AIType.AI_Melee && AI != AIType.AI_Ninja && AI != AIType.AI_Samurai && AI != AIType.AI_Paladin;
 
         [Constructable]
         public Invader(InvasionType type)
@@ -129,7 +127,7 @@ namespace Server.Engines.Blackthorn
                 SetDamage(8, 18);
 
             Fame = 8000;
-            Karma = -8000;  
+            Karma = -8000;
 
             SetResists();
             SetSkills();
@@ -376,7 +374,7 @@ namespace Server.Engines.Blackthorn
 
         public Item RandomFencingWeapon()
         {
-            if(Race == Race.Elf)
+            if (Race == Race.Elf)
                 return Loot.Construct(new Type[] { typeof(Leafblade), typeof(WarCleaver), typeof(AssassinSpike) });
 
             return Loot.Construct(new Type[] { typeof(Kryss), typeof(Spear), typeof(ShortSpear), typeof(Lance), typeof(Pike) });
@@ -384,7 +382,7 @@ namespace Server.Engines.Blackthorn
 
         public Item RandomMaceWeapon()
         {
-            return Loot.Construct(new Type[] { typeof(Mace), typeof(WarHammer), typeof(WarAxe), typeof(BlackStaff), typeof(QuarterStaff), typeof(WarMace), typeof(DiamondMace), typeof(Scepter)  });
+            return Loot.Construct(new Type[] { typeof(Mace), typeof(WarHammer), typeof(WarAxe), typeof(BlackStaff), typeof(QuarterStaff), typeof(WarMace), typeof(DiamondMace), typeof(Scepter) });
         }
 
         public Item RandomArhceryWeapon()
@@ -452,16 +450,16 @@ namespace Server.Engines.Blackthorn
 
         private void DoSpecial()
         {
-            if (this.Map == null || this.Map == Map.Internal)
+            if (Map == null || Map == Map.Internal)
                 return;
 
-            Map m = this.Map;
+            Map m = Map;
 
             for (int i = 0; i < 4; i++)
             {
                 Timer.DelayCall(TimeSpan.FromMilliseconds(i * 50), o =>
                 {
-                    Server.Misc.Geometry.Circle2D(this.Location, m, (int)o, (pnt, map) =>
+                    Server.Misc.Geometry.Circle2D(Location, m, o, (pnt, map) =>
                     {
                         Effects.SendLocationEffect(pnt, map, Utility.RandomBool() ? 14000 : 14013, 14, 20, 2018, 0);
                     });
@@ -473,7 +471,7 @@ namespace Server.Engines.Blackthorn
                     if (m != null)
                     {
                         List<Mobile> list = new List<Mobile>();
-                        IPooledEnumerable eable = m.GetMobilesInRange(this.Location, 4);
+                        IPooledEnumerable eable = m.GetMobilesInRange(Location, 4);
 
                         foreach (Mobile mob in eable)
                         {
@@ -497,7 +495,7 @@ namespace Server.Engines.Blackthorn
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 2);
+            AddLoot(LootPack.UltraRich, 2);
         }
 
         public Invader(Serial serial)
@@ -530,10 +528,10 @@ namespace Server.Engines.Blackthorn
 
     public class InvaderCaptain : Invader
     {
-        public override double MinSkill { get { return 105.0; } }
-        public override double MaxSkill { get { return 130.0; } }
-        public override int MinResist { get { return 20; } }
-        public override int MaxResist { get { return 30; } }
+        public override double MinSkill => 105.0;
+        public override double MaxSkill => 130.0;
+        public override int MinResist => 20;
+        public override int MaxResist => 30;
 
         [Constructable]
         public InvaderCaptain(InvasionType type) : base(type)
@@ -552,19 +550,19 @@ namespace Server.Engines.Blackthorn
                 SetDamage(10, 20);
 
             Fame = 48000;
-            Karma = -48000;  
+            Karma = -48000;
         }
 
         public override void OnDeath(Container c)
         {
             base.OnDeath(c);
 
-            var rights = GetLootingRights();
+            List<DamageStore> rights = GetLootingRights();
             rights.Sort();
 
             List<Mobile> list = rights.Select(x => x.m_Mobile).Where(m => m.InRange(c.Location, 20)).ToList();
 
-            if(list.Count > 0)
+            if (list.Count > 0)
             {
                 for (int i = 0; i < 2; i++)
                 {
@@ -591,8 +589,8 @@ namespace Server.Engines.Blackthorn
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 2);
-            this.AddLoot(LootPack.SuperBoss, 1);
+            AddLoot(LootPack.UltraRich, 2);
+            AddLoot(LootPack.SuperBoss, 1);
         }
 
         public InvaderCaptain(Serial serial)

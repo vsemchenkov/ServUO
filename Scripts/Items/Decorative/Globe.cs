@@ -1,5 +1,5 @@
-using System;
 using Server.Engines.Craft;
+using System;
 
 namespace Server.Items
 {
@@ -18,7 +18,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public ItemQuality Quality { get { return _Quality; } set { _Quality = value; InvalidateProperties(); } }
 
-        public bool PlayerConstructed { get { return true; } }
+        public bool PlayerConstructed => true;
 
         [Constructable]
         public Globe()

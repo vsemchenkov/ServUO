@@ -1,26 +1,21 @@
+using Server.Engines.Quests.Haven;
+using Server.Items;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-using Server.Engines.Quests.Haven;
-using Server.Engines.Quests.Necro;
-using Server.Items;
-
 namespace Server.Commands
 {
     public class Decorate
     {
-		private static string m_Key;
-		public static string Key
-		{
-			get { return m_Key; }
-		}
+        private static string m_Key;
+        public static string Key => m_Key;
 
         public static void Initialize()
         {
-            CommandSystem.Register("Decorate", AccessLevel.Administrator, new CommandEventHandler(Decorate_OnCommand));
+            CommandSystem.Register("Decorate", AccessLevel.Administrator, Decorate_OnCommand);
         }
 
         [Usage("Decorate")]
@@ -33,18 +28,18 @@ namespace Server.Commands
             m_Mobile.SendMessage("Generating world decoration, please wait.");
 
             Generate("deco", "Data/Decoration/Britannia", Map.Trammel, Map.Felucca);
-		    Generate("deco", "Data/Decoration/Trammel", Map.Trammel);
-			Generate("deco", "Data/Decoration/Felucca", Map.Felucca);
-			Generate("deco", "Data/Decoration/Ilshenar", Map.Ilshenar);
-			Generate("deco", "Data/Decoration/Malas", Map.Malas);
-			Generate("deco", "Data/Decoration/Tokuno", Map.Tokuno);
+            Generate("deco", "Data/Decoration/Trammel", Map.Trammel);
+            Generate("deco", "Data/Decoration/Felucca", Map.Felucca);
+            Generate("deco", "Data/Decoration/Ilshenar", Map.Ilshenar);
+            Generate("deco", "Data/Decoration/Malas", Map.Malas);
+            Generate("deco", "Data/Decoration/Tokuno", Map.Tokuno);
 
             m_Mobile.SendMessage("World generating complete. {0} items were generated.", m_Count);
         }
 
         public static void Generate(string keyName, string folder, params Map[] maps)
         {
-			m_Key = keyName;
+            m_Key = keyName;
 
             if (!Directory.Exists(folder))
                 return;
@@ -53,7 +48,7 @@ namespace Server.Commands
 
             for (int i = 0; i < files.Length; ++i)
             {
-                var list = DecorationList.ReadAll(files[i]);
+                List<DecorationList> list = DecorationList.ReadAll(files[i]);
 
                 m_List = list;
 
@@ -73,7 +68,7 @@ namespace Server.Commands
             if (!File.Exists(path))
                 return;
 
-            var list = DecorationList.ReadAll(path);
+            List<DecorationList> list = DecorationList.ReadAll(path);
             int count = 0;
 
             m_List = list;
@@ -99,7 +94,7 @@ namespace Server.Commands
 
             for (int i = 0; i < files.Length; ++i)
             {
-                var list = DecorationList.ReadRestricted(files[i], restrictType, derivesFrom);
+                List<DecorationList> list = DecorationList.ReadRestricted(files[i], restrictType, derivesFrom);
 
                 m_List = list;
 
@@ -145,13 +140,7 @@ namespace Server.Commands
 
         private Item m_Constructed;
 
-        public Item Constructed
-        {
-            get
-            {
-                return m_Constructed;
-            }
-        }
+        public Item Constructed => m_Constructed;
 
         public int ID
         {
@@ -170,10 +159,6 @@ namespace Server.Commands
 
                 return 0;
             }
-        }
-
-        public DecorationList()
-        {
         }
 
         private static readonly Type typeofStatic = typeof(Static);
@@ -620,9 +605,9 @@ namespace Server.Commands
                 if (m_ItemID > 0)
                     item.ItemID = m_ItemID;
             }
-            else if (item is Server.Mobiles.Spawner)
+            else if (item is Mobiles.Spawner)
             {
-                Server.Mobiles.Spawner sp = (Server.Mobiles.Spawner)item;
+                Mobiles.Spawner sp = (Mobiles.Spawner)item;
 
                 sp.NextSpawn = TimeSpan.Zero;
 
@@ -633,7 +618,7 @@ namespace Server.Commands
                         int indexOf = m_Params[i].IndexOf('=');
 
                         if (indexOf >= 0)
-                            sp.SpawnObjects.Add(new Server.Mobiles.SpawnObject(m_Params[i].Substring(++indexOf)));
+                            sp.SpawnObjects.Add(new Mobiles.SpawnObject(m_Params[i].Substring(++indexOf)));
                     }
                     else if (m_Params[i].StartsWith("MinDelay"))
                     {
@@ -983,11 +968,11 @@ namespace Server.Commands
                 if (m_ItemID > 0)
                     item.ItemID = m_ItemID;
             }
-            else if(item is Moongate)
+            else if (item is Moongate)
             {
                 Moongate gate = (Moongate)item;
 
-                foreach(string param in m_Params)
+                foreach (string param in m_Params)
                 {
                     int indexOf = param.IndexOf('=');
 
@@ -997,7 +982,7 @@ namespace Server.Commands
                         gate.Target = Point3D.Parse(param.Substring(++indexOf));
                 }
             }
-            else if(item is TeleportRope)
+            else if (item is TeleportRope)
             {
                 TeleportRope rope = (TeleportRope)item;
 
@@ -1011,7 +996,7 @@ namespace Server.Commands
                         rope.ToLocation = Point3D.Parse(param.Substring(++indexOf));
                 }
             }
-            else if(item is InstanceExitGate)
+            else if (item is InstanceExitGate)
             {
                 InstanceExitGate gate = (InstanceExitGate)item;
 
@@ -1215,7 +1200,7 @@ namespace Server.Commands
                     }
                     else
                     {
-						WeakEntityCollection.Add(Decorate.Key, item);
+                        WeakEntityCollection.Add(Decorate.Key, item);
                         item.MoveToWorld(loc, maps[j]);
                         ++count;
 
@@ -1275,7 +1260,7 @@ namespace Server.Commands
         {
             using (StreamReader ip = new StreamReader(path))
             {
-                var list = new List<DecorationList>();
+                List<DecorationList> list = new List<DecorationList>();
 
                 for (DecorationList v = Read(ip); v != null; v = Read(ip))
                     list.Add(v);
@@ -1356,20 +1341,8 @@ namespace Server.Commands
         private readonly Point3D m_Location;
         private readonly string m_Extra;
 
-        public Point3D Location
-        {
-            get
-            {
-                return m_Location;
-            }
-        }
-        public string Extra
-        {
-            get
-            {
-                return m_Extra;
-            }
-        }
+        public Point3D Location => m_Location;
+        public string Extra => m_Extra;
 
         public DecorationEntry(string line)
         {

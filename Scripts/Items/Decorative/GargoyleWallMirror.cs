@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     [FlipableAttribute(0x4044, 0x4045)]
@@ -9,7 +7,7 @@ namespace Server.Items
         public GargoyleWallMirror()
             : base(0x4044)
         {
-            this.Weight = 10;
+            Weight = 10;
         }
 
         public GargoyleWallMirror(Serial serial)
@@ -21,7 +19,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

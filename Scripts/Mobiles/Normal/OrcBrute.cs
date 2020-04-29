@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -55,38 +54,14 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-   
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 2;
-            }
-        }
 
-        public override TribeType Tribe { get { return TribeType.Orc; } }
+        public override Poison PoisonImmune => Poison.Lethal;
+        public override int Meat => 2;
 
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool AutoDispel
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override TribeType Tribe => TribeType.Orc;
+
+        public override bool CanRummageCorpses => true;
+        public override bool AutoDispel => true;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich);
@@ -118,7 +93,7 @@ namespace Server.Mobiles
 
         public override int Damage(int amount, Mobile from, bool informMount, bool checkDisrupt)
         {
-            var damage = base.Damage(amount, from, informMount, checkDisrupt);
+            int damage = base.Damage(amount, from, informMount, checkDisrupt);
 
             if (from != null && from != this && !Controlled && !Summoned && Utility.RandomDouble() <= 0.2)
             {
@@ -176,7 +151,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

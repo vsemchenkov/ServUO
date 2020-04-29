@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -8,24 +7,9 @@ namespace Server.Mobiles
     {
         private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo();
         private readonly IShopSellInfo m_SellInfo = new InternalSellInfo();
-        public SBRangedWeapon()
-        {
-        }
 
-        public override IShopSellInfo SellInfo
-        {
-            get
-            {
-                return m_SellInfo;
-            }
-        }
-        public override List<GenericBuyInfo> BuyInfo
-        {
-            get
-            {
-                return m_BuyInfo;
-            }
-        }
+        public override IShopSellInfo SellInfo => m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {
@@ -52,11 +36,11 @@ namespace Server.Mobiles
                 Add(typeof(Bolt), 1);
                 Add(typeof(Arrow), 1);
                 Add(typeof(Shaft), 1);
-                Add(typeof(Feather), 1);			
+                Add(typeof(Feather), 1);
 
                 Add(typeof(HeavyCrossbow), 27);
                 Add(typeof(Bow), 17);
-                Add(typeof(Crossbow), 25); 
+                Add(typeof(Crossbow), 25);
 
                 Add(typeof(CompositeBow), 23);
                 Add(typeof(RepeatingCrossbow), 22);

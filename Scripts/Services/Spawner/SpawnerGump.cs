@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Server.Gumps;
-using Server.Network;
+using System;
 
 namespace Server.Mobiles
 {
@@ -10,7 +8,7 @@ namespace Server.Mobiles
         public static readonly int MaxEntries = 13;
         public Spawner Spawner { get; set; }
 
-        public int LabelHue { get { return User != null && User.NetState != null && User.NetState.IsEnhancedClient ? 0x386 : 0x384; } }
+        public int LabelHue => User != null && User.NetState != null && User.NetState.IsEnhancedClient ? 0x386 : 0x384;
 
         public SpawnerGump(Mobile m, Spawner spawner)
             : base(m as PlayerMobile, 50, 50)
@@ -76,7 +74,7 @@ namespace Server.Mobiles
 
                 if (i < Spawner.SpawnObjects.Count)
                 {
-                    var so = Spawner.SpawnObjects[i];
+                    SpawnObject so = Spawner.SpawnObjects[i];
 
                     str = so.SpawnName;
                     max = so.MaxCount;
@@ -154,7 +152,7 @@ namespace Server.Mobiles
             if (Spawner.Deleted || User.AccessLevel < AccessLevel.GameMaster)
                 return;
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 0: // Closed
                     {

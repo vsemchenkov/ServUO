@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Server;
-using Server.Mobiles;
 using Server.Gumps;
-using Server.Misc;
+using Server.Mobiles;
+using System;
 
 namespace Server.Engines.SeasonalEvents
 {
-	public class SeasonalEventGump : BaseGump
-	{
+    public class SeasonalEventGump : BaseGump
+    {
         public SeasonalEventGump(PlayerMobile pm)
             : base(pm, 100, 100)
         {
@@ -30,9 +25,9 @@ namespace Server.Engines.SeasonalEvents
             AddHtml(275, 40, 150, 20, "Season", false, false);
             AddHtml(450, 40, 50, 20, "Edit", false, false);
 
-            for(int i = 0; i < SeasonalEventSystem.Entries.Count; i++)
+            for (int i = 0; i < SeasonalEventSystem.Entries.Count; i++)
             {
-                var entry = SeasonalEventSystem.Entries[i];
+                SeasonalEventEntry entry = SeasonalEventSystem.Entries[i];
 
                 int hue = entry.IsActive() ? 167 : 137;
 
@@ -69,7 +64,7 @@ namespace Server.Engines.SeasonalEvents
 
                 if (id >= 0 && id < SeasonalEventSystem.Entries.Count)
                 {
-                    var entry = SeasonalEventSystem.Entries[id];
+                    SeasonalEventEntry entry = SeasonalEventSystem.Entries[id];
 
                     if (entry.EventType == EventType.TreasuresOfTokuno)
                     {
@@ -90,7 +85,7 @@ namespace Server.Engines.SeasonalEvents
                 Refresh();
             }
         }
-	}
+    }
 
     public class EditEventGump : BaseGump
     {
@@ -210,7 +205,7 @@ namespace Server.Engines.SeasonalEvents
 
                     if (relay != null && !string.IsNullOrEmpty(relay.Text))
                     {
-                        var duration = Utility.ToInt32(relay.Text);
+                        int duration = Utility.ToInt32(relay.Text);
 
                         if (duration > 0)
                         {

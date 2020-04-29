@@ -1,7 +1,7 @@
+using Server.Engines.Craft;
+using Server.Targeting;
 using System;
 using System.Collections.Generic;
-using Server.Targeting;
-using Server.Engines.Craft;
 
 namespace Server.Items
 {
@@ -20,7 +20,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public ItemQuality Quality { get { return _Quality; } set { _Quality = value; InvalidateProperties(); } }
 
-        public bool PlayerConstructed { get { return true; } }
+        public bool PlayerConstructed => true;
 
         public static readonly int MaxKeys = 20;
         private List<Key> m_Keys;
@@ -39,13 +39,7 @@ namespace Server.Items
         {
         }
 
-        public List<Key> Keys
-        {
-            get
-            {
-                return m_Keys;
-            }
-        }
+        public List<Key> Keys => m_Keys;
         public override bool OnDragDrop(Mobile from, Item dropped)
         {
             if (!IsChildOf(from.Backpack))

@@ -1,6 +1,6 @@
-using System;
 using Server.Items;
 using Server.Network;
+using System;
 
 namespace Server.Mobiles
 {
@@ -38,13 +38,7 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool HasMetalChest
-        {
-            get
-            {
-                return m_HasMetalChest;
-            }
-        }
+        public bool HasMetalChest => m_HasMetalChest;
 
         [Constructable]
         public PlagueBeast()
@@ -111,20 +105,8 @@ namespace Server.Mobiles
             base.OnDamagedBySpell(caster);
         }
 
-        public override bool AutoDispel
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
+        public override bool AutoDispel => true;
+        public override Poison PoisonImmune => Poison.Lethal;
 
         public override void OnGotMeleeAttack(Mobile attacker)
         {
@@ -170,7 +152,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(m_HasMetalChest);
             writer.Write(m_DevourTotal);
@@ -182,7 +164,7 @@ namespace Server.Mobiles
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -228,7 +210,7 @@ namespace Server.Mobiles
             if (corpse.Owner.Body.IsHuman)
                 corpse.TurnToBones(); // Not bones yet, and we are a human body therefore we turn to bones.
 
-            IncreaseHits((int)Math.Ceiling((double)corpse.Owner.HitsMax * 0.75));
+            IncreaseHits((int)Math.Ceiling(corpse.Owner.HitsMax * 0.75));
             m_DevourTotal++;
 
             PublicOverheadMessage(MessageType.Emote, 0x3B2, 1053033); // * The plague beast absorbs the fleshy remains of the corpse *
@@ -250,7 +232,7 @@ namespace Server.Mobiles
 
             if (IsParagon)
                 maxhits = (int)(maxhits * Paragon.HitsBuff);
-            
+
             if (HitsMaxSeed >= maxhits)
             {
                 HitsMaxSeed = maxhits;

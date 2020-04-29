@@ -1,17 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
 using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
     [CorpseName("a medusa corpse")]
     public class Medusa : BaseSABoss, ICarvable
     {
-        private List<Mobile> m_TurnedToStone = new List<Mobile>();
-        public List<Mobile> AffectedMobiles { get { return m_TurnedToStone; } }
+        private readonly List<Mobile> m_TurnedToStone = new List<Mobile>();
+        public List<Mobile> AffectedMobiles => m_TurnedToStone;
 
         public List<Mobile> m_Helpers = new List<Mobile>();
 
@@ -73,22 +72,16 @@ namespace Server.Mobiles
         {
         }
 
-        public override Type[] UniqueSAList
-        {
-            get { return new Type[] { typeof(Slither), typeof(IronwoodCompositeBow), typeof(Venom), typeof(PetrifiedSnake), typeof(StoneDragonsTooth), typeof(MedusaFloorTileAddonDeed) }; }
-        }
+        public override Type[] UniqueSAList => new[] { typeof(Slither), typeof(IronwoodCompositeBow), typeof(Venom), typeof(PetrifiedSnake), typeof(StoneDragonsTooth), typeof(MedusaFloorTileAddonDeed) };
 
-        public override Type[] SharedSAList
-        {
-            get { return new Type[] { typeof(SummonersKilt) }; }
-        }
+        public override Type[] SharedSAList => new[] { typeof(SummonersKilt) };
 
-        public override bool IgnoreYoungProtection { get { return true; } }
-        public override bool AutoDispel { get { return true; } }
-        public override double AutoDispelChance { get { return 1.0; } }
-        public override bool BardImmune { get { return true; } }
-        public override Poison PoisonImmune { get { return Poison.Lethal; } }
-        public override Poison HitPoison { get { return (0.8 >= Utility.RandomDouble() ? Poison.Deadly : Poison.Lethal); } }
+        public override bool IgnoreYoungProtection => true;
+        public override bool AutoDispel => true;
+        public override double AutoDispelChance => 1.0;
+        public override bool BardImmune => true;
+        public override Poison PoisonImmune => Poison.Lethal;
+        public override Poison HitPoison => (0.8 >= Utility.RandomDouble() ? Poison.Deadly : Poison.Lethal);
 
         public override int GetIdleSound() { return 1557; }
         public override int GetAngerSound() { return 1554; }
@@ -101,7 +94,7 @@ namespace Server.Mobiles
 
             corpse.DropItem(new MedusaDarkScales(amount));
 
-            if(0.20 > Utility.RandomDouble())
+            if (0.20 > Utility.RandomDouble())
                 corpse.DropItem(new MedusaBlood());
 
             base.OnCarve(from, corpse, with);
@@ -143,10 +136,10 @@ namespace Server.Mobiles
         {
             List<Mobile> list = new List<Mobile>();
 
-            IPooledEnumerable eable = this.GetMobilesInRange(12);
+            IPooledEnumerable eable = GetMobilesInRange(12);
             foreach (Mobile m in eable)
             {
-                if ( m == null || m == this || m_TurnedToStone.Contains(m) || !CanBeHarmful(m) || !InLOS(m) || m.AccessLevel > AccessLevel.Player)
+                if (m == null || m == this || m_TurnedToStone.Contains(m) || !CanBeHarmful(m) || !InLOS(m) || m.AccessLevel > AccessLevel.Player)
                     continue;
 
                 //Pets
@@ -451,7 +444,7 @@ namespace Server.Mobiles
 
             foreach (Mobile m in m_Helpers)
             {
-                if(m == null)
+                if (m == null)
                     continue;
 
                 if (!m.Alive || m.Deleted)
@@ -489,7 +482,7 @@ namespace Server.Mobiles
                     stones.Add(mob);
             }
 
-            if(stones.Count == 0)
+            if (stones.Count == 0)
                 return;
 
             Mobile m = stones[Utility.Random(stones.Count)];
@@ -557,9 +550,9 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((int)m_Scales);
+            writer.Write(m_Scales);
 
             writer.Write(m_Helpers.Count);
 
@@ -587,9 +580,9 @@ namespace Server.Mobiles
 
         public class GazeTimer : Timer
         {
-            private Mobile target;
-            private Mobile clone;
-            private Medusa m_Medusa;
+            private readonly Mobile target;
+            private readonly Mobile clone;
+            private readonly Medusa m_Medusa;
             private int m_Count;
 
             public GazeTimer(Mobile m, Mobile mc, Medusa medusa, int duration)
@@ -670,27 +663,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool DeleteCorpseOnDeath
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool ReacquireOnMovement
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return !Frozen;
-            }
-        }
+        public override bool DeleteCorpseOnDeath => true;
+        public override bool ReacquireOnMovement => true;
+        public override bool AlwaysMurderer => !Frozen;
         public void Clone(Mobile m)
         {
             if (m == null)
@@ -775,7 +750,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -793,7 +768,7 @@ namespace Server.Commands
     {
         public static void Initialize()
         {
-            CommandSystem.Register("addclone", AccessLevel.Seer, new CommandEventHandler(AddClone_OnCommand));
+            CommandSystem.Register("addclone", AccessLevel.Seer, AddClone_OnCommand);
         }
 
         [Description("")]

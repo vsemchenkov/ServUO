@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -58,25 +57,13 @@ namespace Server.Mobiles
         {
         }
 
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override PackInstinct PackInstinct
-        {
-            get
-            {
-                return PackInstinct.Daemon | PackInstinct.Equine;
-            }
-        }
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override PackInstinct PackInstinct => PackInstinct.Daemon | PackInstinct.Equine;
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)

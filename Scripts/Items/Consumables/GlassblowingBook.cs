@@ -1,11 +1,10 @@
-using System;
 using Server.Mobiles;
 
 namespace Server.Items
 {
     public class GlassblowingBook : Item
     {
-        public override int LabelNumber { get { return 1153528; } } // Crafting glass with Glassblowing
+        public override int LabelNumber => 1153528;  // Crafting glass with Glassblowing
 
         [Constructable]
         public GlassblowingBook()
@@ -22,7 +21,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

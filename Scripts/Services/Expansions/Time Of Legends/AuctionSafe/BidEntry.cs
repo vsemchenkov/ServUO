@@ -1,10 +1,6 @@
-using Server;
-using System;
-using Server.Mobiles;
-using Server.Items;
-using Server.Multis;
 using Server.Accounting;
-using System.Collections.Generic;
+using Server.Mobiles;
+using System;
 
 namespace Server.Engines.Auction
 {
@@ -14,8 +10,8 @@ namespace Server.Engines.Auction
         public long CurrentBid { get; set; }
 
         //Converts to gold/plat
-        public int TotalGoldBid { get { return (int)(CurrentBid >= Account.CurrencyThreshold ? CurrentBid - (TotalPlatBid * Account.CurrencyThreshold) : CurrentBid); } }
-        public int TotalPlatBid { get { return (int)(CurrentBid >= Account.CurrencyThreshold ? CurrentBid / Account.CurrencyThreshold : 0); } }
+        public int TotalGoldBid => (int)(CurrentBid >= Account.CurrencyThreshold ? CurrentBid - (TotalPlatBid * Account.CurrencyThreshold) : CurrentBid);
+        public int TotalPlatBid => (int)(CurrentBid >= Account.CurrencyThreshold ? CurrentBid / Account.CurrencyThreshold : 0);
 
         public BidEntry(PlayerMobile m, long bid = 0)
         {

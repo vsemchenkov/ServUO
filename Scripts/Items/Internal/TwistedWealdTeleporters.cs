@@ -1,11 +1,10 @@
-using System;
 using Server.Engines.Quests;
 using Server.Mobiles;
 
 namespace Server.Items
 {
     public class TwistedWealdTele : Teleporter
-    { 
+    {
         [Constructable]
         public TwistedWealdTele()
             : base(new Point3D(2189, 1253, 0), Map.Ilshenar)
@@ -24,17 +23,17 @@ namespace Server.Items
                 m.SendLocalizedMessage(1042753, "Twisted Weald"); // ~1_SOMETHING~ has been temporarily disabled.
                 return true;
             }
-			
+
             if (m is PlayerMobile)
             {
                 PlayerMobile player = (PlayerMobile)m;
-				
+
                 if (QuestHelper.GetQuest(player, typeof(DreadhornQuest)) != null)
                     return base.OnMoveOver(m);
-				
+
                 player.SendLocalizedMessage(1074274); // You dance in the fairy ring, but nothing happens.
             }
-			
+
             return true;
         }
 
@@ -42,13 +41,13 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
     }

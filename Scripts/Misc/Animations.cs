@@ -1,12 +1,10 @@
-using System;
-
 namespace Server.Misc
 {
     public class Animations
     {
         public static void Initialize()
         {
-            EventSink.AnimateRequest += new AnimateRequestEventHandler(EventSink_AnimateRequest);
+            EventSink.AnimateRequest += EventSink_AnimateRequest;
         }
 
         private static void EventSink_AnimateRequest(AnimateRequestEventArgs e)

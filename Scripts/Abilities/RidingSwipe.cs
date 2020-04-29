@@ -1,5 +1,5 @@
-using System;
 using Server.Mobiles;
+using System;
 
 namespace Server.Items
 {
@@ -10,15 +10,11 @@ namespace Server.Items
     /// </summary>
     public class RidingSwipe : WeaponAbility
     {
-        public RidingSwipe()
-        {
-        }
-
         public override int BaseMana => 25;
 
         public override bool CheckSkills(Mobile from)
         {
-            if (this.GetSkill(from, SkillName.Bushido) < 50.0)
+            if (GetSkill(from, SkillName.Bushido) < 50.0)
             {
                 from.SendLocalizedMessage(1070768, "50"); // You need ~1_SKILL_REQUIREMENT~ Bushido skill to perform that attack!
                 return false;
@@ -29,14 +25,14 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!defender.Mounted && !defender.Flying && !Server.Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
+            if (!defender.Mounted && !defender.Flying && !Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
             {
                 attacker.SendLocalizedMessage(1060848); // This attack only works on mounted targets
                 ClearCurrentAbility(attacker);
                 return;
             }
 
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -59,7 +55,7 @@ namespace Server.Items
 
                 Server.Items.Dismount.DoDismount(attacker, defender, mount, 10, type);
 
-                if(mount is Mobile)
+                if (mount is Mobile)
                     AOS.Damage((Mobile)mount, attacker, amount, 100, 0, 0, 0, 0);
 
                 defender.PlaySound(0x140);

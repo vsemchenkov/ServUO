@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -9,7 +9,7 @@ namespace Server.Mobiles
         private DateTime m_NextEgg;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime NextEgg { get { return m_NextEgg; } }
+        public DateTime NextEgg => m_NextEgg;
 
         [Constructable]
         public ChickenLizard()
@@ -23,8 +23,8 @@ namespace Server.Mobiles
             SetInt(6, 10);
 
             SetHits(74, 95);
-			SetMana(6, 10);
-			SetStam(78, 95);
+            SetMana(6, 10);
+            SetStam(78, 95);
 
             SetDamage(2, 5);
 
@@ -45,9 +45,9 @@ namespace Server.Mobiles
                 PackItem(new ChickenLizardEgg());
         }
 
-        public override int Meat { get { return 3; } }
-        public override MeatType MeatType { get { return MeatType.Bird; } }
-        public override FoodType FavoriteFood { get { return FoodType.Meat; } }
+        public override int Meat => 3;
+        public override MeatType MeatType => MeatType.Bird;
+        public override FoodType FavoriteFood => FoodType.Meat;
 
         public override int GetIdleSound() { return 1511; }
         public override int GetAngerSound() { return 1508; }
@@ -91,7 +91,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(m_NextEgg);
         }
@@ -101,7 +101,7 @@ namespace Server.Mobiles
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch(version)
+            switch (version)
             {
                 case 1:
                     m_NextEgg = reader.ReadDateTime();

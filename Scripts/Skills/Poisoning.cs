@@ -1,6 +1,6 @@
-using System;
 using Server.Items;
 using Server.Targeting;
+using System;
 
 namespace Server.SkillHandlers
 {
@@ -8,7 +8,7 @@ namespace Server.SkillHandlers
     {
         public static void Initialize()
         {
-            SkillInfo.Table[(int)SkillName.Poisoning].Callback = new SkillUseCallback(OnUse);
+            SkillInfo.Table[(int)SkillName.Poisoning].Callback = OnUse;
         }
 
         public static TimeSpan OnUse(Mobile m)

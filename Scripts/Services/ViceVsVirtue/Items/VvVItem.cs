@@ -1,6 +1,3 @@
-using System;
-using Server;
-
 namespace Server.Items
 {
     public interface IVvVItem
@@ -34,7 +31,7 @@ namespace Server.Items
 
             if (item is HumanFeyLeggings)
             {
-                var fey = (HumanFeyLeggings)item;
+                HumanFeyLeggings fey = (HumanFeyLeggings)item;
 
                 if (fey.PhysicalBonus != 3)
                     fey.PhysicalBonus = 3;
@@ -56,7 +53,7 @@ namespace Server.Items
 
             if (item is HeartOfTheLion)
             {
-                var lion = (HeartOfTheLion)item;
+                HeartOfTheLion lion = (HeartOfTheLion)item;
 
                 if (lion.PhysicalBonus != 5)
                     lion.PhysicalBonus = 5;
@@ -76,7 +73,7 @@ namespace Server.Items
 
             if (item is HuntersHeaddress)
             {
-                var hunters = (HuntersHeaddress)item;
+                HuntersHeaddress hunters = (HuntersHeaddress)item;
 
                 if (hunters.Resistances.Physical != 8)
                     hunters.Resistances.Physical = 8;
@@ -124,7 +121,7 @@ namespace Server.Items
 
             if (item is RuneBeetleCarapace)
             {
-                var carapace = (RuneBeetleCarapace)item;
+                RuneBeetleCarapace carapace = (RuneBeetleCarapace)item;
 
                 if (carapace.PhysicalBonus != 3)
                     carapace.PhysicalBonus = 3;
@@ -144,7 +141,7 @@ namespace Server.Items
 
             if (item is SpiritOfTheTotem)
             {
-                var totem = (SpiritOfTheTotem)item;
+                SpiritOfTheTotem totem = (SpiritOfTheTotem)item;
 
                 if (totem.Resistances.Fire != 7)
                     totem.Resistances.Fire = 7;
@@ -166,7 +163,7 @@ namespace Server.Items
 
             if (item is InquisitorsResolution)
             {
-                var inquis = (InquisitorsResolution)item;
+                InquisitorsResolution inquis = (InquisitorsResolution)item;
 
                 if (inquis.PhysicalBonus != 5)
                     inquis.PhysicalBonus = 5;
@@ -191,7 +188,7 @@ namespace Server.Items
 
             if (item is WizardsCrystalGlasses)
             {
-                var glasses = (WizardsCrystalGlasses)item;
+                WizardsCrystalGlasses glasses = (WizardsCrystalGlasses)item;
 
                 if (glasses.PhysicalBonus != 5)
                     glasses.PhysicalBonus = 5;

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Server.Engines.Chat
 {
@@ -16,7 +16,7 @@ namespace Server.Engines.Chat
             if (!Directory.Exists("Logs"))
                 Directory.CreateDirectory("Logs");
 
-            var directory = Path.Combine("Logs", "Chat");
+            string directory = Path.Combine("Logs", "Chat");
 
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
@@ -58,7 +58,7 @@ namespace Server.Engines.Chat
                     channelOutput = m_OutputPerChannel[channel];
                 else
                 {
-                    var path = "Logs";
+                    string path = "Logs";
 
                     AppendPath(ref path, "chat");
                     AppendPath(ref path, "channels");
@@ -109,8 +109,8 @@ namespace Server.Engines.Chat
         {
             WriteLine(channel, "{0} left the channel.", username);
 
-            if ( m_OutputPerChannel.ContainsKey( channel ) )
-            	m_OutputPerChannel[channel].Dispose();
+            if (m_OutputPerChannel.ContainsKey(channel))
+                m_OutputPerChannel[channel].Dispose();
         }
 
         public static void Log(string channel, string message)

@@ -1,12 +1,14 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using Server.Items;
 
 namespace Server.Mobiles
 {
     [CorpseName("a travesty's corpse")]
     public class Travesty : BasePeerless
     {
+        public override double WeaponAbilityChance => IsBodyMod ? base.WeaponAbilityChance : 0.1;
+
         public override WeaponAbility GetWeaponAbility()
         {
             if (Weapon == null)
@@ -26,9 +28,9 @@ namespace Server.Mobiles
         private bool _CanPeace;
         private bool _CanProvoke;
 
-        public override bool CanDiscord { get { return _CanDiscord; } }
-        public override bool CanPeace { get { return _CanPeace; } }
-        public override bool CanProvoke { get { return _CanProvoke; } }
+        public override bool CanDiscord => _CanDiscord;
+        public override bool CanPeace => _CanPeace;
+        public override bool CanProvoke => _CanProvoke;
 
         [Constructable]
         public Travesty()
@@ -93,7 +95,7 @@ namespace Server.Mobiles
             }
         }
 
-        public override bool ShowFameTitle { get { return false; } }
+        public override bool ShowFameTitle => false;
 
         public Travesty(Serial serial)
             : base(serial)
@@ -163,13 +165,17 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
+        }
+
+        public override void ClearHands()
+        {
         }
 
         public void ChangeBody()
@@ -215,19 +221,29 @@ namespace Server.Mobiles
                 {
                     if (FindItemOnLayer(item.Layer) == null)
                     {
-                        if (item is BaseRanged)
+                        if (item is BaseWeapon)
                         {
-                            Item i = FindItemOnLayer(Layer.TwoHanded);
+                            var crItem = Server.Engines.Craft.CraftItem.GetCraftItem(item.GetType(), true);
 
-                            if (i != null)
-                                i.Delete();
+                            if (crItem != null)
+                            {
+                                // Is this necessary? Was this check already done?
+                                Item i = FindItemOnLayer(Layer.TwoHanded);
 
-                            i = FindItemOnLayer(Layer.OneHanded);
+                                if (i != null)
+                                    i.Delete();
 
-                            if (i != null)
-                                i.Delete();
+                                i = FindItemOnLayer(Layer.OneHanded);
 
-                            AddItem(Loot.Construct(item.GetType()));
+                                if (i != null)
+                                    i.Delete();
+
+                                AddItem(Loot.Construct(crItem.ItemType));
+                            }
+                            else
+                            {
+                                AddItem(new ClonedItem(item));
+                            }
                         }
                         else
                         {
@@ -292,16 +308,16 @@ namespace Server.Mobiles
             if (m_Timer != null)
                 m_Timer.Stop();
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(1.0), new TimerCallback(RestoreBody));
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(1.0), RestoreBody);
         }
 
         public void DeleteItems()
         {
-            ColUtility.SafeDelete(Items, item => item is ClonedItem || item is BaseRanged);
+            ColUtility.SafeDelete(Items, item => item is ClonedItem || item is BaseWeapon);
 
             if (Backpack != null)
             {
-                ColUtility.SafeDelete(Backpack.Items, item => item is ClonedItem || item is BaseRanged);
+                ColUtility.SafeDelete(Backpack.Items, item => item is ClonedItem || item is BaseWeapon);
             }
         }
 
@@ -349,8 +365,8 @@ namespace Server.Mobiles
         }
 
         #region Spawn Helpers
-        public override bool CanSpawnHelpers { get { return true; } }
-        public override int MaxHelpersWaves { get { return 1; } }
+        public override bool CanSpawnHelpers => true;
+        public override int MaxHelpersWaves => 1;
 
         public override bool CanSpawnWave()
         {
@@ -371,7 +387,7 @@ namespace Server.Mobiles
 
             if (Map != null && Map != Map.Internal && Region.IsPartOf("TheCitadel"))
             {
-                var loc = _WarpLocs[Utility.Random(_WarpLocs.Length)];
+                Point3D loc = _WarpLocs[Utility.Random(_WarpLocs.Length)];
                 MoveToWorld(loc, Map);
             }
         }
@@ -385,7 +401,7 @@ namespace Server.Mobiles
 
         #endregion
 
-        private Point3D[] _WarpLocs =
+        private readonly Point3D[] _WarpLocs =
         {
             new Point3D(71, 1939, 0),
             new Point3D(71, 1955, 0),
@@ -426,7 +442,7 @@ namespace Server.Mobiles
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
-                writer.Write((int)0); // version
+                writer.Write(0); // version
             }
 
             public override void Deserialize(GenericReader reader)

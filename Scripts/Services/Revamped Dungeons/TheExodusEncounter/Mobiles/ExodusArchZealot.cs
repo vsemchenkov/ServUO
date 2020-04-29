@@ -1,22 +1,21 @@
 #region Header
 //Exodus Encounter by Redmoon
 #endregion Header
-using System;
-using System.Collections.Generic;
-using Server.Items;
-using Server.Gumps;
-using Server.Network;
-using Server.ContextMenus;
 using Server.Commands;
+using Server.ContextMenus;
+using Server.Gumps;
+using Server.Items;
+using Server.Network;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
-{    
-	public class ExodusArchZealot : Mobile
-	{
-        public virtual bool IsInvulnerable { get { return true; } }
+{
+    public class ExodusArchZealot : Mobile
+    {
+        public virtual bool IsInvulnerable => true;
 
-		[Constructable]
-		public ExodusArchZealot()
+        [Constructable]
+        public ExodusArchZealot()
         {
             Name = "Hunter";
             Title = "the Arch Zealot";
@@ -36,70 +35,65 @@ namespace Server.Mobiles
             AddItem(beard);
         }
 
+        public ExodusArchZealot(Serial serial) : base(serial)
+        {
+        }
+
         public override bool OnDragDrop(Mobile from, Item dropped)
         {
-            if (from.InRange(Location, 2))
+            if (from.InRange(Location, 2) && from.Race == Race.Gargoyle && dropped.GetType() == typeof(ExodusSacrificalDagger))
             {
-                if (from.Race == Race.Gargoyle && dropped.GetType() == typeof(ExodusSacrificalDagger))
-                {
-                    dropped.Delete();
-                    from.AddToBackpack(new ExodusSacrificalGargishDagger());
+                dropped.Delete();
+                from.AddToBackpack(new ExodusSacrificalGargishDagger());
 
-                    return true;
-                }
+                return true;
             }
 
             return base.OnDragDrop(from, dropped);
         }
-        
-        public ExodusArchZealot(Serial serial): base(serial)
-		{		
+
+        public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
+        {
+            base.GetContextMenuEntries(from, list);
+            list.Add(new ExodusArchZealotGumpEntry(from, this));
         }
 
-        public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list) 
-	   	{ 
-	    	base.GetContextMenuEntries( from, list );
-            list.Add(new ExodusArchZealotGumpEntry(from, this)); 
-	    } 
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
 
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize( writer );
-			writer.Write( (int) 0 );
-		}
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
 
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize( reader );
-			int version = reader.ReadInt();
-		}
-
-		public class ExodusArchZealotGumpEntry : ContextMenuEntry
-		{
-			private Mobile m_Mobile;
-			private Mobile m_Giver;
+        public class ExodusArchZealotGumpEntry : ContextMenuEntry
+        {
+            private readonly Mobile m_Mobile;
 
             public ExodusArchZealotGumpEntry(Mobile from, Mobile giver) : base(6146, 3)
-			{
-				m_Mobile = from;
-				m_Giver = giver;
-			}
+            {
+                m_Mobile = from;
+            }
 
-			public override void OnClick()
-			{
-				if( !( m_Mobile is PlayerMobile ) )
-					return;
-				
-				PlayerMobile mobile = (PlayerMobile) m_Mobile;
-				{
+            public override void OnClick()
+            {
+                if (!(m_Mobile is PlayerMobile))
+                    return;
+
+                PlayerMobile mobile = (PlayerMobile)m_Mobile;
+                {
                     if (!mobile.HasGump(typeof(ExodusArchZealotGump)))
-					{
+                    {
                         mobile.SendGump(new ExodusArchZealotGump(mobile));
-					} 
-				}
-			}
-		}
-	}
+                    }
+                }
+            }
+        }
+    }
 
     public class ExodusArchZealotGump : Gump
     {
@@ -107,7 +101,7 @@ namespace Server.Mobiles
 
         public static void Initialize()
         {
-            CommandSystem.Register("ExodusArchZealotGump", AccessLevel.GameMaster, new CommandEventHandler(ExodusArchZealotGump_OnCommand));
+            CommandSystem.Register("ExodusArchZealotGump", AccessLevel.GameMaster, ExodusArchZealotGump_OnCommand);
         }
 
         private static void ExodusArchZealotGump_OnCommand(CommandEventArgs e)
@@ -141,7 +135,7 @@ namespace Server.Mobiles
             AddImage(136, 84, 96);
 
             AddPage(1);
-            AddHtmlLocalized(107, 110, 300, 230, 1153671, White, false, true); // Greetings Traveler *sly grin* Can you feel it? Can you feel the awesome power that emanates from this place...surely Lord Exodus will join us again soon, why – that’s why you’re here isn’t it? To perform the Ritual?
+            AddHtmlLocalized(107, 110, 300, 230, 1153671, White, false, true); // Greetings Traveler *sly grin* Can you feel it? Can you feel the awesome power that emanates from this place...surely Lord Exodus will join us again soon, why â€“ thatâ€™s why youâ€™re here isnâ€™t it? To perform the Ritual?
 
             AddHtmlLocalized(155, 260, 250, 24, 1153672, White, false, false);
             AddButton(125, 260, 0x26B0, 0x26B1, 0, GumpButtonType.Page, 2);//Ritual?
@@ -268,7 +262,7 @@ namespace Server.Mobiles
 
             //// START PAGE 8 WARRIOR
             AddPage(8);
-            AddHtmlLocalized(107, 110, 300, 230, 1153685, White, false, true); // Deep within Exodus Dungeon, minions of Lord Exodus battle fiercely against Lord Dupre’s men...slay either one to collect the Keys.
+            AddHtmlLocalized(107, 110, 300, 230, 1153685, White, false, true); // Deep within Exodus Dungeon, minions of Lord Exodus battle fiercely against Lord Dupreâ€™s men...slay either one to collect the Keys.
 
             AddHtmlLocalized(155, 340, 250, 24, 1153686, White, false, false);
             AddButton(125, 340, 0x26B0, 0x26B1, 0, GumpButtonType.Page, 9);//The Rogue?
@@ -299,9 +293,9 @@ namespace Server.Mobiles
 
         }
 
-        public override void OnResponse(NetState state, RelayInfo info) //Function for GumpButtonType.Reply Buttons 
+        public override void OnResponse(NetState sender, RelayInfo info) //Function for GumpButtonType.Reply Buttons 
         {
-            Mobile from = state.Mobile;
+            Mobile from = sender.Mobile;
 
             switch (info.ButtonID)
             {
@@ -314,4 +308,4 @@ namespace Server.Mobiles
             }
         }
     }
-}	
+}

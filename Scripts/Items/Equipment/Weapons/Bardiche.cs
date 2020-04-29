@@ -1,4 +1,3 @@
-using System;
 using Server.Engines.Craft;
 
 namespace Server.Items
@@ -28,14 +27,14 @@ namespace Server.Items
         public override int MaxDamage => 20;
 
         public override float Speed => 3.75f;
-        
+
         public override int InitMinHits => 31;
         public override int InitMaxHits => 100;
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

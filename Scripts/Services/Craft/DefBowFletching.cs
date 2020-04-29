@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Engines.Craft
 {
@@ -27,21 +27,9 @@ namespace Server.Engines.Craft
 
     public class DefBowFletching : CraftSystem
     {
-        public override SkillName MainSkill
-        {
-            get
-            {
-                return SkillName.Fletching;
-            }
-        }
+        public override SkillName MainSkill => SkillName.Fletching;
 
-        public override int GumpTitleNumber
-        {
-            get
-            {
-                return 1044006;
-            }// <CENTER>BOWCRAFT AND FLETCHING MENU</CENTER>
-        }
+        public override int GumpTitleNumber => 1044006;
 
         private static CraftSystem m_CraftSystem;
 
@@ -106,18 +94,12 @@ namespace Server.Engines.Craft
                     return 1044156; // You create an exceptional quality item and affix your maker's mark.
                 else if (quality == 2)
                     return 1044155; // You create an exceptional quality item.
-                else 
+                else
                     return 1044154; // You create the item.
             }
         }
 
-        public override CraftECA ECA
-        {
-            get
-            {
-                return CraftECA.FiftyPercentChanceMinusTenPercent;
-            }
-        }
+        public override CraftECA ECA => CraftECA.FiftyPercentChanceMinusTenPercent;
 
         public override void InitCraftList()
         {
@@ -240,7 +222,7 @@ namespace Server.Engines.Craft
 
             MarkOption = true;
             Repair = true;
-			CanEnhance = true;
+            CanEnhance = true;
         }
     }
 }

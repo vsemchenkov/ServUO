@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     [Flipable(0xA3E0, 0xA3E4)]
@@ -10,7 +8,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        public override int LabelNumber { get { return 1159154; } } // Copper Portrait
+        public override int LabelNumber => 1159154;  // Copper Portrait
 
         [Constructable]
         public CopperPortrait1()
@@ -69,7 +67,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        public override int LabelNumber { get { return 1159154; } } // Copper Portrait
+        public override int LabelNumber => 1159154;  // Copper Portrait
 
         [Constructable]
         public CopperPortrait2()

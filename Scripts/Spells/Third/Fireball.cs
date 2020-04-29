@@ -1,5 +1,5 @@
-using System;
 using Server.Targeting;
+using System;
 
 namespace Server.Spells.Third
 {
@@ -15,20 +15,8 @@ namespace Server.Spells.Third
         {
         }
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Third;
-            }
-        }
-        public override bool DelayedDamage
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Third;
+        public override bool DelayedDamage => true;
         public override void OnCast()
         {
             Caster.Target = new InternalTarget(this);

@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
 using Server.Multis;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Misc
 {
@@ -10,7 +10,7 @@ namespace Server.Misc
     {
         public static void Initialize()
         {
-            Timer.DelayCall(TimeSpan.FromSeconds(2.5), new TimerCallback(Run));
+            Timer.DelayCall(TimeSpan.FromSeconds(2.5), Run);
         }
 
         public static void Run()
@@ -148,7 +148,7 @@ namespace Server.Misc
                 item is BaseClothing ||
                 item is BaseJewel ||
                 item is BasePotion
-                #region Champion artifacts
+            #region Champion artifacts
                 ||
                 item is SkullPole ||
                 item is EvilIdolSkull ||
@@ -167,7 +167,7 @@ namespace Server.Misc
                 item is WindSpirit ||
                 item is DirtPatch ||
                 item is Futon)
-            #endregion
+                #endregion
                 return true;
 
             return false;

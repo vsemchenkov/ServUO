@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -47,15 +46,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmune
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool BleedImmune => true;
 
-        public override TribeType Tribe { get { return TribeType.Undead; } }
+        public override TribeType Tribe => TribeType.Undead;
 
         public override void GenerateLoot()
         {
@@ -66,7 +59,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

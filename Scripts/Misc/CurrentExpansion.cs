@@ -21,14 +21,11 @@ namespace Server
 			AccountGold.ConvertOnBank = true;
 			AccountGold.ConvertOnTrade = false;
 			VirtualCheck.UseEditGump = true;
-            
+
 			TownCryerSystem.Enabled = true;
 
             Mobile.InsuranceEnabled = !Siege.SiegeShard;
 			Mobile.VisibleDamageType = VisibleDamageType.Related;
-			
-			Mobile.GuildClickMessage = false; // Maybe we can remove after?
-			Mobile.AsciiClickMessage = false; // Maybe we can remove after?
 
 			AOS.DisableStatInfluences();
 

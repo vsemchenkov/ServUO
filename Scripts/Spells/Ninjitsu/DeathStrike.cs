@@ -1,38 +1,17 @@
-using System;
-using System.Collections;
 using Server.Items;
 using Server.SkillHandlers;
+using System;
+using System.Collections;
 
 namespace Server.Spells.Ninjitsu
 {
     public class DeathStrike : NinjaMove
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        public DeathStrike()
-        {
-        }
 
-        public override int BaseMana
-        {
-            get
-            {
-                return 30;
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 85.0;
-            }
-        }
-        public override TextDefinition AbilityMessage
-        {
-            get
-            {
-                return new TextDefinition(1063091);
-            }
-        }// You prepare to hit your opponent with a Death Strike.
+        public override int BaseMana => 30;
+        public override double RequiredSkill => 85.0;
+        public override TextDefinition AbilityMessage => new TextDefinition(1063091);// You prepare to hit your opponent with a Death Strike.
         public static void AddStep(Mobile m)
         {
             DeathStrikeInfo info = m_Table[m] as DeathStrikeInfo;
@@ -51,7 +30,7 @@ namespace Server.Spells.Ninjitsu
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentMove(attacker);
@@ -104,10 +83,10 @@ namespace Server.Spells.Ninjitsu
             info.m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(5.0), new TimerStateCallback(ProcessDeathStrike), defender);
 
             m_Table[defender] = info;
-            
+
             BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.DeathStrike, 1075645, TimeSpan.FromSeconds(5.0), defender, String.Format("{0}", damageBonus)));
 
-            this.CheckGain(attacker);
+            CheckGain(attacker);
         }
 
         private static void ProcessDeathStrike(object state)
@@ -156,16 +135,16 @@ namespace Server.Spells.Ninjitsu
             public Timer m_Timer;
             public DeathStrikeInfo(Mobile target, Mobile attacker, int damageBonus, bool isRanged)
             {
-                this.m_Target = target;
-                this.m_Attacker = attacker;
-                this.m_DamageBonus = damageBonus;
-                this.m_isRanged = isRanged;
+                m_Target = target;
+                m_Attacker = attacker;
+                m_DamageBonus = damageBonus;
+                m_isRanged = isRanged;
             }
         }
 
         public static void Initialize()
         {
-            EventSink.Movement += new MovementEventHandler(EventSink_Movement);
+            EventSink.Movement += EventSink_Movement;
         }
 
         public static void EventSink_Movement(MovementEventArgs e)

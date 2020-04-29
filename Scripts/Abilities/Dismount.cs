@@ -1,5 +1,5 @@
-using System;
 using Server.Mobiles;
+using System;
 
 namespace Server.Items
 {
@@ -11,12 +11,6 @@ namespace Server.Items
     /// </summary>
     public class Dismount : WeaponAbility
     {
-        public static readonly TimeSpan DefenderRemountDelay = TimeSpan.FromSeconds(10.0);// TODO: Taken from bola script, needs to be verified
-        public static readonly TimeSpan AttackerRemountDelay = TimeSpan.FromSeconds(3.0);
-        public Dismount()
-        {
-        }
-
         public override int BaseMana => 25;
 
         public override bool Validate(Mobile from)
@@ -24,7 +18,7 @@ namespace Server.Items
             if (!base.Validate(from))
                 return false;
 
-            if ( (from.Mounted || from.Flying) && !(from.Weapon is Lance) && !(from.Weapon is GargishLance) )
+            if ((from.Mounted || from.Flying) && !(from.Weapon is Lance) && !(from.Weapon is GargishLance))
             {
                 from.SendLocalizedMessage(1061283); // You cannot perform that attack while mounted or flying!
                 return false;
@@ -35,7 +29,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker))
+            if (!Validate(attacker))
                 return;
 
             if (defender is ChaosDragoon || defender is ChaosDragoonElite)
@@ -48,13 +42,13 @@ namespace Server.Items
 
             IMount mount = defender.Mount;
 
-            if (mount == null && !defender.Flying && !Server.Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
+            if (mount == null && !defender.Flying && !Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
             {
                 attacker.SendLocalizedMessage(1060848); // This attack only works on mounted or flying targets
                 return;
             }
 
-            if (!this.CheckMana(attacker, true))
+            if (!CheckMana(attacker, true))
             {
                 return;
             }
@@ -83,7 +77,7 @@ namespace Server.Items
 
             if (defender is PlayerMobile)
             {
-                if (Server.Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
+                if (Spells.Ninjitsu.AnimalForm.UnderTransformation(defender))
                 {
                     defender.SendLocalizedMessage(1114066, attacker.Name); // ~1_NAME~ knocked you out of animal form!
                 }

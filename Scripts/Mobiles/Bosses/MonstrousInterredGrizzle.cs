@@ -1,16 +1,14 @@
+using Server.Items;
+using Server.Spells;
 using System;
 using System.Linq;
-
-using Server.Items;
-using Server.Network;
-using Server.Spells;
 
 namespace Server.Mobiles
 {
     [CorpseName("a monstrous interred grizzle corpse")]
     public class MonstrousInterredGrizzle : BasePeerless
     {
-        private static readonly int[] m_Tiles = new int[]
+        private static readonly int[] m_Tiles = new[]
         {
             -2, 0,
             2, 0,
@@ -30,7 +28,7 @@ namespace Server.Mobiles
             : base(AIType.AI_Spellweaving, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a monstrous interred grizzle";
-            Body = 0x103;			
+            Body = 0x103;
             BaseSoundID = 589;
 
             SetStr(1198, 1207);
@@ -79,20 +77,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
+        public override bool GivesMLMinorArtifact => true;
+        public override int TreasureMapLevel => 5;
 
         public override void GenerateLoot()
         {
@@ -178,14 +164,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
-            writer.Write((int)0); // version
+
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
 
@@ -204,13 +190,13 @@ namespace Server.Mobiles
     }
 
     public class InfernalOoze : Item
-    { 
+    {
         private bool m_Corrosive;
-        private int m_Damage;
-        private Mobile m_Owner;
+        private readonly int m_Damage;
+        private readonly Mobile m_Owner;
         private Timer m_Timer;
 
-        private DateTime m_StartTime;
+        private readonly DateTime m_StartTime;
 
         public InfernalOoze(Mobile owner)
             : this(owner, false)
@@ -226,7 +212,7 @@ namespace Server.Mobiles
             Hue = 0x95;
 
             m_Damage = damage;
-			
+
             m_Corrosive = corrosive;
             m_StartTime = DateTime.UtcNow;
 
@@ -257,7 +243,7 @@ namespace Server.Mobiles
 
             if (!Deleted && Map != Map.Internal && Map != null)
             {
-                foreach (var m in SpellHelper.AcquireIndirectTargets(m_Owner, Location, Map, 0).OfType<Mobile>())
+                foreach (Mobile m in SpellHelper.AcquireIndirectTargets(m_Owner, Location, Map, 0).OfType<Mobile>())
                 {
                     OnMoveOver(m);
                 }
@@ -278,7 +264,7 @@ namespace Server.Mobiles
         }
 
         public virtual void Damage(Mobile m)
-        { 
+        {
             if (m_Corrosive)
             {
                 for (int i = 0; i < m.Items.Count; i++)
@@ -331,7 +317,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

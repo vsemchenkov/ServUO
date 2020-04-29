@@ -1,7 +1,6 @@
-using System;
-
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
+using System;
 
 namespace Server.Engines.SorcerersDungeon
 {
@@ -116,8 +115,8 @@ namespace Server.Engines.SorcerersDungeon
         {
         }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override Poison PoisonImmune { get { return Poison.Deadly; } }
+        public override bool AlwaysMurderer => true;
+        public override Poison PoisonImmune => Poison.Deadly;
 
         public override void GenerateLoot()
         {
@@ -127,7 +126,7 @@ namespace Server.Engines.SorcerersDungeon
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -156,13 +155,7 @@ namespace Server.Engines.SorcerersDungeon
         {
         }
 
-        public override string DefaultName
-        {
-            get
-            {
-                return "unholy pumpkin";
-            }
-        }
+        public override string DefaultName => "unholy pumpkin";
         public bool Carve(Mobile from, Item item)
         {
             Effects.PlaySound(GetWorldLocation(), Map, 0x48F);
@@ -190,7 +183,7 @@ namespace Server.Engines.SorcerersDungeon
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

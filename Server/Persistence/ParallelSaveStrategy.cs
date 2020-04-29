@@ -1,8 +1,8 @@
+using Server.Guilds;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using Server.Guilds;
 
 namespace Server
 {
@@ -24,13 +24,7 @@ namespace Server
             _decayQueue = new Queue<Item>();
         }
 
-        public override string Name
-        {
-            get
-            {
-                return "Parallel";
-            }
-        }
+        public override string Name => "Parallel";
         public override void Save(SaveMetrics mt, bool permitBackgroundWrite)
         {
             metrics = mt;
@@ -64,7 +58,7 @@ namespace Server
             WaitHandle.WaitAll(
                 Array.ConvertAll<Consumer, WaitHandle>(
                     consumers,
-                    delegate(Consumer input)
+                    delegate (Consumer input)
                     {
                         return input.completionEvent;
                     }));

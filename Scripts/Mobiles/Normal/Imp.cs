@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -42,22 +41,22 @@ namespace Server.Mobiles
 
             Fame = 2500;
             Karma = -2500;
-			switch (Utility.Random(104))
+            switch (Utility.Random(104))
             {
                 case 0: PackItem(new BloodOathScroll()); break;
                 case 1: PackItem(new CorpseSkinScroll()); break;
                 case 2: PackItem(new CurseWeaponScroll()); break;
                 case 3: PackItem(new EvilOmenScroll()); break;
-				case 4: PackItem(new HorrificBeastScroll()); break;
-				case 5: PackItem(new LichFormScroll()); break;
-				case 6: PackItem(new MindRotScroll()); break;
-				case 7: PackItem(new PainSpikeScroll()); break;
-				case 8: PackItem(new PoisonStrikeScroll()); break;
-				case 9: PackItem(new StrangleScroll()); break;
-				case 10: PackItem(new SummonFamiliarScroll()); break;
-				case 11: PackItem(new WitherScroll()); break;
-				case 12: PackItem(new WraithFormScroll()); break;
-			}
+                case 4: PackItem(new HorrificBeastScroll()); break;
+                case 5: PackItem(new LichFormScroll()); break;
+                case 6: PackItem(new MindRotScroll()); break;
+                case 7: PackItem(new PainSpikeScroll()); break;
+                case 8: PackItem(new PoisonStrikeScroll()); break;
+                case 9: PackItem(new StrangleScroll()); break;
+                case 10: PackItem(new SummonFamiliarScroll()); break;
+                case 11: PackItem(new WitherScroll()); break;
+                case 12: PackItem(new WraithFormScroll()); break;
+            }
 
             Tamable = true;
             ControlSlots = 2;
@@ -69,48 +68,12 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 6;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Spined;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override PackInstinct PackInstinct
-        {
-            get
-            {
-                return PackInstinct.Daemon;
-            }
-        }
-        public override bool CanFly
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override int Meat => 1;
+        public override int Hides => 6;
+        public override HideType HideType => HideType.Spined;
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override PackInstinct PackInstinct => PackInstinct.Daemon;
+        public override bool CanFly => true;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager);
@@ -120,7 +83,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

@@ -10,35 +10,17 @@ namespace Server.Spells.Bushido
             -1,
             9002);
 
-        private static Dictionary<Mobile, Timer> m_Table = new Dictionary<Mobile, Timer>();
-        private static Dictionary<Mobile, Timer> m_RegenTable = new Dictionary<Mobile, Timer>();
+        private static readonly Dictionary<Mobile, Timer> m_Table = new Dictionary<Mobile, Timer>();
+        private static readonly Dictionary<Mobile, Timer> m_RegenTable = new Dictionary<Mobile, Timer>();
 
         public Confidence(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(0.25);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 25.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 10;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(0.25);
+        public override double RequiredSkill => 25.0;
+        public override int RequiredMana => 10;
 
         public static bool IsConfident(Mobile m)
         {
@@ -168,7 +150,7 @@ namespace Server.Spells.Bushido
 
         private class RegenTimer : Timer
         {
-            private Mobile m_Mobile;
+            private readonly Mobile m_Mobile;
             private int m_Ticks;
             private int m_Hits;
 

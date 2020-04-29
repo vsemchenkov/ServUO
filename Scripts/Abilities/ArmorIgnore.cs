@@ -7,17 +7,13 @@ namespace Server.Items
     /// </summary>
     public class ArmorIgnore : WeaponAbility
     {
-        public ArmorIgnore()
-        {
-        }
-
         public override int BaseMana => 30;
 
         public override double DamageScalar => 0.9;
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);

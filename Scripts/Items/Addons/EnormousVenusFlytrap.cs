@@ -1,28 +1,28 @@
+using Server.ContextMenus;
+using Server.Engines.Points;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Server.ContextMenus;
-using Server.Engines.Points;
 
 namespace Server.Items
 {
     [FlipableAddon(Direction.South, Direction.East)]
     public class EnormousVenusFlytrapAddon : BaseAddonContainer
     {
-        public override int LabelNumber { get { return 1154462; } } // Enormous Venus Flytrap
+        public override int LabelNumber => 1154462;  // Enormous Venus Flytrap
 
-        public override bool Security { get { return false; } }
-        public override int DefaultGumpID { get { return 0x9; } }
+        public override bool Security => false;
+        public override int DefaultGumpID => 0x9;
 
         private Timer m_Timer;
         private List<CleanupArray> m_Cleanup;
 
-        public override BaseAddonContainerDeed Deed { get { return new EnormousVenusFlytrapAddonDeed(Hue); } }
+        public override BaseAddonContainerDeed Deed => new EnormousVenusFlytrapAddonDeed(Hue);
 
         [Constructable]
         public EnormousVenusFlytrapAddon(int hue)
             : base(0x9967)
-        {            
+        {
             Direction = Direction.South;
             Hue = hue;
             m_Cleanup = new List<CleanupArray>();
@@ -58,7 +58,7 @@ namespace Server.Items
             if (m_Timer != null)
                 m_Timer.Stop();
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), new TimerCallback(Empty));
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), Empty);
 
             return true;
         }
@@ -75,7 +75,7 @@ namespace Server.Items
             if (m_Timer != null)
                 m_Timer.Stop();
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), new TimerCallback(Empty));
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), Empty);
 
             return true;
         }
@@ -100,7 +100,7 @@ namespace Server.Items
 
                 if (m_Cleanup.Any(x => x.mobiles != null))
                 {
-                    foreach (var m in m_Cleanup.Select(x => x.mobiles).Distinct())
+                    foreach (Mobile m in m_Cleanup.Select(x => x.mobiles).Distinct())
                     {
                         if (m_Cleanup.Find(x => x.mobiles == m && x.confirm) != null)
                         {
@@ -217,7 +217,7 @@ namespace Server.Items
             int version = reader.ReadInt();
 
             if (Items.Count > 0)
-                m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), new TimerCallback(Empty));
+                m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(3), Empty);
 
             m_Cleanup = new List<CleanupArray>();
         }
@@ -225,10 +225,10 @@ namespace Server.Items
 
     public class EnormousVenusFlytrapAddonDeed : BaseAddonContainerDeed
     {
-        public override int LabelNumber { get { return 1154462; } } // Enormous Venus Flytrap
+        public override int LabelNumber => 1154462;  // Enormous Venus Flytrap
 
-        public override BaseAddonContainer Addon { get { return new EnormousVenusFlytrapAddon(Hue); } }
-        
+        public override BaseAddonContainer Addon => new EnormousVenusFlytrapAddon(Hue);
+
         [Constructable]
         public EnormousVenusFlytrapAddonDeed()
             : this(Utility.RandomList(26, 33, 233, 1931, 2067))

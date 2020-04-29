@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
 using Server.Engines.CannedEvil;
 using Server.Engines.PartySystem;
 using Server.Guilds;
 using Server.Items;
 using Server.Regions;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Spells.Necromancy
 {
@@ -54,34 +54,10 @@ namespace Server.Spells.Necromancy
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(2.0);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 80.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 40;
-            }
-        }
-        public override bool DelayedDamage
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(2.0);
+        public override double RequiredSkill => 80.0;
+        public override int RequiredMana => 40;
+        public override bool DelayedDamage => false;
         public override bool CheckCast()
         {
             if (Caster.Skills.SpiritSpeak.Value < 100.0)

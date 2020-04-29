@@ -1,36 +1,19 @@
-using System; 
-using System.Collections.Generic; 
-using Server.Items; 
+using Server.Items;
+using System.Collections.Generic;
 
-namespace Server.Mobiles 
-{ 
-    public class SBFisherman : SBInfo 
-    { 
-        private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo(); 
-        private readonly IShopSellInfo m_SellInfo = new InternalSellInfo(); 
+namespace Server.Mobiles
+{
+    public class SBFisherman : SBInfo
+    {
+        private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo();
+        private readonly IShopSellInfo m_SellInfo = new InternalSellInfo();
 
-        public SBFisherman() 
-        { 
-        }
+        public override IShopSellInfo SellInfo => m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
-        public override IShopSellInfo SellInfo
+        public class InternalBuyInfo : List<GenericBuyInfo>
         {
-            get
-            {
-                return m_SellInfo;
-            }
-        }
-        public override List<GenericBuyInfo> BuyInfo
-        {
-            get
-            {
-                return m_BuyInfo;
-            }
-        }
-
-        public class InternalBuyInfo : List<GenericBuyInfo> 
-        { 
-            public InternalBuyInfo() 
+            public InternalBuyInfo()
             {
                 Add(new GenericBuyInfo(typeof(RawFishSteak), 3, 20, 0x97A, 0, true));
                 //TODO: Add( new GenericBuyInfo( typeof( SmallFish ), 3, 20, 0xDD6, 0 ) );
@@ -53,10 +36,10 @@ namespace Server.Mobiles
             }
         }
 
-        public class InternalSellInfo : GenericSellInfo 
-        { 
-            public InternalSellInfo() 
-            { 
+        public class InternalSellInfo : GenericSellInfo
+        {
+            public InternalSellInfo()
+            {
                 Add(typeof(RawFishSteak), 1);
                 Add(typeof(Fish), 1);
                 //TODO: Add( typeof( SmallFish ), 1 );

@@ -1,9 +1,7 @@
+using Server.Items;
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
-
-using Server;
-using Server.Mobiles;
-using Server.Items;
 
 namespace Server.Engines.Quests.RitualQuest
 {
@@ -20,7 +18,7 @@ namespace Server.Engines.Quests.RitualQuest
             }
         }
 
-        public override Type[] Quests { get { return new Type[] { typeof(ScalesOfADreamSerpentQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(ScalesOfADreamSerpentQuest) };
 
         public Prugyilonus()
             : base("Prugyilonus", "the Advisor to the Queen")
@@ -65,13 +63,13 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class Bexil : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(CatchMeIfYouCanQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(CatchMeIfYouCanQuest) };
 
         public static Bexil Instance { get; set; }
 
         public static void Initialize()
         {
-            if(Instance == null)
+            if (Instance == null)
             {
                 Instance = new Bexil();
                 Instance.MoveToWorld(new Point3D(662, 3819, -43), Map.TerMur);
@@ -126,9 +124,9 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class BexilPunchingBag : BaseCreature
     {
-        public override bool InitialInnocent { get { return true; } }
+        public override bool InitialInnocent => true;
 
-        private Dictionary<Mobile, int> _Table = new Dictionary<Mobile, int>();
+        private readonly Dictionary<Mobile, int> _Table = new Dictionary<Mobile, int>();
         private DateTime _NextTeleport;
 
         public BexilPunchingBag()
@@ -158,8 +156,8 @@ namespace Server.Engines.Quests.RitualQuest
 
             if (Combatant is Mobile && _NextTeleport < DateTime.UtcNow)
             {
-                var map = Map;
-                var c = (Mobile)Combatant;
+                Map map = Map;
+                Mobile c = (Mobile)Combatant;
 
                 Point3D p;
 
@@ -184,7 +182,7 @@ namespace Server.Engines.Quests.RitualQuest
         {
             if (from is PlayerMobile)
             {
-                var quest = QuestHelper.GetQuest<CatchMeIfYouCanQuest>((PlayerMobile)from);
+                CatchMeIfYouCanQuest quest = QuestHelper.GetQuest<CatchMeIfYouCanQuest>((PlayerMobile)from);
 
                 if (quest != null)
                 {
@@ -202,7 +200,7 @@ namespace Server.Engines.Quests.RitualQuest
 
         public override void Delete()
         {
-            var bex = new BexilPunchingBag();
+            BexilPunchingBag bex = new BexilPunchingBag();
             bex.MoveToWorld(new Point3D(403, 3391, 38), Map.TerMur);
 
             base.Delete();
@@ -227,7 +225,7 @@ namespace Server.Engines.Quests.RitualQuest
 
     public class Grubbix : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(FilthyLifeStealersQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(FilthyLifeStealersQuest) };
 
         public static Grubbix Instance { get; set; }
 

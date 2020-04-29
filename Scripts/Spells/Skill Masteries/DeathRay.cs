@@ -1,55 +1,51 @@
-using System;
-using Server;
-using Server.Spells;
-using Server.Network;
 using Server.Mobiles;
-using Server.Items;
+using System;
 
 namespace Server.Spells.SkillMasteries
 {
-	public class DeathRaySpell : SkillMasterySpell
-	{
+    public class DeathRaySpell : SkillMasterySpell
+    {
         /*The mage focuses a death ray on their opponent which snares the mage to their 
          * location and does damage based on magery skill, evaluating intelligence skill,
          * and mastery level as long as the mage has mana and the target is in range.*/
 
         // BuffIcon: 1155798 ~1_STR~ Energy Resist.<br>~2_DAM~ energy damage every 3 seconds while death ray remains in effect.<br>
 
-		private static SpellInfo m_Info = new SpellInfo(
-				"Death Ray", "In Grav Corp",
-				204,
-				9061,
+        private static readonly SpellInfo m_Info = new SpellInfo(
+                "Death Ray", "In Grav Corp",
+                204,
+                9061,
                 Reagent.BlackPearl,
                 Reagent.Bloodmoss,
                 Reagent.SpidersSilk
-			);
+            );
 
         private Point3D _Location;
         private ResistanceMod _Mod;
 
-		public override double UpKeep { get { return 35; } }
-		public override int RequiredMana{ get { return 50; } }
-        public override int DamageThreshold { get { return 1; } }
-        public override bool DamageCanDisrupt { get { return true; } }
-        public override double TickTime { get { return 3; } }
+        public override double UpKeep => 35;
+        public override int RequiredMana => 50;
+        public override int DamageThreshold => 1;
+        public override bool DamageCanDisrupt => true;
+        public override double TickTime => 3;
 
-        public override int UpkeepCancelMessage { get { return 1155874; } } // You do not have enough mana to keep your death ray active.
-        public override int DisruptMessage { get { return 1155793; } } // This action disturbs the focus necessary to keep your death ray active and it dissipates.
+        public override int UpkeepCancelMessage => 1155874;  // You do not have enough mana to keep your death ray active.
+        public override int DisruptMessage => 1155793;  // This action disturbs the focus necessary to keep your death ray active and it dissipates.
 
-        public override TimeSpan ExpirationPeriod { get { return TimeSpan.FromMinutes(360); } }
+        public override TimeSpan ExpirationPeriod => TimeSpan.FromMinutes(360);
 
-        public override SkillName CastSkill { get { return SkillName.Magery; } }
-        public override SkillName DamageSkill { get { return SkillName.EvalInt; } }
+        public override SkillName CastSkill => SkillName.Magery;
+        public override SkillName DamageSkill => SkillName.EvalInt;
 
         public DeathRaySpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
-		{
-		}
-		
-		public override void OnCast()
-		{
+        {
+        }
+
+        public override void OnCast()
+        {
             Caster.Target = new MasteryTarget(this);
-		}
+        }
 
         protected override void OnTarget(object o)
         {
@@ -76,7 +72,7 @@ namespace Server.Spells.SkillMasteries
                         m.FixedParticles(0x374A, 1, 15, 5054, 0x7A2, 7, EffectLayer.Head);
                         Caster.FixedParticles(0x0000, 10, 5, 2054, EffectLayer.Head);
 
-                        double damage = (Caster.Skills[CastSkill].Base + Caster.Skills[DamageSkill].Base) * ((double)GetMasteryLevel() * .8);
+                        double damage = (Caster.Skills[CastSkill].Base + Caster.Skills[DamageSkill].Base) * (GetMasteryLevel() * .8);
                         damage /= Target is PlayerMobile ? 5.15 : 2.5;
 
                         int mod = (int)Caster.Skills[DamageSkill].Value / 12;
@@ -100,7 +96,7 @@ namespace Server.Spells.SkillMasteries
 
             BuffInfo.RemoveBuff(Caster, BuffIcon.DeathRay);
 
-            if(Target != null)
+            if (Target != null)
                 BuffInfo.RemoveBuff(Target, BuffIcon.DeathRayDebuff);
         }
 
@@ -121,7 +117,7 @@ namespace Server.Spells.SkillMasteries
             }
             else
             {
-                double damage = (Caster.Skills[CastSkill].Base + Caster.Skills[DamageSkill].Base) * ((double)GetMasteryLevel() * .8);
+                double damage = (Caster.Skills[CastSkill].Base + Caster.Skills[DamageSkill].Base) * (GetMasteryLevel() * .8);
                 damage /= Target is PlayerMobile ? 5.15 : 2.5;
 
                 damage *= GetDamageScalar(Target);
@@ -136,5 +132,5 @@ namespace Server.Spells.SkillMasteries
 
             return true;
         }
-	}
+    }
 }

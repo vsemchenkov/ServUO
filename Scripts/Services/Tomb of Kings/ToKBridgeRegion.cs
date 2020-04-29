@@ -1,7 +1,7 @@
-﻿using System;
+using Server.Items;
+using System;
 using System.Collections.Generic;
 using System.Xml;
-using Server.Items;
 
 namespace Server.Regions
 {
@@ -10,7 +10,7 @@ namespace Server.Regions
         public ToKBridgeRegion(XmlElement xml, Map map, Region parent)
             : base(xml, map, parent)
         {
-            Timer.DelayCall(TimeSpan.Zero, new TimerCallback(Ensure));
+            Timer.DelayCall(TimeSpan.Zero, Ensure);
         }
 
         private List<Item> m_Blocks;
@@ -44,10 +44,10 @@ namespace Server.Regions
                 item.Visible = false;
             }
 
-            m_FadingTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(0.33), new TimerCallback(OnTick));
+            m_FadingTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(0.33), OnTick);
         }
 
-        private static int[] m_Hues = new int[]
+        private static readonly int[] m_Hues = new int[]
         {
             0,
             0x807, 0x806, 0x805, 0x804, 0x803,

@@ -1,0 +1,31 @@
+Server Crash Report
+===================
+
+ServUO Version 0.5, Build 7424.31624
+Operating System: Unix 19.4.0.0
+.NET Framework: 4.0.30319.42000
+Time: 29.04.2020 14:56:51
+Mobiles: 1154
+Items: 91163
+Exception:
+System.IO.IOException: Invalid handle to path "/Users/macbookpro/Desktop/ServUO/[Unknown]"
+  at System.IO.FileStream.ReadData (System.Runtime.InteropServices.SafeHandle safeHandle, System.Byte[] buf, System.Int32 offset, System.Int32 count) [0x0002d] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.IO.FileStream.ReadInternal (System.Byte[] dest, System.Int32 offset, System.Int32 count) [0x00026] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.IO.FileStream.Read (System.Byte[] array, System.Int32 offset, System.Int32 count) [0x000a1] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.IO.StreamReader.ReadBuffer () [0x000b3] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.IO.StreamReader.Read () [0x00028] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.TermInfoDriver.GetCursorPosition () [0x00048] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.TermInfoDriver.ReadUntilConditionInternal (System.Boolean haltOnNewLine) [0x0000e] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.TermInfoDriver.ReadLine () [0x00000] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.ConsoleDriver.ReadLine () [0x00000] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.Console.ReadLine () [0x00013] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_delegate_end_invoke(object,intptr)
+  at (wrapper delegate-end-invoke) System.Func`1[System.String].end_invoke_TResult__this___IAsyncResult(System.IAsyncResult)
+  at Server.Misc.ServerConsole.<PollCommands>m__2 (System.IAsyncResult r) [0x00000] in <d526b68b6d3f4049b95f385daefcbf72>:0 
+  at (wrapper managed-to-native) System.Runtime.Remoting.Messaging.AsyncResult.Invoke(System.Runtime.Remoting.Messaging.AsyncResult)
+  at System.Runtime.Remoting.Messaging.AsyncResult.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem () [0x00000] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.Threading.ThreadPoolWorkQueue.Dispatch () [0x00074] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+  at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback () [0x00000] in <dcc15b5cba87438494d2f7f81c82514a>:0 
+
+Clients:
+- Count: 0

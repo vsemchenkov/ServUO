@@ -1,4 +1,3 @@
-
 namespace Server.Items
 {
     /// <summary>
@@ -13,10 +12,6 @@ namespace Server.Items
     /// </summary>
     public class InfectiousStrike : WeaponAbility
     {
-        public InfectiousStrike()
-        {
-        }
-
         public override int BaseMana => 20;
 
         public override bool RequiresSecondarySkill(Mobile from)
@@ -31,7 +26,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker))
+            if (!Validate(attacker))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -49,37 +44,37 @@ namespace Server.Items
                 return;
             }
 
-            if (!this.CheckMana(attacker, true))
+            if (!CheckMana(attacker, true))
                 return;
 
             // Skill Masteries
-            int noChargeChance = Server.Spells.SkillMasteries.MasteryInfo.NonPoisonConsumeChance(attacker);
+            int noChargeChance = Spells.SkillMasteries.MasteryInfo.NonPoisonConsumeChance(attacker);
 
             if (noChargeChance == 0 || noChargeChance < Utility.Random(100))
                 --weapon.PoisonCharges;
             else
                 attacker.SendLocalizedMessage(1156095); // Your mastery of poisoning allows you to use your poison charge without consuming it.
 
-            // Infectious strike special move now uses poisoning skill to help determine potency
+            // Infectious strike special move now uses poisoning skill to help determine potency 
             int maxLevel = 0;
             if (p == Poison.DarkGlow)
             {
-            	maxLevel = 10 + (attacker.Skills[SkillName.Poisoning].Fixed / 333);
-            	if (maxLevel > 13)
-            		maxLevel = 13;
+                maxLevel = 10 + (attacker.Skills[SkillName.Poisoning].Fixed / 333);
+                if (maxLevel > 13)
+                    maxLevel = 13;
             }
             else if (p == Poison.Parasitic)
             {
-            	maxLevel = 14 + (attacker.Skills[SkillName.Poisoning].Fixed / 250);
-            	if (maxLevel > 18)
-            		maxLevel = 18;
+                maxLevel = 14 + (attacker.Skills[SkillName.Poisoning].Fixed / 250);
+                if (maxLevel > 18)
+                    maxLevel = 18;
             }
-			else
-			{
-				maxLevel = attacker.Skills[SkillName.Poisoning].Fixed / 200;
-				if (maxLevel > 5)
-					maxLevel = 5;
-			}
+            else
+            {
+                maxLevel = attacker.Skills[SkillName.Poisoning].Fixed / 200;
+                if (maxLevel > 5)
+                    maxLevel = 5;
+            }
 
             if (maxLevel < 0)
                 maxLevel = 0;
@@ -88,19 +83,19 @@ namespace Server.Items
 
             if ((attacker.Skills[SkillName.Poisoning].Value / 100.0) > Utility.RandomDouble())
             {
-            	if (p !=null && p.Level + 1 <= maxLevel)
-            	{
-            		int level = p.Level + 1;
-                	Poison newPoison = Poison.GetPoison(level);
+                if (p != null && p.Level + 1 <= maxLevel)
+                {
+                    int level = p.Level + 1;
+                    Poison newPoison = Poison.GetPoison(level);
 
-	                if (newPoison != null)
-	                {
-                 	   p = newPoison;
+                    if (newPoison != null)
+                    {
+                        p = newPoison;
 
- 	                   attacker.SendLocalizedMessage(1060080); // Your precise strike has increased the level of the poison by 1
- 	                   defender.SendLocalizedMessage(1060081); // The poison seems extra effective!
-	                }
-            	}
+                        attacker.SendLocalizedMessage(1060080); // Your precise strike has increased the level of the poison by 1
+                        defender.SendLocalizedMessage(1060081); // The poison seems extra effective!
+                    }
+                }
             }
 
             defender.PlaySound(0xDD);
@@ -108,7 +103,7 @@ namespace Server.Items
 
             if (defender.ApplyPoison(attacker, p) != ApplyPoisonResult.Immune)
             {
-                attacker.SendLocalizedMessage(1008096, true, defender.Name); // You have poisoned your target :
+                attacker.SendLocalizedMessage(1008096, true, defender.Name); // You have poisoned your target : 
                 defender.SendLocalizedMessage(1008097, false, attacker.Name); //  : poisoned you!
             }
         }

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -55,19 +54,19 @@ namespace Server.Mobiles
         public override int GetHurtSound() { return 0x5FF; }
         public override int GetDeathSound() { return 0x5FE; }
 
-        public override bool CanRummageCorpses { get { return true; } }
-        public override int TreasureMapLevel { get { return 1; } }
-        public override int Meat { get { return 1; } }
+        public override bool CanRummageCorpses => true;
+        public override int TreasureMapLevel => 1;
+        public override int Meat => 1;
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Meager);
+            AddLoot(LootPack.Meager);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

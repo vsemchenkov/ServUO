@@ -1,13 +1,10 @@
 using System;
 
-using Server;
-using Server.Events.Halloween;
-
 namespace Server.Items
 {
     public class JackInTheBox : Item
     {
-        public override int LabelNumber { get { return 1157655; } } // Jack in the Box
+        public override int LabelNumber => 1157655;  // Jack in the Box
 
         private DateTime _LastUse;
 
@@ -51,7 +48,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

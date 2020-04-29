@@ -1,14 +1,12 @@
 #region References
-using System;
-using System.Collections;
-
 using Server.Mobiles;
+using System;
 #endregion
 
 namespace Server
 {
-	public static class SpeedInfo
-	{
+    public static class SpeedInfo
+    {
         public static readonly double MinDelay = 0.1;
         public static readonly double MaxDelay = 0.5;
         public static readonly double MinDelayWild = 0.4;
@@ -16,11 +14,11 @@ namespace Server
 
         public static bool GetSpeeds(BaseCreature bc, ref double activeSpeed, ref double passiveSpeed)
         {
-            var maxDex = GetMaxMovementDex(bc);
-            var dex = Math.Min(maxDex, Math.Max(25, bc.Dex));
+            int maxDex = GetMaxMovementDex(bc);
+            int dex = Math.Min(maxDex, Math.Max(25, bc.Dex));
 
-            var min = bc.IsMonster || InActivePVPCombat(bc) ? MinDelayWild : MinDelay;
-            var max = bc.IsMonster || InActivePVPCombat(bc) ? MaxDelayWild : MaxDelay;
+            double min = bc.IsMonster || InActivePVPCombat(bc) ? MinDelayWild : MinDelay;
+            double max = bc.IsMonster || InActivePVPCombat(bc) ? MaxDelayWild : MaxDelay;
 
             if (bc.IsParagon)
             {
@@ -52,11 +50,11 @@ namespace Server
 
         public static double TransformMoveDelay(BaseCreature bc, double delay)
         {
-            var adjusted = bc.IsMonster ? MaxDelayWild : MaxDelay;
+            double adjusted = bc.IsMonster ? MaxDelayWild : MaxDelay;
 
             if (!bc.IsDeadPet && (bc.ReduceSpeedWithDamage || bc.IsSubdued))
             {
-                var offset = (double)bc.Stam / (double)bc.StamMax;
+                double offset = bc.Stam / (double)bc.StamMax;
 
                 if (offset < 1.0)
                 {
@@ -71,5 +69,5 @@ namespace Server
 
             return delay;
         }
-	}
+    }
 }

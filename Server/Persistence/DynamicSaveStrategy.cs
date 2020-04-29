@@ -1,9 +1,8 @@
+using Server.Guilds;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Server.Guilds;
 
 namespace Server
 {
@@ -27,13 +26,7 @@ namespace Server
             _dataThreadWriters = new BlockingCollection<QueuedMemoryWriter>();
         }
 
-        public override string Name
-        {
-            get
-            {
-                return "Dynamic";
-            }
-        }
+        public override string Name => "Dynamic";
         public override void Save(SaveMetrics metrics, bool permitBackgroundWrite)
         {
             _metrics = metrics;

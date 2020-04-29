@@ -1,5 +1,5 @@
-using System;
 using Server.Mobiles;
+using System;
 
 namespace Server.Items
 {
@@ -8,15 +8,11 @@ namespace Server.Items
     /// </summary>
     public class NerveStrike : WeaponAbility
     {
-        public NerveStrike()
-        {
-        }
-
         public override int BaseMana => 30;
 
         public override bool CheckSkills(Mobile from)
         {
-            if (this.GetSkill(from, SkillName.Bushido) < 50.0)
+            if (GetSkill(from, SkillName.Bushido) < 50.0)
             {
                 from.SendLocalizedMessage(1070768, "50"); // You need ~1_SKILL_REQUIREMENT~ Bushido skill to perform that attack!
                 return false;
@@ -32,7 +28,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -48,7 +44,7 @@ namespace Server.Items
                 doEffects = true;
             }
 
-            if(attacker is BaseCreature)
+            if (attacker is BaseCreature)
                 PetTrainingHelper.OnWeaponAbilityUsed((BaseCreature)attacker, SkillName.Bushido);
 
             if (!immune)

@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
-using Server.ContextMenus;
 using Server.Engines.PartySystem;
 using Server.Items;
+using Server.Mobiles;
+using System;
 using System.Linq;
 
 namespace Server.Engines.Shadowguard
@@ -26,10 +24,10 @@ namespace Server.Engines.Shadowguard
         public ShadowguardController Controller { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool InUse { get { return Encounter != null; } }
+        public bool InUse => Encounter != null;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool IsRoof { get { return Index >= 13; } }
+        public bool IsRoof => Index >= 13;
 
         public override string ToString()
         {
@@ -95,7 +93,7 @@ namespace Server.Engines.Shadowguard
 
         public void ClearRegion()
         {
-            foreach (Item item in this.Region.GetEnumeratedItems())
+            foreach (Item item in Region.GetEnumeratedItems())
             {
                 Corpse corpse = item as Corpse;
 
@@ -114,7 +112,7 @@ namespace Server.Engines.Shadowguard
                     item.Delete();
             }
 
-            foreach (Mobile m in this.Region.GetEnumeratedMobiles())
+            foreach (Mobile m in Region.GetEnumeratedMobiles())
             {
                 if (m is BaseCreature && !(((BaseCreature)m).GetMaster() is PlayerMobile))
                     m.Delete();
@@ -135,7 +133,7 @@ namespace Server.Engines.Shadowguard
             return false;
         }
 
-        private Type[] DeleteList =
+        private readonly Type[] DeleteList =
         {
             typeof(ShadowguardCanal)
         };

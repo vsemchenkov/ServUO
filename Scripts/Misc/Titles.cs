@@ -1,10 +1,9 @@
-using System;
-using System.Text;
-using Server.Engines.CannedEvil;
+using Server.Accounting;
 using Server.Items;
 using Server.Mobiles;
+using System;
 using System.Collections.Generic;
-using Server.Accounting;
+using System.Text;
 
 namespace Server.Misc
 {
@@ -15,7 +14,7 @@ namespace Server.Misc
 
         public static void AwardFame(Mobile m, int offset, bool message)
         {
-            var fame = m.Fame;
+            int fame = m.Fame;
 
             if (offset > 0)
             {
@@ -71,7 +70,7 @@ namespace Server.Misc
 
         public static void AwardKarma(Mobile m, int offset, bool message)
         {
-            var karma = m.Karma;
+            int karma = m.Karma;
 
             if (m.Talisman is BaseTalisman)
             {
@@ -118,8 +117,6 @@ namespace Server.Misc
                 offset = MaxKarma - karma;
             else if ((karma + offset) < MinKarma)
                 offset = MinKarma - karma;
-
-            bool wasPositiveKarma = (karma >= 0);
 
             m.Karma += offset;
 
@@ -209,8 +206,6 @@ namespace Server.Misc
         {
             StringBuilder title = new StringBuilder();
 
-            bool showSkillTitle = beheld.ShowFameTitle && ((beholder == beheld) || (beheld.Fame >= 5000));
-
             if (beheld.ShowFameTitle && beheld is PlayerMobile && ((PlayerMobile)beheld).FameKarmaTitle != null)
             {
                 title.AppendFormat(((PlayerMobile)beheld).FameKarmaTitle, beheld.Name, beheld.Female ? "Lady" : "Lord");
@@ -224,12 +219,9 @@ namespace Server.Misc
                 title.Append(beheld.Name);
             }
 
-            if (beheld is PlayerMobile && ((PlayerMobile)beheld).DisplayChampionTitle)
+            if (beheld is PlayerMobile && (((PlayerMobile)beheld).CurrentChampTitle != null) && ((PlayerMobile)beheld).DisplayChampionTitle)
             {
-                PlayerMobile.ChampionTitleInfo info = ((PlayerMobile)beheld).ChampionTitles;
-
-                if (((PlayerMobile)beheld).CurrentChampTitle != null)
-                    title.AppendFormat(((PlayerMobile)beheld).CurrentChampTitle);
+                title.AppendFormat(((PlayerMobile)beheld).CurrentChampTitle);
             }
 
             string customTitle = beheld.Title;
@@ -278,8 +270,6 @@ namespace Server.Misc
 
         private static Skill GetHighestSkill(Mobile m)
         {
-            Skills skills = m.Skills;
-
             Skill highest = null;
 
             for (int i = 0; i < m.Skills.Length; ++i)
@@ -288,7 +278,7 @@ namespace Server.Misc
 
                 if (highest == null || check.BaseFixedPoint > highest.BaseFixedPoint)
                     highest = check;
-                else if (highest != null && highest.Lock != SkillLock.Up && check.Lock == SkillLock.Up && check.BaseFixedPoint == highest.BaseFixedPoint)
+                else if (highest.Lock != SkillLock.Up && check.Lock == SkillLock.Up && check.BaseFixedPoint == highest.BaseFixedPoint)
                     highest = check;
             }
 
@@ -316,7 +306,7 @@ namespace Server.Misc
 
         private static int GetTableType(Skill skill)
         {
-            switch ( skill.SkillName )
+            switch (skill.SkillName)
             {
                 default:
                     return 0;
@@ -454,8 +444,8 @@ namespace Server.Misc
 
         public FameEntry(int fame, KarmaEntry[] karma)
         {
-            this.m_Fame = fame;
-            this.m_Karma = karma;
+            m_Fame = fame;
+            m_Karma = karma;
         }
     }
 
@@ -466,8 +456,8 @@ namespace Server.Misc
 
         public KarmaEntry(int karma, string title)
         {
-            this.m_Karma = karma;
-            this.m_Title = title;
+            m_Karma = karma;
+            m_Title = title;
         }
     }
 

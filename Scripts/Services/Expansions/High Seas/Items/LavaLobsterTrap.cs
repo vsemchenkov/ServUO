@@ -1,10 +1,4 @@
-﻿using Server;
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
-using Server.Targeting;
-
-namespace Server.Items
+﻿namespace Server.Items
 {
     public class LavaLobsterTrap : LobsterTrap
     {
@@ -13,7 +7,7 @@ namespace Server.Items
         {
         }
 
-        public override int[] UseableTiles { get { return Server.Engines.Harvest.Fishing.LavaTiles; } }
+        public override int[] UseableTiles => Server.Engines.Harvest.Fishing.LavaTiles;
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
@@ -25,7 +19,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

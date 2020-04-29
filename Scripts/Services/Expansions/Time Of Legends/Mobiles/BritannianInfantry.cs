@@ -1,14 +1,12 @@
-using System;
-using Server.Items;
 using Server.Engines.MyrmidexInvasion;
-using Server.Misc;
+using Server.Items;
 
 namespace Server.Mobiles
 {
     [CorpseName("a human corpse")]
     public class BritannianInfantry : BaseCreature
     {
-        public override double HealChance { get { return 1.0; } }
+        public override double HealChance => 1.0;
 
         [Constructable]
         public BritannianInfantry()
@@ -79,9 +77,9 @@ namespace Server.Mobiles
             return base.IsEnemy(m);
         }
 
-        public override bool AlwaysAttackable { get { return this.Region.IsPartOf<BattleRegion>(); } }
-        public override bool ShowFameTitle { get { return false; } }
-        public override bool ClickTitle { get { return false; } }
+        public override bool AlwaysAttackable => Region.IsPartOf<BattleRegion>();
+        public override bool ShowFameTitle => false;
+        public override bool ClickTitle => false;
 
         public override void GenerateLoot()
         {

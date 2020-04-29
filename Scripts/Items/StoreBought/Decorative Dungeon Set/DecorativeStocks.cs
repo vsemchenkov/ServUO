@@ -1,11 +1,9 @@
-using System;
-
 namespace Server.Items
 {
     [Flipable(0xA4ED, 0xA4EE)]
     public class DecorativeStocks : Item
     {
-        public override int LabelNumber { get { return 1159472; } } // decorative stocks
+        public override int LabelNumber => 1159472;  // decorative stocks
 
         [Constructable]
         public DecorativeStocks()
@@ -23,7 +21,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

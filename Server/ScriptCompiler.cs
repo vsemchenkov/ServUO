@@ -240,9 +240,9 @@ namespace Server
 					parms.CompilerOptions = String.Format( "{0} /nowarn:169,219,414 /recurse:Scripts/*.cs", parms.CompilerOptions );
                     files = new string[0];
                 }
-                
+
 				var results = provider.CompileAssemblyFromFile(parms, files);
-				
+
 				m_AdditionalReferences.Add(path);
 
 				Display(results, startTime);
@@ -253,7 +253,7 @@ namespace Server
 					return false;
 				}
 
-				if (results.Errors.Count > 0 && Core.Unix) 
+				if (results.Errors.Count > 0 && Core.Unix)
 				{
 					foreach( CompilerError err in results.Errors ) {
 						if ( !err.IsWarning ) {
@@ -680,9 +680,9 @@ namespace Server
 		private readonly TypeTable m_Names;
 		private readonly TypeTable m_FullNames;
 
-		public Type[] Types => m_Types; 
-		public TypeTable Names => m_Names; 
-		public TypeTable FullNames => m_FullNames; 
+		public Type[] Types => m_Types;
+		public TypeTable Names => m_Names;
+		public TypeTable FullNames => m_FullNames;
 
 		public Type GetTypeByName(string name, bool ignoreCase)
 		{
@@ -721,7 +721,7 @@ namespace Server
 			foreach (var g in m_Types.ToLookup(t => t.Name))
 			{
 				m_Names.Add(g.Key, g);
-				
+
 				foreach (var type in g)
 				{
 					m_FullNames.Add(type.FullName, type);
@@ -870,7 +870,7 @@ namespace Server
 			{
                 return;
 			}
-			
+
 			if (!m_Sensitive.TryGetValue(key, out var sensitive) || sensitive == null)
 			{
 				m_Sensitive[key] = new List<Type>(types);

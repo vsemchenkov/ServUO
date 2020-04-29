@@ -1,14 +1,11 @@
-using System;
-using Server;
-
 namespace Server.Items
 {
     public class PowderCharge : Item, ICommodity
     {
-        public override int LabelNumber { get { return 1116160; } } // powder charge
+        public override int LabelNumber => 1116160;  // powder charge
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         [Constructable]
         public PowderCharge()
@@ -32,7 +29,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -44,10 +41,10 @@ namespace Server.Items
 
     public class LightPowderCharge : Item, ICommodity
     {
-        public override int LabelNumber { get { return 1116159; } }
+        public override int LabelNumber => 1116159;
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         [Constructable]
         public LightPowderCharge() : this(1)
@@ -68,7 +65,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -82,10 +79,10 @@ namespace Server.Items
 
     public class HeavyPowderCharge : Item, ICommodity
     {
-        public override int LabelNumber { get { return 1116160; } }
+        public override int LabelNumber => 1116160;
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         [Constructable]
         public HeavyPowderCharge() : this(1)
@@ -106,7 +103,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

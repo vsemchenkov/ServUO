@@ -1,11 +1,8 @@
-﻿using Server;
-using System;
-
-namespace Server.Items
+﻿namespace Server.Items
 {
     public class SmugglersCache : Container
     {
-        public override int LabelNumber { get { return 1150042; } }
+        public override int LabelNumber => 1150042;
 
         public SmugglersCache()
             : base(Utility.RandomList(3644, 3645, 3646, 3647, 3648, 3649, 3650, 3651))
@@ -47,19 +44,19 @@ namespace Server.Items
 
         public SmugglersCache(Serial serial)
             : base(serial)
-		{
-		}
+        {
+        }
 
-		public override void Deserialize( GenericReader reader )
-		{
-			base.Deserialize( reader );
-			int version = reader.ReadInt();
-		}
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+        }
 
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
-			writer.Write( (int)0 );
-		}
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
     }
 }

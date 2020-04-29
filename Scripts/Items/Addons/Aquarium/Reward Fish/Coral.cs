@@ -1,9 +1,7 @@
-using System;
-
 namespace Server.Items
 {
     public class Coral : BaseFish
-    { 
+    {
         [Constructable]
         public Coral()
             : base(Utility.RandomList(0x3AF9, 0x3AFA, 0x3AFB))
@@ -12,21 +10,15 @@ namespace Server.Items
 
         public Coral(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074588;
-            }
-        }// Coral
+        public override int LabelNumber => 1074588;// Coral
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

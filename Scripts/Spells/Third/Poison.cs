@@ -1,4 +1,3 @@
-using System;
 using Server.Targeting;
 
 namespace Server.Spells.Third
@@ -11,13 +10,7 @@ namespace Server.Spells.Third
             9051,
             Reagent.Nightshade);
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Third;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Third;
 
         public PoisonSpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
@@ -46,7 +39,7 @@ namespace Server.Spells.Third
 
                 m.Paralyzed = false;
 
-                if (CheckResisted(m) || Server.Spells.Mysticism.StoneFormSpell.CheckImmunity(m))
+                if (CheckResisted(m) || Mysticism.StoneFormSpell.CheckImmunity(m))
                 {
                     m.SendLocalizedMessage(501783); // You feel yourself resisting magical energy.
                 }

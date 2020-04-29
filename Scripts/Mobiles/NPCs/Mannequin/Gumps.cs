@@ -1,8 +1,8 @@
-using System;
 using Server.Mobiles;
-using System.Linq;
-using System.Collections.Generic;
 using Server.Network;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Gumps
 {
@@ -285,7 +285,7 @@ namespace Server.Gumps
             if (list == null)
                 return 0;
 
-            var l = list.FirstOrDefault();
+            ItemPropDefinition l = list.FirstOrDefault();
 
             double v1 = 0;
             double v2 = 0;

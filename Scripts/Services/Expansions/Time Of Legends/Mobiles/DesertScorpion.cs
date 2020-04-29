@@ -1,7 +1,3 @@
-using System;
-using Server;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a desert scorpion corpse")]
@@ -46,10 +42,10 @@ namespace Server.Mobiles
             AddLoot(LootPack.FilthyRich, 1);
         }
 
-        public override Poison HitPoison { get { return Poison.Lethal; } }
-        public override Poison PoisonImmune { get { return Poison.Lethal; } }
-        public override int Meat { get { return 3; } }
-        public override int TreasureMapLevel { get { return 1; } }
+        public override Poison HitPoison => Poison.Lethal;
+        public override Poison PoisonImmune => Poison.Lethal;
+        public override int Meat => 3;
+        public override int TreasureMapLevel => 1;
 
         public DesertScorpion(Serial serial)
             : base(serial)
@@ -68,5 +64,5 @@ namespace Server.Mobiles
             int version = reader.ReadInt();
         }
     }
-	
+
 }

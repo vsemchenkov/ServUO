@@ -1,11 +1,11 @@
+using Server.ContextMenus;
+using Server.Engines.Auction;
+using Server.Engines.VendorSearching;
+using Server.Gumps;
+using Server.Mobiles;
+using Server.Multis;
 using System;
 using System.Collections.Generic;
-using Server.Engines.VendorSearching;
-using Server.Mobiles;
-using Server.ContextMenus;
-using Server.Multis;
-using Server.Gumps;
-using Server.Engines.Auction;
 
 namespace Server.Items
 {
@@ -35,7 +35,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime DeleteTime { get; set; }
 
-        public int TimeRemaining { get { return DeleteTime <= DateTime.UtcNow ? 0 : (int)(DeleteTime - DateTime.UtcNow).TotalMinutes; } }
+        public int TimeRemaining => DeleteTime <= DateTime.UtcNow ? 0 : (int)(DeleteTime - DateTime.UtcNow).TotalMinutes;
 
         public VendorSearchMap(Item item, bool auction)
             : base(item.Map)
@@ -57,14 +57,14 @@ namespace Server.Items
             {
                 Vendor = item.RootParentEntity as PlayerVendor;
                 p = Vendor.Location;
-            }            
+            }
 
             Width = 300;
             Height = 300;
-            var size = item.Map == Map.Tokuno ? 300 : item.Map == Map.TerMur ? 200 : 600;
+            int size = item.Map == Map.Tokuno ? 300 : item.Map == Map.TerMur ? 200 : 600;
 
             Bounds = new Rectangle2D(p.X - size / 2, p.Y - size / 2, size, size);
-            AddWorldPin(p.X, p.Y);            
+            AddWorldPin(p.X, p.Y);
 
             DeleteTime = DateTime.UtcNow + TimeSpan.FromMinutes(DeleteDelayMinutes);
             Timer.DelayCall(TimeSpan.FromMinutes(DeleteDelayMinutes), Delete);
@@ -110,7 +110,7 @@ namespace Server.Items
                     }
 
                     Shop = (SearchItem.LabelNumber != 0) ? string.Format("#{0}", SearchItem.LabelNumber) : SearchItem.Name;
-                }                
+                }
             }
             else
             {
@@ -233,7 +233,7 @@ namespace Server.Items
             {
                 if (AuctionSafe != null)
                 {
-                    h = BaseHouse.FindHouseAt(AuctionSafe);                    
+                    h = BaseHouse.FindHouseAt(AuctionSafe);
                 }
             }
             else
@@ -391,13 +391,13 @@ namespace Server.Items
 
         public VendorSearchMap(Serial serial)
             : base(serial)
-		{
-		}
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

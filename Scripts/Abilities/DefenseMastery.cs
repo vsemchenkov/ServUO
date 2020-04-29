@@ -9,9 +9,6 @@ namespace Server.Items
     public class DefenseMastery : WeaponAbility
     {
         private static readonly Hashtable m_Table = new Hashtable();
-        public DefenseMastery()
-        {
-        }
 
         public override int BaseMana => 20;
 
@@ -47,7 +44,7 @@ namespace Server.Items
             DefenseMasteryInfo info = m_Table[attacker] as DefenseMasteryInfo;
 
             if (info != null)
-                EndDefense((object)info);
+                EndDefense(info);
 
             ResistanceMod mod = new ResistanceMod(ResistanceType.Physical, 50 + modifier);
             attacker.AddResistanceMod(mod);

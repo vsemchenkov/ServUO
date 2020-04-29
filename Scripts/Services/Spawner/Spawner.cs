@@ -1,14 +1,14 @@
+using Server.Commands;
+using Server.ContextMenus;
+using Server.Gumps;
+using Server.Items;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Linq;
-using Server.Commands;
-using Server.ContextMenus;
-using Server.Items;
 using CPA = Server.CommandPropertyAttribute;
-using Server.Gumps;
 
 namespace Server.Mobiles
 {
@@ -59,7 +59,7 @@ namespace Server.Mobiles
         {
             List<SpawnObject> objects = new List<SpawnObject>();
 
-            foreach (var name in spawnNames)
+            foreach (string name in spawnNames)
             {
                 objects.Add(new SpawnObject(name));
             }
@@ -78,10 +78,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool IsVirtualItem { get { return true; } }
+        public override bool IsVirtualItem => true;
 
-        public bool IsFull { get { return (SpawnCount >= m_MaxCount); } }
-        public bool IsEmpty { get { return (SpawnCount == 0); } }
+        public bool IsFull => (SpawnCount >= m_MaxCount);
+        public bool IsEmpty => (SpawnCount == 0);
 
         public List<SpawnObject> SpawnObjects
         {
@@ -109,7 +109,7 @@ namespace Server.Mobiles
         }
 
         [CommandProperty(AccessLevel.Spawner)]
-        public virtual int SpawnObjectCount {  get{ return m_SpawnObjects.Count; } }
+        public virtual int SpawnObjectCount => m_SpawnObjects.Count;
 
         [CommandProperty(AccessLevel.Spawner)]
         public WayPoint WayPoint { get { return m_WayPoint; } set { m_WayPoint = value; } }
@@ -139,38 +139,38 @@ namespace Server.Mobiles
         public int WalkingRange { get { return m_WalkingRange; } set { m_WalkingRange = value; InvalidateProperties(); } }
 
         [CommandProperty(AccessLevel.Spawner)]
-        public int Team { get { return m_Team;  } set { m_Team = value; InvalidateProperties(); } }
+        public int Team { get { return m_Team; } set { m_Team = value; InvalidateProperties(); } }
 
         [CommandProperty(AccessLevel.Spawner)]
-        public TimeSpan MinDelay 
-        { 
-            get { return m_MinDelay; } 
-            set 
+        public TimeSpan MinDelay
+        {
+            get { return m_MinDelay; }
+            set
             {
-                var old = m_MinDelay;
+                TimeSpan old = m_MinDelay;
 
                 m_MinDelay = value;
-                
-                if(old != m_MinDelay && m_Running)
-                    DoTimer(); 
-                
+
+                if (old != m_MinDelay && m_Running)
+                    DoTimer();
+
                 InvalidateProperties();
-            } 
+            }
         }
 
         [CommandProperty(AccessLevel.Spawner)]
         public TimeSpan MaxDelay
-        { 
-            get { return m_MaxDelay; } 
-            set 
+        {
+            get { return m_MaxDelay; }
+            set
             {
-                var old = m_MaxDelay;
+                TimeSpan old = m_MaxDelay;
 
                 m_MaxDelay = value;
 
                 if (old != m_MaxDelay && m_Running)
-                    DoTimer(); 
-                
+                    DoTimer();
+
                 InvalidateProperties();
             }
         }
@@ -197,9 +197,9 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.Spawner)]
         public bool Group { get { return m_Group; } set { m_Group = value; InvalidateProperties(); } }
 
-        public override string DefaultName { get { return "Spawner"; } }
-        public Point3D HomeLocation { get { return Location; } }
-        bool ISpawner.UnlinkOnTaming { get { return true; } }
+        public override string DefaultName => "Spawner";
+        public Point3D HomeLocation => Location;
+        bool ISpawner.UnlinkOnTaming => true;
 
         [CommandProperty(AccessLevel.Spawner)]
         public int SpawnCount
@@ -208,7 +208,7 @@ namespace Server.Mobiles
             {
                 int count = 0;
 
-                foreach (var so in m_SpawnObjects)
+                foreach (SpawnObject so in m_SpawnObjects)
                 {
                     count += GetSpawnCount(so);
                 }
@@ -304,7 +304,7 @@ namespace Server.Mobiles
 
             for (int i = 0; i < m_SpawnObjects.Count; ++i)
             {
-                foreach (var e in m_SpawnObjects[i].SpawnedObjects)
+                foreach (ISpawnable e in m_SpawnObjects[i].SpawnedObjects)
                 {
                     bool remove = false;
 
@@ -344,7 +344,7 @@ namespace Server.Mobiles
 
             if (removed)
             {
-                foreach (var spawnable in toRemove)
+                foreach (ISpawnable spawnable in toRemove)
                 {
                     RemoveSpawn(spawnable);
                 }
@@ -360,9 +360,9 @@ namespace Server.Mobiles
             if (m_SpawnObjects == null || m_SpawnObjects.Count == 0)
                 yield break;
 
-            foreach (var so in m_SpawnObjects)
+            foreach (SpawnObject so in m_SpawnObjects)
             {
-                foreach (var spawnable in so.SpawnedObjects)
+                foreach (ISpawnable spawnable in so.SpawnedObjects)
                 {
                     yield return spawnable;
                 }
@@ -381,7 +381,7 @@ namespace Server.Mobiles
 
         public bool AddSpawnObject(SpawnObject so)
         {
-            if(m_SpawnObjects.FirstOrDefault(s => ParseType(s.SpawnName.ToLower()) == ParseType(so.SpawnName.ToLower())) == null
+            if (m_SpawnObjects.FirstOrDefault(s => ParseType(s.SpawnName.ToLower()) == ParseType(so.SpawnName.ToLower())) == null
                 && m_SpawnObjects.Count < SpawnerGump.MaxEntries)
             {
                 SpawnObjects.Add(so);
@@ -441,7 +441,7 @@ namespace Server.Mobiles
         {
             if (index >= 0 && index < m_SpawnObjects.Count)
             {
-                var so = m_SpawnObjects[index];
+                SpawnObject so = m_SpawnObjects[index];
 
                 if (m_Group)
                 {
@@ -586,11 +586,11 @@ namespace Server.Mobiles
 
             List<SpawnObject> objects = null;
 
-            foreach (var so in m_SpawnObjects)
+            foreach (SpawnObject so in m_SpawnObjects)
             {
                 if (so.CurrentCount < so.MaxCount)
                 {
-                    if(objects == null)
+                    if (objects == null)
                         objects = new List<SpawnObject>();
 
                     objects.Add(so);
@@ -640,7 +640,7 @@ namespace Server.Mobiles
 
             Dictionary<string, int> counts = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
-            foreach (var entry in m_SpawnObjects)
+            foreach (SpawnObject entry in m_SpawnObjects)
             {
                 string name = ParseType(entry.SpawnName);
                 Type type = ScriptCompiler.FindTypeByName(name);
@@ -651,7 +651,7 @@ namespace Server.Mobiles
                     counts[type.Name] = 0;
             }
 
-            foreach (var spawned in GetSpawn())
+            foreach (ISpawnable spawned in GetSpawn())
             {
                 string name = spawned.GetType().Name;
 
@@ -683,7 +683,7 @@ namespace Server.Mobiles
         {
             if (index >= 0 && index < m_SpawnObjects.Count)
             {
-                var so = m_SpawnObjects[index];
+                SpawnObject so = m_SpawnObjects[index];
 
                 if (m_Group)
                 {
@@ -717,12 +717,12 @@ namespace Server.Mobiles
 
             List<ISpawnable> toRemove = new List<ISpawnable>();
 
-            foreach (var spawn in GetSpawn())
+            foreach (ISpawnable spawn in GetSpawn())
             {
                 toRemove.Add(spawn);
             }
 
-            foreach (var spawn in toRemove)
+            foreach (ISpawnable spawn in toRemove)
                 spawn.Delete();
 
             ColUtility.Free(toRemove);
@@ -733,7 +733,7 @@ namespace Server.Mobiles
         {
             Defrag();
 
-            foreach (var spawn in GetSpawn())
+            foreach (ISpawnable spawn in GetSpawn())
             {
                 spawn.MoveToWorld(Location, Map);
             }
@@ -753,7 +753,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)7); // version
+            writer.Write(7); // version
 
             writer.Write(GuardImmune);
 
@@ -788,7 +788,7 @@ namespace Server.Mobiles
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 7:
                     {
@@ -945,7 +945,7 @@ namespace Server.Mobiles
 
             if (spawnObjects != null)
             {
-                foreach (var obj in spawnObjects)
+                foreach (SpawnObject obj in spawnObjects)
                 {
                     max += obj.MaxCount;
                 }

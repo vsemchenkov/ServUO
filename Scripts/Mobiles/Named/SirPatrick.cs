@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -51,17 +49,17 @@ namespace Server.Mobiles
         {
         }
 
-		public override bool CanBeParagon { get { return false; } }
+        public override bool CanBeParagon => false;
 
-        public override void OnDeath( Container c )
+        public override void OnDeath(Container c)
         {
-            base.OnDeath( c );
+            base.OnDeath(c);
 
-            if ( Utility.RandomDouble() < 0.15 )
-            c.DropItem( new DisintegratingThesisNotes() );
+            if (Utility.RandomDouble() < 0.15)
+                c.DropItem(new DisintegratingThesisNotes());
 
-            if ( Utility.RandomDouble() < 0.05 )
-            c.DropItem( new AssassinChest() );
+            if (Utility.RandomDouble() < 0.05)
+                c.DropItem(new AssassinChest());
         }
 
         /*public override bool GivesMLMinorArtifact
@@ -80,7 +78,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

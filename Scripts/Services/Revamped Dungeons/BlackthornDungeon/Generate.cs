@@ -1,11 +1,5 @@
-using Server;
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
-using Server.Items;
-using Server.Gumps;
-using System.Linq;
 using Server.Commands;
+using Server.Items;
 
 namespace Server.Engines.Blackthorn
 {
@@ -87,14 +81,14 @@ namespace Server.Engines.Blackthorn
                 tele.MoveToWorld(new Point3D(1517, 1420, 12), map);
             }
 
-            foreach (var p in _BlockerList)
+            foreach (Point3D p in _BlockerList)
             {
-                var blocker = new Blocker();
+                Blocker blocker = new Blocker();
                 blocker.MoveToWorld(p, map);
             }
         }
 
-        private static Point3D[] _BlockerList =
+        private static readonly Point3D[] _BlockerList =
         {
             new Point3D(6435, 2425, -5),
             new Point3D(6435, 2424, -5),

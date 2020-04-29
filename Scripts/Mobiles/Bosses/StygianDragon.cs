@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-
 using Server.Items;
 using Server.Network;
 using Server.Spells;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -58,42 +57,30 @@ namespace Server.Mobiles
         public StygianDragon(Serial serial)
             : base(serial)
         {
-        }        
+        }
 
-        public override Type[] UniqueSAList
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] UniqueSAList => new[]
                 {
                     typeof(BurningAmber), typeof(DraconisWrath), typeof(DragonHideShield), typeof(FallenMysticsSpellbook),
                     typeof(LifeSyphon), typeof(GargishSignOfOrder), typeof(HumanSignOfOrder), typeof(VampiricEssence)
                 };
-            }
-        }
-        public override Type[] SharedSAList
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] SharedSAList => new[]
                 {
                     typeof(AxesOfFury), typeof(SummonersKilt), typeof(GiantSteps),
                     typeof(TokenOfHolyFavor)
                 };
-            }
-        }
 
-        public override bool AlwaysMurderer { get { return true; } }
-        public override bool Unprovokable { get { return false; } }
-        public override bool BardImmune { get { return false; } }
-        public override bool AutoDispel { get { return !Controlled; } }
-        public override int Meat { get { return 19; } }
-        public override int Hides { get { return 30; } }
-        public override HideType HideType { get { return HideType.Barbed; } }
-        public override int Scales { get { return 7; } }
-        public override ScaleType ScaleType { get { return (Body == 12 ? ScaleType.Yellow : ScaleType.Red); } }
-        public override int DragonBlood { get { return 48; } }
-        public override bool CanFlee { get { return false; } }
+        public override bool AlwaysMurderer => true;
+        public override bool Unprovokable => false;
+        public override bool BardImmune => false;
+        public override bool AutoDispel => !Controlled;
+        public override int Meat => 19;
+        public override int Hides => 30;
+        public override HideType HideType => HideType.Barbed;
+        public override int Scales => 7;
+        public override ScaleType ScaleType => (Body == 12 ? ScaleType.Yellow : ScaleType.Red);
+        public override int DragonBlood => 48;
+        public override bool CanFlee => false;
 
         public override void GenerateLoot()
         {
@@ -126,15 +113,15 @@ namespace Server.Mobiles
             base.OnDeath(c);
 
             c.DropItem(new StygianDragonHead());
-			
-			if ( Paragon.ChestChance > Utility.RandomDouble() )
-            	c.DropItem( new ParagonChest( Name, 5 ) );
+
+            if (Paragon.ChestChance > Utility.RandomDouble())
+                c.DropItem(new ParagonChest(Name, 5));
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -154,16 +141,16 @@ namespace Server.Mobiles
 
         public class CrimsonMeteorTimer : Timer
         {
-            private Mobile m_From;
-            private Map m_Map;
+            private readonly Mobile m_From;
+            private readonly Map m_Map;
             private int m_Count;
-            private int m_MaxCount;
+            private readonly int m_MaxCount;
             private bool m_DoneDamage;
             private Point3D m_LastTarget;
             private Rectangle2D m_ShowerArea;
-            private List<Mobile> m_ToDamage;
+            private readonly List<Mobile> m_ToDamage;
 
-            private int m_MinDamage, m_MaxDamage;
+            private readonly int m_MinDamage, m_MaxDamage;
 
             public CrimsonMeteorTimer(Mobile from, Point3D loc, int min, int max)
                 : base(TimeSpan.FromMilliseconds(250.0), TimeSpan.FromMilliseconds(250.0))
@@ -202,7 +189,7 @@ namespace Server.Mobiles
 
                 if (0.33 > Utility.RandomDouble())
                 {
-                    var field = new FireField(m_From, 25, Utility.RandomBool());
+                    FireField field = new FireField(m_From, 25, Utility.RandomBool());
                     field.MoveToWorld(m_LastTarget, m_Map);
                 }
 
@@ -260,7 +247,7 @@ namespace Server.Mobiles
         #region Fire Column
         public void DoFireColumn()
         {
-            var map = Map;
+            Map map = Map;
 
             if (map == null)
                 return;
@@ -286,7 +273,7 @@ namespace Server.Mobiles
             Point3D p = new Point3D(x, y, Z);
             SpellHelper.AdjustField(ref p, map, 16, false);
 
-            var fire = new FireField(this, Utility.RandomMinMax(25, 32), south);
+            FireField fire = new FireField(this, Utility.RandomMinMax(25, 32), south);
             fire.MoveToWorld(p, map);
 
             for (int i = 0; i < 7; i++)
@@ -305,9 +292,9 @@ namespace Server.Mobiles
         #region Fire Field
         public class FireField : Item
         {
-            private Mobile m_Owner;
-            private Timer m_Timer;
-            private DateTime m_Destroy;
+            private readonly Mobile m_Owner;
+            private readonly Timer m_Timer;
+            private readonly DateTime m_Destroy;
 
             [Constructable]
             public FireField(Mobile owner, int duration, bool south)
@@ -317,7 +304,7 @@ namespace Server.Mobiles
                 m_Destroy = DateTime.UtcNow + TimeSpan.FromSeconds(duration);
 
                 m_Owner = owner;
-                m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), new TimerCallback(OnTick));
+                m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), OnTick);
             }
 
             private static int GetItemID(bool south)
@@ -360,7 +347,7 @@ namespace Server.Mobiles
 
                     eable.Free();
 
-                    foreach (var mob in list)
+                    foreach (Mobile mob in list)
                     {
                         DealDamage(mob);
                     }
@@ -415,8 +402,8 @@ namespace Server.Mobiles
 
         private class StygianFireballTimer : Timer
         {
-            private StygianDragon m_Dragon;
-            private Mobile m_Combatant;
+            private readonly StygianDragon m_Dragon;
+            private readonly Mobile m_Combatant;
             private int m_Ticks;
 
             public StygianFireballTimer(StygianDragon dragon, Mobile combatant)

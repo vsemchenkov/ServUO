@@ -1,13 +1,10 @@
 using System;
 
-using Server;
-using Server.Mobiles;
-
 namespace Server.Items
 {
     public class TinctureOfSilver : Item
     {
-        public override int LabelNumber { get { return 1155619; } } // Tincture of Silver
+        public override int LabelNumber => 1155619;  // Tincture of Silver
 
         [Constructable]
         public TinctureOfSilver()
@@ -26,10 +23,10 @@ namespace Server.Items
                 {
                     if (targeted is Item && targeted is ISlayer)
                     {
-                        var item = (Item)targeted;
-                        var slayer = (ISlayer)targeted;
+                        Item item = (Item)targeted;
+                        ISlayer slayer = (ISlayer)targeted;
 
-                        var socket = item.GetSocket<SlayerSocket>();
+                        SlayerSocket socket = item.GetSocket<SlayerSocket>();
 
                         if (socket == null || socket.Slayer != SlayerName.Silver)
                         {

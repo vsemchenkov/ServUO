@@ -1,6 +1,5 @@
-using System;
 using Server.Items;
-using Server.Mobiles;
+using System;
 
 namespace Server
 {
@@ -10,11 +9,11 @@ namespace Server
         {
             Timer.DelayCall<Item, Item>(TimeSpan.FromSeconds(1), (oldItem, newItem) =>
             {
-                var parent = oldItem.Parent;
+                object parent = oldItem.Parent;
 
                 if (parent == null)
                 {
-                    Server.Multis.BaseHouse house = Server.Multis.BaseHouse.FindHouseAt(oldItem);
+                    Multis.BaseHouse house = Multis.BaseHouse.FindHouseAt(oldItem);
 
                     newItem.MoveToWorld(oldItem.Location, oldItem.Map);
 

@@ -1,12 +1,11 @@
-using System;
-using System.Collections.Generic;
-
+using Server.Accounting;
 using Server.ContextMenus;
 using Server.Gumps;
 using Server.Misc;
 using Server.Multis;
 using Server.Prompts;
-using Server.Accounting;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -29,20 +28,8 @@ namespace Server.Mobiles
             m_Name = name;
         }
 
-        public TimeSpan Duration
-        {
-            get
-            {
-                return m_Duration;
-            }
-        }
-        public int Name
-        {
-            get
-            {
-                return m_Name;
-            }
-        }
+        public TimeSpan Duration => m_Duration;
+        public int Name => m_Name;
         public int ID
         {
             get
@@ -89,13 +76,7 @@ namespace Server.Mobiles
         {
         }
 
-        public VendorRentalDuration RentalDuration
-        {
-            get
-            {
-                return m_RentalDuration;
-            }
-        }
+        public VendorRentalDuration RentalDuration => m_RentalDuration;
         [CommandProperty(AccessLevel.GameMaster)]
         public int RentalPrice
         {
@@ -133,13 +114,7 @@ namespace Server.Mobiles
             }
         }
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Renew
-        {
-            get
-            {
-                return LandlordRenew && RenterRenew && House != null && House.DecayType != DecayType.Condemned;
-            }
-        }
+        public bool Renew => LandlordRenew && RenterRenew && House != null && House.DecayType != DecayType.Condemned;
         [CommandProperty(AccessLevel.GameMaster)]
         public int RenewalPrice
         {
@@ -279,14 +254,14 @@ namespace Server.Mobiles
 
             writer.WriteEncodedInt(m_RentalDuration.ID);
 
-            writer.Write((int)m_RentalPrice);
-            writer.Write((bool)m_LandlordRenew);
-            writer.Write((bool)m_RenterRenew);
-            writer.Write((int)m_RenewalPrice);
+            writer.Write(m_RentalPrice);
+            writer.Write(m_LandlordRenew);
+            writer.Write(m_RenterRenew);
+            writer.Write(m_RenewalPrice);
 
-            writer.Write((int)m_RentalGold);
+            writer.Write(m_RentalGold);
 
-            writer.WriteDeltaTime((DateTime)m_RentalExpireTime);
+            writer.WriteDeltaTime(m_RentalExpireTime);
         }
 
         public override void Deserialize(GenericReader reader)

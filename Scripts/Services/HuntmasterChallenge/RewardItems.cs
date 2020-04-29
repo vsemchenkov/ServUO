@@ -1,71 +1,69 @@
-using Server;
-using System;
 using Server.Mobiles;
-using Server.Engines.HuntsmasterChallenge;
+using System;
 
 namespace Server.Items
 {
-	public class HarvestersBlade : ElvenSpellblade
-	{
-		public override int LabelNumber { get { return 1114096; } } // Harvester's Blade
-	
-		[Constructable]
-		public HarvestersBlade()
-		{
-            Hue = 1191;
-			Attributes.SpellChanneling = 1;
-		}
-	
-		public HarvestersBlade(Serial serial) : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write((int)1);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int v = reader.ReadInt();
+    public class HarvestersBlade : ElvenSpellblade
+    {
+        public override int LabelNumber => 1114096;  // Harvester's Blade
 
-            if(v == 0)
-                Hue = 1191;
-		}
-	}
-	
-	public class RangersGuildSash : BodySash
-	{
-		public override int LabelNumber { get { return 1155744; } } // Member of the Skara Brae Ranger's Guild
-	
-		[Constructable]
-		public RangersGuildSash()
-		{
-            LootType = LootType.Blessed;
-		}
-	
-		public RangersGuildSash(Serial serial) : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write((int)0);
-		}
+        [Constructable]
+        public HarvestersBlade()
+        {
+            Hue = 1191;
+            Attributes.SpellChanneling = 1;
+        }
+
+        public HarvestersBlade(Serial serial) : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(1);
+        }
 
         public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int v = reader.ReadInt();
-		}
-	}
+        {
+            base.Deserialize(reader);
+            int v = reader.ReadInt();
+
+            if (v == 0)
+                Hue = 1191;
+        }
+    }
+
+    public class RangersGuildSash : BodySash
+    {
+        public override int LabelNumber => 1155744;  // Member of the Skara Brae Ranger's Guild
+
+        [Constructable]
+        public RangersGuildSash()
+        {
+            LootType = LootType.Blessed;
+        }
+
+        public RangersGuildSash(Serial serial) : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int v = reader.ReadInt();
+        }
+    }
 
     public class GargishRangersGuildSash : GargishSash
     {
-        public override int LabelNumber { get { return 1155744; } } // Member of the Skara Brae Ranger's Guild
+        public override int LabelNumber => 1155744;  // Member of the Skara Brae Ranger's Guild
 
         [Constructable]
         public GargishRangersGuildSash()
@@ -81,7 +79,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -93,7 +91,7 @@ namespace Server.Items
 
     public class HuntmastersRewardTitleDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return new TextDefinition(1155727); } } // Huntmaster's Champion
+        public override TextDefinition Title => new TextDefinition(1155727);  // Huntmaster's Champion
 
         [Constructable]
         public HuntmastersRewardTitleDeed()
@@ -108,7 +106,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -121,7 +119,7 @@ namespace Server.Items
     [Flipable(18080, 18081)]
     public class HornOfPlenty : Item, IUsesRemaining
     {
-        public override int LabelNumber { get { return 1153503; } } // Horn of Plenty
+        public override int LabelNumber => 1153503;  // Horn of Plenty
 
         private int m_UsesRemaining;
 
@@ -191,7 +189,7 @@ namespace Server.Items
 
         private class InternalTimer : Timer
         {
-            private Mobile m_From;
+            private readonly Mobile m_From;
             private int m_Ticks;
 
             public InternalTimer(Mobile from)
@@ -210,7 +208,7 @@ namespace Server.Items
 
                 if (m_Ticks == 10)
                 {
-                    this.Stop();
+                    Stop();
                     m_From.Frozen = false;
                 }
             }
@@ -218,7 +216,7 @@ namespace Server.Items
 
         public override void AddUsesRemainingProperties(ObjectPropertyList list)
         {
-            if(ShowUsesRemaining)
+            if (ShowUsesRemaining)
                 list.Add(1049116, m_UsesRemaining.ToString()); // [ Charges: ~1_CHARGES~ ]
         }
 
@@ -239,7 +237,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(_NextRecharge);
             writer.Write(m_UsesRemaining);
@@ -265,19 +263,19 @@ namespace Server.Items
     }
 
     public class HarvestersAxe : TwoHandedAxe
-	{
-        public override int LabelNumber { get { return 1158774; } } // Harvester's Axe
+    {
+        public override int LabelNumber => 1158774;  // Harvester's Axe
 
         private int _Charges;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Charges { get { return _Charges; } set { _Charges = value; InvalidateProperties(); } }
 
-		[Constructable]
-		public HarvestersAxe()
-		{
+        [Constructable]
+        public HarvestersAxe()
+        {
             Charges = 1000;
-		}
+        }
 
         public override void AddWeightProperty(ObjectPropertyList list)
         {
@@ -290,21 +288,21 @@ namespace Server.Items
             : base(serial)
         {
         }
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
 
             writer.Write(_Charges);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
             _Charges = reader.ReadInt();
-		}
-	}
+        }
+    }
 }

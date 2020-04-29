@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Misc
 {
     public class RaceDefinitions
@@ -7,7 +5,7 @@ namespace Server.Misc
         public static void Configure()
         {
             /* Here we configure all races. Some notes:
-            *
+            * 
             * 1) The first 32 races are reserved for core use.
             * 2) Race 0x7F is reserved for core use.
             * 3) Race 0xFF is reserved for core use.
@@ -50,7 +48,7 @@ namespace Server.Misc
 
             public override int RandomHair(bool female)	//Random hair doesn't include baldness
             {
-                switch( Utility.Random(9) )
+                switch (Utility.Random(9))
                 {
                     case 0:
                         return 0x203B;	//Short
@@ -161,7 +159,7 @@ namespace Server.Misc
 
         private class Elf : Race
         {
-            private static readonly int[] m_SkinHues = new int[]
+            private static readonly int[] m_SkinHues = new[]
             {
                 0x4DE, 0x76C, 0x835, 0x430, 0x24D, 0x24E, 0x24F, 0x0BF,
                 0x4A7, 0x361, 0x375, 0x367, 0x3E8, 0x3DE, 0x353, 0x903,
@@ -169,7 +167,7 @@ namespace Server.Misc
                 0x53F, 0x381, 0x382, 0x383, 0x76B, 0x3E5, 0x51D, 0x3E6
             };
 
-            private static readonly int[] m_HairHues = new int[]
+            private static readonly int[] m_HairHues = new[]
             {
                 0x034, 0x035, 0x036, 0x037, 0x038, 0x039, 0x058, 0x08E,
                 0x08F, 0x090, 0x091, 0x092, 0x101, 0x159, 0x15A, 0x15B,
@@ -204,7 +202,7 @@ namespace Server.Misc
 
             public override int RandomHair(bool female)	//Random hair doesn't include baldness
             {
-                switch( Utility.Random(8) )
+                switch (Utility.Random(8))
                 {
                     case 0:
                         return 0x2FC0;	//Long Feather
@@ -390,7 +388,7 @@ namespace Server.Misc
                 return Utility.Random(1755, 25) | 0x8000;
             }
 
-            private static readonly int[] m_HornHues = new int[]
+            private static readonly int[] m_HornHues = new[]
             {
                 0x709, 0x70B, 0x70D, 0x70F, 0x711, 0x763,
                 0x765, 0x768, 0x76B, 0x6F3, 0x6F1, 0x6EF,

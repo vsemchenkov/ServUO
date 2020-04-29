@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
-
 using Server.Items;
 using Server.Spells;
 using Server.Spells.Spellweaving;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -55,11 +54,11 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison PoisonImmune { get { return Poison.Lesser; } }
-        public override bool DisallowAllMoves { get { return true; } }
+        public override Poison PoisonImmune => Poison.Lesser;
+        public override bool DisallowAllMoves => true;
 
-        private static List<Mobile> m_TangleCooldown = new List<Mobile>();
-        private Dictionary<Mobile, Timer> m_DamageTable = new Dictionary<Mobile, Timer>();
+        private static readonly List<Mobile> m_TangleCooldown = new List<Mobile>();
+        private readonly Dictionary<Mobile, Timer> m_DamageTable = new Dictionary<Mobile, Timer>();
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
@@ -75,14 +74,14 @@ namespace Server.Mobiles
 
                     m_TangleCooldown.Add(m);
 
-                    Timer.DelayCall(TimeSpan.FromSeconds(Utility.RandomMinMax(3, 6)), new TimerStateCallback<Mobile>(Untangle), m);
-                    Timer.DelayCall(TimeSpan.FromSeconds(15.0), new TimerStateCallback<Mobile>(RemoveCooldown), m);
+                    Timer.DelayCall(TimeSpan.FromSeconds(Utility.RandomMinMax(3, 6)), Untangle, m);
+                    Timer.DelayCall(TimeSpan.FromSeconds(15.0), RemoveCooldown, m);
                 }
 
                 if (m.InRange(this, 1) && !m_DamageTable.ContainsKey(m))
                 {
                     // Should start the timer
-                    m_DamageTable[m] = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(1.0), new TimerStateCallback<Mobile>(DoDamage), m);
+                    m_DamageTable[m] = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(1.0), DoDamage, m);
                 }
             }
         }
@@ -131,7 +130,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

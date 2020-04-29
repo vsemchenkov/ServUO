@@ -1,9 +1,8 @@
-using Server;
-using System;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Misc;
 using Server.Regions;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -15,30 +14,30 @@ namespace Server.Mobiles
         private DateTime m_NextReturn;
         private bool m_HasDone2ndSpawn;
         private CorgulAltar m_Altar;
-        private List<BaseCreature> m_Helpers = new List<BaseCreature>();
+        private readonly List<BaseCreature> m_Helpers = new List<BaseCreature>();
 
-        public override bool CanDamageBoats { get { return false; } }
-        public override bool TaintedLifeAura { get { return true; } }
-        public override int Meat { get { return 5; } }
-        public override double TreasureMapChance { get { return .25; } }
-        public override int TreasureMapLevel { get { return 7; } }
-        public override Poison PoisonImmune { get { return Poison.Deadly; } }
+        public override bool CanDamageBoats => false;
+        public override bool TaintedLifeAura => true;
+        public override int Meat => 5;
+        public override double TreasureMapChance => .25;
+        public override int TreasureMapLevel => 7;
+        public override Poison PoisonImmune => Poison.Deadly;
 
-        public override bool TeleportsTo { get { return true; } }
-        public override TimeSpan TeleportDuration { get { return TimeSpan.FromSeconds(Utility.RandomMinMax(10, 50)); } }
-        public override double TeleportProb { get { return 1.0; } }
-        public override bool TeleportsPets { get { return true; } }
+        public override bool TeleportsTo => true;
+        public override TimeSpan TeleportDuration => TimeSpan.FromSeconds(Utility.RandomMinMax(10, 50));
+        public override double TeleportProb => 1.0;
+        public override bool TeleportsPets => true;
 
-        public override Type[] UniqueList { get { return new Type[] { typeof(CorgulsEnchantedSash), typeof(CorgulsHandbookOnMysticism), typeof(CorgulsHandbookOnTheUndead) }; } }
-        public override Type[] SharedList { get { return new Type[] { typeof(HelmOfVengence), typeof(RingOfTheSoulbinder), typeof(RuneEngravedPegLeg), typeof(CullingBlade) }; } }
-        public override Type[] DecorativeList { get { return new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) }; } }
+        public override Type[] UniqueList => new Type[] { typeof(CorgulsEnchantedSash), typeof(CorgulsHandbookOnMysticism), typeof(CorgulsHandbookOnTheUndead) };
+        public override Type[] SharedList => new Type[] { typeof(HelmOfVengence), typeof(RingOfTheSoulbinder), typeof(RuneEngravedPegLeg), typeof(CullingBlade) };
+        public override Type[] DecorativeList => new Type[] { typeof(EnchantedBladeDeed), typeof(EnchantedVortexDeed) };
 
-        public override bool NoGoodies { get { return true; } }
-        public override bool CanGivePowerscrolls { get { return false; } }
+        public override bool NoGoodies => true;
+        public override bool CanGivePowerscrolls => false;
 
         private readonly int _SpawnPerLoc = 15;
 
-        private Point3D[] _SpawnLocs =
+        private readonly Point3D[] _SpawnLocs =
         {
             new Point3D(6447, 1262, 10),
             new Point3D(6424, 1279, 10),
@@ -101,8 +100,8 @@ namespace Server.Mobiles
             m_NextReturn = DateTime.UtcNow + TimeSpan.FromSeconds(Utility.RandomMinMax(120, 180));
         }
 
-        public double SharedChance { get { return Map != null && Map.Rules == MapRules.FeluccaRules ? .12 : .08; } }
-        public double DecorativeChance { get { return Map != null && Map.Rules == MapRules.FeluccaRules ? .40 : .25; } }
+        public double SharedChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .12 : .08;
+        public double DecorativeChance => Map != null && Map.Rules == MapRules.FeluccaRules ? .40 : .25;
 
         public override bool OnBeforeDeath()
         {
@@ -114,15 +113,15 @@ namespace Server.Mobiles
             {
                 rights.Sort();
 
-                if(rights.Count >= 5)
+                if (rights.Count >= 5)
                     winner = rights[Utility.Random(5)].m_Mobile;
-                else if(rights.Count > 1)
+                else if (rights.Count > 1)
                     winner = rights[Utility.Random(rights.Count)].m_Mobile;
                 else
                     winner = rights[0].m_Mobile;
             }
 
-            if(winner != null)
+            if (winner != null)
                 GiveArtifact(winner, CreateArtifact(UniqueList));
 
             if (IsSoulboundEnemies)
@@ -144,7 +143,7 @@ namespace Server.Mobiles
 
         public void SpawnHelpers()
         {
-            foreach (var pnt in _SpawnLocs)
+            foreach (Point3D pnt in _SpawnLocs)
             {
                 for (int i = 0; i < _SpawnPerLoc; i++)
                 {
@@ -170,16 +169,16 @@ namespace Server.Mobiles
 
         public void SpawnMobile(BaseCreature bc, Point3D p)
         {
-            if(Map == null || bc == null)
+            if (Map == null || bc == null)
             {
-                if(bc != null)
+                if (bc != null)
                     bc.Delete();
                 return;
             }
 
             int x, y, z = 0;
 
-            for(int i = 0; i < 25; i++)
+            for (int i = 0; i < 25; i++)
             {
                 x = Utility.RandomMinMax(p.X - 4, p.X + 4);
                 y = Utility.RandomMinMax(p.Y - 4, p.Y + 4);
@@ -258,7 +257,7 @@ namespace Server.Mobiles
             PlaySound(0x2F3);
             for (int i = 0; i < targets.Count; ++i)
             {
-                Mobile m = (Mobile)targets[i];
+                Mobile m = targets[i];
 
                 if (m != null && !m.Deleted && m is PlayerMobile)
                 {
@@ -328,7 +327,7 @@ namespace Server.Mobiles
 
         private class InternalTimer : Timer
         {
-            private CorgulTheSoulBinder m_Mobile;
+            private readonly CorgulTheSoulBinder m_Mobile;
             private int m_Tick;
 
             public InternalTimer(CorgulTheSoulBinder mob, int range)
@@ -342,7 +341,7 @@ namespace Server.Mobiles
 
             protected override void OnTick()
             {
-                Geometry.Circle2D(m_Mobile.Location, m_Mobile.Map, m_Tick, new DoEffect_Callback(m_Mobile.DoEffect));
+                Geometry.Circle2D(m_Mobile.Location, m_Mobile.Map, m_Tick, m_Mobile.DoEffect);
 
                 m_Tick++;
             }
@@ -384,7 +383,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
             writer.Write(m_HasDone2ndSpawn);
             writer.Write(m_Altar);
             writer.Write(m_Helpers.Count);

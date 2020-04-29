@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -37,7 +37,7 @@ namespace Server.Mobiles
             Fame = 3500;
             Karma = -3500;
 
-			PackItem(new DullCopperOre(2));
+            PackItem(new DullCopperOre(2));
         }
 
         public DullCopperElemental(Serial serial)
@@ -45,9 +45,9 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool AutoDispel { get { return true; } }
-        public override bool BleedImmune { get { return true; } }    
-        public override int TreasureMapLevel { get { return 1; } }
+        public override bool AutoDispel => true;
+        public override bool BleedImmune => true;
+        public override int TreasureMapLevel => 1;
 
         public override bool OnBeforeDeath()
         {
@@ -58,20 +58,20 @@ namespace Server.Mobiles
             PlaySound(0x307);
 
             IPooledEnumerable eable = Map.GetMobilesInRange(Location, 4);
-            var list = new System.Collections.Generic.List<Mobile>();
+            System.Collections.Generic.List<Mobile> list = new System.Collections.Generic.List<Mobile>();
 
             foreach (Mobile m in eable)
             {
-                if (m != this && m.Alive && m.AccessLevel == AccessLevel.Player && 
+                if (m != this && m.Alive && m.AccessLevel == AccessLevel.Player &&
                     (m is PlayerMobile || (m is BaseCreature && !((BaseCreature)m).IsMonster)))
                 {
                     list.Add(m);
                 }
             }
 
-            foreach (var m in list)
+            foreach (Mobile m in list)
             {
-                Timer.DelayCall<Mobile>(TimeSpan.FromSeconds(.5), mob =>
+                Timer.DelayCall(TimeSpan.FromSeconds(.5), mob =>
                     {
                         mob.FixedParticles(0x36BD, 20, 10, 5044, EffectLayer.Head);
                         mob.PlaySound(0x307);
@@ -93,7 +93,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

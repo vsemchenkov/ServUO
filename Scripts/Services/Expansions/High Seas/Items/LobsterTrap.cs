@@ -1,10 +1,9 @@
-﻿using Server;
+using Server.Engines.PartySystem;
+using Server.Mobiles;
+using Server.Network;
+using Server.Targeting;
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
-using Server.Targeting;
-using Server.Network;
-using Server.Engines.PartySystem;
 
 namespace Server.Items
 {
@@ -24,11 +23,11 @@ namespace Server.Items
         private int m_Bobs;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Type BaitType 
-        { 
-            get { return m_BaitType; } 
-            set 
-            { 
+        public Type BaitType
+        {
+            get { return m_BaitType; }
+            set
+            {
                 m_BaitType = value;
 
                 if (m_BaitType == null)
@@ -37,7 +36,7 @@ namespace Server.Items
                     m_BaitUses = 0;
                 }
 
-                InvalidateProperties(); 
+                InvalidateProperties();
             }
         }
 
@@ -54,7 +53,7 @@ namespace Server.Items
         public Mobile Owner { get { return m_Owner; } set { m_Owner = value; InvalidateProperties(); } }
 
         public override int LabelNumber { get { if (m_Owner == null) return 1096487; else return 0; } }
-        public override bool DisplaysContent { get { return false; } }
+        public override bool DisplaysContent => false;
 
         [Constructable]
         public LobsterTrap() : base(17615)
@@ -133,7 +132,7 @@ namespace Server.Items
                 else
                 {
                     from.SendLocalizedMessage(500974); //What water do you want to fish in?
-                    from.BeginTarget(-1, true, TargetFlags.None, new TargetCallback(OnTarget));
+                    from.BeginTarget(-1, true, TargetFlags.None, OnTarget);
                 }
             }
             else if (ItemID == BuoyID)
@@ -150,7 +149,7 @@ namespace Server.Items
             }
             else
             {
-                from.SendLocalizedMessage( 1042001 ); // That must be in your pack for you to use it.
+                from.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
             }
         }
 
@@ -158,7 +157,7 @@ namespace Server.Items
         {
             Container pack = from.Backpack;
 
-            foreach (Item item in new List<Item>(this.Items))
+            foreach (Item item in new List<Item>(Items))
             {
                 if (item == null)
                     continue;
@@ -212,7 +211,7 @@ namespace Server.Items
             if (m_Timer != null)
                 m_Timer.Stop();
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1), new TimerCallback(OnTick));
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(1), TimeSpan.FromMinutes(1), OnTick);
         }
 
         public void EndTimer(Mobile from)
@@ -235,7 +234,7 @@ namespace Server.Items
             if (RootParent == null)
             {
                 if (from.Backpack == null || !from.Backpack.TryDropItem(from, this, false))
-                    this.MoveToWorld(from.Location, from.Map);
+                    MoveToWorld(from.Location, from.Map);
             }
         }
 
@@ -263,9 +262,9 @@ namespace Server.Items
             }
 
             bool rare = true;
-            double bump = (double)m_Bobs / 100.0;
+            double bump = m_Bobs / 100.0;
 
-            Type type = FishInfo.GetSpecialItem(m_Owner, this, this.Location, bump, this is LavaLobsterTrap);
+            Type type = FishInfo.GetSpecialItem(m_Owner, this, Location, bump, this is LavaLobsterTrap);
 
             if (type != null)
             {
@@ -326,9 +325,9 @@ namespace Server.Items
             if (m_Timer != null)
                 m_Timer.Stop();
 
-            Effects.PlaySound(this, this.Map, Utility.Random(0x025, 3));
+            Effects.PlaySound(this, Map, Utility.Random(0x025, 3));
 
-            IPooledEnumerable eable = this.GetMobilesInRange(12);
+            IPooledEnumerable eable = GetMobilesInRange(12);
             foreach (Mobile mob in eable)
             {
                 if (mob is PlayerMobile && m_Owner != null)
@@ -344,7 +343,7 @@ namespace Server.Items
             if (m_Owner == null || RootParent != null)
                 return false;
 
-            if (!from.InRange(this.Location, 6))
+            if (!from.InRange(Location, 6))
             {
                 from.SendLocalizedMessage(500295); //You are too far away to do that.
                 return false;
@@ -414,11 +413,11 @@ namespace Server.Items
             return true;
         }
 
-        public virtual int[] UseableTiles { get { return m_WaterTiles; } }
-        private int[] m_WaterTiles = new int[]
+        public virtual int[] UseableTiles => m_WaterTiles;
+        private readonly int[] m_WaterTiles = new int[]
         {
             //Deep Water
-            0x00AA, 0x00A9, 
+            0x00AA, 0x00A9,
             0x00A8, 0x00AB,
             0x0136, 0x0137,
             //Shallow Water
@@ -438,7 +437,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             int index = FishInfo.GetIndexFromType(m_BaitType);
             writer.Write(index);

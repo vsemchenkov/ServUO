@@ -1,5 +1,4 @@
 using System;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -20,7 +19,7 @@ namespace Server.Items
         }
 
         public abstract int MinThrowRange { get; }
-		
+
         public virtual int MaxThrowRange => MinThrowRange + 3;
 
         public override int DefMaxRange
@@ -29,7 +28,7 @@ namespace Server.Items
             {
                 int baseRange = MaxThrowRange;
 
-                var attacker = Parent as Mobile;
+                Mobile attacker = Parent as Mobile;
 
                 if (attacker != null)
                 {
@@ -83,7 +82,7 @@ namespace Server.Items
             m_KillSave = damageable.Location;
 
             if (!(WeaponAbility.GetCurrentAbility(attacker) is MysticArc))
-                Timer.DelayCall(TimeSpan.FromMilliseconds(333.0), new TimerCallback(ThrowBack));
+                Timer.DelayCall(TimeSpan.FromMilliseconds(333.0), ThrowBack);
 
             base.OnHit(attacker, damageable, damageBonus);
         }
@@ -93,7 +92,7 @@ namespace Server.Items
             m_Target = damageable as Mobile;
 
             if (!(WeaponAbility.GetCurrentAbility(attacker) is MysticArc))
-                Timer.DelayCall(TimeSpan.FromMilliseconds(333.0), new TimerCallback(ThrowBack));
+                Timer.DelayCall(TimeSpan.FromMilliseconds(333.0), ThrowBack);
 
             base.OnMiss(attacker, damageable);
         }
@@ -109,7 +108,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)

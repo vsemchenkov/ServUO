@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
 using Server.ContextMenus;
 using Server.Mobiles;
 using Server.Targeting;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -22,13 +21,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Map LinkMap { get { return m_LinkMap; } set { m_LinkMap = value; } }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1115929; // Endless Decanter of Water
-            }
-        }
+        public override int LabelNumber => 1115929; // Endless Decanter of Water
 
         public override int ComputeItemID()
         {
@@ -38,8 +31,8 @@ namespace Server.Items
         [Constructable]
         public EndlessDecanter() : base(BeverageType.Water)
         {
-            this.Weight = 2.0;
-            this.Hue = 0x399;
+            Weight = 2.0;
+            Hue = 0x399;
         }
 
         public EndlessDecanter(Serial serial) : base(serial)
@@ -128,11 +121,11 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((Boolean)m_Linked);
-            writer.Write((Point3D)m_LinkLocation);
-            writer.Write((Map)m_LinkMap);
+            writer.Write(m_Linked);
+            writer.Write(m_LinkLocation);
+            writer.Write(m_LinkMap);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -154,8 +147,8 @@ namespace Server.Items
 
         private class LinkEntry : ContextMenuEntry
         {
-            private Mobile m_From;
-            private EndlessDecanter m_Decanter;
+            private readonly Mobile m_From;
+            private readonly EndlessDecanter m_Decanter;
 
             public LinkEntry(Mobile from, EndlessDecanter decanter) : base(1115891, 0) // Link
             {
@@ -165,12 +158,12 @@ namespace Server.Items
 
             public override void OnClick()
             {
-                if (this.m_Decanter.Deleted || !this.m_Decanter.Movable || !this.m_From.CheckAlive() || !this.m_Decanter.CheckItemUse(this.m_From))
+                if (m_Decanter.Deleted || !m_Decanter.Movable || !m_From.CheckAlive() || !m_Decanter.CheckItemUse(m_From))
                     return;
 
                 m_From.SendLocalizedMessage(1115892);   // Target a water trough you wish to link.
 
-                m_From.BeginTarget(10, false, TargetFlags.None, new TargetCallback(Link_OnTarget));
+                m_From.BeginTarget(10, false, TargetFlags.None, Link_OnTarget);
             }
 
             private void Link_OnTarget(Mobile from, object targ)
@@ -215,8 +208,8 @@ namespace Server.Items
 
         private class UnlinkEntry : ContextMenuEntry
         {
-            private Mobile m_From;
-            private EndlessDecanter m_Decanter;
+            private readonly Mobile m_From;
+            private readonly EndlessDecanter m_Decanter;
 
             public UnlinkEntry(Mobile from, EndlessDecanter decanter) : base(1115930, 0) // Unlink
             {
@@ -226,7 +219,7 @@ namespace Server.Items
 
             public override void OnClick()
             {
-                if (this.m_Decanter.Deleted || !this.m_Decanter.Movable || !this.m_From.CheckAlive() || !this.m_Decanter.CheckItemUse(this.m_From))
+                if (m_Decanter.Deleted || !m_Decanter.Movable || !m_From.CheckAlive() || !m_Decanter.CheckItemUse(m_From))
                     return;
 
                 m_From.SendLocalizedMessage(1115898);   // The link between this decanter and the water trough has been removed.

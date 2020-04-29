@@ -1,12 +1,10 @@
-using Server;
-using System;
-using Server.Mobiles;
-using Server.Items;
-using Server.Multis;
-using Server.Gumps;
 using Server.ContextMenus;
-using System.Collections.Generic;
 using Server.Engines.VeteranRewards;
+using Server.Gumps;
+using Server.Items;
+using Server.Mobiles;
+using Server.Multis;
+using System.Collections.Generic;
 
 namespace Server.Engines.Auction
 {
@@ -53,7 +51,7 @@ namespace Server.Engines.Auction
             }
         }
 
-        public override BaseAddonDeed Deed { get { return new AuctionSafeDeed(); } }
+        public override BaseAddonDeed Deed => new AuctionSafeDeed();
 
         public AuctionSafe(Mobile from, bool south)
         {
@@ -179,8 +177,8 @@ namespace Server.Engines.Auction
         [Flipable(0x9C18, 0x9C19)]
         public class InternalComponent : AddonComponent
         {
-            public override bool ForceShowProperties { get { return true; } }
-            public override int LabelNumber { get { return 1156371; } } // Auction Safe
+            public override bool ForceShowProperties => true;
+            public override int LabelNumber => 1156371;  // Auction Safe
 
             public InternalComponent()
                 : base(0x9C18)
@@ -218,8 +216,8 @@ namespace Server.Engines.Auction
         public bool SouthFacing { get; set; }
         public Mobile From { get; set; }
 
-        public override BaseAddon Addon { get { return new AuctionSafe(From, SouthFacing); } }
-        public override int LabelNumber { get { return 1156371; } } // Auction Safe
+        public override BaseAddon Addon => new AuctionSafe(From, SouthFacing);
+        public override int LabelNumber => 1156371;  // Auction Safe
 
         public bool IsRewardItem { get; set; }
 
@@ -268,7 +266,7 @@ namespace Server.Engines.Auction
             base.Serialize(writer);
             writer.Write(1);
 
-            writer.Write((bool)IsRewardItem);
+            writer.Write(IsRewardItem);
         }
 
         public override void Deserialize(GenericReader reader)

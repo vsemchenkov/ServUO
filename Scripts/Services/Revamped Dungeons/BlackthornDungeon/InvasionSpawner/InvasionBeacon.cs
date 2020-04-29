@@ -1,10 +1,5 @@
-using System;
-using Server;
-using System.Collections.Generic;
-using System.Linq;
-using Server.Mobiles;
 using Server.Items;
-using Server.Engines.CityLoyalty;
+using System;
 
 namespace Server.Engines.Blackthorn
 {
@@ -13,7 +8,7 @@ namespace Server.Engines.Blackthorn
         [CommandProperty(AccessLevel.GameMaster)]
         public InvasionController Controller { get; set; }
 
-        public override bool CanDamage { get { return Controller == null || Controller.BeaconVulnerable; } }
+        public override bool CanDamage => Controller == null || Controller.BeaconVulnerable;
 
         public InvasionBeacon(InvasionController controller)
         {
@@ -24,7 +19,7 @@ namespace Server.Engines.Blackthorn
 
         public override void OnHalfDamage()
         {
-            IPooledEnumerable eable = this.Map.GetMobilesInRange(this.Location, 20);
+            IPooledEnumerable eable = Map.GetMobilesInRange(Location, 20);
 
             foreach (Mobile m in eable)
             {
@@ -46,21 +41,21 @@ namespace Server.Engines.Blackthorn
             return base.OnBeforeDestroyed();
         }
 
-            public InvasionBeacon(Serial serial)
-            : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			reader.ReadInt();
-		}
+        public InvasionBeacon(Serial serial)
+        : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            reader.ReadInt();
+        }
     }
 }

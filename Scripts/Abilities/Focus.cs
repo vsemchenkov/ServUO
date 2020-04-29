@@ -1,13 +1,13 @@
-using Server.Mobiles;
 using System;
 using System.Collections.Generic;
+using Server.Mobiles;
 
 namespace Server.Items
 {
     public class Focus
     {
-        private static Dictionary<Mobile, FocusInfo> m_Table = new Dictionary<Mobile, FocusInfo>();
-        private static int DefaultDamageBonus = -40;
+        private static readonly Dictionary<Mobile, FocusInfo> m_Table = new Dictionary<Mobile, FocusInfo>();
+        private static readonly int DefaultDamageBonus = -40;
 
         public static void Initialize()
         {
@@ -26,13 +26,9 @@ namespace Server.Items
             }
         }
 
-        public Focus()
-        {
-        }
-
         public static void OnLogin(LoginEventArgs e)
         {
-            var pm = e.Mobile as PlayerMobile;
+            PlayerMobile pm = e.Mobile as PlayerMobile;
 
             if (pm != null)
             {
@@ -42,7 +38,7 @@ namespace Server.Items
 
         public static void UpdateBuff(Mobile from, Mobile target = null)
         {
-            var item = from.FindItemOnLayer(Layer.TwoHanded);
+            Item item = from.FindItemOnLayer(Layer.TwoHanded);
 
             if (item == null)
             {
@@ -67,7 +63,7 @@ namespace Server.Items
                         String.Format("{0}\t{1}", info.Target == null ? "NONE" : info.Target.Name, info.DamageBonus)));
                 }
 
-                m_Table[from] = new FocusInfo(target, DefaultDamageBonus);                
+                m_Table[from] = new FocusInfo(target, DefaultDamageBonus);
             }
         }
 
@@ -106,7 +102,7 @@ namespace Server.Items
                 else
                 {
                     if (info.DamageBonus >= -50)
-                        info.DamageBonus = DefaultDamageBonus;                    
+                        info.DamageBonus = DefaultDamageBonus;
                 }
 
                 if (info.Target != defender)

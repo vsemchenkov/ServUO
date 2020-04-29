@@ -1,8 +1,8 @@
-using System;
-using Server.Mobiles;
 using Server.ContextMenus;
-using System.Collections.Generic;
 using Server.Gumps;
+using Server.Mobiles;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -55,7 +55,7 @@ namespace Server.Items
         public bool Fermented { get { return _Fermented; } set { _Fermented = value; InvalidateProperties(); } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool BadBatch { get { return _BadBatch; } }
+        public bool BadBatch => _BadBatch;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int BottlesRemaining { get { return _BottlesRemaining; } set { _BottlesRemaining = value; InvalidateProperties(); } }
@@ -66,9 +66,9 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Maker { get { return _Maker; } set { _Maker = value; } }
 
-        public bool HasYeast { get { return _BacterialResistance > 0; } }
+        public bool HasYeast => _BacterialResistance > 0;
 
-        public override int LabelNumber { get { return 1124526; } } // Fermentation Barrel
+        public override int LabelNumber => 1124526;  // Fermentation Barrel
 
         public override double DefaultWeight
         {
@@ -77,7 +77,7 @@ namespace Server.Items
                 if (BottlesRemaining <= 0)
                     return 1.0;
 
-                return (double)BottlesRemaining;
+                return BottlesRemaining;
             }
         }
 
@@ -89,7 +89,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.GetWorldLocation(), 2))
+            if (from.InRange(GetWorldLocation(), 2))
             {
                 if (_Fermenting && _FermentingEnds < DateTime.UtcNow)
                 {
@@ -106,7 +106,7 @@ namespace Server.Items
                         BottlesRemaining = _Fruit / 4;
                     }
                 }
-                
+
                 if (_Fermented)
                 {
                     if (_BadBatch)
@@ -305,9 +305,9 @@ namespace Server.Items
 
         private FruitType GetFruitType(Type t)
         {
-            for(int i = 0; i < _FruitTypes.Length; i++)
+            for (int i = 0; i < _FruitTypes.Length; i++)
             {
-                foreach (var type in _FruitTypes[i])
+                foreach (Type type in _FruitTypes[i])
                 {
                     if (type == t)
                         return (FruitType)i + 1;
@@ -317,7 +317,7 @@ namespace Server.Items
             return FruitType.None;
         }
 
-        private Type[][] _FruitTypes =
+        private readonly Type[][] _FruitTypes =
         {
             new Type[] { typeof(GrapeBunch), typeof(Grapes) },
             new Type[] { typeof(Apple) },
@@ -335,7 +335,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)_FruitType);
             writer.Write(_Fruit);
@@ -400,7 +400,7 @@ namespace Server.Items
             : base(BeverageType.Wine)
         {
             Quantity = MaxQuantity;
-            
+
             _FruitType = type;
             _Vintage = vintage;
             _Maker = maker;
@@ -436,7 +436,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write((int)_FruitType);
             writer.Write(_Vintage);

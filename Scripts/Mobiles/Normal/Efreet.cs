@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -46,47 +45,47 @@ namespace Server.Mobiles
         {
         }
 
-        public override int TreasureMapLevel { get { return 4; } }
-		
+        public override int TreasureMapLevel => 4;
+
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);
-            this.AddLoot(LootPack.Average);
-            this.AddLoot(LootPack.Gems);
+            AddLoot(LootPack.Rich);
+            AddLoot(LootPack.Average);
+            AddLoot(LootPack.Gems);
         }
-		
-		public override void OnDeath(Container c)
+
+        public override void OnDeath(Container c)
         {
             base.OnDeath(c);
-			
-			if (0.02 > Utility.RandomDouble())
+
+            if (0.02 > Utility.RandomDouble())
             {
-			
-				switch (Utility.Random(5))
-				{
-					case 0:
-						c.DropItem(new DaemonArms());
-						break;
-					case 1:
-						c.DropItem(new DaemonChest());
-						break;
-					case 2:
-						c.DropItem(new DaemonGloves());
-						break;
-					case 3:
-						c.DropItem(new DaemonLegs());
-						break;
-					case 4:
-						c.DropItem(new DaemonHelm());
-						break;
-				}
-			}
-		}
+
+                switch (Utility.Random(5))
+                {
+                    case 0:
+                        c.DropItem(new DaemonArms());
+                        break;
+                    case 1:
+                        c.DropItem(new DaemonChest());
+                        break;
+                    case 2:
+                        c.DropItem(new DaemonGloves());
+                        break;
+                    case 3:
+                        c.DropItem(new DaemonLegs());
+                        break;
+                    case 4:
+                        c.DropItem(new DaemonHelm());
+                        break;
+                }
+            }
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

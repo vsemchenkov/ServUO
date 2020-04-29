@@ -1,18 +1,18 @@
+using Server.Guilds;
+using Server.Network;
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Threading;
-using System.Diagnostics;
-using Server.Network;
-using Server.Guilds;
 
 namespace Server
 {
     public static class World
     {
-        private static bool m_Metrics = Config.Get("General.Metrics", false);
-        private static ManualResetEvent m_DiskWriteHandle = new ManualResetEvent(true);
+        private static readonly bool m_Metrics = Config.Get("General.Metrics", false);
+        private static readonly ManualResetEvent m_DiskWriteHandle = new ManualResetEvent(true);
 
         private static Queue<IEntity> _addQueue, _deleteQueue;
 
@@ -72,7 +72,7 @@ namespace Server
 
         public static void Broadcast(int hue, bool ascii, AccessLevel access, string text)
         {
-            var e = new WorldBroadcastEventArgs(hue, ascii, access, text);
+            WorldBroadcastEventArgs e = new WorldBroadcastEventArgs(hue, ascii, access, text);
 
             EventSink.InvokeWorldBroadcast(e);
 
@@ -97,7 +97,7 @@ namespace Server
                 p = new UnicodeMessage(Serial.MinusOne, -1, MessageType.Regular, hue, 3, "ENU", "System", text);
             }
 
-            var list = NetState.Instances;
+            List<NetState> list = NetState.Instances;
 
             p.Acquire();
 
@@ -136,9 +136,9 @@ namespace Server
         {
             public BaseGuild Guild { get; }
 
-            public Serial Serial => Guild == null ? 0 : Guild.Id; 
+            public Serial Serial => Guild == null ? 0 : Guild.Id;
 
-            public int TypeID => 0; 
+            public int TypeID => 0;
 
             public long Position { get; }
 
@@ -156,7 +156,7 @@ namespace Server
         {
             public Item Item { get; }
 
-            public Serial Serial => Item == null ? Serial.MinusOne : Item.Serial; 
+            public Serial Serial => Item == null ? Serial.MinusOne : Item.Serial;
 
             public int TypeID { get; }
 
@@ -180,7 +180,7 @@ namespace Server
         {
             public Mobile Mobile { get; }
 
-            public Serial Serial => Mobile == null ? Serial.MinusOne : Mobile.Serial; 
+            public Serial Serial => Mobile == null ? Serial.MinusOne : Mobile.Serial;
 
             public int TypeID { get; }
 
@@ -208,7 +208,7 @@ namespace Server
         {
             int count = tdbReader.ReadInt32();
 
-            var types = new List<Tuple<ConstructorInfo, string>>(count);
+            List<Tuple<ConstructorInfo, string>> types = new List<Tuple<ConstructorInfo, string>>(count);
 
             for (int i = 0; i < count; ++i)
             {
@@ -280,9 +280,9 @@ namespace Server
             _deleteQueue = new Queue<IEntity>();
             object[] ctorArgs = new object[1];
 
-            var items = new List<ItemEntry>();
-            var mobiles = new List<MobileEntry>();
-            var guilds = new List<GuildEntry>();
+            List<ItemEntry> items = new List<ItemEntry>();
+            List<MobileEntry> mobiles = new List<MobileEntry>();
+            List<GuildEntry> guilds = new List<GuildEntry>();
 
             if (File.Exists(MobileIndexPath) && File.Exists(MobileTypesPath))
             {
@@ -294,7 +294,7 @@ namespace Server
                     {
                         BinaryReader tdbReader = new BinaryReader(tdb);
 
-                        var types = ReadTypes(tdbReader);
+                        List<Tuple<ConstructorInfo, string>> types = ReadTypes(tdbReader);
 
                         int mobileCount = idxReader.ReadInt32();
                         Mobiles = new Dictionary<Serial, Mobile>(mobileCount);
@@ -306,7 +306,7 @@ namespace Server
                             long pos = idxReader.ReadInt64();
                             int length = idxReader.ReadInt32();
 
-                            var objs = types[typeID];
+                            Tuple<ConstructorInfo, string> objs = types[typeID];
 
                             if (objs == null)
                             {
@@ -353,7 +353,7 @@ namespace Server
                     {
                         BinaryReader tdbReader = new BinaryReader(tdb);
 
-                        var types = ReadTypes(tdbReader);
+                        List<Tuple<ConstructorInfo, string>> types = ReadTypes(tdbReader);
 
                         int itemCount = idxReader.ReadInt32();
 
@@ -366,7 +366,7 @@ namespace Server
                             long pos = idxReader.ReadInt64();
                             int length = idxReader.ReadInt32();
 
-                            var objs = types[typeID];
+                            Tuple<ConstructorInfo, string> objs = types[typeID];
 
                             if (objs == null)
                             {

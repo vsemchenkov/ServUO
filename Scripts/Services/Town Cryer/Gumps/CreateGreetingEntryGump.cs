@@ -1,7 +1,6 @@
-using Server;
-using System;
-using Server.Mobiles;
 using Server.Gumps;
+using Server.Mobiles;
+using System;
 
 namespace Server.Services.TownCryer
 {
@@ -137,13 +136,13 @@ namespace Server.Services.TownCryer
             {
                 HandleText(info);
 
-                var headline = _Headline;
-                var body = _Body;
-                var body2 = _Body2;
-                var body3 = _Body3;
-                var exp = _Expires;
-                var link = _Link;
-                var linkText = _LinkText;
+                string headline = _Headline;
+                string body = _Body;
+                string body2 = _Body2;
+                string body3 = _Body3;
+                string exp = _Expires;
+                string link = _Link;
+                string linkText = _LinkText;
 
                 int expires = -1;
 
@@ -171,7 +170,7 @@ namespace Server.Services.TownCryer
                     }
                 }
 
-                if(!Edit && (expires < 1 || expires > 30))
+                if (!Edit && (expires < 1 || expires > 30))
                 {
                     User.SendLocalizedMessage(1158033); // The expiry can be between 1 and 30 days. Please check your entry and try again.
                 }

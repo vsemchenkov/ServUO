@@ -1,7 +1,6 @@
+using Server.Engines.CannedEvil;
 using System;
 using System.Linq;
-
-using Server.Engines.CannedEvil;
 
 namespace Server.Items
 {
@@ -13,15 +12,15 @@ namespace Server.Items
                 .Where(o => o != ChampionSkullType.None)
                 .ToArray();
 
-        public static ChampionSkullType RandomType { get { return Types[Utility.Random(Types.Length)]; } }
+        public static ChampionSkullType RandomType => Types[Utility.Random(Types.Length)];
 
         private ChampionSkullType m_Type;
-		
+
         [Constructable]
-		public ChampionSkull()
-			: this(RandomType)
-		{ }
-		
+        public ChampionSkull()
+            : this(RandomType)
+        { }
+
         [Constructable]
         public ChampionSkull(ChampionSkullType type)
             : base(0x1AE1)
@@ -65,10 +64,7 @@ namespace Server.Items
             }
         }
 
-        public override int LabelNumber
-        {
-            get { return 1049479 + (int)m_Type; }
-        }
+        public override int LabelNumber => 1049479 + (int)m_Type;
 
         public override void Serialize(GenericWriter writer)
         {

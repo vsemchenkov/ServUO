@@ -1,29 +1,28 @@
-using System;
-using Server;
-using Server.Mobiles;
+using Server.ContextMenus;
+using Server.Gumps;
 using Server.Items;
+using Server.Mobiles;
+using Server.Targeting;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Server.ContextMenus;
-using Server.Targeting;
-using Server.Gumps;
 
 namespace Server.Engines.CityLoyalty
 {
-	public class CityStone : Item
-	{
+    public class CityStone : Item
+    {
         [CommandProperty(AccessLevel.GameMaster)]
-		public CityLoyaltySystem City { get; set; }
+        public CityLoyaltySystem City { get; set; }
 
         public List<BallotBox> Boxes { get; set; }
-		
-		public CityStone(CityLoyaltySystem city) : base(0xED4)
-		{
-			City = city;
+
+        public CityStone(CityLoyaltySystem city) : base(0xED4)
+        {
+            City = city;
             Movable = false;
 
             City.Stone = this;
-		}
+        }
 
         public override void OnDoubleClick(Mobile from)
         {
@@ -38,7 +37,7 @@ namespace Server.Engines.CityLoyalty
 
         public override void AddNameProperty(ObjectPropertyList list)
         {
-            if(City != null)
+            if (City != null)
                 list.Add(1153887, String.Format("#{0}", CityLoyaltySystem.GetCityLocalization(City.City)));
         }
 
@@ -89,7 +88,7 @@ namespace Server.Engines.CityLoyalty
 
             list.Add(new SimpleContextMenuEntry(from, 1154018, m => // Grant Citizen Title
                 {
-                    if(City.IsGovernor(m))
+                    if (City.IsGovernor(m))
                     {
                         m.SendLocalizedMessage(1154027); // Which Citizen do you wish to bestow a title?
                         m.BeginTarget(10, false, TargetFlags.None, (mob, targeted) =>
@@ -155,7 +154,7 @@ namespace Server.Engines.CityLoyalty
                                         Boxes = new List<BallotBox>();
 
                                     Boxes.Add(box);
-                                    box.MoveToWorld(new Point3D(p), this.Map);
+                                    box.MoveToWorld(new Point3D(p), Map);
 
                                     m.SendMessage("{0} of {1} ballot boxes placed.", Boxes.Count.ToString(), CityLoyaltySystem.MaxBallotBoxes.ToString());
                                 }
@@ -179,7 +178,7 @@ namespace Server.Engines.CityLoyalty
                 {
                     entry.CustomTitle = null;
 
-                    if(m is PlayerMobile)
+                    if (m is PlayerMobile)
                         ((PlayerMobile)m).RemoveRewardTitle(1154017, true);
 
                     m.SendMessage("City Title removed.");
@@ -197,7 +196,7 @@ namespace Server.Engines.CityLoyalty
 
         public bool CheckLocation(Mobile m, BallotBox box, IPoint3D p)
         {
-            Region r = Region.Find(new Point3D(p), this.Map);
+            Region r = Region.Find(new Point3D(p), Map);
 
             if (!r.IsPartOf(City.Definition.Region))
             {
@@ -205,7 +204,7 @@ namespace Server.Engines.CityLoyalty
                 return false;
             }
 
-            if (!box.DropToWorld(new Point3D(p), this.Map))
+            if (!box.DropToWorld(new Point3D(p), Map))
             {
                 m.SendMessage("You cannot place a ballot box there!");
                 return false;
@@ -214,32 +213,32 @@ namespace Server.Engines.CityLoyalty
             return true;
         }
 
-		public CityStone(Serial serial) : base(serial)
-		{
-		}
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
-			
-			writer.Write((int)City.City);
+        public CityStone(Serial serial) : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
+
+            writer.Write((int)City.City);
 
             writer.Write(Boxes == null ? 0 : Boxes.Count);
             if (Boxes != null)
             {
                 Boxes.ForEach(b => writer.Write(b));
             }
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
-			
-			City = CityLoyaltySystem.GetCityInstance((City)reader.ReadInt());
+        }
 
-            if(City != null)
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
+
+            City = CityLoyaltySystem.GetCityInstance((City)reader.ReadInt());
+
+            if (City != null)
                 City.Stone = this;
 
             int count = reader.ReadInt();
@@ -255,6 +254,6 @@ namespace Server.Engines.CityLoyalty
                     Boxes.Add(box);
                 }
             }
-		}
-	}
+        }
+    }
 }

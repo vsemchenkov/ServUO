@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     public class HealerGuildmaster : BaseGuildmaster
@@ -20,20 +18,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override NpcGuild NpcGuild
-        {
-            get
-            {
-                return NpcGuild.HealersGuild;
-            }
-        }
-        public override VendorShoeType ShoeType
-        {
-            get
-            {
-                return VendorShoeType.Sandals;
-            }
-        }
+        public override NpcGuild NpcGuild => NpcGuild.HealersGuild;
+        public override VendorShoeType ShoeType => VendorShoeType.Sandals;
         public override void InitOutfit()
         {
             base.InitOutfit();
@@ -44,7 +30,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

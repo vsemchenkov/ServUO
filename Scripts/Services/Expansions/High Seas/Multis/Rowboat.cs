@@ -1,30 +1,25 @@
-using System;
-using System.Linq;
-using System.Collections.Generic;
-
-using Server;
 using Server.Items;
-using Server.Engines.PartySystem;
+using System.Collections.Generic;
 
 namespace Server.Multis
 {
     public class RowBoat : BaseBoat
     {
-        public override int NorthID { get { return 0x3C; } }
-        public override int EastID { get { return 0x3D; } }
-        public override int SouthID { get { return 0x3E; } }
-        public override int WestID { get { return 0x3F; } }
+        public override int NorthID => 0x3C;
+        public override int EastID => 0x3D;
+        public override int SouthID => 0x3E;
+        public override int WestID => 0x3F;
 
-        public override int HoldDistance { get { return -1; } }
-        public override int TillerManDistance { get { return -4; } }
+        public override int HoldDistance => -1;
+        public override int TillerManDistance => -4;
 
-        public override Point3D MarkOffset { get { return new Point3D(0, 1, 3); } }
+        public override Point3D MarkOffset => new Point3D(0, 1, 3);
 
-        public override BaseDockedBoat DockedBoat { get { return new DockedRowBoat(this); } }
+        public override BaseDockedBoat DockedBoat => new DockedRowBoat(this);
 
-        public override bool IsClassicBoat { get { return false; } }
-        public override bool IsRowBoat { get { return true; } }
-        public override bool CanLinkToLighthouse { get { return false; } }
+        public override bool IsClassicBoat => false;
+        public override bool IsRowBoat => true;
+        public override bool CanLinkToLighthouse => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public MooringLine Line { get; private set; }
@@ -93,7 +88,7 @@ namespace Server.Multis
             if (Line != null)
                 Line.Location = new Point3D(X + (Line.X - old.X), Y + (Line.Y - old.Y), Z + (Line.Z - old.Z));
 
-            if(Rudder != null && Rudder.Handle != null)
+            if (Rudder != null && Rudder.Handle != null)
                 Rudder.Handle.Location = new Point3D(X + (Rudder.Handle.X - old.X), Y + (Rudder.Handle.Y - old.Y), Z + (Rudder.Handle.Z - old.Z));
         }
 
@@ -174,7 +169,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(Rudder);
             writer.Write(Line);
@@ -194,11 +189,11 @@ namespace Server.Multis
 
     public class Rudder : TillerMan
     {
-        public override int LabelNumber { get { return 1149698; } } // wheel
+        public override int LabelNumber => 1149698;  // wheel
 
-        public override bool ForceShowProperties { get { return true; } }
+        public override bool ForceShowProperties => true;
 
-        public override bool Babbles { get { return false; } }
+        public override bool Babbles => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public RudderHandle Handle { get; set; }
@@ -229,18 +224,18 @@ namespace Server.Multis
         {
             switch (dir)
             {
-                case Direction.South: 
+                case Direction.South:
                     ItemID = 16068;
                     break;
-                case Direction.North: 
+                case Direction.North:
                     ItemID = 16062;
                     X--;
                     break;
-                case Direction.West: 
-                    ItemID =  15990;
+                case Direction.West:
+                    ItemID = 15990;
                     break;
-                case Direction.East: 
-                    ItemID =  15971;
+                case Direction.East:
+                    ItemID = 15971;
                     break;
             }
         }
@@ -266,7 +261,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(Handle);
         }
@@ -313,7 +308,7 @@ namespace Server.Multis
                         break;
                     case Direction.West:
                         ItemID = 15991;
-                        MoveToWorld(new Point3D(Rudder.X -1, Rudder.Y + 1, Rudder.Z), Map);
+                        MoveToWorld(new Point3D(Rudder.X - 1, Rudder.Y + 1, Rudder.Z), Map);
                         break;
                     case Direction.East:
                         ItemID = 15970;
@@ -334,7 +329,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
             writer.Write(Rudder);
         }
 
@@ -348,8 +343,8 @@ namespace Server.Multis
 
     public class RowBoatDeed : BaseBoatDeed
     {
-        public override int LabelNumber { get { return 1116491; } }
-        public override BaseBoat Boat { get { return new RowBoat(BoatDirection); } }
+        public override int LabelNumber => 1116491;
+        public override BaseBoat Boat => new RowBoat(BoatDirection);
 
         [Constructable]
         public RowBoatDeed()
@@ -371,13 +366,13 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
     }
 
     public class DockedRowBoat : BaseDockedBoat
     {
-        public override BaseBoat Boat { get { return new RowBoat(BoatDirection); } }
+        public override BaseBoat Boat => new RowBoat(BoatDirection);
 
         public DockedRowBoat(BaseBoat boat)
             : base(0x3C, Point3D.Zero, boat)
@@ -398,7 +393,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
     }
 }

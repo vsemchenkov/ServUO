@@ -1,9 +1,7 @@
-using System;
-
 namespace Server.Items
 {
     public class Shrimp : BaseFish
-    { 
+    {
         [Constructable]
         public Shrimp()
             : base(0x3B14)
@@ -12,21 +10,15 @@ namespace Server.Items
 
         public Shrimp(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074596;
-            }
-        }// Shrimp
+        public override int LabelNumber => 1074596;// Shrimp
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

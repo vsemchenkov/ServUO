@@ -1,6 +1,6 @@
+using Server.Mobiles;
 using System;
 using System.Collections;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -10,9 +10,6 @@ namespace Server.Items
     public class TalonStrike : WeaponAbility
     {
         private static readonly Hashtable m_Registry = new Hashtable();
-        public TalonStrike()
-        {
-        }
 
         public override SkillName GetSecondarySkill(Mobile from)
         {
@@ -60,7 +57,7 @@ namespace Server.Items
                 : base(TimeSpan.Zero, TimeSpan.FromSeconds(0.25), 12)// 3 seconds at .25 seconds apart = 12.  Confirm delay inbetween of .25 each.
             {
                 m_Defender = defender;
-                m_DamageRemaining = (double)totalDamage;
+                m_DamageRemaining = totalDamage;
                 Priority = TimerPriority.TwentyFiveMS;
 
                 m_Attacker = attacker;
@@ -73,7 +70,7 @@ namespace Server.Items
                 if (!m_Defender.Alive || m_DamageRemaining <= 0)
                 {
                     Stop();
-                    Server.Items.TalonStrike.Registry.Remove(m_Defender);
+                    Registry.Remove(m_Defender);
                     return;
                 }
 
@@ -95,7 +92,7 @@ namespace Server.Items
                 if (!m_Defender.Alive || m_DamageRemaining <= 0)
                 {
                     Stop();
-                    Server.Items.TalonStrike.Registry.Remove(m_Defender);
+                    Registry.Remove(m_Defender);
                 }
             }
         }

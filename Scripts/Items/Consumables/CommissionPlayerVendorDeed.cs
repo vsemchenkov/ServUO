@@ -1,4 +1,3 @@
-using System;
 using Server.Mobiles;
 using Server.Multis;
 
@@ -6,7 +5,7 @@ namespace Server.Items
 {
     public class CommissionContractOfEmployment : Item
     {
-        public override int LabelNumber { get { return 1159156; } } // A Commission Contract of Employment
+        public override int LabelNumber => 1159156;  // A Commission Contract of Employment
 
         [Constructable]
         public CommissionContractOfEmployment()
@@ -19,11 +18,11 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); //version
+            writer.Write(0); //version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -69,7 +68,7 @@ namespace Server.Items
                 {
                     from.SendLocalizedMessage(1062423); // Only the house owner can directly place vendors.  Please ask the house owner to offer you a vendor contract so that you may place a vendor in this house.
                 }
-                else if (!house.Public || !house.CanPlaceNewVendor()) 
+                else if (!house.Public || !house.CanPlaceNewVendor())
                 {
                     from.SendLocalizedMessage(503241); // You cannot place this vendor or barkeep.  Make sure the house is public and has sufficient storage available.
                 }

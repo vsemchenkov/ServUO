@@ -1,14 +1,11 @@
-using Server;
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
 
 namespace Server.Engines.VoidPool
 {
     public class VelaTheSorceress : BaseCreature
     {
-        public override bool IsInvulnerable { get { return true; } }
+        public override bool IsInvulnerable => true;
 
         [Constructable]
         public VelaTheSorceress()
@@ -54,7 +51,7 @@ namespace Server.Engines.VoidPool
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from is PlayerMobile && from.InRange(this.Location, 5))
+            if (from is PlayerMobile && from.InRange(Location, 5))
                 from.SendGump(new VoidPoolRewardGump(this, from as PlayerMobile));
         }
 
@@ -62,8 +59,8 @@ namespace Server.Engines.VoidPool
             : base(serial)
         {
         }
-		
-		public override void GetProperties(ObjectPropertyList list)
+
+        public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
 

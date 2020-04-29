@@ -10,13 +10,9 @@ namespace Server.Items
     {
         private static readonly Dictionary<Mobile, DualWieldTimer> m_Registry = new Dictionary<Mobile, DualWieldTimer>();
 
-        public DualWield()
-        {
-        }
+        public static Dictionary<Mobile, DualWieldTimer> Registry => m_Registry;
 
-        public static Dictionary<Mobile, DualWieldTimer> Registry => m_Registry; 
-		
-        public override int BaseMana => 20; 
+        public override int BaseMana => 20;
 
         public static readonly TimeSpan Duration = TimeSpan.FromSeconds(8);
 
@@ -32,7 +28,7 @@ namespace Server.Items
 
             if (HasRegistry(attacker))
             {
-                var timer = m_Registry[attacker];
+                DualWieldTimer timer = m_Registry[attacker];
 
                 if (timer.DualHitChance < .75)
                 {
@@ -76,11 +72,11 @@ namespace Server.Items
                 m_Registry[from].Stop();
                 m_Registry.Remove(from);
 
-                if(from.Weapon is BaseWeapon)
+                if (from.Weapon is BaseWeapon)
                     ((BaseWeapon)from.Weapon).ProcessingMultipleHits = false;
             }
         }
-        
+
         /// <summary>
         /// Called from BaseWeapon, on successful hit
         /// </summary>

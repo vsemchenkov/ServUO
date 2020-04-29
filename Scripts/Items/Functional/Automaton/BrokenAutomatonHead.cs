@@ -1,5 +1,4 @@
 using System;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -18,14 +17,14 @@ namespace Server.Items
         {
             get
             {
-                if(_Automaton == null)
+                if (_Automaton == null)
                     return typeof(IronIngot);
 
                 return _Automaton.RepairResource;
             }
         }
 
-        public override bool Nontransferable { get { return true; } }
+        public override bool Nontransferable => true;
 
         public BrokenAutomatonHead(KotlAutomaton automaton)
             : base(0x9DB1)
@@ -40,7 +39,7 @@ namespace Server.Items
         {
             if (_Automaton != null)
             {
-                if(_Automaton is BlackrockAutomaton)
+                if (_Automaton is BlackrockAutomaton)
                     list.Add(1157046, String.Format("{0}\t#{1}", _Automaton.Name, "1157178")); // ~1_NAME~'s Broken ~2_TYPE~ Automaton Head
                 else
                     list.Add(1157046, String.Format("{0}\t#{1}", _Automaton.Name, CraftResources.GetLocalizationNumber(_Automaton.Resource).ToString())); // ~1_NAME~'s Broken ~2_TYPE~ Automaton Head
@@ -132,7 +131,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(_Automaton);
         }

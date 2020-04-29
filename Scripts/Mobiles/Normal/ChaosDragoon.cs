@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -114,7 +113,7 @@ namespace Server.Mobiles
 
             int amount = Utility.RandomMinMax(1, 3);
 
-            switch ( res )
+            switch (res)
             {
                 case CraftResource.BlackScales:
                     AddItem(new BlackScales(amount));
@@ -146,34 +145,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool AutoDispel
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool ShowFameTitle
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool AutoDispel => true;
+        public override bool CanRummageCorpses => true;
+        public override bool AlwaysMurderer => true;
+        public override bool ShowFameTitle => false;
         public override int GetIdleSound()
         {
             return 0x2CE;
@@ -218,7 +193,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

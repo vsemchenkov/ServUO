@@ -1,20 +1,18 @@
-using System;
-using Server;
-using Server.Mobiles;
-using System.Collections.Generic;
 using Server.Engines.CityLoyalty;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Items
 {
-	public class BoxOfRopes : Container
-	{
+    public class BoxOfRopes : Container
+    {
         public City City { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public CityLoyaltySystem CitySystem { get { return CityLoyaltySystem.GetCityInstance(City); } set { } }
 
-        public override int LabelNumber { get { return 1152262; } } // a box of ropes
+        public override int LabelNumber => 1152262;  // a box of ropes
 
         public BoxOfRopes(City city) : base(3650)
         {
@@ -29,11 +27,11 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (CityLoyaltySystem.Enabled && CityLoyaltySystem.IsSetup() && from.InRange(this.Location, 3))
+            if (CityLoyaltySystem.Enabled && CityLoyaltySystem.IsSetup() && from.InRange(Location, 3))
             {
                 if (_Cooldown == null || !_Cooldown.ContainsKey(from) || _Cooldown[from] < DateTime.UtcNow)
                 {
-                    var rope = new GuardsmansRope();
+                    GuardsmansRope rope = new GuardsmansRope();
                     from.AddToBackpack(rope);
 
                     from.SendLocalizedMessage(1152263); // You take a rope from the chest. Use it to arrest rioters and subdued raiders.
@@ -70,26 +68,26 @@ namespace Server.Items
             : base(serial)
         {
         }
-		
-		public override void Serialize(GenericWriter writer)
-		{
-			base.Serialize(writer);
-			writer.Write(0);
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0);
 
             writer.Write((int)City);
 
             Defrag();
-		}
-		
-		public override void Deserialize(GenericReader reader)
-		{
-			base.Deserialize(reader);
-			int version = reader.ReadInt();
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
             City = (City)reader.ReadInt();
 
             if (CitySystem != null && CitySystem.Captain != null)
                 CitySystem.Captain.Box = this;
-		}
-	}
+        }
+    }
 }

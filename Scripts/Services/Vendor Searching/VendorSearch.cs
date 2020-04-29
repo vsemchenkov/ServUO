@@ -1,23 +1,21 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.IO;
-
-using Server;
+using Server.Commands;
+using Server.ContextMenus;
+using Server.Engines.Auction;
+using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
-using Server.ContextMenus;
-using Server.Commands;
-using Server.Targeting;
 using Server.Regions;
-using Server.Gumps;
-using Server.Engines.Auction;
+using Server.Targeting;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace Server.Engines.VendorSearching
 {
-	public class VendorSearch
-	{
+    public class VendorSearch
+    {
         public static string FilePath = Path.Combine("Saves/Misc", "VendorSearch.bin");
         public static Ultima.StringList StringList { get; private set; }
 
@@ -61,7 +59,7 @@ namespace Server.Engines.VendorSearching
                                                                                pv.Map != null &&
                                                                                pv.Backpack != null &&
                                                                                pv.VendorSearch &&
-                                                                               pv.Backpack.Items.Count > 0 && 
+                                                                               pv.Backpack.Items.Count > 0 &&
                                                                                (!excludefel || pv.Map != Map.Felucca)))
             {
                 List<Item> items = GetItems(pv);
@@ -120,26 +118,26 @@ namespace Server.Engines.VendorSearching
             return vendorItem;
         }
 
-		public static bool CheckMatch(Item item, int price, SearchCriteria searchCriteria)
-		{
+        public static bool CheckMatch(Item item, int price, SearchCriteria searchCriteria)
+        {
             if (item is CommodityDeed && ((CommodityDeed)item).Commodity != null)
             {
                 item = ((CommodityDeed)item).Commodity;
             }
 
             if (searchCriteria.MinPrice > -1 && price < searchCriteria.MinPrice)
-				return false;
+                return false;
 
             if (searchCriteria.MaxPrice > -1 && price > searchCriteria.MaxPrice)
-				return false;
-			
-			if (!string.IsNullOrEmpty(searchCriteria.SearchName))
-			{
+                return false;
+
+            if (!string.IsNullOrEmpty(searchCriteria.SearchName))
+            {
                 string name;
 
                 if (item is CommodityDeed && ((CommodityDeed)item).Commodity is ICommodity)
                 {
-                    var commodity = (ICommodity)((CommodityDeed)item).Commodity;
+                    ICommodity commodity = (ICommodity)((CommodityDeed)item).Commodity;
 
                     if (!string.IsNullOrEmpty(commodity.Description.String))
                     {
@@ -154,28 +152,28 @@ namespace Server.Engines.VendorSearching
                 {
                     name = GetItemName(item);
                 }
-				
-				if(name == null)
-				{
+
+                if (name == null)
+                {
                     return false; // TODO? REturn null names?
-				}
+                }
 
                 if (!CheckKeyword(searchCriteria.SearchName, item) && name.ToLower().IndexOf(searchCriteria.SearchName.ToLower()) < 0)
                 {
                     return false;
                 }
-			}
+            }
 
             if (searchCriteria.SearchType != Layer.Invalid && searchCriteria.SearchType != item.Layer)
-			{
-				return false;
-			}
-			
-			if(searchCriteria.Details.Count == 0)
-				return true;
-			
-            foreach(SearchDetail detail in searchCriteria.Details)
-			{
+            {
+                return false;
+            }
+
+            if (searchCriteria.Details.Count == 0)
+                return true;
+
+            foreach (SearchDetail detail in searchCriteria.Details)
+            {
                 object o = detail.Attribute;
                 int value = detail.Value;
 
@@ -420,10 +418,10 @@ namespace Server.Engines.VendorSearching
                         return false;
                     }
                 }
-			}
+            }
 
             return true;
-		}
+        }
 
         private static bool CheckSlayer(Item item, object o)
         {
@@ -468,7 +466,7 @@ namespace Server.Engines.VendorSearching
 
             if (item is IResource)
             {
-                var resName = CraftResources.GetName(((IResource)item).Resource);
+                string resName = CraftResources.GetName(((IResource)item).Resource);
 
                 if (resName.ToLower().IndexOf(searchstring.ToLower()) >= 0)
                 {
@@ -478,7 +476,7 @@ namespace Server.Engines.VendorSearching
 
             if (item is ICommodity)
             {
-                var commodity = (ICommodity)item;
+                ICommodity commodity = (ICommodity)item;
 
                 string name = commodity.Description.String;
 
@@ -580,7 +578,7 @@ namespace Server.Engines.VendorSearching
 
                     if (Contexts != null)
                     {
-                        foreach (var kvp in Contexts.Where(kvp => !kvp.Value.IsEmpty))
+                        foreach (KeyValuePair<PlayerMobile, SearchCriteria> kvp in Contexts.Where(kvp => !kvp.Value.IsEmpty))
                         {
                             writer.Write(kvp.Key);
                             kvp.Value.Serialize(writer);
@@ -601,7 +599,7 @@ namespace Server.Engines.VendorSearching
                     for (int i = 0; i < count; i++)
                     {
                         PlayerMobile pm = reader.ReadMobile() as PlayerMobile;
-                        var criteria = new SearchCriteria(reader);
+                        SearchCriteria criteria = new SearchCriteria(reader);
 
                         if (pm != null)
                         {
@@ -831,14 +829,14 @@ namespace Server.Engines.VendorSearching
             return _SearchableContainers.Any(t => t == type || type.IsSubclassOf(t));
         }
 
-        private static Type[] _SearchableContainers =
+        private static readonly Type[] _SearchableContainers =
         {
             typeof(BaseQuiver),         typeof(BaseResourceSatchel),
             typeof(FishBowl),           typeof(FirstAidBelt),
             typeof(Plants.SeedBox),     typeof(BaseSpecialScrollBook),
             typeof(GardenShedBarrel),   typeof(JewelryBox),
         };
-	}
+    }
 
     public enum SortBy
     {
@@ -903,7 +901,7 @@ namespace Server.Engines.VendorSearching
     public class SearchCategory
     {
         public Category Category { get; private set; }
-        public int Label { get { return (int)Category; } }
+        public int Label => (int)Category;
 
         public List<Tuple<object, int, int>> Objects { get; private set; }
 
@@ -1008,10 +1006,7 @@ namespace Server.Engines.VendorSearching
             }*/
         }
 
-        public bool IsEmpty
-        {
-            get { return Details.Count == 0 && !EntryPrice && string.IsNullOrEmpty(SearchName) && SearchType == Layer.Invalid; }
-        }
+        public bool IsEmpty => Details.Count == 0 && !EntryPrice && string.IsNullOrEmpty(SearchName) && SearchType == Layer.Invalid;
 
         public SearchCriteria(GenericReader reader)
         {
@@ -1042,8 +1037,8 @@ namespace Server.Engines.VendorSearching
         {
             writer.Write(2);
 
-            writer.Write((bool)Auction);
-            writer.Write((bool)EntryPrice);
+            writer.Write(Auction);
+            writer.Write(EntryPrice);
             writer.Write((int)SearchType);
             writer.Write(SearchName);
             writer.Write((int)SortBy);
@@ -1118,8 +1113,8 @@ namespace Server.Engines.VendorSearching
             writer.Write(PropLabel);
 
             WriteAttribute(writer);
-            
-            writer.Write(Label);            
+
+            writer.Write(Label);
             writer.Write(Value);
             writer.Write((int)Category);
         }
@@ -1184,7 +1179,7 @@ namespace Server.Engines.VendorSearching
 
             if (o is AosElementAttribute)
                 return (int)AttributeID.AosElementAttribute;
-            
+
             if (o is SkillName)
                 return (int)AttributeID.SkillName;
 

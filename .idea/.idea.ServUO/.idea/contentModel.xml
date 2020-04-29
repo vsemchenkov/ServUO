@@ -6784,7 +6784,6 @@
       </e>
       <e p="Server" t="IncludeRecursive">
         <e p="AggressorInfo.cs" t="Include" />
-        <e p="AnnounceDeath.cs" t="Include" />
         <e p="app.config" t="Include" />
         <e p="AssemblyInfo.cs" t="Include" />
         <e p="Attributes.cs" t="Include" />
@@ -6885,7 +6884,6 @@
         <e p="Notoriety.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="ObjectPropertyList.cs" t="Include" />
-        <e p="packages.config" t="Include" />
         <e p="Party.cs" t="Include" />
         <e p="Persistence" t="Include">
           <e p="BinaryMemoryWriter.cs" t="Include" />

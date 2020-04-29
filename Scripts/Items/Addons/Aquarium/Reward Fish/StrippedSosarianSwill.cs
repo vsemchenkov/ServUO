@@ -1,9 +1,7 @@
-using System;
-
 namespace Server.Items
 {
     public class StrippedSosarianSwill : BaseFish
-    { 
+    {
         [Constructable]
         public StrippedSosarianSwill()
             : base(0x3B0A)
@@ -12,21 +10,15 @@ namespace Server.Items
 
         public StrippedSosarianSwill(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1074594;
-            }
-        }// Stripped Sosarian Swill
+        public override int LabelNumber => 1074594;// Stripped Sosarian Swill
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

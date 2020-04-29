@@ -1,26 +1,25 @@
 using System;
-using Server;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Items
 {
-	public class EnchantedTimepiece : Item
-	{
-		public override int LabelNumber 
-        { 
-            get 
+    public class EnchantedTimepiece : Item
+    {
+        public override int LabelNumber
+        {
+            get
             {
                 int hour, min;
 
-                Clock.GetTime(this.Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
+                Clock.GetTime(Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
 
                 if (hour > 20 || hour < 4)
                     return 1156199; // Moon Dial
 
                 return 1123890; // Sun Dial
                 //return 1077186; 
-            } 
+            }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -41,11 +40,11 @@ namespace Server.Items
             }
         }
 
-		[Constructable]
-		public EnchantedTimepiece() : base(0x9BC6)
-		{
+        [Constructable]
+        public EnchantedTimepiece() : base(0x9BC6)
+        {
             _TimePieces.Add(this);
-		}
+        }
 
         public override void OnDoubleClick(Mobile from)
         {
@@ -62,7 +61,7 @@ namespace Server.Items
         {
             int hour, min;
 
-            Clock.GetTime(this.Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
+            Clock.GetTime(Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
 
             if (hour > 12)
                 hour -= 12;
@@ -77,11 +76,11 @@ namespace Server.Items
         {
             int id = 0x9BC6;
 
-            if (!Movable && this.Map != Map.Internal)
+            if (!Movable && Map != Map.Internal)
             {
                 int hour, min;
 
-                Clock.GetTime(this.Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
+                Clock.GetTime(Map, GetWorldLocation().X, GetWorldLocation().Y, out hour, out min);
 
                 if (hour > 12)
                     hour -= 12;
@@ -100,7 +99,7 @@ namespace Server.Items
                 _TimePieces.Remove(this);
         }
 
-        private static List<EnchantedTimepiece> _TimePieces = new List<EnchantedTimepiece>();
+        private static readonly List<EnchantedTimepiece> _TimePieces = new List<EnchantedTimepiece>();
 
         public static void Initialize()
         {
@@ -113,22 +112,22 @@ namespace Server.Items
                 });
         }
 
-		public EnchantedTimepiece(Serial serial) : base(serial)
-		{
-		}
-		
-		public override void Serialize( GenericWriter writer )
-		{
-			base.Serialize( writer );
-			writer.Write( (int) 0 ); // version
-		}
- 
-		public override void Deserialize( GenericReader reader )
-		{
-			base.Deserialize( reader );
-			int version = reader.ReadInt();
+        public EnchantedTimepiece(Serial serial) : base(serial)
+        {
+        }
+
+        public override void Serialize(GenericWriter writer)
+        {
+            base.Serialize(writer);
+            writer.Write(0); // version
+        }
+
+        public override void Deserialize(GenericReader reader)
+        {
+            base.Deserialize(reader);
+            int version = reader.ReadInt();
 
             _TimePieces.Add(this);
         }
-	}
+    }
 }

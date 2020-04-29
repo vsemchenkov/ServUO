@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -158,16 +158,16 @@ namespace Server.Items
             Movable = false;
             Visible = false;
             Bedrolls = new List<WrongBedrollBase>();
-            MysteriousTunnels = new List<MysteriousTunnel>();            
+            MysteriousTunnels = new List<MysteriousTunnel>();
             Timer.DelayCall(TimeSpan.FromSeconds(10), CheckRespawn);
-            m_Timer = Timer.DelayCall(RestartDelay, RestartDelay, new TimerCallback(CheckRespawn));
+            m_Timer = Timer.DelayCall(RestartDelay, RestartDelay, CheckRespawn);
             m_Timer.Start();
 
             if (Instances == null)
                 Instances = new List<BedrollSpawner>();
 
             Instances.Add(this);
-        }        
+        }
 
         private void CheckRespawn()
         {
@@ -215,7 +215,7 @@ namespace Server.Items
 
                 mt.MoveToWorld(m_OutsideTunnels[i], Map);
                 MysteriousTunnels.Add(mt);
-            }            
+            }
         }
 
         public BedrollSpawner(Serial serial)
@@ -251,7 +251,7 @@ namespace Server.Items
             base.OnDelete();
         }
 
-        public override string DefaultName { get { return "Wrong Bedrolls Spawner " + Map; } }
+        public override string DefaultName => "Wrong Bedrolls Spawner " + Map;
 
         public override void Serialize(GenericWriter writer)
         {
@@ -293,7 +293,7 @@ namespace Server.Items
             if (next < DateTime.UtcNow)
                 next = DateTime.UtcNow;
 
-            m_Timer = Timer.DelayCall(next - DateTime.UtcNow, RestartDelay, new TimerCallback(CheckRespawn));
+            m_Timer = Timer.DelayCall(next - DateTime.UtcNow, RestartDelay, CheckRespawn);
             m_Timer.Start();
 
             Bedrolls = new List<WrongBedrollBase>();
@@ -319,10 +319,10 @@ namespace Server.Items
 
             if (version == 0)
             {
-                Timer.DelayCall<Map>(TimeSpan.FromSeconds(5), map => 
+                Timer.DelayCall(TimeSpan.FromSeconds(5), map =>
                     {
                         EnchantedHotItem.SpawnChests(map);
-                        Console.WriteLine("Hot Item chests spawned for {0}.", this.Map);
+                        Console.WriteLine("Hot Item chests spawned for {0}.", Map);
                     }, Map);
             }
         }
@@ -338,8 +338,8 @@ namespace Server.Items
                 m_Type = type;
             }
 
-            public Point3D Location { get { return m_Location; } }
-            public Type Type { get { return m_Type; } }
+            public Point3D Location => m_Location;
+            public Type Type => m_Type;
         }
     }
 }

@@ -1,23 +1,20 @@
-using System;
-using Server;
-using System.Collections.Generic;
-using Server.Spells;
-using Server.Network;
 using Server.Mobiles;
+using Server.Network;
+using System;
 
 namespace Server.Spells.SkillMasteries
 {
     public class WarcrySpell : SkillMasterySpell
     {
-        private static SpellInfo m_Info = new SpellInfo(
+        private static readonly SpellInfo m_Info = new SpellInfo(
 
             "Warcry", "",
                 -1,
                 9002
             );
 
-        public override int RequiredMana { get { return 40; } }
-        public override SkillName CastSkill { get { return SkillName.Bushido; } }
+        public override int RequiredMana => 40;
+        public override SkillName CastSkill => SkillName.Bushido;
 
         private int _DamageMalus;
         private int _Radius;
@@ -34,7 +31,7 @@ namespace Server.Spells.SkillMasteries
                 int skill = (int)(Caster.Skills[CastSkill].Value + GetWeaponSkill() + (GetMasteryLevel() * 40)) / 3;
 
                 _Radius = skill / 40;
-                _DamageMalus = (int)((double)skill / 2.4);
+                _DamageMalus = (int)(skill / 2.4);
 
                 Caster.PublicOverheadMessage(MessageType.Regular, Caster.SpeechHue, false, "Prepare Yourself!");
 
@@ -71,7 +68,7 @@ namespace Server.Spells.SkillMasteries
         {
             if (attacker.InRange(Caster, _Radius))
             {
-                damage -= (int)((double)damage * ((double)_DamageMalus / 100.00));
+                damage -= (int)(damage * (_DamageMalus / 100.00));
 
                 if (Caster.Player)
                 {

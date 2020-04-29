@@ -1,23 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
-using Server;
-using Server.Items;
-using Server.Misc;
-using Server.Mobiles;
-using Server.Network;
-using Server.Engines.CannedEvil;
-using Server.Engines.SeasonalEvents;
 using Server.Engines.Points;
+using Server.Engines.SeasonalEvents;
+using Server.Items;
+using Server.Mobiles;
+using System;
 
 namespace Server.Misc
 {
     public class VirtueArtifactsSystem : PointsSystem
     {
-        public static bool Enabled { get { return SeasonalEventSystem.IsActive(EventType.VirtueArtifacts); } }
+        public static bool Enabled => SeasonalEventSystem.IsActive(EventType.VirtueArtifacts);
 
-        private static Type[] m_VirtueArtifacts = new Type[]
+        private static readonly Type[] m_VirtueArtifacts = new Type[]
             {
                 typeof( KatrinasCrook ), typeof( JaanasStaff ), typeof( DragonsEnd ), typeof( AnkhPendant ),
                 typeof( SentinelsGuard ), typeof( LordBlackthornsExemplar ), typeof( MapOfTheKnownWorld ), typeof( TenthAnniversarySculpture ),
@@ -25,28 +18,24 @@ namespace Server.Misc
                 typeof( SpiritualityHelm ), typeof( HonorLegs ), typeof( SacrificeSollerets )
             };
 
-        public static Type[] Artifacts { get { return m_VirtueArtifacts; } }
+        public static Type[] Artifacts => m_VirtueArtifacts;
 
-        public override PointsType Loyalty { get { return PointsType.VAS; } }
-        public override TextDefinition Name { get { return m_Name; } }
-        public override bool AutoAdd { get { return true; } }
-        public override double MaxPoints { get { return double.MaxValue; } }
-        public override bool ShowOnLoyaltyGump { get { return false; } }
+        public override PointsType Loyalty => PointsType.VAS;
+        public override TextDefinition Name => m_Name;
+        public override bool AutoAdd => true;
+        public override double MaxPoints => double.MaxValue;
+        public override bool ShowOnLoyaltyGump => false;
 
-        private TextDefinition m_Name = new TextDefinition("Virtue Artifact System");
-
-        public VirtueArtifactsSystem()
-        {
-        }
+        private readonly TextDefinition m_Name = new TextDefinition("Virtue Artifact System");
 
         private bool CheckLocation(Mobile m)
         {
             Region r = m.Region;
 
-	        if (m is BaseCreature && ((BaseCreature)m).IsChampionSpawn)
-		        return false;
-	        
-	        if (r.IsPartOf<Server.Regions.HouseRegion>() || Server.Multis.BaseBoat.FindBoatAt(m, m.Map) != null)
+            if (m is BaseCreature && ((BaseCreature)m).IsChampionSpawn)
+                return false;
+
+            if (r.IsPartOf<Server.Regions.HouseRegion>() || Server.Multis.BaseBoat.FindBoatAt(m, m.Map) != null)
                 return false;
 
             return (r.IsPartOf("Covetous") || r.IsPartOf("Deceit") || r.IsPartOf("Despise") || r.IsPartOf("Destard") ||
@@ -76,7 +65,7 @@ namespace Server.Misc
             int luck = Math.Max(0, pm.RealLuck);
             AwardPoints(pm, (int)Math.Max(0, (bc.Fame * (1 + Math.Sqrt(luck) / 100))));
 
-            var vapoints = GetPoints(pm);
+            double vapoints = GetPoints(pm);
             const double A = 0.000863316841;
             const double B = 0.00000425531915;
 

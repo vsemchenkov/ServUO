@@ -1,11 +1,9 @@
-﻿using Server;
-using System;
-using Server.Mobiles;
-using Server.Gumps;
-using System.Collections.Generic;
-using Server.Network;
-using Server.Engines.Quests;
+﻿using Server.Engines.Quests;
 using Server.Engines.VendorSearching;
+using Server.Gumps;
+using Server.Mobiles;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -28,7 +26,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -42,8 +40,8 @@ namespace Server.Items
     {
         public int Index { get; set; }
 
-        private int darkHue = 19686;
-        private int lightHue = 19884;
+        private readonly int darkHue = 19686;
+        private readonly int lightHue = 19884;
 
         public BountyBoardGump(Mobile from, int index = 0)
             : base(from as PlayerMobile, 20, 20)
@@ -95,7 +93,7 @@ namespace Server.Items
 
                 if (User.NetState != null && User.NetState.IsEnhancedClient && VendorSearch.StringList != null)
                 {
-                    var strList = VendorSearch.StringList;
+                    Ultima.StringList strList = VendorSearch.StringList;
 
                     args = String.Format("{0} {1} {2}", strList.GetString(capt.Adjective), strList.GetString(capt.Noun), capt.PirateName > 0 ? strList.GetString(capt.PirateName) : capt.Name);
 

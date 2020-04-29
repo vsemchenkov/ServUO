@@ -1,10 +1,8 @@
-using System;
-
 namespace Server.Items
 {
     public class HatOfTheMagi : WizardsHat
-	{
-		public override bool IsArtifact { get { return true; } }
+    {
+        public override bool IsArtifact => true;
         [Constructable]
         public HatOfTheMagi()
         {
@@ -19,53 +17,17 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1061597;
-            }
-        }// Hat of the Magi
-        public override int ArtifactRarity
-        {
-            get
-            {
-                return 11;
-            }
-        }
-        public override int BasePoisonResistance
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int BaseEnergyResistance
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int InitMinHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 255;
-            }
-        }
+        public override int LabelNumber => 1061597;// Hat of the Magi
+        public override int ArtifactRarity => 11;
+        public override int BasePoisonResistance => 20;
+        public override int BaseEnergyResistance => 20;
+        public override int InitMinHits => 255;
+        public override int InitMaxHits => 255;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -74,12 +36,12 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
-                        this.Resistances.Poison = 0;
-                        this.Resistances.Energy = 0;
+                        Resistances.Poison = 0;
+                        Resistances.Energy = 0;
                         break;
                     }
             }

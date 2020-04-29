@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -21,7 +20,7 @@ namespace Server.Mobiles
 
             SetHits(386, 609);
 
-            SetDamage(17, 20);  
+            SetDamage(17, 20);
 
             SetDamageType(ResistanceType.Energy, 20);
             SetDamageType(ResistanceType.Cold, 40);
@@ -48,7 +47,7 @@ namespace Server.Mobiles
             }
         }
 
-        public override bool GivesMLMinorArtifact => true; 
+        public override bool GivesMLMinorArtifact => true;
 
         public Mistral(Serial serial)
             : base(serial)
@@ -74,7 +73,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

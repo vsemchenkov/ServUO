@@ -1,5 +1,5 @@
-using System;
 using Server.Network;
+using System;
 
 namespace Server.Items
 {
@@ -15,13 +15,7 @@ namespace Server.Items
         {
         }
 
-        public override ArmorMaterialType MaterialType
-        {
-            get
-            {
-                return ArmorMaterialType.Plate;
-            }
-        }
+        public override ArmorMaterialType MaterialType => ArmorMaterialType.Plate;
 
         public override double ArmorRating
         {
@@ -43,7 +37,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);//version
+            writer.Write(1);//version
         }
 
         public override void Deserialize(GenericReader reader)

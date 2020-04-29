@@ -1,15 +1,13 @@
-using System;
-using System.Linq;
-
-using Server;
 using Server.Gumps;
 using Server.Multis;
+using System;
+using System.Linq;
 
 namespace Server.Items
 {
     public class DragonCannon : BaseAddon
     {
-        public override BaseAddonDeed Deed { get { return new DragonCannonDeed(); } }
+        public override BaseAddonDeed Deed => new DragonCannonDeed();
 
         [Constructable]
         public DragonCannon()
@@ -65,8 +63,8 @@ namespace Server.Items
 
     public class DragonCannonDeed : BaseAddonDeed, IRewardOption
     {
-        public override int LabelNumber { get { return 1158926; } } // Decorative Dragon Cannon
-        public override BaseAddon Addon { get { return new DragonCannon(_Direction); } }
+        public override int LabelNumber => 1158926;  // Decorative Dragon Cannon
+        public override BaseAddon Addon => new DragonCannon(_Direction);
 
         private DirectionType _Direction;
 
@@ -246,7 +244,7 @@ namespace Server.Items
     [Flipable(0xA2C8, 0xA2C9)]
     public class PirateWallMap : Item
     {
-        public override int LabelNumber { get { return 1158938; } } // Pirate Wall Map
+        public override int LabelNumber => 1158938;  // Pirate Wall Map
 
         [Constructable]
         public PirateWallMap()
@@ -258,7 +256,7 @@ namespace Server.Items
         {
             if (m.InRange(GetWorldLocation(), 2))
             {
-                var gump = new Gump(50, 50);
+                Gump gump = new Gump(50, 50);
                 gump.AddImage(0, 0, 0x9CE9);
 
                 m.SendGump(gump);
@@ -285,7 +283,7 @@ namespace Server.Items
     [Flipable(0xA2C6, 0xA2C7)]
     public class MysteriousStatue : Item
     {
-        public override int LabelNumber { get { return 1158935; } } // Mysterious Statue
+        public override int LabelNumber => 1158935;  // Mysterious Statue
 
         [Constructable]
         public MysteriousStatue()
@@ -345,7 +343,7 @@ namespace Server.Items
 
         public void AssignRandomName()
         {
-            var list = BaseBoat.Boats.Where(b => !String.IsNullOrEmpty(b.ShipName)).Select(x => x.ShipName).ToList();
+            System.Collections.Generic.List<string> list = BaseBoat.Boats.Where(b => !String.IsNullOrEmpty(b.ShipName)).Select(x => x.ShipName).ToList();
 
             if (list.Count > 0)
             {
@@ -360,7 +358,7 @@ namespace Server.Items
             ColUtility.Free(list);
         }
 
-        private static string[] _ShipNames =
+        private static readonly string[] _ShipNames =
         {
             "Adventure Galley",
             "Queen Anne's Revenge",
@@ -432,7 +430,7 @@ namespace Server.Items
 
     public class QuartermasterRewardDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return 1158951; } } // Quartermaster
+        public override TextDefinition Title => 1158951;  // Quartermaster
 
         [Constructable]
         public QuartermasterRewardDeed()
@@ -459,7 +457,7 @@ namespace Server.Items
 
     public class SailingMasterRewardDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return 1158950; } } // Sailing Master
+        public override TextDefinition Title => 1158950;  // Sailing Master
 
         [Constructable]
         public SailingMasterRewardDeed()
@@ -486,7 +484,7 @@ namespace Server.Items
 
     public class BotswainRewardDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return 1158949; } } // Botswain
+        public override TextDefinition Title => 1158949;  // Botswain
 
         [Constructable]
         public BotswainRewardDeed()
@@ -513,7 +511,7 @@ namespace Server.Items
 
     public class PowderMonkeyRewardDeed : BaseRewardTitleDeed
     {
-        public override TextDefinition Title { get { return 1158948; } } // Powder Monkey
+        public override TextDefinition Title => 1158948;  // Powder Monkey
 
         [Constructable]
         public PowderMonkeyRewardDeed()
@@ -540,7 +538,7 @@ namespace Server.Items
 
     public class SpikedWhipOfPlundering : SpikedWhip
     {
-        public override int LabelNumber { get { return 1158925; } } // Spiked Whip of Plundering
+        public override int LabelNumber => 1158925;  // Spiked Whip of Plundering
 
         [Constructable]
         public SpikedWhipOfPlundering()
@@ -572,7 +570,7 @@ namespace Server.Items
 
     public class BladedWhipOfPlundering : BladedWhip
     {
-        public override int LabelNumber { get { return 1158924; } } // Bladed Whip of Plundering
+        public override int LabelNumber => 1158924;  // Bladed Whip of Plundering
 
         [Constructable]
         public BladedWhipOfPlundering()
@@ -604,7 +602,7 @@ namespace Server.Items
 
     public class BarbedWhipOfPlundering : BarbedWhip
     {
-        public override int LabelNumber { get { return 1158923; } } // Barbed Whip of Plundering
+        public override int LabelNumber => 1158923;  // Barbed Whip of Plundering
 
         [Constructable]
         public BarbedWhipOfPlundering()

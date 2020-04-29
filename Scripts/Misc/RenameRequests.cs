@@ -1,6 +1,5 @@
-using System;
-
 using Server.Mobiles;
+using System;
 
 namespace Server.Misc
 {
@@ -8,7 +7,7 @@ namespace Server.Misc
     {
         public static void Initialize()
         {
-            EventSink.RenameRequest += new RenameRequestEventHandler(EventSink_RenameRequest);
+            EventSink.RenameRequest += EventSink_RenameRequest;
         }
 
         private static void EventSink_RenameRequest(RenameRequestEventArgs e)
@@ -21,12 +20,12 @@ namespace Server.Misc
             {
                 name = name.Trim();
 
-                var numExceptions = 0;
-                var exceptions = NameVerification.Empty;
+                int numExceptions = 0;
+                char[] exceptions = NameVerification.Empty;
 
                 if (targ is BaseCreature)
                 {
-                    exceptions = new char[] { ' ' };
+                    exceptions = new[] { ' ' };
                     numExceptions = 5;
                 }
 

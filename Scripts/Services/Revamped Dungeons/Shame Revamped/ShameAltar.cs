@@ -1,10 +1,6 @@
-using System;
-using Server;
-using Server.Mobiles;
 using Server.Engines.Points;
-using Server.Items;
-using System.Collections.Generic;
-using System.Linq;
+using Server.Mobiles;
+using System;
 
 namespace Server.Engines.ShameRevamped
 {
@@ -48,8 +44,8 @@ namespace Server.Engines.ShameRevamped
 
         public Timer DeadLineTimer { get; set; }
 
-        public override int LabelNumber { get { return 1151636; } } // Guardian's Altar
-        public override bool ForceShowProperties { get { return true; } }
+        public override int LabelNumber => 1151636;  // Guardian's Altar
+        public override bool ForceShowProperties => true;
 
         public ShameAltar(Type type, Point3D teleLoc, Point3D teleDest, Point3D spawnLoc, int cost, bool active = true)
             : base(13801)
@@ -75,12 +71,12 @@ namespace Server.Engines.ShameRevamped
             base.OnMapChange();
 
             if (Teleporter != null)
-                Teleporter.Map = this.Map;
+                Teleporter.Map = Map;
         }
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (Active && from.InRange(this.Location, 3))
+            if (Active && from.InRange(Location, 3))
                 CheckSummon(from);
         }
 
@@ -112,7 +108,7 @@ namespace Server.Engines.ShameRevamped
         {
             Guardian = Activator.CreateInstance(GuardianType) as ShameGuardian;
             Guardian.Altar = this;
-            Guardian.MoveToWorld(SpawnLocation, this.Map);
+            Guardian.MoveToWorld(SpawnLocation, Map);
 
             Guardian.Home = SpawnLocation;
             Guardian.RangeHome = 8;
@@ -136,13 +132,13 @@ namespace Server.Engines.ShameRevamped
         }
 
         public void StartDeadlineTimer()
-		{
-			if(DeadLineTimer != null)
-				DeadLineTimer.Stop();
-		
-			DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), CheckDeadLine);
-			DeadLineTimer.Start();
-		}
+        {
+            if (DeadLineTimer != null)
+                DeadLineTimer.Stop();
+
+            DeadLineTimer = Timer.DelayCall(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1), CheckDeadLine);
+            DeadLineTimer.Start();
+        }
 
         public void EndDeadLineTimer()
         {
@@ -168,10 +164,10 @@ namespace Server.Engines.ShameRevamped
             if (Teleporter != null)
                 Teleporter.Delete();
 
-            if (this.Map == null || this.Map == Map.Internal)
+            if (Map == null || Map == Map.Internal)
                 return;
 
-            IPooledEnumerable eable = this.Map.GetItemsInRange(TeleporterLocation, 0);
+            IPooledEnumerable eable = Map.GetItemsInRange(TeleporterLocation, 0);
             foreach (Item item in eable)
             {
                 if (item is ShameTeleporter)
@@ -179,8 +175,8 @@ namespace Server.Engines.ShameRevamped
             }
             eable.Free();
 
-            Teleporter = new ShameTeleporter(TeleporterDestination, this.Map);
-            Teleporter.MoveToWorld(TeleporterLocation, this.Map);
+            Teleporter = new ShameTeleporter(TeleporterDestination, Map);
+            Teleporter.MoveToWorld(TeleporterLocation, Map);
         }
 
         public ShameAltar(Serial serial)
@@ -191,7 +187,7 @@ namespace Server.Engines.ShameRevamped
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(Teleporter);
             writer.Write(TeleporterLocation);

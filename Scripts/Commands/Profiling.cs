@@ -1,7 +1,7 @@
+using Server.Diagnostics;
 using System;
 using System.Collections;
 using System.IO;
-using Server.Diagnostics;
 
 namespace Server.Commands
 {
@@ -9,13 +9,13 @@ namespace Server.Commands
     {
         public static void Initialize()
         {
-            CommandSystem.Register("DumpTimers", AccessLevel.Administrator, new CommandEventHandler(DumpTimers_OnCommand));
-            CommandSystem.Register("CountObjects", AccessLevel.Administrator, new CommandEventHandler(CountObjects_OnCommand));
-            CommandSystem.Register("ProfileWorld", AccessLevel.Administrator, new CommandEventHandler(ProfileWorld_OnCommand));
-            CommandSystem.Register("TraceInternal", AccessLevel.Administrator, new CommandEventHandler(TraceInternal_OnCommand));
-            CommandSystem.Register("TraceExpanded", AccessLevel.Administrator, new CommandEventHandler(TraceExpanded_OnCommand));
-            CommandSystem.Register("WriteProfiles", AccessLevel.Administrator, new CommandEventHandler(WriteProfiles_OnCommand));
-            CommandSystem.Register("SetProfiles", AccessLevel.Administrator, new CommandEventHandler(SetProfiles_OnCommand));
+            CommandSystem.Register("DumpTimers", AccessLevel.Administrator, DumpTimers_OnCommand);
+            CommandSystem.Register("CountObjects", AccessLevel.Administrator, CountObjects_OnCommand);
+            CommandSystem.Register("ProfileWorld", AccessLevel.Administrator, ProfileWorld_OnCommand);
+            CommandSystem.Register("TraceInternal", AccessLevel.Administrator, TraceInternal_OnCommand);
+            CommandSystem.Register("TraceExpanded", AccessLevel.Administrator, TraceExpanded_OnCommand);
+            CommandSystem.Register("WriteProfiles", AccessLevel.Administrator, WriteProfiles_OnCommand);
+            CommandSystem.Register("SetProfiles", AccessLevel.Administrator, SetProfiles_OnCommand);
         }
 
         [Usage("WriteProfiles")]
@@ -93,7 +93,7 @@ namespace Server.Commands
                 {
                     Type type = item.GetType();
 
-                    object o = (object)table[type];
+                    object o = table[type];
 
                     if (o == null)
                         table[type] = 1;
@@ -109,7 +109,7 @@ namespace Server.Commands
                 {
                     Type type = m.GetType();
 
-                    object o = (object)table[type];
+                    object o = table[type];
 
                     if (o == null)
                         table[type] = 1;
@@ -362,8 +362,8 @@ namespace Server.Commands
                 DictionaryEntry a = (DictionaryEntry)x;
                 DictionaryEntry b = (DictionaryEntry)y;
 
-                int aCount = this.GetCount(a.Value);
-                int bCount = this.GetCount(b.Value);
+                int aCount = GetCount(a.Value);
+                int bCount = GetCount(b.Value);
 
                 int v = -aCount.CompareTo(bCount);
 

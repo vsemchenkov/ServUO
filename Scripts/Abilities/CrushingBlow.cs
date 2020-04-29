@@ -1,5 +1,3 @@
-
-
 namespace Server.Items
 {
     /// <summary>
@@ -7,17 +5,13 @@ namespace Server.Items
     /// </summary>
     public class CrushingBlow : WeaponAbility
     {
-        public CrushingBlow()
-        {
-        }
-
         public override int BaseMana => 20;
 
         public override double DamageScalar => 1.5;
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);

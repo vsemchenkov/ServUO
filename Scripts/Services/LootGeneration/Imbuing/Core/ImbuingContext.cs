@@ -1,11 +1,8 @@
-using System;
-using Server;
-
 namespace Server
 {
     public class ImbuingContext
     {
-        public Mobile Player { get; private set; }       
+        public Mobile Player { get; private set; }
         public Item LastImbued { get; set; }
         public int Imbue_Mod { get; set; }
         public int Imbue_ModInt { get; set; }
@@ -35,7 +32,7 @@ namespace Server
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(LastImbued);
             writer.Write(Imbue_Mod);

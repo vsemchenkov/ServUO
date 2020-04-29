@@ -1,23 +1,22 @@
-using Server;
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
 
 namespace Server.Items
 {
     public class IngredientDropEntry
     {
-        private Type m_CreatureType;
-        private bool m_DropMultiples;
-        private string m_Region;
-        private double m_Chance;
-        private Type[] m_Ingredients;
+        private readonly Type m_CreatureType;
+        private readonly bool m_DropMultiples;
+        private readonly string m_Region;
+        private readonly double m_Chance;
+        private readonly Type[] m_Ingredients;
 
-        public Type CreatureType { get { return m_CreatureType; } }
-        public bool DropMultiples { get { return m_DropMultiples; } }
-        public string Region { get { return m_Region; } }
-        public double Chance { get { return m_Chance; } }
-        public Type[] Ingredients { get { return m_Ingredients; } }
+        public Type CreatureType => m_CreatureType;
+        public bool DropMultiples => m_DropMultiples;
+        public string Region => m_Region;
+        public double Chance => m_Chance;
+        public Type[] Ingredients => m_Ingredients;
 
         public IngredientDropEntry(Type creature, bool dropMultiples, double chance, params Type[] ingredients)
             : this(creature, dropMultiples, null, chance, ingredients)
@@ -34,7 +33,7 @@ namespace Server.Items
         }
 
         private static List<IngredientDropEntry> m_IngredientTable;
-        public static List<IngredientDropEntry> IngredientTable { get { return m_IngredientTable; } }
+        public static List<IngredientDropEntry> IngredientTable => m_IngredientTable;
 
         public static void Initialize()
         {
@@ -241,12 +240,12 @@ namespace Server.Items
             }
         }
 
-        public static Type[] ImbuingGems = 
+        public static Type[] ImbuingGems =
         {
-            typeof(FireRuby), 
-            typeof(WhitePearl), 
-            typeof(BlueDiamond), 
-			typeof(Turquoise)
+            typeof(FireRuby),
+            typeof(WhitePearl),
+            typeof(BlueDiamond),
+            typeof(Turquoise)
         };
     }
 }

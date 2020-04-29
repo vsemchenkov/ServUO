@@ -1,12 +1,9 @@
-using Server;
-using System;
-
 namespace Server.Items
 {
     public class DoubletBearingTheCrestOfBlackthorn : Doublet
     {
-        public override bool IsArtifact { get { return true; } }
-        
+        public override bool IsArtifact => true;
+
         [Constructable]
         public DoubletBearingTheCrestOfBlackthorn()
             : base()
@@ -19,20 +16,8 @@ namespace Server.Items
             Hue = 0xe8;
         }
 
-        public override int InitMinHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 150;
-            }
-        }
+        public override int InitMinHits => 150;
+        public override int InitMaxHits => 150;
 
         public DoubletBearingTheCrestOfBlackthorn(Serial serial)
             : base(serial)

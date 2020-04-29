@@ -1,9 +1,7 @@
-using System;
-
 namespace Server.Items
 {
     public class YellowFinBluebelly : BaseFish
-    { 
+    {
         [Constructable]
         public YellowFinBluebelly()
             : base(0x3B07)
@@ -12,21 +10,15 @@ namespace Server.Items
 
         public YellowFinBluebelly(Serial serial)
             : base(serial)
-        { 
+        {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1073831;
-            }
-        }// A Yellow Fin Bluebelly  
+        public override int LabelNumber => 1073831;// A Yellow Fin Bluebelly  
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -5,10 +5,6 @@ namespace Server.Items
 {
     public class ForceOfNature : WeaponAbility
     {
-        public ForceOfNature()
-        {
-        }
-
         public override int BaseMana => 35;
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
@@ -34,7 +30,7 @@ namespace Server.Items
             m_Table[attacker] = t;
         }
 
-        private static Dictionary<Mobile, ForceOfNatureTimer> m_Table = new Dictionary<Mobile, ForceOfNatureTimer>();
+        private static readonly Dictionary<Mobile, ForceOfNatureTimer> m_Table = new Dictionary<Mobile, ForceOfNatureTimer>();
 
         public static bool Remove(Mobile m)
         {
@@ -90,7 +86,7 @@ namespace Server.Items
 
         private class ForceOfNatureTimer : Timer
         {
-            private Mobile m_Target, m_From;
+            private readonly Mobile m_Target, m_From;
 
             private DateTime m_LastHit;
             private int m_Tick, m_Hits;
@@ -116,7 +112,7 @@ namespace Server.Items
 
                 if (!m_From.Alive || !m_Target.Alive || m_Target.Map != m_From.Map || m_Target.GetDistanceToSqrt(m_From.Location) > 10 || m_LastHit + TimeSpan.FromSeconds(20) < DateTime.Now || m_Tick > 36)
                 {
-                    Server.Items.ForceOfNature.Remove(m_From);
+                    Remove(m_From);
                     return;
                 }
 

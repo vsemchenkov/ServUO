@@ -1,6 +1,3 @@
-using System;
-using Server.Items;
-
 namespace Server.Mobiles
 {
     [CorpseName("a hell cat corpse")]
@@ -51,34 +48,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Hides
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Spined;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override PackInstinct PackInstinct
-        {
-            get
-            {
-                return PackInstinct.Feline;
-            }
-        }
+        public override int Hides => 10;
+        public override HideType HideType => HideType.Spined;
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override PackInstinct PackInstinct => PackInstinct.Feline;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Meager);
@@ -87,7 +60,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

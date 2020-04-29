@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     [Flipable(0xA3DE, 0xA3DF)]
@@ -10,7 +8,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public string DisplayName { get { return _DisplayName; } set { _DisplayName = value; InvalidateProperties(); } }
 
-        public override int LabelNumber { get { return 1159146; } } // Copper Wings
+        public override int LabelNumber => 1159146;  // Copper Wings
 
         [Constructable]
         public CopperWings()
@@ -53,7 +51,7 @@ namespace Server.Items
             _DisplayName = reader.ReadString();
         }
 
-        private static string[] _Names =
+        private static readonly string[] _Names =
         {
             "Hook's Pirate War", "Endless Struggle Between Platinum And Crimson", "Ophidian War", "Battle Of The Bloody Plains", "Expedition Against Khal Ankur", "Evacuation Of Haven", "Defeat Of Virtuebane", "Siege Of Ver Lor Reg",
             "Assault On The Temple Of The Abyss", "Fall Of Trinsic", "Despise Onslaught"

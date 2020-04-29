@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a dire wolf corpse")]
@@ -8,7 +6,7 @@ namespace Server.Mobiles
     {
         [Constructable]
         public DireWolf()
-            : base(AIType.AI_Melee,FightMode.Closest, 10, 1, 0.2, 0.4)
+            : base(AIType.AI_Melee, FightMode.Closest, 10, 1, 0.2, 0.4)
         {
             Name = "a dire wolf";
             Body = 23;
@@ -60,45 +58,15 @@ namespace Server.Mobiles
             return base.IsEnemy(m);
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 7;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Spined;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override PackInstinct PackInstinct
-        {
-            get
-            {
-                return PackInstinct.Canine;
-            }
-        }
+        public override int Meat => 1;
+        public override int Hides => 7;
+        public override HideType HideType => HideType.Spined;
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override PackInstinct PackInstinct => PackInstinct.Canine;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

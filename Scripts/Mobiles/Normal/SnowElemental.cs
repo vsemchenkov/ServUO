@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -38,8 +37,8 @@ namespace Server.Mobiles
             Fame = 5000;
             Karma = -5000;
 
-			PackItem(new BlackPearl(3));
-			PackItem(new IronOre(3));
+            PackItem(new BlackPearl(3));
+            PackItem(new IronOre(3));
 
             SetAreaEffect(AreaEffect.AuraDamage);
         }
@@ -49,20 +48,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool BleedImmune
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 2;
-            }
-        }
+        public override bool BleedImmune => true;
+        public override int TreasureMapLevel => 2;
 
         public void AuraEffect(Mobile m)
         {
@@ -80,7 +67,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,12 +1,10 @@
-using Server;
-using System;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Network;
+using Server.Prompts;
+using Server.Spells.Chivalry;
 using Server.Spells.Fourth;
 using Server.Spells.Seventh;
-using Server.Spells.Chivalry;
-using Server.Prompts;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Server.Gumps
@@ -22,7 +20,7 @@ namespace Server.Gumps
             {
                 string desc;
                 if (i < Book.Entries.Count)
-                    desc = GetName(((RunebookEntry)Book.Entries[i]).Description);
+                    desc = GetName(Book.Entries[i].Description);
                 else
                     desc = "Empty";
 
@@ -40,7 +38,7 @@ namespace Server.Gumps
             {
                 if (i < Book.Entries.Count)
                 {
-                    RunebookEntry e = (RunebookEntry)Book.Entries[i];
+                    RunebookEntry e = Book.Entries[i];
 
                     Intern(GetLocation(e), false);
                 }
@@ -159,7 +157,7 @@ namespace Server.Gumps
 
                 if (i < entries.Count)
                 {
-                    hue = GetMapHue(((RunebookEntry)entries[i]).Map);
+                    hue = GetMapHue(entries[i].Map);
                 }
                 else
                 {
@@ -193,7 +191,7 @@ namespace Server.Gumps
                 {
                     if (Book.Entries.ElementAtOrDefault(index) != null)
                     {
-                        RunebookEntry e = (RunebookEntry)Book.Entries[index];
+                        RunebookEntry e = Book.Entries[index];
 
                         // Description label
                         AddLabelCroppedIntern(145 + (half * 160), 60, 115, 17, GetMapHue(e.Map), index + 2);
@@ -264,7 +262,7 @@ namespace Server.Gumps
 
         private class InternalPrompt : Prompt
         {
-            public override int MessageCliloc { get { return 502414; } } // Please enter a title for the runebook:
+            public override int MessageCliloc => 502414;  // Please enter a title for the runebook:
             private readonly Runebook m_Book;
 
             public InternalPrompt(Runebook book)
@@ -363,7 +361,7 @@ namespace Server.Gumps
                 {
                     if (index >= 0 && index < Book.Entries.Count)
                     {
-                        RunebookEntry e = (RunebookEntry)Book.Entries[index];
+                        RunebookEntry e = Book.Entries[index];
 
                         switch (type)
                         {

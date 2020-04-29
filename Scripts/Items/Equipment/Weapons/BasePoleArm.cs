@@ -1,7 +1,6 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Engines.Harvest;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -25,16 +24,16 @@ namespace Server.Items
         public override WeaponType DefType => WeaponType.Polearm;
 
         public override WeaponAnimation DefAnimation => WeaponAnimation.Slash2H;
-        
+
         public virtual HarvestSystem HarvestSystem => Lumberjacking.System;
-       
+
         public override void OnDoubleClick(Mobile from)
         {
-            if (this.HarvestSystem == null)
+            if (HarvestSystem == null)
                 return;
 
-            if (this.IsChildOf(from.Backpack) || this.Parent == from)
-                this.HarvestSystem.BeginHarvesting(from, this);
+            if (IsChildOf(from.Backpack) || Parent == from)
+                HarvestSystem.BeginHarvesting(from, this);
             else
                 from.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
         }
@@ -43,14 +42,14 @@ namespace Server.Items
         {
             base.GetContextMenuEntries(from, list);
 
-            if (this.HarvestSystem != null)
-                BaseHarvestTool.AddContextMenuEntries(from, this, list, this.HarvestSystem);
+            if (HarvestSystem != null)
+                BaseHarvestTool.AddContextMenuEntries(from, this, list, HarvestSystem);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)3); // version
+            writer.Write(3); // version
         }
 
         public override void Deserialize(GenericReader reader)

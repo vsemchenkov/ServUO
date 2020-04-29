@@ -1,6 +1,6 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using Server.Items;
 
 namespace Server.Spells.Spellweaving
 {
@@ -10,33 +10,15 @@ namespace Server.Spells.Spellweaving
             "Immolating Weapon", "Thalshara",
             -1);
         private static readonly Dictionary<Mobile, ImmolatingWeaponEntry> m_WeaponDamageTable = new Dictionary<Mobile, ImmolatingWeaponEntry>();
-        
+
         public ImmolatingWeaponSpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(1.0);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 10.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 32;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.0);
+        public override double RequiredSkill => 10.0;
+        public override int RequiredMana => 32;
         public static bool IsImmolating(Mobile m, BaseWeapon weapon)
         {
             if (m == null)

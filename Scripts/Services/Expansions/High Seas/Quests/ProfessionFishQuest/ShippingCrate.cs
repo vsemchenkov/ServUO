@@ -1,8 +1,7 @@
-using System;
-using Server;
-using System.Collections.Generic;
 using Server.Engines.Quests;
 using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -46,8 +45,8 @@ namespace Server.Items
             }
         }
 
-        public override int DefaultMaxWeight { get { return 1200; } }
-        public override bool DisplaysContent { get { return false; } }
+        public override int DefaultMaxWeight => 1200;
+        public override bool DisplaysContent => false;
 
         public ShippingCrate(ProfessionalFisherQuest quest)
         {
@@ -262,7 +261,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

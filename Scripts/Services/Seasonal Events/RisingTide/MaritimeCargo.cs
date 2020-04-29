@@ -1,10 +1,5 @@
-using System;
-
-using Server;
-using Server.Items;
-using Server.Mobiles;
 using Server.Engines.CityLoyalty;
-using Server.Engines.RisingTide;
+using System;
 
 namespace Server.Items
 {
@@ -27,8 +22,6 @@ namespace Server.Items
         Reagents = 1156,
         Glassware = 1158,
     }
-
-    // 1158907 You recover maritime trade cargo!
 
     [Flipable(0xA2C4, 0xA2C5)]
     public class MaritimeCargo : Item
@@ -97,7 +90,7 @@ namespace Server.Items
 
         private static CargoQuality RandomQuality()
         {
-            var random = Utility.RandomDouble();
+            double random = Utility.RandomDouble();
 
             if (random < 0.05)
             {

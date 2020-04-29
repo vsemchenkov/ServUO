@@ -1,6 +1,5 @@
-using System;
-using Server.Engines.Craft;
 using Server.ContextMenus;
+using Server.Engines.Craft;
 
 namespace Server.Items
 {
@@ -11,14 +10,14 @@ namespace Server.Items
         public TinkerTools()
             : base(0x1EB8)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         [Constructable]
         public TinkerTools(int uses)
             : base(uses, 0x1EB8)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public TinkerTools(Serial serial)
@@ -26,18 +25,12 @@ namespace Server.Items
         {
         }
 
-        public override CraftSystem CraftSystem
-        {
-            get
-            {
-                return DefTinkering.CraftSystem;
-            }
-        }
+        public override CraftSystem CraftSystem => DefTinkering.CraftSystem;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -56,8 +49,8 @@ namespace Server.Items
 
         public class ToggleRepairContextMenuEntry : ContextMenuEntry
         {
-            private Mobile _From;
-            private BaseTool _Tool;
+            private readonly Mobile _From;
+            private readonly BaseTool _Tool;
 
             public ToggleRepairContextMenuEntry(Mobile from, BaseTool tool)
                 : base(1157040) // Toggle Repair Mode
@@ -88,14 +81,14 @@ namespace Server.Items
         public TinkersTools()
             : base(0x1EBC)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         [Constructable]
         public TinkersTools(int uses)
             : base(uses, 0x1EBC)
         {
-            this.Weight = 1.0;
+            Weight = 1.0;
         }
 
         public TinkersTools(Serial serial)
@@ -103,18 +96,12 @@ namespace Server.Items
         {
         }
 
-        public override CraftSystem CraftSystem
-        {
-            get
-            {
-                return DefTinkering.CraftSystem;
-            }
-        }
+        public override CraftSystem CraftSystem => DefTinkering.CraftSystem;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -133,8 +120,8 @@ namespace Server.Items
 
         public class ToggleRepairContextMenuEntry : ContextMenuEntry
         {
-            private Mobile _From;
-            private BaseTool _Tool;
+            private readonly Mobile _From;
+            private readonly BaseTool _Tool;
 
             public ToggleRepairContextMenuEntry(Mobile from, BaseTool tool)
                 : base(1157040) // Toggle Repair Mode

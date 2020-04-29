@@ -16,12 +16,12 @@ namespace Server
 
         public EnhancementAttributes(string title)
         {
-            this.Title = title;
-            this.Attributes = new AosAttributes(null);
-            this.WeaponAttributes = new AosWeaponAttributes(null);
-            this.ArmorAttributes = new AosArmorAttributes(null);
-            this.AbsorptionAttributes = new SAAbsorptionAttributes(null);
-            this.ExtendedWeaponAttributes = new ExtendedWeaponAttributes(null);
+            Title = title;
+            Attributes = new AosAttributes(null);
+            WeaponAttributes = new AosWeaponAttributes(null);
+            ArmorAttributes = new AosArmorAttributes(null);
+            AbsorptionAttributes = new SAAbsorptionAttributes(null);
+            ExtendedWeaponAttributes = new ExtendedWeaponAttributes(null);
         }
     }
 
@@ -56,7 +56,7 @@ namespace Server
 
                     if (match != null && EnhancementList[m].Contains(match))
                     {
-                        if(match.Attributes.BonusStr > 0)
+                        if (match.Attributes.BonusStr > 0)
                             m.RemoveStatMod("MagicalEnhancementStr");
 
                         if (match.Attributes.BonusDex > 0)
@@ -69,7 +69,7 @@ namespace Server
                     }
                 }
 
-                if(EnhancementList[m].Count == 0 || title == null)
+                if (EnhancementList[m].Count == 0 || title == null)
                     EnhancementList.Remove(m);
 
                 m.CheckStatTimers();

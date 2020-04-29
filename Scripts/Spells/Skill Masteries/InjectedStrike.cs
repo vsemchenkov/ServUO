@@ -1,29 +1,26 @@
-using System;
-using Server;
-using Server.Spells;
-using Server.Network;
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Spells.SkillMasteries
 {
     public class InjectedStrikeSpell : SkillMasterySpell
     {
-        private static SpellInfo m_Info = new SpellInfo(
+        private static readonly SpellInfo m_Info = new SpellInfo(
                 "Injected Strike", "",
                 -1,
                 9002
             );
- 
-        public override int RequiredMana { get { return 30; } }
-		
-        public override SkillName CastSkill { get { return SkillName.Poisoning; } }
-		public override SkillName DamageSkill { get { return SkillName.Anatomy; } }
 
-        public override bool CancelsWeaponAbility { get { return true; } }
+        public override int RequiredMana => 30;
 
-        public override TimeSpan CastDelayBase { get { return TimeSpan.FromSeconds(1.0); } }
+        public override SkillName CastSkill => SkillName.Poisoning;
+        public override SkillName DamageSkill => SkillName.Anatomy;
+
+        public override bool CancelsWeaponAbility => true;
+
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.0);
 
         public override void GetCastSkills(out double min, out double max)
         {
@@ -45,18 +42,18 @@ namespace Server.Spells.SkillMasteries
         {
             BaseWeapon weapon = GetWeapon();
 
-			if(CheckWeapon())
-			{
+            if (CheckWeapon())
+            {
                 if (weapon.Poison == null || weapon.PoisonCharges == 0)
                 {
-                    var poison = GetLastPotion(Caster);
+                    BasePoisonPotion poison = GetLastPotion(Caster);
 
                     Caster.SendLocalizedMessage(502137); // Select the poison you wish to use.
                     Caster.Target = new MasteryTarget(this, autoEnd: false);
 
                     return;
                 }
-                else if (!HasSpell(Caster, this.GetType()))
+                else if (!HasSpell(Caster, GetType()))
                 {
                     if (CheckSequence())
                     {
@@ -74,11 +71,11 @@ namespace Server.Spells.SkillMasteries
                 }
                 else
                     Caster.SendLocalizedMessage(501775); // This spell is already in effect.
-			}
-			else
-				Caster.SendLocalizedMessage(1060179); //You must be wielding a weapon to use this ability!
-			
-			FinishSequence();
+            }
+            else
+                Caster.SendLocalizedMessage(1060179); //You must be wielding a weapon to use this ability!
+
+            FinishSequence();
         }
 
         protected override void OnTarget(object o)

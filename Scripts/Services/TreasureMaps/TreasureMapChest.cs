@@ -1,18 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using Server.ContextMenus;
 using Server.Engines.PartySystem;
 using Server.Gumps;
-using Server.Network;
 using Server.Mobiles;
+using Server.Network;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Items
 {
     public class TreasureMapChest : LockableContainer
     {
-        public static Type[] Artifacts { get { return m_Artifacts; } }
+        public static Type[] Artifacts => m_Artifacts;
         private static readonly Type[] m_Artifacts = new Type[]
         {
             typeof(CandelabraOfSouls), typeof(GoldBricks), typeof(PhillipsWoodenSteed),
@@ -26,35 +25,35 @@ namespace Server.Items
             typeof(AdmiralsHeartyRum)
         };
 
-        public static Type[] ArtifactsLevelFiveToSeven { get { return m_LevelFiveToSeven; } }
-        private static Type[] m_LevelFiveToSeven = new Type[]
+        public static Type[] ArtifactsLevelFiveToSeven => m_LevelFiveToSeven;
+        private static readonly Type[] m_LevelFiveToSeven = new Type[]
         {
             typeof(ForgedPardon), typeof(ManaPhasingOrb), typeof(RunedSashOfWarding), typeof(SurgeShield)
         };
 
-        public static Type[] ArtifactsLevelSeven { get { return m_LevelSevenOnly; } }
-        private static Type[] m_LevelSevenOnly = new Type[]
+        public static Type[] ArtifactsLevelSeven => m_LevelSevenOnly;
+        private static readonly Type[] m_LevelSevenOnly = new Type[]
         {
             typeof(CoffinPiece), typeof(MasterSkeletonKey)
         };
 
-        public static Type[] SOSArtifacts { get { return m_SOSArtifacts; } }
-        private static Type[] m_SOSArtifacts = new Type[]
+        public static Type[] SOSArtifacts => m_SOSArtifacts;
+        private static readonly Type[] m_SOSArtifacts = new Type[]
         {
             typeof(AntiqueWeddingDress),
             typeof(KelpWovenLeggings),
             typeof(RunedDriftwoodBow),
             typeof(ValkyrieArmor)
         };
-        public static Type[] SOSDecor { get { return m_SOSDecor; } }
-        private static Type[] m_SOSDecor = new Type[]
+        public static Type[] SOSDecor => m_SOSDecor;
+        private static readonly Type[] m_SOSDecor = new Type[]
         {
             typeof(GrapeVine),
             typeof(LargeFishingNet)
         };
 
-        public static Type[] ImbuingIngreds {  get { return m_ImbuingIngreds; } }
-        private static Type[] m_ImbuingIngreds =
+        public static Type[] ImbuingIngreds => m_ImbuingIngreds;
+        private static readonly Type[] m_ImbuingIngreds =
         {
             typeof(AbyssalCloth),   typeof(EssencePrecision), typeof(EssenceAchievement), typeof(EssenceBalance),
             typeof(EssenceControl), typeof(EssenceDiligence), typeof(EssenceDirection),   typeof(EssenceFeeling),
@@ -91,7 +90,7 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber { get { return 3000541; } }
+        public override int LabelNumber => 3000541;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Level { get; set; }
@@ -141,18 +140,12 @@ namespace Server.Items
 
         public bool FailedLockpick { get; set; }
 
-        public override bool IsDecoContainer
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override bool IsDecoContainer => false;
 
         public static void Fill(Mobile from, LockableContainer cont, int level, bool isSos)
         {
-            var map = from.Map;
-            var luck = from is PlayerMobile ? ((PlayerMobile)from).RealLuck : from.Luck;
+            Map map = from.Map;
+            int luck = from is PlayerMobile ? ((PlayerMobile)from).RealLuck : from.Luck;
 
             cont.Movable = false;
             cont.Locked = true;
@@ -193,7 +186,7 @@ namespace Server.Items
                     case 6:
                         cont.RequiredSkill = 80;
                         break;
-					case 7:
+                    case 7:
                         cont.RequiredSkill = 80;
                         break;
                 }
@@ -208,7 +201,7 @@ namespace Server.Items
                 #region Scrolls
                 if (isSos)
                 {
-                    switch(level)
+                    switch (level)
                     {
                         default: count = 20; break;
                         case 0:
@@ -232,15 +225,15 @@ namespace Server.Items
                 {
                     case 1:
                         count = isSos ? Utility.RandomMinMax(2, 6) : 32;
-						propsScale = 0.5625;
+                        propsScale = 0.5625;
                         break;
                     case 2:
                         count = isSos ? Utility.RandomMinMax(10, 15) : 40;
-						propsScale = 0.6875;
+                        propsScale = 0.6875;
                         break;
                     case 3:
                         count = isSos ? Utility.RandomMinMax(15, 20) : 48;
-						propsScale = 0.875;
+                        propsScale = 0.875;
                         break;
                     case 4:
                         count = isSos ? Utility.RandomMinMax(15, 20) : 56;
@@ -485,8 +478,8 @@ namespace Server.Items
                 min = 100; max = 600;
             }
 
-			min = (int)(min * scale);
-			max = (int)(max * scale);
+            min = (int)(min * scale);
+            max = (int)(max * scale);
         }
 
         public static Item GetRandomRecipe()
@@ -563,7 +556,7 @@ namespace Server.Items
 
                 if (0.1 >= Utility.RandomDouble()) // 10% chance to spawn a new monster
                 {
-                    var spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
+                    BaseCreature spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
 
                     spawn.Hue = 2725;
                 }
@@ -578,7 +571,7 @@ namespace Server.Items
 
             if (!AncientGuardians.Any(g => g.Alive))
             {
-                var spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
+                BaseCreature spawn = TreasureMap.Spawn(Level, GetWorldLocation(), Map, from, false);
                 spawn.NoLootOnDeath = true;
 
                 spawn.Name = "Ancient Chest Guardian";
@@ -600,7 +593,7 @@ namespace Server.Items
 
                 for (int i = 0; i < spawn.Skills.Length; i++)
                 {
-                    Skill skill = (Skill)spawn.Skills[i];
+                    Skill skill = spawn.Skills[i];
 
                     if (skill.Base > 0.0)
                         skill.Base *= Paragon.SkillsBuff;
@@ -625,7 +618,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)4); // version
+            writer.Write(4); // version
 
             writer.Write(FailedLockpick);
             writer.Write((int)_Quality);
@@ -636,11 +629,11 @@ namespace Server.Items
             writer.Write(TreasureMap);
 
             writer.Write(Guardians, true);
-            writer.Write((bool)Temporary);
+            writer.Write(Temporary);
 
             writer.Write(Owner);
 
-            writer.Write((int)Level);
+            writer.Write(Level);
             writer.WriteDeltaTime(DeleteTime);
             writer.Write(m_Lifted, true);
         }
@@ -724,7 +717,7 @@ namespace Server.Items
 
             if (Map != null && ((TreasureMapInfo.NewSystem && FailedLockpick) || 0.05 >= Utility.RandomDouble()))
             {
-                var grubber = new Grubber();
+                Grubber grubber = new Grubber();
                 grubber.MoveToWorld(Map.GetSpawnPosition(Location, 1), Map);
 
                 Item item = null;

@@ -1,11 +1,10 @@
-﻿using System;
-using Server;
+using System;
 
 namespace Server.Items
 {
     public class TombOfKingsSecretDoor : Item
     {
-        public override int LabelNumber { get { return 1020233; } } // secret door
+        public override int LabelNumber => 1020233;  // secret door
 
         private int m_ClosedId;
 
@@ -44,11 +43,10 @@ namespace Server.Items
             {
                 ItemID = 1; // no draw
 
-                Timer.DelayCall(TimeSpan.FromSeconds(120.0), new TimerCallback(
-                    delegate
-                    {
-                        ItemID = m_ClosedId;
-                    }));
+                Timer.DelayCall(TimeSpan.FromSeconds(120.0), delegate
+                {
+                    ItemID = m_ClosedId;
+                });
             }
         }
 
@@ -60,9 +58,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((int)m_ClosedId);
+            writer.Write(m_ClosedId);
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,20 +1,19 @@
 using System;
-using Server;
 
 namespace Server.Items
 {
-	public class BaseDecayingItem : Item
-	{
+    public class BaseDecayingItem : Item
+    {
         private int m_Lifespan;
         private Timer m_Timer;
 
-		public virtual int Lifespan { get { return 0; } }
-        public virtual bool UseSeconds { get { return true; } }
-		
+        public virtual int Lifespan => 0;
+        public virtual bool UseSeconds => true;
+
         [CommandProperty(AccessLevel.GameMaster)]
-        public int TimeLeft 
-		{ 
-			get { return m_Lifespan; }
+        public int TimeLeft
+        {
+            get { return m_Lifespan; }
             set
             {
                 m_Lifespan = value;
@@ -26,14 +25,14 @@ namespace Server.Items
         public BaseDecayingItem(int itemID) : base(itemID)
         {
             LootType = LootType.Blessed;
-		
+
             if (Lifespan > 0)
             {
-                m_Lifespan = this.Lifespan;
+                m_Lifespan = Lifespan;
                 StartTimer();
             }
         }
-		
+
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
@@ -46,7 +45,7 @@ namespace Server.Items
                 {
                     TimeSpan t = TimeSpan.FromSeconds(TimeLeft);
 
-                    int weeks = (int)t.Days / 7;
+                    int weeks = t.Days / 7;
                     int days = t.Days;
                     int hours = t.Hours;
                     int minutes = t.Minutes;
@@ -64,13 +63,13 @@ namespace Server.Items
                 }
             }
         }
-		
+
         public virtual void StartTimer()
         {
             if (m_Timer != null || Lifespan == 0)
                 return;
-	
-            m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(10), new TimerCallback(Slice));
+
+            m_Timer = Timer.DelayCall(TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(10), Slice);
             m_Timer.Priority = TimerPriority.OneSecond;
         }
 
@@ -85,9 +84,9 @@ namespace Server.Items
         public virtual void Slice()
         {
             m_Lifespan -= 10;
-			
+
             InvalidateProperties();
-			
+
             if (m_Lifespan <= 0)
                 Decay();
         }
@@ -97,35 +96,35 @@ namespace Server.Items
             if (RootParent is Mobile)
             {
                 Mobile parent = (Mobile)RootParent;
-				
+
                 if (Name == null)
                     parent.SendLocalizedMessage(1072515, "#" + LabelNumber); // The ~1_name~ expired...
                 else
                     parent.SendLocalizedMessage(1072515, Name); // The ~1_name~ expired...
-					
+
                 Effects.SendLocationParticles(EffectItem.Create(parent.Location, parent.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
                 Effects.PlaySound(parent.Location, parent.Map, 0x201);
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
-			
+
             StopTimer();
             Delete();
         }
-		
-		public BaseDecayingItem (Serial serial) : base(serial)
-		{
-		}
+
+        public BaseDecayingItem(Serial serial) : base(serial)
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
-            writer.Write((int)m_Lifespan);
+            writer.Write(0); // version
+            writer.Write(m_Lifespan);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -135,8 +134,8 @@ namespace Server.Items
             int version = reader.ReadInt();
             m_Lifespan = reader.ReadInt();
 
-            if(Lifespan > 0)
+            if (Lifespan > 0)
                 StartTimer();
         }
-	}
+    }
 }

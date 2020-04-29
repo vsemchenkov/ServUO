@@ -1,4 +1,3 @@
-using System;
 using Server.Engines.Craft;
 using Server.Engines.VeteranRewards;
 using Server.Gumps;
@@ -7,7 +6,7 @@ namespace Server.Items
 {
     public class TinkerBenchAddon : CraftAddon
     {
-        public override CraftSystem CraftSystem { get { return DefTinkering.CraftSystem; } }
+        public override CraftSystem CraftSystem => DefTinkering.CraftSystem;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem { get; set; }
@@ -47,9 +46,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((bool)IsRewardItem);
+            writer.Write(IsRewardItem);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -63,7 +62,7 @@ namespace Server.Items
 
     public class TinkerBenchDeed : CraftAddonDeed, IRewardItem, IRewardOption
     {
-        public override int LabelNumber { get { return 1125529; } } // tinker bench
+        public override int LabelNumber => 1125529;  // tinker bench
 
         public override BaseAddon Addon
         {
@@ -147,9 +146,9 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((bool)m_IsRewardItem);
+            writer.Write(m_IsRewardItem);
         }
 
         public override void Deserialize(GenericReader reader)

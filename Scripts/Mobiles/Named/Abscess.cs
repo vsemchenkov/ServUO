@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -57,7 +56,7 @@ namespace Server.Mobiles
         public override int Meat => 19;
 
         public override bool GivesMLMinorArtifact => true;
-   
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 4);
@@ -65,18 +64,18 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);		
-			
-            c.DropItem(new AbscessTail());			
-			
-            if ( Paragon.ChestChance > Utility.RandomDouble() )
-            c.DropItem( new ParagonChest( Name, 5 ) );
+            base.OnDeath(c);
+
+            c.DropItem(new AbscessTail());
+
+            if (Paragon.ChestChance > Utility.RandomDouble())
+                c.DropItem(new ParagonChest(Name, 5));
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

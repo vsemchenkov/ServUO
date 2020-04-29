@@ -1,7 +1,4 @@
-﻿using Server;
-using System;
-
-namespace Server.Mobiles
+﻿namespace Server.Mobiles
 {
     public class SoulboundSpellSlinger : EvilMageLord
     {
@@ -39,7 +36,7 @@ namespace Server.Mobiles
             Karma = -3000;
         }
 
-		public override int TreasureMapLevel { get { return 3; } }
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {
@@ -54,7 +51,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

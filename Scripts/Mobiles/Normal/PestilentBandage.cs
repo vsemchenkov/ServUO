@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -6,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a pestilent bandage corpse")]
     public class PestilentBandage : BaseCreature
     {
-        public override double HealChance { get { return 1.0; } }
+        public override double HealChance => 1.0;
 
         [Constructable]
         public PestilentBandage()
@@ -14,8 +13,8 @@ namespace Server.Mobiles
         {
             Name = "a pestilent bandage";
             Body = 154;
-            Hue = 0x515; 
-            BaseSoundID = 471; 
+            Hue = 0x515;
+            BaseSoundID = 471;
 
             SetStr(691, 740);
             SetDex(141, 180);
@@ -44,7 +43,7 @@ namespace Server.Mobiles
             Fame = 20000;
             Karma = -20000;
 
-            PackItem(new Bandage(5));  
+            PackItem(new Bandage(5));
 
             SetAreaEffect(AreaEffect.PoisonBreath);
         }
@@ -54,13 +53,7 @@ namespace Server.Mobiles
         {
         }
 
-        public override Poison HitPoison
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
+        public override Poison HitPoison => Poison.Lethal;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);  // Need to verify
@@ -69,7 +62,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

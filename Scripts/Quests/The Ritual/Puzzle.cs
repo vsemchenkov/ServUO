@@ -1,11 +1,8 @@
+using Server.Items;
+using Server.Mobiles;
+using Server.Network;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-
-using Server.Mobiles;
-using Server.Spells;
-using Server.Items;
-using Server.Network;
 
 namespace Server.Engines.Quests.RitualQuest
 {
@@ -20,7 +17,7 @@ namespace Server.Engines.Quests.RitualQuest
                 Instance = new CrystalLotusPuzzle();
                 Instance.MoveToWorld(new Point3D(978, 2876, 37), Map.TerMur);
 
-                var s = new Static(0x283B);
+                Static s = new Static(0x283B);
                 s.Hue = 1152;
                 s.Name = "Pristine Crystal Lotus";
                 s.MoveToWorld(new Point3D(978, 2876, 47), Map.TerMur);
@@ -59,7 +56,7 @@ namespace Server.Engines.Quests.RitualQuest
 
             Sequencing = true;
 
-            var seqCount = Utility.RandomMinMax(4, 7);
+            int seqCount = Utility.RandomMinMax(4, 7);
             Order = new PuzzleTile[seqCount];
 
             PlayerOrder = new Dictionary<Mobile, PuzzleTile[]>();
@@ -108,7 +105,7 @@ namespace Server.Engines.Quests.RitualQuest
 
             if (from is PlayerMobile)
             {
-                var quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>((PlayerMobile)from);
+                PristineCrystalLotusQuest quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>((PlayerMobile)from);
 
                 if (quest != null)
                 {
@@ -117,11 +114,11 @@ namespace Server.Engines.Quests.RitualQuest
                         PlayerOrder[from] = new PuzzleTile[Order.Length];
                     }
 
-                    var list = PlayerOrder[from];
+                    PuzzleTile[] list = PlayerOrder[from];
 
                     for (int i = 0; i < Order.Length; i++)
                     {
-                        var actual = Order[i];
+                        PuzzleTile actual = Order[i];
 
                         if (list[i] == null)
                         {
@@ -166,18 +163,18 @@ namespace Server.Engines.Quests.RitualQuest
             return true;
         }
 
-        public override bool HandlesOnSpeech { get { return true; } }
+        public override bool HandlesOnSpeech => true;
 
         public override void OnSpeech(SpeechEventArgs e)
         {
-            var pm = e.Mobile as PlayerMobile;
+            PlayerMobile pm = e.Mobile as PlayerMobile;
 
             if (pm == null)
                 return;
 
             if (e.Speech.ToLower() == "i seek the lotus")
             {
-                var quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>(pm);
+                PristineCrystalLotusQuest quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>(pm);
 
                 if (quest != null)
                 {
@@ -192,7 +189,7 @@ namespace Server.Engines.Quests.RitualQuest
             }
             else if (e.Speech.ToLower() == "give me the lotus")
             {
-                var quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>(pm);
+                PristineCrystalLotusQuest quest = QuestHelper.GetQuest<PristineCrystalLotusQuest>(pm);
 
                 if (quest != null)
                 {
@@ -202,7 +199,7 @@ namespace Server.Engines.Quests.RitualQuest
                     }
                     else if (!quest.ReceivedLotus)
                     {
-                        var lotus = new PristineCrystalLotus();
+                        PristineCrystalLotus lotus = new PristineCrystalLotus();
                         pm.AddToBackpack(lotus);
                         pm.SendLocalizedMessage(1151302); // A Pristine Crystal Lotus has been placed in your backpack.
 
@@ -219,7 +216,7 @@ namespace Server.Engines.Quests.RitualQuest
 
         private void LoadTiles()
         {
-            var map = Map.TerMur;
+            Map map = Map.TerMur;
 
             //West
             PuzzleTile tile = new PuzzleTile(this, 33, 0);
@@ -338,7 +335,7 @@ namespace Server.Engines.Quests.RitualQuest
         {
             base.Delete();
 
-            var s = Map.TerMur.FindItem<Static>(new Point3D(978, 2876, 47));
+            Static s = Map.TerMur.FindItem<Static>(new Point3D(978, 2876, 47));
         }
 
         private void RegisterRegion()
@@ -368,7 +365,7 @@ namespace Server.Engines.Quests.RitualQuest
 
             Instance = this;
 
-            foreach (var tile in Tiles)
+            foreach (PuzzleTile tile in Tiles)
             {
                 tile.Puzzle = this;
             }
@@ -389,7 +386,7 @@ namespace Server.Engines.Quests.RitualQuest
         [CommandProperty(AccessLevel.GameMaster)]
         public int Group { get; private set; }
 
-        public override bool ForceShowProperties { get { return true; } }
+        public override bool ForceShowProperties => true;
 
         public PuzzleTile(CrystalLotusPuzzle puzzle, int hue, int group)
             : base(0x519)

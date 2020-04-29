@@ -1,5 +1,5 @@
-using System;
 using Server.Engines.Craft;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,16 +7,16 @@ namespace Server.Items
 {
     public class HammerOfHephaestus : AncientSmithyHammer
     {
-        private static List<HammerOfHephaestus> _Instances = new List<HammerOfHephaestus>();
+        private static readonly List<HammerOfHephaestus> _Instances = new List<HammerOfHephaestus>();
 
         public static void Initialize()
         {
-            Timer.DelayCall(TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(5), new TimerCallback(Tick_Callback));
+            Timer.DelayCall(TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(5), Tick_Callback);
         }
 
         private static void Tick_Callback()
         {
-            foreach (var hammer in _Instances.Where(h => h != null && !h.Deleted && h.UsesRemaining < 20))
+            foreach (HammerOfHephaestus hammer in _Instances.Where(h => h != null && !h.Deleted && h.UsesRemaining < 20))
             {
                 hammer.UsesRemaining++;
                 hammer.InvalidateProperties();
@@ -45,13 +45,7 @@ namespace Server.Items
             _Instances.Remove(this);
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1077740;
-            }
-        }// Hammer of Hephaestus
+        public override int LabelNumber => 1077740;// Hammer of Hephaestus
 
         public override void OnDoubleClick(Mobile from)
         {
@@ -60,9 +54,9 @@ namespace Server.Items
                 if (UsesRemaining > 0)
                 {
                     CraftSystem system = CraftSystem;
-	
+
                     int num = system.CanCraft(from, this, null);
-	
+
                     if (num > 0)
                     {
                         from.SendLocalizedMessage(num);
@@ -70,7 +64,7 @@ namespace Server.Items
                     else
                     {
                         CraftContext context = system.GetContext(from);
-	
+
                         from.SendGump(new CraftGump(from, system, this, null));
                     }
                 }

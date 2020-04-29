@@ -1,13 +1,7 @@
-using System;
-using Server;
-using Server.Items;
-using Server.Mobiles;
-using Server.Gumps;
-using System.Collections.Generic;
-using Server.Network;
 using Server.Guilds;
-using System.Linq;
-using Server.Engines.Points;
+using Server.Items;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Engines.VvV
 {
@@ -21,7 +15,7 @@ namespace Server.Engines.VvV
         public List<Item> Braziers { get; set; }
         public List<Item> Torches { get; set; }
 
-        public override bool HandlesOnMovement { get { return IsActive; } }
+        public override bool HandlesOnMovement => IsActive;
 
         public OccupyTimer OccupationTimer { get; set; }
         public Timer CheckTimer { get; set; }
@@ -124,10 +118,10 @@ namespace Server.Engines.VvV
 
         public bool Contains(IPoint3D p)
         {
-            if (p is IEntity && ((IEntity)p).Map != this.Map)
+            if (p is IEntity && ((IEntity)p).Map != Map)
                 return false;
 
-            return p.X >= this.X - 2 && p.X <= this.X + 2 && p.Y >= this.Y - 2 && p.Y <= this.Y + 2;
+            return p.X >= X - 2 && p.X <= X + 2 && p.Y >= Y - 2 && p.Y <= Y + 2;
         }
 
         public void Activate()
@@ -182,7 +176,7 @@ namespace Server.Engines.VvV
             {
                 Server.Timer.DelayCall(TimeSpan.FromMilliseconds((i - 2) * 600), o =>
                 {
-                    Server.Misc.Geometry.Circle2D(this.Location, this.Map, (int)o, (pnt, map) =>
+                    Server.Misc.Geometry.Circle2D(Location, Map, o, (pnt, map) =>
                     {
                         LaunchFireworks(pnt, map);
                     });
@@ -230,10 +224,10 @@ namespace Server.Engines.VvV
 
         public void CheckOccupy()
         {
-            if (!IsActive || this.Map == null || this.Map == Map.Internal)
+            if (!IsActive || Map == null || Map == Map.Internal)
                 return;
 
-            IPooledEnumerable eable = this.Map.GetMobilesInBounds(new Rectangle2D(this.X - 2, this.Y - 2, 5, 5));
+            IPooledEnumerable eable = Map.GetMobilesInBounds(new Rectangle2D(X - 2, Y - 2, 5, 5));
             int count = 0;
 
             foreach (Mobile m in eable)
@@ -256,14 +250,14 @@ namespace Server.Engines.VvV
                     }
                     else
                     {
-                        this.OccupationTimer = new OccupyTimer(this, entry.Guild);
+                        OccupationTimer = new OccupyTimer(this, entry.Guild);
                     }
                 }
             }
 
-            if (this.OccupationTimer != null && !this.OccupationTimer.Running && count > 0)
+            if (OccupationTimer != null && !OccupationTimer.Running && count > 0)
             {
-                this.OccupationTimer.Start();
+                OccupationTimer.Start();
             }
             else if (OccupationTimer != null && count == 0)
             {
@@ -341,7 +335,7 @@ namespace Server.Engines.VvV
                 }
             }
 
-            private Point3D[] _Locs =
+            private readonly Point3D[] _Locs =
             {
                 new Point3D(-1, -2, 7), new Point3D(0, -2, 7), new Point3D(1, -2, 7), new Point3D(2, -2, 7),
                 new Point3D(2, -1, 7), new Point3D(2, 0, 7), new Point3D(2, 1, 7), new Point3D(2, 2, 7),
@@ -409,7 +403,7 @@ namespace Server.Engines.VvV
             }
         }
 
-        private int[][] _Tiles =
+        private readonly int[][] _Tiles =
         {
             new int[] { 5283,  5291,  5299,  5307,  5315,  5323,  5331,  5390 },
             new int[] { 39372, 39380, 39388, 39396, 39404, 39412, 39420, 39428 }
@@ -440,9 +434,9 @@ namespace Server.Engines.VvV
                 Timer.Stop();
                 return;
             }
-            else if (this.Mobile.NetState == null || this.Mobile.Deleted || Altar.Deleted || this.Mobile.Map != Altar.Map
-                || ViceVsVirtueSystem.Instance.Battle == null || !ViceVsVirtueSystem.Instance.Battle.OnGoing || !this.Mobile.Region.IsPartOf(ViceVsVirtueSystem.Instance.Battle.Region)
-                || Altar.Contains(this.Mobile))
+            else if (Mobile.NetState == null || Mobile.Deleted || Altar.Deleted || Mobile.Map != Altar.Map
+                || ViceVsVirtueSystem.Instance.Battle == null || !ViceVsVirtueSystem.Instance.Battle.OnGoing || !Mobile.Region.IsPartOf(ViceVsVirtueSystem.Instance.Battle.Region)
+                || Altar.Contains(Mobile))
             {
                 Stop();
                 return;

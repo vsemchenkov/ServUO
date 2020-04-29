@@ -1,12 +1,10 @@
-using System;
-using Server;
-using System.Collections.Generic;
 using Server.ContextMenus;
-using Server.Engines.Despise;
-using Server.Items;
-using Server.Gumps;
-using Server.Network;
 using Server.Engines.Quests;
+using Server.Gumps;
+using Server.Items;
+using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -100,11 +98,11 @@ namespace Server.Mobiles
             return m_Conversation.ContainsKey(from);
         }
 
-        private Dictionary<Mobile, int> m_Conversation = new Dictionary<Mobile, int>();
+        private readonly Dictionary<Mobile, int> m_Conversation = new Dictionary<Mobile, int>();
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from.InRange(this.Location, 5))
+            if (from.InRange(Location, 5))
             {
                 if (!m_Conversation.ContainsKey(from))
                 {
@@ -115,11 +113,11 @@ namespace Server.Mobiles
 
             if (from is PlayerMobile)
             {
-                var pm = from as PlayerMobile;
+                PlayerMobile pm = from as PlayerMobile;
 
                 if (QuestHelper.CheckDoneOnce(pm, typeof(WishesOfTheWispQuest), null, false))
                 {
-                    var q = QuestHelper.GetQuest<WhisperingWithWispsQuest>(pm);
+                    WhisperingWithWispsQuest q = QuestHelper.GetQuest<WhisperingWithWispsQuest>(pm);
 
                     if (q == null)
                     {
@@ -182,7 +180,7 @@ namespace Server.Mobiles
             }
         }
 
-        private string[][] m_Keywords = new string[][]
+        private readonly string[][] m_Keywords = new string[][]
         {
             new string[] { },
             new string[] { "corporeal" },
@@ -199,7 +197,7 @@ namespace Server.Mobiles
             new string[] { "trade" },
         };
 
-        private int[] m_Responses = new int[]
+        private readonly int[] m_Responses = new int[]
         {
             1153441,
             1153443,
@@ -223,7 +221,7 @@ namespace Server.Mobiles
             list.Add(new InternalEntry(this, from));
         }
 
-        private Dictionary<Item, int> m_ItemTable = new Dictionary<Item, int>();
+        private readonly Dictionary<Item, int> m_ItemTable = new Dictionary<Item, int>();
 
         public void CheckRestock()
         {
@@ -233,7 +231,7 @@ namespace Server.Mobiles
 
         private void DoRestock()
         {
-            List<Item> list = new List<Item>(this.Backpack.Items);
+            List<Item> list = new List<Item>(Backpack.Items);
             m_ItemTable.Clear();
 
             InternalGump.Clear();
@@ -293,7 +291,7 @@ namespace Server.Mobiles
 
                 m_ItemTable[item] = (int)((weight + Server.SkillHandlers.Imbuing.GetTotalWeight(item, -1, false, true)) * 31.5);
                 item.Movable = false;
-                this.Backpack.DropItem(item);
+                Backpack.DropItem(item);
             }
 
             m_NextRestock = DateTime.UtcNow + TimeSpan.FromMinutes(Utility.RandomMinMax(m_RestockMin, m_RestockMax));
@@ -309,7 +307,7 @@ namespace Server.Mobiles
 
         public void TryBuyItem(Mobile from, Item item)
         {
-            if (item.Deleted || !this.Backpack.Items.Contains(item) || !m_ItemTable.ContainsKey(item))
+            if (item.Deleted || !Backpack.Items.Contains(item) || !m_ItemTable.ContainsKey(item))
             {
                 from.SendMessage("This item is no longer available.");
                 return;
@@ -337,8 +335,8 @@ namespace Server.Mobiles
 
         private class InternalEntry : ContextMenuEntry
         {
-            private Mobile m_Clicker;
-            private MysteriousWisp m_Wisp;
+            private readonly Mobile m_Clicker;
+            private readonly MysteriousWisp m_Wisp;
 
             public InternalEntry(MysteriousWisp wisp, Mobile clicker)
                 : base(1150143, 3)
@@ -373,7 +371,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(m_ItemCountMin);
             writer.Write(m_ItemCountMax);
@@ -405,7 +403,7 @@ namespace Server.Mobiles
                 Weight = 1.0;
             }
 
-            public override int DefaultMaxWeight { get { return 0; } }
+            public override int DefaultMaxWeight => 0;
 
             public override bool IsAccessibleTo(Mobile m)
             {
@@ -441,7 +439,7 @@ namespace Server.Mobiles
             {
                 base.Serialize(writer);
 
-                writer.Write((int)0); // version
+                writer.Write(0); // version
             }
 
             public override void Deserialize(GenericReader reader)
@@ -454,10 +452,10 @@ namespace Server.Mobiles
 
         private class InternalGump : Gump
         {
-            private static List<Mobile> m_Viewers = new List<Mobile>();
+            private static readonly List<Mobile> m_Viewers = new List<Mobile>();
 
-            private MysteriousWisp m_Wisp;
-            private List<Item> m_Items;
+            private readonly MysteriousWisp m_Wisp;
+            private readonly List<Item> m_Items;
 
             public InternalGump(MysteriousWisp wisp, Mobile viewer) : base(40, 40)
             {
@@ -560,7 +558,7 @@ namespace Server.Mobiles
                         if (m_Viewers.Contains(m))
                             m_Viewers.Remove(m);
 
-                        if(wisp.InRange(m.Location, 5) && wisp.Backpack != null)
+                        if (wisp.InRange(m.Location, 5) && wisp.Backpack != null)
                             m.SendGump(new InternalGump(wisp, m));
                     }
                 }
@@ -586,9 +584,9 @@ namespace Server.Mobiles
 
         private class InternalGump2 : Gump
         {
-            private MysteriousWisp m_Wisp;
-            private Item m_Item;
-            private bool m_Available;
+            private readonly MysteriousWisp m_Wisp;
+            private readonly Item m_Item;
+            private readonly bool m_Available;
 
             public InternalGump2(MysteriousWisp wisp, Item item) : base(40, 40)
             {
@@ -606,7 +604,7 @@ namespace Server.Mobiles
                 string cost = m_Available ? m_Wisp.GetCostFor(item).ToString() : "No Longer Available";
 
                 AddHtml(10, 100, 140, 20, "<BASEFONT COLOR=#FFFFFF>Despise Crystals:</BASEFONT>", false, false);
-                AddHtml(10, 120, 140, 20, "<BASEFONT COLOR=#FFFFFF>"+cost+"</BASEFONT>", false, false);
+                AddHtml(10, 120, 140, 20, "<BASEFONT COLOR=#FFFFFF>" + cost + "</BASEFONT>", false, false);
 
                 Rectangle2D b = ItemBounds.Table[item.ItemID];
                 AddItem(210 - b.Width / 2 - b.X, 70 - b.Height / 2 - b.Y, item.ItemID, item.Hue);

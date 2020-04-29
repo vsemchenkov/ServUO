@@ -1,9 +1,9 @@
-using System;
-using System.Collections;
 using Server.Items;
 using Server.Misc;
 using Server.Mobiles;
 using Server.Targeting;
+using System;
+using System.Collections;
 
 namespace Server.Spells.Fifth
 {
@@ -22,13 +22,7 @@ namespace Server.Spells.Fifth
         {
         }
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Fifth;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Fifth;
         public override void OnCast()
         {
             Caster.Target = new InternalTarget(this);
@@ -108,7 +102,7 @@ namespace Server.Spells.Fifth
             private DateTime m_End;
             private Mobile m_Caster;
 
-            public Mobile Caster { get { return m_Caster; } }
+            public Mobile Caster => m_Caster;
 
             public InternalItem(int itemID, Point3D loc, Mobile caster, Map map, TimeSpan duration)
                 : base(itemID)
@@ -134,13 +128,7 @@ namespace Server.Spells.Fifth
             {
             }
 
-            public override bool BlocksFit
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool BlocksFit => true;
             public override void OnAfterDelete()
             {
                 base.OnAfterDelete();
@@ -153,7 +141,7 @@ namespace Server.Spells.Fifth
             {
                 base.Serialize(writer);
 
-                writer.Write((int)1); // version
+                writer.Write(1); // version
 
                 writer.Write(m_Caster);
                 writer.WriteDeltaTime(m_End);
@@ -165,7 +153,7 @@ namespace Server.Spells.Fifth
 
                 int version = reader.ReadInt();
 
-                switch ( version )
+                switch (version)
                 {
                     case 1:
                         {

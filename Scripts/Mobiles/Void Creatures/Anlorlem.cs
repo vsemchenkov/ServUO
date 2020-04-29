@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -6,8 +5,8 @@ namespace Server.Mobiles
     [CorpseName("an anlorlem corpse")]
     public class Anlorlem : BaseVoidCreature
     {
-        public override VoidEvolution Evolution => VoidEvolution.Grouping; 
-        public override int Stage => 2; 
+        public override VoidEvolution Evolution => VoidEvolution.Grouping;
+        public override int Stage => 2;
 
         [Constructable]
         public Anlorlem()
@@ -50,7 +49,7 @@ namespace Server.Mobiles
         {
         }
 
-		public override int TreasureMapLevel => 3;
+        public override int TreasureMapLevel => 3;
 
         public override bool Unprovokable => true;
 
@@ -60,15 +59,15 @@ namespace Server.Mobiles
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.FilthyRich);
-            this.AddLoot(LootPack.Average, 2);
-            this.AddLoot(LootPack.MedScrolls, 2);
+            AddLoot(LootPack.FilthyRich);
+            AddLoot(LootPack.Average, 2);
+            AddLoot(LootPack.MedScrolls, 2);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

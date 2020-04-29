@@ -1,12 +1,10 @@
-using System;
-using Server;
-using Server.Spells;
-using Server.Network;
-using Server.Mobiles;
 using Server.Gumps;
+using Server.Mobiles;
+using Server.Network;
 using Server.Targeting;
-using System.Linq;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Spells.SkillMasteries
 {
@@ -20,7 +18,7 @@ namespace Server.Spells.SkillMasteries
 
     public class CombatTrainingSpell : SkillMasterySpell
     {
-        private static SpellInfo m_Info = new SpellInfo(
+        private static readonly SpellInfo m_Info = new SpellInfo(
                 "Combat Training", "",
                 -1,
                 9002
@@ -34,21 +32,21 @@ namespace Server.Spells.SkillMasteries
                 double lore = Caster.Skills[SkillName.AnimalLore].Base;
                 bool asone = SpellType == TrainingType.AsOne;
 
-                double skillvalue = (taming + (lore/2));
+                double skillvalue = (taming + (lore / 2));
                 int mastery_base = 12;
                 if (skillvalue < 150) mastery_base = 12;
                 if (skillvalue < 165) mastery_base = 10;
                 if (skillvalue < 180) mastery_base = 8;
                 if (skillvalue >= 180) mastery_base = 6;
 
-                return asone ? mastery_base*2 : mastery_base;
+                return asone ? mastery_base * 2 : mastery_base;
             }
         }
 
-        public override double RequiredSkill { get { return 90; } }
-        public override int RequiredMana { get { return 40; } }
-        public override bool PartyEffects { get { return false; } }
-        public override SkillName CastSkill { get { return SkillName.AnimalTaming; } }
+        public override double RequiredSkill => 90;
+        public override int RequiredMana => 40;
+        public override bool PartyEffects => false;
+        public override SkillName CastSkill => SkillName.AnimalTaming;
 
         public TrainingType SpellType { get; set; }
 
@@ -117,7 +115,7 @@ namespace Server.Spells.SkillMasteries
 
             Target.FixedParticles(0x373A, 10, 80, 5018, 0, 0, EffectLayer.Waist);
 
-            BuffInfo.AddBuff(Caster, new BuffInfo(BuffIcon.CombatTraining, 1155933, 1156107, String.Format("{0}\t{1}\t{2}", SpellType.ToString(), Target.Name, ((int)ScaleUpkeep()).ToString())));
+            BuffInfo.AddBuff(Caster, new BuffInfo(BuffIcon.CombatTraining, 1155933, 1156107, String.Format("{0}\t{1}\t{2}", SpellType.ToString(), Target.Name, ScaleUpkeep().ToString())));
             //You train ~2_NAME~ to use ~1_SKILLNAME~.<br>Mana Upkeep: ~3_COST~
 
             FinishSequence();
@@ -155,7 +153,7 @@ namespace Server.Spells.SkillMasteries
                 if (Target == null || SpellType == TrainingType.AsOne)
                     return 0.0;
 
-                double dam = (double)_DamageTaken / ((double)Target.HitsMax * .66);
+                double dam = _DamageTaken / (Target.HitsMax * .66);
 
                 if (dam > 1.0) dam = 1.0;
 
@@ -209,7 +207,7 @@ namespace Server.Spells.SkillMasteries
 
                             if (spell.Phase > 1)
                             {
-                                damage = damage - (int)((double)damage * spell.DamageMod);
+                                damage = damage - (int)(damage * spell.DamageMod);
                                 defender.FixedParticles(0x376A, 10, 30, 5052, 1261, 7, EffectLayer.LeftFoot, 0);
                             }
                             break;
@@ -223,14 +221,14 @@ namespace Server.Spells.SkillMasteries
                         case TrainingType.AsOne:
                             if (((BaseCreature)defender).GetMaster() is PlayerMobile)
                             {
-                                var pm = ((BaseCreature)defender).GetMaster() as PlayerMobile;
-                                var list = pm.AllFollowers.Where(m => (m == defender || m.InRange(defender.Location, 3)) && m.CanBeHarmful(attacker)).ToList();
+                                PlayerMobile pm = ((BaseCreature)defender).GetMaster() as PlayerMobile;
+                                List<Mobile> list = pm.AllFollowers.Where(m => (m == defender || m.InRange(defender.Location, 3)) && m.CanBeHarmful(attacker)).ToList();
 
                                 if (list.Count > 0)
                                 {
                                     damage = damage / list.Count;
 
-                                    foreach (var m in list.Where(mob => mob != defender))
+                                    foreach (Mobile m in list.Where(mob => mob != defender))
                                     {
                                         m.Damage(damage, attacker, true, false);
                                     }
@@ -272,7 +270,7 @@ namespace Server.Spells.SkillMasteries
                         case TrainingType.Empowerment:
                             if (spell.Phase > 1)
                             {
-                                damage = damage + (int)((double)damage * spell.DamageMod);
+                                damage = damage + (int)(damage * spell.DamageMod);
                                 attacker.FixedParticles(0x376A, 10, 30, 5052, 1261, 7, EffectLayer.LeftFoot, 0);
                             }
                             break;
@@ -300,7 +298,7 @@ namespace Server.Spells.SkillMasteries
                         case TrainingType.Berserk:
                             if (spell.Phase > 1)
                             {
-                                damage = damage + (int)((double)damage * spell.DamageMod);
+                                damage = damage + (int)(damage * spell.DamageMod);
                                 attacker.FixedParticles(0x376A, 10, 30, 5052, 1261, 7, EffectLayer.LeftFoot, 0);
                             }
                             break;
@@ -354,7 +352,7 @@ namespace Server.Spells.SkillMasteries
 
             protected override void OnTarget(Mobile from, object targeted)
             {
-                if (targeted is Server.Engines.Despise.DespiseCreature)
+                if (targeted is Engines.Despise.DespiseCreature)
                 {
                     return;
                 }

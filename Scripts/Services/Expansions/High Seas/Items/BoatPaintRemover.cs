@@ -1,14 +1,12 @@
-﻿using Server;
-using System;
-using Server.Multis;
+﻿using Server.Multis;
 using Server.Targeting;
 
 namespace Server.Items
 {
     public class BoatPaintRemover : Item
     {
-        public override int LabelNumber { get { return 1116766; } }
-        public override double DefaultWeight { get { return 10.0; } }
+        public override int LabelNumber => 1116766;
+        public override double DefaultWeight => 10.0;
 
         [Constructable]
         public BoatPaintRemover() : base(4011)
@@ -17,13 +15,13 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            if(IsChildOf(from.Backpack))
+            if (IsChildOf(from.Backpack))
                 from.Target = new InternalTarget(this);
         }
 
         private class InternalTarget : Target
         {
-            private BoatPaintRemover m_PaintRemover;
+            private readonly BoatPaintRemover m_PaintRemover;
 
             public InternalTarget(BoatPaintRemover paintremover)
                 : base(5, false, TargetFlags.None)
@@ -56,7 +54,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

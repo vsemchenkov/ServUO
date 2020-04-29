@@ -1,11 +1,9 @@
+using Server.Engines.Points;
+using Server.Engines.Quests;
+using Server.Items;
+using Server.Mobiles;
 using System;
 using System.Linq;
-
-using Server;
-using Server.Items;
-using Server.Engines.Points;
-using Server.Mobiles;
-using Server.Engines.Quests;
 
 namespace Server.Engines.Fellowship
 {
@@ -59,7 +57,7 @@ namespace Server.Engines.Fellowship
 
         public static void CheckEnabled(bool timed = false)
         {
-            var fellowship = PointsSystem.FellowshipData;
+            FellowshipData fellowship = PointsSystem.FellowshipData;
 
             if (fellowship.Enabled && !fellowship.InSeason)
             {
@@ -111,7 +109,7 @@ namespace Server.Engines.Fellowship
                         GenerateQuestContent();
                         fellowship.QuestContentGenerated = true;
                     }
-                }                
+                }
             }
         }
 

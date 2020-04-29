@@ -1,10 +1,10 @@
-using System;
-using System.Text;
 using Server.Commands;
 using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
 using Server.Network;
+using System;
+using System.Text;
 
 namespace Server.Misc
 {
@@ -20,7 +20,7 @@ namespace Server.Misc
         public static void Initialize()
         {
             if (Enabled)
-                EventSink.Speech += new SpeechEventHandler(EventSink_Speech);
+                EventSink.Speech += EventSink_Speech;
         }
 
         private static void EventSink_Speech(SpeechEventArgs args)
@@ -175,8 +175,8 @@ namespace Server.Misc
             keg.Held = 100;
             keg.Type = type;
             keg.Hue = hue;
-			
-			return keg;
+
+            return keg;
         }
 
         public static void FillBank(Mobile m)
@@ -528,25 +528,25 @@ namespace Server.Misc
             public TCHelpGump()
                 : base(40, 40)
             {
-                this.AddPage(0);
-                this.AddBackground(0, 0, 160, 120, 5054);
+                AddPage(0);
+                AddBackground(0, 0, 160, 120, 5054);
 
-                this.AddButton(10, 10, 0xFB7, 0xFB9, 1, GumpButtonType.Reply, 0);
-                this.AddLabel(45, 10, 0x34, "ServUO");
+                AddButton(10, 10, 0xFB7, 0xFB9, 1, GumpButtonType.Reply, 0);
+                AddLabel(45, 10, 0x34, "ServUO");
 
-                this.AddButton(10, 35, 0xFB7, 0xFB9, 2, GumpButtonType.Reply, 0);
-                this.AddLabel(45, 35, 0x34, "List of skills");
+                AddButton(10, 35, 0xFB7, 0xFB9, 2, GumpButtonType.Reply, 0);
+                AddLabel(45, 35, 0x34, "List of skills");
 
-                this.AddButton(10, 60, 0xFB7, 0xFB9, 3, GumpButtonType.Reply, 0);
-                this.AddLabel(45, 60, 0x34, "Command list");
+                AddButton(10, 60, 0xFB7, 0xFB9, 3, GumpButtonType.Reply, 0);
+                AddLabel(45, 60, 0x34, "Command list");
 
-                this.AddButton(10, 85, 0xFB1, 0xFB3, 0, GumpButtonType.Reply, 0);
-                this.AddLabel(45, 85, 0x34, "Close");
+                AddButton(10, 85, 0xFB1, 0xFB3, 0, GumpButtonType.Reply, 0);
+                AddLabel(45, 85, 0x34, "Close");
             }
 
             public override void OnResponse(NetState sender, RelayInfo info)
             {
-                switch ( info.ButtonID )
+                switch (info.ButtonID)
                 {
                     case 1:
                         {

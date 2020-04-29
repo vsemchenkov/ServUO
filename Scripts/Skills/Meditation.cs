@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.SkillHandlers
 {
@@ -7,7 +7,7 @@ namespace Server.SkillHandlers
     {
         public static void Initialize()
         {
-            SkillInfo.Table[46].Callback = new SkillUseCallback(OnUse);
+            SkillInfo.Table[46].Callback = OnUse;
         }
 
         public static bool CheckOkayHolding(Item item)
@@ -43,13 +43,13 @@ namespace Server.SkillHandlers
 
                 return TimeSpan.FromSeconds(10.0);
             }
-            else if (Server.Misc.RegenRates.GetArmorOffset(m) > 0)
+            else if (Misc.RegenRates.GetArmorOffset(m) > 0)
             {
                 m.SendLocalizedMessage(500135); // Regenative forces cannot penetrate your armor!
 
                 return TimeSpan.FromSeconds(10.0);
             }
-            else 
+            else
             {
                 Item oneHanded = m.FindItemOnLayer(Layer.OneHanded);
                 Item twoHanded = m.FindItemOnLayer(Layer.TwoHanded);
@@ -88,7 +88,7 @@ namespace Server.SkillHandlers
 
                     m.ResetStatTimers();
                 }
-                else 
+                else
                 {
                     m.SendLocalizedMessage(501850); // You cannot focus your concentration.
                 }

@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -29,7 +29,7 @@ namespace Server.Mobiles
             SetResistance(ResistanceType.Cold, 50, 60);
             SetResistance(ResistanceType.Poison, 55, 65);
             SetResistance(ResistanceType.Energy, 50, 60);
-			
+
             SetSkill(SkillName.Wrestling, 120.0);
             SetSkill(SkillName.Tactics, 120.0);
             SetSkill(SkillName.MagicResist, 120.0);
@@ -38,7 +38,7 @@ namespace Server.Mobiles
 
             PackResources(8);
             PackTalismans(5);
-            Timer.DelayCall(TimeSpan.FromSeconds(1), new TimerCallback(SpawnBulbous));  //BulbousPutrification
+            Timer.DelayCall(TimeSpan.FromSeconds(1), SpawnBulbous);  //BulbousPutrification
 
             Fame = 25000;
             Karma = -25000;
@@ -51,20 +51,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
+        public override bool GivesMLMinorArtifact => true;
+        public override Poison PoisonImmune => Poison.Lethal;
 
         public override void GenerateLoot()
         {
@@ -73,11 +61,11 @@ namespace Server.Mobiles
 
         public override void OnDeath(Container c)
         {
-            base.OnDeath(c);		
-			
+            base.OnDeath(c);
+
             c.DropItem(new LardOfParoxysmus());
-			
-            switch ( Utility.Random(3) )
+
+            switch (Utility.Random(3))
             {
                 case 0:
                     c.DropItem(new ParoxysmusDinner());
@@ -90,15 +78,15 @@ namespace Server.Mobiles
                     break;
             }
 
-            if (Utility.RandomDouble() < 0.6)				
+            if (Utility.RandomDouble() < 0.6)
                 c.DropItem(new ParrotItem());
-			
+
             if (Utility.RandomBool())
                 c.DropItem(new SweatOfParoxysmus());
-				
+
             if (Utility.RandomDouble() < 0.05)
                 c.DropItem(new ParoxysmusSwampDragonStatuette());
-				
+
             if (Utility.RandomDouble() < 0.05)
                 c.DropItem(new ScepterOfTheChief());
         }
@@ -131,27 +119,27 @@ namespace Server.Mobiles
         public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             base.OnDamage(amount, from, willKill);
-			
+
             // eats pet or summons
             if (from is BaseCreature)
             {
                 BaseCreature creature = (BaseCreature)from;
-				
+
                 if (creature.Controlled || creature.Summoned)
                 {
-                    Heal(creature.Hits);					
-                    creature.Kill();				
-					
+                    Heal(creature.Hits);
+                    creature.Kill();
+
                     Effects.PlaySound(Location, Map, 0x574);
                 }
             }
-			
+
             // teleports player near
             if (from is PlayerMobile && !InRange(from.Location, 1))
             {
                 Combatant = from;
-				
-                from.MoveToWorld(GetSpawnPosition(1), Map);				
+
+                from.MoveToWorld(GetSpawnPosition(1), Map);
                 from.FixedParticles(0x376A, 9, 32, 0x13AF, EffectLayer.Waist);
                 from.PlaySound(0x1FE);
             }
@@ -160,14 +148,14 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-			
-            writer.Write((int)0); // version
+
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-			
+
             int version = reader.ReadInt();
         }
 

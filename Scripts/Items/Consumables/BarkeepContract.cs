@@ -1,4 +1,3 @@
-using System;
 using Server.Mobiles;
 using Server.Multis;
 using Server.Network;
@@ -7,8 +6,8 @@ namespace Server.Items
 {
     public class BarkeepContract : Item
     {
-		public override int LabelNumber {get {return 1153779;} } // a barkeep contract
-		
+        public override int LabelNumber => 1153779;  // a barkeep contract
+
         [Constructable]
         public BarkeepContract()
             : base(0x14F0)
@@ -21,22 +20,22 @@ namespace Server.Items
             : base(serial)
         {
         }
-       
+
         public override void Serialize(GenericWriter writer)
         {
-            base.Serialize(writer);		
-            writer.Write((int)0); //version
+            base.Serialize(writer);
+            writer.Write(0); //version
         }
 
         public override void Deserialize(GenericReader reader)
         {
-            base.Deserialize(reader);		
+            base.Deserialize(reader);
             int version = reader.ReadInt();
         }
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (!this.IsChildOf(from.Backpack))
+            if (!IsChildOf(from.Backpack))
             {
                 from.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
             }
@@ -49,7 +48,7 @@ namespace Server.Items
                 v.Direction = from.Direction & Direction.Mask;
                 v.MoveToWorld(from.Location, from.Map);
 
-                this.Delete();
+                Delete();
             }
             else
             {
@@ -82,8 +81,8 @@ namespace Server.Items
 
                         v.Direction = from.Direction & Direction.Mask;
                         v.MoveToWorld(from.Location, from.Map);
-						
-                        this.Delete();
+
+                        Delete();
                     }
                 }
             }

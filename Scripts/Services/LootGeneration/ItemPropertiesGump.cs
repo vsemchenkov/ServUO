@@ -1,11 +1,9 @@
+using Server.Commands;
+using Server.Items;
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server;
-using Server.Items;
-using Server.Commands;
-using Server.Mobiles;
 
 namespace Server.Gumps
 {
@@ -93,7 +91,7 @@ namespace Server.Gumps
 
             for (int i = 0; i < Infos.Count; i++)
             {
-                var info = Infos[i];
+                ItemPropertyInfo info = Infos[i];
                 int scale = info.Scale;
 
                 //AddLabel(5, y, 0, info.Attribute.ToString());
@@ -127,7 +125,7 @@ namespace Server.Gumps
 
         private void LoadTypeInfo(ItemType type, ItemPropertyInfo info, int scale, int x, int y)
         {
-            var typeInfo = info.GetItemTypeInfo(type);
+            PropInfo typeInfo = info.GetItemTypeInfo(type);
 
             if (typeInfo != null)
             {
@@ -143,7 +141,7 @@ namespace Server.Gumps
         {
             if (TypeFilter > ItemType.Invalid)
             {
-                foreach (var i in ItemPropertyInfo.LootTable[TypeFilter])
+                foreach (int i in ItemPropertyInfo.LootTable[TypeFilter])
                 {
                     yield return ItemPropertyInfo.GetInfo(i);
                 }
@@ -151,7 +149,7 @@ namespace Server.Gumps
                 yield break;
             }
 
-            foreach (var info in ItemPropertyInfo.Table.Values)
+            foreach (ItemPropertyInfo info in ItemPropertyInfo.Table.Values)
             {
                 switch (Filter)
                 {
@@ -270,7 +268,7 @@ namespace Server.Gumps
 
                 if (id >= 0 && id < Infos.Count)
                 {
-                    var propInfo = Infos[id];
+                    ItemPropertyInfo propInfo = Infos[id];
 
                     BaseGump.SendGump(new InfoSpecificGump(User, propInfo, TypeFilter));
                 }
@@ -319,9 +317,9 @@ namespace Server.Gumps
 
             int y = 210;
 
-            foreach (var i in Enum.GetValues(typeof(ItemType)))
+            foreach (object i in Enum.GetValues(typeof(ItemType)))
             {
-                var type = (ItemType)i;
+                ItemType type = (ItemType)i;
 
                 if (type == ItemType.Invalid || (ItemType != ItemType.Invalid && type != ItemType))
                 {
@@ -329,7 +327,7 @@ namespace Server.Gumps
                 }
 
                 AddLabel(5, y, 0, type.ToString());
-                var typeInfo = Info.GetItemTypeInfo(type);
+                PropInfo typeInfo = Info.GetItemTypeInfo(type);
 
                 if (typeInfo != null)
                 {
@@ -339,7 +337,7 @@ namespace Server.Gumps
 
                     if (typeInfo.PowerfulLootRange != null)
                     {
-                        var str = String.Empty;
+                        string str = String.Empty;
 
                         for (int j = 0; j < typeInfo.PowerfulLootRange.Length; j++)
                         {
@@ -370,5 +368,5 @@ namespace Server.Gumps
                 y += 20;
             }
         }
-    }   
+    }
 }

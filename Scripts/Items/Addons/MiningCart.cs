@@ -1,8 +1,8 @@
-using System;
 using Server.Engines.VeteranRewards;
 using Server.Gumps;
 using Server.Multis;
 using Server.Network;
+using System;
 
 namespace Server.Items
 {
@@ -16,7 +16,7 @@ namespace Server.Items
 
     public class MiningCart : BaseAddon, IRewardItem
     {
-        public override bool ForceShowProperties { get { return true; } }
+        public override bool ForceShowProperties => true;
 
         public override BaseAddonDeed Deed
         {
@@ -49,13 +49,7 @@ namespace Server.Items
         private MiningCartType m_CartType;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MiningCartType CartType
-        {
-            get
-            {
-                return m_CartType;
-            }
-        }
+        public MiningCartType CartType => m_CartType;
 
         private int m_Gems;
 
@@ -98,7 +92,7 @@ namespace Server.Items
         {
             m_CartType = type;
 
-            switch ( type )
+            switch (type)
             {
                 case MiningCartType.OreSouth:
                     AddComponent(new InternalAddonComponent(0x1A83, 1026786), 0, 0, 0);
@@ -152,7 +146,7 @@ namespace Server.Items
 
         private void GiveResources()
         {
-            switch ( m_CartType )
+            switch (m_CartType)
             {
                 case MiningCartType.OreSouth:
                 case MiningCartType.OreEast:
@@ -210,11 +204,11 @@ namespace Server.Items
 
             if (!from.InRange(GetWorldLocation(), 2) || !from.InLOS(this) || !((from.Z - Z) > -3 && (from.Z - Z) < 3))
             {
-                from.LocalOverheadMessage(Network.MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
+                from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
             }
             else if (house != null && house.HasSecureAccess(from, SecureLevel.Friends))
             {
-                switch ( m_CartType )
+                switch (m_CartType)
                 {
                     case MiningCartType.OreSouth:
                     case MiningCartType.OreEast:
@@ -222,7 +216,7 @@ namespace Server.Items
                         {
                             Item ingots = null;
 
-                            switch ( Utility.Random(9) )
+                            switch (Utility.Random(9))
                             {
                                 case 0:
                                     ingots = new IronIngot();
@@ -254,17 +248,21 @@ namespace Server.Items
                             }
 
                             int amount = Math.Min(10, m_Ore);
-                            ingots.Amount = amount;
 
-                            if (!from.PlaceInBackpack(ingots))
+                            if (ingots != null)
                             {
-                                ingots.Delete();
-                                from.SendLocalizedMessage(1078837); // Your backpack is full! Please make room and try again.
-                            }
-                            else
-                            {
-                                PublicOverheadMessage(MessageType.Regular, 0, 1094724, amount.ToString()); // Ore: ~1_COUNT~
-                                m_Ore -= amount;
+                                ingots.Amount = amount;
+
+                                if (!from.PlaceInBackpack(ingots))
+                                {
+                                    ingots.Delete();
+                                    from.SendLocalizedMessage(1078837); // Your backpack is full! Please make room and try again.
+                                }
+                                else
+                                {
+                                    PublicOverheadMessage(MessageType.Regular, 0, 1094724, amount.ToString()); // Ore: ~1_COUNT~
+                                    m_Ore -= amount;
+                                }
                             }
                         }
                         else
@@ -277,7 +275,7 @@ namespace Server.Items
                         {
                             Item gems = null;
 
-                            switch ( Utility.Random(15) )
+                            switch (Utility.Random(15))
                             {
                                 case 0:
                                     gems = new Amber();
@@ -306,7 +304,7 @@ namespace Server.Items
                                 case 8:
                                     gems = new Tourmaline();
                                     break;
-                                    // Mondain's Legacy gems
+                                // Mondain's Legacy gems
                                 case 9:
                                     gems = new PerfectEmerald();
                                     break;
@@ -406,9 +404,9 @@ namespace Server.Items
             writer.Write((int)m_CartType);
             #endregion
 
-            writer.Write((bool)m_IsRewardItem);
-            writer.Write((int)m_Gems);
-            writer.Write((int)m_Ore);
+            writer.Write(m_IsRewardItem);
+            writer.Write(m_Gems);
+            writer.Write(m_Ore);
             writer.Write(NextResourceCount);
         }
 
@@ -418,7 +416,7 @@ namespace Server.Items
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     m_CartType = (MiningCartType)reader.ReadInt();
@@ -436,13 +434,7 @@ namespace Server.Items
 
     public class MiningCartDeed : BaseAddonDeed, IRewardItem, IRewardOption
     {
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1080385;
-            }
-        }// deed for a mining cart decoration
+        public override int LabelNumber => 1080385;// deed for a mining cart decoration
 
         public override BaseAddon Addon
         {
@@ -547,9 +539,9 @@ namespace Server.Items
 
             writer.WriteEncodedInt(0); // version
 
-            writer.Write((bool)m_IsRewardItem);
-            writer.Write((int)m_Gems);
-            writer.Write((int)m_Ore);
+            writer.Write(m_IsRewardItem);
+            writer.Write(m_Gems);
+            writer.Write(m_Ore);
         }
 
         public override void Deserialize(GenericReader reader)

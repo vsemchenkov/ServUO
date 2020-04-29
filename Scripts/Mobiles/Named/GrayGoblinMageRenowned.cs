@@ -1,10 +1,9 @@
-using System;
 using Server.Items;
-using Server.Misc;
+using System;
 
 namespace Server.Mobiles
 {
-    [CorpseName("Gray Goblin Mage [Renowned] corpse")] 
+    [CorpseName("Gray Goblin Mage [Renowned] corpse")]
     public class GrayGoblinMageRenowned : BaseRenowned
     {
         [Constructable]
@@ -51,34 +50,16 @@ namespace Server.Mobiles
         {
         }
 
-        public override Type[] UniqueSAList
-        {
-            get
-            {
-                return new Type[] { };
-            }
-        }
-        public override Type[] SharedSAList
-        {
-            get
-            {
-                return new Type[] { typeof(StormCaller), typeof(TorcOfTheGuardians), typeof(GiantSteps), typeof(CavalrysFolly) };
-            }
-        }
-        public override bool AllureImmune
-        {
-            get
-            {
-                return true;
-            }
-        }
-        
-		public override int GetAngerSound() { return 0x600; }
+        public override Type[] UniqueSAList => new Type[] { };
+        public override Type[] SharedSAList => new Type[] { typeof(StormCaller), typeof(TorcOfTheGuardians), typeof(GiantSteps), typeof(CavalrysFolly) };
+        public override bool AllureImmune => true;
+
+        public override int GetAngerSound() { return 0x600; }
         public override int GetIdleSound() { return 0x600; }
         public override int GetAttackSound() { return 0x5FD; }
         public override int GetHurtSound() { return 0x5FF; }
         public override int GetDeathSound() { return 0x5FE; }
-		
+
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich);
@@ -87,7 +68,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)

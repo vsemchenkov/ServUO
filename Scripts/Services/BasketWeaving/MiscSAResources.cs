@@ -1,6 +1,5 @@
 #region References
 using Server.Engines.Plants;
-using Server.Engines.Craft;
 using System;
 #endregion
 
@@ -13,7 +12,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public PlantHue PlantHue { get { return m_PlantHue; } set { m_PlantHue = value; InvalidatePlantHue(); InvalidateProperties(); } }
 
-        public override int LabelNumber { get { return 1112248; } } //dry reeds
+        public override int LabelNumber => 1112248;  //dry reeds
 
         public DryReeds(PlantHue hue)
             : base(0x1BD5)
@@ -68,7 +67,7 @@ namespace Server.Items
         public override void OnAfterDuped(Item newItem)
         {
             if (newItem is IPlantHue)
-                ((IPlantHue)newItem).PlantHue = this.PlantHue;
+                ((IPlantHue)newItem).PlantHue = PlantHue;
 
             base.OnAfterDuped(newItem);
         }
@@ -81,7 +80,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write((int)m_PlantHue);
         }
@@ -91,7 +90,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int v = reader.ReadInt();
 
-            if(v > 0)
+            if (v > 0)
                 m_PlantHue = (PlantHue)reader.ReadInt();
         }
     }
@@ -103,7 +102,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public PlantHue PlantHue { get { return m_PlantHue; } set { m_PlantHue = value; InvalidatePlantHue(); InvalidateProperties(); } }
 
-        public override int LabelNumber { get { return 1112249; } } //Softened reeds
+        public override int LabelNumber => 1112249;  //Softened reeds
 
         [Constructable]
         public SoftenedReeds()
@@ -166,7 +165,7 @@ namespace Server.Items
         public override void OnAfterDuped(Item newItem)
         {
             if (newItem is IPlantHue)
-                ((IPlantHue)newItem).PlantHue = this.PlantHue;
+                ((IPlantHue)newItem).PlantHue = PlantHue;
 
             base.OnAfterDuped(newItem);
         }
@@ -179,7 +178,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)2);
+            writer.Write(2);
 
             writer.Write((int)m_PlantHue);
         }
@@ -189,14 +188,14 @@ namespace Server.Items
             base.Deserialize(reader);
             int v = reader.ReadInt();
 
-            if(v > 1)
+            if (v > 1)
                 m_PlantHue = (PlantHue)reader.ReadInt();
         }
     }
 
     public class CrystalGranules : Item
     {
-        public override int LabelNumber { get { return 1112329; } } // crystal granules
+        public override int LabelNumber => 1112329;  // crystal granules
 
         [Constructable]
         public CrystalGranules()
@@ -214,7 +213,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

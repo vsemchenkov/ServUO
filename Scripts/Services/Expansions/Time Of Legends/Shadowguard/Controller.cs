@@ -1,28 +1,27 @@
-using System;
-using System.Collections.Generic;
-using Server;
-using Server.Mobiles;
-using Server.Items;
-using Server.Gumps;
-using System.Linq;
-using Server.Engines.PartySystem;
 using Server.Commands;
-using Server.Targeting;
+using Server.Engines.PartySystem;
+using Server.Gumps;
+using Server.Items;
+using Server.Mobiles;
 using Server.Network;
 using Server.Regions;
 using Server.Spells;
+using Server.Targeting;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Engines.Shadowguard
 {
     [Flags]
     public enum EncounterType
     {
-        Bar         = 0x00000001,
-        Orchard     = 0x00000002,
-        Armory      = 0x00000004,
-        Fountain    = 0x00000008,
-        Belfry      = 0x00000010,
-        Roof        = 0x00000020,
+        Bar = 0x00000001,
+        Orchard = 0x00000002,
+        Armory = 0x00000004,
+        Fountain = 0x00000008,
+        Belfry = 0x00000010,
+        Roof = 0x00000020,
 
         Required = Bar | Orchard | Armory | Fountain | Belfry
     }
@@ -49,18 +48,18 @@ namespace Server.Engines.Shadowguard
 
         public Timer Timer { get; set; }
 
-        public override int LabelNumber { get { return 1156235; } } // An Enchanting Crystal Ball
+        public override int LabelNumber => 1156235;  // An Enchanting Crystal Ball
 
         public static void Initialize()
         {
-            EventSink.Login += new LoginEventHandler(OnLogin);
-            EventSink.Disconnected += new DisconnectedEventHandler(OnDisconnected);
+            EventSink.Login += OnLogin;
+            EventSink.Disconnected += OnDisconnected;
 
             CommandSystem.Register("AddController", AccessLevel.Administrator, e =>
                 {
                     if (Instance == null)
                     {
-                        var controller = new ShadowguardController();
+                        ShadowguardController controller = new ShadowguardController();
                         controller.MoveToWorld(new Point3D(501, 2192, 50), Map.TerMur);
 
                         e.Mobile.SendMessage("Shadowguard controller setup!");
@@ -111,7 +110,7 @@ namespace Server.Engines.Shadowguard
 
         public override void OnDoubleClick(Mobile from)
         {
-            if (from is PlayerMobile && from.InRange(this.Location, 3))
+            if (from is PlayerMobile && from.InRange(Location, 3))
             {
                 from.SendGump(new ShadowguardGump((PlayerMobile)from));
             }
@@ -153,7 +152,7 @@ namespace Server.Engines.Shadowguard
 
         public void CompleteRoof(Mobile m)
         {
-            if(Table == null)
+            if (Table == null)
                 return;
 
             if (Table.ContainsKey(m))
@@ -172,7 +171,7 @@ namespace Server.Engines.Shadowguard
 
             if (!expired)
             {
-                foreach (var pm in encounter.Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
+                foreach (PlayerMobile pm in encounter.Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
                 {
                     AddToTable(pm, encounter.Encounter);
                 }
@@ -278,7 +277,7 @@ namespace Server.Engines.Shadowguard
 
             return true;
         }
-        
+
         public void StartTimer()
         {
             EndTimer();
@@ -358,7 +357,7 @@ namespace Server.Engines.Shadowguard
 
             Queue.Add(m, encounter);
 
-            int order = Array.IndexOf<Mobile>(Queue.Keys.ToArray(), m) + 1;
+            int order = Array.IndexOf(Queue.Keys.ToArray(), m) + 1;
 
             m.SendLocalizedMessage(1156182, order > 1 ? order.ToString() : "next");
             /* The fortress is currently full right now. You are currently ~1_NUM~ in the queue.  
@@ -446,9 +445,9 @@ namespace Server.Engines.Shadowguard
                     Party p = Party.Get(mob);
 
                     if (p != null)
-                        p.Members.ForEach(info => info.Mobile.SendLocalizedMessage(1156190, i + 1 > 1 ? i.ToString() : "next")); 	
-                        //A Shadowguard encounter has opened. You are currently ~1_NUM~ in the 
-                        //queue. If you are next, you may proceed to the entry stone to join.
+                        p.Members.ForEach(info => info.Mobile.SendLocalizedMessage(1156190, i + 1 > 1 ? i.ToString() : "next"));
+                    //A Shadowguard encounter has opened. You are currently ~1_NUM~ in the 
+                    //queue. If you are next, you may proceed to the entry stone to join.
                     else
                         mob.SendLocalizedMessage(1156190, i + 1 > 1 ? i.ToString() : "next");
                 });
@@ -457,16 +456,16 @@ namespace Server.Engines.Shadowguard
 
         public static Rectangle2D[] EncounterBounds =
         {
-            new Rectangle2D(70, 1990, 51, 51), 
-            new Rectangle2D(198, 1990, 51, 51), 
-            new Rectangle2D(326, 1990, 51, 51), 
+            new Rectangle2D(70, 1990, 51, 51),
+            new Rectangle2D(198, 1990, 51, 51),
+            new Rectangle2D(326, 1990, 51, 51),
             new Rectangle2D(454, 1990, 51, 51),
 
-            new Rectangle2D(134, 2054, 51, 51), 
-            new Rectangle2D(262, 2054, 51, 51), 
-            new Rectangle2D(390, 2054, 51, 51), 
+            new Rectangle2D(134, 2054, 51, 51),
+            new Rectangle2D(262, 2054, 51, 51),
+            new Rectangle2D(390, 2054, 51, 51),
 
-            new Rectangle2D(70, 2118, 51, 51), 
+            new Rectangle2D(70, 2118, 51, 51),
             new Rectangle2D(198, 2118, 51, 51),
             new Rectangle2D(326, 2118, 51, 51),
 
@@ -487,7 +486,7 @@ namespace Server.Engines.Shadowguard
             new Point3D(96, 2144, -20),  new Point3D(224, 2144, -20),  new Point3D(352, 2144, -20),
             new Point3D(160, 2208, -20), new Point3D(288, 2208, -20),  new Point3D(416, 2208, -20),
 
-            new Point3D(64, 2336, 0),    new Point3D(160, 2336, 0),    new Point3D(64, 2432, 0),   new Point3D(160, 2432, 0) 
+            new Point3D(64, 2336, 0),    new Point3D(160, 2336, 0),    new Point3D(64, 2432, 0),   new Point3D(160, 2432, 0)
         };
 
         public static ShadowguardEncounter GetEncounter(Point3D p, Map map)
@@ -590,7 +589,7 @@ namespace Server.Engines.Shadowguard
 
             writer.Write(Table == null ? 0 : Table.Count);
 
-            if(Table != null)
+            if (Table != null)
             {
                 ColUtility.ForEach(Table, (m, encounter) =>
                 {
@@ -622,7 +621,7 @@ namespace Server.Engines.Shadowguard
             int count = reader.ReadInt();
             for (int i = 0; i < count; i++)
             {
-                var encounter = ShadowguardEncounter.ConstructEncounter((EncounterType)reader.ReadInt());
+                ShadowguardEncounter encounter = ShadowguardEncounter.ConstructEncounter((EncounterType)reader.ReadInt());
                 encounter.Deserialize(reader);
 
                 AddEncounter(encounter);
@@ -724,8 +723,8 @@ namespace Server.Engines.Shadowguard
             door.Hue = 1779;
             door.MoveToWorld(new Point3D(519, 2193, 25), Map.TerMur);
 
-            var ankh = new AnkhWest();
-            ankh.MoveToWorld(new Point3D(503, 2191, 25), Map.TerMur);    
+            AnkhWest ankh = new AnkhWest();
+            ankh.MoveToWorld(new Point3D(503, 2191, 25), Map.TerMur);
 
             Item item = new Static(19343);
             item.MoveToWorld(new Point3D(64, 2336, 29), Map.TerMur);
@@ -794,7 +793,7 @@ namespace Server.Engines.Shadowguard
             else if (info.ButtonID > 0)
             {
                 int id = info.ButtonID - 1;
-                if(id >= 0 && id < _Encounters.Length) 
+                if (id >= 0 && id < _Encounters.Length)
                 {
                     EncounterType type = _Encounters[id];
                     ShadowguardInstance inst = controller.GetAvailableInstance(type);
@@ -815,7 +814,7 @@ namespace Server.Engines.Shadowguard
             }
         }
 
-        private EncounterType[] _Encounters =
+        private readonly EncounterType[] _Encounters =
         {
             EncounterType.Bar,
             EncounterType.Orchard,
@@ -838,7 +837,7 @@ namespace Server.Engines.Shadowguard
 
         public override bool CheckTravel(Mobile m, Point3D newlocation, TravelCheckType travelType)
         {
-            if(Instance.InUse)
+            if (Instance.InUse)
                 return travelType >= (TravelCheckType)5;
 
             return true;
@@ -853,7 +852,7 @@ namespace Server.Engines.Shadowguard
             {
                 Timer.DelayCall(TimeSpan.FromSeconds(2), () =>
                 {
-                    if(Instance.Encounter != null)
+                    if (Instance.Encounter != null)
                         Instance.Encounter.CheckPlayerStatus(m);
                 });
             }

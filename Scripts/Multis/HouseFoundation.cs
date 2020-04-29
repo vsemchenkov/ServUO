@@ -1,13 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Threading;
 using Server.Gumps;
 using Server.Items;
 using Server.Mobiles;
 using Server.Network;
 using Server.Spells;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading;
 
 namespace Server.Multis
 {
@@ -37,7 +37,7 @@ namespace Server.Multis
         private DesignState m_Current; // State which is currently visible.
         private DesignState m_Design;  // State of current design.
         private DesignState m_Backup;  // State at last user backup.        
-        
+
         // Graphic type of this foundation.
         public FoundationType Type { get; set; }
 
@@ -59,23 +59,11 @@ namespace Server.Multis
         // Who is currently customizing this -or- null if not customizing.
         public Mobile Customizer { get; set; }
 
-        public override bool IsAosRules => true; 
+        public override bool IsAosRules => true;
 
-        public override bool IsActive
-        {
-            get
-            {
-                return Customizer == null;
-            }
-        }
+        public override bool IsActive => Customizer == null;
 
-        public virtual int CustomizationCost
-        {
-            get
-            {
-                return 0;
-            }
-        }
+        public virtual int CustomizationCost => 0;
 
         public bool IsFixture(Item item)
         {
@@ -92,7 +80,7 @@ namespace Server.Multis
                 return m_Current.Components;
             }
         }
-        
+
         public DesignState CurrentState
         {
             get
@@ -287,7 +275,7 @@ namespace Server.Multis
                     DoorFacing linkFacing;
                     int xOffset, yOffset;
 
-                    switch( door.Facing )
+                    switch (door.Facing)
                     {
                         default:
                         case DoorFacing.WestCW:
@@ -556,13 +544,7 @@ namespace Server.Multis
             }
         }
 
-        public override Point3D BaseBanLocation
-        {
-            get
-            {
-                return new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
-            }
-        }
+        public override Point3D BaseBanLocation => new Point3D(Components.Min.X, Components.Height - 1 - Components.Center.Y, 0);
 
         public void CheckSignpost()
         {
@@ -637,7 +619,7 @@ namespace Server.Multis
         public void BeginCustomize(Mobile m)
         {
             if (!m.CheckAlive())
-            { 
+            {
                 return;
             }
             else if (SpellHelper.CheckCombat(m))
@@ -694,16 +676,16 @@ namespace Server.Multis
 
         public override void Serialize(GenericWriter writer)
         {
-            writer.Write((int)5); // version
+            writer.Write(5); // version
 
             writer.Write(Signpost);
-            writer.Write((int)SignpostGraphic);
+            writer.Write(SignpostGraphic);
 
             writer.Write((int)Type);
 
             writer.Write(SignHanger);
 
-            writer.Write((int)LastRevision);
+            writer.Write(LastRevision);
             writer.Write(Fixtures, true);
 
             CurrentState.Serialize(writer);
@@ -715,19 +697,13 @@ namespace Server.Multis
 
         private int m_DefaultPrice;
 
-        public override int DefaultPrice
-        {
-            get
-            {
-                return m_DefaultPrice;
-            }
-        }
+        public override int DefaultPrice => m_DefaultPrice;
 
         public override void Deserialize(GenericReader reader)
         {
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 5:
                 case 4:
@@ -804,27 +780,27 @@ namespace Server.Multis
         public static void Initialize()
         {
             EventSink.MultiDesign += QueryDesignDetails;
-            PacketHandlers.RegisterExtended(0x1E, true, new OnPacketReceive(QueryDesignDetails));
+            PacketHandlers.RegisterExtended(0x1E, true, QueryDesignDetails);
 
-            PacketHandlers.RegisterEncoded(0x02, true, new OnEncodedPacketReceive(Designer_Backup));
-            PacketHandlers.RegisterEncoded(0x03, true, new OnEncodedPacketReceive(Designer_Restore));
-            PacketHandlers.RegisterEncoded(0x04, true, new OnEncodedPacketReceive(Designer_Commit));
-            PacketHandlers.RegisterEncoded(0x05, true, new OnEncodedPacketReceive(Designer_Delete));
-            PacketHandlers.RegisterEncoded(0x06, true, new OnEncodedPacketReceive(Designer_Build));
-            PacketHandlers.RegisterEncoded(0x0A, true, new OnEncodedPacketReceive(Designer_Action)); // WTF does this do?
-            PacketHandlers.RegisterEncoded(0x0C, true, new OnEncodedPacketReceive(Designer_Close));
-            PacketHandlers.RegisterEncoded(0x0D, true, new OnEncodedPacketReceive(Designer_Stairs));
-            PacketHandlers.RegisterEncoded(0x0E, true, new OnEncodedPacketReceive(Designer_Sync));
-            PacketHandlers.RegisterEncoded(0x0F, true, new OnEncodedPacketReceive(Designer_Action)); // WTF does this do?
-            PacketHandlers.RegisterEncoded(0x10, true, new OnEncodedPacketReceive(Designer_Clear));
-            PacketHandlers.RegisterEncoded(0x12, true, new OnEncodedPacketReceive(Designer_Level));
+            PacketHandlers.RegisterEncoded(0x02, true, Designer_Backup);
+            PacketHandlers.RegisterEncoded(0x03, true, Designer_Restore);
+            PacketHandlers.RegisterEncoded(0x04, true, Designer_Commit);
+            PacketHandlers.RegisterEncoded(0x05, true, Designer_Delete);
+            PacketHandlers.RegisterEncoded(0x06, true, Designer_Build);
+            PacketHandlers.RegisterEncoded(0x0A, true, Designer_Action); // WTF does this do?
+            PacketHandlers.RegisterEncoded(0x0C, true, Designer_Close);
+            PacketHandlers.RegisterEncoded(0x0D, true, Designer_Stairs);
+            PacketHandlers.RegisterEncoded(0x0E, true, Designer_Sync);
+            PacketHandlers.RegisterEncoded(0x0F, true, Designer_Action); // WTF does this do?
+            PacketHandlers.RegisterEncoded(0x10, true, Designer_Clear);
+            PacketHandlers.RegisterEncoded(0x12, true, Designer_Level);
 
-            PacketHandlers.RegisterEncoded(0x13, true, new OnEncodedPacketReceive(Designer_Roof)); // Samurai Empire roof
-            PacketHandlers.RegisterEncoded(0x14, true, new OnEncodedPacketReceive(Designer_RoofDelete)); // Samurai Empire roof
+            PacketHandlers.RegisterEncoded(0x13, true, Designer_Roof); // Samurai Empire roof
+            PacketHandlers.RegisterEncoded(0x14, true, Designer_RoofDelete); // Samurai Empire roof
 
-            PacketHandlers.RegisterEncoded(0x1A, true, new OnEncodedPacketReceive(Designer_Revert));
+            PacketHandlers.RegisterEncoded(0x1A, true, Designer_Revert);
 
-            EventSink.Speech += new SpeechEventHandler(EventSink_Speech);
+            EventSink.Speech += EventSink_Speech;
         }
 
         private static void EventSink_Speech(SpeechEventArgs e)
@@ -1001,7 +977,7 @@ namespace Server.Multis
 
             if (!Deleted)
             {
-				// Temporary Fix. We should be booting a client out of customization mode in the delete handler.
+                // Temporary Fix. We should be booting a client out of customization mode in the delete handler.
                 if (from.AccessLevel >= AccessLevel.GameMaster && cost != 0)
                 {
                     from.SendMessage("{0} gold would have been {1} your bank if you were not a GM.", cost.ToString(), ((cost > 0) ? "withdrawn from" : "deposited into"));
@@ -1074,7 +1050,7 @@ namespace Server.Multis
             Delta(ItemDelta.Update);
             ProcessDelta();
             CurrentState.SendDetailedInfoTo(from.NetState, false);
-            
+
             // If a signpost is needed, add it
             CheckSignpost();
 
@@ -1282,7 +1258,7 @@ namespace Server.Multis
             int xStart, yStart;
             int xInc, yInc;
 
-            switch( dir )
+            switch (dir)
             {
                 default:
                 case 0: // North
@@ -1414,7 +1390,7 @@ namespace Server.Multis
 
                 // Resend design state
                 if (deleteStairs)
-                    design.SendDetailedInfoTo(state);                               
+                    design.SendDetailedInfoTo(state);
             }
         }
 
@@ -1464,7 +1440,7 @@ namespace Server.Multis
                 if (itemID >= 7668 && itemID <= 7675)
                 {
                     int idOffset = itemID <= 7671 ? 101 : 0;
-                    int[][] list = new int[][]{};
+                    int[][] list = new int[][] { };
 
                     switch (itemID)
                     {
@@ -1505,7 +1481,7 @@ namespace Server.Multis
         }
 
         #region TOL Stair Components cannot be found in MultiData
-        private static int[][] _StairsSouth = 
+        private static readonly int[][] _StairsSouth =
         {
             new int[] { 0x9B4F, 0,  -3, 0,  },
             new int[] { 0x9B4F, 0,  -3, 5,  },
@@ -1520,7 +1496,7 @@ namespace Server.Multis
             new int[] { 0x9B50, 0 , 0, 0,  },
         };
 
-        private static int[][] _StairsWest = 
+        private static readonly int[][] _StairsWest =
         {
             new int[] { 0x0001, 0,  0, 0,  },
             new int[] { 0x9B53, 0,  0, 0,  },
@@ -1535,7 +1511,7 @@ namespace Server.Multis
             new int[] { 0x9B53, 3 , 0, 15, },
         };
 
-        private static int[][] _StairsNorth = 
+        private static readonly int[][] _StairsNorth =
         {
             new int[] { 0x0001, 0,  0, 0,  },
             new int[] { 0x9B52, 0,  0, 0,  },
@@ -1550,7 +1526,7 @@ namespace Server.Multis
             new int[] { 0x9B52, 0,  3, 15,  },
         };
 
-        private static int[][] _StairsEast = 
+        private static readonly int[][] _StairsEast =
         {
             new int[] { 0x9B4F, -3, 0, 0  },
             new int[] { 0x9B4F, -3, 0, 5  },
@@ -1696,7 +1672,7 @@ namespace Server.Multis
 
         public static void QueryDesignDetails(NetState state, PacketReader pvSrc)
         {
-            var multi = World.FindItem(pvSrc.ReadInt32()) as BaseMulti;
+            BaseMulti multi = World.FindItem(pvSrc.ReadInt32()) as BaseMulti;
 
             if (multi != null)
             {
@@ -1718,7 +1694,7 @@ namespace Server.Multis
 
             if (foundation != null && from.Map == foundation.Map)
             {
-                var range = foundation.GetUpdateRange(from);
+                int range = foundation.GetUpdateRange(from);
 
                 if (Utility.InRange(from.Location, foundation.GetWorldLocation(), range) && from.CanSee(foundation))
                 {
@@ -1865,7 +1841,7 @@ namespace Server.Multis
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 1:
                 case 0:
@@ -1898,25 +1874,25 @@ namespace Server.Multis
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             Components.Serialize(writer);
 
-            writer.Write((int)Fixtures.Length);
+            writer.Write(Fixtures.Length);
 
             for (int i = 0; i < Fixtures.Length; ++i)
             {
                 MultiTileEntry ent = Fixtures[i];
 
-                writer.Write((ushort)ent.m_ItemID);
-                writer.Write((short)ent.m_OffsetX);
-                writer.Write((short)ent.m_OffsetY);
-                writer.Write((short)ent.m_OffsetZ);
+                writer.Write(ent.m_ItemID);
+                writer.Write(ent.m_OffsetX);
+                writer.Write(ent.m_OffsetY);
+                writer.Write(ent.m_OffsetZ);
 
                 writer.Write((ulong)ent.m_Flags);
             }
 
-            writer.Write((int)Revision);
+            writer.Write(Revision);
         }
 
         public void OnRevised()
@@ -2023,8 +1999,8 @@ namespace Server.Multis
                 return true;
             else if (itemID >= 0x319C && itemID < 0x31B0)
                 return true;
-			// ML doors
-            else if (itemID == 0x2D46 || itemID == 0x2D48 || itemID == 0x2FE2 || itemID == 0x2FE4)	
+            // ML doors
+            else if (itemID == 0x2D46 || itemID == 0x2D48 || itemID == 0x2FE2 || itemID == 0x2FE4)
                 return true;
             else if (itemID >= 0x2D63 && itemID < 0x2D70)
                 return true;
@@ -2051,11 +2027,11 @@ namespace Server.Multis
                 return true;
             else if (itemID >= 0x5142 && itemID < 0x514A)
                 return true;
-			// TOL doors
-			else if (itemID >= 0x9AD7 && itemID < 0x9AE7)
-				return true;
-			else if (itemID >= 0x9B3C && itemID < 0x9B4C)
-				return true;
+            // TOL doors
+            else if (itemID >= 0x9AD7 && itemID < 0x9AE7)
+                return true;
+            else if (itemID >= 0x9B3C && itemID < 0x9B4C)
+                return true;
 
             return false;
         }
@@ -2124,7 +2100,7 @@ namespace Server.Multis
 
         public int Level { get; set; }
 
-        public int MaxLevels => Foundation.MaxLevels; 
+        public int MaxLevels => Foundation.MaxLevels;
 
         public DesignContext(HouseFoundation foundation)
         {
@@ -2233,7 +2209,7 @@ namespace Server.Multis
             EnsureCapacity(17);
 
             m_Stream.Write((short)0x20);
-            m_Stream.Write((int)house.Serial);
+            m_Stream.Write(house.Serial);
             m_Stream.Write((byte)0x04);
             m_Stream.Write((ushort)0x0000);
             m_Stream.Write((ushort)0xFFFF);
@@ -2250,7 +2226,7 @@ namespace Server.Multis
             EnsureCapacity(17);
 
             m_Stream.Write((short)0x20);
-            m_Stream.Write((int)house.Serial);
+            m_Stream.Write(house.Serial);
             m_Stream.Write((byte)0x05);
             m_Stream.Write((ushort)0x0000);
             m_Stream.Write((ushort)0xFFFF);
@@ -2267,8 +2243,8 @@ namespace Server.Multis
             EnsureCapacity(13);
 
             m_Stream.Write((short)0x1D);
-            m_Stream.Write((int)multi.Serial);
-            m_Stream.Write((int)state.Revision);
+            m_Stream.Write(multi.Serial);
+            m_Stream.Write(state.Revision);
         }
     }
 
@@ -2276,15 +2252,15 @@ namespace Server.Multis
     {
         public const int MaxItemsPerStairBuffer = 750;
 
-        private static BufferPool m_PlaneBufferPool = new BufferPool("Housing Plane Buffers", 9, 0x2000);
-        private static BufferPool m_StairBufferPool = new BufferPool("Housing Stair Buffers", 6, MaxItemsPerStairBuffer * 5);
-        private static BufferPool m_DeflatedBufferPool = new BufferPool("Housing Deflated Buffers", 1, 0x2000);
+        private static readonly BufferPool m_PlaneBufferPool = new BufferPool("Housing Plane Buffers", 9, 0x2000);
+        private static readonly BufferPool m_StairBufferPool = new BufferPool("Housing Stair Buffers", 6, MaxItemsPerStairBuffer * 5);
+        private static readonly BufferPool m_DeflatedBufferPool = new BufferPool("Housing Deflated Buffers", 1, 0x2000);
 
-        private byte[][] m_PlaneBuffers;
-        private byte[][] m_StairBuffers;
+        private readonly byte[][] m_PlaneBuffers;
+        private readonly byte[][] m_StairBuffers;
 
-        private bool[] m_PlaneUsed = new bool[9];
-        private byte[] m_PrimBuffer = new byte[4];
+        private readonly bool[] m_PlaneUsed = new bool[9];
+        private readonly byte[] m_PrimBuffer = new byte[4];
 
         public void Write(int value)
         {
@@ -2327,8 +2303,8 @@ namespace Server.Multis
 
             Write((byte)0x03); // Compression Type
             Write((byte)(response ? 0x01 : 0x00)); // Enable Response (0x00 or 0x01)
-            Write((int)serial); // Serial
-            Write((int)revision); // Revision Number
+            Write(serial); // Serial
+            Write(revision); // Revision Number
             Write((short)tiles.Length); // Tile Length
             Write((short)0); // Buffer length : reserved
             Write((byte)0); // Plane count : reserved
@@ -2561,10 +2537,10 @@ namespace Server.Multis
             }
         }
 
-        private static Queue<SendQueueEntry> m_SendQueue;
-        private static object m_SendQueueSyncRoot;
-        private static AutoResetEvent m_Sync;
-        private static Thread m_Thread;
+        private static readonly Queue<SendQueueEntry> m_SendQueue;
+        private static readonly object m_SendQueueSyncRoot;
+        private static readonly AutoResetEvent m_Sync;
+        private static readonly Thread m_Thread;
 
         static DesignStateDetailed()
         {
@@ -2572,7 +2548,7 @@ namespace Server.Multis
             m_SendQueueSyncRoot = ((ICollection)m_SendQueue).SyncRoot;
             m_Sync = new AutoResetEvent(false);
 
-            m_Thread = new Thread(new ThreadStart(CompressionThread));
+            m_Thread = new Thread(CompressionThread);
             m_Thread.Name = "Housing Compression Thread";
             m_Thread.Start();
         }

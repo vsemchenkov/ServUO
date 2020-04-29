@@ -1,6 +1,6 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using Server.Items;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -9,9 +9,6 @@ namespace Server.Mobiles
     {
         private readonly Dictionary<Type, int> m_Table = new Dictionary<Type, int>();
         private Type[] m_Types;
-        public GenericSellInfo()
-        {
-        }
 
         public Type[] Types
         {
@@ -49,7 +46,7 @@ namespace Server.Mobiles
                 if (buyInfo != null)
                 {
                     int sold = buyInfo.TotalSold;
-                    price = (int)((double)buyInfo.Price * .75);
+                    price = (int)(buyInfo.Price * .75);
 
                     return Math.Max(1, price);
                 }

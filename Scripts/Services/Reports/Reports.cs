@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using Server.Accounting;
 using Server.Commands;
 using Server.Mobiles;
 using Server.Network;
+using System;
+using System.Threading;
 
 namespace Server.Engines.Reports
 {
@@ -15,16 +13,10 @@ namespace Server.Engines.Reports
         private static DateTime m_GenerateTime;
         private static SnapshotHistory m_StatsHistory;
         private static StaffHistory m_StaffHistory;
-        public static StaffHistory StaffHistory
-        {
-            get
-            {
-                return m_StaffHistory;
-            }
-        }
+        public static StaffHistory StaffHistory => m_StaffHistory;
         public static void Initialize()
         {
-            CommandSystem.Register("GenReports", AccessLevel.Administrator, new CommandEventHandler(GenReports_OnCommand));
+            CommandSystem.Register("GenReports", AccessLevel.Administrator, GenReports_OnCommand);
 
             m_StatsHistory = new SnapshotHistory();
             m_StatsHistory.Load();
@@ -33,7 +25,7 @@ namespace Server.Engines.Reports
             m_StaffHistory.Load();
 
             DateTime now = DateTime.UtcNow;
-            
+
             if (!Enabled)
                 return;
 
@@ -42,7 +34,7 @@ namespace Server.Engines.Reports
 
             m_GenerateTime = date + TimeSpan.FromHours(Math.Ceiling(timeOfDay.TotalHours));
 
-            Timer.DelayCall(TimeSpan.FromMinutes(0.5), TimeSpan.FromMinutes(0.5), new TimerCallback(CheckRegenerate));
+            Timer.DelayCall(TimeSpan.FromMinutes(0.5), TimeSpan.FromMinutes(0.5), CheckRegenerate);
         }
 
         public static void CheckRegenerate()
@@ -53,12 +45,12 @@ namespace Server.Engines.Reports
             Generate();
             m_GenerateTime += TimeSpan.FromHours(1.0);
         }
-        
+
         [Usage("GenReports")]
         [Description("Generates Reports on Command.")]
         public static void GenReports_OnCommand(CommandEventArgs e)
         {
-			Generate();
+            Generate();
         }
 
         public static void Generate()
@@ -72,7 +64,7 @@ namespace Server.Engines.Reports
             m_StatsHistory.Snapshots.Add(ss);
             m_StaffHistory.QueueStats.Add(new QueueStatus(Engines.Help.PageQueue.List.Count));
 
-            ThreadPool.QueueUserWorkItem(new WaitCallback(UpdateOutput), ss);
+            ThreadPool.QueueUserWorkItem(UpdateOutput, ss);
         }
 
         public static void FillSnapshot(Snapshot ss)
@@ -215,19 +207,19 @@ namespace Server.Engines.Reports
             renderer.Render();
             renderer.Upload();
         }
-                
+
         public class SkillDistribution : IComparable
         {
             public SkillInfo m_Skill;
             public int m_NumberOfGMs;
             public SkillDistribution(SkillInfo skill)
             {
-                this.m_Skill = skill;
+                m_Skill = skill;
             }
 
             public int CompareTo(object obj)
             {
-                return (((SkillDistribution)obj).m_NumberOfGMs - this.m_NumberOfGMs);
+                return (((SkillDistribution)obj).m_NumberOfGMs - m_NumberOfGMs);
             }
         }
     }

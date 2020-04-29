@@ -6,10 +6,6 @@ namespace Server.Items
     /// </summary>
     public class MovingShot : WeaponAbility
     {
-        public MovingShot()
-        {
-        }
-
         public override int BaseMana => 20;
 
         public override int AccuracyBonus => -35;
@@ -18,7 +14,7 @@ namespace Server.Items
 
         public override bool OnBeforeSwing(Mobile attacker, Mobile defender)
         {
-            return (this.Validate(attacker) && this.CheckMana(attacker, true));
+            return (Validate(attacker) && CheckMana(attacker, true));
         }
 
         public override void OnMiss(Mobile attacker, Mobile defender)

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -50,17 +49,17 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int GetAngerSound() { return 0x600; }
+
+        public override int GetAngerSound() { return 0x600; }
         public override int GetIdleSound() { return 0x600; }
         public override int GetAttackSound() { return 0x5FD; }
         public override int GetHurtSound() { return 0x5FF; }
         public override int GetDeathSound() { return 0x5FE; }
 
-        public override bool CanRummageCorpses { get { return true; } }
-        public override int TreasureMapLevel { get { return 1; } }
-        public override int Meat { get { return 1; } }
-        public override TribeType Tribe { get { return TribeType.GrayGoblin; } }
+        public override bool CanRummageCorpses => true;
+        public override int TreasureMapLevel => 1;
+        public override int Meat => 1;
+        public override TribeType Tribe => TribeType.GrayGoblin;
 
         public override void GenerateLoot()
         {
@@ -70,7 +69,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)

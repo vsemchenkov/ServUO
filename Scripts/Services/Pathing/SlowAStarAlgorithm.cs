@@ -1,5 +1,5 @@
-using System;
 using Server.Mobiles;
+using System;
 using CalcMoves = Server.Movement.Movement;
 using MoveImpl = Server.Movement.MovementImpl;
 
@@ -25,9 +25,9 @@ namespace Server.PathAlgorithms.SlowAStar
         private Point3D m_Goal;
         public int Heuristic(int x, int y, int z)
         {
-            x -= this.m_Goal.X;
-            y -= this.m_Goal.Y;
-            z -= this.m_Goal.Z;
+            x -= m_Goal.X;
+            y -= m_Goal.Y;
+            z -= m_Goal.Z;
 
             x *= 11;
             y *= 11;
@@ -42,7 +42,7 @@ namespace Server.PathAlgorithms.SlowAStar
 
         public override Direction[] Find(IPoint3D p, Map map, Point3D start, Point3D goal)
         {
-            this.m_Goal = goal;
+            m_Goal = goal;
 
             BaseCreature bc = p as BaseCreature;
 
@@ -57,7 +57,7 @@ namespace Server.PathAlgorithms.SlowAStar
             startNode.x = start.X;
             startNode.y = start.Y;
             startNode.z = start.Z;
-            startNode.h = this.Heuristic(startNode.x, startNode.y, startNode.z);
+            startNode.h = Heuristic(startNode.x, startNode.y, startNode.z);
 
             PathNode[] closed = m_Closed, open = m_Open, successors = m_Successors;
             Direction[] path = m_Path;
@@ -161,7 +161,7 @@ namespace Server.PathAlgorithms.SlowAStar
 
                 for (int i = 0; i < 8; ++i)
                 {
-                    switch ( i )
+                    switch (i)
                     {
                         default:
                         case 0:
@@ -260,8 +260,8 @@ namespace Server.PathAlgorithms.SlowAStar
                     successors[i].px = curNode.x;
                     successors[i].py = curNode.y;
                     successors[i].pz = curNode.z;
-                    successors[i].dir = (int)this.GetDirection(curNode.x, curNode.y, x, y);
-                    successors[i].h = this.Heuristic(x, y, z);
+                    successors[i].dir = (int)GetDirection(curNode.x, curNode.y, x, y);
+                    successors[i].h = Heuristic(x, y, z);
 
                     if (openCount == MaxNodes)
                         break;

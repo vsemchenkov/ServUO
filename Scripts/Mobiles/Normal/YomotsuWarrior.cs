@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -36,7 +36,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Tactics, 95.1, 105.0);
             SetSkill(SkillName.Wrestling, 97.6, 107.5);
 
-            Fame = 4200;	
+            Fame = 4200;
             Karma = -4200;
 
             PackItem(new GreenGourd());
@@ -52,34 +52,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Fish;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 3;
-            }
-        }
+        public override FoodType FavoriteFood => FoodType.Fish;
+        public override int Meat => 1;
+        public override bool CanRummageCorpses => true;
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {
@@ -88,7 +64,7 @@ namespace Server.Mobiles
         }
 
         // TODO: Throwing Dagger
-        public override void OnGaveMeleeAttack(Mobile defender) 
+        public override void OnGaveMeleeAttack(Mobile defender)
         {
             base.OnGaveMeleeAttack(defender);
 
@@ -109,7 +85,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

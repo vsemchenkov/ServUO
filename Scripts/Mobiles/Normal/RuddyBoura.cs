@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 using Server.Network;
 
@@ -52,25 +51,25 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat => 10; 
+        public override int Meat => 10;
 
-        public override int Hides => 20; 
+        public override int Hides => 20;
 
-        public override int DragonBlood => 8; 
+        public override int DragonBlood => 8;
 
-        public override HideType HideType => HideType.Spined; 
+        public override HideType HideType => HideType.Spined;
 
-        public override FoodType FavoriteFood => FoodType.FruitsAndVegies; 
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
 
-        public override int Fur => GatheredFur ? 0 : 30; 
-		
-        public override FurType FurType => FurType.LightBrown; 
+        public override int Fur => GatheredFur ? 0 : 30;
+
+        public override FurType FurType => FurType.LightBrown;
 
         public bool Carve(Mobile from, Item item)
         {
             if (!GatheredFur)
             {
-                var fur = new Fur(FurType, Fur);
+                Fur fur = new Fur(FurType, Fur);
 
                 if (from.Backpack == null || !from.Backpack.TryDropItem(from, fur, false))
                 {
@@ -118,23 +117,23 @@ namespace Server.Mobiles
             base.OnDeath(c);
 
             if (!Controlled)
-            c.DropItem(new BouraSkin());
+                c.DropItem(new BouraSkin());
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
             writer.Write(2);
-			
+
             writer.Write(GatheredFur);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-            var version = reader.ReadInt();
-			
-			GatheredFur = reader.ReadBool();           
+            int version = reader.ReadInt();
+
+            GatheredFur = reader.ReadBool();
         }
     }
 }

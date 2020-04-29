@@ -1,5 +1,5 @@
-using System;
 using Server.Targeting;
+using System;
 
 namespace Server.Items
 {
@@ -15,8 +15,8 @@ namespace Server.Items
         {
             int amount = cont.GetAmount(type, recurse);
 
-            var deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
-            foreach(CommodityDeed deed in deeds)
+            Item[] deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
+            foreach (CommodityDeed deed in deeds)
             {
                 if (deed.Commodity == null)
                     continue;
@@ -31,7 +31,7 @@ namespace Server.Items
         {
             int amount = cont.GetAmount(types, recurse);
 
-            var deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
+            Item[] deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
             foreach (CommodityDeed deed in deeds)
             {
                 if (deed.Commodity == null)
@@ -53,10 +53,10 @@ namespace Server.Items
         {
             int left = amount;
 
-            var items = cont.FindItemsByType(type, recurse);
-            foreach(Item item in items)
+            Item[] items = cont.FindItemsByType(type, recurse);
+            foreach (Item item in items)
             {
-                if(item.Amount <= left)
+                if (item.Amount <= left)
                 {
                     left -= item.Amount;
                     item.Delete();
@@ -72,14 +72,14 @@ namespace Server.Items
             if (!includeDeeds)
                 return amount - left;
 
-            var deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
-            foreach(CommodityDeed deed in deeds)
+            Item[] deeds = cont.FindItemsByType(typeof(CommodityDeed), recurse);
+            foreach (CommodityDeed deed in deeds)
             {
                 if (deed.Commodity == null)
                     continue;
                 if (deed.Commodity.GetType() != type)
                     continue;
-                if(deed.Commodity.Amount <= left)
+                if (deed.Commodity.Amount <= left)
                 {
                     left -= deed.Commodity.Amount;
                     deed.Delete();
@@ -160,7 +160,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write(Commodity);
         }
@@ -172,7 +172,7 @@ namespace Server.Items
 
             Commodity = reader.ReadItem();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {

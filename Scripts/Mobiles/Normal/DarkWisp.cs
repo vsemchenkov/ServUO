@@ -1,6 +1,6 @@
-using System;
 using Server.Items;
 using Server.Misc;
+using System;
 
 namespace Server.Mobiles
 {
@@ -50,8 +50,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override bool AlwaysMurderer => true;
+
+        public override bool AlwaysMurderer => true;
 
         public override InhumanSpeech SpeechType => InhumanSpeech.Wisp;
 
@@ -66,7 +66,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

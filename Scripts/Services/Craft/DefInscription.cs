@@ -1,6 +1,5 @@
-using System;
 using Server.Items;
-using Server.Spells;
+using System;
 
 namespace Server.Engines.Craft
 {
@@ -11,21 +10,9 @@ namespace Server.Engines.Craft
 
     public class DefInscription : CraftSystem
     {
-        public override SkillName MainSkill
-        {
-            get
-            {
-                return SkillName.Inscribe;
-            }
-        }
+        public override SkillName MainSkill => SkillName.Inscribe;
 
-        public override int GumpTitleNumber
-        {
-            get
-            {
-                return 1044009;
-            }// <CENTER>INSCRIPTION MENU</CENTER>
-        }
+        public override int GumpTitleNumber => 1044009;
 
         private static CraftSystem m_CraftSystem;
 
@@ -88,7 +75,7 @@ namespace Server.Engines.Craft
             return 0;
         }
 
-        private System.Collections.Generic.Dictionary<Type, int> _Buffer = new System.Collections.Generic.Dictionary<Type, int>();
+        private readonly System.Collections.Generic.Dictionary<Type, int> _Buffer = new System.Collections.Generic.Dictionary<Type, int>();
 
         public override void PlayCraftEffect(Mobile from)
         {

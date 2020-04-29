@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
 using Server.Items;
 using Server.Mobiles;
 using Server.Spells;
 using Server.Spells.Necromancy;
 using Server.Spells.Ninjitsu;
 using Server.Spells.SkillMasteries;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Misc
 {
@@ -24,9 +24,9 @@ namespace Server.Misc
             Mobile.DefaultStamRate = TimeSpan.FromSeconds(7.0);
             Mobile.DefaultManaRate = TimeSpan.FromSeconds(7.0);
 
-            Mobile.ManaRegenRateHandler = new RegenRateHandler(Mobile_ManaRegenRate);
-            Mobile.StamRegenRateHandler = new RegenRateHandler(Mobile_StamRegenRate);
-            Mobile.HitsRegenRateHandler = new RegenRateHandler(Mobile_HitsRegenRate);
+            Mobile.ManaRegenRateHandler = Mobile_ManaRegenRate;
+            Mobile.StamRegenRateHandler = Mobile_StamRegenRate;
+            Mobile.HitsRegenRateHandler = Mobile_HitsRegenRate;
         }
 
         public static double GetArmorOffset(Mobile from)
@@ -90,8 +90,8 @@ namespace Server.Misc
                 rate *= 1.95;
             }
 
-            return TimeSpan.FromSeconds(rate);          
-            
+            return TimeSpan.FromSeconds(rate);
+
         }
 
         private static TimeSpan Mobile_ManaRegenRate(Mobile from)
@@ -136,7 +136,7 @@ namespace Server.Misc
             double itemBonus = ((itemBase * intensityBonus) - (itemBase - 1)) / 10;
 
             rate = 1.0 / (0.2 + focusBonus + medBonus + itemBonus);
-            
+
             if (double.IsNaN(rate))
             {
                 return Mobile.DefaultManaRate;
@@ -232,7 +232,7 @@ namespace Server.Misc
             if (ar == null || ar.ArmorAttributes.MageArmor != 0 || ar.Attributes.SpellChanneling != 0)
                 return 0.0;
 
-            switch ( ar.MeditationAllowance )
+            switch (ar.MeditationAllowance)
             {
                 default:
                 case ArmorMeditationAllowance.None:

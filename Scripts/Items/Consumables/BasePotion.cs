@@ -1,6 +1,6 @@
+using Server.Engines.Craft;
 using System;
 using System.Collections.Generic;
-using Server.Engines.Craft;
 
 namespace Server.Items
 {
@@ -35,7 +35,7 @@ namespace Server.Items
         Invisibility,
         Parasitic,
         Darkglow,
-		ExplodingTarPotion,
+        ExplodingTarPotion,
         Barrab,
         Jukari,
         Kurak,
@@ -95,7 +95,7 @@ namespace Server.Items
             if (handTwo is BaseWeapon)
             {
                 BaseWeapon wep = (BaseWeapon)handTwo;
-				
+
                 if (wep.Attributes.BalancedWeapon > 0)
                     return true;
             }
@@ -158,7 +158,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)m_PotionEffect);
         }

@@ -1,26 +1,25 @@
-using Server;
-using System;
-using Server.Mobiles;
 using Server.Items;
-using Server.Spells;
+using Server.Mobiles;
 using Server.Regions;
+using Server.Spells;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Engines.Despise
 {
-	public class DespiseRegion : BaseRegion
-	{
-        private bool m_LowerLevel;
+    public class DespiseRegion : BaseRegion
+    {
+        private readonly bool m_LowerLevel;
 
         public DespiseRegion(string name, Rectangle2D[] bounds) : this(name, bounds, false)
         {
         }
 
-		public DespiseRegion(string name, Rectangle2D[] bounds, bool lowerLevel) : base(name, Map.Trammel, Region.DefaultPriority, bounds)
-		{
+        public DespiseRegion(string name, Rectangle2D[] bounds, bool lowerLevel) : base(name, Map.Trammel, Region.DefaultPriority, bounds)
+        {
             m_LowerLevel = lowerLevel;
-			Register();
-		}
+            Register();
+        }
 
         private Rectangle2D m_KickBounds = new Rectangle2D(5576, 626, 6, 10);
 
@@ -56,13 +55,13 @@ namespace Server.Engines.Despise
             return !IsInLowerRegion(loc) && !IsInEvilRegion(loc) && !IsInGoodRegion(loc);
         }
 
-		public override void OnDeath( Mobile m )
-		{
-			base.OnDeath(m);
-			
-			if(m is DespiseBoss)
-			{
-				DespiseController controller = DespiseController.Instance;
+        public override void OnDeath(Mobile m)
+        {
+            base.OnDeath(m);
+
+            if (m is DespiseBoss)
+            {
+                DespiseController controller = DespiseController.Instance;
 
                 if (controller != null && controller.Boss == m)
                 {
@@ -70,21 +69,21 @@ namespace Server.Engines.Despise
 
                     controller.OnBossSlain();
                 }
-			}
-			else if(m is PlayerMobile && m_LowerLevel)
-			{
+            }
+            else if (m is PlayerMobile && m_LowerLevel)
+            {
                 KickFromRegion(m, false);
-			}
-		}
-		
-		public override bool OnBeforeDeath( Mobile m )
-		{
-			if(m is DespiseCreature && m.Region != null && m.Region.IsPartOf(this.GetType()))
-			{
-				DespiseCreature dc = (DespiseCreature)m;
-				
-				if(!dc.Controlled && dc.Orb == null)
-				{
+            }
+        }
+
+        public override bool OnBeforeDeath(Mobile m)
+        {
+            if (m is DespiseCreature && m.Region != null && m.Region.IsPartOf(GetType()))
+            {
+                DespiseCreature dc = (DespiseCreature)m;
+
+                if (!dc.Controlled && dc.Orb == null)
+                {
                     Dictionary<DespiseCreature, int> creatures = new Dictionary<DespiseCreature, int>();
 
                     foreach (DamageEntry de in m.DamageEntries)
@@ -96,7 +95,7 @@ namespace Server.Engines.Despise
                             if (!creat.Controlled || creat.Orb == null)
                                 continue;
 
-                            if(creatures.ContainsKey(creat))
+                            if (creatures.ContainsKey(creat))
                                 creatures[creat] += de.DamageGiven;
                             else
                                 creatures[creat] = de.DamageGiven;
@@ -120,7 +119,7 @@ namespace Server.Engines.Despise
                         if (topdam != null && highest > 0)
                         {
                             int mobKarma = Math.Abs(dc.Karma);
-                            int karma = (int)(((double)mobKarma / 10) * (double)highest / (double)dc.HitsMax);
+                            int karma = (int)(((double)mobKarma / 10) * highest / dc.HitsMax);
 
                             if (karma < 1)
                                 karma = 1;
@@ -149,7 +148,7 @@ namespace Server.Engines.Despise
                             else if (master != null)
                                 master.SendLocalizedMessage(1153309); // Your controlled creature cannot gain further power.
 
-                            if(oldAlign != newAlign && newAlign != Alignment.Neutral && topdam.MaxPower < 15)
+                            if (oldAlign != newAlign && newAlign != Alignment.Neutral && topdam.MaxPower < 15)
                             {
                                 topdam.MaxPower = 15;
 
@@ -164,7 +163,7 @@ namespace Server.Engines.Despise
 
                             if (master != null && master.Map != null && master.Map != Map.Internal && master.Backpack != null)
                             {
-                                var heart = new PutridHeart(Utility.RandomMinMax(dc.Power * 8, dc.Power * 10));
+                                PutridHeart heart = new PutridHeart(Utility.RandomMinMax(dc.Power * 8, dc.Power * 10));
 
                                 if (!master.Backpack.TryDropItem(master, heart, false))
                                 {
@@ -173,11 +172,11 @@ namespace Server.Engines.Despise
                             }
                         }
                     }
-				}
-			}
-			
-			return base.OnBeforeDeath(m);
-		}
+                }
+            }
+
+            return base.OnBeforeDeath(m);
+        }
 
         public override bool OnDoubleClick(Mobile m, object o)
         {
@@ -197,21 +196,21 @@ namespace Server.Engines.Despise
 
             return base.OnDoubleClick(m, o);
         }
-		
-		#region Boss Enconter
-		
-		public static void GetArmyPower(ref int good, ref int evil)
-		{
-			foreach(WispOrb orb in WispOrb.Orbs)
-			{
-				if(orb.Alignment == Alignment.Good)
-					good += orb.GetArmyPower();
-				else if (orb.Alignment == Alignment.Evil)
-					evil += orb.GetArmyPower();
-			}
-		}
-		
-		#endregion
+
+        #region Boss Enconter
+
+        public static void GetArmyPower(ref int good, ref int evil)
+        {
+            foreach (WispOrb orb in WispOrb.Orbs)
+            {
+                if (orb.Alignment == Alignment.Good)
+                    good += orb.GetArmyPower();
+                else if (orb.Alignment == Alignment.Evil)
+                    evil += orb.GetArmyPower();
+            }
+        }
+
+        #endregion
 
         public override bool CheckTravel(Mobile from, Point3D p, TravelCheckType type)
         {
@@ -269,7 +268,7 @@ namespace Server.Engines.Despise
 
         private void KickPet(Mobile m)
         {
-            Timer.DelayCall<BaseCreature>(TimeSpan.FromSeconds(0.5), bc =>
+            Timer.DelayCall(TimeSpan.FromSeconds(0.5), bc =>
             {
                 if (bc.Summoned)
                     bc.Delete();
@@ -301,7 +300,7 @@ namespace Server.Engines.Despise
                 int z = Map.Trammel.GetAverageZ(x, y);
                 Point3D p = new Point3D(x, y, z);
 
-                if (this.Map.CanSpawnMobile(p))
+                if (Map.CanSpawnMobile(p))
                 {
                     if (m.Corpse != null)
                         m.Corpse.MoveToWorld(p, Map.Trammel);
@@ -332,5 +331,5 @@ namespace Server.Engines.Despise
         {
             global = LightCycle.DungeonLevel;
         }
-	}
+    }
 }

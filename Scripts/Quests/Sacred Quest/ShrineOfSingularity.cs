@@ -1,9 +1,9 @@
-using System;
+using Server.Engines.Quests;
 using Server.Gumps;
 using Server.Mobiles;
-using Server.Engines.Quests;
-using System.Collections.Generic;
 using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -15,7 +15,7 @@ namespace Server.Items
         public ShrineOfSingularity() : base(0x48A8)
         {
             Movable = false;
-            Name = "Shrine Of Singularity";	
+            Name = "Shrine Of Singularity";
         }
 
         public ShrineOfSingularity(Serial serial)
@@ -23,13 +23,7 @@ namespace Server.Items
         {
         }
 
-        public override bool HandlesOnSpeech
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool HandlesOnSpeech => true;
         public override void OnSpeech(SpeechEventArgs e)
         {
             PlayerMobile pm = e.Mobile as PlayerMobile;
@@ -66,7 +60,7 @@ namespace Server.Items
             return QuestHelper.GetQuest(pm, typeof(QuestOfSingularity)) as QuestOfSingularity;
         }
 
-        private static Dictionary<Mobile, DateTime> m_RestartTable = new Dictionary<Mobile, DateTime>();
+        private static readonly Dictionary<Mobile, DateTime> m_RestartTable = new Dictionary<Mobile, DateTime>();
 
         public static void AddToTable(Mobile from)
         {
@@ -99,9 +93,9 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)2); // version
+            writer.Write(2); // version
 
-            Timer.DelayCall(TimeSpan.FromSeconds(10), new TimerCallback(DefragDelays_Callback));
+            Timer.DelayCall(TimeSpan.FromSeconds(10), DefragDelays_Callback);
         }
 
         public override void Deserialize(GenericReader reader)

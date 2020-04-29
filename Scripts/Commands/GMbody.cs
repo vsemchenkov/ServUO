@@ -128,6 +128,10 @@ namespace Server.Commands
                         {
                             EquipItem(new StaffRing());
 
+                            EquipItem(new GMRobe());
+                            EquipItem(new GMStaff());
+                            EquipItem(new GMShield());
+
                             PackItem(new GMHidingStone());
                             PackItem(new GMEthereal());
                             PackItem(new StaffOrb());
@@ -177,48 +181,30 @@ namespace Server.Commands
                             if (from.IsStaff() && from.AccessLevel <= AccessLevel.Spawner)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
                             else if (from.AccessLevel == AccessLevel.GameMaster)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
 
                             if (from.AccessLevel == AccessLevel.Seer)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
 
                             if (from.AccessLevel == AccessLevel.Administrator)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
 
                             if (from.AccessLevel == AccessLevel.Developer)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
 
                             if (from.AccessLevel >= AccessLevel.CoOwner)
                             {
                                 EquipItem(new FurBoots(color));
-                                EquipItem(new GMRobe());
-                                EquipItem(new GMStaff());
-                                EquipItem(new GMShield());
                             }
                         }
                     }

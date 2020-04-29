@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("an oni corpse")]
@@ -51,20 +49,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 4;
-            }
-        }
+        public override bool CanRummageCorpses => true;
+        public override int TreasureMapLevel => 4;
         public override int GetAngerSound()
         {
             return 0x4E3;
@@ -98,7 +84,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

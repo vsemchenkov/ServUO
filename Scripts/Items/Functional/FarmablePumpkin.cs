@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     public class FarmablePumpkin : FarmableCrop
@@ -38,7 +36,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)0); // version
+            writer.WriteEncodedInt(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

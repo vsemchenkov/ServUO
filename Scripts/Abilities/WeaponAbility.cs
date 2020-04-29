@@ -1,9 +1,8 @@
-using System;
-using System.Collections;
-
 using Server.Network;
 using Server.Spells;
 using Server.Spells.SkillMasteries;
+using System;
+using System.Collections;
 
 namespace Server.Items
 {
@@ -15,10 +14,10 @@ namespace Server.Items
 
         public virtual double DamageScalar => 1.0;
 
-		/// <summary>
-		///		Return false to make this special ability consume no ammo from ranged weapons
-		/// </summary>
-		public virtual bool ConsumeAmmo => true;
+        /// <summary>
+        ///		Return false to make this special ability consume no ammo from ranged weapons
+        /// </summary>
+        public virtual bool ConsumeAmmo => true;
 
         public virtual void OnHit(Mobile attacker, Mobile defender, int damage)
         {
@@ -89,12 +88,12 @@ namespace Server.Items
 
             double scalar = 1.0;
 
-            if (!Server.Spells.Necromancy.MindRotSpell.GetMindRotScalar(from, ref scalar))
+            if (!Spells.Necromancy.MindRotSpell.GetMindRotScalar(from, ref scalar))
             {
                 scalar = 1.0;
             }
 
-            if (Server.Spells.Mysticism.PurgeMagicSpell.IsUnderCurseEffects(from))
+            if (Spells.Mysticism.PurgeMagicSpell.IsUnderCurseEffects(from))
             {
                 scalar += .5;
             }
@@ -161,11 +160,11 @@ namespace Server.Items
             switch (skill)
             {
                 default: return 1157351;
-                    // You need ~1_SKILL_REQUIREMENT~ weapon and tactics skill to perform that attack                                                             
-                    // You need ~1_SKILL_REQUIREMENT~ tactics skill to perform that attack
+                // You need ~1_SKILL_REQUIREMENT~ weapon and tactics skill to perform that attack                                                             
+                // You need ~1_SKILL_REQUIREMENT~ tactics skill to perform that attack
                 case SkillName.Bushido:
                 case SkillName.Ninjitsu: return 1063347;
-                    // You need ~1_SKILL_REQUIREMENT~ Bushido or Ninjitsu skill to perform that attack!
+                // You need ~1_SKILL_REQUIREMENT~ Bushido or Ninjitsu skill to perform that attack!
                 case SkillName.Poisoning: return 1060184;
                     // You lack the required poisoning to perform that attack
             }
@@ -404,11 +403,7 @@ namespace Server.Items
 
         public static void Initialize()
         {
-            EventSink.SetAbility += new SetAbilityEventHandler(EventSink_SetAbility);
-        }
-
-        public WeaponAbility()
-        {
+            EventSink.SetAbility += EventSink_SetAbility;
         }
 
         private static void EventSink_SetAbility(SetAbilityEventArgs e)

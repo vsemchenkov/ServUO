@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Engines.Craft;
 using Server.Engines.Harvest;
 using Server.Mobiles;
 using Server.Network;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -96,7 +96,7 @@ namespace Server.Items
             }
         }
 
-        public virtual bool BreakOnDepletion { get { return true; } }
+        public virtual bool BreakOnDepletion => true;
 
         public abstract HarvestSystem HarvestSystem { get; }
 
@@ -180,7 +180,7 @@ namespace Server.Items
         public class ToggleMiningStoneEntry : ContextMenuEntry
         {
             private readonly PlayerMobile m_Mobile;
-            private MiningType MiningType;
+            private readonly MiningType MiningType;
             //private bool m_Valuestone;
             //private bool m_Valuegem;
 
@@ -198,7 +198,7 @@ namespace Server.Items
                 switch (type)
                 {
                     case MiningType.OreOnly:
-                        if(!mobile.ToggleMiningStone && !mobile.ToggleMiningGem && !mobile.ToggleStoneOnly)
+                        if (!mobile.ToggleMiningStone && !mobile.ToggleMiningGem && !mobile.ToggleStoneOnly)
                             Flags |= CMEFlags.Disabled;
                         break;
                     case MiningType.OreAndStone:
@@ -206,11 +206,11 @@ namespace Server.Items
                             Flags |= CMEFlags.Disabled;
                         break;
                     case MiningType.OreAndGems:
-                        if(mobile.ToggleMiningGem || !canMineGems)
+                        if (mobile.ToggleMiningGem || !canMineGems)
                             Flags |= CMEFlags.Disabled;
                         break;
                     case MiningType.StoneOnly:
-                        if(mobile.ToggleStoneOnly || !canMineStone)
+                        if (mobile.ToggleStoneOnly || !canMineStone)
                             Flags |= CMEFlags.Disabled;
                         break;
                 }
@@ -316,12 +316,12 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
-            writer.Write((Mobile)m_Crafter);
+            writer.Write(m_Crafter);
             writer.Write((int)m_Quality);
 
-            writer.Write((int)m_UsesRemaining);
+            writer.Write(m_UsesRemaining);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -330,7 +330,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {

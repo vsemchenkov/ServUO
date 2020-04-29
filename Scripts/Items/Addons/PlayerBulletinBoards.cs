@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Gumps;
 using Server.Mobiles;
 using Server.Multis;
 using Server.Network;
 using Server.Prompts;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -23,18 +23,12 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1062421;
-            }
-        }// bulletin board (south)
+        public override int LabelNumber => 1062421;// bulletin board (south)
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -59,18 +53,12 @@ namespace Server.Items
         {
         }
 
-        public override int LabelNumber
-        {
-            get
-            {
-                return 1062420;
-            }
-        }// bulletin board (east)
+        public override int LabelNumber => 1062420;// bulletin board (east)
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -99,13 +87,7 @@ namespace Server.Items
         {
         }
 
-        public List<PlayerBBMessage> Messages
-        {
-            get
-            {
-                return m_Messages;
-            }
-        }
+        public List<PlayerBBMessage> Messages => m_Messages;
         public PlayerBBMessage Greeting
         {
             get
@@ -142,7 +124,7 @@ namespace Server.Items
             }
         }
 
-        public virtual bool Public { get { return false; } }
+        public virtual bool Public => false;
 
         public virtual bool CheckAccess(BaseHouse house, Mobile from)
         {
@@ -182,7 +164,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write((int)m_Level);
 
@@ -210,7 +192,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -330,7 +312,7 @@ namespace Server.Items
 
         public class SetTitlePrompt : Prompt
         {
-            public override int MessageCliloc { get { return 1062402; } }
+            public override int MessageCliloc => 1062402;
             private readonly int m_Page;
             private readonly BaseHouse m_House;
             private readonly BasePlayerBB m_Board;
@@ -399,7 +381,7 @@ namespace Server.Items
         {
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -508,7 +490,7 @@ namespace Server.Items
             PlayerBBMessage message = board.Greeting;
 
             if (page >= 1 && page <= board.Messages.Count)
-                message = (PlayerBBMessage)board.Messages[page - 1];
+                message = board.Messages[page - 1];
 
             AddImageTiled(150, 220, 240, 1, 2700); // Separator
 
@@ -574,7 +556,7 @@ namespace Server.Items
                 return;
             }
 
-            switch ( info.ButtonID )
+            switch (info.ButtonID)
             {
                 case 1: // Post message
                     {
@@ -629,7 +611,7 @@ namespace Server.Items
                         {
                             if (page >= 1 && page <= board.Messages.Count)
                             {
-                                PlayerBBMessage message = (PlayerBBMessage)board.Messages[page - 1];
+                                PlayerBBMessage message = board.Messages[page - 1];
                                 Mobile poster = message.Poster;
 
                                 if (poster == null)
@@ -698,7 +680,7 @@ namespace Server.Items
                             PlayerBBMessage message = board.Greeting;
 
                             if (page >= 1 && page <= board.Messages.Count)
-                                message = (PlayerBBMessage)board.Messages[page - 1];
+                                message = board.Messages[page - 1];
 
                             from.SendGump(new PlayerBBGump(from, house, board, page));
                             from.SendGump(new PropertiesGump(from, message));

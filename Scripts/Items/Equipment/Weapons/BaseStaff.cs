@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     public abstract class BaseStaff : BaseMeleeWeapon
@@ -26,7 +24,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -39,7 +37,7 @@ namespace Server.Items
         {
             base.OnHit(attacker, defender, damageBonus);
 
-            if(defender is Mobile)
+            if (defender is Mobile)
                 ((Mobile)defender).Stam -= Utility.Random(3, 5); // 3-5 points of stamina loss
         }
     }

@@ -1,11 +1,10 @@
 #region References
-using System;
-using System.Collections.Generic;
-using System.Text;
-
 using Server.Mobiles;
 using Server.Network;
 using Server.Spells;
+using System;
+using System.Collections.Generic;
+using System.Text;
 #endregion
 
 namespace Server.Items
@@ -160,7 +159,7 @@ namespace Server.Items
             }
         }
 
-        public override int LabelNumber { get { return 1026095; } } // teleporter
+        public override int LabelNumber => 1026095;  // teleporter
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
@@ -204,19 +203,19 @@ namespace Server.Items
                 m.SendLocalizedMessage(1071955); // You cannot teleport while dragging an object.
                 return false;
             }
-            
+
             if (m_CriminalCheck && m.Criminal)
             {
                 m.SendLocalizedMessage(1005561, "", 0x22); // Thou'rt a criminal and cannot escape so easily.
                 return false;
             }
-            
+
             if (m_CombatCheck && SpellHelper.CheckCombat(m))
             {
                 m.SendLocalizedMessage(1005564, "", 0x22); // Wouldst thou flee during the heat of battle??
                 return false;
             }
-            
+
             if (!CheckDestination(m) || (Siege.SiegeShard && m_MapDest == Map.Trammel))
             {
                 return false;
@@ -265,7 +264,7 @@ namespace Server.Items
             else
             {
                 // Allow OnMoveOver to return before processing the map/location changes
-                Timer.DelayCall(DoTeleport, m); 
+                Timer.DelayCall(DoTeleport, m);
             }
         }
 
@@ -333,7 +332,7 @@ namespace Server.Items
         public override bool OnMoveOver(Mobile m)
         {
             StartTeleport(m);
-            
+
             return true;
         }
 
@@ -609,7 +608,7 @@ namespace Server.Items
             }
         }
 
-        public override bool HandlesOnSpeech { get { return true; } }
+        public override bool HandlesOnSpeech => true;
 
         public override void OnSpeech(SpeechEventArgs e)
         {
@@ -879,8 +878,8 @@ namespace Server.Items
                 m_Timer = t;
             }
 
-            public WaitTeleporter Teleporter { get { return m_Teleporter; } }
-            public Timer Timer { get { return m_Timer; } }
+            public WaitTeleporter Teleporter => m_Teleporter;
+            public Timer Timer => m_Timer;
         }
     }
 
@@ -960,7 +959,7 @@ namespace Server.Items
             writer.Write(m_TimeoutDelay);
             writer.Write(m_Teleporting.Count);
 
-            foreach (var kvp in m_Teleporting)
+            foreach (KeyValuePair<Mobile, Timer> kvp in m_Teleporting)
             {
                 writer.Write(kvp.Key);
                 writer.Write(kvp.Value.Next);
@@ -1021,7 +1020,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public TimeoutTeleporter Teleporter { get { return m_Teleporter; } set { m_Teleporter = value; } }
 
-        public override string DefaultName { get { return "timeout teleporter goal"; } }
+        public override string DefaultName => "timeout teleporter goal";
 
         public override bool OnMoveOver(Mobile m)
         {

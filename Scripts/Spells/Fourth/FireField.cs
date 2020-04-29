@@ -1,9 +1,9 @@
-using System;
-using System.Collections;
 using Server.Items;
 using Server.Misc;
 using Server.Mobiles;
 using Server.Targeting;
+using System;
+using System.Collections;
 
 namespace Server.Spells.Fourth
 {
@@ -22,13 +22,7 @@ namespace Server.Spells.Fourth
         {
         }
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Fourth;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Fourth;
         public override void OnCast()
         {
             Caster.Target = new InternalTarget(this);
@@ -110,7 +104,7 @@ namespace Server.Spells.Fourth
             private Mobile m_Caster;
             private int m_Damage;
 
-            public Mobile Caster { get { return m_Caster; } }
+            public Mobile Caster => m_Caster;
 
             public FireFieldItem(int itemID, Point3D loc, Mobile caster, Map map, TimeSpan duration)
                 : this(itemID, loc, caster, map, duration, 2)
@@ -143,13 +137,7 @@ namespace Server.Spells.Fourth
             {
             }
 
-            public override bool BlocksFit
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool BlocksFit => true;
             public override void OnAfterDelete()
             {
                 base.OnAfterDelete();
@@ -162,7 +150,7 @@ namespace Server.Spells.Fourth
             {
                 base.Serialize(writer);
 
-                writer.Write((int)2); // version
+                writer.Write(2); // version
 
                 writer.Write(m_Damage);
                 writer.Write(m_Caster);
@@ -175,7 +163,7 @@ namespace Server.Spells.Fourth
 
                 int version = reader.ReadInt();
 
-                switch ( version )
+                switch (version)
                 {
                     case 2:
                         {
@@ -209,7 +197,7 @@ namespace Server.Spells.Fourth
                 {
                     if (SpellHelper.CanRevealCaster(m))
                         m_Caster.RevealingAction();
-					
+
                     m_Caster.DoHarmful(m);
 
                     int damage = m_Damage;
@@ -271,7 +259,7 @@ namespace Server.Spells.Fourth
                             while (m_Queue.Count > 0)
                             {
                                 Mobile m = (Mobile)m_Queue.Dequeue();
-								
+
                                 if (SpellHelper.CanRevealCaster(m))
                                     caster.RevealingAction();
 

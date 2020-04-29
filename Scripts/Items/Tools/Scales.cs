@@ -1,6 +1,6 @@
-using System;
-using Server.Targeting;
 using Server.Engines.Craft;
+using Server.Targeting;
+using System;
 
 namespace Server.Items
 {
@@ -19,7 +19,7 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public ItemQuality Quality { get { return _Quality; } set { _Quality = value; InvalidateProperties(); } }
 
-        public bool PlayerConstructed { get { return true; } }
+        public bool PlayerConstructed => true;
 
         [Constructable]
         public Scales()
@@ -80,7 +80,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)_Resource);
             writer.Write(_Crafter);

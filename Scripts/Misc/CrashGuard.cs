@@ -1,10 +1,10 @@
+using Server.Accounting;
+using Server.Network;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Mail;
-using Server.Accounting;
-using Server.Network;
 
 namespace Server.Misc
 {
@@ -17,7 +17,7 @@ namespace Server.Misc
         public static void Initialize()
         {
             if (Enabled) // If enabled, register our crash event handler
-                EventSink.Crashed += new CrashedEventHandler(CrashGuard_OnCrash);
+                EventSink.Crashed += CrashGuard_OnCrash;
         }
 
         public static void CrashGuard_OnCrash(CrashedEventArgs e)
@@ -30,7 +30,7 @@ namespace Server.Misc
             if (SaveBackup)
                 Backup();
 
-			if (RestartServer)
+            if (RestartServer)
                 Restart(e);
         }
 

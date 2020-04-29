@@ -1,8 +1,7 @@
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -13,9 +12,6 @@ namespace Server.Items
     public class Disarm : WeaponAbility
     {
         public static readonly TimeSpan BlockEquipDuration = TimeSpan.FromSeconds(5.0);
-        public Disarm()
-        {
-        }
 
         public override int BaseMana => 20;
 
@@ -31,7 +27,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker))
+            if (!Validate(attacker))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -58,7 +54,7 @@ namespace Server.Items
             {
                 attacker.SendLocalizedMessage(1060849); // Your target is already unarmed!
             }
-            else if (this.CheckMana(attacker, true))
+            else if (CheckMana(attacker, true))
             {
                 attacker.SendLocalizedMessage(1060092); // You disarm their weapon!
                 defender.SendLocalizedMessage(1060093); // Your weapon has been disarmed!
@@ -67,8 +63,8 @@ namespace Server.Items
                 defender.FixedParticles(0x37BE, 232, 25, 9948, EffectLayer.LeftHand);
 
                 pack.DropItem(toDisarm);
-                
-                BuffInfo.AddBuff(defender, new BuffInfo( BuffIcon.NoRearm, 1075637, BlockEquipDuration, defender));
+
+                BuffInfo.AddBuff(defender, new BuffInfo(BuffIcon.NoRearm, 1075637, BlockEquipDuration, defender));
 
                 BaseWeapon.BlockEquip(defender, BlockEquipDuration);
 
@@ -85,7 +81,7 @@ namespace Server.Items
             }
         }
 
-        private Type[] _AutoRearms =
+        private readonly Type[] _AutoRearms =
         {
             typeof(BritannianInfantry)
         };

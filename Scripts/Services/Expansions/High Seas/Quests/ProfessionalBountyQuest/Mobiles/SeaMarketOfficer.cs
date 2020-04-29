@@ -1,15 +1,13 @@
-using Server;
-using System;
+using Server.Engines.Quests;
 using Server.Items;
 using Server.Multis;
-using System.Collections.Generic;
-using Server.Engines.Quests;
+using System;
 
 namespace Server.Mobiles
 {
     public class SeaMarketOfficer : MondainQuester
     {
-        public override Type[] Quests { get { return new Type[] { typeof(ProfessionalBountyQuest) }; } }
+        public override Type[] Quests => new Type[] { typeof(ProfessionalBountyQuest) };
 
         public SeaMarketOfficer()
         {
@@ -113,7 +111,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

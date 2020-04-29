@@ -1,13 +1,13 @@
-using System;
 using Server.Mobiles;
 using Server.Targeting;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Spells.Mysticism
 {
     public class SpellPlagueSpell : MysticSpell
     {
-        private static SpellInfo m_Info = new SpellInfo(
+        private static readonly SpellInfo m_Info = new SpellInfo(
                 "Spell Plague", "Vas Rel Jux Ort",
                 230,
                 9022,
@@ -17,7 +17,7 @@ namespace Server.Spells.Mysticism
                 Reagent.SulfurousAsh
             );
 
-        public override SpellCircle Circle { get { return SpellCircle.Seventh; } }
+        public override SpellCircle Circle => SpellCircle.Seventh;
 
         public SpellPlagueSpell(Mobile caster, Item scroll)
             : base(caster, scroll, m_Info)
@@ -69,7 +69,7 @@ namespace Server.Spells.Mysticism
             FinishSequence();
         }
 
-        private static Dictionary<Mobile, List<SpellPlagueTimer>> m_Table = new Dictionary<Mobile, List<SpellPlagueTimer>>();
+        private static readonly Dictionary<Mobile, List<SpellPlagueTimer>> m_Table = new Dictionary<Mobile, List<SpellPlagueTimer>>();
 
         public static bool HasSpellPlague(Mobile from)
         {
@@ -209,12 +209,12 @@ namespace Server.Spells.Mysticism
 
     public class SpellPlagueTimer : Timer
     {
-        private Mobile m_Caster;
-        private Mobile m_Owner;
+        private readonly Mobile m_Caster;
+        private readonly Mobile m_Owner;
         private int m_Amount;
         private DateTime m_NextUse;
 
-        public Mobile Caster { get { return m_Caster; } }
+        public Mobile Caster => m_Caster;
         public int Amount
         {
             get { return m_Amount; }
@@ -236,7 +236,7 @@ namespace Server.Spells.Mysticism
             m_Owner = owner;
             m_Amount = 0;
             m_NextUse = DateTime.UtcNow;
-            this.Start();
+            Start();
         }
 
         protected override void OnTick()
@@ -246,7 +246,7 @@ namespace Server.Spells.Mysticism
 
         private void EndTimer()
         {
-            this.Stop();
+            Stop();
             SpellPlagueSpell.RemoveFromList(m_Owner);
         }
     }

@@ -1,6 +1,5 @@
-using System;
 using Server.Items;
-using Server.Network;
+using System;
 
 namespace Server.Mobiles
 {
@@ -59,34 +58,10 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool AlwaysMurderer
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 1;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
+        public override bool AlwaysMurderer => true;
+        public override Poison PoisonImmune => Poison.Lethal;
+        public override int Meat => 1;
+        public override int TreasureMapLevel => 5;
 
         public override void OnDeath(Container c)
         {
@@ -159,7 +134,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

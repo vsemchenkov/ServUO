@@ -1,33 +1,29 @@
-using System;
-using System.Collections.Generic;
 using Server.Mobiles;
 using Server.Network;
 using Server.Spells;
 using Server.Spells.Necromancy;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
     /// <summary>
     /// Make your opponent bleed profusely with this wicked use of your weapon.
     /// When successful, the target will bleed for several seconds, taking damage as time passes for up to ten seconds.
-    /// The rate of damage slows down as time passes, and the blood loss can be completely staunched with the use of bandages.
+    /// The rate of damage slows down as time passes, and the blood loss can be completely staunched with the use of bandages. 
     /// </summary>
     public class BleedAttack : WeaponAbility
     {
         private static readonly Dictionary<Mobile, BleedTimer> m_BleedTable = new Dictionary<Mobile, BleedTimer>();
 
-        public BleedAttack()
-        {
-        }
-
         public override int BaseMana => 30;
 
-		public static bool IsBleeding(Mobile m)
+        public static bool IsBleeding(Mobile m)
         {
             return m_BleedTable.ContainsKey(m);
         }
 
-		public static void BeginBleed(Mobile m, Mobile from, bool splintering = false)
+        public static void BeginBleed(Mobile m, Mobile from, bool splintering = false)
         {
             BleedTimer timer = null;
 
@@ -109,10 +105,10 @@ namespace Server.Items
                 m.SendLocalizedMessage(1060167); // The bleeding wounds have healed, you are no longer bleeding!
         }
 
-		public static bool CheckBloodDrink(Mobile attacker)
-		{
+        public static bool CheckBloodDrink(Mobile attacker)
+        {
             return attacker.Weapon is BaseWeapon && ((BaseWeapon)attacker.Weapon).WeaponAttributes.BloodDrinker > 0;
-		}
+        }
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
@@ -125,13 +121,13 @@ namespace Server.Items
             TransformContext context = TransformationSpellHelper.GetContext(defender);
 
             if ((context != null && (context.Type == typeof(LichFormSpell) || context.Type == typeof(WraithFormSpell))) ||
-                (defender is BaseCreature && ((BaseCreature)defender).BleedImmune) || Server.Spells.Mysticism.StoneFormSpell.CheckImmunity(defender))
+                (defender is BaseCreature && ((BaseCreature)defender).BleedImmune) || Spells.Mysticism.StoneFormSpell.CheckImmunity(defender))
             {
                 attacker.SendLocalizedMessage(1062052); // Your target is not affected by the bleed attack!
                 return;
             }
 
-			BeginBleed(defender, attacker);
+            BeginBleed(defender, attacker);
         }
 
         private class BleedTimer : Timer
@@ -148,10 +144,10 @@ namespace Server.Items
                 m_From = from;
                 m_Mobile = m;
                 Priority = TimerPriority.TwoFiftyMS;
-				m_BloodDrinker = blooddrinker;
+                m_BloodDrinker = blooddrinker;
 
                 m_MaxCount = Spells.SkillMasteries.ResilienceSpell.UnderEffects(m) ? 3 : 5;
-			}
+            }
 
             protected override void OnTick()
             {
@@ -163,7 +159,7 @@ namespace Server.Items
                 {
                     int damage = 0;
 
-                    if (!Server.Spells.SkillMasteries.WhiteTigerFormSpell.HasBleedMod(m_From, out damage))
+                    if (!Spells.SkillMasteries.WhiteTigerFormSpell.HasBleedMod(m_From, out damage))
                         damage = Math.Max(1, Utility.RandomMinMax(5 - m_Count, (5 - m_Count) * 2));
 
                     DoBleed(m_Mobile, m_From, damage, m_BloodDrinker);

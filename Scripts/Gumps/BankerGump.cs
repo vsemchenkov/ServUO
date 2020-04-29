@@ -1,4 +1,4 @@
-﻿using Server;
+using Server;
 using System;
 using Server.Accounting;
 using Server.Mobiles;

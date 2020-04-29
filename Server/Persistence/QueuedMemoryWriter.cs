@@ -24,7 +24,6 @@
 *   (at your option) any later version.
 *
 ***************************************************************************/
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -40,13 +39,7 @@ namespace Server
             this._memStream = this.UnderlyingStream as MemoryStream;
         }
 
-        protected override int BufferSize
-        {
-            get
-            {
-                return 512;
-            }
-        }
+        protected override int BufferSize => 512;
         public void QueueForIndex(ISerializable serializable, int size)
         {
             IndexInfo info;

@@ -1,6 +1,3 @@
-using System;
-using Server.Network;
-
 namespace Server.Items
 {
     public class WrongMazeWall : BaseWall
@@ -13,7 +10,7 @@ namespace Server.Items
             Visible = false;
         }
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
@@ -41,7 +38,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -50,5 +47,5 @@ namespace Server.Items
 
             int version = reader.ReadInt();
         }
-    }  
+    }
 }

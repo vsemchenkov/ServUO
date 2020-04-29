@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Server;
+﻿using System.Collections.Generic;
 
 namespace Server.Engines.TombOfKings
 {
@@ -10,14 +8,14 @@ namespace Server.Engines.TombOfKings
         {
             foreach (Point3D loc in m_LeverLocations)
             {
-                var item = new ChamberLever(loc);
+                ChamberLever item = new ChamberLever(loc);
                 WeakEntityCollection.Add("sa", item);
 
                 m_Levers.Add(item);
             }
         }
 
-        private static Point3D[] m_LeverLocations = new Point3D[]
+        private static readonly Point3D[] m_LeverLocations = new Point3D[]
         {
             new Point3D( 25, 229, 2 ),
             new Point3D( 25, 227, 2 ),
@@ -36,12 +34,9 @@ namespace Server.Engines.TombOfKings
             new Point3D( 45, 217, 2 ),
         };
 
-        private static List<ChamberLever> m_Levers = new List<ChamberLever>();
+        private static readonly List<ChamberLever> m_Levers = new List<ChamberLever>();
 
-        public static List<ChamberLever> Levers
-        {
-            get { return m_Levers; }
-        }
+        public static List<ChamberLever> Levers => m_Levers;
 
         private Chamber m_Chamber;
 
@@ -104,7 +99,7 @@ namespace Server.Engines.TombOfKings
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

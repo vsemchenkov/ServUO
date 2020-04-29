@@ -1,8 +1,8 @@
+using Server.Mobiles;
+using Server.Spells.SkillMasteries;
+using Server.Targeting;
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
-using Server.Targeting;
-using Server.Spells.SkillMasteries;
 
 namespace Server.Spells.Necromancy
 {
@@ -22,27 +22,9 @@ namespace Server.Spells.Necromancy
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(1.0);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 20.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 11;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.0);
+        public override double RequiredSkill => 20.0;
+        public override int RequiredMana => 11;
         /*
         * The naming here was confusing. Its a 1-off effect spell.
         * So, we dont actually "checkeffect"; we endeffect with bool
@@ -123,10 +105,10 @@ namespace Server.Spells.Necromancy
 
             HarmfulSpell(m);
             double resistMalas = 0;
-            
-            if(m.Skills[SkillName.MagicResist].Base > 50.0)
+
+            if (m.Skills[SkillName.MagicResist].Base > 50.0)
                 resistMalas = m.Skills[SkillName.MagicResist].Base / 2.0;
-            
+
             m_Table[m] = resistMalas;
 
             TimeSpan duration = TimeSpan.FromSeconds(((Caster.Skills[SkillName.SpiritSpeak].Value / 12) + 1.0) * strength);

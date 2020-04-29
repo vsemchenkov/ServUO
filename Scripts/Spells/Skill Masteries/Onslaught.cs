@@ -1,24 +1,18 @@
-using System;
-using Server;
-using Server.Spells;
-using Server.Network;
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
+using Server.Network;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Spells.SkillMasteries
 {
     public class OnslaughtSpell : SkillMasteryMove
     {
-        public override int BaseMana { get { return 20; } }
-        public override double RequiredSkill { get { return 90.0; } }
+        public override int BaseMana => 20;
+        public override double RequiredSkill => 90.0;
 
-        public override SkillName MoveSkill { get { return SkillName.Swords; } }
-        public override TextDefinition AbilityMessage { get { return new TextDefinition(1156007); } } // *You ready an onslaught!*
-
-        public OnslaughtSpell()
-        {
-        }
+        public override SkillName MoveSkill => SkillName.Swords;
+        public override TextDefinition AbilityMessage => new TextDefinition(1156007);  // *You ready an onslaught!*
 
         public override bool Validate(Mobile from)
         {

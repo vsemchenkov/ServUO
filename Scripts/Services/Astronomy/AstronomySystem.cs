@@ -1,9 +1,8 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
-
-using Server.Items;
+using System.Linq;
 
 namespace Server.Engines.Astronomy
 {
@@ -87,7 +86,7 @@ namespace Server.Engines.Astronomy
 
         private static void CreateConstellations(int amount)
         {
-            var next = TimeCoordinate.FiveToEight;
+            TimeCoordinate next = TimeCoordinate.FiveToEight;
 
             if (LoadedConstellations > 0)
             {
@@ -111,7 +110,7 @@ namespace Server.Engines.Astronomy
                 }
                 while (CheckExists(next, ra, dec));
 
-                var info = new ConstellationInfo(next, ra, dec, ConstellationInfo.RandomStarPositions());
+                ConstellationInfo info = new ConstellationInfo(next, ra, dec, ConstellationInfo.RandomStarPositions());
                 Constellations.Add(info);
 
                 info.Identifier = Constellations.Count - 1;
@@ -236,7 +235,7 @@ namespace Server.Engines.Astronomy
 
                     writer.Write(Constellations.Count);
 
-                    foreach (var info in Constellations)
+                    foreach (ConstellationInfo info in Constellations)
                     {
                         info.Serialize(writer);
                     }

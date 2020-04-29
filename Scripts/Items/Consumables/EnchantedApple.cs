@@ -1,8 +1,8 @@
-using System;
 using Server.Spells.First;
 using Server.Spells.Fourth;
-using Server.Spells.Necromancy;
 using Server.Spells.Mysticism;
+using Server.Spells.Necromancy;
+using System;
 
 namespace Server.Items
 {
@@ -14,7 +14,7 @@ namespace Server.Items
         {
             Weight = 1.0;
             Hue = 0x488;
-	        Stackable = true;
+            Stackable = true;
         }
 
         public EnchantedApple(Serial serial)
@@ -22,27 +22,9 @@ namespace Server.Items
         {
         }
 
-        public override MagicalFood FoodID
-        {
-            get
-            {
-                return MagicalFood.EnchantedApple;
-            }
-        }
-        public override TimeSpan Cooldown
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(30);
-            }
-        }
-        public override int EatMessage
-        {
-            get
-            {
-                return 1074846;
-            }
-        }// A tasty bite of the enchanted apple lifts all curses from your soul.
+        public override MagicalFood FoodID => MagicalFood.EnchantedApple;
+        public override TimeSpan Cooldown => TimeSpan.FromSeconds(30);
+        public override int EatMessage => 1074846;// A tasty bite of the enchanted apple lifts all curses from your soul.
 
         public override bool Eat(Mobile from)
         {
@@ -143,7 +125,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

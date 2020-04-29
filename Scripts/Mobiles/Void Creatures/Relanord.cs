@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -6,8 +5,8 @@ namespace Server.Mobiles
     [CorpseName("a relanord corpse")]
     public class Relanord : BaseVoidCreature
     {
-        public override VoidEvolution Evolution => VoidEvolution.Survival; 
-        public override int Stage => 2; 
+        public override VoidEvolution Evolution => VoidEvolution.Survival;
+        public override int Stage => 2;
 
         [Constructable]
         public Relanord()
@@ -91,7 +90,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

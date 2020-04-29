@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using Server.Multis.Deeds;
+using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
@@ -8,24 +7,9 @@ namespace Server.Mobiles
     {
         private readonly List<GenericBuyInfo> m_BuyInfo = new InternalBuyInfo();
         private readonly IShopSellInfo m_SellInfo = new InternalSellInfo();
-        public SBHouseDeed()
-        {
-        }
 
-        public override IShopSellInfo SellInfo
-        {
-            get
-            {
-                return m_SellInfo;
-            }
-        }
-        public override List<GenericBuyInfo> BuyInfo
-        {
-            get
-            {
-                return m_BuyInfo;
-            }
-        }
+        public override IShopSellInfo SellInfo => m_SellInfo;
+        public override List<GenericBuyInfo> BuyInfo => m_BuyInfo;
 
         public class InternalBuyInfo : List<GenericBuyInfo>
         {
@@ -55,29 +39,6 @@ namespace Server.Mobiles
 
         public class InternalSellInfo : GenericSellInfo
         {
-            public InternalSellInfo()
-            {
-                /*Add( typeof( StonePlasterHouseDeed ), 43800 );
-                Add( typeof( FieldStoneHouseDeed ), 43800 );
-                Add( typeof( SmallBrickHouseDeed ), 43800 );
-                Add( typeof( WoodHouseDeed ), 43800 );
-                Add( typeof( WoodPlasterHouseDeed ), 43800 );
-                Add( typeof( ThatchedRoofCottageDeed ), 43800 );
-                Add( typeof( BrickHouseDeed ), 144500 );
-                Add( typeof( TwoStoryWoodPlasterHouseDeed ), 192400 );
-                Add( typeof( TowerDeed ), 433200 );
-                Add( typeof( KeepDeed ), 665200 );
-                Add( typeof( CastleDeed ), 1022800 );
-                Add( typeof( LargePatioDeed ), 152800 );
-                Add( typeof( LargeMarbleDeed ), 192800 );
-                Add( typeof( SmallTowerDeed ), 88500 );
-                Add( typeof( LogCabinDeed ), 97800 );
-                Add( typeof( SandstonePatioDeed ), 90900 );
-                Add( typeof( VillaDeed ), 136500 );
-                Add( typeof( StoneWorkshopDeed ), 60600 );
-                Add( typeof( MarbleWorkshopDeed ), 60300 );
-                Add( typeof( SmallBrickHouseDeed ), 43800 );*/
-            }
         }
     }
 }

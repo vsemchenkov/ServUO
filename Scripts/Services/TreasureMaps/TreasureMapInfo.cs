@@ -1,14 +1,11 @@
+using Server.Engines.Craft;
+using Server.Engines.PartySystem;
+using Server.Mobiles;
+using Server.SkillHandlers;
+using Server.Spells;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server;
-using Server.Misc;
-using Server.Engines.Craft;
-using Server.Spells;
-using Server.SkillHandlers;
-using Server.Mobiles;
-using Server.Engines.PartySystem;
 
 namespace Server.Items
 {
@@ -51,7 +48,7 @@ namespace Server.Items
 
     public static class TreasureMapInfo
     {
-        public static bool NewSystem { get { return true; } }
+        public static bool NewSystem => true;
 
         /// <summary>
         /// This is called from BaseCreature. Instead of editing EVERY creature that drops a map, we'll simply convert it here.
@@ -65,9 +62,9 @@ namespace Server.Items
             switch (level)
             {
                 default: return (int)TreasureLevel.Stash;
-                case 2: 
+                case 2:
                 case 3: return (int)TreasureLevel.Supply;
-                case 4: 
+                case 4:
                 case 5: return (int)TreasureLevel.Cache;
                 case 6: return (int)TreasureLevel.Hoard;
                 case 7: return (int)TreasureLevel.Trove;
@@ -337,9 +334,9 @@ namespace Server.Items
 
         public static int GetGemCount(ChestQuality quality, TreasureLevel level)
         {
-            var baseAmount = 0;
+            int baseAmount = 0;
 
-            switch(quality)
+            switch (quality)
             {
                 case ChestQuality.Rusty: baseAmount = 7; break;
                 case ChestQuality.Standard: baseAmount = Utility.RandomBool() ? 7 : 9; break;
@@ -351,7 +348,7 @@ namespace Server.Items
 
         public static int GetGoldCount(TreasureLevel level)
         {
-            switch(level)
+            switch (level)
             {
                 default:
                 case TreasureLevel.Stash: return Utility.RandomMinMax(10000, 40000);
@@ -375,7 +372,7 @@ namespace Server.Items
 
         public static int GetResourceAmount(TreasureLevel level)
         {
-            switch(level)
+            switch (level)
             {
                 case TreasureLevel.Stash: return 50;
                 case TreasureLevel.Supply: return 100;
@@ -386,7 +383,7 @@ namespace Server.Items
 
         public static int GetRegAmount(ChestQuality quality)
         {
-            switch(quality)
+            switch (quality)
             {
                 default:
                 case ChestQuality.Rusty: return 20;
@@ -408,7 +405,7 @@ namespace Server.Items
 
         public static int GetEquipmentAmount(Mobile from, TreasureLevel level, TreasurePackage package)
         {
-            var amount = 0;
+            int amount = 0;
 
             switch (level)
             {
@@ -420,7 +417,7 @@ namespace Server.Items
                 case TreasureLevel.Trove: amount = 36; break;
             }
 
-            var p = Party.Get(from);
+            Party p = Party.Get(from);
 
             if (p != null && p.Count > 1)
             {
@@ -438,7 +435,7 @@ namespace Server.Items
 
         public static void GetMinMaxBudget(TreasureLevel level, Item item, out int min, out int max)
         {
-            var preArtifact = Imbuing.GetMaxWeight(item) + 100;
+            int preArtifact = Imbuing.GetMaxWeight(item) + 100;
             min = max = 0;
 
             switch (level)
@@ -452,7 +449,7 @@ namespace Server.Items
             }
         }
 
-        private static Type[][][] _WeaponTable = new Type[][][]
+        private static readonly Type[][][] _WeaponTable = new Type[][][]
         {
             new Type[][] // Artisan
                 {
@@ -501,7 +498,7 @@ namespace Server.Items
                 },
         };
 
-        private static Type[][][] _ArmorTable = new Type[][][]
+        private static readonly Type[][][] _ArmorTable = new Type[][][]
         {
             new Type[][] // Artisan
                 {
@@ -642,10 +639,10 @@ namespace Server.Items
 
         public static void Fill(Mobile from, TreasureMapChest chest, TreasureMap tMap)
         {
-            var level = tMap.TreasureLevel;
-            var package = tMap.Package;
-            var facet = tMap.TreasureFacet;
-            var quality = chest.ChestQuality;
+            TreasureLevel level = tMap.TreasureLevel;
+            TreasurePackage package = tMap.Package;
+            TreasureFacet facet = tMap.TreasureFacet;
+            ChestQuality quality = chest.ChestQuality;
 
             chest.Movable = false;
             chest.Locked = true;
@@ -693,7 +690,7 @@ namespace Server.Items
             #endregion
 
             #region TMaps
-            var dropMap = false;
+            bool dropMap = false;
             if (level < TreasureLevel.Trove && 0.1 > Utility.RandomDouble())
             {
                 chest.DropItem(new TreasureMap(tMap.Level + 1, chest.Map));
@@ -704,9 +701,9 @@ namespace Server.Items
             Type[] list = null;
             int amount = 0;
             double dropChance = 0.0;
-           
+
             #region Gold
-            var goldAmount = GetGoldCount(level);
+            int goldAmount = GetGoldCount(level);
             Bag lootBag = new BagOfGold();
 
             while (goldAmount > 0)
@@ -751,9 +748,9 @@ namespace Server.Items
             {
                 lootBag = new BagOfGems();
 
-                foreach (var gemType in Loot.GemTypes)
+                foreach (Type gemType in Loot.GemTypes)
                 {
-                    var gem = Loot.Construct(gemType);
+                    Item gem = Loot.Construct(gemType);
                     gem.Amount = amount;
 
                     lootBag.DropItem(gem);
@@ -772,9 +769,9 @@ namespace Server.Items
             {
                 amount = GetResourceAmount(level);
 
-                foreach (var type in list)
+                foreach (Type type in list)
                 {
-                    var craft = Loot.Construct(type);
+                    Item craft = Loot.Construct(type);
                     craft.Amount = amount;
 
                     chest.DropItem(craft);
@@ -792,9 +789,9 @@ namespace Server.Items
             {
                 amount = GetSpecialResourceAmount(quality);
 
-                foreach (var type in list)
+                foreach (Type type in list)
                 {
-                    var specialCraft = Loot.Construct(type);
+                    Item specialCraft = Loot.Construct(type);
                     specialCraft.Amount = amount;
 
                     chest.DropItem(specialCraft);
@@ -814,15 +811,15 @@ namespace Server.Items
 
             if (amount > 0)
             {
-                var transList = GetTranscendenceList(level, package);
-                var alacList = GetAlacrityList(level, package, facet);
-                var pscrollList = GetPowerScrollList(level, package, facet);
+                SkillName[] transList = GetTranscendenceList(level, package);
+                SkillName[] alacList = GetAlacrityList(level, package, facet);
+                SkillName[] pscrollList = GetPowerScrollList(level, package, facet);
 
-                var scrollList = new List<Tuple<int, SkillName>>();
+                List<Tuple<int, SkillName>> scrollList = new List<Tuple<int, SkillName>>();
 
                 if (transList != null)
                 {
-                    foreach (var sk in transList)
+                    foreach (SkillName sk in transList)
                     {
                         scrollList.Add(new Tuple<int, SkillName>(1, sk));
                     }
@@ -830,7 +827,7 @@ namespace Server.Items
 
                 if (alacList != null)
                 {
-                    foreach (var sk in alacList)
+                    foreach (SkillName sk in alacList)
                     {
                         scrollList.Add(new Tuple<int, SkillName>(2, sk));
                     }
@@ -838,7 +835,7 @@ namespace Server.Items
 
                 if (pscrollList != null)
                 {
-                    foreach (var sk in pscrollList)
+                    foreach (SkillName sk in pscrollList)
                     {
                         scrollList.Add(new Tuple<int, SkillName>(3, sk));
                     }
@@ -848,7 +845,7 @@ namespace Server.Items
                 {
                     for (int i = 0; i < amount; i++)
                     {
-                        var random = scrollList[Utility.Random(scrollList.Count)];
+                        Tuple<int, SkillName> random = scrollList[Utility.Random(scrollList.Count)];
 
                         switch (random.Item1)
                         {
@@ -879,7 +876,7 @@ namespace Server.Items
                 {
                     if (list.Length > 0)
                     {
-                        var deco = Loot.Construct(list[Utility.Random(list.Length)]);
+                        Item deco = Loot.Construct(list[Utility.Random(list.Length)]);
 
                         if (_DecorativeMinorArtifacts.Any(t => t == deco.GetType()))
                         {
@@ -916,7 +913,7 @@ namespace Server.Items
                 {
                     if (list.Length > 0)
                     {
-                        var type = MutateType(list[Utility.Random(list.Length)], facet);
+                        Type type = MutateType(list[Utility.Random(list.Length)], facet);
                         Item deco;
 
                         if (type == null)
@@ -964,9 +961,9 @@ namespace Server.Items
             #region Magic Equipment
             amount = GetEquipmentAmount(from, level, package);
 
-            foreach(var type in GetRandomEquipment(level, package, facet, amount))
+            foreach (Type type in GetRandomEquipment(level, package, facet, amount))
             {
-                var item = Loot.Construct(type);
+                Item item = Loot.Construct(type);
                 int min, max;
                 GetMinMaxBudget(level, item, out min, out max);
 

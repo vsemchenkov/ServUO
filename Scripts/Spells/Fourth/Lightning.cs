@@ -1,6 +1,5 @@
-using System;
-using Server.Targeting;
 using Server.Mobiles;
+using Server.Targeting;
 
 namespace Server.Spells.Fourth
 {
@@ -17,20 +16,8 @@ namespace Server.Spells.Fourth
         {
         }
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Fourth;
-            }
-        }
-        public override bool DelayedDamage
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Fourth;
+        public override bool DelayedDamage => false;
         public override void OnCast()
         {
             Caster.Target = new InternalTarget(this);
@@ -52,7 +39,7 @@ namespace Server.Spells.Fourth
                 SpellHelper.CheckReflect((int)Circle, ref source, ref m);
 
                 double damage = GetNewAosDamage(23, 1, 4, m);
-                
+
                 if (m is Mobile)
                 {
                     Effects.SendBoltEffect(m, true, 0, false);

@@ -13,9 +13,6 @@ namespace Server.Items
         public static readonly TimeSpan FreezeDelayDuration = TimeSpan.FromSeconds(8.0);
         // No longer active in pub21:
         private static readonly Hashtable m_Table = new Hashtable();
-        public ParalyzingBlow()
-        {
-        }
 
         public override int BaseMana => 30;
 
@@ -59,9 +56,9 @@ namespace Server.Items
 
         public override bool OnBeforeSwing(Mobile attacker, Mobile defender)
         {
-            if(defender == null)
+            if (defender == null)
                 return false;
-                
+
             if (defender.Paralyzed)
             {
                 if (attacker != null)
@@ -77,7 +74,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -109,13 +106,13 @@ namespace Server.Items
             public InternalTimer(Mobile m, TimeSpan duration)
                 : base(duration)
             {
-                this.m_Mobile = m;
-                this.Priority = TimerPriority.TwoFiftyMS;
+                m_Mobile = m;
+                Priority = TimerPriority.TwoFiftyMS;
             }
 
             protected override void OnTick()
             {
-                EndImmunity(this.m_Mobile);
+                EndImmunity(m_Mobile);
             }
         }
     }

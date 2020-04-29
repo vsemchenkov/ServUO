@@ -1,15 +1,14 @@
-using System;
-using Server;
+using Server.ContextMenus;
 using Server.Multis;
 using Server.Network;
-using Server.ContextMenus;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Items
 {
     public class TillerMan : Item
     {
-        public virtual bool Babbles { get { return true; } }
+        public virtual bool Babbles => true;
         public BaseBoat Boat { get; private set; }
         private DateTime _NextBabble;
 
@@ -42,7 +41,7 @@ namespace Server.Items
 
             if (Boat.IsRowBoat)
                 return;
-            
+
             list.Add(Boat.Status);
             list.Add(1116580 + (int)Boat.DamageTaken); //State: Prisine            
         }
@@ -65,7 +64,7 @@ namespace Server.Items
                 base.AddNameProperty(list);
         }
 
-        public Mobile Pilot { get { return Boat != null ? Boat.Pilot : null; } }
+        public Mobile Pilot => Boat != null ? Boat.Pilot : null;
 
         public override void OnDoubleClickDead(Mobile m)
         {
@@ -185,8 +184,8 @@ namespace Server.Items
 
         private class EmergencyRepairEntry : ContextMenuEntry
         {
-            private TillerMan m_TillerMan;
-            private Mobile m_From;
+            private readonly TillerMan m_TillerMan;
+            private readonly Mobile m_From;
 
             public EmergencyRepairEntry(TillerMan tillerman, Mobile from)
                 : base(1116589, 5)
@@ -216,8 +215,8 @@ namespace Server.Items
 
         private class ShipRepairEntry : ContextMenuEntry
         {
-            private TillerMan m_TillerMan;
-            private Mobile m_From;
+            private readonly TillerMan m_TillerMan;
+            private readonly Mobile m_From;
 
             public ShipRepairEntry(TillerMan tillerman, Mobile from)
                 : base(1116590, 5)
@@ -242,7 +241,7 @@ namespace Server.Items
 
         private class RenameShipEntry : ContextMenuEntry
         {
-            private TillerMan m_TillerMan;
+            private readonly TillerMan m_TillerMan;
             private readonly Mobile m_From;
 
             public RenameShipEntry(TillerMan tillerman, Mobile from)
@@ -262,7 +261,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);//version
+            writer.Write(0);//version
 
             writer.Write(Boat);
         }

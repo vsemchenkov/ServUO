@@ -6,7 +6,7 @@ namespace Server.Engines.Chat
 {
     public class ChatUser
     {
-        private Mobile m_Mobile;
+        private readonly Mobile m_Mobile;
         private Channel m_Channel;
 
         public ChatUser(Mobile m)
@@ -14,13 +14,13 @@ namespace Server.Engines.Chat
             m_Mobile = m;
         }
 
-        public Mobile Mobile => m_Mobile; 
+        public Mobile Mobile => m_Mobile;
 
-        public string Username => String.Format("<{0}>{1}", m_Mobile.Serial.Value, m_Mobile.Name); 
+        public string Username => String.Format("<{0}>{1}", m_Mobile.Serial.Value, m_Mobile.Name);
 
         public Channel CurrentChannel { get { return m_Channel; } set { m_Channel = value; } }
 
-        public bool IsOnline => (m_Mobile.NetState != null); 
+        public bool IsOnline => (m_Mobile.NetState != null);
 
         public const char NormalColorCharacter = '0';
 
@@ -49,12 +49,12 @@ namespace Server.Engines.Chat
                 m_Mobile.Send(new ChatMessagePacket(from, number, param1, param2));
         }
 
-        private static List<ChatUser> m_Users = new List<ChatUser>();
-        private static Dictionary<Mobile, ChatUser> m_Table = new Dictionary<Mobile, ChatUser>();
+        private static readonly List<ChatUser> m_Users = new List<ChatUser>();
+        private static readonly Dictionary<Mobile, ChatUser> m_Table = new Dictionary<Mobile, ChatUser>();
 
         public static ChatUser AddChatUser(Mobile from)
         {
-            var user = GetChatUser(from);
+            ChatUser user = GetChatUser(from);
 
             if (user == null)
             {
@@ -88,7 +88,7 @@ namespace Server.Engines.Chat
 
         public static void RemoveChatUser(Mobile from)
         {
-            var user = GetChatUser(from);
+            ChatUser user = GetChatUser(from);
 
             RemoveChatUser(user);
         }
@@ -112,7 +112,7 @@ namespace Server.Engines.Chat
 
         public static void GlobalSendCommand(ChatCommand command, ChatUser initiator, string param1 = null, string param2 = null)
         {
-            foreach (var user in m_Users.ToArray())
+            foreach (ChatUser user in m_Users.ToArray())
             {
                 if (user == initiator)
                     continue;

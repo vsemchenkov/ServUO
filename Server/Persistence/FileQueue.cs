@@ -1,7 +1,7 @@
+using Server.Network;
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using Server.Network;
 
 namespace Server
 {
@@ -9,8 +9,8 @@ namespace Server
 
     public sealed class FileQueue : IDisposable
     {
-        private static int bufferSize;
-        private static BufferPool bufferPool;
+        private static readonly int bufferSize;
+        private static readonly BufferPool bufferPool;
         private readonly object syncRoot;
         private readonly Chunk[] active;
         private readonly Queue<Page> pending;
@@ -50,13 +50,7 @@ namespace Server
             bufferPool = new BufferPool("File Buffers", 64, bufferSize);
         }
 
-        public long Position
-        {
-            get
-            {
-                return this.position;
-            }
-        }
+        public long Position => this.position;
         public void Dispose()
         {
             if (this.idle != null)
@@ -233,27 +227,9 @@ namespace Server
                 this.size = size;
             }
 
-            public byte[] Buffer
-            {
-                get
-                {
-                    return this.buffer;
-                }
-            }
-            public int Offset
-            {
-                get
-                {
-                    return 0;
-                }
-            }
-            public int Size
-            {
-                get
-                {
-                    return this.size;
-                }
-            }
+            public byte[] Buffer => this.buffer;
+            public int Offset => 0;
+            public int Size => this.size;
             public void Commit()
             {
                 this.owner.Commit(this, this.slot);

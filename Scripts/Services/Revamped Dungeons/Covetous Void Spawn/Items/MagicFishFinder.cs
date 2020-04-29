@@ -1,9 +1,7 @@
-using Server;
+using Server.Commands;
 using System;
-using Server.Mobiles;
 using System.Collections.Generic;
 using System.Linq;
-using Server.Commands;
 
 namespace Server.Items
 {
@@ -19,7 +17,7 @@ namespace Server.Items
 
         private Timer m_Timer;
 
-        public override int LabelNumber { get { return 1152602; } } // Magical Fish Finder
+        public override int LabelNumber => 1152602;  // Magical Fish Finder
 
         [Constructable]
         public MagicalFishFinder() : base(5366)
@@ -54,8 +52,8 @@ namespace Server.Items
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
 
             Delete();
@@ -185,7 +183,7 @@ namespace Server.Items
             Schools[Map.Ilshenar] = new List<SchoolEntry>();
             Schools[Map.Tokuno] = new List<SchoolEntry>();
 
-            foreach (var kvp in Schools)
+            foreach (KeyValuePair<Map, List<SchoolEntry>> kvp in Schools)
             {
                 int amount = 150;
 
@@ -207,7 +205,7 @@ namespace Server.Items
                     kvp.Value.Add(new SchoolEntry(kvp.Key, new Point2D(p.X, p.Y)));
                 }
 
-                if(kvp.Value.Count == 0)
+                if (kvp.Value.Count == 0)
                     Console.WriteLine("Warning: {0} has 0 School entries!", kvp.Key);
             }
 

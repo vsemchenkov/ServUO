@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Items
@@ -34,7 +34,7 @@ namespace Server.Items
 
             MoveToWorld(location, map);
 
-            m_SoundTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(Utility.RandomMinMax(5, 50)), new TimerCallback(PlaySound));
+            m_SoundTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(Utility.RandomMinMax(5, 50)), PlaySound);
             m_SoundTimer.Start();
         }
 
@@ -47,9 +47,9 @@ namespace Server.Items
             Effects.PlaySound(Location, Map, Utility.RandomList(0x1DD, 0x345, 0x346, 0x347, 0x348, 0x349, 0x34A));
         }
 
-        private Dictionary<Mobile, Timer> m_DamageTable = new Dictionary<Mobile, Timer>();
+        private readonly Dictionary<Mobile, Timer> m_DamageTable = new Dictionary<Mobile, Timer>();
 
-        public override bool HandlesOnMovement { get { return true; } }
+        public override bool HandlesOnMovement => true;
 
         public override void OnMovement(Mobile m, Point3D oldLocation)
         {
@@ -59,7 +59,7 @@ namespace Server.Items
             if (m.InRange(this, 1) && !m_DamageTable.ContainsKey(m))
             {
                 // Should start the timer
-                m_DamageTable[m] = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(5.0), new TimerStateCallback<Mobile>(Damage), m);
+                m_DamageTable[m] = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(5.0), Damage, m);
             }
         }
 
@@ -94,7 +94,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -102,7 +102,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            m_SoundTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(5.0), new TimerCallback(PlaySound));
+            m_SoundTimer = Timer.DelayCall(TimeSpan.Zero, TimeSpan.FromSeconds(5.0), PlaySound);
             m_SoundTimer.Start();
         }
     }

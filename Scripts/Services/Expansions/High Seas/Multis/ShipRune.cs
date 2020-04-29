@@ -1,5 +1,3 @@
-using Server;
-using System;
 using Server.Multis;
 
 namespace Server.Items
@@ -24,7 +22,7 @@ namespace Server.Items
             }
         }
 
-        public override int LabelNumber { get { return 1149570; } } //A Ship Rune
+        public override int LabelNumber => 1149570;  //A Ship Rune
 
         [Constructable]
         public ShipRune() : this(null)
@@ -85,7 +83,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
             writer.Write(m_Galleon);
         }
 

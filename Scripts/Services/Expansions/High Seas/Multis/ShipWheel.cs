@@ -1,16 +1,14 @@
-using System;
-using Server;
 using Server.Multis;
 
 namespace Server.Items
 {
     public class ShipWheel : Item, IGalleonFixture
     {
-        public override int LabelNumber { get { return 1149698; } } // wheel
+        public override int LabelNumber => 1149698;  // wheel
 
         public BaseGalleon Galleon { get; set; }
 
-        public Mobile Pilot { get { return Galleon != null ? Galleon.Pilot : null; } }
+        public Mobile Pilot => Galleon != null ? Galleon.Pilot : null;
 
         public ShipWheel(BaseGalleon galleon, int id)
             : base(id)
@@ -81,7 +79,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,7 +1,6 @@
-using Server;
-using System;
-using Server.Mobiles;
 using Server.Engines.Craft;
+using Server.Mobiles;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Items
@@ -34,12 +33,12 @@ namespace Server.Items
         [CommandProperty(AccessLevel.GameMaster)]
         public ItemQuality Quality { get { return _Quality; } set { _Quality = value; InvalidateProperties(); } }
 
-        public bool PlayerConstructed { get { return true; } }
+        public bool PlayerConstructed => true;
 
-        public virtual TimeSpan Duration { get { return TimeSpan.FromMinutes(5); } }
-        public virtual int BuffName { get { return 0; } }
-        public virtual int BuffAmount { get { return 0; } }
-        public virtual FishPieEffect Effect { get { return FishPieEffect.None; } }
+        public virtual TimeSpan Duration => TimeSpan.FromMinutes(5);
+        public virtual int BuffName => 0;
+        public virtual int BuffAmount => 0;
+        public virtual FishPieEffect Effect => FishPieEffect.None;
 
         public static Dictionary<Mobile, List<FishPieEffect>> m_EffectsList = new Dictionary<Mobile, List<FishPieEffect>>();
 
@@ -77,7 +76,7 @@ namespace Server.Items
 
         public static void RemoveBuff(Mobile from, FishPieEffect type)
         {
-            if(!m_EffectsList.ContainsKey(from))
+            if (!m_EffectsList.ContainsKey(from))
                 return;
 
             if (m_EffectsList[from] != null && m_EffectsList[from].Contains(type))
@@ -98,19 +97,19 @@ namespace Server.Items
             }
 
             if (IsUnderEffects(to, FishPieEffect.PhysicalSoak) && phys > 0)
-                totalDamage -= (int)Math.Min(5.0, totalDamage * ((double)phys / 100.0));
+                totalDamage -= (int)Math.Min(5.0, totalDamage * (phys / 100.0));
 
             if (IsUnderEffects(to, FishPieEffect.FireSoak) && fire > 0)
-                totalDamage -= (int)Math.Min(5.0, totalDamage * ((double)fire / 100.0));
+                totalDamage -= (int)Math.Min(5.0, totalDamage * (fire / 100.0));
 
             if (IsUnderEffects(to, FishPieEffect.ColdSoak) && cold > 0)
-                totalDamage -= (int)Math.Min(5.0, totalDamage * ((double)cold / 100.0));
+                totalDamage -= (int)Math.Min(5.0, totalDamage * (cold / 100.0));
 
             if (IsUnderEffects(to, FishPieEffect.PoisonSoak) && pois > 0)
-                totalDamage -= (int)Math.Min(5.0, totalDamage * ((double)pois / 100.0));
+                totalDamage -= (int)Math.Min(5.0, totalDamage * (pois / 100.0));
 
             if (IsUnderEffects(to, FishPieEffect.EnergySoak) && nrgy > 0)
-                totalDamage -= (int)Math.Min(5.0, totalDamage * ((double)nrgy / 100.0));
+                totalDamage -= (int)Math.Min(5.0, totalDamage * (nrgy / 100.0));
         }
 
         public virtual bool Apply(Mobile from)
@@ -163,8 +162,8 @@ namespace Server.Items
 
         private class InternalTimer : Timer
         {
-            private Mobile m_From;
-            private FishPieEffect m_EffectType;
+            private readonly Mobile m_From;
+            private readonly FishPieEffect m_EffectType;
 
             public InternalTimer(TimeSpan duration, Mobile from, FishPieEffect type) : base(duration)
             {
@@ -215,7 +214,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)_Quality);
         }
@@ -233,10 +232,10 @@ namespace Server.Items
 
     public class AutumnDragonfishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116224; } }
-        public override int BuffName { get { return 1116280; } }
-        public override int BuffAmount { get { return 10; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.MedBoost; } }
+        public override int LabelNumber => 1116224;
+        public override int BuffName => 1116280;
+        public override int BuffAmount => 10;
+        public override FishPieEffect Effect => FishPieEffect.MedBoost;
 
         [Constructable]
         public AutumnDragonfishPie()
@@ -249,7 +248,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -262,10 +261,10 @@ namespace Server.Items
 
     public class BullFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116220; } }
-        public override int BuffName { get { return 1116276; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.WeaponDam; } }
+        public override int LabelNumber => 1116220;
+        public override int BuffName => 1116276;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.WeaponDam;
 
         [Constructable]
         public BullFishPie()
@@ -278,7 +277,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -291,10 +290,10 @@ namespace Server.Items
 
     public class CrystalFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116219; } }
-        public override int BuffName { get { return 1116275; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.EnergySoak; } }
+        public override int LabelNumber => 1116219;
+        public override int BuffName => 1116275;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.EnergySoak;
 
         [Constructable]
         public CrystalFishPie()
@@ -307,7 +306,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -319,10 +318,10 @@ namespace Server.Items
 
     public class FairySalmonPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116222; } }
-        public override int BuffName { get { return 1116278; } }
-        public override int BuffAmount { get { return 2; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.CastFocus; } }
+        public override int LabelNumber => 1116222;
+        public override int BuffName => 1116278;
+        public override int BuffAmount => 2;
+        public override FishPieEffect Effect => FishPieEffect.CastFocus;
 
         [Constructable]
         public FairySalmonPie()
@@ -335,7 +334,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -348,10 +347,10 @@ namespace Server.Items
 
     public class FireFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116217; } }
-        public override int BuffName { get { return 1116271; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.FireSoak; } }
+        public override int LabelNumber => 1116217;
+        public override int BuffName => 1116271;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.FireSoak;
 
         [Constructable]
         public FireFishPie()
@@ -364,7 +363,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -377,10 +376,10 @@ namespace Server.Items
 
     public class GiantKoiPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116216; } }
-        public override int BuffName { get { return 1116270; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.DefChance; } }
+        public override int LabelNumber => 1116216;
+        public override int BuffName => 1116270;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.DefChance;
 
         [Constructable]
         public GiantKoiPie()
@@ -393,7 +392,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -405,10 +404,10 @@ namespace Server.Items
 
     public class GreatBarracudaPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116214; } }
-        public override int BuffName { get { return 1116269; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.HitChance; } }
+        public override int LabelNumber => 1116214;
+        public override int BuffName => 1116269;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.HitChance;
 
         [Constructable]
         public GreatBarracudaPie()
@@ -421,7 +420,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -434,10 +433,10 @@ namespace Server.Items
 
     public class HolyMackerelPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116225; } }
-        public override int BuffName { get { return 1116283; } }
-        public override int BuffAmount { get { return 3; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.ManaRegen; } }
+        public override int LabelNumber => 1116225;
+        public override int BuffName => 1116283;
+        public override int BuffAmount => 3;
+        public override FishPieEffect Effect => FishPieEffect.ManaRegen;
 
         [Constructable]
         public HolyMackerelPie()
@@ -450,7 +449,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -463,10 +462,10 @@ namespace Server.Items
 
     public class LavaFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116223; } }
-        public override int BuffName { get { return 1116279; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.SoulCharge; } }
+        public override int LabelNumber => 1116223;
+        public override int BuffName => 1116279;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.SoulCharge;
 
         [Constructable]
         public LavaFishPie()
@@ -479,7 +478,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -492,10 +491,10 @@ namespace Server.Items
 
     public class ReaperFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116218; } }
-        public override int BuffName { get { return 1116274; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.PoisonSoak; } }
+        public override int LabelNumber => 1116218;
+        public override int BuffName => 1116274;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.PoisonSoak;
 
         [Constructable]
         public ReaperFishPie()
@@ -508,7 +507,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -521,10 +520,10 @@ namespace Server.Items
 
     public class SummerDragonfishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116221; } }
-        public override int BuffName { get { return 1116277; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.SpellDamage; } }
+        public override int LabelNumber => 1116221;
+        public override int BuffName => 1116277;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.SpellDamage;
 
         [Constructable]
         public SummerDragonfishPie()
@@ -537,7 +536,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -550,10 +549,10 @@ namespace Server.Items
 
     public class UnicornFishPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116226; } }
-        public override int BuffName { get { return 1116284; } }
-        public override int BuffAmount { get { return 3; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.StamRegen; } }
+        public override int LabelNumber => 1116226;
+        public override int BuffName => 1116284;
+        public override int BuffAmount => 3;
+        public override FishPieEffect Effect => FishPieEffect.StamRegen;
 
         [Constructable]
         public UnicornFishPie()
@@ -566,7 +565,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -578,10 +577,10 @@ namespace Server.Items
 
     public class YellowtailBarracudaPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116215; } }
-        public override int BuffName { get { return 1116282; } }
-        public override int BuffAmount { get { return 3; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.HitsRegen; } }
+        public override int LabelNumber => 1116215;
+        public override int BuffName => 1116282;
+        public override int BuffAmount => 3;
+        public override FishPieEffect Effect => FishPieEffect.HitsRegen;
 
         [Constructable]
         public YellowtailBarracudaPie()
@@ -594,7 +593,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -606,10 +605,10 @@ namespace Server.Items
 
     public class StoneCrabPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116227; } }
-        public override int BuffName { get { return 1116272; } }
-        public override int BuffAmount { get { return 3; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.PhysicalSoak; } }
+        public override int LabelNumber => 1116227;
+        public override int BuffName => 1116272;
+        public override int BuffAmount => 3;
+        public override FishPieEffect Effect => FishPieEffect.PhysicalSoak;
 
         [Constructable]
         public StoneCrabPie()
@@ -622,7 +621,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -634,10 +633,10 @@ namespace Server.Items
 
     public class SpiderCrabPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116229; } }
-        public override int BuffName { get { return 1116281; } }
-        public override int BuffAmount { get { return 10; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.FocusBoost; } }
+        public override int LabelNumber => 1116229;
+        public override int BuffName => 1116281;
+        public override int BuffAmount => 10;
+        public override FishPieEffect Effect => FishPieEffect.FocusBoost;
 
         [Constructable]
         public SpiderCrabPie()
@@ -650,7 +649,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -662,10 +661,10 @@ namespace Server.Items
 
     public class BlueLobsterPie : BaseFishPie
     {
-        public override int LabelNumber { get { return 1116228; } }
-        public override int BuffName { get { return 1116273; } }
-        public override int BuffAmount { get { return 5; } }
-        public override FishPieEffect Effect { get { return FishPieEffect.ColdSoak; } }
+        public override int LabelNumber => 1116228;
+        public override int BuffName => 1116273;
+        public override int BuffAmount => 5;
+        public override FishPieEffect Effect => FishPieEffect.ColdSoak;
 
         [Constructable]
         public BlueLobsterPie()
@@ -678,7 +677,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

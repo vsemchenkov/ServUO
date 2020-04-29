@@ -1,6 +1,6 @@
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -18,13 +18,9 @@ namespace Server.Items
     {
         private static Dictionary<Mobile, BlockInfo> _Table;
 
-        public Block()
-        {
-        }
+        public override int BaseMana => 20;
 
-        public override int BaseMana => 20; 
-
-        public override int AccuracyBonus => -15; 
+        public override int AccuracyBonus => -15;
 
         public override SkillName GetSecondarySkill(Mobile from)
         {
@@ -90,7 +86,7 @@ namespace Server.Items
 
             Timer.DelayCall(TimeSpan.FromSeconds(6), () =>
             {
-                if(IsBlocking(m))
+                if (IsBlocking(m))
                     EndBlock(m);
             });
         }
@@ -112,7 +108,7 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);
@@ -134,7 +130,7 @@ namespace Server.Items
 
             BeginBlock(attacker, dcibonus, spellblock, meleeblock);
 
-            if(creature)
+            if (creature)
                 PetTrainingHelper.OnWeaponAbilityUsed((BaseCreature)attacker, SkillName.Bushido);
         }
 

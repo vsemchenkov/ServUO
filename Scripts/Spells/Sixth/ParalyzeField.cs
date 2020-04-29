@@ -1,8 +1,8 @@
-using System;
 using Server.Items;
 using Server.Misc;
 using Server.Mobiles;
 using Server.Targeting;
+using System;
 
 namespace Server.Spells.Sixth
 {
@@ -21,13 +21,7 @@ namespace Server.Spells.Sixth
         {
         }
 
-        public override SpellCircle Circle
-        {
-            get
-            {
-                return SpellCircle.Sixth;
-            }
-        }
+        public override SpellCircle Circle => SpellCircle.Sixth;
         public override void OnCast()
         {
             Caster.Target = new InternalTarget(this);
@@ -99,7 +93,7 @@ namespace Server.Spells.Sixth
             private Mobile m_Caster;
             private DateTime m_End;
 
-            public Mobile Caster { get { return m_Caster; } }
+            public Mobile Caster => m_Caster;
 
             public InternalItem(int itemID, Point3D loc, Mobile caster, Map map, TimeSpan duration)
                 : base(itemID)
@@ -126,13 +120,7 @@ namespace Server.Spells.Sixth
             {
             }
 
-            public override bool BlocksFit
-            {
-                get
-                {
-                    return true;
-                }
-            }
+            public override bool BlocksFit => true;
             public override void OnAfterDelete()
             {
                 base.OnAfterDelete();
@@ -145,7 +133,7 @@ namespace Server.Spells.Sixth
             {
                 base.Serialize(writer);
 
-                writer.Write((int)0); // version
+                writer.Write(0); // version
 
                 writer.Write(m_Caster);
                 writer.WriteDeltaTime(m_End);
@@ -157,7 +145,7 @@ namespace Server.Spells.Sixth
 
                 int version = reader.ReadInt();
 
-                switch ( version )
+                switch (version)
                 {
                     case 0:
                         {
@@ -190,13 +178,13 @@ namespace Server.Spells.Sixth
 
                     if (duration < 0.0)
                         duration = 0.0;
-    
+
 
                     m.Paralyze(TimeSpan.FromSeconds(duration));
 
                     m.PlaySound(0x204);
                     m.FixedEffect(0x376A, 10, 16);
-					
+
                     if (m is BaseCreature)
                         ((BaseCreature)m).OnHarmfulSpell(m_Caster);
                 }

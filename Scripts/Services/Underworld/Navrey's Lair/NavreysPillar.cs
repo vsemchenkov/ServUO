@@ -87,10 +87,10 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)m_State);
-            writer.Write((Item)m_Controller);
+            writer.Write(m_Controller);
             writer.Write((int)m_Type);
         }
 
@@ -107,7 +107,7 @@ namespace Server.Items
 
         private class InternalTimer : Timer
         {
-            private NavreysPillar m_Pillar;
+            private readonly NavreysPillar m_Pillar;
             private int m_Ticks;
 
             public InternalTimer(NavreysPillar pillar)

@@ -1,7 +1,7 @@
-using System;
-using System.IO;
 using Server.Accounting;
 using Server.Network;
+using System;
+using System.IO;
 
 namespace Server.RemoteAdmin
 {
@@ -23,13 +23,7 @@ namespace Server.RemoteAdmin
                 m_Enabled = value;
             }
         }
-        public static StreamWriter Output
-        {
-            get
-            {
-                return m_Output;
-            }
-        }
+        public static StreamWriter Output => m_Output;
         public static void LazyInitialize()
         {
             if (Initialized || !m_Enabled)

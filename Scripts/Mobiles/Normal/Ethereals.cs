@@ -1,11 +1,10 @@
 #region References
-using System;
-
 using Server.Engines.VeteranRewards;
 using Server.Items;
 using Server.Multis;
 using Server.Network;
 using Server.Spells;
+using System;
 #endregion
 
 namespace Server.Mobiles
@@ -167,29 +166,17 @@ namespace Server.Mobiles
             }
         }
 
-        public int MountedID
-        {
-            get
-            {
-                return Transparent ? TransparentMountedID : NonTransparentMountedID;
-            }
-        }
+        public int MountedID => Transparent ? TransparentMountedID : NonTransparentMountedID;
 
-        public int MountedHue
-        {
-            get
-            {
-                return Transparent ? TransparentMountedHue : NonTransparentMountedHue;
-            }
-        }
+        public int MountedHue => Transparent ? TransparentMountedHue : NonTransparentMountedHue;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsRewardItem { get { return m_IsRewardItem; } set { m_IsRewardItem = value; } }
 
-        public override double DefaultWeight { get { return 1.0; } }
+        public override double DefaultWeight => 1.0;
 
-        public override bool DisplayLootType { get { return true; } }
-        public virtual int FollowerSlots { get { return 1; } }
+        public override bool DisplayLootType => true;
+        public virtual int FollowerSlots => 1;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Rider
@@ -228,7 +215,7 @@ namespace Server.Mobiles
             }
         }
 
-        public IMount Mount { get { return this; } }
+        public IMount Mount => this;
 
         [Constructable]
         public EtherealMount(int itemID, int transMountedID, int nonTransMountedID, int transHue = 0, int nonTransHue = 0)
@@ -526,18 +513,11 @@ namespace Server.Mobiles
                 m_Mount = mount;
             }
 
-            public override bool ClearHandsOnCast { get { return false; } }
-            public override bool RevealOnCast { get { return false; } }
-            public override double CastDelayFastScalar { get { return 0; } }
+            public override bool ClearHandsOnCast => false;
+            public override bool RevealOnCast => false;
+            public override double CastDelayFastScalar => 0;
 
-            public override TimeSpan CastDelayBase
-            {
-                get
-                {
-                    return
-                            TimeSpan.FromSeconds(3.0);
-                }
-            }
+            public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(3.0);
 
             public override TimeSpan GetCastRecovery()
             {
@@ -624,7 +604,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1041298; } } // Ethereal Horse Statuette
+        public override int LabelNumber => 1041298;  // Ethereal Horse Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -657,7 +637,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1041300; } } // Ethereal Llama Statuette
+        public override int LabelNumber => 1041300;  // Ethereal Llama Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -690,7 +670,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1041299; } } // Ethereal Ostard Statuette
+        public override int LabelNumber => 1041299;  // Ethereal Ostard Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -723,7 +703,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1049747; } } // Ethereal Ridgeback Statuette
+        public override int LabelNumber => 1049747;  // Ethereal Ridgeback Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -761,7 +741,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1049745; } } // Ethereal Unicorn Statuette
+        public override int LabelNumber => 1049745;  // Ethereal Unicorn Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -799,7 +779,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1049748; } } // Ethereal Beetle Statuette
+        public override int LabelNumber => 1049748;  // Ethereal Beetle Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -837,7 +817,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1049746; } } // Ethereal Ki-Rin Statuette
+        public override int LabelNumber => 1049746;  // Ethereal Ki-Rin Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -875,7 +855,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1049749; } } // Ethereal Swamp Dragon Statuette
+        public override int LabelNumber => 1049749;  // Ethereal Swamp Dragon Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -911,7 +891,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1076159; } } // Rideable Polar Bear
+        public override int LabelNumber => 1076159;  // Rideable Polar Bear
 
         public override void Serialize(GenericWriter writer)
         {
@@ -946,7 +926,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1080386; } } // Ethereal Cu Sidhe Statuette
+        public override int LabelNumber => 1080386;  // Ethereal Cu Sidhe Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -980,7 +960,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1113813; } } // Ethereal Hiryu Statuette
+        public override int LabelNumber => 1113813;  // Ethereal Hiryu Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -1014,7 +994,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1113812; } } // Ethereal Reptalon Statuette
+        public override int LabelNumber => 1113812;  // Ethereal Reptalon Statuette
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
@@ -1048,7 +1028,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1074816; } } // Charger of the Fallen Statuette
+        public override int LabelNumber => 1074816;  // Charger of the Fallen Statuette
 
         public override void Serialize(GenericWriter writer)
         {
@@ -1072,7 +1052,7 @@ namespace Server.Mobiles
 
     public class EtherealBoura : EtherealMount
     {
-        public override int LabelNumber { get { return 1150006; } } // Rideable Boura Statuette
+        public override int LabelNumber => 1150006;  // Rideable Boura Statuette
 
         [Constructable]
         public EtherealBoura()
@@ -1090,7 +1070,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)2); // version
+            writer.Write(2); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1108,7 +1088,7 @@ namespace Server.Mobiles
 
     public class EtherealAncientHellHound : EtherealMount
     {
-        public override int LabelNumber { get { return 1155723; } } // Ancient Hell Hound Statuette
+        public override int LabelNumber => 1155723;  // Ancient Hell Hound Statuette
 
         [Constructable]
         public EtherealAncientHellHound()
@@ -1126,7 +1106,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)2); // version
+            writer.Write(2); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1161,7 +1141,7 @@ namespace Server.Mobiles
             : base(serial)
         { }
 
-        public override int LabelNumber { get { return 1154589; } } // Ethereal Tiger Statuette
+        public override int LabelNumber => 1154589;  // Ethereal Tiger Statuette
 
         public override void Serialize(GenericWriter writer)
         {
@@ -1185,7 +1165,7 @@ namespace Server.Mobiles
 
     public class EtherealTarantula : EtherealMount
     {
-        public override int LabelNumber { get { return 1157081; } } // Tarantula Statuette
+        public override int LabelNumber => 1157081;  // Tarantula Statuette
 
         [Constructable]
         public EtherealTarantula()
@@ -1204,7 +1184,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1222,7 +1202,7 @@ namespace Server.Mobiles
 
     public class EtherealLasher : EtherealMount
     {
-        public override int LabelNumber { get { return 1157214; } } // Lasher
+        public override int LabelNumber => 1157214;  // Lasher
 
         [Constructable]
         public EtherealLasher()
@@ -1240,7 +1220,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1258,7 +1238,7 @@ namespace Server.Mobiles
 
     public class EtherealSerpentineDragon : EtherealMount
     {
-        public override int LabelNumber { get { return 1157995; } } // Ethereal Dragon Statuette
+        public override int LabelNumber => 1157995;  // Ethereal Dragon Statuette
 
         [Constructable]
         public EtherealSerpentineDragon()
@@ -1276,7 +1256,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -1294,7 +1274,7 @@ namespace Server.Mobiles
 
     public class EtherealWarBoar : EtherealMount
     {
-        public override int LabelNumber { get { return 1159423; } } // Ethereal War Boar Statuette
+        public override int LabelNumber => 1159423;  // Ethereal War Boar Statuette
 
         [Constructable]
         public EtherealWarBoar()
@@ -1311,7 +1291,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

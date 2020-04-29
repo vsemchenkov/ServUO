@@ -1,14 +1,10 @@
-using Server;
-using System;
-using Server.Mobiles;
-
 namespace Server.Items
 {
     public class StoneFootwear : BaseShoes
     {
         public static void Initialize()
         {
-            EventSink.Movement += new MovementEventHandler(EventSink_Movement);
+            EventSink.Movement += EventSink_Movement;
         }
 
         [Constructable]
@@ -17,7 +13,7 @@ namespace Server.Items
         }
 
         [Constructable]
-        public StoneFootwear(int itemID) 
+        public StoneFootwear(int itemID)
             : base(itemID)
         {
             string name = GetNameInfo(ItemID);
@@ -63,11 +59,11 @@ namespace Server.Items
         {
             if (parent is Mobile)
             {
-                Mobile m = (Mobile)parent as Mobile;                
+                Mobile m = (Mobile)parent as Mobile;
 
                 if (SpiderWebbing.IsTrapped(m))
                 {
-                    SpiderWebbing.RemoveEffects(m);                    
+                    SpiderWebbing.RemoveEffects(m);
                 }
 
                 m.SendLocalizedMessage(1151094, GetNameInfo(ItemID)); // You manage to equip the stone ~1_token~ and find you can no longer move!
@@ -97,7 +93,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -133,7 +129,7 @@ namespace Server.Items
 
     public class CrackedLavaRockSouth : Item
     {
-        public override int LabelNumber { get { return 1098151; } }
+        public override int LabelNumber => 1098151;
 
         [Constructable]
         public CrackedLavaRockSouth() : base(19279)
@@ -167,7 +163,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -179,7 +175,7 @@ namespace Server.Items
 
     public class CrackedLavaRockEast : Item
     {
-        public override int LabelNumber { get { return 1098151; } }
+        public override int LabelNumber => 1098151;
 
         [Constructable]
         public CrackedLavaRockEast() : base(19275)
@@ -220,7 +216,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -232,7 +228,7 @@ namespace Server.Items
 
     public class GeodeSouth : Item
     {
-        public override int LabelNumber { get { return 1098145; } }
+        public override int LabelNumber => 1098145;
 
         [Constructable]
         public GeodeSouth() : base(Utility.Random(19277, 2))
@@ -251,7 +247,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -263,7 +259,7 @@ namespace Server.Items
 
     public class GeodeEast : Item
     {
-        public override int LabelNumber { get { return 1098145; } }
+        public override int LabelNumber => 1098145;
 
         [Constructable]
         public GeodeEast() : base(Utility.Random(19273, 2))
@@ -282,7 +278,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -294,7 +290,7 @@ namespace Server.Items
 
     public class GeodeShardSouth : Item
     {
-        public override int LabelNumber { get { return 1098148; } }
+        public override int LabelNumber => 1098148;
 
         [Constructable]
         public GeodeShardSouth() : base(19276)
@@ -313,7 +309,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -325,7 +321,7 @@ namespace Server.Items
 
     public class GeodeShardEast : Item
     {
-        public override int LabelNumber { get { return 1098148; } }
+        public override int LabelNumber => 1098148;
 
         [Constructable]
         public GeodeShardEast() : base(19272)
@@ -344,7 +340,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -356,7 +352,7 @@ namespace Server.Items
 
     public class LavaRock : Item
     {
-        public override int LabelNumber { get { return 1151166; } }
+        public override int LabelNumber => 1151166;
 
         [Constructable]
         public LavaRock() : base(Utility.Random(4964, 6))
@@ -369,7 +365,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -381,7 +377,7 @@ namespace Server.Items
 
     public class StonePaver : Item
     {
-        public override int LabelNumber { get { return 1097277; } }
+        public override int LabelNumber => 1097277;
 
         [Constructable]
         public StonePaver()
@@ -395,7 +391,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

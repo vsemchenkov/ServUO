@@ -1,12 +1,10 @@
-using System;
-using Server;
 using Server.Gumps;
 
 namespace Server.Items
 {
     public class Anniversary21GiftToken : Item, IRewardOption
     {
-        public override int LabelNumber { get { return 1158485; } } // 21st Anniversary Gift Token
+        public override int LabelNumber => 1158485;  // 21st Anniversary Gift Token
 
         [Constructable]
         public Anniversary21GiftToken()
@@ -38,10 +36,10 @@ namespace Server.Items
 
         public void OnOptionSelected(Mobile from, int choice)
         {
-            var bag = new Bag();
+            Bag bag = new Bag();
             bag.Hue = 2720;
 
-            switch(choice)
+            switch (choice)
             {
                 default:
                     bag.Delete();
@@ -65,7 +63,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

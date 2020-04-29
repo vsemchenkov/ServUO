@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Items
 {
     public class FlameOfChaos : Item
     {
-        public override int LabelNumber { get { return 1112128; } } // Flame of Chaos
+        public override int LabelNumber => 1112128;  // Flame of Chaos
 
         private List<FireBarrier> m_Barriers;
 
@@ -26,7 +26,7 @@ namespace Server.Items
             }
         }
 
-        public override bool HandlesOnSpeech { get { return true; } }
+        public override bool HandlesOnSpeech => true;
 
         public override void OnSpeech(SpeechEventArgs e)
         {
@@ -41,7 +41,7 @@ namespace Server.Items
                     barrier.Active = false;
                 }
 
-                Timer.DelayCall(TimeSpan.FromMinutes(2.0), new TimerCallback(RestoreBarrier));
+                Timer.DelayCall(TimeSpan.FromMinutes(2.0), RestoreBarrier);
             }
         }
 
@@ -65,7 +65,7 @@ namespace Server.Items
             }
         }
 
-        private static Point3D[] m_BarrierLocations = new Point3D[]
+        private static readonly Point3D[] m_BarrierLocations = new Point3D[]
         {
             new Point3D( 33, 207, 0 ),
             new Point3D( 34, 207, 0 ),
@@ -100,12 +100,12 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((int)m_Barriers.Count);
+            writer.Write(m_Barriers.Count);
 
             for (int i = 0; i < m_Barriers.Count; i++)
-                writer.Write((Item)m_Barriers[i]);
+                writer.Write(m_Barriers[i]);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -121,7 +121,7 @@ namespace Server.Items
                 m_Barriers.Add(reader.ReadItem() as FireBarrier);
 
             if (!Visible)
-                Timer.DelayCall(TimeSpan.Zero, new TimerCallback(RestoreBarrier));
+                Timer.DelayCall(TimeSpan.Zero, RestoreBarrier);
         }
     }
 }

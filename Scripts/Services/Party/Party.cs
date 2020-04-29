@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Server.Commands;
 using Server.Network;
 using Server.Targeting;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Engines.PartySystem
 {
@@ -24,41 +24,11 @@ namespace Server.Engines.PartySystem
             m_Members.Add(new PartyMemberInfo(leader));
         }
 
-        public int Count
-        {
-            get
-            {
-                return m_Members.Count;
-            }
-        }
-        public bool Active
-        {
-            get
-            {
-                return m_Members.Count > 1;
-            }
-        }
-        public Mobile Leader
-        {
-            get
-            {
-                return m_Leader;
-            }
-        }
-        public List<PartyMemberInfo> Members
-        {
-            get
-            {
-                return m_Members;
-            }
-        }
-        public List<Mobile> Candidates
-        {
-            get
-            {
-                return m_Candidates;
-            }
-        }
+        public int Count => m_Members.Count;
+        public bool Active => m_Members.Count > 1;
+        public Mobile Leader => m_Leader;
+        public List<PartyMemberInfo> Members => m_Members;
+        public List<Mobile> Candidates => m_Candidates;
         public PartyMemberInfo this[int index]
         {
             get
@@ -79,16 +49,16 @@ namespace Server.Engines.PartySystem
         }
         public static void Initialize()
         {
-            EventSink.Logout += new LogoutEventHandler(EventSink_Logout);
-            EventSink.Login += new LoginEventHandler(EventSink_Login);
-            EventSink.PlayerDeath += new PlayerDeathEventHandler(EventSink_PlayerDeath);
+            EventSink.Logout += EventSink_Logout;
+            EventSink.Login += EventSink_Login;
+            EventSink.PlayerDeath += EventSink_PlayerDeath;
 
-            CommandSystem.Register("ListenToParty", AccessLevel.GameMaster, new CommandEventHandler(ListenToParty_OnCommand));
+            CommandSystem.Register("ListenToParty", AccessLevel.GameMaster, ListenToParty_OnCommand);
         }
 
         public static void ListenToParty_OnCommand(CommandEventArgs e)
         {
-            e.Mobile.BeginTarget(-1, false, TargetFlags.None, new TargetCallback(ListenToParty_OnTarget));
+            e.Mobile.BeginTarget(-1, false, TargetFlags.None, ListenToParty_OnTarget);
             e.Mobile.SendMessage("Target a partied player.");
         }
 
@@ -198,7 +168,7 @@ namespace Server.Engines.PartySystem
 
                 for (int i = 0; i < m_Members.Count; ++i)
                 {
-                    Mobile f = ((PartyMemberInfo)m_Members[i]).Mobile;
+                    Mobile f = m_Members[i].Mobile;
 
                     f.Send(memberList);
 
@@ -447,7 +417,7 @@ namespace Server.Engines.PartySystem
         }
 
         private void SendToStaffMessage(Mobile from, string text)
-        { 
+        {
             Packet p = null;
 
             foreach (NetState ns in from.GetClientsInRange(8))
@@ -505,7 +475,7 @@ namespace Server.Engines.PartySystem
                         m_Mobile.Send(new MobileStatusCompact(m.CanBeRenamedBy(m_Mobile), m));
                         m_Mobile.Send(new MobileAttributesN(m));
 
-                        if(m_Mobile.NetState != null && m_Mobile.NetState.IsEnhancedClient)
+                        if (m_Mobile.NetState != null && m_Mobile.NetState.IsEnhancedClient)
                             Waypoints.Create(m_Mobile, m, WaypointType.PartyMember);
                     }
                 }

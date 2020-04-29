@@ -1,16 +1,15 @@
-using System;
-using System.Collections.Generic;
-
+using Server.ContextMenus;
 using Server.Gumps;
 using Server.Multis;
-using Server.ContextMenus;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
     [Flipable(0xA513, 0xA514)]
     public class ChickenStatue : Item, ISecurable
     {
-        public override int LabelNumber { get { return 1126283; } } // chicken
+        public override int LabelNumber => 1126283;  // chicken
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextResourceCount { get; set; }
@@ -63,7 +62,7 @@ namespace Server.Items
 
         public override void OnDoubleClick(Mobile from)
         {
-            var house = BaseHouse.FindHouseAt(this);
+            BaseHouse house = BaseHouse.FindHouseAt(this);
 
             if (house == null || !house.IsLockedDown(this))
             {
@@ -86,7 +85,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)Level);
             writer.Write(NextResourceCount);

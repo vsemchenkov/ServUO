@@ -1,7 +1,7 @@
-using System;
 using Server.Engines.Craft;
 using Server.Mobiles;
 using Server.Regions;
+using System;
 
 namespace Server.Items
 {
@@ -63,14 +63,8 @@ namespace Server.Items
             : base(serial)
         {
         }
-        
-        public override bool DisplayLootType
-        {
-            get
-            {
-                return true;
-            }
-        }
+
+        public override bool DisplayLootType => true;
         [CommandProperty(AccessLevel.GameMaster)]
         public RepairSkillType RepairSkill
         {
@@ -93,7 +87,7 @@ namespace Server.Items
             }
             set
             {
-                m_SkillLevel = Math.Max(Math.Min(value, 120.0), 0) ;
+                m_SkillLevel = Math.Max(Math.Min(value, 120.0), 0);
                 InvalidateProperties();
             }
         }
@@ -139,10 +133,10 @@ namespace Server.Items
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
-            
+
             list.Add(1071345, String.Format("{0:F1}", m_SkillLevel)); // Skill: ~1_val~
 
-            var desc = RepairSkillInfo.GetInfo(m_Skill).Description;
+            TextDefinition desc = RepairSkillInfo.GetInfo(m_Skill).Description;
 
             if (desc != null)
             {
@@ -230,7 +224,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)m_Skill);
             writer.Write(m_SkillLevel);
@@ -243,7 +237,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch( version )
+            switch (version)
             {
                 case 0:
                     {
@@ -265,7 +259,7 @@ namespace Server.Items
             else if (skill >= 5)
                 return (1061123 + skill - 5);
 
-            switch( skill )
+            switch (skill)
             {
                 case 4:
                     return "a Novice";
@@ -274,7 +268,7 @@ namespace Server.Items
                 default:
                     return "a Newbie";		//On OSI, it shouldn't go below 50, but, this is for 'custom' support.
             }
-        }        
+        }
     }
 
     public class RepairSkillInfo
@@ -310,48 +304,12 @@ namespace Server.Items
         {
         }
 
-        public static RepairSkillInfo[] Table
-        {
-            get
-            {
-                return m_Table;
-            }
-        }
-        public TextDefinition NotNearbyMessage
-        {
-            get
-            {
-                return m_NotNearbyMessage;
-            }
-        }
-        public TextDefinition Name
-        {
-            get
-            {
-                return m_Name;
-            }
-        }
-        public TextDefinition Description
-        {
-            get
-            {
-                return m_Description;
-            }
-        }
-        public CraftSystem System
-        {
-            get
-            {
-                return m_System;
-            }
-        }
-        public Type[] NearbyTypes
-        {
-            get
-            {
-                return m_NearbyTypes;
-            }
-        }
+        public static RepairSkillInfo[] Table => m_Table;
+        public TextDefinition NotNearbyMessage => m_NotNearbyMessage;
+        public TextDefinition Name => m_Name;
+        public TextDefinition Description => m_Description;
+        public CraftSystem System => m_System;
+        public Type[] NearbyTypes => m_NearbyTypes;
         public static RepairSkillInfo GetInfo(RepairSkillType type)
         {
             int v = (int)type;

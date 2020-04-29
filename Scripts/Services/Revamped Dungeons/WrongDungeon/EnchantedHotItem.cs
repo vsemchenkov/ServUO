@@ -1,9 +1,6 @@
 using System;
-using Server;
 using System.Collections.Generic;
-using System.Linq;
 using System.IO;
-using Server.Mobiles;
 
 namespace Server.Items
 {
@@ -53,7 +50,7 @@ namespace Server.Items
                 });
         }
 
-        public static Point3D[] ChestLocs = 
+        public static Point3D[] ChestLocs =
         {
             new Point3D(5703, 664, 0), new Point3D(5703, 663, 0), new Point3D(5703, 662, 0), new Point3D(5703, 661, 0),
             new Point3D(5707, 659, 0), new Point3D(5708, 659, 0), new Point3D(5709, 659, 0)
@@ -75,7 +72,7 @@ namespace Server.Items
 
             for (int i = 0; i < ChestLocs.Length; i++)
             {
-                var chest = new HotItemChest(i <= 3 ? 3648 : 3649);
+                HotItemChest chest = new HotItemChest(i <= 3 ? 3648 : 3649);
 
                 chest.MoveToWorld(ChestLocs[i], map);
                 chest.SpawnLoot();
@@ -85,7 +82,7 @@ namespace Server.Items
 
     public class HotItemChest : LockableContainer
     {
-        public HotItemChest(int itemID) 
+        public HotItemChest(int itemID)
             : base(itemID)
         {
             Movable = false;
@@ -101,7 +98,7 @@ namespace Server.Items
         {
             List<Item> list = new List<Item>(Items);
 
-            foreach (var item in list)
+            foreach (Item item in list)
                 item.Delete();
 
             ColUtility.Free(list);
@@ -128,7 +125,7 @@ namespace Server.Items
                     int min = 400;
                     int max = 1400;
 
-                    RunicReforging.GenerateRandomItem(item, 0, min, max, this.Map);
+                    RunicReforging.GenerateRandomItem(item, 0, min, max, Map);
 
                     item.Hue = 1258;
                     item.AttachSocket(new EnchantedHotItemSocket(this));
@@ -163,7 +160,7 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version 
+            writer.Write(0); // version 
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -40,7 +39,7 @@ namespace Server.Mobiles
 
             Fame = 21000;
             Karma = -21000;
-            
+
             Tamable = false;
 
             for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
@@ -55,14 +54,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon { get { return false; } }
-        public override bool GivesMLMinorArtifact
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool CanBeParagon => false;
+        public override bool GivesMLMinorArtifact => true;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.UltraRich, 3);
@@ -72,7 +65,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

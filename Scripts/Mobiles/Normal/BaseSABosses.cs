@@ -1,13 +1,13 @@
+using Server.Items;
 using System;
 using System.Collections.Generic;
-using Server.Items;
 
 namespace Server.Mobiles
 {
     [TypeAlias("Server.Mobiles.BaseSABosses")]
     public abstract class BaseSABoss : BasePeerless
     {
-        public override bool GiveMLSpecial { get { return false; } }
+        public override bool GiveMLSpecial => false;
 
         Dictionary<Mobile, int> m_DamageEntries;
         public BaseSABoss(AIType aiType, FightMode fightMode, int rangePerception, int rangeFight, double activeSpeed, double passiveSpeed)
@@ -23,21 +23,15 @@ namespace Server.Mobiles
         public abstract Type[] UniqueSAList { get; }
         public abstract Type[] SharedSAList { get; }
 
-        public virtual bool NoGoodies
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public virtual bool NoGoodies => false;
 
-        public override bool DropPrimer { get { return false; } }
+        public override bool DropPrimer => false;
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -115,7 +109,7 @@ namespace Server.Mobiles
             if (to == null || artifact == null)
                 return;
 
-			to.PlaySound(0x5B4);
+            to.PlaySound(0x5B4);
 
             Container pack = to.Backpack;
 

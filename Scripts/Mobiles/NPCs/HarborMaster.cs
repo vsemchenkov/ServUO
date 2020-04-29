@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Server.ContextMenus;
 using Server.Gumps;
 using Server.Items;
 using Server.Multis;
 using Server.Network;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Mobiles
 {
@@ -53,8 +53,8 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool CanTeach { get { return false; } }
-        public override bool ClickTitle { get { return false; } }
+        public override bool CanTeach => false;
+        public override bool ClickTitle => false;
 
         public override void AddCustomContextEntries(Mobile from, List<ContextMenuEntry> list)
         {
@@ -83,7 +83,7 @@ namespace Server.Mobiles
                 m_Vendor = vendor;
             }
 
-            private static Type[] m_ShipTypes = new Type[]
+            private static readonly Type[] m_ShipTypes = new Type[]
             {
                 typeof(TokunoGalleon),  typeof(GargishGalleon),
                 typeof(OrcishGalleon),  typeof(BritannianShip)
@@ -99,7 +99,7 @@ namespace Server.Mobiles
                 if (m_Vendor == null || m_Vendor.Deleted)
                     return;
 
-                var boat = BaseBoat.GetBoat(m_From);
+                BaseBoat boat = BaseBoat.GetBoat(m_From);
 
                 if (boat != null)
                 {
@@ -121,7 +121,7 @@ namespace Server.Mobiles
                             packKey.Name = "a ship key";
 
                             m_From.AddToBackpack(packKey);
-                        }                        
+                        }
                     }
                     else
                     {
@@ -187,7 +187,7 @@ namespace Server.Mobiles
                         }
                     case 1:
                         {
-                            var boat = BaseBoat.GetBoat(from);
+                            BaseBoat boat = BaseBoat.GetBoat(from);
 
                             if (boat != null && !_Table.ContainsKey(from))
                             {
@@ -244,7 +244,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("an ogre lords corpse")]
@@ -41,44 +39,20 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-      
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 3;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 2;
-            }
-        }
+
+        public override bool CanRummageCorpses => true;
+        public override Poison PoisonImmune => Poison.Regular;
+        public override int TreasureMapLevel => 3;
+        public override int Meat => 2;
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich, 2);
+            AddLoot(LootPack.Rich, 2);
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

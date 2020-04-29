@@ -1,9 +1,8 @@
-using Server;
-using System;
+using Server.Engines.Quests;
 using Server.Items;
 using Server.Multis;
+using System;
 using System.Collections.Generic;
-using Server.Engines.Quests;
 using System.Linq;
 
 namespace Server.Mobiles
@@ -22,19 +21,19 @@ namespace Server.Mobiles
         private DateTime m_NextCrewCheck;
         private SpawnZone m_Zone;
         private bool m_Blockade;
-        private List<Mobile> m_Crew = new List<Mobile>();
+        private readonly List<Mobile> m_Crew = new List<Mobile>();
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public BaseGalleon Galleon { get { return m_Galleon; } }
+        public BaseGalleon Galleon => m_Galleon;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool OnCourse { get { return m_OnCourse; } }
+        public bool OnCourse => m_OnCourse;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime NextCannonShot { get { return m_NextCannonShot; } }
+        public DateTime NextCannonShot => m_NextCannonShot;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public DateTime NextMoveCheck { get { return m_NextMoveCheck; } }
+        public DateTime NextMoveCheck => m_NextMoveCheck;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextCrewCheck { get { return m_NextCrewCheck; } set { m_NextCrewCheck = value; } }
@@ -45,24 +44,18 @@ namespace Server.Mobiles
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Blockade { get { return m_Blockade; } set { m_Blockade = value; } }
 
-        public List<Mobile> Crew { get { return m_Crew; } }
+        public List<Mobile> Crew => m_Crew;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual bool Aggressive { get { return true; } }
+        public virtual bool Aggressive => true;
 
-        public override bool PlayerRangeSensitive { get { return false; } }
+        public override bool PlayerRangeSensitive => false;
 
-        public override double TreasureMapChance { get { return 0.05; } }
-        public override int TreasureMapLevel { get { return 7; } }
+        public override double TreasureMapChance => 0.05;
+        public override int TreasureMapLevel => 7;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual TimeSpan ShootFrequency
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(Math.Min(20, 20.0 - ((double)m_Crew.Count * 2.5)));
-            }
-        }
+        public virtual TimeSpan ShootFrequency => TimeSpan.FromSeconds(Math.Min(20, 20.0 - (m_Crew.Count * 2.5)));
 
         [Constructable]
         public BaseShipCaptain() : this(null) { }
@@ -79,7 +72,7 @@ namespace Server.Mobiles
             m_OnCourse = true;
             m_StopTime = DateTime.MinValue;
 
-            if (this.Female = Utility.RandomBool())
+            if (Female = Utility.RandomBool())
             {
                 Body = 0x191;
                 Name = NameList.RandomName("female");
@@ -117,7 +110,7 @@ namespace Server.Mobiles
             SetResistance(ResistanceType.Energy, 45, 55);
 
             if (galleon == null)
-                Timer.DelayCall(TimeSpan.FromSeconds(.5), new TimerCallback(SpawnShip));
+                Timer.DelayCall(TimeSpan.FromSeconds(.5), SpawnShip);
         }
 
         public void SpawnShip()
@@ -126,12 +119,12 @@ namespace Server.Mobiles
 
             if (this is PirateCaptain)
                 gal = new OrcishGalleon(Direction.North);
-            else if (this.Map == Map.Tokuno)
+            else if (Map == Map.Tokuno)
                 gal = new TokunoGalleon(Direction.North);
             else
                 gal = new GargishGalleon(Direction.North);
 
-            var p = Location;
+            Point3D p = Location;
             Map map = Map;
 
             // Move this sucka out of the way!
@@ -172,7 +165,7 @@ namespace Server.Mobiles
 
         public void OnShipDelete()
         {
-            if (this.Alive && !this.Deleted)
+            if (Alive && !Deleted)
                 Kill();
 
             for (int i = 0; i < m_Crew.Count; i++)
@@ -186,7 +179,7 @@ namespace Server.Mobiles
 
         public override void Delete()
         {
-            if(BountyQuestSpawner.Instance != null)
+            if (BountyQuestSpawner.Instance != null)
                 BountyQuestSpawner.Instance.HandleDeath(this);
 
             if (m_Galleon != null && !m_Galleon.Deleted)
@@ -238,7 +231,7 @@ namespace Server.Mobiles
         {
             if (!m_WillResume)
             {
-                Timer.DelayCall(ts, new TimerCallback(ResumeCourse));
+                Timer.DelayCall(ts, ResumeCourse);
                 m_WillResume = true;
             }
         }
@@ -288,7 +281,7 @@ namespace Server.Mobiles
 
             Mobile focusMob = GetFocusMob();
 
-            if(m_TargetBoat == null || !InRange(m_TargetBoat.Location, 25))
+            if (m_TargetBoat == null || !InRange(m_TargetBoat.Location, 25))
                 m_TargetBoat = GetFocusBoat(focusMob);
 
             if (focusMob == null && m_TargetBoat == null)
@@ -386,13 +379,13 @@ namespace Server.Mobiles
             m_Galleon.StartMove(dir, true);
         }
 
-        private Dictionary<IShipCannon, DateTime> m_ShootTable = new Dictionary<IShipCannon, DateTime>();
+        private readonly Dictionary<IShipCannon, DateTime> m_ShootTable = new Dictionary<IShipCannon, DateTime>();
 
         public void ShootCannons(Mobile focus, bool shootAtBoat)
         {
             List<Item> cannons = new List<Item>(m_Galleon.Cannons.Where(i => !i.Deleted));
 
-            foreach (var cannon in cannons.OfType<IShipCannon>())
+            foreach (IShipCannon cannon in cannons.OfType<IShipCannon>())
             {
                 if (cannon != null)
                 {
@@ -464,7 +457,7 @@ namespace Server.Mobiles
 
                     if (shootatboat)
                     {
-                        BaseGalleon g = BaseGalleon.FindGalleonAt(newPoint, this.Map);
+                        BaseGalleon g = BaseGalleon.FindGalleonAt(newPoint, Map);
 
                         if (g != null && g == m_TargetBoat && g != Galleon)
                             return true;
@@ -554,11 +547,11 @@ namespace Server.Mobiles
 
             crew.Add(this);
 
-            foreach (var crewman in crew)
+            foreach (Mobile crewman in crew)
             {
-                if(!m_Galleon.Contains(crewman))
+                if (!m_Galleon.Contains(crewman))
                 {
-                    crewman.MoveToWorld(new Point3D(m_Galleon.X + Utility.RandomList(-1, 1), m_Galleon.Y + Utility.RandomList(-1, 0, 1), m_Galleon.ZSurface), this.Map);
+                    crewman.MoveToWorld(new Point3D(m_Galleon.X + Utility.RandomList(-1, 1), m_Galleon.Y + Utility.RandomList(-1, 0, 1), m_Galleon.ZSurface), Map);
                 }
             }
 
@@ -637,7 +630,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(m_Blockade);
 
@@ -648,7 +641,7 @@ namespace Server.Mobiles
 
             writer.Write(m_Crew.Count);
             foreach (Mobile mob in m_Crew)
-                    writer.Write(mob);
+                writer.Write(mob);
         }
 
         public override void Deserialize(GenericReader reader)

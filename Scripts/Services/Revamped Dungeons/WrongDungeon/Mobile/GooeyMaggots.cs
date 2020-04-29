@@ -60,7 +60,7 @@ namespace Server.Mobiles
 
         public class InternalSelfDeleteTimer : Timer
         {
-            private GooeyMaggots creature;
+            private readonly GooeyMaggots creature;
 
             public InternalSelfDeleteTimer(Mobile p) : base(TimeSpan.FromMinutes(3))
             {
@@ -77,12 +77,12 @@ namespace Server.Mobiles
             }
         }
 
-        public override Poison PoisonImmune { get { return Poison.Lethal; } }
+        public override Poison PoisonImmune => Poison.Lethal;
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -97,7 +97,7 @@ namespace Server.Mobiles
 
     public class GooeyMaggotSlime : Item
     {
-        public override int LabelNumber { get { return 1015246; } } // Slime
+        public override int LabelNumber => 1015246;  // Slime
 
         [Constructable]
         public GooeyMaggotSlime()
@@ -122,12 +122,11 @@ namespace Server.Mobiles
                 from.SendSpeedControl(SpeedControlType.WalkSpeed);
                 from.SendLocalizedMessage(1152144); // You suddenly find yourself unable to run.
 
-                Timer.DelayCall(TimeSpan.FromSeconds(1), new TimerCallback(
-                    delegate
-                    {
-                        from.SendSpeedControl(SpeedControlType.Disable);
-                        from.SendLocalizedMessage(1152145); // You are are free to move again.
-                    }));
+                Timer.DelayCall(TimeSpan.FromSeconds(1), delegate
+                {
+                    @from.SendSpeedControl(SpeedControlType.Disable);
+                    @from.SendLocalizedMessage(1152145); // You are are free to move again.
+                });
 
                 Delete();
             }
@@ -137,13 +136,13 @@ namespace Server.Mobiles
 
         public GooeyMaggotSlime(Serial serial)
             : base(serial)
-        {            
+        {
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,8 +1,8 @@
-using System;
-using Server.Engines.Craft;
-using System.Linq;
 using Server.ContextMenus;
+using Server.Engines.Craft;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.Items
 {
@@ -66,7 +66,7 @@ namespace Server.Items
         private int m_WeightReduction;
         private int m_DamageIncrease;
 
-		public virtual bool CanAlter => true;
+        public virtual bool CanAlter => true;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool IsArrowAmmo { get; set; }
@@ -207,7 +207,7 @@ namespace Server.Items
                 m_PlayerConstructed = value;
             }
         }
-		
+
         public Item Ammo => Items.Count > 0 ? Items[0] : null;
 
         public BaseQuiver()
@@ -240,7 +240,7 @@ namespace Server.Items
 
         public override void OnAfterDuped(Item newItem)
         {
-            var quiver = newItem as BaseQuiver;
+            BaseQuiver quiver = newItem as BaseQuiver;
 
             if (quiver != null)
             {
@@ -251,7 +251,7 @@ namespace Server.Items
                 quiver.m_SetSkillBonuses = new AosSkillBonuses(newItem, m_SetSkillBonuses);
             }
 
-            var wing = newItem as GargishLeatherWingArmor;
+            GargishLeatherWingArmor wing = newItem as GargishLeatherWingArmor;
 
             if (wing != null)
             {
@@ -331,7 +331,7 @@ namespace Server.Items
 
             Item ammo = Ammo;
 
-            if(ammo != null && ammo.Amount > 0)
+            if (ammo != null && ammo.Amount > 0)
             {
                 if (IsArrowAmmo && item is Bolt)
                     return false;
@@ -380,14 +380,14 @@ namespace Server.Items
             InvalidateWeight();
             IsArrowAmmo = dropped is Arrow;
         }
-		
+
         public override void RemoveItem(Item dropped)
         {
             base.RemoveItem(dropped);
 
             InvalidateWeight();
         }
-		
+
         public override void OnAdded(object parent)
         {
             if (parent is Mobile)
@@ -414,7 +414,7 @@ namespace Server.Items
                 }
             }
         }
-		
+
         public override void OnRemoved(object parent)
         {
             if (parent is Mobile)
@@ -477,8 +477,8 @@ namespace Server.Items
             return true;
         }
 
-        public virtual int BasePhysicalResistance => 0; 
-        public virtual int BaseFireResistance => 0; 
+        public virtual int BasePhysicalResistance => 0;
+        public virtual int BaseFireResistance => 0;
         public virtual int BaseColdResistance => 0;
         public virtual int BasePoisonResistance => 0;
         public virtual int BaseEnergyResistance => 0;
@@ -487,7 +487,7 @@ namespace Server.Items
         public override int FireResistance => BaseFireResistance + m_Resistances.Fire;
         public override int ColdResistance => BaseColdResistance + m_Resistances.Cold;
         public override int PoisonResistance => BasePoisonResistance + m_Resistances.Poison;
-        public override int EnergyResistance => BaseEnergyResistance + m_Resistances.Energy; 
+        public override int EnergyResistance => BaseEnergyResistance + m_Resistances.Energy;
 
         public override void AddWeightProperty(ObjectPropertyList list)
         {
@@ -541,7 +541,7 @@ namespace Server.Items
 
             if ((prop = m_DamageIncrease) != 0)
                 list.Add(1074762, prop.ToString()); // Damage modifier: ~1_PERCENT~%
-			
+
             int phys, fire, cold, pois, nrgy, chaos, direct;
             phys = fire = cold = pois = nrgy = chaos = direct = 0;
 
@@ -683,7 +683,7 @@ namespace Server.Items
 
             return 0;
         }
-        
+
         private static void SetSaveFlag(ref SaveFlag flags, SaveFlag toSet, bool setIf)
         {
             if (setIf)
@@ -706,17 +706,17 @@ namespace Server.Items
             Crafter = 0x00000010,
             Quality = 0x00000020,
             Capacity = 0x00000040,
-			
-            SetAttributes =      0x00000100,
-            SetHue =             0x00000200,
-            LastEquipped =       0x00000400,
-            SetEquipped =        0x00000800,
+
+            SetAttributes = 0x00000100,
+            SetHue = 0x00000200,
+            LastEquipped = 0x00000400,
+            SetEquipped = 0x00000800,
             SetSkillAttributes = 0x00002000,
-            SetPhysical =      0x00004000,
-            SetFire =          0x00008000,
-            SetCold =          0x00010000,
-            SetPoison =        0x00020000,
-            SetEnergy =        0x00040000,
+            SetPhysical = 0x00004000,
+            SetFire = 0x00008000,
+            SetCold = 0x00010000,
+            SetPoison = 0x00020000,
+            SetEnergy = 0x00040000,
 
             DamageIncrease = 0x00000080
         }
@@ -724,7 +724,7 @@ namespace Server.Items
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
         {
             base.GetContextMenuEntries(from, list);
-            if(from.Items.Contains(this) || (from.Backpack != null && IsChildOf(from.Backpack)))
+            if (from.Items.Contains(this) || (from.Backpack != null && IsChildOf(from.Backpack)))
                 list.Add(new RefillQuiverEntry(this));
         }
 
@@ -778,35 +778,35 @@ namespace Server.Items
             //    writer.Write((int)m_LowerAmmoCost);
 
             if (GetSaveFlag(flags, SaveFlag.WeightReduction))
-                writer.Write((int)m_WeightReduction);
+                writer.Write(m_WeightReduction);
 
             if (GetSaveFlag(flags, SaveFlag.DamageIncrease))
-                writer.Write((int)m_DamageIncrease);
+                writer.Write(m_DamageIncrease);
 
             if (GetSaveFlag(flags, SaveFlag.Crafter))
-                writer.Write((Mobile)m_Crafter);
+                writer.Write(m_Crafter);
 
             if (GetSaveFlag(flags, SaveFlag.Quality))
                 writer.Write((int)m_Quality);
 
             if (GetSaveFlag(flags, SaveFlag.Capacity))
-                writer.Write((int)m_Capacity);
+                writer.Write(m_Capacity);
 
             #region Mondain's Legacy Sets
             if (GetSaveFlag(flags, SaveFlag.SetPhysical))
-                writer.WriteEncodedInt((int)m_SetPhysicalBonus);
+                writer.WriteEncodedInt(m_SetPhysicalBonus);
 
             if (GetSaveFlag(flags, SaveFlag.SetFire))
-                writer.WriteEncodedInt((int)m_SetFireBonus);
+                writer.WriteEncodedInt(m_SetFireBonus);
 
             if (GetSaveFlag(flags, SaveFlag.SetCold))
-                writer.WriteEncodedInt((int)m_SetColdBonus);
+                writer.WriteEncodedInt(m_SetColdBonus);
 
             if (GetSaveFlag(flags, SaveFlag.SetPoison))
-                writer.WriteEncodedInt((int)m_SetPoisonBonus);
+                writer.WriteEncodedInt(m_SetPoisonBonus);
 
             if (GetSaveFlag(flags, SaveFlag.SetEnergy))
-                writer.WriteEncodedInt((int)m_SetEnergyBonus);
+                writer.WriteEncodedInt(m_SetEnergyBonus);
 
             if (GetSaveFlag(flags, SaveFlag.SetAttributes))
                 m_SetAttributes.Serialize(writer);
@@ -815,13 +815,13 @@ namespace Server.Items
                 m_SetSkillBonuses.Serialize(writer);
 
             if (GetSaveFlag(flags, SaveFlag.SetHue))
-                writer.Write((int)m_SetHue);
+                writer.Write(m_SetHue);
 
             if (GetSaveFlag(flags, SaveFlag.LastEquipped))
-                writer.Write((bool)m_LastEquipped);
+                writer.Write(m_LastEquipped);
 
             if (GetSaveFlag(flags, SaveFlag.SetEquipped))
-                writer.Write((bool)m_SetEquipped);
+                writer.Write(m_SetEquipped);
             #endregion
         }
 
@@ -845,7 +845,7 @@ namespace Server.Items
                     goto case 1;
                 case 1:
                     {
-                        if(version == 1)
+                        if (version == 1)
                         {
                             IsArrowAmmo = (Ammo == null || Ammo is Arrow);
                         }
@@ -983,7 +983,7 @@ namespace Server.Items
                 m.UpdateTotals();
             }
         }
-		
+
         public virtual int OnCraft(int quality, bool makersMark, Mobile from, CraftSystem craftSystem, Type typeRes, ITool tool, CraftItem craftItem, int resHue)
         {
             Quality = (ItemQuality)quality;
@@ -1205,7 +1205,7 @@ namespace Server.Items
                     return;
 
                 object owner = m_quiver.Parent;
-                while(owner != null)
+                while (owner != null)
                 {
                     if (owner is Mobile)
                         break;
@@ -1240,8 +1240,8 @@ namespace Server.Items
                 }
 
                 // Otherwise look for secure containers within two tiles
-                var items = m.Map.GetItemsInRange(m.Location, 1);
-                foreach(Item i in items)
+                IPooledEnumerable<Item> items = m.Map.GetItemsInRange(m.Location, 1);
+                foreach (Item i in items)
                 {
                     if (!(i is Container))
                         continue;
@@ -1254,7 +1254,7 @@ namespace Server.Items
                     if (m_quiver.IsArrowAmmo ? Refill<Arrow>(m, c) : Refill<Bolt>(m, c))
                         return;
                 }
-                    
+
                 m.SendLocalizedMessage(1072673); //There are no source containers nearby.
             }
         }

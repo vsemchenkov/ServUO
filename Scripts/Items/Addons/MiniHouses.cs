@@ -34,7 +34,7 @@ namespace Server.Items
     {
         private MiniHouseType Type { get; set; }
 
-        public override int LabelNumber { get { return ((MiniHouseAddon)Addon).LabelNumber; } }
+        public override int LabelNumber => ((MiniHouseAddon)Addon).LabelNumber;
 
         public MiniHouseAddonComponent(int itemID)
             : base(itemID)
@@ -49,7 +49,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)Type);
         }
@@ -65,7 +65,7 @@ namespace Server.Items
 
     public class MiniHouseAddon : BaseAddon
     {
-        public override int LabelNumber { get { return MiniHouseInfo.GetInfo(m_Type).LabelNumber; } }
+        public override int LabelNumber => MiniHouseInfo.GetInfo(m_Type).LabelNumber;
 
         private MiniHouseType m_Type;
 
@@ -97,11 +97,8 @@ namespace Server.Items
             : base(serial)
         {
         }
-                
-        public override BaseAddonDeed Deed
-        {
-            get { return new MiniHouseDeed(m_Type); }
-        }       
+
+        public override BaseAddonDeed Deed => new MiniHouseDeed(m_Type);
 
         public void Construct()
         {
@@ -127,7 +124,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)m_Type);
         }
@@ -148,7 +145,7 @@ namespace Server.Items
             }
 
             if (version == 0)
-                Timer.DelayCall(TimeSpan.FromSeconds(30.0), new TimerCallback(Construct));
+                Timer.DelayCall(TimeSpan.FromSeconds(30.0), Construct);
         }
     }
 
@@ -183,7 +180,7 @@ namespace Server.Items
             }
         }
 
-        public override BaseAddon Addon { get { return new MiniHouseAddon(m_Type); } }
+        public override BaseAddon Addon => new MiniHouseAddon(m_Type);
 
         [Constructable]
         public MiniHouseDeed()
@@ -202,8 +199,8 @@ namespace Server.Items
         public MiniHouseDeed(Serial serial)
             : base(serial)
         {
-        }       
-        
+        }
+
         public override void GetProperties(ObjectPropertyList list)
         {
             base.GetProperties(list);
@@ -214,7 +211,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write((int)m_Type);
         }
@@ -240,7 +237,7 @@ namespace Server.Items
 
     public class MiniHouseInfo
     {
-        public static MiniHouseInfo[] Info { get { return m_Info; } }
+        public static MiniHouseInfo[] Info => m_Info;
         private static readonly MiniHouseInfo[] m_Info = new MiniHouseInfo[]
         {
             /* Stone and plaster house           */ new MiniHouseInfo(0x22C4, 1, 1011303),
@@ -286,9 +283,9 @@ namespace Server.Items
             m_Graphics = graphics;
         }
 
-        public int[] Graphics { get { return m_Graphics; } }
+        public int[] Graphics => m_Graphics;
 
-        public int LabelNumber { get { return m_LabelNumber; } }
+        public int LabelNumber => m_LabelNumber;
 
         public static MiniHouseInfo GetInfo(MiniHouseType type)
         {

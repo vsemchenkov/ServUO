@@ -1,9 +1,7 @@
-using Server;
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
 using Server.Engines.Quests;
 using Server.Gumps;
+using Server.Mobiles;
+using System;
 
 namespace Server.Services.TownCryer
 {
@@ -55,7 +53,7 @@ namespace Server.Services.TownCryer
             switch (info.ButtonID)
             {
                 case 0:
-                    var gump = new TownCryerGump(User, Cryer);
+                    TownCryerGump gump = new TownCryerGump(User, Cryer);
                     gump.Category = TownCryerGump.GumpCategory.News;
                     BaseGump.SendGump(gump);
                     break;

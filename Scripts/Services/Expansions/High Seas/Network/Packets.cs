@@ -1,8 +1,4 @@
-﻿using Server;
-using System;
-using Server.Items;
-using Server.Mobiles;
-using Server.Multis;
+﻿using Server.Multis;
 
 namespace Server.Network
 {
@@ -19,7 +15,7 @@ namespace Server.Network
 
             m_Stream.Write((short)0x19);
             m_Stream.Write((byte)0x05);
-            m_Stream.Write((int)m.Serial);
+            m_Stream.Write(m.Serial);
             m_Stream.Write((byte)0x00);
 
             m_Stream.Write((byte)0xFF);
@@ -40,11 +36,11 @@ namespace Server.Network
 
             int hue = boat.Hue;
 
-            m_Stream.Write((int)boat.Serial);
+            m_Stream.Write(boat.Serial);
             m_Stream.Write((short)boat.ItemID);
             m_Stream.Write((byte)0);
             m_Stream.Write((byte)boat.Layer);
-            m_Stream.Write((int)parentSerial);
+            m_Stream.Write(parentSerial);
             m_Stream.Write((short)hue);
         }
     }

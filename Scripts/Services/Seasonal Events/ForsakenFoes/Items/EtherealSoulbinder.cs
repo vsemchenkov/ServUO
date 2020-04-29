@@ -1,14 +1,11 @@
-using System;
-using System.Linq;
-
-using Server;
 using Server.Mobiles;
+using System.Linq;
 
 namespace Server.Items
 {
     public class EtherealSoulbinder : Item
     {
-        public override int LabelNumber { get { return 1159167; } } // ethereal soulbinder
+        public override int LabelNumber => 1159167;  // ethereal soulbinder
 
         public double MaxSoulPoint { get; set; } = 100;
 
@@ -93,11 +90,11 @@ namespace Server.Items
                 list.Add(1159178, string.Format("#{0}", desc)); // Contains a ~1_TYPE~ Soul
             }
         }
-        
+
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(m_SoulPoint);
         }
@@ -117,8 +114,8 @@ namespace Server.Items
 
         public static void CreatureDeath(CreatureDeathEventArgs e)
         {
-            var bc = e.Creature as BaseCreature;
-            var killer = e.Killer;
+            BaseCreature bc = e.Creature as BaseCreature;
+            Mobile killer = e.Killer;
 
             if (bc != null && bc.IsSoulBound && killer is PlayerMobile && killer.Backpack != null)
             {

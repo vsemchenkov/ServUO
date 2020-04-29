@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Server.Mobiles;
 using Server.Network;
 using Server.Targeting;
+using System.Collections.Generic;
 
 namespace Server.Commands
 {
@@ -10,11 +9,11 @@ namespace Server.Commands
     {
         public static void Initialize()
         {
-            EventSink.Login += new LoginEventHandler(OnLogin);
+            EventSink.Login += OnLogin;
 
-            CommandSystem.Register("Vis", AccessLevel.Counselor, new CommandEventHandler(Vis_OnCommand));
-            CommandSystem.Register("VisList", AccessLevel.Counselor, new CommandEventHandler(VisList_OnCommand));
-            CommandSystem.Register("VisClear", AccessLevel.Counselor, new CommandEventHandler(VisClear_OnCommand));
+            CommandSystem.Register("Vis", AccessLevel.Counselor, Vis_OnCommand);
+            CommandSystem.Register("VisList", AccessLevel.Counselor, VisList_OnCommand);
+            CommandSystem.Register("VisClear", AccessLevel.Counselor, VisClear_OnCommand);
         }
 
         public static void OnLogin(LoginEventArgs e)
@@ -69,7 +68,7 @@ namespace Server.Commands
             {
                 PlayerMobile pm = (PlayerMobile)e.Mobile;
                 List<Mobile> list = new List<Mobile>(pm.VisibilityList);
-				
+
                 pm.VisibilityList.Clear();
                 pm.SendMessage("Your visibility list has been cleared.");
 

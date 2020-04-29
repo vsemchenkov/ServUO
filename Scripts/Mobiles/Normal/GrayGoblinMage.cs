@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -40,7 +39,7 @@ namespace Server.Mobiles
             SetSkill(SkillName.Wrestling, 90.5, 104.2);
             SetSkill(SkillName.Magery, 105.5, 119.1);
             SetSkill(SkillName.EvalInt, 94.9, 107.7);
-			
+
             Fame = 1500;
             Karma = -1500;
 
@@ -59,10 +58,10 @@ namespace Server.Mobiles
         public override int GetHurtSound() { return 0x5FF; }
         public override int GetDeathSound() { return 0x5FE; }
 
-        public override bool CanRummageCorpses { get { return true; } }
-        public override int TreasureMapLevel { get { return 1; } }
-        public override int Meat { get { return 1; } }
-        public override TribeType Tribe { get { return TribeType.GrayGoblin; } }
+        public override bool CanRummageCorpses => true;
+        public override int TreasureMapLevel => 1;
+        public override int Meat => 1;
+        public override TribeType Tribe => TribeType.GrayGoblin;
 
         public override void GenerateLoot()
         {
@@ -72,7 +71,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)

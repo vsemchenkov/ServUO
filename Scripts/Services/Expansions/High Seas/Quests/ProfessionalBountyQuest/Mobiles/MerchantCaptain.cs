@@ -1,16 +1,12 @@
-using Server;
-using System;
 using Server.Items;
 using Server.Multis;
-using System.Collections.Generic;
-using Server.Engines.Quests;
 
 namespace Server.Mobiles
 {
     public class MerchantCaptain : BaseShipCaptain
     {
-        public override bool Aggressive { get { return false; } }
-        public override bool InitialInnocent { get { return true; } }
+        public override bool Aggressive => false;
+        public override bool InitialInnocent => true;
 
         [Constructable]
         public MerchantCaptain(BaseGalleon galleon)
@@ -53,7 +49,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

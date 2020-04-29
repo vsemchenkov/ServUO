@@ -1,5 +1,5 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Engines.Craft
 {
@@ -24,21 +24,9 @@ namespace Server.Engines.Craft
 
     public class DefCooking : CraftSystem
     {
-        public override SkillName MainSkill
-        {
-            get
-            {
-                return SkillName.Cooking;
-            }
-        }
+        public override SkillName MainSkill => SkillName.Cooking;
 
-        public override int GumpTitleNumber
-        {
-            get
-            {
-                return 1044003;
-            }// <CENTER>COOKING MENU</CENTER>
-        }
+        public override int GumpTitleNumber => 1044003;
 
         private static CraftSystem m_CraftSystem;
 
@@ -53,13 +41,7 @@ namespace Server.Engines.Craft
             }
         }
 
-        public override CraftECA ECA
-        {
-            get
-            {
-                return CraftECA.ChanceMinusSixtyToFourtyFive;
-            }
-        }
+        public override CraftECA ECA => CraftECA.ChanceMinusSixtyToFourtyFive;
 
         public override double GetChanceAtMin(CraftItem item)
         {
@@ -113,7 +95,7 @@ namespace Server.Engines.Craft
                     return 1044156; // You create an exceptional quality item and affix your maker's mark.
                 else if (quality == 2)
                     return 1044155; // You create an exceptional quality item.
-                else 
+                else
                     return 1044154; // You create the item.
             }
         }

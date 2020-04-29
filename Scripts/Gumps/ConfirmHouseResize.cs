@@ -1,8 +1,7 @@
-using System;
 using Server.Items;
+using Server.Mobiles;
 using Server.Multis;
 using Server.Network;
-using Server.Mobiles;
 
 namespace Server.Gumps
 {
@@ -37,7 +36,7 @@ namespace Server.Gumps
             will not un-condemn any other houses on your account. If you have other, 
             grandfathered houses, this action *WILL* condemn them. Are you sure you wish 
             to continue?*/
-            AddHtmlLocalized(10, 40, 400, 200, 1080196, 0x7F00, false, true); 
+            AddHtmlLocalized(10, 40, 400, 200, 1080196, 0x7F00, false, true);
 
             AddImageTiled(10, 250, 400, 20, 0xA40);
             AddAlphaRegion(10, 250, 400, 20);
@@ -78,7 +77,10 @@ namespace Server.Gumps
                     {
                         m_Mobile.SendMessage("You do not get a refund for your house as you are not a player");
                         m_House.RemoveKeys(m_Mobile);
-                        new TempNoHousingRegion(m_House, m_Mobile);
+
+                        var region = new TempNoHousingRegion(m_House, m_Mobile);
+                        Timer.DelayCall(m_House.RestrictedPlacingTime, region.Unregister);
+
                         m_House.Delete();
                     }
                     else
@@ -92,7 +94,10 @@ namespace Server.Gumps
                                 Banker.Deposit(m_Mobile, m_House.Price, true);
 
                                 m_House.RemoveKeys(m_Mobile);
-                                new TempNoHousingRegion(m_House, m_Mobile);
+
+                                var region = new TempNoHousingRegion(m_House, m_Mobile);
+                                Timer.DelayCall(m_House.RestrictedPlacingTime, region.Unregister);
+
                                 m_House.Delete();
                                 return;
                             }
@@ -119,7 +124,10 @@ namespace Server.Gumps
                                     m_Mobile.SendLocalizedMessage(1060397, ((BankCheck)toGive).Worth.ToString()); // ~1_AMOUNT~ gold has been deposited into your bank box.
 
                                 m_House.RemoveKeys(m_Mobile);
-                                new TempNoHousingRegion(m_House, m_Mobile);
+
+                                var region = new TempNoHousingRegion(m_House, m_Mobile);
+                                Timer.DelayCall(m_House.RestrictedPlacingTime, region.Unregister);
+
                                 m_House.Delete();
                             }
                             else

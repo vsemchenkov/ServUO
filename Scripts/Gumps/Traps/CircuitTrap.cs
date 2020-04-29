@@ -1,8 +1,7 @@
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server.Mobiles;
 
 namespace Server.Gumps
 {
@@ -36,6 +35,7 @@ namespace Server.Gumps
         public ICircuitTrap Trap { get; set; }
         public List<int> Path => Trap != null ? Trap.Path : null;
         public List<int> Progress => Trap != null ? Trap.Progress : null;
+
         public CircuitCount Count => Trap != null ? Trap.Count : CircuitCount.Nine;
         public bool ShowNext { get; set; }
 
@@ -85,22 +85,22 @@ namespace Server.Gumps
                 Trap.Progress.Add(0);
             }
 
-            var sx = 110;
-            var sy = 135;
-            var count = (int)Count;
-            var sq = Math.Sqrt(count);
+            int sx = 110;
+            int sy = 135;
+            int count = (int)Count;
+            double sq = Math.Sqrt(count);
 
             for (int i = 0; i < count; i++)
             {
                 int line = (int)(i / sq);
                 int col = (int)(i % sq);
 
-                var x = sx + (col * 40);
-                var y = sy + (line * 40);
+                int x = sx + (col * 40);
+                int y = sy + (line * 40);
 
                 AddImage(x, y, i == count - 1 ? 0x9A8 : Progress.Contains(i) ? 0x868 : 0x25F8);
 
-                if (line + 1  < sq)
+                if (line + 1 < sq)
                 {
                     AddImage(x + 10, y + 27, 0x13F9);
                 }
@@ -138,7 +138,7 @@ namespace Server.Gumps
 
             AddButton(448, 185, 10700, 10701, 1, GumpButtonType.Reply, 0); // up
             AddButton(473, 222, 10710, 10711, 2, GumpButtonType.Reply, 0); // right
-            AddButton(448, 243, 10720, 10721, 3, GumpButtonType.Reply, 0); // down
+            AddButton(448, 243, 10720, 10721, 3, GumpButtonType.Reply, 0); // down 
             AddButton(408, 222, 10730, 10731, 4, GumpButtonType.Reply, 0); // left
 
         }
@@ -153,11 +153,11 @@ namespace Server.Gumps
 
             if (info.ButtonID > 0 && info.ButtonID < 5)
             {
-                var id = info.ButtonID;
-                var current = Progress[Progress.Count - 1];
-                var next = 35;
-                var count = (int)Count;
-                var perRow = (int)Math.Sqrt(count);
+                int id = info.ButtonID;
+                int current = Progress[Progress.Count - 1];
+                int next = 35;
+                int count = (int)Count;
+                int perRow = (int)Math.Sqrt(count);
                 int pick;
 
                 if (Progress.Count > 0 && Progress.Count < Path.Count)
@@ -205,7 +205,7 @@ namespace Server.Gumps
             }
         }
 
-        private int[] m_Possibles = new int[]
+        private readonly int[] m_Possibles = new int[]
         {
             0,  1,  2,  3,  4,  5,
             6,  7,  8,  9,  10, 11,
@@ -215,7 +215,7 @@ namespace Server.Gumps
             30, 31, 32, 33, 34, 35
         };
 
-        private int[][] Paths9 = new int[][]
+        private readonly int[][] Paths9 = new int[][]
         {
             new int[] { 0, 1, 2, 5, 8 },
             new int[] { 0, 1, 4, 5, 8 },
@@ -228,7 +228,7 @@ namespace Server.Gumps
             new int[] { 0, 3, 6, 7, 4, 1, 2, 5, 8 }
         };
 
-        private int[][] Paths16 = new int[][]
+        private readonly int[][] Paths16 = new int[][]
         {
             new int[] { 0, 1, 2, 3, 7, 11, 15 },
             new int[] { 0, 1, 2, 6, 7, 11, 15 },
@@ -244,7 +244,7 @@ namespace Server.Gumps
             new int[] { 0, 4, 5, 9, 10, 11, 15 },
         };
 
-        private int[][] Paths25 = new int[][]
+        private readonly int[][] Paths25 = new int[][]
         {
             new int[] { 0, 1, 2, 3, 4, 9, 14, 19, 24 },
             new int[] { 0, 1, 2, 7, 8, 9, 14, 13, 12, 11, 10, 15, 20, 21, 22, 23, 24 },
@@ -260,7 +260,7 @@ namespace Server.Gumps
             new int[] { 0, 5, 10, 11, 16, 17, 18, 23, 24 },
         };
 
-        private int[][] Paths36 = new int[][]
+        private readonly int[][] Paths36 = new int[][]
         {
             new int[] { 0, 1, 2, 3, 4, 5, 11, 17, 23, 29, 35 },
             new int[] { 0, 6, 12, 18, 24, 30, 31, 32, 33, 34, 35 },

@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
+using Server.Engines.VvV;
+using Server.Guilds;
 using Server.Items;
 using Server.Network;
 using Server.Targeting;
-using Server.Engines.VvV;
-using Server.Guilds;
-using Server.Mobiles;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Server.SkillHandlers
 {
@@ -20,7 +18,7 @@ namespace Server.SkillHandlers
     {
         public static void Initialize()
         {
-            SkillInfo.Table[(int)SkillName.RemoveTrap].Callback = new SkillUseCallback(OnUse);
+            SkillInfo.Table[(int)SkillName.RemoveTrap].Callback = OnUse;
         }
 
         public static TimeSpan OnUse(Mobile m)
@@ -59,13 +57,13 @@ namespace Server.SkillHandlers
 
                     from.Direction = from.GetDirectionTo(targ);
 
-                   if (targ.TrapType == Server.Items.TrapType.None)
+                    if (targ.TrapType == TrapType.None)
                     {
                         from.SendLocalizedMessage(502373); // That doesn't appear to be trapped
                     }
                     else if (targ is TreasureMapChest && TreasureMapInfo.NewSystem)
                     {
-                        var tChest = (TreasureMapChest)targ;
+                        TreasureMapChest tChest = (TreasureMapChest)targ;
 
                         if (tChest.Owner != from)
                         {
@@ -140,7 +138,7 @@ namespace Server.SkillHandlers
                                 }
                             }
 
-                            from.PrivateOverheadMessage(Server.Network.MessageType.Regular, 1154, 1155413, from.NetState);
+                            from.PrivateOverheadMessage(MessageType.Regular, 1154, 1155413, from.NetState);
                         }
                         else if (.1 > Utility.RandomDouble())
                         {
@@ -209,7 +207,7 @@ namespace Server.SkillHandlers
         {
             if (_Table != null && _Table.ContainsKey(from))
             {
-                var timer = _Table[from];
+                RemoveTrapTimer timer = _Table[from];
 
                 if (timer != null)
                 {
@@ -321,7 +319,7 @@ namespace Server.SkillHandlers
             {
                 From.RevealingAction();
 
-                var min = (double)Math.Ceiling(From.Skills[SkillName.RemoveTrap].Value * .75);
+                double min = Math.Ceiling(From.Skills[SkillName.RemoveTrap].Value * .75);
 
                 if (From.CheckTargetSkill(SkillName.RemoveTrap, Chest, min, min > 50 ? min + 50 : 100))
                 {

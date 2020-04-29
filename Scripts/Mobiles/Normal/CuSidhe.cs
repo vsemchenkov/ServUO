@@ -1,12 +1,12 @@
-using System;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
     [CorpseName("a cu sidhe corpse")]
     public class CuSidhe : BaseMount
     {
-        public override double HealChance { get { return 1.0; } }
+        public override double HealChance => 1.0;
 
         [Constructable]
         public CuSidhe()
@@ -22,9 +22,9 @@ namespace Server.Mobiles
 
             if (chance <= 1)
                 Hue = 0x489;
-            else if (chance < 50)
+            else if (chance <= 301)
                 Hue = Utility.RandomList(0x657, 0x515, 0x4B1, 0x481, 0x482, 0x455);
-            else if (chance < 500)
+            else if (chance <= 3301)
                 Hue = Utility.RandomList(0x97A, 0x978, 0x901, 0x8AC, 0x5A7, 0x527);
 
             SetStr(1200, 1225);
@@ -68,46 +68,13 @@ namespace Server.Mobiles
         {
         }
 
-        public override int TreasureMapLevel
-        {
-            get { return 5; }
-        }
+        public override int TreasureMapLevel => 5;
 
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.FruitsAndVegies;
-            }
-        }
-        public override bool CanAngerOnTame
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool StatLossAfterTame
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 3;
-            }
-        }
+        public override FoodType FavoriteFood => FoodType.FruitsAndVegies;
+        public override bool CanAngerOnTame => true;
+        public override bool StatLossAfterTame => true;
+        public override int Hides => 10;
+        public override int Meat => 3;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.FilthyRich, 5);
@@ -182,7 +149,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)3); // version
+            writer.Write(3); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -193,7 +160,7 @@ namespace Server.Mobiles
 
             if (version < 3 && Controlled && RawStr >= 1200 && ControlSlots == ControlSlotsMin)
             {
-                Server.SkillHandlers.AnimalTaming.ScaleStats(this, 0.5);
+                SkillHandlers.AnimalTaming.ScaleStats(this, 0.5);
             }
 
             if (version < 1 && Name == "a Cu Sidhe")

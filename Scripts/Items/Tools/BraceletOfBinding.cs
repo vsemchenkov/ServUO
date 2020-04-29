@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Mobiles;
+using Server.Multis;
 using Server.Network;
 using Server.Prompts;
 using Server.Spells;
 using Server.Targeting;
-using Server.Multis;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -74,30 +74,12 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int MaxCharges
-        {
-            get
-            {
-                return 999;
-            }
-        }
+        public int MaxCharges => 999;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual int MaxRecharges
-        {
-            get
-            {
-                return -1;
-            }
-        }
+        public virtual int MaxRecharges => -1;
 
-        public virtual string TranslocationItemName
-        {
-            get
-            {
-                return "bracelet of binding";
-            }
-        }
+        public virtual string TranslocationItemName => "bracelet of binding";
 
         [CommandProperty(AccessLevel.GameMaster)]
         public string Inscription
@@ -140,10 +122,10 @@ namespace Server.Items
             {
                 BraceletOfBinding bound = Bound;
 
-                list.Add(new BraceletEntry(new BraceletCallback(Activate), 6170, bound != null));
-                list.Add(new BraceletEntry(new BraceletCallback(Search), 6171, bound != null));
-                list.Add(new BraceletEntry(new BraceletCallback(Bind), bound == null ? 6173 : 6174, true));
-                list.Add(new BraceletEntry(new BraceletCallback(Inscribe), 6175, true));
+                list.Add(new BraceletEntry(Activate, 6170, bound != null));
+                list.Add(new BraceletEntry(Search, 6171, bound != null));
+                list.Add(new BraceletEntry(Bind, bound == null ? 6173 : 6174, true));
+                list.Add(new BraceletEntry(Inscribe, 6175, true));
             }
         }
 
@@ -241,13 +223,13 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.WriteEncodedInt((int)1); // version
+            writer.WriteEncodedInt(1); // version
 
-            writer.WriteEncodedInt((int)m_Recharges);
+            writer.WriteEncodedInt(m_Recharges);
 
-            writer.WriteEncodedInt((int)m_Charges);
-            writer.Write((string)m_Inscription);
-            writer.Write((Item)Bound);
+            writer.WriteEncodedInt(m_Charges);
+            writer.Write(m_Inscription);
+            writer.Write(Bound);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -256,7 +238,7 @@ namespace Server.Items
 
             int version = reader.ReadEncodedInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -325,17 +307,17 @@ namespace Server.Items
                 from.SendLocalizedMessage(1005564, "", 0x22); // Wouldst thou flee during the heat of battle??
                 return false;
             }
-            else if (Server.Misc.WeightOverloading.IsOverloaded(from))
+            else if (Misc.WeightOverloading.IsOverloaded(from))
             {
                 from.SendLocalizedMessage(502359, "", 0x22); // Thou art too encumbered to move.
                 return false;
             }
-            else if (from.Region.IsPartOf<Server.Regions.Jail>())
+            else if (from.Region.IsPartOf<Regions.Jail>())
             {
                 from.SendLocalizedMessage(1114345, "", 0x35); // You'll need a better jailbreak plan than that!
                 return false;
             }
-            else if (boundRoot.Region.IsPartOf<Server.Regions.Jail>())
+            else if (boundRoot.Region.IsPartOf<Regions.Jail>())
             {
                 from.SendLocalizedMessage(1019004); // You are not allowed to travel there.
                 return false;

@@ -1,11 +1,6 @@
-﻿using Server;
-using System;
-using Server.Mobiles;
-using System.Collections.Generic;
+﻿using Server.Items;
 using Server.Multis;
-using Server.Regions;
-using Server.Targeting;
-using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -35,7 +30,7 @@ namespace Server.Mobiles
         private bool m_Active;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Charydbis Charydbis { get { return m_Charydbis; } }
+        public Charydbis Charydbis => m_Charydbis;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextSpawn { get { return m_NextSpawn; } set { m_NextSpawn = value; } }
@@ -289,7 +284,7 @@ namespace Server.Mobiles
 
         private class InternalTimer : Timer
         {
-            private CharydbisSpawner m_Info;
+            private readonly CharydbisSpawner m_Info;
 
             public InternalTimer(CharydbisSpawner info, TimeSpan ts)
                 : base(ts)
@@ -305,7 +300,7 @@ namespace Server.Mobiles
 
         public void Serialize(GenericWriter writer)
         {
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(m_HasSpawned);
             writer.Write(m_LastAttempt);

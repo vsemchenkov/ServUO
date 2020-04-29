@@ -1,4 +1,3 @@
-﻿using Server;
 using System;
 
 namespace Server.Gumps
@@ -40,7 +39,7 @@ namespace Server.Gumps
                 AddImageTiled(10, 10, length - 20, height - 20, 2702);
 
                 if (body.Number > 0)
-                    AddHtmlLocalized(12, 10, 275, height - 25, (int)body, 0xFFFFFF, false, false);
+                    AddHtmlLocalized(12, 10, 275, height - 25, body, 0xFFFFFF, false, false);
                 else if (body.String != null)
                     AddHtml(12, 10, 275, height - 25, String.Format("<BASEFONT COLOR=WHITE>{0}</BASEFONT>", body.String), false, false);
             }
@@ -75,7 +74,7 @@ namespace Server.Gumps
                 AddHtml(10, 10, width - 20, height - 50, String.Format("<BASEFONT COLOR=#FFFFFF>{0}</BASEFONT>", warning.String), false, true);
         }
 
-        public override void OnResponse(Server.Network.NetState sender, RelayInfo info)
+        public override void OnResponse(Network.NetState sender, RelayInfo info)
         {
             Mobile m = sender.Mobile;
 

@@ -67,7 +67,7 @@ namespace Server.Mobiles
         public override bool DeleteCorpseOnDeath => Summoned;
 
         public override bool AlwaysMurderer => true; // Or Llama vortices will appear gray.
-		
+
         public override double DispelDifficulty => 80.0;
 
         public override double DispelFocus => 20.0;
@@ -124,7 +124,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

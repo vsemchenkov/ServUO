@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("the remains of tempest")]
@@ -20,7 +18,7 @@ namespace Server.Mobiles
 
             SetHits(602);
 
-            SetDamage(18, 20); 
+            SetDamage(18, 20);
 
             SetDamageType(ResistanceType.Energy, 80);
             SetDamageType(ResistanceType.Cold, 20);
@@ -41,8 +39,8 @@ namespace Server.Mobiles
             Karma = -4500;
         }
 
-        public override bool GivesMLMinorArtifact => true; 
-		
+        public override bool GivesMLMinorArtifact => true;
+
         public Tempest(Serial serial)
             : base(serial)
         {
@@ -67,7 +65,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

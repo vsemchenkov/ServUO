@@ -1,17 +1,15 @@
-using Server;
-using System;
-using Server.Mobiles;
-using Server.Items;
 using Server.Engines.Points;
+using Server.Items;
+using Server.Mobiles;
 
 namespace Server.Engines.SorcerersDungeon
 {
     public class SorcerersDungeonResearcher : BaseTurnInMobile
     {
-        public override int TitleLocalization { get { return 1157657; } } // Artifacts of Enchanted Origin
-        public override int CancelLocalization { get { return 1157616; } }	// Bring me items of Enchanted Origin and I will reward you with valuable items.
-        public override int TurnInLocalization { get { return 1158763; } } // Turn In Artifacts of Enchanted Origin
-        public override int ClaimLocalization { get { return 1155593; } } // Claim Rewards
+        public override int TitleLocalization => 1157657;  // Artifacts of Enchanted Origin
+        public override int CancelLocalization => 1157616; 	// Bring me items of Enchanted Origin and I will reward you with valuable items.
+        public override int TurnInLocalization => 1158763;  // Turn In Artifacts of Enchanted Origin
+        public override int ClaimLocalization => 1155593;  // Claim Rewards
 
         public static SorcerersDungeonResearcher Instance { get; set; }
 

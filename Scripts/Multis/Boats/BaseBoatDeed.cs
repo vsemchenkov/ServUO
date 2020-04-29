@@ -1,11 +1,6 @@
-using System;
-using Server;
-using Server.Regions;
-using Server.Targeting;
-using Server.Engines.CannedEvil;
-using Server.Network;
 using Server.Gumps;
 using Server.Items;
+using Server.Regions;
 using System.Linq;
 
 namespace Server.Multis
@@ -39,7 +34,7 @@ namespace Server.Multis
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
             writer.Write(MultiID);
             writer.Write(Offset);
@@ -65,7 +60,7 @@ namespace Server.Multis
         public override void OnDoubleClick(Mobile from)
         {
             BaseBoat boat = BaseBoat.FindBoatAt(from, from.Map);
-            
+
             if (from.AccessLevel < AccessLevel.GameMaster && (from.Map == Map.Ilshenar || from.Map == Map.Malas))
             {
                 from.SendLocalizedMessage(1010567, null, 0x25); // You may not place a boat from this location.
@@ -93,7 +88,7 @@ namespace Server.Multis
             if (Deleted)
             {
                 return;
-            }           
+            }
             else
             {
                 Map map = from.Map;
@@ -160,7 +155,7 @@ namespace Server.Multis
                     boat.MoveToWorld(p, map);
                     boat.OnAfterPlacement(true);
 
-                    var addon = LighthouseAddon.GetLighthouse(from);
+                    LighthouseAddon addon = LighthouseAddon.GetLighthouse(from);
 
                     if (addon != null)
                     {

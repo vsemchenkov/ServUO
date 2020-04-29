@@ -1,14 +1,13 @@
-using System;
-using System.Xml;
-using Server.Mobiles;
-using Server.Items;
-using Server.Spells.Third;
-using Server.Spells.Seventh;
-using Server.Spells.Fourth;
-using Server.Spells.Sixth;
-using Server.Spells.Chivalry;
 using Server.Engines.Quests;
+using Server.Items;
+using Server.Mobiles;
+using Server.Spells.Chivalry;
+using Server.Spells.Fourth;
+using Server.Spells.Seventh;
+using Server.Spells.Sixth;
+using Server.Spells.Third;
 using System.Linq;
+using System.Xml;
 
 namespace Server.Regions
 {
@@ -82,7 +81,7 @@ namespace Server.Regions
         {
         }
 
-        public override bool CheckTravel(Mobile m, Point3D newLocation, Server.Spells.TravelCheckType travelType)
+        public override bool CheckTravel(Mobile m, Point3D newLocation, Spells.TravelCheckType travelType)
         {
             return false;
         }
@@ -103,7 +102,7 @@ namespace Server.Regions
             if (m is PlayerMobile)
             {
                 int equipment = m.Items.Where(i => (i is CanvassRobe || i is BootsOfBallast || i is NictitatingLens || i is AquaPendant || i is GargishNictitatingLens) && (i.Parent is Mobile && ((Mobile)i.Parent).FindItemOnLayer(i.Layer) == i)).Count();
-                
+
                 PlayerMobile pm = m as PlayerMobile;
 
                 if (m.AccessLevel == AccessLevel.Player)
@@ -154,7 +153,7 @@ namespace Server.Regions
             return false;
         }
 
-        public override bool CheckTravel(Mobile m, Point3D newLocation, Server.Spells.TravelCheckType travelType)
+        public override bool CheckTravel(Mobile m, Point3D newLocation, Spells.TravelCheckType travelType)
         {
             return false;
         }

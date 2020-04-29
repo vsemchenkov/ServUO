@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -44,14 +43,14 @@ namespace Server.Mobiles
             Fame = 8000;
             Karma = -8000;
 
-			switch (Utility.Random(25))
+            switch (Utility.Random(25))
             {
                 case 0: PackItem(new LichFormScroll()); break;
                 case 1: PackItem(new PoisonStrikeScroll()); break;
                 case 2: PackItem(new StrangleScroll()); break;
                 case 3: PackItem(new VengefulSpiritScroll()); break;
-				case 4: PackItem(new WitherScroll()); break;
-			}
+                case 4: PackItem(new WitherScroll()); break;
+            }
 
             PackNecroReg(17, 24);
         }
@@ -61,36 +60,12 @@ namespace Server.Mobiles
         {
         }
 
-        public override TribeType Tribe { get { return TribeType.Undead; } }
+        public override TribeType Tribe => TribeType.Undead;
 
-        public override bool CanRummageCorpses
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool BleedImmune
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Lethal;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 3;
-            }
-        }
+        public override bool CanRummageCorpses => true;
+        public override bool BleedImmune => true;
+        public override Poison PoisonImmune => Poison.Lethal;
+        public override int TreasureMapLevel => 3;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);
@@ -100,7 +75,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

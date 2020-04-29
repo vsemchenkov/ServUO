@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Server.Items
 {
     public class FlameOfOrder : Item
     {
-        public override int LabelNumber { get { return 1112127; } } // Flame of Order
+        public override int LabelNumber => 1112127;  // Flame of Order
 
         private List<EnergyBarrier> m_Barriers;
         private List<Blocker> m_Blockers;
@@ -47,7 +47,7 @@ namespace Server.Items
             }
         }
 
-        public override bool HandlesOnSpeech { get { return true; } }
+        public override bool HandlesOnSpeech => true;
 
         public override void OnSpeech(SpeechEventArgs e)
         {
@@ -69,7 +69,7 @@ namespace Server.Items
                 m_Blockers.Clear();
                 m_LOSBlockers.Clear();
 
-                Timer.DelayCall(TimeSpan.FromMinutes(2.0), new TimerCallback(RestoreBarrier));
+                Timer.DelayCall(TimeSpan.FromMinutes(2.0), RestoreBarrier);
             }
         }
 
@@ -117,7 +117,7 @@ namespace Server.Items
             }
         }
 
-        private static Point3D[] m_BarrierLocations = new Point3D[]
+        private static readonly Point3D[] m_BarrierLocations = new Point3D[]
         {
             new Point3D( 33, 205, 0 ),
             new Point3D( 34, 205, 0 ),
@@ -126,7 +126,7 @@ namespace Server.Items
             new Point3D( 37, 205, 0 ),
         };
 
-        private static Point3D[] m_MsgTriggerLocations = new Point3D[]
+        private static readonly Point3D[] m_MsgTriggerLocations = new Point3D[]
         {
             new Point3D( 33, 203, 0 ),
             new Point3D( 34, 203, 0 ),
@@ -143,27 +143,27 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((int)m_Barriers.Count);
+            writer.Write(m_Barriers.Count);
 
             for (int i = 0; i < m_Barriers.Count; i++)
-                writer.Write((Item)m_Barriers[i]);
+                writer.Write(m_Barriers[i]);
 
-            writer.Write((int)m_Blockers.Count);
+            writer.Write(m_Blockers.Count);
 
             for (int i = 0; i < m_Blockers.Count; i++)
-                writer.Write((Item)m_Blockers[i]);
+                writer.Write(m_Blockers[i]);
 
-            writer.Write((int)m_LOSBlockers.Count);
+            writer.Write(m_LOSBlockers.Count);
 
             for (int i = 0; i < m_LOSBlockers.Count; i++)
-                writer.Write((Item)m_LOSBlockers[i]);
+                writer.Write(m_LOSBlockers[i]);
 
-            writer.Write((int)m_MsgTriggers.Count);
+            writer.Write(m_MsgTriggers.Count);
 
             for (int i = 0; i < m_MsgTriggers.Count; i++)
-                writer.Write((Item)m_MsgTriggers[i]);
+                writer.Write(m_MsgTriggers[i]);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -203,7 +203,7 @@ namespace Server.Items
                 m_MsgTriggers.Add(reader.ReadItem() as SBMessageTrigger);
 
             if (!Visible)
-                Timer.DelayCall(TimeSpan.Zero, new TimerCallback(RestoreBarrier));
+                Timer.DelayCall(TimeSpan.Zero, RestoreBarrier);
         }
     }
 }

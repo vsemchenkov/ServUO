@@ -1,6 +1,3 @@
-﻿using Server;
-using System;
-using Server.Items;
 using Server.Mobiles;
 using Server.Multis;
 
@@ -10,7 +7,7 @@ namespace Server.Network
     {
         public static void Initialize()
         {
-            PacketHandlers.RegisterExtended(0x33, true, new OnPacketReceive(MultiMouseMovementRequest));
+            PacketHandlers.RegisterExtended(0x33, true, MultiMouseMovementRequest);
         }
 
         public static void MultiMouseMovementRequest(NetState state, PacketReader reader)

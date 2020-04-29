@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -49,13 +48,13 @@ namespace Server.Mobiles
             ControlSlots = 2;
             MinTameSkill = 95.1;
 
-			switch (Utility.Random(12))
+            switch (Utility.Random(12))
             {
                 case 0: PackItem(new BloodOathScroll()); break;
                 case 1: PackItem(new HorrificBeastScroll()); break;
                 case 2: PackItem(new StrangleScroll()); break;
                 case 3: PackItem(new VengefulSpiritScroll()); break;
-			}
+            }
 
             switch (Utility.Random(4))
             {
@@ -97,41 +96,11 @@ namespace Server.Mobiles
         {
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 5;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Barbed;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override bool CanAngerOnTame
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override int Meat => 5;
+        public override int Hides => 10;
+        public override HideType HideType => HideType.Barbed;
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override bool CanAngerOnTame => true;
         public override void GenerateLoot()
         {
             AddLoot(LootPack.Rich);
@@ -151,7 +120,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

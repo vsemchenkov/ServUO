@@ -2,10 +2,6 @@ namespace Server.Items
 {
     public class SerpentArrow : WeaponAbility
     {
-        public SerpentArrow()
-        {
-        }
-
         public override int BaseMana => 25;
 
         public override SkillName GetSecondarySkill(Mobile from)
@@ -15,12 +11,12 @@ namespace Server.Items
 
         public override void OnHit(Mobile attacker, Mobile defender, int damage)
         {
-            if (!this.Validate(attacker) || !this.CheckMana(attacker, true))
+            if (!Validate(attacker) || !CheckMana(attacker, true))
                 return;
 
             ClearCurrentAbility(attacker);
 
-			defender.SendLocalizedMessage(1112369); // 	You have been poisoned by a lethal arrow!
+            defender.SendLocalizedMessage(1112369); // 	You have been poisoned by a lethal arrow!
 
             int level;
 

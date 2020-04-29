@@ -1,14 +1,11 @@
-using System;
-using Server;
-using Server.Mobiles;
 using Server.Engines.HuntsmasterChallenge;
-using System.Linq;
+using System;
 
 namespace Server.Items
 {
     [FlipableAddon(Direction.South, Direction.East)]
-	public class HuntTrophyAddon : BaseAddon
-	{
+    public class HuntTrophyAddon : BaseAddon
+    {
         private string m_Owner;
         private int m_Measurement;
         private string m_Location;
@@ -28,16 +25,16 @@ namespace Server.Items
         public string DateKilled { get { return m_DateKilled; } set { m_DateKilled = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition Species { get { return Info.Species; } }
+        public TextDefinition Species => Info.Species;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MeasuredBy MeasuredBy { get { return Info.MeasuredBy; } }
+        public MeasuredBy MeasuredBy => Info.MeasuredBy;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual int EastID { get { return Info.EastID; } }
+        public virtual int EastID => Info.EastID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public virtual int SouthID { get { return Info.SouthID; } }
+        public virtual int SouthID => Info.SouthID;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Index
@@ -58,14 +55,14 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public HuntingTrophyInfo Info { get { return HuntingTrophyInfo.Infos[Index]; } }
+        public HuntingTrophyInfo Info => HuntingTrophyInfo.Infos[Index];
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Complex { get { return Info.Complex; } }
+        public bool Complex => Info.Complex;
 
-        public override BaseAddonDeed Deed { get { return new HuntTrophyAddonDeed(m_Owner, Index, m_Measurement, m_DateKilled, m_Location); } }
+        public override BaseAddonDeed Deed => new HuntTrophyAddonDeed(m_Owner, Index, m_Measurement, m_DateKilled, m_Location);
 
-		public HuntTrophyAddon(string name, int index, int measurement, string killed, string location)
+        public HuntTrophyAddon(string name, int index, int measurement, string killed, string location)
         {
             Index = index;
 
@@ -91,7 +88,7 @@ namespace Server.Items
             {
                 AddComponent(new HuntTrophyComponent(SouthID + 1), 0, -1, 0);
             }
-		}
+        }
 
         public virtual void Flip(Mobile from, Direction direction)
         {
@@ -137,7 +134,7 @@ namespace Server.Items
             {
                 get
                 {
-                    var addon = Addon as HuntTrophyAddon;
+                    HuntTrophyAddon addon = Addon as HuntTrophyAddon;
 
                     if (addon != null)
                     {
@@ -190,7 +187,7 @@ namespace Server.Items
             public override void Serialize(GenericWriter writer)
             {
                 base.Serialize(writer);
-                writer.Write((int)0);
+                writer.Write(0);
             }
 
             public override void Deserialize(GenericReader reader)
@@ -202,13 +199,13 @@ namespace Server.Items
 
         public HuntTrophyAddon(Serial serial)
             : base(serial)
-		{
-		}
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(m_Index);
             writer.Write(m_Owner);
@@ -236,7 +233,7 @@ namespace Server.Items
                     m_Measurement = reader.ReadInt();
                     m_DateKilled = reader.ReadString();
                     m_Location = reader.ReadString();
-                    var td = TextDefinition.Deserialize(reader);
+                    TextDefinition td = TextDefinition.Deserialize(reader);
                     reader.ReadInt();
                     reader.ReadInt();
 
@@ -247,13 +244,13 @@ namespace Server.Items
                     break;
             }
         }
-	}
+    }
 
     public class HuntTrophyAddonDeed : BaseAddonDeed
     {
-        public override int LabelNumber { get { return 1084024 + SouthID; } }
+        public override int LabelNumber => 1084024 + SouthID;
 
-        public override BaseAddon Addon { get { return new HuntTrophyAddon(m_Owner, Index, m_Measurement, m_DateKilled, m_Location); } }
+        public override BaseAddon Addon => new HuntTrophyAddon(m_Owner, Index, m_Measurement, m_DateKilled, m_Location);
 
         private string m_Owner;
         private int m_Measurement;
@@ -274,22 +271,22 @@ namespace Server.Items
         public string DateKilled { get { return m_DateKilled; } set { m_DateKilled = value; } }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition Species { get { return Info.Species; } }
+        public TextDefinition Species => Info.Species;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public TextDefinition TrophyName { get { return Info.TrophyName; } }
+        public TextDefinition TrophyName => Info.TrophyName;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public MeasuredBy MeasuredBy { get { return Info.MeasuredBy; } }
+        public MeasuredBy MeasuredBy => Info.MeasuredBy;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int EastID { get { return Info.EastID; } }
+        public int EastID => Info.EastID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public int SouthID { get { return Info.SouthID; } }
+        public int SouthID => Info.SouthID;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Complex { get { return Info.Complex; } }
+        public bool Complex => Info.Complex;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Index
@@ -310,7 +307,7 @@ namespace Server.Items
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public HuntingTrophyInfo Info { get { return HuntingTrophyInfo.Infos[Index]; } }
+        public HuntingTrophyInfo Info => HuntingTrophyInfo.Infos[Index];
 
         public HuntTrophyAddonDeed(string name, int index, int measurement, string killed, string location)
         {
@@ -350,7 +347,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
 
             writer.Write(m_Index);
             writer.Write(m_Owner);
@@ -378,7 +375,7 @@ namespace Server.Items
                     m_Measurement = reader.ReadInt();
                     m_DateKilled = reader.ReadString();
                     m_Location = reader.ReadString();
-                    var td = TextDefinition.Deserialize(reader);
+                    TextDefinition td = TextDefinition.Deserialize(reader);
                     reader.ReadInt();
                     reader.ReadInt();
 

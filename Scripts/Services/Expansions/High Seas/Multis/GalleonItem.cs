@@ -1,13 +1,8 @@
-using Server;
-using System;
-using Server.Multis;
-using Server.Mobiles;
-
 namespace Server.Items
 {
     public class DeckItem : Item
     {
-        public override int LabelNumber { get { return 1035994; } } // deck
+        public override int LabelNumber => 1035994;  // deck
 
         public DeckItem(int itemID)
             : base(itemID)
@@ -23,7 +18,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -35,7 +30,7 @@ namespace Server.Items
 
     public class WeaponPad : Item
     {
-        public override int LabelNumber { get { return 1102376; } } // weapon pad
+        public override int LabelNumber => 1102376;  // weapon pad
 
         public WeaponPad(int itemID)
             : base(itemID)
@@ -51,7 +46,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1);
+            writer.Write(1);
         }
 
         public override void Deserialize(GenericReader reader)

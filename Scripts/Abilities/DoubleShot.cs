@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     /// <summary>
@@ -7,10 +5,6 @@ namespace Server.Items
     /// </summary>
     public class DoubleShot : WeaponAbility
     {
-        public DoubleShot()
-        {
-        }
-
         public override int BaseMana => 30;
 
         public override bool OnBeforeDamage(Mobile attacker, Mobile defender)

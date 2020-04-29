@@ -1,8 +1,6 @@
-using System;
-using Server;
-using Server.Gumps;
-using Server.Mobiles;
 using Server.Items;
+using Server.Mobiles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -69,7 +67,7 @@ namespace Server.Gumps
                 return;
 
             int index = 0;
-            foreach (var kvp in Book.SkillInfo)
+            foreach (KeyValuePair<SkillCat, List<SkillName>> kvp in Book.SkillInfo)
             {
                 AddHtmlLocalized(45, 55 + (index * 15), 100, 20, BaseSpecialScrollBook.GetCategoryLocalization(kvp.Key), false, false);
 
@@ -131,7 +129,7 @@ namespace Server.Gumps
             int index = 0;
             int split = Book.ValueInfo.Count >= 9 ? Book.ValueInfo.Count / 2 : -1;
 
-            foreach(var kvp in Book.ValueInfo)
+            foreach (KeyValuePair<int, double> kvp in Book.ValueInfo)
             {
                 if (split > -1 && index == split)
                 {
@@ -205,6 +203,7 @@ namespace Server.Gumps
                     value /= 10;
 
                     Book.Construct(User, (SkillName)Skill, value);
+                    Refresh();
                 }
             }
         }
@@ -223,7 +222,7 @@ namespace Server.Gumps
         {
             int count = 0;
 
-            foreach (var scroll in Book.Items.OfType<SpecialScroll>().Where(s => s.Skill == skill && value == s.Value))
+            foreach (SpecialScroll scroll in Book.Items.OfType<SpecialScroll>().Where(s => s.Skill == skill && value == s.Value))
                 count++;
 
             return count;

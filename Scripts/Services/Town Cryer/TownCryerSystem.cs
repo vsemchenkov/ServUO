@@ -1,21 +1,18 @@
-using Server;
-using Server.Engines.CityLoyalty;
-using Server.Gumps;
-using Server.ContextMenus;
-using Server.Guilds;
-using Server.Mobiles;
-using Server.Engines.Quests;
 using Server.Commands;
+using Server.ContextMenus;
+using Server.Engines.CityLoyalty;
 using Server.Engines.Khaldun;
+using Server.Engines.Quests;
+using Server.Guilds;
+using Server.Gumps;
 using Server.Items;
-
+using Server.Mobiles;
 using System;
-using System.IO;
-using System.Text;
-using System.Xml;
-using System.Globalization;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Xml;
 
 namespace Server.Services.TownCryer
 {
@@ -33,7 +30,7 @@ namespace Server.Services.TownCryer
         public static AccessLevel EMAccess = AccessLevel.Counselor;
         public static readonly string EMEventsPage = "https://uo.com/live-events/";
 
-        private static string PreLoadedPath = "Data/PreLoadedTC.xml";
+        private static readonly string PreLoadedPath = "Data/PreLoadedTC.xml";
 
         public static List<TownCryerGreetingEntry> GreetingsEntries { get; private set; }
         //public static List<TextDefinition> GreetingsEntries { get; private set; }
@@ -185,7 +182,7 @@ namespace Server.Services.TownCryer
         {
             if (Enabled && e.Mobile is PlayerMobile && !IsExempt(e.Mobile))
             {
-                Timer.DelayCall<PlayerMobile>(TimeSpan.FromSeconds(1), player =>
+                Timer.DelayCall(TimeSpan.FromSeconds(1), player =>
                 {
                     if (HasCustomEntries())
                     {
@@ -233,7 +230,7 @@ namespace Server.Services.TownCryer
         {
             if (ModeratorEntries.Count > 0 ||
                 CityEntries.Count > 0 ||
-                GuildEntries.Count > 0 || 
+                GuildEntries.Count > 0 ||
                 GreetingsEntries.Any(e => e.Expires != DateTime.MinValue) ||
                 MysteriousPotionEffects != null)
             {
@@ -278,9 +275,9 @@ namespace Server.Services.TownCryer
 
             if (MysteriousPotionEffects != null)
             {
-                var list = new List<Mobile>(MysteriousPotionEffects.Keys);
+                List<Mobile> list = new List<Mobile>(MysteriousPotionEffects.Keys);
 
-                foreach (var m in list)
+                foreach (Mobile m in list)
                 {
                     if (MysteriousPotionEffects != null && MysteriousPotionEffects.ContainsKey(m) && MysteriousPotionEffects[m] < DateTime.UtcNow)
                     {
@@ -308,7 +305,7 @@ namespace Server.Services.TownCryer
         {
             if (from is PlayerMobile)
             {
-                var pm = from as PlayerMobile;
+                PlayerMobile pm = from as PlayerMobile;
 
                 if (pm.AccessLevel >= EMAccess)
                 {
@@ -316,7 +313,7 @@ namespace Server.Services.TownCryer
                     list.Add(new UpdateEMEntry(tc));
                 }
 
-                var system = CityLoyaltySystem.GetCitizenship(pm, false);
+                CityLoyaltySystem system = CityLoyaltySystem.GetCitizenship(pm, false);
 
                 if (IsGovernor(pm, system))
                 {
@@ -351,7 +348,7 @@ namespace Server.Services.TownCryer
 
         public static bool UnderMysteriousPotionEffects(Mobile m, bool checkQuest = false)
         {
-            return 
+            return
                 MysteriousPotionEffects != null && MysteriousPotionEffects.ContainsKey(m) && MysteriousPotionEffects[m] > DateTime.UtcNow &&
                 (!checkQuest || (m is PlayerMobile && QuestHelper.HasQuest<AForcedSacraficeQuest2>((PlayerMobile)m)));
         }
@@ -425,7 +422,7 @@ namespace Server.Services.TownCryer
                         }
                         else if (expires > DateTime.Now || expires == DateTime.MinValue)
                         {
-                            var entry = new TownCryerGreetingEntry(title, body, -1, link, linktext);
+                            TownCryerGreetingEntry entry = new TownCryerGreetingEntry(title, body, -1, link, linktext);
 
                             entry.PreLoaded = true;
                             entry.Created = created;
@@ -514,30 +511,30 @@ namespace Server.Services.TownCryer
             writer.Write(GreetingsEntries.Count);
 
             writer.Write(TownCryerExempt.Count);
-            foreach (var pm in TownCryerExempt)
+            foreach (PlayerMobile pm in TownCryerExempt)
                 writer.Write(pm);
 
             writer.Write(GreetingsEntries.Where(x => x.Saves).Count());
-            foreach (var e in GreetingsEntries.Where(x => x.Saves))
+            foreach (TownCryerGreetingEntry e in GreetingsEntries.Where(x => x.Saves))
                 e.Serialize(writer);
 
             writer.Write(ModeratorEntries.Count);
-            foreach (var e in ModeratorEntries)
+            foreach (TownCryerModeratorEntry e in ModeratorEntries)
                 e.Serialize(writer);
 
             writer.Write(CityEntries.Count);
-            foreach (var e in CityEntries)
+            foreach (TownCryerCityEntry e in CityEntries)
                 e.Serialize(writer);
 
             writer.Write(GuildEntries.Count);
-            foreach (var e in GuildEntries)
+            foreach (TownCryerGuildEntry e in GuildEntries)
                 e.Serialize(writer);
 
             writer.Write(MysteriousPotionEffects != null ? MysteriousPotionEffects.Count : 0);
 
             if (MysteriousPotionEffects != null)
             {
-                foreach (var kvp in MysteriousPotionEffects)
+                foreach (KeyValuePair<Mobile, DateTime> kvp in MysteriousPotionEffects)
                 {
                     writer.Write(kvp.Key);
                     writer.Write(kvp.Value);
@@ -560,7 +557,7 @@ namespace Server.Services.TownCryer
 
                     for (int i = 0; i < count; i++)
                     {
-                        var pm = reader.ReadMobile() as PlayerMobile;
+                        PlayerMobile pm = reader.ReadMobile() as PlayerMobile;
 
                         if (pm != null)
                         {
@@ -571,7 +568,7 @@ namespace Server.Services.TownCryer
                     count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
                     {
-                        var entry = new TownCryerGreetingEntry(reader);
+                        TownCryerGreetingEntry entry = new TownCryerGreetingEntry(reader);
 
                         if (!entry.Expired)
                         {
@@ -583,7 +580,7 @@ namespace Server.Services.TownCryer
                     count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
                     {
-                        var entry = new TownCryerModeratorEntry(reader);
+                        TownCryerModeratorEntry entry = new TownCryerModeratorEntry(reader);
 
                         if (!entry.Expired)
                         {
@@ -594,7 +591,7 @@ namespace Server.Services.TownCryer
                     count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
                     {
-                        var entry = new TownCryerCityEntry(reader);
+                        TownCryerCityEntry entry = new TownCryerCityEntry(reader);
 
                         if (!entry.Expired)
                         {
@@ -605,7 +602,7 @@ namespace Server.Services.TownCryer
                     count = reader.ReadInt();
                     for (int i = 0; i < count; i++)
                     {
-                        var entry = new TownCryerGuildEntry(reader);
+                        TownCryerGuildEntry entry = new TownCryerGuildEntry(reader);
 
                         if (!entry.Expired)
                         {
@@ -702,8 +699,8 @@ namespace Server.Services.TownCryer
         {
             if (Owner.From is PlayerMobile)
             {
-                var pm = Owner.From as PlayerMobile;
-                var system = CityLoyaltySystem.GetCitizenship(pm, false);
+                PlayerMobile pm = Owner.From as PlayerMobile;
+                CityLoyaltySystem system = CityLoyaltySystem.GetCitizenship(pm, false);
 
                 if (TownCryerSystem.IsGovernor(pm, system))
                 {
@@ -735,7 +732,7 @@ namespace Server.Services.TownCryer
         {
             PlayerMobile pm = Owner.From as PlayerMobile;
 
-            if(pm != null)
+            if (pm != null)
             {
                 Guild g = pm.Guild as Guild;
 

@@ -1,10 +1,6 @@
-using System;
-
-using Server;
-using Server.Items;
-using Server.Mobiles;
-using Server.Network;
 using Server.Engines.Points;
+using Server.Items;
+using System;
 
 namespace Server.Engines.RisingTide
 {
@@ -37,7 +33,7 @@ namespace Server.Engines.RisingTide
 
         public static void CheckEnabled(bool timed = false)
         {
-            var risingTide = PointsSystem.RisingTide;
+            Points.RisingTide risingTide = PointsSystem.RisingTide;
 
             if (risingTide.Enabled && !risingTide.InSeason)
             {

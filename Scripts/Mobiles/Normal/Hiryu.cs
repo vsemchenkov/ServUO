@@ -1,6 +1,5 @@
-using System;
-using System.Collections;
 using Server.Items;
+using System;
 
 namespace Server.Mobiles
 {
@@ -57,48 +56,12 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool StatLossAfterTame
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
-        public override int Meat
-        {
-            get
-            {
-                return 16;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 60;
-            }
-        }
-        public override FoodType FavoriteFood
-        {
-            get
-            {
-                return FoodType.Meat;
-            }
-        }
-        public override bool CanAngerOnTame
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override bool StatLossAfterTame => true;
+        public override int TreasureMapLevel => 5;
+        public override int Meat => 16;
+        public override int Hides => 60;
+        public override FoodType FavoriteFood => FoodType.Meat;
+        public override bool CanAngerOnTame => true;
         public override WeaponAbility GetWeaponAbility()
         {
             return WeaponAbility.Dismount;
@@ -157,7 +120,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)3);
+            writer.Write(3);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -219,7 +182,7 @@ namespace Server.Mobiles
                 return 0x848D;
             else if (rand <= 74)
                 return 0x847F;
-			
+
             return 0;
         }
     }

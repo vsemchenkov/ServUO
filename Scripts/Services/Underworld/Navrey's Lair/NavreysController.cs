@@ -1,8 +1,7 @@
-﻿using System;
 using Server.Commands;
 using Server.Mobiles;
 using Server.Network;
-using System.Linq;
+using System;
 
 namespace Server.Items
 {
@@ -11,7 +10,7 @@ namespace Server.Items
         #region Generation
         public static void Initialize()
         {
-            CommandSystem.Register("GenNavrey", AccessLevel.Developer, new CommandEventHandler(GenNavrey_Command));
+            CommandSystem.Register("GenNavrey", AccessLevel.Developer, GenNavrey_Command);
         }
 
         [Usage("GenNavrey")]
@@ -72,7 +71,7 @@ namespace Server.Items
                             pillar.Type = PillarType.Three;
                     }
 
-                    this.TypeRestart = TimeSpan.FromHours(24.0); // The timers rotate among the three stone ruins randomly once a day
+                    TypeRestart = TimeSpan.FromHours(24.0); // The timers rotate among the three stone ruins randomly once a day
                 }
 
                 return ts;
@@ -129,7 +128,7 @@ namespace Server.Items
         {
             SetAllPillars(NavreysPillarState.Off);
 
-            Timer.DelayCall(TimeSpan.FromMinutes(10.0), new TimerCallback(Respawn));
+            Timer.DelayCall(TimeSpan.FromMinutes(10.0), Respawn);
         }
 
         public void Respawn()
@@ -173,7 +172,7 @@ namespace Server.Items
                 t.Start();
 
                 SetAllPillars(NavreysPillarState.Off);
-                Timer.DelayCall(TimeSpan.FromMinutes(5.0), new TimerCallback(ResetPillars));
+                Timer.DelayCall(TimeSpan.FromMinutes(5.0), ResetPillars);
             }
         }
 
@@ -195,13 +194,13 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
 
-            writer.Write((Mobile)m_Navrey);
+            writer.Write(m_Navrey);
 
-            writer.Write((Item)m_Pillars[0]);
-            writer.Write((Item)m_Pillars[1]);
-            writer.Write((Item)m_Pillars[2]);
+            writer.Write(m_Pillars[0]);
+            writer.Write(m_Pillars[1]);
+            writer.Write(m_Pillars[2]);
 
             writer.Write(TypeRestart);
         }
@@ -223,14 +222,14 @@ namespace Server.Items
             TypeRestart = reader.ReadTimeSpan();
 
             if (m_Navrey == null)
-                Timer.DelayCall(TimeSpan.Zero, new TimerCallback(Respawn));
+                Timer.DelayCall(TimeSpan.Zero, Respawn);
             else
                 SetAllPillars(NavreysPillarState.On);
         }
 
         private class RockRainTimer : Timer
         {
-            private Navrey m_Navrey;
+            private readonly Navrey m_Navrey;
             private int m_Ticks;
 
             public RockRainTimer(Navrey navrey)

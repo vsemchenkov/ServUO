@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Mobiles
 {
     [CorpseName("a dragon corpse")]
@@ -56,24 +54,18 @@ namespace Server.Mobiles
         {
         }
 
-        public override bool ReacquireOnMovement { get { return !Controlled; } }
-        
-        public override double BonusPetDamageScalar { get { return Controlled ? 1.0 : 3.0; } }
-        public override bool AutoDispel { get { return !Controlled; } }
-        public override HideType HideType { get { return HideType.Barbed; } }
-        public override int Hides { get { return 20; } }
-        public override int Meat { get { return 19; } }
-        public override int Scales { get { return 6; } }
+        public override bool ReacquireOnMovement => !Controlled;
 
-        public override ScaleType ScaleType
-        {
-            get
-            {
-                return (Utility.RandomBool() ? ScaleType.Black : ScaleType.White);
-            }
-        }
-        public override int TreasureMapLevel { get { return 4; } }
-        public override bool CanAngerOnTame { get { return true; } }
+        public override double BonusPetDamageScalar => Controlled ? 1.0 : 3.0;
+        public override bool AutoDispel => !Controlled;
+        public override HideType HideType => HideType.Barbed;
+        public override int Hides => 20;
+        public override int Meat => 19;
+        public override int Scales => 6;
+
+        public override ScaleType ScaleType => (Utility.RandomBool() ? ScaleType.Black : ScaleType.White);
+        public override int TreasureMapLevel => 4;
+        public override bool CanAngerOnTame => true;
 
         public override void GenerateLoot()
         {
@@ -109,7 +101,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

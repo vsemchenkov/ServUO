@@ -1,63 +1,33 @@
-using System;
-using System.Collections;
 using Server.Engines.CannedEvil;
 using Server.Items;
+using System;
+using System.Collections;
 
 namespace Server.Mobiles
 {
     [CorpseName("the remains of Meraktus")]
     public class Meraktus : BaseChampion
     {
-        public override ChampionSkullType SkullType
-        {
-            get
-            {
-                return ChampionSkullType.Pain;
-            }
-        }
+        public override ChampionSkullType SkullType => ChampionSkullType.Pain;
 
-        public override Type[] UniqueList
-        {
-            get
-            {
-                return new Type[] { typeof(Subdue) };
-            }
-        }
-        public override Type[] SharedList
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] UniqueList => new Type[] { typeof(Subdue) };
+        public override Type[] SharedList => new Type[]
                 {
                     typeof(RoyalGuardSurvivalKnife),
                     typeof(TheMostKnowledgePerson),
                     typeof(OblivionsNeedle)
                 };
-            }
-        }
-        public override Type[] DecorativeList
-        {
-            get
-            {
-                return new Type[]
+        public override Type[] DecorativeList => new Type[]
                 {
                     typeof(ArtifactLargeVase),
                     typeof(ArtifactVase),
                     typeof(MinotaurStatueDeed)
                 };
-            }
-        }
 
-        public override MonsterStatuetteType[] StatueTypes
-        {
-            get
-            {
-                return new MonsterStatuetteType[]
+        public override MonsterStatuetteType[] StatueTypes => new MonsterStatuetteType[]
                 {
                     MonsterStatuetteType.Minotaur
                 };
-            }
-        }
 
         [Constructable]
         public Meraktus()
@@ -103,7 +73,7 @@ namespace Server.Mobiles
             PackResources(8);
             PackTalismans(5);
 
-            Timer.DelayCall(TimeSpan.FromSeconds(1), new TimerCallback(SpawnTormented));
+            Timer.DelayCall(TimeSpan.FromSeconds(1), SpawnTormented);
 
             SetWeaponAbility(WeaponAbility.Dismount);
         }
@@ -171,7 +141,7 @@ namespace Server.Mobiles
         public override void GenerateLoot()
         {
 
-            AddLoot(LootPack.SuperBoss, 5);  
+            AddLoot(LootPack.SuperBoss, 5);
         }
 
         public override int GetAngerSound()
@@ -199,62 +169,14 @@ namespace Server.Mobiles
             return 0x59c;
         }
 
-        public override int Meat
-        {
-            get
-            {
-                return 2;
-            }
-        }
-        public override int Hides
-        {
-            get
-            {
-                return 10;
-            }
-        }
-        public override HideType HideType
-        {
-            get
-            {
-                return HideType.Regular;
-            }
-        }
-        public override Poison PoisonImmune
-        {
-            get
-            {
-                return Poison.Regular;
-            }
-        }
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 3;
-            }
-        }
-        public override bool BardImmune
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool Unprovokable
-        {
-            get
-            {
-                return true;
-            }
-        }
-        public override bool Uncalmable
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override int Meat => 2;
+        public override int Hides => 10;
+        public override HideType HideType => HideType.Regular;
+        public override Poison PoisonImmune => Poison.Regular;
+        public override int TreasureMapLevel => 3;
+        public override bool BardImmune => true;
+        public override bool Unprovokable => true;
+        public override bool Uncalmable => true;
 
         public override void OnGaveMeleeAttack(Mobile defender)
         {
@@ -284,21 +206,26 @@ namespace Server.Mobiles
             for (int i = 0; i < targets.Count; ++i)
             {
                 Mobile m = (Mobile)targets[i];
-                if (m != null && !m.Deleted && m is PlayerMobile)
+
+                if (m == null || m.Deleted)
+                    continue;
+
+                if (m is PlayerMobile pm && pm.Mounted)
                 {
-                    PlayerMobile pm = m as PlayerMobile;
-                    if (pm != null && pm.Mounted)
-                    {
-                        pm.SetMountBlock(BlockMountType.DismountRecovery, TimeSpan.FromSeconds(10), true);
-                    }
+                    pm.SetMountBlock(BlockMountType.DismountRecovery, TimeSpan.FromSeconds(10), true);
                 }
+
                 double damage = m.Hits * 0.6;//was .6
+
                 if (damage < 10.0)
                     damage = 10.0;
                 else if (damage > 75.0)
                     damage = 75.0;
+
                 DoHarmful(m);
+
                 AOS.Damage(m, this, (int)damage, 100, 0, 0, 0, 0);
+
                 if (m.Alive && m.Body.IsHuman && !m.Mounted)
                     m.Animate(20, 7, 1, true, false, 0); // take hit
             }
@@ -312,7 +239,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

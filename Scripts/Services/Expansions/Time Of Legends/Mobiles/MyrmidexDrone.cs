@@ -1,7 +1,5 @@
-using System;
-using Server;
-using Server.Items;
 using Server.Engines.MyrmidexInvasion;
+using Server.Items;
 
 namespace Server.Mobiles
 {
@@ -54,10 +52,10 @@ namespace Server.Mobiles
             return base.OnBeforeDeath();
         }
 
-        public override int Meat { get { return 4; } }
-        public override Poison HitPoison { get { return Poison.Regular; } }
-        public override Poison PoisonImmune { get { return Poison.Regular; } }
-        public override int TreasureMapLevel { get { return 1; } }
+        public override int Meat => 4;
+        public override Poison HitPoison => Poison.Regular;
+        public override Poison PoisonImmune => Poison.Regular;
+        public override int TreasureMapLevel => 1;
 
         public override bool IsEnemy(Mobile m)
         {

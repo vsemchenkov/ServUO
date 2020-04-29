@@ -1,14 +1,12 @@
-using System;
-using Server;
-using Server.Targeting;
 using Server.Engines.VeteranRewards;
 using Server.Mobiles;
+using Server.Targeting;
 
 namespace Server.Items
 {
     public class EtherealRetouchingTool : Item, IRewardItem
     {
-        public override int LabelNumber { get { return 1113814; } } // Retouching Tool
+        public override int LabelNumber => 1113814;  // Retouching Tool
 
         public bool IsRewardItem { get; set; }
 
@@ -47,7 +45,7 @@ namespace Server.Items
 
         private class InternalTarget : Target
         {
-            private EtherealRetouchingTool m_Tool;
+            private readonly EtherealRetouchingTool m_Tool;
 
             public InternalTarget(EtherealRetouchingTool tool)
                 : base(-1, false, TargetFlags.None)
@@ -82,7 +80,7 @@ namespace Server.Items
 
                         mount.Transparent = mount.Transparent ? false : true;
                         mount.InvalidateProperties();
-                    }                    
+                    }
                 }
                 else
                 {

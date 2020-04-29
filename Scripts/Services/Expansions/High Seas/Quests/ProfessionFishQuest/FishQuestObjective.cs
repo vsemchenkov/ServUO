@@ -1,9 +1,5 @@
-﻿using Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using Server.Multis;
-using Server.Items;
-using Server.Mobiles;
 
 namespace Server.Engines.Quests
 {
@@ -76,7 +72,7 @@ namespace Server.Engines.Quests
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
             writer.Write(Line.Count);
             foreach (KeyValuePair<Type, int[]> kvp in Line)

@@ -11,13 +11,13 @@ namespace Server.Items
             TileData.ItemTable[0x2DF3].Flags = TileFlag.None;
         }
 
-        public override int DefaultGumpID { get { return 0x10C; } }
+        public override int DefaultGumpID => 0x10C;
 
-        public bool CheckWhenHidden { get { return true; } }
+        public bool CheckWhenHidden => true;
 
-        public static Type[] RituelItem { get { return m_RituelItem; } }
+        public static Type[] RituelItem => m_RituelItem;
 
-        private static Type[] m_RituelItem = new Type[]
+        private static readonly Type[] m_RituelItem = new Type[]
         {
             typeof(ExodusSummoningRite), typeof(ExodusSacrificalDagger), typeof(RobeofRite), typeof(ExodusSummoningAlter)
         };
@@ -25,10 +25,10 @@ namespace Server.Items
         private Timer m_Timer;
         private ExodusChestRegion m_Region;
 
-        public override bool IsDecoContainer { get { return false; } }        
+        public override bool IsDecoContainer => false;
 
         [Constructable]
-        public ExodusChest() 
+        public ExodusChest()
             : base()
         {
             Visible = false;
@@ -42,7 +42,7 @@ namespace Server.Items
 
             TrapType = TrapType.PoisonTrap;
             TrapPower = 100;
-            GenerateTreasure();           
+            GenerateTreasure();
         }
 
         public ExodusChest(Serial serial) : base(serial)
@@ -65,7 +65,7 @@ namespace Server.Items
 
         public virtual bool CheckPassiveDetect(Mobile m)
         {
-            if (m.InRange(this.Location, 4))
+            if (m.InRange(Location, 4))
             {
                 int skill = (int)m.Skills[SkillName.DetectHidden].Value;
 
@@ -84,7 +84,7 @@ namespace Server.Items
                 DropItem(item);
             }
 
-            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(5), new TimerCallback(Delete));
+            m_Timer = Timer.DelayCall(TimeSpan.FromMinutes(5), Delete);
             m_Timer.Start();
         }
 
@@ -99,7 +99,7 @@ namespace Server.Items
         public override void OnMapChange()
         {
             if (Deleted)
-                return;           
+                return;
 
             UpdateRegion();
         }
@@ -130,12 +130,12 @@ namespace Server.Items
 
         protected virtual void GenerateTreasure()
         {
-            DropItem(new Gold(1500, 3000));           
+            DropItem(new Gold(1500, 3000));
 
             Item item = null;
 
-            for (int i = 0 ; i < Loot.GemTypes.Length; i++)
-            {               
+            for (int i = 0; i < Loot.GemTypes.Length; i++)
+            {
                 item = Activator.CreateInstance(Loot.GemTypes[i]) as Item;
                 item.Amount = Utility.Random(1, 6);
                 DropItem(item);
@@ -155,7 +155,7 @@ namespace Server.Items
                         item = new ParasiticPotion(Utility.Random(1, 3)); break;
                     case 1:
                         item = new InvisibilityPotion(Utility.Random(1, 3)); break;
-                }                        
+                }
 
                 DropItem(item);
             }
@@ -166,7 +166,7 @@ namespace Server.Items
                 item.Amount = Utility.Random(3, 6);
                 DropItem(item);
             }
-            
+
             if (0.1 > Utility.RandomDouble())
             {
                 switch (Utility.Random(4))
@@ -194,7 +194,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)
@@ -205,7 +205,7 @@ namespace Server.Items
             if (!Locked)
                 Delete();
 
-            Timer.DelayCall(TimeSpan.Zero, new TimerCallback(UpdateRegion));
+            Timer.DelayCall(TimeSpan.Zero, UpdateRegion);
         }
     }
 
@@ -213,10 +213,10 @@ namespace Server.Items
     {
         private readonly ExodusChest m_Chest;
 
-        public ExodusChest ExodusChest { get { return m_Chest; } }
+        public ExodusChest ExodusChest => m_Chest;
 
         public ExodusChestRegion(ExodusChest chest)
-            : base(null, chest.Map, Region.Find(chest.Location, chest.Map), new Rectangle2D(chest.Location.X - 2, chest.Location.Y - 2 , 5, 5) )
+            : base(null, chest.Map, Region.Find(chest.Location, chest.Map), new Rectangle2D(chest.Location.X - 2, chest.Location.Y - 2, 5, 5))
         {
             m_Chest = chest;
         }

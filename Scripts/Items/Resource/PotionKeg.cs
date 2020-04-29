@@ -49,7 +49,7 @@ namespace Server.Items
             }
         }
         public override int LabelNumber
-        { 
+        {
             get
             {
                 if (m_Held > 0 && (int)m_Type >= (int)PotionEffect.Conflagration)
@@ -66,7 +66,7 @@ namespace Server.Items
                     }
                 }
 
-                return (m_Held > 0 ? 1041620 + (int)m_Type : 1041641); 
+                return (m_Held > 0 ? 1041620 + (int)m_Type : 1041641);
             }
         }
         public static void Initialize()
@@ -85,10 +85,10 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)1); // version
+            writer.Write(1); // version
 
             writer.Write((int)m_Type);
-            writer.Write((int)m_Held);
+            writer.Write(m_Held);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -97,7 +97,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                 case 0:
@@ -110,7 +110,7 @@ namespace Server.Items
             }
 
             if (version < 1)
-                Timer.DelayCall(TimeSpan.Zero, new TimerCallback(UpdateWeight));
+                Timer.DelayCall(TimeSpan.Zero, UpdateWeight);
         }
 
         public override void GetProperties(ObjectPropertyList list)
@@ -285,7 +285,7 @@ namespace Server.Items
 
         public BasePotion FillBottle()
         {
-            switch ( m_Type )
+            switch (m_Type)
             {
                 default:
                 case PotionEffect.Nightsight:
@@ -335,7 +335,7 @@ namespace Server.Items
                     return new ExplosionPotion();
                 case PotionEffect.ExplosionGreater:
                     return new GreaterExplosionPotion();
-				
+
                 case PotionEffect.Conflagration:
                     return new ConflagrationPotion();
                 case PotionEffect.ConflagrationGreater:

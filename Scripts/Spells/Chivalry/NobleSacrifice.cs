@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Server.Gumps;
 using Server.Mobiles;
 using Server.Spells.Necromancy;
+using System;
+using System.Collections.Generic;
 
 namespace Server.Spells.Chivalry
 {
@@ -17,48 +17,12 @@ namespace Server.Spells.Chivalry
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(1.5);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 65.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 20;
-            }
-        }
-        public override int RequiredTithing
-        {
-            get
-            {
-                return 30;
-            }
-        }
-        public override int MantraNumber
-        {
-            get
-            {
-                return 1060725;
-            }
-        }// Dium Prostra
-        public override bool BlocksMovement
-        {
-            get
-            {
-                return false;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(1.5);
+        public override double RequiredSkill => 65.0;
+        public override int RequiredMana => 20;
+        public override int RequiredTithing => 30;
+        public override int MantraNumber => 1060725;// Dium Prostra
+        public override bool BlocksMovement => false;
         public override void OnCast()
         {
             if (CheckSequence())
@@ -140,13 +104,13 @@ namespace Server.Spells.Chivalry
                             sendEffect = true;
                         }
 
-                        if(m.RemoveStatMod("[Magic] Str Offset"))
-							sendEffect = true;
-
-                        if(m.RemoveStatMod("[Magic] Dex Offset"))
+                        if (m.RemoveStatMod("[Magic] Str Offset"))
                             sendEffect = true;
 
-                        if(m.RemoveStatMod("[Magic] Int Offset"))
+                        if (m.RemoveStatMod("[Magic] Dex Offset"))
+                            sendEffect = true;
+
+                        if (m.RemoveStatMod("[Magic] Int Offset"))
                             sendEffect = true;
 
                         if (m.Paralyzed)

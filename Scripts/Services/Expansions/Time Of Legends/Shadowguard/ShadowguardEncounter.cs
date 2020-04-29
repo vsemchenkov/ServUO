@@ -1,48 +1,46 @@
+using Server.Engines.PartySystem;
+using Server.Items;
+using Server.Mobiles;
 using System;
 using System.Collections.Generic;
-using Server;
-using Server.Mobiles;
-using Server.Items;
-using Server.Gumps;
-using Server.Engines.PartySystem;
 using System.Linq;
 
 namespace Server.Engines.Shadowguard
 {
     [PropertyObject]
-	public abstract class ShadowguardEncounter
-	{
+    public abstract class ShadowguardEncounter
+    {
         [CommandProperty(AccessLevel.GameMaster)]
-		public ShadowguardController Controller { get { return ShadowguardController.Instance; } }
+        public ShadowguardController Controller => ShadowguardController.Instance;
 
-		public Rectangle2D[] Bounds { get; set; }
-
-        [CommandProperty(AccessLevel.GameMaster)]
-        public ShadowguardRegion Region { get { return Instance.Region; } }
+        public Rectangle2D[] Bounds { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public Point3D StartLoc { get { return Def.StartLoc; } }
-
-        public Point3D[] SpawnPoints { get { return Def.SpawnPoints; } }
-        public Rectangle2D[] SpawnRecs { get { return Def.SpawnRecs; } }
+        public ShadowguardRegion Region => Instance.Region;
 
         [CommandProperty(AccessLevel.GameMaster)]
-		public EncounterType Encounter { get; set; }
+        public Point3D StartLoc => Def.StartLoc;
+
+        public Point3D[] SpawnPoints => Def.SpawnPoints;
+        public Rectangle2D[] SpawnRecs => Def.SpawnRecs;
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public EncounterType Encounter { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool HasBegun { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-		public bool DoneWarning { get; set; }
+        public bool DoneWarning { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Completed { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-		public DateTime StartTime { get; set; }
+        public DateTime StartTime { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
-		public Mobile PartyLeader { get; set; }
+        public Mobile PartyLeader { get; set; }
 
         [CommandProperty(AccessLevel.GameMaster)]
         public ShadowguardInstance Instance { get; set; }
@@ -73,24 +71,24 @@ namespace Server.Engines.Shadowguard
         public BaseAddon Addon { get; set; }
 
         public abstract Type AddonType { get; }
-        public EncounterDef Def { get { return Defs[Encounter]; } }
+        public EncounterDef Def => Defs[Encounter];
 
-        public virtual TimeSpan EncounterDuration { get { return TimeSpan.FromMinutes(30); } }
-        public virtual TimeSpan ResetDuration { get { return TimeSpan.FromSeconds(60); } }
+        public virtual TimeSpan EncounterDuration => TimeSpan.FromMinutes(30);
+        public virtual TimeSpan ResetDuration => TimeSpan.FromSeconds(60);
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public bool Active { get { return Controller != null && Controller.Encounters.Contains(this); } }
+        public bool Active => Controller != null && Controller.Encounters.Contains(this);
 
         public List<PlayerMobile> Participants { get; private set; } = new List<PlayerMobile>();
 
-		public ShadowguardEncounter(EncounterType encounter, ShadowguardInstance instance = null)
-		{
-			Encounter = encounter;
+        public ShadowguardEncounter(EncounterType encounter, ShadowguardInstance instance = null)
+        {
+            Encounter = encounter;
             Instance = instance;
 
-            if(instance != null)
+            if (instance != null)
                 instance.Encounter = this;
-		}
+        }
 
         public override string ToString()
         {
@@ -99,10 +97,10 @@ namespace Server.Engines.Shadowguard
 
         public int PartySize()
         {
-            if (PartyLeader == null || this.Region == null)
+            if (PartyLeader == null || Region == null)
                 return 0;
 
-            int inRegion = this.Region.GetPlayerCount();
+            int inRegion = Region.GetPlayerCount();
 
             if (inRegion > 0)
                 return inRegion;
@@ -161,33 +159,33 @@ namespace Server.Engines.Shadowguard
             //There is a 30 minute time limit for each encounter. You will receive a time limit warning at 5 minutes.
         }
 
-		public void AddPlayers(Mobile m)
-		{
-			if(m == null || !m.Alive || !m.InRange(Controller.Location, 25) || m.NetState == null)
-			{
-				Reset(true);
-			}
-			else
-			{
-				Party p = Party.Get(m);
-				
-				if(p != null)
-				{
-                    foreach (var pm in p.Members.Select(x => x.Mobile))
+        public void AddPlayers(Mobile m)
+        {
+            if (m == null || !m.Alive || !m.InRange(Controller.Location, 25) || m.NetState == null)
+            {
+                Reset(true);
+            }
+            else
+            {
+                Party p = Party.Get(m);
+
+                if (p != null)
+                {
+                    foreach (Mobile pm in p.Members.Select(x => x.Mobile))
                     {
                         AddPlayer(pm);
                     }
-				}
-				
-				AddPlayer(m);
-			}
-		}
+                }
+
+                AddPlayer(m);
+            }
+        }
 
         protected void SendPartyMessage(int cliloc, int hue = 0x3B2)
         {
             if (HasBegun)
             {
-                foreach (var pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
+                foreach (PlayerMobile pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
                 {
                     pm.SendLocalizedMessage(cliloc, null, hue);
                 }
@@ -210,7 +208,7 @@ namespace Server.Engines.Shadowguard
         {
             if (HasBegun)
             {
-                foreach (var pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
+                foreach (PlayerMobile pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
                 {
                     pm.SendMessage(hue, message);
                 }
@@ -230,51 +228,51 @@ namespace Server.Engines.Shadowguard
         }
 
         public void AddPlayer(Mobile m)
-		{
+        {
             Point3D p = StartLoc;
             ConvertOffset(ref p);
 
-			MovePlayer(m, p);
+            MovePlayer(m, p);
             m.CloseGump(typeof(ShadowguardGump));
 
             if (m is PlayerMobile)
             {
                 Participants.Add((PlayerMobile)m);
             }
-		}
-		
-		public void DoWarning()
-		{
-            ColUtility.ForEach(this.Region.GetEnumeratedMobiles().Where(m => m is PlayerMobile), m =>
-			{
-				m.SendLocalizedMessage(1156252); // You have 5 minutes remaining in the encounter!
-			});
-			
-			DoneWarning = true;
-		}
-		
-		public virtual void Expire(bool message = true)
-		{
-			if(message) 
-			{
-                ColUtility.ForEach(this.Region.GetEnumeratedMobiles().Where(m => m is PlayerMobile), m =>
-				{
-					m.SendLocalizedMessage(1156253, "", 0x32); // The encounter timer has expired!
-				});
-			}
-			
-			Timer.DelayCall(TimeSpan.FromSeconds(5), () =>
+        }
+
+        public void DoWarning()
+        {
+            ColUtility.ForEach(Region.GetEnumeratedMobiles().Where(m => m is PlayerMobile), m =>
+            {
+                m.SendLocalizedMessage(1156252); // You have 5 minutes remaining in the encounter!
+            });
+
+            DoneWarning = true;
+        }
+
+        public virtual void Expire(bool message = true)
+        {
+            if (message)
+            {
+                ColUtility.ForEach(Region.GetEnumeratedMobiles().Where(m => m is PlayerMobile), m =>
+                {
+                    m.SendLocalizedMessage(1156253, "", 0x32); // The encounter timer has expired!
+                });
+            }
+
+            Timer.DelayCall(TimeSpan.FromSeconds(5), () =>
                 {
                     Reset(true);
                 });
-		}
-		
-		public virtual void CompleteEncounter()
-		{
+        }
+
+        public virtual void CompleteEncounter()
+        {
             if (Completed)
                 return;
 
-			Timer.DelayCall(ResetDuration, () =>
+            Timer.DelayCall(ResetDuration, () =>
                 {
                     Reset();
                 });
@@ -285,10 +283,10 @@ namespace Server.Engines.Shadowguard
                 SendPartyMessage(1156244); //You have bested this tower of Shadowguard! You will be teleported out of the tower in 60 seconds!
 
             Completed = true;
-		}
-		
-		public virtual void Reset(bool expired = false)
-		{
+        }
+
+        public virtual void Reset(bool expired = false)
+        {
             if (!Active)
                 return;
 
@@ -308,24 +306,24 @@ namespace Server.Engines.Shadowguard
 
             Instance.ClearRegion();
             Instance.CompleteEncounter();
-		}
-		
-		private void RemovePlayers()
-		{
+        }
+
+        private void RemovePlayers()
+        {
             ColUtility.ForEach(Region.GetEnumeratedMobiles().Where(
-                m => m is PlayerMobile || 
-                    (m is BaseCreature && 
+                m => m is PlayerMobile ||
+                    (m is BaseCreature &&
                     ((BaseCreature)m).GetMaster() is PlayerMobile)),
                 m =>
-			    {
-				    MovePlayer(m, Controller.KickLocation, false);
+                {
+                    MovePlayer(m, Controller.KickLocation, false);
 
                     if (m is PlayerMobile && Participants.Contains((PlayerMobile)m))
                     {
                         Participants.Remove((PlayerMobile)m);
                     }
-			    });
-		}
+                });
+        }
 
         public static void MovePlayer(Mobile m, Point3D p, bool pets = true)
         {
@@ -340,28 +338,28 @@ namespace Server.Engines.Shadowguard
         public virtual void OnTick()
         {
         }
-		
-		public virtual void ClearItems()
-		{
-		}
-		
-		public virtual void Setup()
-		{
-		}
-		
-		public virtual void CheckEncounter()
-		{
-		}
+
+        public virtual void ClearItems()
+        {
+        }
+
+        public virtual void Setup()
+        {
+        }
+
+        public virtual void CheckEncounter()
+        {
+        }
 
         public virtual void OnCreatureKilled(BaseCreature bc)
         {
         }
-		
-		public void CheckPlayerStatus(Mobile m)
-		{
+
+        public void CheckPlayerStatus(Mobile m)
+        {
             if (m is PlayerMobile)
             {
-                foreach (var pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
+                foreach (PlayerMobile pm in Region.GetEnumeratedMobiles().OfType<PlayerMobile>())
                 {
                     if (pm.Alive && pm.NetState != null)
                     {
@@ -372,36 +370,36 @@ namespace Server.Engines.Shadowguard
                 Expire(false);
                 SendPartyMessage(1156267); // All members of your party are dead, have logged off, or have chosen to exit Shadowguard. You will be removed from the encounter shortly.
             }
-		}
+        }
 
         public void ConvertOffset(ref Point3D p)
         {
-            p = new Point3D(Instance.Center.X + p.X, Instance.Center.Y + p.Y, Instance.Center.Z + p.Z); 
+            p = new Point3D(Instance.Center.X + p.X, Instance.Center.Y + p.Y, Instance.Center.Z + p.Z);
         }
 
         public void ConvertOffset(ref Rectangle2D rec)
         {
             rec = new Rectangle2D(Instance.Center.X + rec.X, Instance.Center.Y + rec.Y, rec.Width, rec.Height);
         }
-		
-		public virtual void Serialize(GenericWriter writer)
-		{
-			writer.Write(2);
 
-            writer.WriteMobileList<PlayerMobile>(Participants);
+        public virtual void Serialize(GenericWriter writer)
+        {
+            writer.Write(2);
+
+            writer.WriteMobileList(Participants);
 
             writer.WriteDeltaTime(StartTime);
             writer.Write(Completed);
             writer.Write(HasBegun);
 
             writer.Write(Instance.Index);
-			writer.Write(PartyLeader);
+            writer.Write(PartyLeader);
             writer.Write(Addon);
-		}
-		
-		public virtual void Deserialize(GenericReader reader)
-		{
-			int version = reader.ReadInt();
+        }
+
+        public virtual void Deserialize(GenericReader reader)
+        {
+            int version = reader.ReadInt();
 
             switch (version)
             {
@@ -432,7 +430,7 @@ namespace Server.Engines.Shadowguard
                     Reset();
                 });
             }
-		}
+        }
 
         public static Dictionary<EncounterType, EncounterDef> Defs { get; set; }
 
@@ -455,14 +453,14 @@ namespace Server.Engines.Shadowguard
 
             Defs[EncounterType.Armory] = new EncounterDef(
                             new Point3D(0, 0, 0),
-                            new Point3D[] { new Point3D(5, -7, 0), new Point3D(5, -9, 0), new Point3D(5, -11, 0), new Point3D(5, -13, 0), 
+                            new Point3D[] { new Point3D(5, -7, 0), new Point3D(5, -9, 0), new Point3D(5, -11, 0), new Point3D(5, -13, 0),
                                             new Point3D(5, -17, 0), new Point3D(5, -19, 0), new Point3D(5, -21, 0), new Point3D(5, 16, 0),
-                                            new Point3D(5, 18, 0), new Point3D(5, 11, 0), new Point3D(5, 9, 0), 
+                                            new Point3D(5, 18, 0), new Point3D(5, 11, 0), new Point3D(5, 9, 0),
                                             new Point3D(-23, -10, 0), new Point3D(-20, -15, 0), new Point3D(-16, -19, 0),
 
                                             new Point3D(9, 5, 0), new Point3D(11, 5, 0), new Point3D(16, 5, 0), new Point3D(18, 5, 0),
                                             new Point3D(-21, 5, 0), new Point3D(-19, 5, 0), new Point3D(-17, 5, 0), new Point3D(-12, 5, 0),
-                                            new Point3D(-10, 5, 0), new Point3D(-8, 5, 0), new Point3D(-23, 5, 0), 
+                                            new Point3D(-10, 5, 0), new Point3D(-8, 5, 0), new Point3D(-23, 5, 0),
                                             new Point3D(-18, -17, 0), new Point3D(-10, -23, 0), new Point3D(-13, -21, 0)},
                             new Rectangle2D[] { new Rectangle2D(-25, -24, 18, 18), new Rectangle2D(-25, 4, 18, 18), new Rectangle2D(4, 20, 18, 18), new Rectangle2D(4, -6, 18, 18), });
 
@@ -496,7 +494,7 @@ namespace Server.Engines.Shadowguard
                 case EncounterType.Roof: return new RoofEncounter();
             }
         }
-	}
+    }
 
     public class EncounterDef
     {

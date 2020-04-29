@@ -1,21 +1,15 @@
-using System;
-
-using Server;
-using Server.Mobiles;
 using Server.Engines.Craft;
-using Server.Spells;
-using Server.Engines.Points;
-using Server.Engines.Khaldun;
 using Server.Engines.Harvest;
+using Server.Engines.Khaldun;
+using Server.Engines.Points;
+using Server.Mobiles;
+using Server.Spells;
+using System;
 
 namespace Server.Items
 {
     public class Caddellite : ItemSocket
     {
-        public Caddellite()
-        {
-        }
-
         public override void GetProperties(ObjectPropertyList list)
         {
             if (Owner != null && !(Owner is ICombatEquipment) && !(Owner is Spellbook))
@@ -72,7 +66,7 @@ namespace Server.Items
 
         public static void OnHarvest(Mobile from, Item tool, HarvestSystem system, Item resource)
         {
-            if(IsCaddellite(from, tool))
+            if (IsCaddellite(from, tool))
             {
                 if (resource != null)
                 {
@@ -149,8 +143,8 @@ namespace Server.Items
         {
             BaseCreature pet = KhaldunTastyTreat.GetPetUnderEffects(m);
             Caddellite equipped = null;
-            var item = m.FindItemOnLayer(Layer.TwoHanded);
-            
+            Item item = m.FindItemOnLayer(Layer.TwoHanded);
+
             if (item == null)
             {
                 item = m.FindItemOnLayer(Layer.OneHanded);
@@ -174,7 +168,7 @@ namespace Server.Items
 
         public static void OnLogin(LoginEventArgs e)
         {
-            var pm = e.Mobile as PlayerMobile;
+            PlayerMobile pm = e.Mobile as PlayerMobile;
 
             if (pm != null)
             {

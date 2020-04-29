@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -6,7 +5,7 @@ namespace Server.Mobiles
     [CorpseName("a troglodyte corpse")]
     public class Troglodyte : BaseCreature
     {
-        public override double HealChance { get { return 1.0; } }
+        public override double HealChance => 1.0;
 
         [Constructable]
         public Troglodyte()
@@ -14,7 +13,7 @@ namespace Server.Mobiles
         {
             Name = "a troglodyte";
             Body = 267;
-            BaseSoundID = 0x59F; 
+            BaseSoundID = 0x59F;
 
             SetStr(148, 217);
             SetDex(91, 120);
@@ -41,7 +40,7 @@ namespace Server.Mobiles
             Fame = 5000;
             Karma = -5000;
 
-            PackItem(new Bandage(5));  
+            PackItem(new Bandage(5));
             PackItem(new Ribs());
 
             for (int i = 0; i < Utility.RandomMinMax(0, 1); i++)
@@ -54,32 +53,26 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int TreasureMapLevel
-        {
-            get
-            {
-                return 2;
-            }
-        }
+
+        public override int TreasureMapLevel => 2;
 
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.Rich);  // Need to verify
+            AddLoot(LootPack.Rich);  // Need to verify
         }
-		
-		public override void OnDeath( Container c )
-        {
-        base.OnDeath( c );
 
-            if ( Utility.RandomDouble() < 0.1 )
-            c.DropItem( new PrimitiveFetish() );
+        public override void OnDeath(Container c)
+        {
+            base.OnDeath(c);
+
+            if (Utility.RandomDouble() < 0.1)
+                c.DropItem(new PrimitiveFetish());
         }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

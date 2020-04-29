@@ -1,9 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Server.ContextMenus;
 using Server.Gumps;
 using Server.Multis;
 using Server.Targeting;
+using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -18,7 +17,7 @@ namespace Server.Items
         private int m_DyedHue;
         private SecureLevel m_SecureLevel;
 
-        [Constructable] 
+        [Constructable]
         public DyeTub()
             : base(0xFAB)
         {
@@ -31,13 +30,13 @@ namespace Server.Items
         {
         }
 
-        public virtual CustomHuePicker CustomHuePicker { get { return null; } }
-        public virtual bool AllowRunebooks { get { return false; } }
-        public virtual bool AllowFurniture { get { return false; } }
-        public virtual bool AllowStatuettes { get { return false; } }
-        public virtual bool AllowLeather { get { return false; } }
-        public virtual bool AllowDyables { get { return true; } }
-        public virtual bool AllowMetal { get { return false; } }
+        public virtual CustomHuePicker CustomHuePicker => null;
+        public virtual bool AllowRunebooks => false;
+        public virtual bool AllowFurniture => false;
+        public virtual bool AllowStatuettes => false;
+        public virtual bool AllowLeather => false;
+        public virtual bool AllowDyables => true;
+        public virtual bool AllowMetal => false;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool Redyable
@@ -67,17 +66,17 @@ namespace Server.Items
             set { m_SecureLevel = value; }
         }
 
-        public virtual int TargetMessage { get { return 500859; } } // Select the clothing to dye.        
-        public virtual int FailMessage { get { return 1042083; } } // You can not dye that.
+        public virtual int TargetMessage => 500859;  // Select the clothing to dye.        
+        public virtual int FailMessage => 1042083;  // You can not dye that.
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)1); // version
-			
+            writer.Write(1); // version
+
             writer.Write((int)m_SecureLevel);
-            writer.Write((bool)m_Redyable);
-            writer.Write((int)m_DyedHue);
+            writer.Write(m_Redyable);
+            writer.Write(m_DyedHue);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -85,7 +84,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 1:
                     {
@@ -217,8 +216,8 @@ namespace Server.Items
                     else if (m_Tub.AllowLeather)
                     {
                         if ((item is BaseArmor && (((BaseArmor)item).MaterialType == ArmorMaterialType.Leather || ((BaseArmor)item).MaterialType == ArmorMaterialType.Studded)) ||
-                            (item is BaseClothing && (((BaseClothing)item).DefaultResource == CraftResource.RegularLeather) || item is WoodlandBelt || item is BarbedWhip 
-							|| item is BladedWhip || item is SpikedWhip))
+                            (item is BaseClothing && (((BaseClothing)item).DefaultResource == CraftResource.RegularLeather) || item is WoodlandBelt || item is BarbedWhip
+                            || item is BladedWhip || item is SpikedWhip))
                         {
                             if (!from.InRange(m_Tub.GetWorldLocation(), 1) || !from.InRange(item.GetWorldLocation(), 1))
                             {

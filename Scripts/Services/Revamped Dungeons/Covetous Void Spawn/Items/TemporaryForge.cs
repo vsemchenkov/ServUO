@@ -1,8 +1,5 @@
-using Server;
-using System;
-using System.Collections.Generic;
-using Server.Mobiles;
 using Server.Multis;
+using System;
 
 namespace Server.Items
 {
@@ -62,8 +59,8 @@ namespace Server.Items
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
 
             Delete();
@@ -82,8 +79,8 @@ namespace Server.Items
 
         private class InternalComponent : ForgeComponent
         {
-            public override bool ForceShowProperties { get { return true; } }
-            public override int LabelNumber { get { return 1152601; } } //Temporary forge
+            public override bool ForceShowProperties => true;
+            public override int LabelNumber => 1152601;  //Temporary forge
 
             public InternalComponent() : base(0xFB1)
             {
@@ -152,7 +149,7 @@ namespace Server.Items
 
     public class TemporaryForgeDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new TemporaryForge(); } }
+        public override BaseAddon Addon => new TemporaryForge();
 
         public const int DecayPeriod = 24;
 
@@ -192,8 +189,8 @@ namespace Server.Items
             }
             else
             {
-                Effects.SendLocationParticles(EffectItem.Create(this.Location, this.Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
-                Effects.PlaySound(this.Location, this.Map, 0x201);
+                Effects.SendLocationParticles(EffectItem.Create(Location, Map, EffectItem.DefaultDuration), 0x3728, 8, 20, 5042);
+                Effects.PlaySound(Location, Map, 0x201);
             }
 
             Delete();
@@ -266,13 +263,13 @@ namespace Server.Items
                                     IPoint3D point = (IPoint3D)targeted;
                                     Server.Spells.SpellHelper.GetSurfaceTop(ref point);
 
-                                    BaseAddon addon = this.Addon;
+                                    BaseAddon addon = Addon;
                                     addon.MoveToWorld(new Point3D(point), m.Map);
 
                                     if (addon is TemporaryForge)
                                         ((TemporaryForge)addon).Owner = from;
 
-                                    this.Delete();
+                                    Delete();
                                 }
                             }
                         }
@@ -290,7 +287,7 @@ namespace Server.Items
             {
                 for (int y = p.Y - 1; y <= p.Y + 1; y++)
                 {
-                    if(TreasureMap.ValidateLocation(x, y, map))
+                    if (TreasureMap.ValidateLocation(x, y, map))
                     {
                         int z = map.GetAverageZ(x, y);
                         IPooledEnumerable eable = map.GetItemsInRange(new Point3D(x, y, z), 0);

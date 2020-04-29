@@ -1,12 +1,11 @@
-using System;
-using Server;
 using Server.Mobiles;
+using System;
 
 namespace Server.Items
 {
     public class StinkingCauldron : Item
     {
-        public override int LabelNumber { get { return 1152163; } } // stinking cauldron
+        public override int LabelNumber => 1152163;  // stinking cauldron
 
         [Constructable]
         public StinkingCauldron()
@@ -15,7 +14,7 @@ namespace Server.Items
             Movable = false;
             Hue = 363;
             Weight = 0.0;
-            Timer.DelayCall(TimeSpan.FromSeconds(10), new TimerCallback(GooeyMaggotsSpawn));
+            Timer.DelayCall(TimeSpan.FromSeconds(10), GooeyMaggotsSpawn);
         }
 
         private void GooeyMaggotsSpawn()
@@ -51,7 +50,7 @@ namespace Server.Items
             base.Deserialize(reader);
             int version = reader.ReadEncodedInt();
 
-            Timer.DelayCall(TimeSpan.FromSeconds(10), new TimerCallback(GooeyMaggotsSpawn));
+            Timer.DelayCall(TimeSpan.FromSeconds(10), GooeyMaggotsSpawn);
         }
     }
 }

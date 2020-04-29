@@ -1,7 +1,7 @@
+using Server.Spells.SkillMasteries;
+using Server.Targeting;
 using System;
 using System.Collections;
-using Server.Targeting;
-using Server.Spells.SkillMasteries;
 
 namespace Server.Spells.Necromancy
 {
@@ -19,27 +19,9 @@ namespace Server.Spells.Necromancy
         {
         }
 
-        public override TimeSpan CastDelayBase
-        {
-            get
-            {
-                return TimeSpan.FromSeconds(2.25);
-            }
-        }
-        public override double RequiredSkill
-        {
-            get
-            {
-                return 65.0;
-            }
-        }
-        public override int RequiredMana
-        {
-            get
-            {
-                return 29;
-            }
-        }
+        public override TimeSpan CastDelayBase => TimeSpan.FromSeconds(2.25);
+        public override double RequiredSkill => 65.0;
+        public override int RequiredMana => 29;
 
         public static bool UnderEffects(Mobile m)
         {
@@ -64,14 +46,14 @@ namespace Server.Spells.Necromancy
 
         public override void OnCast()
         {
-            this.Caster.Target = new InternalTarget(this);
+            Caster.Target = new InternalTarget(this);
         }
 
         public void Target(Mobile m)
         {
-            if (this.CheckHSequence(m))
+            if (CheckHSequence(m))
             {
-                SpellHelper.Turn(this.Caster, m);
+                SpellHelper.Turn(Caster, m);
 
                 ApplyEffects(m);
                 ConduitSpell.CheckAffected(Caster, m, ApplyEffects);
@@ -160,13 +142,13 @@ namespace Server.Spells.Necromancy
 
         private class InternalTimer : Timer
         {
-            private Mobile m_Target, m_From;
-            private double m_MinBaseDamage, m_MaxBaseDamage;
+            private readonly Mobile m_Target, m_From;
+            private readonly double m_MinBaseDamage, m_MaxBaseDamage;
 
             private DateTime m_NextHit;
             private int m_HitDelay;
-
-            private int m_Count, m_MaxCount;
+            private int m_Count;
+            private readonly int m_MaxCount;
 
             public InternalTimer(Mobile target, Mobile from, double strength)
                 : base(TimeSpan.FromSeconds(0.1), TimeSpan.FromSeconds(0.1))
@@ -256,18 +238,18 @@ namespace Server.Spells.Necromancy
             public InternalTarget(StrangleSpell owner)
                 : base(10, false, TargetFlags.Harmful)
             {
-                this.m_Owner = owner;
+                m_Owner = owner;
             }
 
             protected override void OnTarget(Mobile from, object o)
             {
                 if (o is Mobile)
-                    this.m_Owner.Target((Mobile)o);
+                    m_Owner.Target((Mobile)o);
             }
 
             protected override void OnTargetFinish(Mobile from)
             {
-                this.m_Owner.FinishSequence();
+                m_Owner.FinishSequence();
             }
         }
     }

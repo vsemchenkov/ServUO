@@ -1,13 +1,12 @@
-using System;
-using Server;
-using Server.Targeting;
 using Server.Mobiles;
+using Server.Targeting;
+using System;
 
 namespace Server.Items
 {
     public class Matches : Item, ICommodity
     {
-        public override int LabelNumber { get { return 1116112; } }
+        public override int LabelNumber => 1116112;
 
         private static readonly TimeSpan LightDuration = TimeSpan.FromMinutes(60);
 
@@ -36,14 +35,14 @@ namespace Server.Items
                 {
                     Container pack = from.Backpack;
 
-                    if(pack != null)
+                    if (pack != null)
                     {
                         Matches match = new Matches();
 
                         if (pack.CheckHold(from, match, true))
                         {
                             pack.DropItem(match);
-                            this.Amount--;
+                            Amount--;
 
                             match.ItemID = 2578;
                             from.SendSound(0x047);
@@ -69,7 +68,7 @@ namespace Server.Items
                 }
             }
         }
-            
+
 
         public void BurnOut()
         {
@@ -81,7 +80,7 @@ namespace Server.Items
 
         private class InternalTimer : Timer
         {
-            private Matches m_Match;
+            private readonly Matches m_Match;
 
             public InternalTimer(Matches match) : base(Matches.LightDuration)
             {
@@ -98,9 +97,9 @@ namespace Server.Items
 
         private class InternalTarget : Target
         {
-            private Matches m_Match;
+            private readonly Matches m_Match;
 
-            public InternalTarget(Matches match) : base (3, false, TargetFlags.None)
+            public InternalTarget(Matches match) : base(3, false, TargetFlags.None)
             {
                 m_Match = match;
             }
@@ -125,13 +124,13 @@ namespace Server.Items
 
         public Matches(Serial serial) : base(serial) { }
 
-        TextDefinition ICommodity.Description { get { return LabelNumber; } }
-        bool ICommodity.IsDeedable { get { return true; } }
+        TextDefinition ICommodity.Description => LabelNumber;
+        bool ICommodity.IsDeedable => true;
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
             writer.Write(m_IsLight);
         }
 

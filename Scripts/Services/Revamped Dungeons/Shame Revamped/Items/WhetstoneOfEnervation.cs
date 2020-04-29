@@ -1,12 +1,10 @@
-﻿using Server;
-using System;
-using Server.Targeting;
+﻿using Server.Targeting;
 
 namespace Server.Items
 {
     public class WhetstoneOfEnervation : Item
     {
-        public override int LabelNumber { get { return 1151811; } } // Whetstone of Enervation
+        public override int LabelNumber => 1151811;  // Whetstone of Enervation
 
         [Constructable]
         public WhetstoneOfEnervation()
@@ -17,8 +15,8 @@ namespace Server.Items
         [Constructable]
         public WhetstoneOfEnervation(int amount) : base(0x1368)
         {
-            this.Hue = 1458;
-            this.Weight = 1;
+            Hue = 1458;
+            Weight = 1;
 
             Stackable = true;
             Amount = amount;
@@ -37,7 +35,7 @@ namespace Server.Items
                         {
                             BaseWeapon wep = targeted as BaseWeapon;
 
-                            if(!wep.IsChildOf(m.Backpack))
+                            if (!wep.IsChildOf(m.Backpack))
                                 m.SendLocalizedMessage(1042001); // That must be in your pack for you to use it.
                             else if (wep.TimesImbued > 0 || wep.Quality != ItemQuality.Exceptional)
                                 m.SendLocalizedMessage(1046439); // Invalid target.
@@ -46,7 +44,7 @@ namespace Server.Items
                                 wep.Attributes.WeaponDamage = 0;
                                 m.SendLocalizedMessage(1151814); // You have removed the damage increase from this weapon.
 
-                                this.Consume();
+                                Consume();
                             }
                             else
                                 m.SendLocalizedMessage(1046439); // Invalid target.

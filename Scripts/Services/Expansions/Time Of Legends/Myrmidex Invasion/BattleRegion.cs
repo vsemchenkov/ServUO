@@ -1,15 +1,13 @@
-using System;
-using Server;
-using Server.Mobiles;
 using Server.Items;
-using System.Collections.Generic;
+using Server.Mobiles;
 using Server.Regions;
+using System;
 using System.Xml;
 
 namespace Server.Engines.MyrmidexInvasion
 {
     public class BattleRegion : DungeonRegion
-	{
+    {
         public BattleSpawner Spawner { get; set; }
 
         public BattleRegion(XmlElement xml, Map map, Region parent)
@@ -25,7 +23,7 @@ namespace Server.Engines.MyrmidexInvasion
 
             if (BattleSpawner.Instance != null && BattleSpawner.Instance.Active && nomaster && Spawner != null)
             {
-                Timer.DelayCall<BaseCreature>(TimeSpan.FromSeconds(.25), Spawner.RegisterDeath, (BaseCreature)m);
+                Timer.DelayCall(TimeSpan.FromSeconds(.25), Spawner.RegisterDeath, (BaseCreature)m);
             }
 
             // the delay ensures the corpse is created after death
@@ -65,5 +63,5 @@ namespace Server.Engines.MyrmidexInvasion
 
             return base.OnDamage(m, ref Damage);
         }
-	}
+    }
 }

@@ -1,7 +1,4 @@
-using Server;
-using System;
 using Server.Mobiles;
-using System.Linq;
 
 namespace Server.Engines.Exodus
 {
@@ -13,7 +10,7 @@ namespace Server.Engines.Exodus
         public static bool Active
         {
             get { return m_Active; }
-            set { if (value) Start(); else Stop();}
+            set { if (value) Start(); else Stop(); }
         }
 
         private static ClockworkExodus m_Mobile;
@@ -26,13 +23,13 @@ namespace Server.Engines.Exodus
         }
 
         [CommandProperty(AccessLevel.Administrator)]
-        public static VerLorRegController IlshenarInstance { get; set; }        
+        public static VerLorRegController IlshenarInstance { get; set; }
 
         public VerLorRegController(Map map) : base(7107)
         {
-            this.Name = "Ver Lor Reg Controller";
-            this.Visible = false;
-            this.Movable = false;
+            Name = "Ver Lor Reg Controller";
+            Visible = false;
+            Movable = false;
 
             Start();
         }
@@ -54,9 +51,9 @@ namespace Server.Engines.Exodus
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
 
-            writer.Write((bool)m_Active);
+            writer.Write(m_Active);
             writer.WriteMobile(m_Mobile);
         }
 
@@ -86,7 +83,7 @@ namespace Server.Engines.Exodus
                 m.RangeHome = 4;
                 m.MoveToWorld(new Point3D(854, 642, -40), Map.Ilshenar);
                 m_Mobile = m;
-            }          
+            }
         }
 
         public static void Stop()
@@ -96,7 +93,7 @@ namespace Server.Engines.Exodus
 
             m_Active = false;
             m_Mobile.Delete();
-            m_Mobile = null;                        
-        }        
+            m_Mobile = null;
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -53,30 +52,24 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		public override bool CanBeParagon { get { return false; } }
-        public override void OnDeath( Container c )
+        public override bool CanBeParagon => false;
+        public override void OnDeath(Container c)
         {
-            base.OnDeath( c );
+            base.OnDeath(c);
 
-            if ( Utility.RandomDouble() < 0.05 )
-            	c.DropItem( new ParrotItem() );
+            if (Utility.RandomDouble() < 0.05)
+                c.DropItem(new ParrotItem());
 
-            if ( Utility.RandomDouble() < 0.15 )
-            	c.DropItem( new DisintegratingThesisNotes() );
+            if (Utility.RandomDouble() < 0.15)
+                c.DropItem(new DisintegratingThesisNotes());
         }
 
-        public override int TreasureMapLevel
-        {
-            get
-            {
-                return 5;
-            }
-        }
+        public override int TreasureMapLevel => 5;
         public override void GenerateLoot()
         {
-            this.AddLoot(LootPack.UltraRich, 3);
-            this.AddLoot(LootPack.MedScrolls, 2);
-            this.AddLoot(LootPack.HighScrolls, 2);
+            AddLoot(LootPack.UltraRich, 3);
+            AddLoot(LootPack.MedScrolls, 2);
+            AddLoot(LootPack.HighScrolls, 2);
         }
 
         // TODO: Special move?
@@ -84,7 +77,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

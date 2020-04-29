@@ -1,8 +1,8 @@
+using Server.Accounting;
+using Server.Network;
 using System;
 using System.Collections;
 using System.Text;
-using Server.Accounting;
-using Server.Network;
 
 namespace Server.RemoteAdmin
 {
@@ -18,10 +18,10 @@ namespace Server.RemoteAdmin
 
         public static void Configure()
         {
-            PacketHandlers.Register(0xF1, 0, false, new OnPacketReceive(OnReceive));
+            PacketHandlers.Register(0xF1, 0, false, OnReceive);
 
-			Core.MultiConsoleOut.Add(new EventTextWriter(new EventTextWriter.OnConsoleChar(OnConsoleChar), new EventTextWriter.OnConsoleLine(OnConsoleLine), new EventTextWriter.OnConsoleStr(OnConsoleString)));
-			Timer.DelayCall(TimeSpan.FromMinutes(2.5), TimeSpan.FromMinutes(2.5), new TimerCallback(CleanUp));
+            Core.MultiConsoleOut.Add(new EventTextWriter(OnConsoleChar, OnConsoleLine, OnConsoleString));
+            Timer.DelayCall(TimeSpan.FromMinutes(2.5), TimeSpan.FromMinutes(2.5), CleanUp);
         }
 
         public static void OnConsoleString(string str)
@@ -144,13 +144,13 @@ namespace Server.RemoteAdmin
         {
             Timer.DelayCall(TimeSpan.FromSeconds(15.0), new TimerStateCallback(Disconnect), state);
         }
-		
+
         private static void Disconnect(object state)
         {
             m_Auth.Remove(state);
             ((NetState)state).Dispose();
         }
-		
+
         public static void Authenticate(NetState state, PacketReader pvSrc)
         {
             string user = pvSrc.ReadString(30);
@@ -178,7 +178,7 @@ namespace Server.RemoteAdmin
             else if (a.AccessLevel < AccessLevel.Administrator || a.Banned)
             {
                 Console.WriteLine("ADMIN: Account '{0}' does not have admin access. Connection Denied.", user);
-                state.Send(new Login(LoginResponse.NoAccess)); 
+                state.Send(new Login(LoginResponse.NoAccess));
                 DelayedDisconnect(state);
             }
             else
@@ -241,7 +241,7 @@ namespace Server.RemoteAdmin
             }
         }
     }
-	
+
     public class EventTextWriter : System.IO.TextWriter
     {
         public delegate void OnConsoleChar(char ch);
@@ -254,35 +254,29 @@ namespace Server.RemoteAdmin
 
         public EventTextWriter(OnConsoleChar onChar, OnConsoleLine onLine, OnConsoleStr onStr)
         {
-            this.m_OnChar = onChar;
-            this.m_OnLine = onLine;
-            this.m_OnStr = onStr;
+            m_OnChar = onChar;
+            m_OnLine = onLine;
+            m_OnStr = onStr;
         }
 
         public override void Write(char ch)
         {
-            if (this.m_OnChar != null)
-                this.m_OnChar(ch);
+            if (m_OnChar != null)
+                m_OnChar(ch);
         }
 
         public override void Write(string str)
         {
-            if (this.m_OnStr != null)
-                this.m_OnStr(str);
+            if (m_OnStr != null)
+                m_OnStr(str);
         }
 
         public override void WriteLine(string line)
         {
-            if (this.m_OnLine != null)
-                this.m_OnLine(line);
+            if (m_OnLine != null)
+                m_OnLine(line);
         }
 
-        public override System.Text.Encoding Encoding
-        {
-            get
-            {
-                return System.Text.Encoding.ASCII;
-            }
-        }
+        public override System.Text.Encoding Encoding => System.Text.Encoding.ASCII;
     }
 }

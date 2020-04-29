@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace Server.Mobiles
@@ -24,13 +23,7 @@ namespace Server.Mobiles
         {
         }
 
-        protected override List<SBInfo> SBInfos
-        {
-            get
-            {
-                return m_SBInfos;
-            }
-        }
+        protected override List<SBInfo> SBInfos => m_SBInfos;
         public override void InitSBInfo()
         {
             m_SBInfos.Add(new SBThief());
@@ -50,7 +43,7 @@ namespace Server.Mobiles
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

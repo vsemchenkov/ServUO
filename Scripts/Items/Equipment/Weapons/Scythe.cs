@@ -1,6 +1,5 @@
-using System;
-using Server.Engines.Harvest;
 using Server.Engines.Craft;
+using Server.Engines.Harvest;
 
 namespace Server.Items
 {
@@ -20,74 +19,20 @@ namespace Server.Items
         {
         }
 
-        public override WeaponAbility PrimaryAbility
-        {
-            get
-            {
-                return WeaponAbility.BleedAttack;
-            }
-        }
-        public override WeaponAbility SecondaryAbility
-        {
-            get
-            {
-                return WeaponAbility.ParalyzingBlow;
-            }
-        }
-        public override int StrengthReq
-        {
-            get
-            {
-                return 45;
-            }
-        }
-        public override int MinDamage
-        {
-            get
-            {
-                return 16;
-            }
-        }
-        public override int MaxDamage
-        {
-            get
-            {
-                return 19;
-            }
-        }
-        public override float Speed
-        {
-            get
-            {
-                return 3.50f;
-            }
-        }
-      
-        public override int InitMinHits
-        {
-            get
-            {
-                return 31;
-            }
-        }
-        public override int InitMaxHits
-        {
-            get
-            {
-                return 100;
-            }
-        }
-        public override HarvestSystem HarvestSystem
-        {
-            get
-            {
-                return null;
-            }
-        }
+        public override WeaponAbility PrimaryAbility => WeaponAbility.BleedAttack;
+        public override WeaponAbility SecondaryAbility => WeaponAbility.ParalyzingBlow;
+        public override int StrengthReq => 45;
+        public override int MinDamage => 16;
+        public override int MaxDamage => 19;
+        public override float Speed => 3.50f;
+
+        public override int InitMinHits => 31;
+        public override int InitMaxHits => 100;
+        public override HarvestSystem HarvestSystem => null;
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

@@ -1,10 +1,8 @@
-using System;
-
 namespace Server.Engines.Chat
 {
     public class ChatActionHandlers
     {
-        private static ChatActionHandler[] m_Handlers;
+        private static readonly ChatActionHandler[] m_Handlers;
 
         static ChatActionHandlers()
         {
@@ -87,7 +85,7 @@ namespace Server.Engines.Chat
 
         private static void CreateAndJoin(ChatUser from, string name)
         {
-            var joined = Channel.FindChannelByName(name);
+            Channel joined = Channel.FindChannelByName(name);
 
             if (joined == null)
             {

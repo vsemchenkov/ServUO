@@ -1,17 +1,14 @@
-using Server;
-using System;
-
 namespace Server.Items
 {
     public class GargishClothWingArmorBearingTheCrestOfBlackthorn : GargishClothWingArmor
     {
-        public override bool IsArtifact { get { return true; } }
+        public override bool IsArtifact => true;
 
         [Constructable]
         public GargishClothWingArmorBearingTheCrestOfBlackthorn()
         {
             ReforgedSuffix = ReforgedSuffix.Blackthorn;
-            this.Hue = 1766;
+            Hue = 1766;
             Attributes.DefendChance = 5;
         }
 

@@ -1,15 +1,14 @@
-using Server;
-using System;
 using Server.Items;
 using Server.Multis;
 using Server.Network;
+using System;
 
 namespace Server.Engines.Plants
 {
     public class RaisedGardenPlantItem : PlantItem
     {
-        public override bool RequiresUpkeep { get { return false; } }
-        public override int BowlOfDirtID { get { return 2323; } }
+        public override bool RequiresUpkeep => false;
+        public override int BowlOfDirtID => 2323;
         public override int GreenBowlID
         {
             get
@@ -21,9 +20,9 @@ namespace Server.Engines.Plants
             }
         }
 
-        public override int ContainerLocalization { get { return 1150436; } } // mound
-        public override int OnPlantLocalization { get { return 1150442; } } // You plant the seed in the mound of dirt.
-        public override int CantUseLocalization { get { return 1150511; } } // That is not your gardening plot.
+        public override int ContainerLocalization => 1150436;  // mound
+        public override int OnPlantLocalization => 1150442;  // You plant the seed in the mound of dirt.
+        public override int CantUseLocalization => 1150511;  // That is not your gardening plot.
 
         public override int LabelNumber
         {
@@ -41,9 +40,9 @@ namespace Server.Engines.Plants
         private GardenAddonComponent m_Component;
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public GardenAddonComponent Component 
-        { 
-            get 
+        public GardenAddonComponent Component
+        {
+            get
             {
                 if (m_Component != null)
                 {
@@ -53,8 +52,8 @@ namespace Server.Engines.Plants
 
                 return m_Component;
             }
-            set 
-            { 
+            set
+            {
                 m_Component = value;
 
                 if (m_Component != null)
@@ -66,13 +65,7 @@ namespace Server.Engines.Plants
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
-        public override bool ValidGrowthLocation
-        {
-            get
-            {
-                return RootParent == null && Component != null && !Movable && !Deleted;
-            }
-        }
+        public override bool ValidGrowthLocation => RootParent == null && Component != null && !Movable && !Deleted;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public DateTime NextGrowth
@@ -111,8 +104,8 @@ namespace Server.Engines.Plants
         }
 
         [Constructable]
-        public RaisedGardenPlantItem() : this(false) 
-        { 
+        public RaisedGardenPlantItem() : this(false)
+        {
         }
 
         [Constructable]
@@ -196,15 +189,15 @@ namespace Server.Engines.Plants
             }
         }*/
 
-        public RaisedGardenPlantItem( Serial serial ) : base( serial )
-		{
-		}
+        public RaisedGardenPlantItem(Serial serial) : base(serial)
+        {
+        }
 
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
 
-            writer.Write((int)0); // version
+            writer.Write(0); // version
             writer.Write(m_Component);
         }
 

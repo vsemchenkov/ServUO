@@ -1,12 +1,10 @@
 #region References
+using Server.Network;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
-using Server.ContextMenus;
-using Server.Network;
 #endregion
 
 namespace Server.Items
@@ -21,7 +19,7 @@ namespace Server.Items
         #region Enhanced Client Support
         public virtual void ValidateGridLocation(Item item)
         {
-			var pos = item.GridLocation;
+            byte pos = item.GridLocation;
 
             if (!IsFreePosition(pos))
             {
@@ -36,7 +34,7 @@ namespace Server.Items
                 return false;
             }
 
-			return Items.All(i => i.GridLocation != pos);
+            return Items.All(i => i.GridLocation != pos);
         }
 
         public virtual byte GetNewPosition(byte current)
@@ -71,7 +69,7 @@ namespace Server.Items
 
         public virtual void ValidatePositions()
         {
-            foreach (var item in Items)
+            foreach (Item item in Items)
             {
                 if (IsFreePosition(item.GridLocation))
                 {
@@ -171,14 +169,14 @@ namespace Server.Items
             ContainerData = ContainerData.GetData(ItemID);
         }
 
-        public virtual Rectangle2D Bounds => ContainerData.Bounds; 
-        public virtual int DefaultGumpID => ContainerData.GumpID; 
-        public virtual int DefaultDropSound => ContainerData.DropSound; 
+        public virtual Rectangle2D Bounds => ContainerData.Bounds;
+        public virtual int DefaultGumpID => ContainerData.GumpID;
+        public virtual int DefaultDropSound => ContainerData.DropSound;
 
-        public virtual int DefaultMaxItems => m_GlobalMaxItems; 
-        public virtual int DefaultMaxWeight => m_GlobalMaxWeight; 
+        public virtual int DefaultMaxItems => m_GlobalMaxItems;
+        public virtual int DefaultMaxWeight => m_GlobalMaxWeight;
 
-        public virtual bool IsDecoContainer => !Movable && !IsLockedDown && !IsSecure && Parent == null && !m_LiftOverride; 
+        public virtual bool IsDecoContainer => !Movable && !IsLockedDown && !IsSecure && Parent == null && !m_LiftOverride;
 
         public virtual int GetDroppedSound(Item item)
         {
@@ -269,7 +267,7 @@ namespace Server.Items
                 }
             }
 
-			var parent = Parent;
+            object parent = Parent;
 
             while (parent != null)
             {
@@ -292,7 +290,7 @@ namespace Server.Items
 
         public virtual bool CheckStack(Mobile from, Item item)
         {
-            foreach (var i in Items)
+            foreach (Item i in Items)
             {
                 if (i.WillStack(from, item))
                 {
@@ -305,12 +303,12 @@ namespace Server.Items
 
         public virtual void SendFullItemsMessage(Mobile to, Item item)
         {
-            to.SendMessage("That container cannot hold more items.");
+            to.SendLocalizedMessage(1080017); // That container cannot hold more items.
         }
 
         public virtual void SendFullWeightMessage(Mobile to, Item item)
         {
-            to.SendMessage("That container cannot hold more weight.");
+            to.SendLocalizedMessage(1080016); // That container cannot hold more weight.
         }
 
         public virtual void SendCantStoreMessage(Mobile to, Item item)
@@ -364,9 +362,9 @@ namespace Server.Items
                 throw new ArgumentNullException();
             }
 
-            var typedItems = FindItemsByType(type, recurse);
+            Item[] typedItems = FindItemsByType(type, recurse);
 
-            var groups = new List<List<Item>>();
+            List<List<Item>> groups = new List<List<Item>>();
             int idx = 0;
 
             while (idx < typedItems.Length)
@@ -376,7 +374,7 @@ namespace Server.Items
                 if (validator != null && !validator(a))
                     continue;
 
-                var group = new List<Item>();
+                List<Item> group = new List<Item>();
 
                 group.Add(a);
 
@@ -404,8 +402,8 @@ namespace Server.Items
                 groups.Add(group);
             }
 
-            var items = new Item[groups.Count][];
-            var totals = new int[groups.Count];
+            Item[][] items = new Item[groups.Count][];
+            int[] totals = new int[groups.Count];
 
             bool hasEnough = false;
 
@@ -489,14 +487,14 @@ namespace Server.Items
                 throw new ArgumentNullException();
             }
 
-            var items = new Item[types.Length][][];
-            var totals = new int[types.Length][];
+            Item[][][] items = new Item[types.Length][][];
+            int[][] totals = new int[types.Length][];
 
             for (int i = 0; i < types.Length; ++i)
             {
-                var typedItems = FindItemsByType(types[i], recurse);
+                Item[] typedItems = FindItemsByType(types[i], recurse);
 
-                var groups = new List<List<Item>>();
+                List<List<Item>> groups = new List<List<Item>>();
                 int idx = 0;
 
                 while (idx < typedItems.Length)
@@ -506,7 +504,7 @@ namespace Server.Items
                     if (validator != null && !validator(a))
                         continue;
 
-                    var group = new List<Item>();
+                    List<Item> group = new List<Item>();
 
                     group.Add(a);
 
@@ -530,7 +528,7 @@ namespace Server.Items
 
                         ++idx;
                     }
-                    
+
                     groups.Add(group);
                 }
 
@@ -623,14 +621,14 @@ namespace Server.Items
                 throw new ArgumentNullException();
             }
 
-            var items = new Item[types.Length][][];
-            var totals = new int[types.Length][];
+            Item[][][] items = new Item[types.Length][][];
+            int[][] totals = new int[types.Length][];
 
             for (int i = 0; i < types.Length; ++i)
             {
-                var typedItems = FindItemsByType(types[i], recurse);
+                Item[] typedItems = FindItemsByType(types[i], recurse);
 
-                var groups = new List<List<Item>>();
+                List<List<Item>> groups = new List<List<Item>>();
                 int idx = 0;
 
                 while (idx < typedItems.Length)
@@ -640,7 +638,7 @@ namespace Server.Items
                     if (validator != null && !validator(a))
                         continue;
 
-                    var group = new List<Item>();
+                    List<Item> group = new List<Item>();
 
                     group.Add(a);
 
@@ -755,8 +753,8 @@ namespace Server.Items
                 throw new ArgumentException();
             }
 
-            var items = new Item[types.Length][];
-            var totals = new int[types.Length];
+            Item[][] items = new Item[types.Length][];
+            int[] totals = new int[types.Length];
 
             for (int i = 0; i < types.Length; ++i)
             {
@@ -826,8 +824,8 @@ namespace Server.Items
                 throw new ArgumentException();
             }
 
-            var items = new Item[types.Length][];
-            var totals = new int[types.Length];
+            Item[][] items = new Item[types.Length][];
+            int[] totals = new int[types.Length];
 
             for (int i = 0; i < types.Length; ++i)
             {
@@ -892,7 +890,7 @@ namespace Server.Items
 
         public bool ConsumeTotal(Type type, int amount, bool recurse, OnItemConsumed callback)
         {
-            var items = FindItemsByType(type, recurse);
+            Item[] items = FindItemsByType(type, recurse);
 
             // First pass, compute total
             int total = 0;
@@ -950,7 +948,7 @@ namespace Server.Items
         {
             int consumed = 0;
 
-            var toDelete = new Queue<Item>();
+            Queue<Item> toDelete = new Queue<Item>();
 
             RecurseConsumeUpTo(this, type, amount, recurse, ref consumed, toDelete);
 
@@ -967,7 +965,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var list = current.Items;
+                List<Item> list = current.Items;
 
                 for (int i = 0; i < list.Count; ++i)
                 {
@@ -1010,15 +1008,15 @@ namespace Server.Items
 
             int best = 0;
 
-            var typedItems = FindItemsByType(type, recurse);
+            Item[] typedItems = FindItemsByType(type, recurse);
 
-            var groups = new List<List<Item>>();
+            List<List<Item>> groups = new List<List<Item>>();
             int idx = 0;
 
             while (idx < typedItems.Length)
             {
                 Item a = typedItems[idx++];
-                var group = new List<Item>();
+                List<Item> group = new List<Item>();
 
                 group.Add(a);
 
@@ -1044,7 +1042,7 @@ namespace Server.Items
 
             for (int i = 0; i < groups.Count; ++i)
             {
-                var items = groups[i].ToArray();
+                Item[] items = groups[i].ToArray();
 
                 //Item[] items = (Item[])(((ArrayList)groups[i]).ToArray( typeof( Item ) ));
                 int total = 0;
@@ -1072,15 +1070,15 @@ namespace Server.Items
 
             int best = 0;
 
-            var typedItems = FindItemsByType(types, recurse);
+            Item[] typedItems = FindItemsByType(types, recurse);
 
-            var groups = new List<List<Item>>();
+            List<List<Item>> groups = new List<List<Item>>();
             int idx = 0;
 
             while (idx < typedItems.Length)
             {
                 Item a = typedItems[idx++];
-                var group = new List<Item>();
+                List<Item> group = new List<Item>();
 
                 group.Add(a);
 
@@ -1106,7 +1104,7 @@ namespace Server.Items
 
             for (int j = 0; j < groups.Count; ++j)
             {
-                var items = groups[j].ToArray();
+                Item[] items = groups[j].ToArray();
                 //Item[] items = (Item[])(((ArrayList)groups[j]).ToArray( typeof( Item ) ));
                 int total = 0;
 
@@ -1135,15 +1133,15 @@ namespace Server.Items
 
             for (int i = 0; i < types.Length; ++i)
             {
-                var typedItems = FindItemsByType(types[i], recurse);
+                Item[] typedItems = FindItemsByType(types[i], recurse);
 
-                var groups = new List<List<Item>>();
+                List<List<Item>> groups = new List<List<Item>>();
                 int idx = 0;
 
                 while (idx < typedItems.Length)
                 {
                     Item a = typedItems[idx++];
-                    var group = new List<Item>();
+                    List<Item> group = new List<Item>();
 
                     group.Add(a);
 
@@ -1169,7 +1167,7 @@ namespace Server.Items
 
                 for (int j = 0; j < groups.Count; ++j)
                 {
-                    var items = groups[j].ToArray();
+                    Item[] items = groups[j].ToArray();
                     //Item[] items = (Item[])(((ArrayList)groups[j]).ToArray( typeof( Item ) ));
                     int total = 0;
 
@@ -1195,7 +1193,7 @@ namespace Server.Items
 
         public int GetAmount(Type type, bool recurse)
         {
-            var items = FindItemsByType(type, recurse);
+            Item[] items = FindItemsByType(type, recurse);
 
             int amount = 0;
 
@@ -1214,7 +1212,7 @@ namespace Server.Items
 
         public int GetAmount(Type[] types, bool recurse)
         {
-            var items = FindItemsByType(types, recurse);
+            Item[] items = FindItemsByType(types, recurse);
 
             int amount = 0;
 
@@ -1251,7 +1249,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var items = current.Items;
+                List<Item> items = current.Items;
 
                 for (int i = 0; i < items.Count; ++i)
                 {
@@ -1291,7 +1289,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var items = current.Items;
+                List<Item> items = current.Items;
 
                 for (int i = 0; i < items.Count; ++i)
                 {
@@ -1324,7 +1322,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var list = current.Items;
+                List<Item> list = current.Items;
 
                 for (int i = 0; i < list.Count; ++i)
                 {
@@ -1363,7 +1361,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var list = current.Items;
+                List<Item> list = current.Items;
 
                 for (int i = 0; i < list.Count; ++i)
                 {
@@ -1412,7 +1410,7 @@ namespace Server.Items
                 m_FindItemsList.Clear();
             }
 
-            var list = new List<T>();
+            List<T> list = new List<T>();
 
             RecurseFindItemsByType(this, recurse, list, predicate);
 
@@ -1424,7 +1422,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var items = current.Items;
+                List<Item> items = current.Items;
 
                 for (int i = 0; i < items.Count; ++i)
                 {
@@ -1472,7 +1470,7 @@ namespace Server.Items
         {
             if (current != null && current.Items.Count > 0)
             {
-                var list = current.Items;
+                List<Item> list = current.Items;
 
                 for (int i = 0; i < list.Count; ++i)
                 {
@@ -1733,7 +1731,7 @@ namespace Server.Items
             m_TotalItems = 0;
             m_TotalWeight = 0;
 
-            var items = m_Items;
+            List<Item> items = m_Items;
 
             if (items == null)
             {
@@ -1787,12 +1785,12 @@ namespace Server.Items
 
         public virtual bool TryDropItem(Mobile from, Item dropped, bool sendFullMessage)
         {
-			if (!CheckStack(from, dropped) && !CheckHold(from, dropped, sendFullMessage, true))
+            if (!CheckStack(from, dropped) && !CheckHold(from, dropped, sendFullMessage, true))
             {
                 return false;
             }
 
-            var list = Items;
+            List<Item> list = Items;
 
             for (int i = 0; i < list.Count; ++i)
             {
@@ -1902,7 +1900,7 @@ namespace Server.Items
             }
         }
 
-        public virtual bool DisplaysContent => true; 
+        public virtual bool DisplaysContent => true;
 
         public virtual bool CheckContentDisplay(Mobile from)
         {
@@ -1911,7 +1909,7 @@ namespace Server.Items
                 return false;
             }
 
-			var root = RootParent;
+            object root = RootParent;
 
             if (root == null || root is Item || root == from || from.IsStaff())
             {
@@ -1921,20 +1919,20 @@ namespace Server.Items
             return false;
         }
 
-		public List<Mobile> Openers { get; set; }
+        public List<Mobile> Openers { get; set; }
 
-        public virtual bool IsPublicContainer => false; 
+        public virtual bool IsPublicContainer => false;
 
         public override void OnDelete()
         {
             base.OnDelete();
 
-			Openers = null;
+            Openers = null;
         }
 
         public virtual void DisplayTo(Mobile to)
         {
-			ProcessOpeners(to);
+            ProcessOpeners(to);
 
             NetState ns = to.NetState;
 
@@ -1949,7 +1947,7 @@ namespace Server.Items
 
             to.Send(new ContainerContent(to, this));
 
-            foreach (var o in Items)
+            foreach (Item o in Items)
             {
                 to.Send(o.OPLPacket);
             }
@@ -1961,14 +1959,14 @@ namespace Server.Items
             {
                 bool contains = false;
 
-				if (Openers != null)
+                if (Openers != null)
                 {
                     Point3D worldLoc = GetWorldLocation();
                     Map map = Map;
 
-					for (int i = 0; i < Openers.Count; ++i)
+                    for (int i = 0; i < Openers.Count; ++i)
                     {
-						Mobile mob = Openers[i];
+                        Mobile mob = Openers[i];
 
                         if (mob == opener)
                         {
@@ -1980,7 +1978,7 @@ namespace Server.Items
 
                             if (mob.Map != map || !mob.InRange(worldLoc, range))
                             {
-								Openers.RemoveAt(i--);
+                                Openers.RemoveAt(i--);
                             }
                         }
                     }
@@ -1988,16 +1986,16 @@ namespace Server.Items
 
                 if (!contains)
                 {
-					if (Openers == null)
+                    if (Openers == null)
                     {
-						Openers = new List<Mobile>();
+                        Openers = new List<Mobile>();
                     }
 
-					Openers.Add(opener);
+                    Openers.Add(opener);
                 }
-				else if (Openers != null && Openers.Count == 0)
+                else if (Openers != null && Openers.Count == 0)
                 {
-					Openers = null;
+                    Openers = null;
                 }
             }
         }
@@ -2063,13 +2061,13 @@ namespace Server.Items
 
                     try
                     {
-                        var split = line.Split('\t');
+                        string[] split = line.Split('\t');
 
                         if (split.Length >= 3)
                         {
                             int gumpID = Utility.ToInt32(split[0]);
 
-                            var aRect = split[1].Split(' ');
+                            string[] aRect = split[1].Split(' ');
                             if (aRect.Length < 4)
                             {
                                 continue;
@@ -2093,7 +2091,7 @@ namespace Server.Items
 
                             if (split.Length >= 4)
                             {
-                                var aIDs = split[3].Split(',');
+                                string[] aIDs = split[3].Split(',');
 
                                 for (int i = 0; i < aIDs.Length; i++)
                                 {
@@ -2146,9 +2144,9 @@ namespace Server.Items
         private readonly Rectangle2D m_Bounds;
         private readonly int m_DropSound;
 
-        public int GumpID => m_GumpID; 
-        public Rectangle2D Bounds => m_Bounds; 
-        public int DropSound => m_DropSound; 
+        public int GumpID => m_GumpID;
+        public Rectangle2D Bounds => m_Bounds;
+        public int DropSound => m_DropSound;
 
         public ContainerData(int gumpID, Rectangle2D bounds, int dropSound)
         {

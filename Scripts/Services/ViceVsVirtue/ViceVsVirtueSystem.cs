@@ -1,24 +1,20 @@
+using Server.Accounting;
+using Server.Engines.ArenaSystem;
+using Server.Engines.Points;
+using Server.Guilds;
+using Server.Gumps;
+using Server.Items;
+using Server.Mobiles;
+using Server.Network;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
-using Server;
-using Server.Items;
-using Server.Mobiles;
-using Server.Gumps;
-using Server.Network;
-using Server.Guilds;
-using Server.Engines.Points;
-using Server.Engines.CityLoyalty;
-using Server.Regions;
-using Server.Accounting;
-using Server.Engines.ArenaSystem;
 
 namespace Server.Engines.VvV
 {
     public enum VvVType
     {
-        Virtue, 
+        Virtue,
         Vice
     }
 
@@ -28,7 +24,7 @@ namespace Server.Engines.VvV
         Jhelom,
         Minoc,
         Moonglow,
-        Ocllo, 
+        Ocllo,
         SkaraBrae,
         Trinsic,
         Yew
@@ -47,10 +43,10 @@ namespace Server.Engines.VvV
 
         public static ViceVsVirtueSystem Instance { get; set; }
 
-        public override TextDefinition Name { get { return new TextDefinition("Vice Vs Virtue"); } }
-        public override PointsType Loyalty { get { return PointsType.ViceVsVirtue; } }
-        public override bool AutoAdd { get { return false; } }
-        public override double MaxPoints { get { return 10000; } }
+        public override TextDefinition Name => new TextDefinition("Vice Vs Virtue");
+        public override PointsType Loyalty => PointsType.ViceVsVirtue;
+        public override bool AutoAdd => false;
+        public override double MaxPoints => 10000;
 
         public bool HasGenerated { get; set; }
 
@@ -94,7 +90,7 @@ namespace Server.Engines.VvV
                 List<Mobile> handled = new List<Mobile>();
                 bool statloss = false;
 
-                for(int i = 0; i < list.Count; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
                     Mobile dam = list[i].Damager;
 
@@ -280,7 +276,7 @@ namespace Server.Engines.VvV
                             }
                         }
 
-                        if(!hasally)
+                        if (!hasally)
                             guilds.Add(g);
                     }
                 }
@@ -295,7 +291,7 @@ namespace Server.Engines.VvV
 
         #region Skill Loss
         public const double SkillLossFactor = 1.0 / 3;
-        public static TimeSpan SkillLossPeriod { get { return TimeSpan.FromMinutes(5); } }
+        public static TimeSpan SkillLossPeriod => TimeSpan.FromMinutes(5);
 
         private static readonly Dictionary<Mobile, SkillLossContext> m_SkillLoss = new Dictionary<Mobile, SkillLossContext>();
 
@@ -377,11 +373,11 @@ namespace Server.Engines.VvV
 
         public void SendVvVMessage(int cliloc, string args = "")
         {
-            foreach(NetState state in NetState.Instances.Where(st => st.Mobile != null && IsVvV(st.Mobile)))
+            foreach (NetState state in NetState.Instances.Where(st => st.Mobile != null && IsVvV(st.Mobile)))
             {
                 Mobile m = state.Mobile;
 
-                if(m != null)
+                if (m != null)
                 {
                     SendVvVMessageTo(m, cliloc, args);
                 }
@@ -393,7 +389,7 @@ namespace Server.Engines.VvV
             m.SendLocalizedMessage(cliloc, false, "[Guild][VvV] ", args, m is PlayerMobile ? ((PlayerMobile)m).GuildMessageHue : 0x34);
         }
 
-        private List<Item> VvVItems = new List<Item>();
+        private readonly List<Item> VvVItems = new List<Item>();
 
         public void AddVvVItem(Item item, bool initial = false)
         {
@@ -423,7 +419,7 @@ namespace Server.Engines.VvV
 
             Server.Commands.CommandSystem.Register("BattleProps", AccessLevel.GameMaster, e =>
                 {
-                    if(Instance.Battle != null)
+                    if (Instance.Battle != null)
                         e.Mobile.SendGump(new PropertiesGump(e.Mobile, Instance.Battle));
                 });
 
@@ -445,7 +441,7 @@ namespace Server.Engines.VvV
                     {
                         if (targeted is PlayerMobile)
                         {
-                            var pm = targeted as PlayerMobile;
+                            PlayerMobile pm = targeted as PlayerMobile;
                             VvVPlayerEntry entry = Instance.GetPlayerEntry<VvVPlayerEntry>(pm);
 
                             if (entry != null && entry.Active)
@@ -584,8 +580,8 @@ namespace Server.Engines.VvV
 
         public static bool IsAllied(Mobile a, Mobile b)
         {
-            var guildA = a.Guild as Guild;
-            var guildB = b.Guild as Guild;
+            Guild guildA = a.Guild as Guild;
+            Guild guildB = b.Guild as Guild;
 
             if (guildA != null && guildB != null && (guildA == guildB || guildA.IsAlly(guildB)))
             {
@@ -597,8 +593,8 @@ namespace Server.Engines.VvV
                 return false;
             }
 
-            var tempA = TempCombatants.FirstOrDefault(c => c.From == a);
-            var tempB = TempCombatants.FirstOrDefault(c => c.From == b);
+            TemporaryCombatant tempA = TempCombatants.FirstOrDefault(c => c.From == a);
+            TemporaryCombatant tempB = TempCombatants.FirstOrDefault(c => c.From == b);
 
             if (tempA != null && (tempA.Friendly == b || (tempA.FriendlyGuild != null && tempA.FriendlyGuild == guildB)))
             {
@@ -688,7 +684,7 @@ namespace Server.Engines.VvV
 
         public static TemporaryCombatant GetTempCombatant(Mobile from, Mobile to)
         {
-            foreach (var combatant in TempCombatants.Where(c => c.From == from))
+            foreach (TemporaryCombatant combatant in TempCombatants.Where(c => c.From == from))
             {
                 if (combatant.Friendly == null && to == null)
                     return combatant;
@@ -708,7 +704,7 @@ namespace Server.Engines.VvV
                 AddTempCombatantTimer();
             }
 
-            var combatant = GetTempCombatant(m, friendlyTo);
+            TemporaryCombatant combatant = GetTempCombatant(m, friendlyTo);
 
             if (combatant == null)
             {
@@ -794,7 +790,7 @@ namespace Server.Engines.VvV
             writer.Write(ShowNewRules == null ? 0 : ShowNewRules.Count);
             if (ShowNewRules != null)
             {
-                foreach (var pm in ShowNewRules)
+                foreach (PlayerMobile pm in ShowNewRules)
                     writer.Write(pm);
             }
 
@@ -838,7 +834,7 @@ namespace Server.Engines.VvV
                     int c = reader.ReadInt();
                     for (int i = 0; i < c; i++)
                     {
-                        var pm = reader.ReadMobile() as PlayerMobile;
+                        PlayerMobile pm = reader.ReadMobile() as PlayerMobile;
 
                         if (pm != null)
                         {
@@ -918,10 +914,10 @@ namespace Server.Engines.VvV
 
         public void FixVvVItems()
         {
-            foreach (var item in VvVItems.Where(i => i is Spellbook))
+            foreach (Item item in VvVItems.Where(i => i is Spellbook))
             {
-                var book = item as Spellbook;
-                var attrs = RunicReforging.GetNegativeAttributes(item);
+                Spellbook book = item as Spellbook;
+                NegativeAttributes attrs = RunicReforging.GetNegativeAttributes(item);
 
                 if (attrs != null)
                 {
@@ -966,9 +962,9 @@ namespace Server.Engines.VvV
 
         public static void DeleteSilverTraders()
         {
-            var list = new List<Mobile>(World.Mobiles.Values.Where(m => m is SilverTrader));
+            List<Mobile> list = new List<Mobile>(World.Mobiles.Values.Where(m => m is SilverTrader));
 
-            foreach (var mob in list)
+            foreach (Mobile mob in list)
             {
                 mob.Delete();
             }
@@ -985,7 +981,7 @@ namespace Server.Engines.VvV
 
             Timer.DelayCall(TimeSpan.FromSeconds(1), () =>
                 {
-                    foreach (var pm in World.Mobiles.Values.OfType<PlayerMobile>().Where(pm => IsVvV(pm)))
+                    foreach (PlayerMobile pm in World.Mobiles.Values.OfType<PlayerMobile>().Where(pm => IsVvV(pm)))
                     {
                         VvVPlayerEntry entry = Instance.GetPlayerEntry<VvVPlayerEntry>(pm);
 
@@ -1000,7 +996,7 @@ namespace Server.Engines.VvV
                 });
         }
 
-        private static string _EnhancedRulesNotice = String.Format("Notice: The Vice Vs Virtue system has recently enabled enhanced rules. To avoid any issues and " +
+        private static readonly string _EnhancedRulesNotice = String.Format("Notice: The Vice Vs Virtue system has recently enabled enhanced rules. To avoid any issues and " +
              "unexpected deaths due to the new game mechanics, it is important that you read this message. " +
              "<br><br>New VvV Mechanics:<br><br>" +
              "- VvV combatants are attackable on all facets.<br>" +
@@ -1035,19 +1031,13 @@ namespace Server.Engines.VvV
         public int DisarmedTraps { get; set; }
         public int StolenSigils { get; set; }
 
-        public Guild Guild
-        {
-            get
-            {
-                return Player != null ? Player.Guild as Guild : null;
-            }
-        }
+        public Guild Guild => Player != null ? Player.Guild as Guild : null;
 
         public bool Active
         {
-            get 
-            { 
-                return _Active; 
+            get
+            {
+                return _Active;
             }
             set
             {
@@ -1068,7 +1058,7 @@ namespace Server.Engines.VvV
         }
 
         public DateTime ResignExpiration { get; set; }
-        public bool Resigning { get { return ResignExpiration > DateTime.MinValue; } }
+        public bool Resigning => ResignExpiration > DateTime.MinValue;
 
         public VvVPlayerEntry(PlayerMobile pm)
             : base(pm)
@@ -1085,7 +1075,7 @@ namespace Server.Engines.VvV
                 return;
             }
 
-            var entry = KilledEntry;
+            EnemyKilledEntry entry = KilledEntry;
 
             if (entry == null)
             {
@@ -1108,11 +1098,11 @@ namespace Server.Engines.VvV
                 Player.SendMessage("You cannot earn any more silver from killing {0}.", victim.Name);
             }
 
-            int silver = (int)((double)EnemyKilledEntry.KillSilver / (double)entry.TimesKilled);
+            int silver = (int)(EnemyKilledEntry.KillSilver / (double)entry.TimesKilled);
 
             if (silver > 0)
             {
-                Player.SendLocalizedMessage(1042736, String.Format("{0:N0} silver\t{1}", silver, victim.Name)); 
+                Player.SendLocalizedMessage(1042736, String.Format("{0:N0} silver\t{1}", silver, victim.Name));
                 // You have earned ~1_SILVER_AMOUNT~ pieces for vanquishing ~2_PLAYER_NAME~!
 
                 Points += silver;
@@ -1129,7 +1119,7 @@ namespace Server.Engines.VvV
             public int TimesKilled { get; set; }
             public DateTime Expires { get; set; }
 
-            public bool Expired { get { return Expires < DateTime.UtcNow; } }
+            public bool Expired => Expires < DateTime.UtcNow;
 
             public EnemyKilledEntry(Mobile killed)
             {
@@ -1165,7 +1155,7 @@ namespace Server.Engines.VvV
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-            
+
             switch (version)
             {
                 case 4:
@@ -1177,13 +1167,13 @@ namespace Server.Engines.VvV
                     goto case 2;
                 case 2:
                     Active = reader.ReadBool();
-                    
-                    if(version == 0)
+
+                    if (version == 0)
                         reader.ReadBool();
-                        
-                    if(version < 2)
+
+                    if (version < 2)
                         reader.ReadGuild();
-                    
+
                     Score = reader.ReadInt();
                     Kills = reader.ReadInt();
                     Deaths = reader.ReadInt();
@@ -1223,7 +1213,7 @@ namespace Server.Engines.VvV
             }
         }
 
-        public bool Expired { get { return StartTime + TempCombatTime < DateTime.UtcNow; } }
+        public bool Expired => StartTime + TempCombatTime < DateTime.UtcNow;
 
         public TemporaryCombatant(Mobile from, Mobile friendlyTo)
         {

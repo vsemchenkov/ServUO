@@ -1,4 +1,3 @@
-using System;
 using Server.Items;
 
 namespace Server.Mobiles
@@ -12,7 +11,7 @@ namespace Server.Mobiles
         {
             Name = "a minotaur scout";
             Body = 281;
-		   
+
             SetStr(353, 375);
             SetDex(111, 130);
             SetInt(34, 50);
@@ -49,8 +48,8 @@ namespace Server.Mobiles
             : base(serial)
         {
         }
-		
-		public override int TreasureMapLevel { get { return 3; } }
+
+        public override int TreasureMapLevel => 3;
 
         public override void GenerateLoot()
         {
@@ -86,7 +85,7 @@ namespace Server.Mobiles
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)

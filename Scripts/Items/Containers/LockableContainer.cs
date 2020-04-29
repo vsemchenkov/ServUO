@@ -1,6 +1,6 @@
-using System;
 using Server.Engines.Craft;
 using Server.Network;
+using System;
 
 namespace Server.Items
 {
@@ -10,25 +10,25 @@ namespace Server.Items
         private int m_LockLevel, m_MaxLockLevel, m_RequiredSkill;
         private uint m_KeyValue;
         private Mobile m_Picker;
-		private Mobile m_Crafter;
+        private Mobile m_Crafter;
         private bool m_TrapOnLockpick;
 
         private ItemQuality m_Quality;
         private CraftResource m_Resource;
         private bool m_PlayerConstructed;
 
-		[CommandProperty(AccessLevel.GameMaster)]
-		public Mobile Crafter
-		{
-			get { return m_Crafter; }
-			set
-			{
-				m_Crafter = value;
-				InvalidateProperties();
-			}
-		}
+        [CommandProperty(AccessLevel.GameMaster)]
+        public Mobile Crafter
+        {
+            get { return m_Crafter; }
+            set
+            {
+                m_Crafter = value;
+                InvalidateProperties();
+            }
+        }
 
-		[CommandProperty(AccessLevel.GameMaster)]
+        [CommandProperty(AccessLevel.GameMaster)]
         public Mobile Picker
         {
             get
@@ -111,13 +111,7 @@ namespace Server.Items
             }
         }
 
-        public override bool TrapOnOpen
-        {
-            get
-            {
-                return !m_TrapOnLockpick;
-            }
-        }
+        public override bool TrapOnOpen => !m_TrapOnLockpick;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public bool TrapOnLockpick
@@ -143,11 +137,11 @@ namespace Server.Items
         public CraftResource Resource
         {
             get { return m_Resource; }
-            set 
-            { 
+            set
+            {
                 m_Resource = value;
                 Hue = CraftResources.GetHue(m_Resource);
-                InvalidateProperties(); 
+                InvalidateProperties();
             }
         }
 
@@ -166,25 +160,25 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)8); // version
+            writer.Write(8); // version
 
             writer.Write(m_PlayerConstructed);
             writer.Write((int)m_Resource);
             writer.Write((int)m_Quality);
 
-			writer.Write(m_Crafter);
+            writer.Write(m_Crafter);
 
             writer.Write(m_IsShipwreckedItem);
 
-            writer.Write((bool)m_TrapOnLockpick);
+            writer.Write(m_TrapOnLockpick);
 
-            writer.Write((int)m_RequiredSkill);
+            writer.Write(m_RequiredSkill);
 
-            writer.Write((int)m_MaxLockLevel);
+            writer.Write(m_MaxLockLevel);
 
             writer.Write(m_KeyValue);
-            writer.Write((int)m_LockLevel);
-            writer.Write((bool)m_Locked);
+            writer.Write(m_LockLevel);
+            writer.Write(m_Locked);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -193,7 +187,7 @@ namespace Server.Items
 
             int version = reader.ReadInt();
 
-            switch ( version )
+            switch (version)
             {
                 case 8:
                     {
@@ -203,12 +197,12 @@ namespace Server.Items
 
                         goto case 7;
                     }
-				case 7:
-					{
-						m_Crafter = reader.ReadMobile();
+                case 7:
+                    {
+                        m_Crafter = reader.ReadMobile();
 
-						goto case 6;
-					}
+                        goto case 6;
+                    }
                 case 6:
                     {
                         m_IsShipwreckedItem = reader.ReadBool();
@@ -350,13 +344,7 @@ namespace Server.Items
             return true;
         }
 
-        public override bool DisplaysContent
-        {
-            get
-            {
-                return !m_Locked;
-            }
-        }
+        public override bool DisplaysContent => !m_Locked;
 
         public virtual bool CheckLocked(Mobile from)
         {
@@ -458,10 +446,10 @@ namespace Server.Items
         {
             Quality = (ItemQuality)quality;
 
-			if(makersMark)
-			{
-				Crafter = from;
-			}
+            if (makersMark)
+            {
+                Crafter = from;
+            }
 
             if (!craftItem.ForceNonExceptional)
             {

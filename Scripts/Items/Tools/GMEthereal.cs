@@ -42,6 +42,7 @@ namespace Server.Mobiles
             new EtherealInfo(0xA335, 0x3ED1), // Coconut krab
             new EtherealInfo(0xA0C0, 0x3ECF), // Eowmu
             new EtherealInfo(0xA138, 0x3ED0), // Skeletal cat
+            new EtherealInfo(0xA138, 0x3ED0), // Skeletal cat
         };
         private EtherealTypes m_EthyType;
         [Constructable]

@@ -1,7 +1,4 @@
-﻿using System;
-using Server;
-
-namespace Server.Items
+﻿namespace Server.Items
 {
     public class DraconicOrb : PeerlessKey
     {
@@ -16,7 +13,7 @@ namespace Server.Items
             Hue = 0x80F;
         }
 
-        public override int Lifespan => 43200; 
+        public override int Lifespan => 43200;
 
         public DraconicOrb(Serial serial)
             : base(serial)
@@ -26,7 +23,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0); // version
+            writer.Write(0); // version
         }
 
         public override void Deserialize(GenericReader reader)

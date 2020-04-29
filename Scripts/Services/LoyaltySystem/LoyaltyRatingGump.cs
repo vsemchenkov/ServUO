@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Server.Engines.CityLoyalty;
 using Server.Gumps;
 using Server.Mobiles;
-using System.Linq;
 using Server.Network;
-using Server.Engines.CityLoyalty;
+using System.Linq;
 
 namespace Server.Engines.Points
 {
@@ -24,7 +23,7 @@ namespace Server.Engines.Points
 
             int y = 40;
 
-            foreach (var sys in PointsSystem.Systems.Where(sys => sys.ShowOnLoyaltyGump))
+            foreach (PointsSystem sys in PointsSystem.Systems.Where(sys => sys.ShowOnLoyaltyGump))
             {
                 if (sys.Name.Number > 0)
                     AddHtmlLocalized(50, y, 150, 20, sys.Name.Number, false, false);
@@ -45,9 +44,6 @@ namespace Server.Engines.Points
 
                 y += 45;
             }
-
-            AddHtmlLocalized(50, 245, 150, 20, 1061055, pm.PointSystems.PvMPoints.ToString(), 0, false, false); // PvM Points:
-            AddHtmlLocalized(50, 265, 150, 20, 1061051, pm.PointSystems.PvPPoints.ToString(), 0, false, false); // PvP Points:
 
             AddHtmlLocalized(50, 285, 150, 20, 1115129, pm.Fame.ToString(), 0, false, false); // Fame: ~1_AMT~
             AddHtmlLocalized(50, 305, 150, 20, 1115130, pm.Karma.ToString(), 0, false, false); // Karma: ~1_AMT~}

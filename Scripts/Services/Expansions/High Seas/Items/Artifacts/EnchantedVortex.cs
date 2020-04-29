@@ -1,12 +1,9 @@
-using Server;
-using System;
-
 namespace Server.Items
 {
     public class EnchantedVortexAddon : BaseAddon
     {
 
-        public override BaseAddonDeed Deed { get { return new EnchantedVortexDeed(); } }
+        public override BaseAddonDeed Deed => new EnchantedVortexDeed();
 
         [Constructable]
         public EnchantedVortexAddon()
@@ -24,7 +21,7 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-            writer.Write((int)0);
+            writer.Write(0);
         }
 
         public override void Deserialize(GenericReader reader)
@@ -36,7 +33,7 @@ namespace Server.Items
 
     public class EnchantedVortexDeed : BaseAddonDeed
     {
-        public override BaseAddon Addon { get { return new EnchantedVortexAddon(); } }
+        public override BaseAddon Addon => new EnchantedVortexAddon();
 
         [Constructable]
         public EnchantedVortexDeed()
