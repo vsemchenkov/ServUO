@@ -70,3 +70,117 @@
 ###############################
 # 29.04.2020 - 15:25
 
+###############################
+# 29.04.2020 - 18:36
+
+## New Auction : 732c118e-c7f3-4163-a430-a8e66e3a34a9
+# Staff Ethereal Steed
+# Created on 29.04.2020 at 18:43
+# Owner : GM [0x00000197] Account: admin
+# Expires on 06.05.2020 at 18:43
+# Starting Bid: 1000. Reserve: 2000. Buy Now: Disabled
+# Owner Description : 
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x40001FC9] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+## Ending Auction 732c118e-c7f3-4163-a430-a8e66e3a34a9
+# Status : NoBids
+# Ended by GM [0x00000197], Owner, Account : admin
+
+## New Auction : 899bf01e-093a-4c05-9b00-055e1690f30b
+# Staff Ethereal Steed
+# Created on 29.04.2020 at 18:44
+# Owner : GM [0x00000197] Account: admin
+# Expires on 06.05.2020 at 18:44
+# Starting Bid: 1000. Reserve: 2000. Buy Now: 1000000
+# Owner Description : 
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x40001FC9] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+## Ending Auction 899bf01e-093a-4c05-9b00-055e1690f30b
+# Status : StaffRemoved
+# Ended by GM [0x00000197], Owner, Account : admin
+# Comments : The item has been claimed by the staff
+
+## New Auction : 542792b8-bab3-41a5-acf2-930f39b48b50
+# Tarantula
+# Created on 29.04.2020 at 18:46
+# Owner : GM [0x00000197] Account: admin
+# Expires on 06.05.2020 at 18:46
+# Starting Bid: 50000. Reserve: 200000. Buy Now: Disabled
+# Owner Description : Tarantule
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x400024A5] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+## Ending Auction 542792b8-bab3-41a5-acf2-930f39b48b50
+# Status : StaffRemoved
+# Ended by GM [0x00000197], Owner, Account : admin
+# Comments : The item has been claimed by the staff
+
+###############################
+# 29.04.2020 - 18:55
+
+###############################
+# 29.04.2020 - 19:06
+
+## New Auction : 95025dfc-e417-487a-8547-055541079243
+# Staff Ethereal Steed
+# Created on 29.04.2020 at 19:20
+# Owner : GM [0x00000197] Account: admin
+# Expires on 02.05.2020 at 19:20
+# Starting Bid: 1000. Reserve: 2000. Buy Now: 10000
+# Owner Description : 
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x40001FC9] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+## Ending Auction 95025dfc-e417-487a-8547-055541079243
+# Status : StaffRemoved
+# Ended by GM [0x00000197], Owner, Account : admin
+# Comments : The item has been claimed by the staff
+
+## New Auction : 6e63495a-01a5-45a6-98b1-ffbd9d8b1b22
+# Staff Ethereal Steed
+# Created on 29.04.2020 at 19:24
+# Owner : GM [0x00000197] Account: admin
+# Expires on 06.05.2020 at 19:24
+# Starting Bid: 1000000. Reserve: 1000000. Buy Now: Disabled
+# Owner Description : 
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x40001FC9] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+> [6e63495a-01a5-45a6-98b1-ffbd9d8b1b22] Bid Amount : 2 000 000, Mobile : test [0x00000198] Account : test1
+## Ending Auction 6e63495a-01a5-45a6-98b1-ffbd9d8b1b22
+# Status : StaffRemoved
+# Ended by GM [0x00000197], Owner, Account : admin
+# Comments : The item has been claimed by the staff
+
+## New Auction : 1609a2ce-622d-4fa4-9a26-03a5a84e118b
+# Staff Ethereal Steed
+# Created on 29.04.2020 at 19:33
+# Owner : GM [0x00000197] Account: admin
+# Expires on 06.05.2020 at 19:33
+# Starting Bid: 1000000. Reserve: 2000000. Buy Now: 10000000
+# Owner Description : 
+# Web Link : 
+#### Selling 1 Items
+# 0. Staff Ethereal Steed [0x40001FC9] Type GMEthereal Hue 0
+Properties: <basefont color=#FFFFFF><p>Invalid<br><br>Invalid<br>Invalid<br>
+
+> [1609a2ce-622d-4fa4-9a26-03a5a84e118b] Bid Amount : 1 100 000, Mobile : test [0x00000198] Account : test1
+> [1609a2ce-622d-4fa4-9a26-03a5a84e118b] Bid Amount : 1 200 000, Mobile : test [0x00000198] Account : test1
+> [1609a2ce-622d-4fa4-9a26-03a5a84e118b] Bid Amount : 1 202 000, Mobile : test [0x00000198] Account : test1
+## Ending Auction 1609a2ce-622d-4fa4-9a26-03a5a84e118b
+# Status : StaffRemoved
+# Ended by GM [0x00000197], Owner, Account : admin
+# Comments : The item has been claimed by the staff
+
