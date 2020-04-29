@@ -31,7 +31,7 @@ namespace Server.Gumps
             from.SendGump(new IceGMTool(from));
             Console.WriteLine("*****[{1}] {0}  Useing Ice's GM Tool.*****", from.Name, from.AccessLevel);
         }
-        public IceGMTool(Mobile from): base(0, 0)
+        public IceGMTool(Mobile from): base(1040, 0)
         {
             Closable = false;
             Disposable = false;
@@ -446,6 +446,8 @@ namespace Server.Gumps
                     CommandSystem.Handle(from, String.Format("{0}dupe", prefix));
                     from.SendMessage(2125, "What do you dupe? (ESC to cansel)");
                     from.SendGump(new IceGMTool(from));
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("*****[{1}] {0}  Useing Ice's GM Tool.***** Dupe Dupe Dupe", from.Name, from.AccessLevel);
                     break;
                 case 39:
                     CommandSystem.Handle(from, String.Format("{0}dismount", prefix));
@@ -487,8 +489,6 @@ namespace Server.Gumps
                     from.LocalOverheadMessage(MessageType.Emote, 2125, true, "Where you are!");
                     from.SendGump(new IceGMTool(from));
                     break;
-
-
 
             }
         }

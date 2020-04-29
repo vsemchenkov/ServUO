@@ -2,10 +2,7 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-using Server;
 using Server.Mobiles;
-using Server.Spells;
-using Server.Spells.Ninjitsu;
 using Server.Network;
 using Server.Spells.SkillMasteries;
 
@@ -19,7 +16,7 @@ namespace Server.Items
         Splintering,
         Searing,
         Bane,
-        BoneBreaker, 
+        BoneBreaker,
         Swarm,
         Sparks
     }
@@ -37,16 +34,16 @@ namespace Server.Items
         private TimeSpan m_TickDuration;
         private Timer m_Timer;
 
-        public Mobile Mobile => m_Mobile; 
-        public Mobile Victim => m_Victim; 
-        public Item Owner => m_Owner; 
-        public EffectsType Effect => m_Effect; 
-        public TimeSpan Duration => m_Duration; 
-        public TimeSpan TickDuration => m_TickDuration; 
-        public Timer Timer => m_Timer; 
+        public Mobile Mobile => m_Mobile;
+        public Mobile Victim => m_Victim;
+        public Item Owner => m_Owner;
+        public EffectsType Effect => m_Effect;
+        public TimeSpan Duration => m_Duration;
+        public TimeSpan TickDuration => m_TickDuration;
+        public Timer Timer => m_Timer;
 
         private static List<PropertyEffect> m_Effects = new List<PropertyEffect>();
-        public static List<PropertyEffect> Effects => m_Effects; 
+        public static List<PropertyEffect> Effects => m_Effects;
 
         public PropertyEffect(Mobile from, Mobile victim, Item owner, EffectsType effect, TimeSpan duration, TimeSpan tickduration)
         {
@@ -194,7 +191,7 @@ namespace Server.Items
                 this.Mobile.Mana += (int)Math.Min(this.Mobile.ManaMax, damage * mod);
                 m_Active = false;
 
-                Server.Effects.SendTargetParticles(this.Mobile, 0x375A, 0x1, 0xA, 0x71, 0x2, 0x1AE9, (EffectLayer)0, 0);
+                Server.Effects.SendTargetParticles(this.Mobile, 0x375A, 0x1, 0xA, 0x71, 0x2, 0x1AE9, 0, 0);
 
                 this.Mobile.SendLocalizedMessage(1113636); //The soul charge effect converts some of the damage you received into mana.
             }
@@ -241,8 +238,8 @@ namespace Server.Items
             if (m_Charges >= 20)
                 return;
 
-            double pd = 0; double fd = 0; 
-            double cd = 0; double pod = 0; 
+            double pd = 0; double fd = 0;
+            double cd = 0; double pod = 0;
             double ed = 0; double dd = 0;
 
             double k = (double)GetValue(DamageType.Kinetic,  this.Mobile) / 100;
@@ -473,7 +470,7 @@ namespace Server.Items
 
     public class SearingWeaponContext : PropertyEffect
     {
-        public static int Damage => Utility.RandomMinMax(10, 15); 
+        public static int Damage => Utility.RandomMinMax(10, 15);
 
         public SearingWeaponContext(Mobile from, Mobile defender)
             : base(from, defender, null, EffectsType.Searing, TimeSpan.FromSeconds(4), TimeSpan.FromSeconds(4))

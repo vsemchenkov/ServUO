@@ -46,12 +46,12 @@ namespace Server.Items
         #region IUsesRemaining members
         private int m_UsesRemaining;
         private bool m_ShowUsesRemaining;
-        
+
         [CommandProperty(AccessLevel.GameMaster)]
         public int UsesRemaining { get { return m_UsesRemaining; } set { m_UsesRemaining = value; InvalidateProperties(); } }
 
         public bool ShowUsesRemaining { get { return m_ShowUsesRemaining; } set { m_ShowUsesRemaining = value; InvalidateProperties(); } }
-        
+
         public void ScaleUses()
         {
             m_UsesRemaining = (m_UsesRemaining * GetUsesScalar()) / 100;
@@ -71,7 +71,7 @@ namespace Server.Items
             return 100;
         }
         #endregion
-        
+
         private bool _VvVItem;
         private Mobile _Owner;
         private string _OwnerName;
@@ -178,21 +178,21 @@ namespace Server.Items
 		public virtual float Speed => 0.0f;
 		public virtual int AosMaxRange => DefMaxRange;
 		public virtual int AosHitSound => DefHitSound;
-		public virtual int AosMissSound => DefMissSound; 
-		public virtual SkillName AosSkill => DefSkill; 
-		public virtual WeaponType AosType => DefType; 
+		public virtual int AosMissSound => DefMissSound;
+		public virtual SkillName AosSkill => DefSkill;
+		public virtual WeaponType AosType => DefType;
 		public virtual WeaponAnimation AosAnimation => DefAnimation;
 
 		public virtual int InitMinHits => 0;
-		public virtual int InitMaxHits => 0; 
+		public virtual int InitMaxHits => 0;
 
         public virtual bool CanFortify => !IsImbued && NegativeAttributes.Antique < 4;
-        public virtual bool CanRepair => m_NegativeAttributes.NoRepair == 0; 
-		public virtual bool CanAlter => true; 
+        public virtual bool CanRepair => m_NegativeAttributes.NoRepair == 0;
+		public virtual bool CanAlter => true;
 
-		public override int PhysicalResistance => m_AosWeaponAttributes.ResistPhysicalBonus; 
+		public override int PhysicalResistance => m_AosWeaponAttributes.ResistPhysicalBonus;
 		public override int FireResistance => m_AosWeaponAttributes.ResistFireBonus;
-		public override int ColdResistance => m_AosWeaponAttributes.ResistColdBonus; 
+		public override int ColdResistance => m_AosWeaponAttributes.ResistColdBonus;
 		public override int PoisonResistance => m_AosWeaponAttributes.ResistPoisonBonus;
 		public override int EnergyResistance => m_AosWeaponAttributes.ResistEnergyBonus;
 
@@ -497,7 +497,7 @@ namespace Server.Items
 		[CommandProperty(AccessLevel.GameMaster)]
 		public int StrRequirement
 		{
-            get 
+            get
             {
                 if (m_NegativeAttributes.Massive > 0)
                 {
@@ -1499,7 +1499,7 @@ namespace Server.Items
 
 			bool blocked = false;
 
-			if (defender.Player || defender.Body.IsHuman || (defender is BaseCreature && 
+			if (defender.Player || defender.Body.IsHuman || (defender is BaseCreature &&
                                                             ((BaseCreature)defender).Controlled &&
                                                             defender.Skills[SkillName.Wrestling].Base >= 100))
 			{
@@ -1713,18 +1713,18 @@ namespace Server.Items
 		private bool m_InDoubleStrike;
         private bool m_ProcessingMultipleHits;
 
-		public bool InDoubleStrike 
+		public bool InDoubleStrike
         {
             get { return m_InDoubleStrike; }
             set
-            { 
+            {
                 m_InDoubleStrike = value;
 
                 if (m_InDoubleStrike)
                     ProcessingMultipleHits = true;
                 else
                     ProcessingMultipleHits = false;
-            } 
+            }
         }
 
         public bool ProcessingMultipleHits
@@ -2032,7 +2032,7 @@ namespace Server.Items
 				percentageBonus += 25;
 			}
 
-			if (attacker is PlayerMobile && defender is PlayerMobile)
+			if (attacker is PlayerMobile && !(defender is PlayerMobile))
 			{
 				PlayerMobile pmAttacker = (PlayerMobile)attacker;
 
@@ -2271,8 +2271,8 @@ namespace Server.Items
 				int toHeal = Utility.RandomMinMax(0, (int)(AOS.Scale(damageGiven, lifeLeech) * 0.3));
 
                 if (defender is BaseCreature && ((BaseCreature)defender).TaintedLifeAura)
-                {                            
-                    AOS.Damage(attacker, defender, toHeal, false, 0, 0, 0, 0, 0, 0, 100, false, false, false);                            
+                {
+                    AOS.Damage(attacker, defender, toHeal, false, 0, 0, 0, 0, 0, 0, 100, false, false, false);
                     attacker.SendLocalizedMessage(1116778); //The tainted life force energy damages you as your body tries to absorb it.
                 }
                 else
@@ -2432,7 +2432,7 @@ namespace Server.Items
 
                 int hldWep = m_AosWeaponAttributes.HitLowerDefend;
                 int hldGlasses = 0;
-                    
+
                 var helm = attacker.FindItemOnLayer(Layer.Helm);
 
                 if (helm != null)
@@ -5238,7 +5238,7 @@ namespace Server.Items
 				Attributes.WeaponDamage += (int)(from.Skills.ArmsLore.Value / div);
 				from.CheckSkill(SkillName.ArmsLore, 0, 100);
 			}
-			
+
 			if (craftItem != null && !craftItem.ForceNonExceptional)
 			{
 				CraftResourceInfo resInfo = CraftResources.GetInfo(m_Resource);

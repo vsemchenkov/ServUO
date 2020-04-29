@@ -34,10 +34,9 @@ namespace Server.Gumps
     public class CircuitTrapGump : BaseGump
     {
         public ICircuitTrap Trap { get; set; }
-        public List<int> Path { get { return Trap != null ? Trap.Path : null; } }
-        public List<int> Progress { get { return Trap != null ? Trap.Progress : null; } }
-
-        public CircuitCount Count { get { return Trap != null ? Trap.Count : CircuitCount.Nine; } }
+        public List<int> Path => Trap != null ? Trap.Path : null;
+        public List<int> Progress => Trap != null ? Trap.Progress : null;
+        public CircuitCount Count => Trap != null ? Trap.Count : CircuitCount.Nine;
         public bool ShowNext { get; set; }
 
         public CircuitTrapGump(PlayerMobile from, ICircuitTrap item)
@@ -139,7 +138,7 @@ namespace Server.Gumps
 
             AddButton(448, 185, 10700, 10701, 1, GumpButtonType.Reply, 0); // up
             AddButton(473, 222, 10710, 10711, 2, GumpButtonType.Reply, 0); // right
-            AddButton(448, 243, 10720, 10721, 3, GumpButtonType.Reply, 0); // down 
+            AddButton(448, 243, 10720, 10721, 3, GumpButtonType.Reply, 0); // down
             AddButton(408, 222, 10730, 10731, 4, GumpButtonType.Reply, 0); // left
 
         }
@@ -161,7 +160,7 @@ namespace Server.Gumps
                 var perRow = (int)Math.Sqrt(count);
                 int pick;
 
-                if (Progress.Count >= 0 && Progress.Count < Path.Count)
+                if (Progress.Count > 0 && Progress.Count < Path.Count)
                     next = Path[Progress.Count];
 
                 switch (id)

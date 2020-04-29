@@ -20,16 +20,16 @@ namespace Server.Engines.CityLoyalty
         public TradeMinister Minister { get; set; }
 
 		public Dictionary<Type, int> Table { get; protected set; }
-		
+
 		public virtual bool Animals { get { return false; } }
-		
+
 		public CityDonationItem(City city, TradeMinister minister, int itemid) : base(itemid)
 		{
 			City = city;
             Minister = minister;
             Movable = false;
 		}
-		
+
 		public override void OnDoubleClick(Mobile from)
 		{
             if (!CityLoyaltySystem.IsSetup())
@@ -45,7 +45,7 @@ namespace Server.Engines.CityLoyalty
                 SendMessageTo(from, 1152928); // If you wish to donate to the City simply drop the items into the crate.
             }
 		}
-		
+
 		public override bool OnDragDrop(Mobile from, Item dropped)
 		{
             if (!CityLoyaltySystem.IsSetup())
@@ -130,20 +130,20 @@ namespace Server.Engines.CityLoyalty
                 }
                 else
                 {
-                    system.AddToTreasury(null, 100);
+                    system.AddToTreasury(null, cargo.GetAwardAmount() * 500);
                 }
             }
         }
-		
+
 		private class InternalTarget : Target
 		{
 			public CityDonationItem Item { get; private set; }
-			
+
 			public InternalTarget(CityDonationItem item) : base(3, false, TargetFlags.None)
 			{
 				Item = item;
 			}
-			
+
 			protected override void OnTarget(Mobile from, object targeted)
 			{
 				if(targeted is BaseCreature)
@@ -156,7 +156,7 @@ namespace Server.Engines.CityLoyalty
 						if(Item.Table.ContainsKey(t))
 						{
 							CityLoyaltySystem sys = CityLoyaltySystem.GetCityInstance(Item.City);
-							
+
 							if(sys != null)
 							{
 								bc.Delete();
@@ -183,30 +183,30 @@ namespace Server.Engines.CityLoyalty
             else
                 m.SendLocalizedMessage(message);
         }
-		
+
 		public CityDonationItem(Serial serial) : base(serial)
 		{
 		}
-		
+
 		public override void Serialize(GenericWriter writer)
 		{
 			base.Serialize(writer);
 			writer.Write(0);
-			
+
 			writer.Write((int)City);
             writer.Write(Minister);
 		}
-		
+
 		public override void Deserialize(GenericReader reader)
 		{
 			base.Deserialize(reader);
 			int v = reader.ReadInt();
-			
+
 			City = (City)reader.ReadInt();
             Minister = reader.ReadMobile() as TradeMinister;
 		}
 	}
-	
+
 	public class CityItemDonation : CityDonationItem
 	{
 		[Constructable]
@@ -217,13 +217,13 @@ namespace Server.Engines.CityLoyalty
             if (CitySystem != null && CitySystem.Minister != null)
                 CitySystem.Minister.DonationCrate = this;
 		}
-		
+
 		public static Dictionary<Type, int> ItemTable { get; set; }
-		
+
 		public static void Configure()
 		{
 			ItemTable = new Dictionary<Type, int>();
-			
+
 			ItemTable.Add(typeof(BaseWoodBoard), 	    10);
 			ItemTable.Add(typeof(BaseIngot), 			10);
 			ItemTable.Add(typeof(BaseHides), 			10);
@@ -237,29 +237,29 @@ namespace Server.Engines.CityLoyalty
 			ItemTable.Add(typeof(Crossbow), 			20);
             ItemTable.Add(typeof(MaritimeCargo),        50);
         }
-		
+
 		public CityItemDonation(Serial serial) : base(serial)
 		{
 		}
-		
+
 		public override void Serialize(GenericWriter writer)
 		{
 			base.Serialize(writer);
 			writer.Write(0);
 		}
-		
+
 		public override void Deserialize(GenericReader reader)
 		{
 			base.Deserialize(reader);
 			int v = reader.ReadInt();
-			
+
 			Table = ItemTable;
 
             if (CitySystem != null && CitySystem.Minister != null)
                 CitySystem.Minister.DonationCrate = this;
 		}
 	}
-	
+
 	public class CityPetDonation : CityDonationItem
 	{
         public override bool Animals { get { return true; } }
@@ -272,13 +272,13 @@ namespace Server.Engines.CityLoyalty
             if (CitySystem != null && CitySystem.Minister != null)
                 CitySystem.Minister.DonationPost = this;
 		}
-		
+
 		public static Dictionary<Type, int> PetTable { get; set; }
-		
+
 		public static void Configure()
 		{
 			PetTable = new Dictionary<Type, int>();
-			
+
 			PetTable.Add(typeof(Dog), 		10);
 			PetTable.Add(typeof(Cat), 		10);
 			PetTable.Add(typeof(Cow), 		10);
@@ -288,22 +288,22 @@ namespace Server.Engines.CityLoyalty
 			PetTable.Add(typeof(Pig), 		10);
 			PetTable.Add(typeof(Chicken), 	10);
 		}
-		
+
 		public CityPetDonation(Serial serial) : base(serial)
 		{
 		}
-		
+
 		public override void Serialize(GenericWriter writer)
 		{
 			base.Serialize(writer);
 			writer.Write(0);
 		}
-		
+
 		public override void Deserialize(GenericReader reader)
 		{
 			base.Deserialize(reader);
 			int v = reader.ReadInt();
-			
+
 			Table = PetTable;
 
             if (CitySystem != null && CitySystem.Minister != null)

@@ -1,5 +1,3 @@
-using System;
-
 namespace Server.Items
 {
     public class SerpentArrow : WeaponAbility
@@ -9,7 +7,7 @@ namespace Server.Items
         }
 
         public override int BaseMana => 25;
-		
+
         public override SkillName GetSecondarySkill(Mobile from)
         {
             return SkillName.Poisoning;

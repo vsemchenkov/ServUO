@@ -247,7 +247,7 @@ namespace Server.Commands
 
                     for (int i = 0; i < pets.Count; ++i)
                     {
-                        Mobile pet = (Mobile)pets[i];
+                        Mobile pet = pets[i];
 
                         if (pet is IMount)
                             ((IMount)pet).Rider = null; // make sure it's dismounted
@@ -439,8 +439,8 @@ namespace Server.Commands
             BroadcastMessage(AccessLevel.Player, 0x482, e.ArgString);
         }
 
-        public static void BroadcastMessage(AccessLevel ac, int hue, string message) 
-        { 
+        public static void BroadcastMessage(AccessLevel ac, int hue, string message)
+        {
             World.Broadcast(hue, false, ac, message);
         }
 

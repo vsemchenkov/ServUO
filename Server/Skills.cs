@@ -244,7 +244,7 @@ namespace Server
 
                 if (VolumeLearned != 0)
                 {
-                    writer.Write((int)VolumeLearned);
+                    writer.Write(VolumeLearned);
                 }
 
                 if (NextGGSGain != DateTime.MinValue)
@@ -254,19 +254,19 @@ namespace Server
 			}
 		}
 
-		public Skills Owner => m_Owner; 
+		public Skills Owner => m_Owner;
 
-		public SkillName SkillName => (SkillName)m_Info.SkillID; 
+		public SkillName SkillName => (SkillName)m_Info.SkillID;
 
-		public int SkillID => m_Info.SkillID; 
-
-		[CommandProperty(AccessLevel.Counselor)]
-		public string Name => m_Info.Name; 
-
-		public SkillInfo Info => m_Info; 
+		public int SkillID => m_Info.SkillID;
 
 		[CommandProperty(AccessLevel.Counselor)]
-		public SkillLock Lock => m_Lock; 
+		public string Name => m_Info.Name;
+
+		public SkillInfo Info => m_Info;
+
+		[CommandProperty(AccessLevel.Counselor)]
+		public SkillLock Lock => m_Lock;
 
         [CommandProperty(AccessLevel.Counselor)]
         public int VolumeLearned
@@ -347,8 +347,8 @@ namespace Server
 		}
 
 		[CommandProperty(AccessLevel.Counselor, AccessLevel.GameMaster)]
-		public double Cap 
-        { 
+		public double Cap
+        {
             get { return (m_Cap / 10.0); }
             set
             {
@@ -367,7 +367,7 @@ namespace Server
 
 		public static bool UseStatMods { get { return m_UseStatMods; } set { m_UseStatMods = value; } }
 
-		public int Fixed => (int)(Value * 10); 
+		public int Fixed => (int)(Value * 10);
 
 		[CommandProperty(AccessLevel.Counselor)]
 		public double Value
@@ -535,7 +535,7 @@ namespace Server
 			double intGain,
 			double gainFactor,
 			StatCode primary,
-            StatCode secondary, 
+            StatCode secondary,
             bool mastery = false,
             bool usewhilecasting = false)
 		{
@@ -563,7 +563,7 @@ namespace Server
 
 		public SkillUseCallback Callback { get; set; }
 
-		public int SkillID => m_SkillID; 
+		public int SkillID => m_SkillID;
 
 		public string Name { get; set; }
 
@@ -589,7 +589,7 @@ namespace Server
 
         public bool UseWhileCasting { get; set; }
 
-        public int Localization => 1044060 + SkillID; 
+        public int Localization => 1044060 + SkillID;
 
         private static SkillInfo[] m_Table = new SkillInfo[58]
 		{
@@ -852,11 +852,11 @@ namespace Server
 
 		public int Total { get { return m_Total; } set { m_Total = value; } }
 
-		public Mobile Owner => m_Owner; 
+		public Mobile Owner => m_Owner;
 
-		public int Length => m_Skills.Length; 
+		public int Length => m_Skills.Length;
 
-		public Skill this[SkillName name] => this[(int)name]; 
+		public Skill this[SkillName name] => this[(int)name];
 
 		public Skill this[int skillID]
 		{

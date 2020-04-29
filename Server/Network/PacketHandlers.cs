@@ -48,7 +48,7 @@ namespace Server.Network
 		private static readonly EncodedPacketHandler[] m_EncodedHandlersLow;
 		private static readonly Dictionary<int, EncodedPacketHandler> m_EncodedHandlersHigh;
 
-		public static PacketHandler[] Handlers => m_Handlers; 
+		public static PacketHandler[] Handlers => m_Handlers;
 
 		static PacketHandlers()
 		{
@@ -1705,7 +1705,7 @@ namespace Server.Network
             /* 640x480    5     18   15
              * 800x600    5     18   18
              * 1024x768   5     24   24
-             * 1152x864   5     24   24 
+             * 1152x864   5     24   24
              * 1280x720   5     24   24
              */
 
@@ -1713,7 +1713,7 @@ namespace Server.Network
 
 			// Don't let range drop below the minimum standard.
 			range = Math.Max(Core.GlobalUpdateRange, range);
-			
+
             int old = state.UpdateRange;
 
 			if (old == range)
@@ -2156,7 +2156,7 @@ namespace Server.Network
 							using (var e = menu.Entries[index])
 							{
 								int range = e.Range;
-	
+
 								if (range == -1)
 								{
 									if (user.NetState != null && user.NetState.UpdateRange > 0)
@@ -2364,7 +2364,7 @@ namespace Server.Network
 			{
 				bool authOK = false;
 
-				ulong razorFeatures = (((ulong)pvSrc.ReadUInt32())<<32) | ((ulong)pvSrc.ReadUInt32());
+                ulong razorFeatures = (((ulong)pvSrc.ReadUInt32()) << 32) | pvSrc.ReadUInt32();
 
 				if (razorFeatures == (ulong)FeatureProtection.DisabledFeatures)
 				{
@@ -2455,7 +2455,7 @@ namespace Server.Network
 					}
 
 					NetState.ProcessDisposedQueue();
-					
+
 					state.Flags = (ClientFlags)flags;
 
 					state.Mobile = m;
@@ -2935,7 +2935,7 @@ namespace Server.Network
 				state.Dispose();
 				return;
 			}
-			
+
 			if (state.AuthID == 0 && authID != state.Seed)
 			{
 				Utility.PushColor(ConsoleColor.Red);

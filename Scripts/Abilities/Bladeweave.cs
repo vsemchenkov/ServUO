@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Server;
-using Server.Items;
 using Server.Mobiles;
 
 namespace Server.Items
@@ -38,7 +36,7 @@ namespace Server.Items
         {
         }
 
-        public override int BaseMana => 30; 
+        public override int BaseMana => 30;
 
         public override bool OnBeforeSwing(Mobile attacker, Mobile defender)
         {
@@ -105,7 +103,7 @@ namespace Server.Items
             }
 
 
-            return ((BladeWeaveRedirect)m_NewAttack[attacker]).NewAbility.OnBeforeSwing(attacker, defender);
+            return m_NewAttack[attacker].NewAbility.OnBeforeSwing(attacker, defender);
         }
 
         public override bool OnBeforeDamage(Mobile attacker, Mobile defender)

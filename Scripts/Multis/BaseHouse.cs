@@ -24,11 +24,11 @@ namespace Server.Multis
 
         public static bool NewVendorSystem => true; // Is new player vendor system enabled?
 
-        public static double GlobalBonusStorageScalar => 1.4; 
+        public static double GlobalBonusStorageScalar => 1.4;
 
         public const int MaxCoOwners = 15;
-        public static int MaxFriends => 140; 
-        public static int MaxBans => 140; 
+        public static int MaxFriends => 140;
+        public static int MaxBans => 140;
 
         #region Dynamic decay system
         private DecayLevel m_CurrentStage;
@@ -68,7 +68,7 @@ namespace Server.Multis
         [CommandProperty(AccessLevel.GameMaster)]
         public bool RestrictDecay { get; set; }
 
-        public virtual TimeSpan DecayPeriod => TimeSpan.FromDays(5.0); 
+        public virtual TimeSpan DecayPeriod => TimeSpan.FromDays(5.0);
 
         public virtual DecayType DecayType
         {
@@ -313,7 +313,7 @@ namespace Server.Multis
             }
         }
 
-        public virtual TimeSpan RestrictedPlacingTime => TimeSpan.FromHours(1.0); 
+        public virtual TimeSpan RestrictedPlacingTime => TimeSpan.FromHours(1.0);
 
         [CommandProperty(AccessLevel.GameMaster)]
         public virtual double BonusStorageScalar
@@ -333,9 +333,9 @@ namespace Server.Multis
 
         private static readonly Dictionary<Mobile, List<BaseHouse>> m_Table = new Dictionary<Mobile, List<BaseHouse>>();
 
-        public virtual bool IsAosRules => true; 
+        public virtual bool IsAosRules => true;
 
-        public virtual bool IsActive => true; 
+        public virtual bool IsActive => true;
 
         public virtual HousePlacementEntry GetAosEntry()
         {
@@ -583,7 +583,7 @@ namespace Server.Multis
             }
         }
         #endregion
-        
+
         public List<Mobile> AvailableVendorsFor(Mobile m)
         {
             List<Mobile> list = new List<Mobile>();
@@ -1248,7 +1248,7 @@ namespace Server.Multis
         private Type[] _AccessibleToAll =
         {
             typeof(TenthAnniversarySculpture), typeof(RewardBrazier), typeof(VendorRentalContract), typeof(Dyes), typeof(DyeTub),
-            typeof(BaseInstrument), typeof(Clock), typeof(TreasureMap), typeof(RecallRune), typeof(Dices), typeof(BaseBoard), 
+            typeof(BaseInstrument), typeof(Clock), typeof(TreasureMap), typeof(RecallRune), typeof(Dices), typeof(BaseBoard),
             typeof(Runebook)
         };
 
@@ -2344,6 +2344,10 @@ namespace Server.Multis
                 vendor.RenterRenew = false;
                 vendor.LandlordRenew = false;
             }
+            foreach (var barkeep in PlayerBarkeepers.OfType<PlayerBarkeeper>())
+            {
+                barkeep.Owner = Owner;
+            }
         }
 
         public void OnCondemned()
@@ -2353,8 +2357,8 @@ namespace Server.Multis
                 string name = Sign == null || Sign.Name == null ? "An Unnamed House" : Sign.Name;
 
                 var message = new NewMaginciaMessage(null, new TextDefinition(1154338), string.Format("{0}\t{1}", vendor.ShopName, name));
-                /* Your rental vendor named ~1_VENDOR~ located in house: ~2_HOUSE~ is in danger of deletion. 
-                 * This house has been condemned and you should remove everything on your vendor AS SOON AS 
+                /* Your rental vendor named ~1_VENDOR~ located in house: ~2_HOUSE~ is in danger of deletion.
+                 * This house has been condemned and you should remove everything on your vendor AS SOON AS
                  * POSSIBLE or risk possible deletion.*/
 
                 MaginciaLottoSystem.SendMessageTo(vendor.Owner, message);
@@ -2478,7 +2482,7 @@ namespace Server.Multis
                 // Mondain's Legacy mod
                 else if (!(item is BaseAddonContainer) && !item.Movable)
                 {
-                    m.SendLocalizedMessage(1010424); // You cannot secure 
+                    m.SendLocalizedMessage(1010424); // You cannot secure
                 }
                 else if (!IsAosRules && SecureCount >= MaxSecures)
                 {
@@ -2664,7 +2668,7 @@ namespace Server.Multis
             return true;
         }
 
-        public override bool Decays => false; 
+        public override bool Decays => false;
 
         public void AddStrongBox(Mobile from)
         {
@@ -2900,7 +2904,7 @@ namespace Server.Multis
             CoOwners.Add(targ);
 
             List<Mobile> remove = new List<Mobile>();
-            
+
             foreach(Mobile m in CoOwners)
             {
                 if (AccountHandler.CheckAccount(m, targ) && m != targ)
@@ -3617,8 +3621,8 @@ namespace Server.Multis
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int TotalVisits
-        { 
-            get { return Visits.Count; } 
+        {
+            get { return Visits.Count; }
         }
 
         [CommandProperty(AccessLevel.GameMaster)]
@@ -4100,7 +4104,7 @@ namespace Server.Multis
         public static int GetAccountHouseLimit(Mobile m)
         {
             var max = AccountHouseLimit;
-            
+
             return max;
         }
 
@@ -4213,12 +4217,12 @@ namespace Server.Multis
             }
         }
 
-        public virtual HousePlacementEntry ConvertEntry => null; 
-        public virtual int ConvertOffsetX => 0; 
-        public virtual int ConvertOffsetY => 0; 
-        public virtual int ConvertOffsetZ => 0; 
+        public virtual HousePlacementEntry ConvertEntry => null;
+        public virtual int ConvertOffsetX => 0;
+        public virtual int ConvertOffsetY => 0;
+        public virtual int ConvertOffsetZ => 0;
 
-        public virtual int DefaultPrice => 0; 
+        public virtual int DefaultPrice => 0;
 
         [CommandProperty(AccessLevel.GameMaster)]
         public int Price { get; set; }
@@ -4468,7 +4472,7 @@ namespace Server.Multis
                     #endregion
                     else if (item.Parent is Container)
                     {
-                        from.SendLocalizedMessage(1080387); // You may not release this while it is in a container. 
+                        from.SendLocalizedMessage(1080387); // You may not release this while it is in a container.
                     }
                     else
                     {
@@ -4942,7 +4946,7 @@ namespace Server.Multis
             {
                 from.SendLocalizedMessage(500979); // You cannot see that location.
             }
-        }        
+        }
     }
 
     public class ReleaseEntry : ContextMenuEntry

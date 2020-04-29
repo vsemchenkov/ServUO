@@ -10,7 +10,7 @@ namespace Server.Items
     /// <summary>
     /// Make your opponent bleed profusely with this wicked use of your weapon.
     /// When successful, the target will bleed for several seconds, taking damage as time passes for up to ten seconds.
-    /// The rate of damage slows down as time passes, and the blood loss can be completely staunched with the use of bandages. 
+    /// The rate of damage slows down as time passes, and the blood loss can be completely staunched with the use of bandages.
     /// </summary>
     public class BleedAttack : WeaponAbility
     {
@@ -21,12 +21,12 @@ namespace Server.Items
         }
 
         public override int BaseMana => 30;
-		
+
 		public static bool IsBleeding(Mobile m)
         {
             return m_BleedTable.ContainsKey(m);
         }
-		
+
 		public static void BeginBleed(Mobile m, Mobile from, bool splintering = false)
         {
             BleedTimer timer = null;
@@ -108,7 +108,7 @@ namespace Server.Items
             if (message)
                 m.SendLocalizedMessage(1060167); // The bleeding wounds have healed, you are no longer bleeding!
         }
-		
+
 		public static bool CheckBloodDrink(Mobile attacker)
 		{
             return attacker.Weapon is BaseWeapon && ((BaseWeapon)attacker.Weapon).WeaponAttributes.BloodDrinker > 0;
@@ -139,7 +139,7 @@ namespace Server.Items
             private readonly Mobile m_From;
             private readonly Mobile m_Mobile;
             private int m_Count;
-            private int m_MaxCount;
+            private readonly int m_MaxCount;
             private readonly bool m_BloodDrinker;
 
             public BleedTimer(Mobile from, Mobile m, bool blooddrinker)

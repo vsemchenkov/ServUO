@@ -318,13 +318,13 @@ namespace Server.Mobiles
 			}
 		}
 
-		public TimeSpan RealTOD => DateTime.UtcNow.TimeOfDay; 
+		public TimeSpan RealTOD => DateTime.UtcNow.TimeOfDay;
 
-		public int RealDay => DateTime.UtcNow.Day; 
+		public int RealDay => DateTime.UtcNow.Day;
 
-		public int RealMonth => DateTime.UtcNow.Month; 
+		public int RealMonth => DateTime.UtcNow.Month;
 
-		public DayOfWeek RealDayOfWeek => DateTime.UtcNow.DayOfWeek; 
+		public DayOfWeek RealDayOfWeek => DateTime.UtcNow.DayOfWeek;
 
 		public MoonPhase MoonPhase
 		{
@@ -361,7 +361,7 @@ namespace Server.Mobiles
 		private bool sectorIsActive = false;
 		private bool UseSectorActivate = false;
 
-		public bool SingleSector => UseSectorActivate; 
+		public bool SingleSector => UseSectorActivate;
 
 		public bool InActivationRange(Sector s1, Sector s2)
 		{
@@ -485,7 +485,7 @@ namespace Server.Mobiles
 								loc = ((Item)(RootParent)).Location;
 					}
 
-					// find the max detection range by examining both spawnrange 
+					// find the max detection range by examining both spawnrange
 					// note, sectors will activate when within +-2 sectors
 					int bufferzone = 2 * Server.Map.SectorSize;
 					int x1 = m_X - bufferzone;
@@ -604,7 +604,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		public int SecCount => seccount; 
+		public int SecCount => seccount;
 
 		public bool IsInactivated
 		{
@@ -901,7 +901,7 @@ namespace Server.Mobiles
 					if(so.SpawnedObjects[0] is Mobile)
 						return false;
 				}
-					
+
 			}
 			return true;
 		}
@@ -1873,7 +1873,7 @@ namespace Server.Mobiles
 					}
 				}
 
-				//IsInactivated = false; 
+				//IsInactivated = false;
 			}
 		}
 
@@ -1890,9 +1890,9 @@ namespace Server.Mobiles
 
 		#region ISpawner interface support
 
-		public bool UnlinkOnTaming => true; 
-		public Point3D HomeLocation => this.Location; 
-		public int Range => HomeRange; 
+		public bool UnlinkOnTaming => true;
+		public Point3D HomeLocation => this.Location;
+		public int Range => HomeRange;
 
 		public virtual void GetSpawnProperties(ISpawnable spawn, ObjectPropertyList list)
 		{ }
@@ -3024,7 +3024,7 @@ public static void _TraceEnd(int index)
 			}
 		}
 
-		public bool HandlesOnSkillUse => (m_Running && m_SkillTrigger != null && m_SkillTrigger.Length > 0); 
+		public bool HandlesOnSkillUse => (m_Running && m_SkillTrigger != null && m_SkillTrigger.Length > 0);
 
 		// this is the handler for skill use
 		public void OnSkillUse(Mobile m, Skill skill, bool success)
@@ -3053,7 +3053,7 @@ public static void _TraceEnd(int index)
 		}
 
 
-		public override bool HandlesOnSpeech => (m_Running && m_SpeechTrigger != null && m_SpeechTrigger.Length > 0); 
+		public override bool HandlesOnSpeech => (m_Running && m_SpeechTrigger != null && m_SpeechTrigger.Length > 0);
 
 		public override void OnSpeech(SpeechEventArgs e)
 		{
@@ -4709,7 +4709,7 @@ public static void _TraceEnd(int index)
 								catch { }
 								OtherCount++;
 							}
-							
+
 							// Check if this spawner already exists
 							XmlSpawner OldSpawner = null;
 							foreach (Item i in World.Items.Values)
@@ -7058,7 +7058,7 @@ public static void _TraceEnd(int index)
 			}
 
 			m.SendMessage("Saving object in folder {0} - file {1} - spawner {2}.", dirname, filename, xmlspawner);
-			
+
 			List<XmlSpawner> saveslist = new List<XmlSpawner>(1);
 			saveslist.Add(xmlspawner);
 			SaveSpawnList(m, saveslist, dirname, false, true);
@@ -7649,11 +7649,11 @@ public static void _TraceEnd(int index)
 					double load = 0;
 					if(processtime > 0)
 					{
-						load  = ((double)XmlSpawner._traceTotal[i].TotalMilliseconds)/processtime;
+                        load = _traceTotal[i].TotalMilliseconds / processtime;
 					}
 						 Console.WriteLine( "{0} ({4}) {1,21} / {2} calls = {3:####.####} ms/call, {5:p3}",
-						i,XmlSpawner._traceTotal[i], XmlSpawner._traceCount[i],((double)XmlSpawner._traceTotal[i].TotalMilliseconds)/XmlSpawner._traceCount[i],
-						XmlSpawner._traceName[i], load);
+                             i, XmlSpawner._traceTotal[i], XmlSpawner._traceCount[i], _traceTotal[i].TotalMilliseconds / XmlSpawner._traceCount[i],
+                             XmlSpawner._traceName[i], load);
 				}
 			}
 		}
@@ -10128,7 +10128,7 @@ public static void _TraceEnd(int index)
 						{
 							if(i.ItemData.Impassable)
 								excludetile=true;
-	
+
 							TileFlag iflags = TileData.ItemTable[i.ItemID & TileData.MaxItemValue].Flags;
 							if (includetilelist != null && includetilelist.Count > 0)
 							{
@@ -10138,7 +10138,7 @@ public static void _TraceEnd(int index)
 							{
 								includetile = true;
 							}
-		
+
 							if (excludetilelist != null && excludetilelist.Count > 0)
 							{
 								excludetile = excludetilelist.Contains(i.ItemID & TileData.MaxItemValue);
@@ -10147,7 +10147,7 @@ public static void _TraceEnd(int index)
 							{
 								excludetile = false;
 							}
-	
+
 							if (includetile && !excludetile && ((iflags & tileflag) == tileflag))
 							{
 								p=new Point3D(x, y, i.Z + i.ItemData.Height);
@@ -11596,7 +11596,7 @@ public static void _TraceEnd(int index)
 					writer.Write(so.KillsNeeded);
 				}
 			}
-			writer.Write(m_RegionName);	
+			writer.Write(m_RegionName);
 
 			// Version 15
 			writer.Write(m_ExternalTriggering);

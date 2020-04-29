@@ -42,7 +42,7 @@ namespace Server.Network
 		AreHolding = 4,
 		Inspecific = 5
 	}
-    
+
 	public sealed class DamagePacket : Packet
 	{
 		public DamagePacket(IEntity entity, int amount)
@@ -78,7 +78,7 @@ namespace Server.Network
 		m_Stream.Write( (byte)amount );
 		}*/
 	}
-    
+
 	public sealed class CancelArrow : Packet
 	{
 		public CancelArrow(int x, int y, Serial s)
@@ -163,7 +163,7 @@ namespace Server.Network
 			m_Stream.Write(second);
 		}
 	}
-    
+
 	public sealed class SecureTradeEquip : Packet
 	{
 		public SecureTradeEquip(Item item, Mobile m)
@@ -219,7 +219,7 @@ namespace Server.Network
 			m_Stream.WriteBigUniNull(text);
 		}
 	}
-    
+
 	public sealed class VendorBuyContent : Packet
 	{
 		public VendorBuyContent(List<BuyItemState> list)
@@ -379,7 +379,7 @@ namespace Server.Network
             {
                 m_Stream.Write((byte)2);
             }
-			
+
 			m_Stream.Write(m.Serial);
 			m_Stream.Write((byte)0);
 
@@ -552,10 +552,10 @@ namespace Server.Network
 
             Serial senderSerial = prompt.Sender != null ? prompt.Sender.Serial : to.Serial;
 
-            m_Stream.Write((int)senderSerial);
-            m_Stream.Write((int)prompt.TypeId); //0x2C
-            m_Stream.Write((int)0); // type
-            m_Stream.Write((int)0); // language
+            m_Stream.Write(senderSerial);
+            m_Stream.Write(prompt.TypeId); //0x2C
+            m_Stream.Write(0); // type
+            m_Stream.Write(0); // language
             m_Stream.Write((short)0); // text
         }
 	}
@@ -900,7 +900,7 @@ namespace Server.Network
 				m_Stream.Write((short)flags);
 			}
 		}
-	}	
+	}
 
 	public sealed class DisplayProfile : Packet
 	{
@@ -1314,8 +1314,8 @@ namespace Server.Network
             : base(0x70, 28)
         {
             m_Stream.Write((byte)type);
-            m_Stream.Write((int)from);
-            m_Stream.Write((int)to);
+            m_Stream.Write(from);
+            m_Stream.Write(to);
             m_Stream.Write((short)itemID);
             m_Stream.Write((short)fromPoint.X);
             m_Stream.Write((short)fromPoint.Y);
@@ -1327,7 +1327,7 @@ namespace Server.Network
             m_Stream.Write((byte)duration);
             m_Stream.Write((byte)0);
             m_Stream.Write((byte)0);
-            m_Stream.Write((bool)fixedDirection);
+            m_Stream.Write(fixedDirection);
             m_Stream.Write((byte)explode);
         }
     }
@@ -1682,7 +1682,7 @@ namespace Server.Network
             m_Stream.Write(true); // explode
         }
     }
-    
+
 	public sealed class DisplaySpellbook : Packet
 	{
 		public DisplaySpellbook(Item book)
@@ -1714,7 +1714,7 @@ namespace Server.Network
 			}
 		}
 	}
-    
+
 	public sealed class ContainerDisplay : Packet
 	{
 		public ContainerDisplay(Container c)
@@ -1725,7 +1725,7 @@ namespace Server.Network
             m_Stream.Write((short)0x7D);
         }
 	}
-    
+
 	public sealed class ContainerContentUpdate : Packet
 	{
 		public ContainerContentUpdate(Item item)
@@ -1749,12 +1749,12 @@ namespace Server.Network
 			m_Stream.Write((ushort)item.Amount);
 			m_Stream.Write((short)item.X);
 			m_Stream.Write((short)item.Y);
-            m_Stream.Write((byte)item.GridLocation);
+            m_Stream.Write(item.GridLocation);
             m_Stream.Write(parentSerial);
 			m_Stream.Write((ushort)(item.QuestItem ? item.QuestItemHue : item.Hue));
 		}
 	}
-    
+
 	public sealed class ContainerContent : Packet
 	{
 		public ContainerContent(Mobile beholder, Item beheld)
@@ -1790,7 +1790,7 @@ namespace Server.Network
 					m_Stream.Write((ushort)child.Amount);
 					m_Stream.Write((short)loc.m_X);
 					m_Stream.Write((short)loc.m_Y);
-                    m_Stream.Write((byte)child.GridLocation);
+                    m_Stream.Write(child.GridLocation);
                     m_Stream.Write(beheld.Serial);
 					m_Stream.Write((ushort)(child.QuestItem ? child.QuestItemHue : child.Hue));
 
@@ -2081,7 +2081,7 @@ namespace Server.Network
 			m_Stream.Write((byte)noto);
 		}
 	}
-    
+
 	public sealed class MultiTargetReq : Packet
 	{
 		public MultiTargetReq(MultiTarget t)
@@ -2261,7 +2261,7 @@ namespace Server.Network
 			m_Layout.Write((byte)0);
 			WritePacked(m_Layout);
 
-            m_Stream.Write((int)m_StringCount);
+            m_Stream.Write(m_StringCount);
 
             WritePacked(m_Strings);
 
@@ -3225,7 +3225,7 @@ namespace Server.Network
 			m_Stream.Write((byte)m.Direction);
 			m_Stream.Write((sbyte)m.Z);
 		}
-	}	
+	}
 
 	public sealed class MobileIncoming : Packet
 	{
@@ -3676,7 +3676,7 @@ namespace Server.Network
 	{
 		private static ThirdPartyFeature m_Disabled = 0;
 
-		public static ThirdPartyFeature DisabledFeatures => m_Disabled; 
+		public static ThirdPartyFeature DisabledFeatures => m_Disabled;
 
 		public static void Disable(ThirdPartyFeature feature)
 		{
@@ -3870,16 +3870,16 @@ namespace Server.Network
             AffixType affixType,
             string affix,
             string args)
-            : this(null, 
-                serial, 
-                graphic, 
-                messageType, 
-                hue, 
-                font, 
-                number, 
-                name, 
-                affixType, 
-                affix, 
+            : this(null,
+                serial,
+                graphic,
+                messageType,
+                hue,
+                font,
+                number,
+                name,
+                affixType,
+                affix,
                 args)
         {
         }
@@ -4065,9 +4065,9 @@ namespace Server.Network
 
 		private PacketState m_State;
 
-		public int PacketID => m_PacketID; 
+		public int PacketID => m_PacketID;
 
-		public PacketState State => m_State; 
+		public PacketState State => m_State;
 
 		protected Packet(int packetID)
         {
@@ -4106,7 +4106,7 @@ namespace Server.Network
             m_Stream.Write((short)0);
         }
 
-		public PacketWriter UnderlyingStream => m_Stream; 
+		public PacketWriter UnderlyingStream => m_Stream;
 
 		private const int CompressorBufferSize = 0x10000;
 		private static readonly BufferPool m_CompressorBuffers = new BufferPool("Compressor", 4, CompressorBufferSize);

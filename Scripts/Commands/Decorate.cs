@@ -121,7 +121,7 @@ namespace Server.Commands
 
             for (int j = 0; j < m_List.Count; ++j)
             {
-                DecorationList list = (DecorationList)m_List[j];
+                DecorationList list = m_List[j];
 
                 if (list.ID == id)
                     return list.Constructed;
@@ -206,7 +206,7 @@ namespace Server.Commands
                 else if (m_Type == typeof(SecretSwitch))
                 {
                     int id = 0;
-					
+
                     for (int i = 0; i < m_Params.Length; ++i)
                     {
                         if (m_Params[i].StartsWith("SecretWall"))
@@ -220,28 +220,28 @@ namespace Server.Commands
                             }
                         }
                     }
-					
+
                     Item wall = Decorate.FindByID(id);
-					
+
                     item = new SecretSwitch(m_ItemID, wall as SecretWall);
                 }
                 else if (m_Type == typeof(SecretWall))
                 {
                     SecretWall wall = new SecretWall(m_ItemID);
-				
+
                     for (int i = 0; i < m_Params.Length; ++i)
                     {
                         if (m_Params[i].StartsWith("MapDest"))
                         {
                             int indexOf = m_Params[i].IndexOf('=');
-	
+
                             if (indexOf >= 0)
                                 wall.MapDest = Map.Parse(m_Params[i].Substring(++indexOf));
                         }
                         else if (m_Params[i].StartsWith("PointDest"))
                         {
                             int indexOf = m_Params[i].IndexOf('=');
-	
+
                             if (indexOf >= 0)
                                 wall.PointDest = Point3D.Parse(m_Params[i].Substring(++indexOf));
                         }
@@ -250,8 +250,8 @@ namespace Server.Commands
                             wall.Locked = false;
                         }
                     }
-					
-                    item = wall;					
+
+                    item = wall;
                 }
                 else if (m_Type == typeofLocalizedStatic)
                 {
@@ -590,7 +590,7 @@ namespace Server.Commands
 
                     for (int i = 0; i < comps.Count; ++i)
                     {
-                        AddonComponent comp = (AddonComponent)comps[i];
+                        AddonComponent comp = comps[i];
 
                         if (comp.Offset == Point3D.Zero)
                             comp.ItemID = m_ItemID;
@@ -607,7 +607,7 @@ namespace Server.Commands
                         unlit = true;
                     else if (!unprotected && m_Params[i] == "Unprotected")
                         unprotected = true;
-					
+
                     if (unlit && unprotected)
                         break;
                 }

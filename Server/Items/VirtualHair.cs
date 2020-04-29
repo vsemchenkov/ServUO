@@ -171,11 +171,11 @@ namespace Server
 
             int faceSerial = FaceInfo.FakeSerial(parent);
 
-            m_Stream.Write((int)faceSerial);
+            m_Stream.Write(faceSerial);
             m_Stream.Write((short)parent.FaceItemID);
             m_Stream.Write((byte)0);
             m_Stream.Write((byte)Layer.Face);
-            m_Stream.Write((int)parent.Serial);
+            m_Stream.Write(parent.Serial);
             m_Stream.Write((short)hue);
         }
     }

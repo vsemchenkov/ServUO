@@ -1,4 +1,3 @@
-using System;
 
 namespace Server.Items
 {
@@ -19,12 +18,12 @@ namespace Server.Items
         }
 
         public override int BaseMana => 20;
-        
+
         public override bool RequiresSecondarySkill(Mobile from)
         {
             return false;
         }
-        
+
         public override SkillName GetSecondarySkill(Mobile from)
         {
             return SkillName.Poisoning;
@@ -61,7 +60,7 @@ namespace Server.Items
             else
                 attacker.SendLocalizedMessage(1156095); // Your mastery of poisoning allows you to use your poison charge without consuming it.
 
-            // Infectious strike special move now uses poisoning skill to help determine potency 
+            // Infectious strike special move now uses poisoning skill to help determine potency
             int maxLevel = 0;
             if (p == Poison.DarkGlow)
             {
@@ -75,13 +74,13 @@ namespace Server.Items
             	if (maxLevel > 18)
             		maxLevel = 18;
             }
-			else            
+			else
 			{
 				maxLevel = attacker.Skills[SkillName.Poisoning].Fixed / 200;
 				if (maxLevel > 5)
 					maxLevel = 5;
 			}
-			
+
             if (maxLevel < 0)
                 maxLevel = 0;
             if (p.Level > maxLevel) // If they don't have enough Poisoning Skill for the potion strength, lower it.
@@ -93,7 +92,7 @@ namespace Server.Items
             	{
             		int level = p.Level + 1;
                 	Poison newPoison = Poison.GetPoison(level);
-           	
+
 	                if (newPoison != null)
 	                {
                  	   p = newPoison;
@@ -109,7 +108,7 @@ namespace Server.Items
 
             if (defender.ApplyPoison(attacker, p) != ApplyPoisonResult.Immune)
             {
-                attacker.SendLocalizedMessage(1008096, true, defender.Name); // You have poisoned your target : 
+                attacker.SendLocalizedMessage(1008096, true, defender.Name); // You have poisoned your target :
                 defender.SendLocalizedMessage(1008097, false, attacker.Name); //  : poisoned you!
             }
         }

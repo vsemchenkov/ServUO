@@ -1,6 +1,5 @@
 using System;
 using Server.Mobiles;
-using System.Collections.Generic;
 
 namespace Server.Items
 {
@@ -48,7 +47,7 @@ namespace Server.Items
             {
                 BlockMountType type = BlockMountType.RidingSwipe;
                 IMount mount = defender.Mount;
-                
+
                 if (defender.Flying)
                 {
                     type = BlockMountType.RidingSwipeFlying;

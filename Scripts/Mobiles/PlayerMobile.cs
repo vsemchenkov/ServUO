@@ -211,6 +211,10 @@ namespace Server.Mobiles
 
         #endregion
 
+        #region GMtool
+
+        #endregion
+
         private class CountAndTimeStamp
         {
             private int m_Count;
@@ -1424,6 +1428,11 @@ namespace Server.Mobiles
         private static void OnLogin(LoginEventArgs e)
         {
             Mobile from = e.Mobile;
+
+            if (from.AccessLevel >= AccessLevel.Administrator)
+            {
+                from.SendGump(new IceGMTool(from));
+            }
 
             CheckAtrophies(from);
 
