@@ -75,6 +75,8 @@ namespace Server.Engines.Points
 
         public virtual bool ShowOnLoyaltyGump { get { return true; } }
 
+        public PlayerMobile Player { get; set; }
+
         public PointsSystem()
         {
             PlayerTable = new List<PointsEntry>();
@@ -150,8 +152,8 @@ namespace Server.Engines.Points
             if (entry != null)
             {
                 entry.Points = points;
-                pm.SendMessage($"У вас {PvMPoints.ToString()} PvM Points");
-                pm.SendMessage($"У вас {PvPPoints.ToString()} PvP Points");
+                pm.SendMessage($"У вас {(int)PvPPoints.GetPoints(pm)} PvM Points");
+                pm.SendMessage($"У вас {(int)PvMPoints.GetPoints(pm)} PvP Points");
             }
         }
 
@@ -393,7 +395,6 @@ namespace Server.Engines.Points
         public static VirtueArtifactsSystem VirtueArtifacts { get; set; }
         public static FellowshipData FellowshipData { get; set; }
         public static PvMPoints PvMPoints { get; set; }
-
         public static PvPPoints PvPPoints { get; set; }
 
 

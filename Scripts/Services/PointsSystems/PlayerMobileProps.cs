@@ -40,11 +40,11 @@ namespace Server.Mobiles
         {
             get
             {
-                return (int)PointsSystem.PvPPoints.GetPoints(Player);
+                return (int)PointsSystem.PvMPoints.GetPoints(Player);
             }
             set
             {
-                PointsSystem.PvPPoints.SetPoints(Player, value);
+                PointsSystem.PvMPoints.SetPoints(Player, value);
             }
         }
 

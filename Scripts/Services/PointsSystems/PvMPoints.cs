@@ -49,9 +49,10 @@ namespace Server.Engines.Points
             if (pm.Region.Name == "Destard")
             {
                 pm.SendMessage($"STR: {bc.Str}");
-                SetPoints(pm, (int)Math.Max(0, (((int) bc.Str / 29))) );
                 double pvmpoints = GetPoints(pm);
-                pm.SendMessage($"Вы получили {pvmpoints}");
+                SetPoints(pm, (pvmpoints + Math.Max(0, bc.Str / 29)) );
+                double resultPvM = GetPoints(pm) - pvmpoints;
+                pm.SendMessage($"Вы получили {resultPvM} PvM Points");
             }
             else
             {

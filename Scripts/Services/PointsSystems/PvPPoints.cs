@@ -111,6 +111,10 @@ namespace Server.Engines.Points
                 pm.SendMessage($"BC:{pvpbc} PM:{pvppm}");
                 victim.SendMessage($"Hello");
             }
+            else
+            {
+                pm.SendMessage($"За убийство игроков имеющих PvP Point вы можете получить PvP points убив их в PvP Zone!");
+            }
         }
 
 

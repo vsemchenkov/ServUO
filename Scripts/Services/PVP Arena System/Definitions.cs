@@ -131,7 +131,7 @@ namespace Server.Engines.ArenaSystem
                 },
                 new Rectangle2D[]
                 {
-                    new Rectangle2D(6059, 3697, 53, 56)
+                    // new Rectangle2D(6059, 3697, 53, 56)
                 },
                 new Rectangle2D(6099, 3718, 5, 7),
                 new Rectangle2D(6097, 3729, 2, 2));

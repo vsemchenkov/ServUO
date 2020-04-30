@@ -2,83 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5af0b22d-c7e0-4922-aecd-c8f1b5b71c18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Quests/MLQuests 2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Champions/ChampionSystem.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/CommunityCollections.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/CraftContext/BODs.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/CraftContext/Contexts.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/CraftContext/DistillationContexts.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/CraftContext/ReforgingContexts.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Disguises/Persistence.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Guilds/Guilds.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Guilds/Guilds.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Help/Pages.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Highseas.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/Astronomy.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/EnchantedHotItem.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/FellowshipChain.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/FellowshipDonationBox.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/KrampusEncounter.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/MiningCooperative.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/Persistence.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/SeasonalEvents.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/SpawnerPresistence.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/SphynxFortune/Persistence.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/TownCrierGlobalEntries.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/UltimaStore 2.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/UltimaStore.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/VendorSearch.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.tdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/PointsSystem/Persistence.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Quests/MLQuests.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/VoidPoolStats/VoidPoolStats.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/WeakEntityCollection/WeakEntityCollection.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Quests/MLQuests 2.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/Chat/30 апреля 2020 г..log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/Commands/30 апреля 2020 г..log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ServUO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Misc/UltimaStore 2.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Mobiles/Mobiles.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Most Recent/PointsSystem/Persistence.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Most Recent/Quests/MLQuests 2.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Items/Items.tdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Misc/SpawnerPresistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Misc/SpawnerPresistence.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Misc/UltimaStore 2.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Mobiles/Mobiles.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/PointsSystem/Persistence.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Quests/MLQuests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Quests/MLQuests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Chat/29 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/29 апреля 2020 г..log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Second Backup/Quests/MLQuests 2.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Accounts/accounts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Items/Items.tdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/SpawnerPresistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Misc/SpawnerPresistence.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Mobiles/Mobiles.tdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/PointsSystem/Persistence.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/PointsSystem/Persistence.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Quests/MLQuests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Backups/Automatic/Third Backup/Quests/MLQuests.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/General.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/General.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Help.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Looking For Group.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Chat/channels/Trade.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Commands/29 апреля 2020 г..log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/29 апреля 2020 г..log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Commands/Owner/admin.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs\Auction/29 апреля 2020 г..txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs\Auction/29 апреля 2020 г..txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs\Jail/29 апреля 2020 г..txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs\Jail/29 апреля 2020 г..txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Accounts/accounts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Items/Items.tdb" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Items/Items.tdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Saves/Mobiles/Mobiles.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Auction System/AuctionConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Auction System/AuctionConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/Items/Tools/GMEthereal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Items/Tools/GMEthereal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Output/Scripts.CS.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvMPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvMPoints.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvPPoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvPPoints.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scripts/obj/Release/Scripts.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/obj/Release/Scripts.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ultima/obj/Release/Ultima.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Ultima/obj/Release/Ultima.csprojAssemblyReference.cache" afterDir="false" />
@@ -141,7 +111,6 @@
     <setting file="file://$PROJECT_DIR$/Scripts/Mobiles/Normal/AcidElemental.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/GoblinTopiary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Cannon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/ServUO-master 4/Scripts/Items/Tools/GMEthereal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Resource/AbyssalCloth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Commands/GMbody.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Commands/DecorateDelete.cs" root0="FORCE_HIGHLIGHTING" />
@@ -174,9 +143,7 @@
     <setting file="file://$PROJECT_DIR$/Scripts/Multis/Deeds.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Quests/Escortables.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Mobiles/PlayerMobile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Addons/Aquarium/Aquarium.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Mobiles/MobileInterfaces.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/Virtues/Humility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -191,13 +158,15 @@
     <setting file="file://$PROJECT_DIR$/Scripts/Services/PVP Arena System/PVPArenaSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/PVP Arena System/ArenaManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/[ServUO.com]-GMTool.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/HueRoomGen.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/FireCasino/CasinoGumps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Services/Seasonal Events/RisingTide/MaritimeCargo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/BaseRegion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PvPPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/TownRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/HouseRaffleRegion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Scripts/Services/PointsSystems/PvMPoints.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/DungeonRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Regions/DamagingRegion.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Consumables/Gold.cs" root0="FORCE_HIGHLIGHTING" />
@@ -221,7 +190,6 @@
     <setting file="file://$PROJECT_DIR$/Scripts/Items/Tools/Tongs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DCC15B5C-BA87-4384-94D2-F7F81C82514A/8e/42d50ef0/NumberStyles.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ultima/Multis.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/CharacterAccessLevelToggle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Ultima/StringList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Abilities/ForceArrow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Abilities/BleedAttack.cs" root0="FORCE_HIGHLIGHTING" />
@@ -231,10 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Scripts/Abilities/CrushingBlow.cs" />
-        <option value="$PROJECT_DIR$/Scripts/Abilities/ForceArrow.cs" />
-        <option value="$PROJECT_DIR$/Scripts/Abilities/ForceofNature.cs" />
-        <option value="$PROJECT_DIR$/../ServUO-master/Server/Utility.cs" />
         <option value="$PROJECT_DIR$/Scripts/Abilities/FrenziedWhirlwind.cs" />
         <option value="$PROJECT_DIR$/Scripts/Abilities/InfectiousStrike.cs" />
         <option value="$PROJECT_DIR$/Scripts/Abilities/LightningArrow.cs" />
@@ -270,8 +234,6 @@
         <option value="$PROJECT_DIR$/Server/ScriptCompiler.cs" />
         <option value="$PROJECT_DIR$/Config/DataPath.cfg" />
         <option value="$PROJECT_DIR$/Scripts/Misc/CurrentExpansion.cs" />
-        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" />
-        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" />
         <option value="$PROJECT_DIR$/Scripts/Services/Status/StatusPlayerGump.cs" />
         <option value="$PROJECT_DIR$/Scripts/Services/Virtues/Honesty.cs" />
         <option value="$PROJECT_DIR$/Scripts/Gumps/BankerGump.cs" />
@@ -282,6 +244,12 @@
         <option value="$PROJECT_DIR$/Scripts/Mobiles/PlayerMobile.cs" />
         <option value="$PROJECT_DIR$/Scripts/Auction System/AuctionConfig.cs" />
         <option value="$PROJECT_DIR$/Scripts/Items/Tools/GMEthereal.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/rider.vmoptions" />
+        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PlayerMobileProps.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PointsSystem.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvMPoints.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Services/PVP Arena System/Definitions.cs" />
+        <option value="$PROJECT_DIR$/Scripts/Services/PointsSystems/PvPPoints.cs" />
       </list>
     </option>
   </component>
@@ -388,6 +356,9 @@
       <workItem from="1588184588825" duration="548000" />
       <workItem from="1588185238828" duration="2424000" />
       <workItem from="1588189123515" duration="304000" />
+      <workItem from="1588250296297" duration="89000" />
+      <workItem from="1588250494099" duration="813000" />
+      <workItem from="1588251439454" duration="1006000" />
     </task>
     <servers />
   </component>
